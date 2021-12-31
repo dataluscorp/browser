@@ -27,7 +27,7 @@ const L10N = new LocalizationHelper(
 add_task(async function testWebExtensionToolboxReload() {
   await enableExtensionDebugging();
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   await installTemporaryExtensionFromXPI(
     {

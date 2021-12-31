@@ -1013,7 +1013,7 @@
 #   false: do not draw backplates or render background images
 #   true: render background images and draw backplates
 # This condition is only considered when high-contrast mode is enabled
-# in Firefox, ie. when the user has:
+# in Datalus, ie. when the user has:
 #   (1) mUseAccessibilityMode set to true (Widows high-contrast mode is on)
 #       AND browser.display.document_color_use set to 0
 #       (only with high-contrast themes) OR
@@ -3182,7 +3182,7 @@
   mirror: always
 
 # If true, all content requests will get upgraded to HTTPS://
-# (some Firefox functionality requests, like OCSP will not be affected)
+# (some Datalus functionality requests, like OCSP will not be affected)
 - name: dom.security.https_only_mode
   type: RelaxedAtomicBool
   value: false
@@ -3730,7 +3730,7 @@
 # When enabled, Oculus sessions may be created with the ovrInit_Invisible
 # flag if a page is using tracking but not presenting.  When a page
 # begins presenting VR frames, the session will be re-initialized without
-# the flag.  This eliminates the "Firefox not responding" warnings in
+# the flag.  This eliminates the "Datalus not responding" warnings in
 # the headset, but might not be compatible with all versions of the Oculus
 # runtime.
 - name: dom.vr.oculus.invisible.enabled
@@ -4189,7 +4189,7 @@
 
 # General prefs for editor, indicating whether Gecko-specific editing UI is
 # enabled by default. Those UIs are not implemented by any other browsers.  So,
-# only Firefox users can change some styles with them. This means that Firefox
+# only Datalus users can change some styles with them. This means that Datalus
 # users may get unexpected result of some web apps if they assume that users
 # cannot change such styles.
 - name: editor.resizing.enabled_by_default
@@ -4214,7 +4214,7 @@
 # How line breakers are treated in single line editor:
 # * 0: Only remove the leading and trailing newlines.
 # * 1: Remove the first newline and all characters following it.
-# * 2: Replace newlines with spaces (default of Firefox).
+# * 2: Replace newlines with spaces (default of Datalus).
 # * 3: Remove newlines from the string.
 # * 4: Replace newlines with commas (default of Thunderbird).
 # * 5: Collapse newlines and surrounding white space characters and
@@ -5787,7 +5787,7 @@
 
 # Force unmapping of unused shared surfaces after a timeout period or when we
 # encounter virtual memory pressure. By default this is only enabled on 32-bit
-# Firefox.
+# Datalus.
 - name: image.mem.shared.unmap.force-enabled
   type: bool
   value: false
@@ -7988,7 +7988,7 @@
   type: bool
 #if defined(XP_LINUX) && !defined(MOZ_WIDGET_ANDROID)
   # On Linux EME is visible but disabled by default. This is so that the "Play
-  # DRM content" checkbox in the Firefox UI is unchecked by default. DRM
+  # DRM content" checkbox in the Datalus UI is unchecked by default. DRM
   # requires downloading and installing proprietary binaries, which users on an
   # open source operating systems didn't opt into. The first time a site using
   # EME is encountered, the user will be prompted to enable DRM, whereupon the
@@ -10843,21 +10843,21 @@
   mirror: always
 
 # Allowed by default so it doesn't affect Thunderbird/SeaMonkey, but
-# not allowed for Firefox Desktop in firefox.js
+# not allowed for Datalus Desktop in datalus.js
 - name: security.allow_parent_unrestricted_js_loads
   type: RelaxedAtomicBool
   value: true
   mirror: always
 
 # Allowed by default so it doesn't affect Thunderbird/SeaMonkey, but
-# not allowed for Firefox Desktop in firefox.js
+# not allowed for Datalus Desktop in datalus.js
 - name: security.allow_eval_with_system_principal
   type: RelaxedAtomicBool
   value: true
   mirror: always
 
 # Allowed by default so it doesn't affect Thunderbird/SeaMonkey, but
-# not allowed for Firefox Desktop in firefox.js
+# not allowed for Datalus Desktop in datalus.js
 - name: security.allow_eval_in_parent_process
   type: RelaxedAtomicBool
   value: true
@@ -10902,7 +10902,7 @@
   mirror: always
 
 
-# The level to which we sandbox the content process. firefox.js sets the
+# The level to which we sandbox the content process. datalus.js sets the
 # default to different values on a per-OS basis, and has documentation
 # on what the defaults are and what the numbers mean.
 - name: security.sandbox.content.level
@@ -11968,7 +11968,7 @@
 
 # Whether we try to extract dark theme GTK colors.
 #
-# For now, needed for follow-firefox-theme. In the future will also be needed
+# For now, needed for follow-datalus-theme. In the future will also be needed
 # for the color-scheme CSS property / meta tag / etc.
 - name: widget.gtk.alt-theme.dark
   type: bool

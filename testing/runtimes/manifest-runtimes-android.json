@@ -890,7 +890,7 @@
     "/import-maps/csp": 5.74,
     "/inert": 6.58,
     "/infrastructure/assumptions": 4.61,
-    "/infrastructure/browsers/firefox": 0.78,
+    "/infrastructure/browsers/datalus": 0.78,
     "/infrastructure/expected-fail": 2.29,
     "/infrastructure/server": 20.33,
     "/infrastructure/testdriver": 7.11,

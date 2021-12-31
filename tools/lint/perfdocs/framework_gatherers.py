@@ -202,7 +202,7 @@ class RaptorGatherer(FrameworkGatherer):
     def build_test_description(self, title, test_description="", suite_name=""):
         matcher = []
         browsers = [
-            "firefox",
+            "datalus",
             "chrome",
             "chromium",
             "refbrow",

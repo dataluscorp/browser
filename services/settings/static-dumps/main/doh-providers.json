@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "uri": "https://firefox.dns.nextdns.io/",
+      "uri": "https://datalus.dns.nextdns.io/",
       "UIName": "NextDNS",
       "schema": 1621819183640,
       "autoDefault": false,

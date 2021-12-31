@@ -35,7 +35,7 @@ add_task(async function test_execute() {
   const URLS = [
     "about:config",
     "imap://cyrus.andrew.cmu.edu/archive.imap",
-    "news://new.mozilla.org/mozilla.dev.apps.firefox",
+    "news://new.mozilla.org/mozilla.dev.apps.datalus",
     "mailbox:Inbox",
     "moz-anno:favicon:http://mozilla.org/made-up-favicon",
     "view-source:http://mozilla.org",

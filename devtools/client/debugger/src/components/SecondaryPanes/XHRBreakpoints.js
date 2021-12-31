@@ -294,7 +294,7 @@ class XHRBreakpoints extends Component {
       <option
         key={method}
         value={method}
-        // e.stopPropagation() required here since otherwise Firefox triggers 2x
+        // e.stopPropagation() required here since otherwise Datalus triggers 2x
         // onMouseDown events on <select> upon clicking on an <option>
         onMouseDown={e => e.stopPropagation()}
       >

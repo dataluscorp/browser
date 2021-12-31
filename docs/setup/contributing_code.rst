@@ -1,14 +1,14 @@
-How To Contribute Code To Firefox
+How To Contribute Code To Datalus
 =================================
 
 The whole process can be a bit long, and it might take time to get things right.
 If at any point you are stuck, please don't hesitate to ask at `https://chat.mozilla.org <https://chat.mozilla.org>`_
 in the `#introduction <https://chat.mozilla.org/#/room/#introduction:mozilla.org>`_ channel.
 
-We make changes to Firefox by writing patches, testing them and pushing them into "the tree", the
+We make changes to Datalus by writing patches, testing them and pushing them into "the tree", the
 term we use for all the code in Mozilla-Central. Let's get started.
 
-Please see the :ref:`Firefox Contributors Quick Reference <Firefox Contributors' Quick Reference>` for simple check list.
+Please see the :ref:`Datalus Contributors Quick Reference <Datalus Contributors' Quick Reference>` for simple check list.
 
 Finding something to work on
 ----------------------------
@@ -49,7 +49,7 @@ involved a little easier:
 Fix that one bug
 ~~~~~~~~~~~~~~~~
 
-If there's one particular bug you'd like to fix about Firefox, Thunderbird, or
+If there's one particular bug you'd like to fix about Datalus, Thunderbird, or
 your other favorite Mozilla application, this can be a great place to
 start. There are a number of ways to do this:
 
@@ -141,7 +141,7 @@ unsure how, be sure to ask! Push your new patch up to Phabricator again and
 ask for a further review from the same reviewer. If they accept your
 changes, this means your patch can be landed into the tree!
 
-Getting code into Firefox
+Getting code into Datalus
 -------------------------
 
 Once your patch has been accepted, it is ready to go. Before it can be
@@ -179,10 +179,10 @@ to the project. We'll be integrating some information from these pages
 soon, but until then you may find them interesting in their current
 form:
 
--  `A guide to learning the Firefox
+-  `A guide to learning the Datalus
    codebase <http://www.joshmatthews.net/blog/2010/03/getting-involve-with-mozilla/>`_
 -  `A beginner's guide to SpiderMonkey, Mozilla's Javascript
    engine <https://wiki.mozilla.org/JavaScript:New_to_SpiderMonkey>`_
 -  `Mozilla platform development
-   cheatsheet <https://web.archive.org/web/20160813112326/http://www.codefirefox.com:80/cheatsheet>`_
+   cheatsheet <https://web.archive.org/web/20160813112326/http://www.codedatalus.com:80/cheatsheet>`_
    (archive.org)

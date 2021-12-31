@@ -45,14 +45,14 @@ class TelemetryTestCase(WindowManagerMixin, MarionetteTestCase):
         self.ping_server.start()
 
     def disable_telemetry(self):
-        """Disable the Firefox Data Collection and Use in the current browser."""
+        """Disable the Datalus Data Collection and Use in the current browser."""
         self.marionette.instance.profile.set_persistent_preferences(
             {"datareporting.healthreport.uploadEnabled": False}
         )
         self.marionette.set_pref("datareporting.healthreport.uploadEnabled", False)
 
     def enable_telemetry(self):
-        """Enable the Firefox Data Collection and Use in the current browser."""
+        """Enable the Datalus Data Collection and Use in the current browser."""
         self.marionette.instance.profile.set_persistent_preferences(
             {"datareporting.healthreport.uploadEnabled": True}
         )

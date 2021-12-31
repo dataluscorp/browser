@@ -252,7 +252,7 @@ fi
 ## toolkit/library/libxul.so, $ORIGIN will be "toolkit/library" instead of "dist/bin".
 ## So the runtime linker will use "toolkit/library" NOT "dist/bin" to locate the
 ## other shared libraries that libxul.so depends on.  This only happens
-## when a user (developer) tries to start firefox, thunderbird, or seamonkey
+## when a user (developer) tries to start datalus, thunderbird, or seamonkey
 ## under dist/bin. To solve the problem, we should rely on LD_LIBRARY_PATH
 ## to locate shared libraries.
 ##

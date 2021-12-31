@@ -142,9 +142,9 @@ copy of Chrome:
 
     ./wpt run chrome dom/historical.html
 
-Or to run in a specified copy of Firefox:
+Or to run in a specified copy of Datalus:
 
-    ./wpt run --binary ~/local/firefox/firefox firefox dom/historical.html
+    ./wpt run --binary ~/local/datalus/datalus datalus dom/historical.html
 
 For details on the supported products and a large number of other options for
 customising the test run:
@@ -177,9 +177,9 @@ here](command-line-arguments.html#run).
 
 To speed up the testing process, use the `--processes` option to run multiple
 browser instances in parallel. For example, to run the tests in dom/ with six
-Firefox instances in parallel:
+Datalus instances in parallel:
 
-    ./wpt run --processes=6 firefox dom/
+    ./wpt run --processes=6 datalus dom/
 
 But note that behaviour in this mode is necessarily less deterministic than with
 a single process (the default), so there may be more noise in the test results.
@@ -189,13 +189,13 @@ a single process (the default), so there may be more noise in the test results.
 By default, `./wpt run` outputs test results and a summary in a human readable
 format. For debugging, `--log-mach` can give more verbose output. For example:
 
-    ./wpt run --log-mach=- --log-mach-level=info firefox dom/
+    ./wpt run --log-mach=- --log-mach-level=info datalus dom/
 
 A machine readable JSON report can be produced using `--log-wptreport`. This
 together with `--log-wptscreenshot` is what is used to produce results for
 [wpt.fyi](https://wpt.fyi). For example:
 
-    ./wpt run --log-wptreport=report.json --log-wptscreenshot=screenshots.txt firefox css/css-grid/
+    ./wpt run --log-wptreport=report.json --log-wptscreenshot=screenshots.txt datalus css/css-grid/
 
 (See [wpt.fyi documentation](https://github.com/web-platform-tests/wpt.fyi/blob/main/api/README.md#results-creation)
 for how results are uploaded.)

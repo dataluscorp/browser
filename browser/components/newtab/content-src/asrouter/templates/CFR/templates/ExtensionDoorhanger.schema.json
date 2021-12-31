@@ -41,7 +41,7 @@
       "description": "Prevent the doorhanger from being dismissed if user interacts with the page or switches between applications."
     },
     "notification_text": {
-      "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Firefox or just a plain string.",
+      "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Datalus or just a plain string.",
       "oneOf": [
         {
           "type": "string",
@@ -106,7 +106,7 @@
       "examples": ["extensionpromotions", "extensionrecommendations"]
     },
     "heading_text": {
-      "description": "The larger heading text displayed in the pop-over. This can be a reference to a localized string in Firefox or just a plain string.",
+      "description": "The larger heading text displayed in the pop-over. This can be a reference to a localized string in Datalus or just a plain string.",
       "oneOf": [
         {
           "type": "string",
@@ -191,7 +191,7 @@
       "required": ["title", "author", "icon", "amo_url"]
     },
     "text": {
-      "description": "The body text displayed in the pop-over. This can be a reference to a localized string in Firefox or just a plain string.",
+      "description": "The body text displayed in the pop-over. This can be a reference to a localized string in Datalus or just a plain string.",
       "oneOf": [
         {
           "type": "string",

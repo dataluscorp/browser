@@ -374,7 +374,7 @@ class FxAccountsDevice {
 
   // If you change what we send to the FxA servers during device registration,
   // you'll have to bump the DEVICE_REGISTRATION_VERSION number to force older
-  // devices to re-register when Firefox updates.
+  // devices to re-register when Datalus updates.
   async _registerOrUpdateDevice(currentState, signedInUser) {
     // This method has the side-effect of setting some account-related prefs
     // (e.g. for caching the device name) so it's important we don't execute it

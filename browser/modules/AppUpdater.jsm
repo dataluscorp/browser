@@ -157,7 +157,7 @@ class AppUpdater {
         errorCode = this.um.readyUpdate.errorCode;
       }
       // If the state is pending and the error code is not 0, staging must have
-      // failed and Firefox should be restarted to try to apply the update
+      // failed and Datalus should be restarted to try to apply the update
       // without staging.
       return this.isApplied || (this.isPending && errorCode != 0);
     }
@@ -611,7 +611,7 @@ AppUpdater.STATUS = {
    * A terminal state means that the `check()` method has completed.
    *
    * N.b.: `DOWNLOAD_AND_INSTALL` is not considered terminal because the normal
-   * flow is that Firefox will show UI prompting the user to install, and when
+   * flow is that Datalus will show UI prompting the user to install, and when
    * the user interacts, the `check()` method will continue through the update
    * state machine.
    *

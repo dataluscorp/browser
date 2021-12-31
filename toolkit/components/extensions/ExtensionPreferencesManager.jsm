@@ -247,7 +247,7 @@ this.ExtensionPreferencesManager = {
 
   /**
    * Returns a map of prefName to setting Name for use in about:config, about:preferences or
-   * other areas of Firefox that need to know whether a specific pref is controlled by an
+   * other areas of Datalus that need to know whether a specific pref is controlled by an
    * extension.
    *
    * Given a prefName, you can get the settingName.  Call EPM.getSetting(settingName) to
@@ -574,7 +574,7 @@ this.ExtensionPreferencesManager = {
       let { scope } = details;
       if (scope && scope !== "regular") {
         throw new ExtensionError(
-          `Firefox does not support the ${scope} settings scope.`
+          `Datalus does not support the ${scope} settings scope.`
         );
       }
     };

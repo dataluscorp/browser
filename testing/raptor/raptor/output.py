@@ -459,7 +459,7 @@ class PerftestOutput(object):
         # 85.60000000000036, 94.18000000000029, 95.19999999999709, 86.47999999999593],
         # u'AngularJS-TodoMVC': [518.2400000000016, 525.8199999999997, 610.5199999999968,
         # 532.8200000000215, 640.1800000000003], ...(repeated for each index/subtest)}]]},
-        # u'browser': u'Firefox 62.0a1 20180528123052', u'lower_is_better': False, u'page':
+        # u'browser': u'Datalus 62.0a1 20180528123052', u'lower_is_better': False, u'page':
         # u'http://localhost:55019/Speedometer/index.html?raptor', u'unit': u'score',
         # u'alert_threshold': 2}
 
@@ -507,12 +507,12 @@ class PerftestOutput(object):
         {
             'expected_browser_cycles': 1,
             'subtest_unit': 'ms',
-            'name': 'raptor-ares6-firefox',
+            'name': 'raptor-ares6-datalus',
             'lower_is_better': False,
             'browser_cycle': '1',
             'subtest_lower_is_better': True,
             'cold': False,
-            'browser': 'Firefox 69.0a1 20190531035909',
+            'browser': 'Datalus 69.0a1 20190531035909',
             'type': 'benchmark',
             'page': 'http://127.0.0.1:35369/ARES-6/index.html?raptor',
             'unit': 'ms',
@@ -604,7 +604,7 @@ class PerftestOutput(object):
         # this is the format we receive the results in from the benchmark
         # i.e. this is ONE pagecycle of motionmark htmlsuite test:composited Transforms:
 
-        # {u'name': u'raptor-motionmark-firefox',
+        # {u'name': u'raptor-motionmark-datalus',
         #  u'type': u'benchmark',
         #  u'measurements': {
         #    u'motionmark':
@@ -774,7 +774,7 @@ class PerftestOutput(object):
         """
         Example output (this is one page cycle):
 
-        {'name': 'raptor-unity-webgl-firefox',
+        {'name': 'raptor-unity-webgl-datalus',
          'type': 'benchmark',
          'measurements': {
             'unity-webgl': [
@@ -823,7 +823,7 @@ class PerftestOutput(object):
         # this is the format we receive the results in from the benchmark
         # i.e. this is ONE pagecycle of speedometer:
 
-        # {u'name': u'raptor-webaudio-firefox', u'type': u'benchmark', u'measurements':
+        # {u'name': u'raptor-webaudio-datalus', u'type': u'benchmark', u'measurements':
         # {u'webaudio': [[u'[{"name":"Empty testcase","duration":26,"buffer":{}},{"name"
         # :"Simple gain test without resampling","duration":66,"buffer":{}},{"name":"Simple
         # gain test without resampling (Stereo)","duration":71,"buffer":{}},{"name":"Simple
@@ -1110,12 +1110,12 @@ class RaptorOutput(PerftestOutput):
                 # each measurement becomes a subtest inside the 'suite'
 
                 # this is the format we receive the results in from the pageload test
-                # i.e. one test (subtest) in raptor-firefox-tp6:
+                # i.e. one test (subtest) in raptor-datalus-tp6:
 
-                # {u'name': u'raptor-firefox-tp6-amazon', u'type': u'pageload', u'measurements':
+                # {u'name': u'raptor-datalus-tp6-amazon', u'type': u'pageload', u'measurements':
                 # {u'fnbpaint': [788, 315, 334, 286, 318, 276, 296, 296, 292, 285, 268, 277, 274,
                 # 328, 295, 290, 286, 270, 279, 280, 346, 303, 308, 398, 281]}, u'browser':
-                # u'Firefox 62.0a1 20180528123052', u'lower_is_better': True, u'page':
+                # u'Datalus 62.0a1 20180528123052', u'lower_is_better': True, u'page':
                 # u'https://www.amazon.com/s/url=search-alias%3Daps&field-keywords=laptop',
                 # u'unit': u'ms', u'alert_threshold': 2}
 
@@ -1416,7 +1416,7 @@ class BrowsertimeOutput(PerftestOutput):
         u'p90': 719, u'max': 830, u'median': 668, u'p10': 642, u'stddev': 48, u'mean': 680},
         'loadtime': {u'p99': 5818, u'mdev': 111.7028, u'min': 3220, u'p90': 4450, u'max': 5818,
         u'median': 3476, u'p10': 3241, u'stddev': 559, u'mean': 3642}}, 'name':
-        'raptor-tp6-guardian-firefox', 'url': 'https://www.theguardian.co.uk', 'lower_is_better':
+        'raptor-tp6-guardian-datalus', 'url': 'https://www.theguardian.co.uk', 'lower_is_better':
         True, 'measurements': {'fcp': [932, 744, 744, 810, 712, 775, 759, 744, 777, 739, 809, 906,
         734, 742, 760, 758, 728, 792, 757, 759, 742, 759, 775, 726, 730], 'dcf': [864, 679, 637,
         662, 652, 651, 710, 679, 646, 689, 686, 845, 670, 694, 632, 703, 670, 738, 633, 703, 614,
@@ -1426,7 +1426,7 @@ class BrowsertimeOutput(PerftestOutput):
         3245, 3381, 3707, 3241, 3595, 3483, 3236, 3390, 3476]}, 'subtest_unit': 'ms', 'bt_ver':
         '4.9.2-android', 'alert_threshold': 2, 'cold': True, 'type': 'browsertime-pageload',
         'unit': 'ms', 'browser': "{u'userAgent': u'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13;
-        rv:70.0) Gecko/20100101 Firefox/70.0', u'windowSize': u'1366x694'}"}
+        rv:70.0) Gecko/20100101 Datalus/70.0', u'windowSize': u'1366x694'}"}
 
         Now we must process this further and prepare the result for output suitable for perfherder
         ingestion.

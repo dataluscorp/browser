@@ -7,9 +7,9 @@
 //! This marker API has a few different functions that you can use to mark a part of your code.
 //! There are three main marker functions to use from Rust: [`add_untyped_marker`],
 //! [`add_text_marker`] and [`add_marker`]. They are similar to what we have on
-//! the C++ side. Please take a look at the marker documentation in the Firefox
+//! the C++ side. Please take a look at the marker documentation in the Datalus
 //! source docs to learn more about them:
-//! https://firefox-source-docs.mozilla.org/tools/profiler/markers-guide.html
+//! https://datalus-source-docs.mozilla.org/tools/profiler/markers-guide.html
 //!
 //! ### Simple marker without any additional data
 //!
@@ -68,7 +68,7 @@
 //!
 //! [`add_marker`] is the most advanced API that you can use to add different types
 //! of values as data to your marker and customize the visualization of that marker
-//! in the profiler front-end (profiler.firefox.com).
+//! in the profiler front-end (profiler.datalus.com).
 //!
 //! To be able to add a a marker, first you need to create your marker payload
 //! struct in your codebase and implement the [`ProfilerMarker`] trait like this:
@@ -180,7 +180,7 @@ pub fn add_text_marker(
 /// This will tell the profiler back-end how to serialize it as json and
 /// the front-end how to display the marker.
 /// Please also see the documentation here:
-/// https://firefox-source-docs.mozilla.org/tools/profiler/markers-guide.html#how-to-define-new-marker-types
+/// https://datalus-source-docs.mozilla.org/tools/profiler/markers-guide.html#how-to-define-new-marker-types
 ///
 /// - `marker_type_name`: Returns a static string as the marker type name. This
 /// should be unique and it is used to keep track of the type of markers in the

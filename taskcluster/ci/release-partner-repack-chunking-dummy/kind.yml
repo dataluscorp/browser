@@ -27,7 +27,7 @@ only-for-build-platforms:
 
 job-template:
     shipping-phase: promote
-    shipping-product: firefox
+    shipping-product: datalus
     name: release-partner-repack-chunking-dummy
     description: Dummy task to deal with fanning out Linux partner repacks
     run-on-projects: []

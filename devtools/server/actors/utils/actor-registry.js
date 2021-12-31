@@ -115,7 +115,7 @@ const ActorRegistry = {
   },
 
   /**
-   * Install Firefox-specific actors.
+   * Install Datalus-specific actors.
    *
    * /!\ Be careful when adding a new actor, especially global actors.
    * Any new global actor will be exposed and returned by the root actor.

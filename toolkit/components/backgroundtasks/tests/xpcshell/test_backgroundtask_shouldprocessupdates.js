@@ -8,7 +8,7 @@ add_task(async function test_backgroundtask_shouldprocessupdates() {
   // The task returns 80 if !ShouldProcessUpdates(), 81 otherwise.  xpcshell
   // itself counts as an instance, so the background task will see it and think
   // another instance is running.  N.b.: this isn't as robust as it could be:
-  // running Firefox instances and parallel tests interact here (mostly
+  // running Datalus instances and parallel tests interact here (mostly
   // harmlessly).
   //
   // Since the behaviour under test (ShouldProcessUpdates()) happens at startup,

@@ -40,11 +40,11 @@ add_task(async function test_change_in_popup() {
         );
         const platform = await getNearestInputFromText(
           aboutProfilingDocument,
-          "Firefox Platform"
+          "Datalus Platform"
         );
         const frontEnd = await getNearestInputFromText(
           aboutProfilingDocument,
-          "Firefox Front-End"
+          "Datalus Front-End"
         );
 
         // Default situation
@@ -63,12 +63,12 @@ add_task(async function test_change_in_popup() {
           "The presets default to webdev mode in the popup."
         );
 
-        // Select "firefox platform" using the popup
-        ok(!platform.checked, "The Firefox Platform preset is not checked.");
+        // Select "datalus platform" using the popup
+        ok(!platform.checked, "The Datalus Platform preset is not checked.");
 
         presetsInPopup.menupopup.openPopup();
         presetsInPopup.menupopup.activateItem(
-          await getElementByLabel(presetsInPopup, "Firefox Platform")
+          await getElementByLabel(presetsInPopup, "Datalus Platform")
         );
 
         await TestUtils.waitForCondition(
@@ -77,40 +77,40 @@ add_task(async function test_change_in_popup() {
         );
         await TestUtils.waitForCondition(
           () => platform.checked,
-          "After selecting the preset in the popup, waiting until the Firefox Platform preset is checked in the about:profiling interface."
+          "After selecting the preset in the popup, waiting until the Datalus Platform preset is checked in the about:profiling interface."
         );
         await TestUtils.waitForCondition(
-          () => presetsInDevtools.value === "firefox-platform",
-          "After selecting the preset in the popup, waiting until the preset is changed to Firefox Platform in the devtools panel too."
+          () => presetsInDevtools.value === "datalus-platform",
+          "After selecting the preset in the popup, waiting until the preset is changed to Datalus Platform in the devtools panel too."
         );
         await TestUtils.waitForCondition(
-          () => presetsInPopup.value === "firefox-platform",
-          "After selecting the preset in the popup, waiting until the preset is changed to Firefox Platform in the popup."
+          () => presetsInPopup.value === "datalus-platform",
+          "After selecting the preset in the popup, waiting until the preset is changed to Datalus Platform in the popup."
         );
 
-        // Select "firefox frontend" using the popup
-        ok(!frontEnd.checked, "The Firefox front-end preset is not checked.");
+        // Select "datalus frontend" using the popup
+        ok(!frontEnd.checked, "The Datalus front-end preset is not checked.");
 
         presetsInPopup.menupopup.openPopup();
         presetsInPopup.menupopup.activateItem(
-          await getElementByLabel(presetsInPopup, "Firefox Front-End")
+          await getElementByLabel(presetsInPopup, "Datalus Front-End")
         );
 
         await TestUtils.waitForCondition(
           () => !platform.checked,
-          "After selecting the preset in the popup, waiting until the Firefox Platform preset is not checked anymore in the about:profiling interface."
+          "After selecting the preset in the popup, waiting until the Datalus Platform preset is not checked anymore in the about:profiling interface."
         );
         await TestUtils.waitForCondition(
           () => frontEnd.checked,
-          "After selecting the preset in the popup, waiting until the Firefox Front-End preset is checked in the about:profiling interface."
+          "After selecting the preset in the popup, waiting until the Datalus Front-End preset is checked in the about:profiling interface."
         );
         await TestUtils.waitForCondition(
-          () => presetsInDevtools.value === "firefox-front-end",
-          "After selecting the preset in the popup, waiting until the preset is changed to Firefox Front-end in the devtools panel."
+          () => presetsInDevtools.value === "datalus-front-end",
+          "After selecting the preset in the popup, waiting until the preset is changed to Datalus Front-end in the devtools panel."
         );
         await TestUtils.waitForCondition(
-          () => presetsInPopup.value === "firefox-front-end",
-          "After selecting the preset in the popup, waiting until the preset is changed to Firefox Front-End in the popup."
+          () => presetsInPopup.value === "datalus-front-end",
+          "After selecting the preset in the popup, waiting until the preset is changed to Datalus Front-End in the popup."
         );
       });
     }
@@ -146,11 +146,11 @@ add_task(async function test_change_in_about_profiling() {
       );
       const platform = await getNearestInputFromText(
         aboutProfilingDocument,
-        "Firefox Platform"
+        "Datalus Platform"
       );
       const frontEnd = await getNearestInputFromText(
         aboutProfilingDocument,
-        "Firefox Front-End"
+        "Datalus Front-End"
       );
       const custom = await getNearestInputFromText(
         aboutProfilingDocument,
@@ -170,26 +170,26 @@ add_task(async function test_change_in_about_profiling() {
 
       // Change the preset in about:profiling, check it changes also in the
       // devtools panel.
-      ok(!platform.checked, "The Firefox Platform preset is not checked.");
+      ok(!platform.checked, "The Datalus Platform preset is not checked.");
       platform.click();
       ok(
         platform.checked,
-        "After clicking the input, the Firefox Platform preset is now checked in about:profiling."
+        "After clicking the input, the Datalus Platform preset is now checked in about:profiling."
       );
       await TestUtils.waitForCondition(
-        () => presetsInDevtools.value === "firefox-platform",
-        "The preset was changed to Firefox Platform in the devtools panel too."
+        () => presetsInDevtools.value === "datalus-platform",
+        "The preset was changed to Datalus Platform in the devtools panel too."
       );
 
-      ok(!frontEnd.checked, "The Firefox front-end preset is not checked.");
+      ok(!frontEnd.checked, "The Datalus front-end preset is not checked.");
       frontEnd.click();
       ok(
         frontEnd.checked,
-        "After clicking the input, the Firefox front-end preset is now checked in about:profiling."
+        "After clicking the input, the Datalus front-end preset is now checked in about:profiling."
       );
       await TestUtils.waitForCondition(
-        () => presetsInDevtools.value === "firefox-front-end",
-        "The preset was changed to Firefox Front-End in the devtools panel too."
+        () => presetsInDevtools.value === "datalus-front-end",
+        "The preset was changed to Datalus Front-End in the devtools panel too."
       );
 
       // Now let's try to change some configuration!
@@ -348,11 +348,11 @@ add_task(async function test_change_in_devtools_panel() {
       );
       const platform = await getNearestInputFromText(
         aboutProfilingDocument,
-        "Firefox Platform"
+        "Datalus Platform"
       );
       const frontEnd = await getNearestInputFromText(
         aboutProfilingDocument,
-        "Firefox Front-End"
+        "Datalus Front-End"
       );
 
       // Default values
@@ -370,29 +370,29 @@ add_task(async function test_change_in_devtools_panel() {
       // about:profiling.
       ok(
         !platform.checked,
-        "The Firefox Platform preset is not checked in about:profiling."
+        "The Datalus Platform preset is not checked in about:profiling."
       );
 
-      setReactFriendlyInputValue(presetsInDevtools, "firefox-platform");
+      setReactFriendlyInputValue(presetsInDevtools, "datalus-platform");
       await TestUtils.waitForCondition(
         () => platform.checked,
-        "After changing the preset in the devtools panel, the Firefox Platform preset is now checked in about:profiling."
+        "After changing the preset in the devtools panel, the Datalus Platform preset is now checked in about:profiling."
       );
       await TestUtils.waitForCondition(
-        () => presetsInDevtools.value === "firefox-platform",
-        "The preset was changed to Firefox Platform in the devtools panel too."
+        () => presetsInDevtools.value === "datalus-platform",
+        "The preset was changed to Datalus Platform in the devtools panel too."
       );
 
       // Change another preset now
-      ok(!frontEnd.checked, "The Firefox front-end preset is not checked.");
-      setReactFriendlyInputValue(presetsInDevtools, "firefox-front-end");
+      ok(!frontEnd.checked, "The Datalus front-end preset is not checked.");
+      setReactFriendlyInputValue(presetsInDevtools, "datalus-front-end");
       await TestUtils.waitForCondition(
         () => frontEnd.checked,
-        "After changing the preset in the devtools panel, the Firefox front-end preset is now checked in about:profiling."
+        "After changing the preset in the devtools panel, the Datalus front-end preset is now checked in about:profiling."
       );
       await TestUtils.waitForCondition(
-        () => presetsInDevtools.value === "firefox-front-end",
-        "The preset was changed to Firefox Front-End in the devtools panel too."
+        () => presetsInDevtools.value === "datalus-front-end",
+        "The preset was changed to Datalus Front-End in the devtools panel too."
       );
     }
   );

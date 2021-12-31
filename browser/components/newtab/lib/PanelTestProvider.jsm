@@ -14,7 +14,7 @@ const MESSAGES = () => [
         id: "moments-wnp",
         data: {
           url:
-            "https://www.mozilla.org/%LOCALE%/etc/firefox/retention/thank-you-a/",
+            "https://www.mozilla.org/%LOCALE%/etc/datalus/retention/thank-you-a/",
           expireDelta: TWO_DAYS,
         },
       },
@@ -37,7 +37,7 @@ const MESSAGES = () => [
       cta_url: "",
       cta_type: "OPEN_PROTECTION_REPORT",
     },
-    targeting: `firefoxVersion >= 72`,
+    targeting: `datalusVersion >= 72`,
     trigger: { id: "whatsNewPanelOpened" },
   },
   {
@@ -50,13 +50,13 @@ const MESSAGES = () => [
       title: "Protection Is Our Focus",
       icon_url:
         "chrome://activity-stream/content/data/content/assets/whatsnew-send-icon.png",
-      icon_alt: "Firefox Send Logo",
+      icon_alt: "Datalus Send Logo",
       body:
-        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of firefox ever made.",
+        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of datalus ever made.",
       cta_url: "https://blog.mozilla.org/",
       cta_type: "OPEN_URL",
     },
-    targeting: `firefoxVersion > 69`,
+    targeting: `datalusVersion > 69`,
     trigger: { id: "whatsNewPanelOpened" },
   },
   {
@@ -66,14 +66,14 @@ const MESSAGES = () => [
     content: {
       bucket_id: "WHATS_NEW_70_1",
       published_date: 1560969794394,
-      title: "Another thing new in Firefox 70",
+      title: "Another thing new in Datalus 70",
       body:
-        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of firefox ever made.",
+        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of datalus ever made.",
       link_text: "Learn more on our blog",
       cta_url: "https://blog.mozilla.org/",
       cta_type: "OPEN_URL",
     },
-    targeting: `firefoxVersion > 69`,
+    targeting: `datalusVersion > 69`,
     trigger: { id: "whatsNewPanelOpened" },
   },
   {
@@ -88,11 +88,11 @@ const MESSAGES = () => [
       icon_alt: "",
       body: "Message content",
       cta_url:
-        "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/search-shortcuts",
+        "https://support.mozilla.org/1/datalus/%VERSION%/%OS%/%LOCALE%/search-shortcuts",
       cta_type: "OPEN_URL",
       link_text: "Click here",
     },
-    targeting: "firefoxVersion >= 84",
+    targeting: "datalusVersion >= 84",
     trigger: {
       id: "whatsNewPanelOpened",
     },
@@ -114,7 +114,7 @@ const MESSAGES = () => [
       cta_type: "OPEN_ABOUT_PAGE",
       link_text: "Join Pioneer",
     },
-    targeting: "firefoxVersion >= 82",
+    targeting: "datalusVersion >= 82",
     trigger: {
       id: "whatsNewPanelOpened",
     },
@@ -129,11 +129,11 @@ const MESSAGES = () => [
       title: "Title",
       body: "Message content",
       cta_url:
-        "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/media-keyboard-control",
+        "https://support.mozilla.org/1/datalus/%VERSION%/%OS%/%LOCALE%/media-keyboard-control",
       cta_type: "OPEN_URL",
       link_text: "Click here",
     },
-    targeting: "firefoxVersion >= 82",
+    targeting: "datalusVersion >= 82",
     trigger: {
       id: "whatsNewPanelOpened",
     },
@@ -145,14 +145,14 @@ const MESSAGES = () => [
     content: {
       bucket_id: "WHATS_NEW_69_1",
       published_date: 1557346235089,
-      title: "Something new in Firefox 69",
+      title: "Something new in Datalus 69",
       body:
-        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of firefox ever made.",
+        "The New Enhanced Tracking Protection, gives you the best level of protection and performance. Discover how this version is the safest version of datalus ever made.",
       link_text: "Learn more on our blog",
       cta_url: "https://blog.mozilla.org/",
       cta_type: "OPEN_URL",
     },
-    targeting: `firefoxVersion > 68`,
+    targeting: `datalusVersion > 68`,
     trigger: { id: "whatsNewPanelOpened" },
   },
   {
@@ -163,21 +163,21 @@ const MESSAGES = () => [
       layout: "icon_and_message",
       category: "cfrFeatures",
       notification_text: "Personalized CFR Recommendation",
-      heading_text: { string_id: "cfr-doorhanger-firefox-send-header" },
+      heading_text: { string_id: "cfr-doorhanger-datalus-send-header" },
       info_icon: {
         label: { string_id: "cfr-doorhanger-extension-sumo-link" },
         sumo_path: "https://example.com",
       },
-      text: { string_id: "cfr-doorhanger-firefox-send-body" },
+      text: { string_id: "cfr-doorhanger-datalus-send-body" },
       icon: "chrome://branding/content/icon64.png",
       buttons: {
         primary: {
-          label: { string_id: "cfr-doorhanger-firefox-send-ok-button" },
+          label: { string_id: "cfr-doorhanger-datalus-send-ok-button" },
           action: {
             type: "OPEN_URL",
             data: {
               args:
-                "https://send.firefox.com/login/?utm_source=activity-stream&entrypoint=activity-stream-cfr-pdf",
+                "https://send.datalus.com/login/?utm_source=activity-stream&entrypoint=activity-stream-cfr-pdf",
               where: "tabshifted",
             },
           },

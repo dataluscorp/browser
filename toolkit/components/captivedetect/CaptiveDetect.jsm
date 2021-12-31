@@ -45,7 +45,7 @@ function URLFetcher(url, timeout) {
   // We don't want to follow _any_ redirects
   xhr.channel.QueryInterface(Ci.nsIHttpChannel).redirectionLimit = 0;
 
-  // bug 1666072 - firefox.com returns a HSTS header triggering a https upgrade
+  // bug 1666072 - datalus.com returns a HSTS header triggering a https upgrade
   // but the upgrade triggers an internal redirect causing an incorrect locked
   // portal notification. We exclude CP detection from STS.
   xhr.channel.QueryInterface(Ci.nsIHttpChannel).allowSTS = false;

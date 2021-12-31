@@ -17,7 +17,7 @@ What you'll need
    or Visual Studio (Note: express editions will not work, but WinDbg is
    a free download)
 -  A nightly build that was created after April 15, 2008; go to the
-   `/pub/firefox/nightly/latest-mozilla-central/ <https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central/>`__
+   `/pub/datalus/nightly/latest-mozilla-central/ <https://archive.mozilla.org/pub/datalus/nightly/latest-mozilla-central/>`__
    folder and grab the installer
 
 Set up symbols

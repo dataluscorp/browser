@@ -27,27 +27,27 @@ function getDateFromBuildID(buildID) {
 }
 
 function getMajorVersion(platformVersion) {
-  // Retrieve the major platform version, i.e. if we are on Firefox 64.0a1, it will be 64.
+  // Retrieve the major platform version, i.e. if we are on Datalus 64.0a1, it will be 64.
   return Number.parseInt(platformVersion.match(/\d+/)[0], 10);
 }
 
 /**
  * Compute the minimum and maximum supported version for remote debugging for the provided
- * version of Firefox. Backward compatibility policy for devtools supports at most 2
+ * version of Datalus. Backward compatibility policy for devtools supports at most 2
  * versions older than the current version.
  *
  * @param {String} localVersion
- *        The version of the local Firefox instance, eg "67.0"
+ *        The version of the local Datalus instance, eg "67.0"
  * @return {Object}
  *         - minVersion {String} the minimum supported version, eg "65.0a1"
  *         - maxVersion {String} the first unsupported version, eg "68.0a1"
  */
 function computeMinMaxVersion(localVersion) {
-  // Retrieve the major platform version, i.e. if we are on Firefox 64.0a1, it will be 64.
+  // Retrieve the major platform version, i.e. if we are on Datalus 64.0a1, it will be 64.
   const localMajorVersion = getMajorVersion(localVersion);
 
   return {
-    // Define the minimum officially supported version of Firefox when connecting to a
+    // Define the minimum officially supported version of Datalus when connecting to a
     // remote runtime. (Use ".0a1" to support the very first nightly version)
     // This matches the release channel's version when we are on nightly,
     // or 2 versions before when we are on other channels.
@@ -60,10 +60,10 @@ function computeMinMaxVersion(localVersion) {
 }
 
 /**
- * Tells if the remote device is using a supported version of Firefox.
+ * Tells if the remote device is using a supported version of Datalus.
  *
  * @param {DevToolsClient} devToolsClient
- *        DevToolsClient instance connected to the target remote Firefox.
+ *        DevToolsClient instance connected to the target remote Datalus.
  * @return Object with the following attributes:
  *   * String status, one of COMPATIBILITY_STATUS
  *            COMPATIBLE if the runtime is compatible,
@@ -90,7 +90,7 @@ async function checkVersionCompatibility(devToolsClient) {
     return _compareVersionCompatibility(localDescription, description);
   } catch (e) {
     // If we failed to retrieve the device description, assume we are trying to connect to
-    // a really old version of Firefox.
+    // a really old version of Datalus.
     const localVersion = localDescription.platformversion;
     const { minVersion } = computeMinMaxVersion(localVersion);
     return {

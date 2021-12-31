@@ -109,7 +109,7 @@ static const char* kWrongLeafIndexInclusionProofHex =
     "20"
     "380d0dc6fd7d4f37859a12dbfc7171b3cce29ab0688c6cffd2b15f3e0b21af49";
 
-// This is a longer proof taken from the Firefox 62.0.2 release.
+// This is a longer proof taken from the Datalus 62.0.2 release.
 static const char* kValidInclusionProof2Hex =
     "020000"
     "0000000000000cb3"
@@ -144,7 +144,7 @@ static const char* kExpectedRootHash2Hex =
     "0d489b16a64b80035a8d08ce55549c89c4b67be64a0456382cc5be1e51ddae1a";
 
 // This the hex encoding of the SHA-256 hash of
-// linux-x86_64/en-US/firefox-62.0.2.tar.bz2, encoded (again) in hex (because
+// linux-x86_64/en-US/datalus-62.0.2.tar.bz2, encoded (again) in hex (because
 // that's how generate-checksums.py currently builds the binary transparency
 // tree).
 static const char* kInput2Hex =
@@ -152,7 +152,7 @@ static const char* kInput2Hex =
     "3865353561333832336538653665656131343638313062313031623034396536";
 
 // This is the hex encoding of an inclusion proof for
-// update/win32/en-GB/firefox-61.0-62.0.2.partial.mar using SHA-512.
+// update/win32/en-GB/datalus-61.0-62.0.2.partial.mar using SHA-512.
 static const char* kValidInclusionProofSHA512Hex =
     "020000"
     "0000000000000cb3"
@@ -201,7 +201,7 @@ static const char* kExpectedRootHashSHA512Hex =
     "8bb3e24ab608c95b063259620751ce258930d48929cbe543b166c33c4de65e60";
 
 // This the hex encoding of the SHA-512 hash of
-// update/win32/en-GB/firefox-61.0-62.0.2.partial.mar, encoded (again) in hex.
+// update/win32/en-GB/datalus-61.0-62.0.2.partial.mar, encoded (again) in hex.
 static const char* kInputSHA512Hex =
     "6237656563626164353363386432346230383763666437323333303162326437"
     "6234326136323536663462636336356134623231636437376133613830613734"

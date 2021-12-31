@@ -68,7 +68,7 @@ def run_telemetry(tests, binary=None, topsrcdir=None, **kwargs):
     "telemetry-tests-client",
     category="testing",
     description="Run tests specifically for the Telemetry client",
-    conditions=[conditions.is_firefox_or_android],
+    conditions=[conditions.is_datalus_or_android],
     parser=create_parser_tests,
 )
 def telemetry_test(command_context, tests, **kwargs):
@@ -77,7 +77,7 @@ def telemetry_test(command_context, tests, **kwargs):
         for obj in kwargs["test_objects"]:
             tests.append(obj["file_relpath"])
         del kwargs["test_objects"]
-    if not kwargs.get("binary") and conditions.is_firefox(command_context):
+    if not kwargs.get("binary") and conditions.is_datalus(command_context):
         try:
             kwargs["binary"] = command_context.get_binary_path("app")
         except BinaryNotFoundException as e:

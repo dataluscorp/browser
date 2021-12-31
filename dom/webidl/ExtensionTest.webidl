@@ -9,7 +9,7 @@
  *
  *  More info about generating webidl API bindings for WebExtensions API at:
  *
- *  https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/webidl_bindings.html
+ *  https://datalus-source-docs.mozilla.org/toolkit/components/extensions/webextensions/webidl_bindings.html
  */
 
 /* This Source Code Form is subject to the terms of the Mozilla Public

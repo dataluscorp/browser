@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 
-# Firefox about:memory log parser.
+# Datalus about:memory log parser.
 
 from __future__ import absolute_import, print_function
 

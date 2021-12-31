@@ -20,7 +20,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  describeFailsFirefox,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 
 const FILE_TO_UPLOAD = path.join(__dirname, '/assets/file-to-upload.txt');
@@ -29,7 +29,7 @@ describe('input tests', function () {
   setupTestBrowserHooks();
   setupTestPageAndContextHooks();
 
-  describeFailsFirefox('input', function () {
+  describeFailsDatalus('input', function () {
     it('should upload the file', async () => {
       const { page, server } = getTestState();
 
@@ -67,7 +67,7 @@ describe('input tests', function () {
     });
   });
 
-  describeFailsFirefox('Page.waitForFileChooser', function () {
+  describeFailsDatalus('Page.waitForFileChooser', function () {
     it('should work when file input is attached to DOM', async () => {
       const { page } = getTestState();
 
@@ -146,7 +146,7 @@ describe('input tests', function () {
     });
   });
 
-  describeFailsFirefox('FileChooser.accept', function () {
+  describeFailsDatalus('FileChooser.accept', function () {
     it('should accept single file', async () => {
       const { page } = getTestState();
 
@@ -266,7 +266,7 @@ describe('input tests', function () {
     });
   });
 
-  describeFailsFirefox('FileChooser.cancel', function () {
+  describeFailsDatalus('FileChooser.cancel', function () {
     it('should cancel dialog', async () => {
       const { page } = getTestState();
 
@@ -308,7 +308,7 @@ describe('input tests', function () {
     });
   });
 
-  describeFailsFirefox('FileChooser.isMultiple', () => {
+  describeFailsDatalus('FileChooser.isMultiple', () => {
     it('should work for single file pick', async () => {
       const { page } = getTestState();
 

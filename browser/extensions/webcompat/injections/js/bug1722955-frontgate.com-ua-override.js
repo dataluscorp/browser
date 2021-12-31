@@ -4,7 +4,7 @@
  * Bug 1722955 - Add UA override for frontgate.com
  * Webcompat issue #36277 - https://github.com/webcompat/web-bugs/issues/36277
  *
- * The website is sending the desktop version to Firefox on mobile devices
+ * The website is sending the desktop version to Datalus on mobile devices
  * based on UA sniffing. Spoofing as Chrome fixes this.
  */
 

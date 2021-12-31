@@ -10,23 +10,23 @@ const cssPropertiesCompatData = require("devtools/shared/compatibility/dataset/c
 
 const mdnCompatibility = new MDNCompatibility(cssPropertiesCompatData);
 
-const FIREFOX_1 = {
-  id: "firefox",
+const DATALUS_1 = {
+  id: "datalus",
   version: "1",
 };
 
-const FIREFOX_60 = {
-  id: "firefox",
+const DATALUS_60 = {
+  id: "datalus",
   version: "60",
 };
 
-const FIREFOX_69 = {
-  id: "firefox",
+const DATALUS_69 = {
+  id: "datalus",
   version: "69",
 };
 
-const FIREFOX_ANDROID_1 = {
-  id: "firefox_android",
+const DATALUS_ANDROID_1 = {
+  id: "datalus_android",
   version: "1",
 };
 
@@ -39,19 +39,19 @@ const TEST_DATA = [
   {
     description: "Test for a supported property",
     declarations: [{ name: "background-color" }],
-    browsers: [FIREFOX_69],
+    browsers: [DATALUS_69],
     expectedIssues: [],
   },
   {
     description: "Test for some supported properties",
     declarations: [{ name: "background-color" }, { name: "color" }],
-    browsers: [FIREFOX_69],
+    browsers: [DATALUS_69],
     expectedIssues: [],
   },
   {
     description: "Test for an unsupported property",
     declarations: [{ name: "grid-column" }],
-    browsers: [FIREFOX_1],
+    browsers: [DATALUS_1],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY,
@@ -59,20 +59,20 @@ const TEST_DATA = [
         url: "https://developer.mozilla.org/docs/Web/CSS/grid-column",
         deprecated: false,
         experimental: false,
-        unsupportedBrowsers: [FIREFOX_1],
+        unsupportedBrowsers: [DATALUS_1],
       },
     ],
   },
   {
     description: "Test for an unknown property",
     declarations: [{ name: "unknown-property" }],
-    browsers: [FIREFOX_69],
+    browsers: [DATALUS_69],
     expectedIssues: [],
   },
   {
     description: "Test for a deprecated property",
     declarations: [{ name: "clip" }],
-    browsers: [FIREFOX_69],
+    browsers: [DATALUS_69],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY,
@@ -87,7 +87,7 @@ const TEST_DATA = [
   {
     description: "Test for a property having some issues",
     declarations: [{ name: "font-variant-alternates" }],
-    browsers: [FIREFOX_1],
+    browsers: [DATALUS_1],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY,
@@ -96,7 +96,7 @@ const TEST_DATA = [
           "https://developer.mozilla.org/docs/Web/CSS/font-variant-alternates",
         deprecated: true,
         experimental: false,
-        unsupportedBrowsers: [FIREFOX_1],
+        unsupportedBrowsers: [DATALUS_1],
       },
     ],
   },
@@ -104,7 +104,7 @@ const TEST_DATA = [
     description:
       "Test for an aliased property not supported in all browsers with prefix needed",
     declarations: [{ name: "-moz-user-select" }],
-    browsers: [FIREFOX_69, SAFARI_13],
+    browsers: [DATALUS_69, SAFARI_13],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY_ALIASES,
@@ -125,7 +125,7 @@ const TEST_DATA = [
       { name: "-moz-user-select" },
       { name: "-webkit-user-select" },
     ],
-    browsers: [FIREFOX_ANDROID_1, FIREFOX_69, SAFARI_13],
+    browsers: [DATALUS_ANDROID_1, DATALUS_69, SAFARI_13],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY_ALIASES,
@@ -135,7 +135,7 @@ const TEST_DATA = [
         deprecated: false,
         experimental: false,
         prefixNeeded: false,
-        unsupportedBrowsers: [FIREFOX_ANDROID_1],
+        unsupportedBrowsers: [DATALUS_ANDROID_1],
       },
     ],
   },
@@ -145,13 +145,13 @@ const TEST_DATA = [
       { name: "-moz-user-select" },
       { name: "-webkit-user-select" },
     ],
-    browsers: [FIREFOX_69, SAFARI_13],
+    browsers: [DATALUS_69, SAFARI_13],
     expectedIssues: [],
   },
   {
     description: "Test for a property defined with prefix",
     declarations: [{ name: "-moz-binding" }],
-    browsers: [FIREFOX_1, FIREFOX_60, FIREFOX_69],
+    browsers: [DATALUS_1, DATALUS_60, DATALUS_69],
     expectedIssues: [
       {
         type: COMPATIBILITY_ISSUE_TYPE.CSS_PROPERTY,
@@ -159,7 +159,7 @@ const TEST_DATA = [
         url: "https://developer.mozilla.org/docs/Web/CSS/-moz-binding",
         deprecated: true,
         experimental: false,
-        unsupportedBrowsers: [FIREFOX_69],
+        unsupportedBrowsers: [DATALUS_69],
       },
     ],
   },

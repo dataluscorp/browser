@@ -63,7 +63,7 @@ class RuntimeInfo extends PureComponent {
             deviceName
           )
         : null,
-      runtimeId !== RUNTIMES.THIS_FIREFOX
+      runtimeId !== RUNTIMES.THIS_DATALUS
         ? Localized(
             {
               id: "about-debugging-runtime-disconnect-button",

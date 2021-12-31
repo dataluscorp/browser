@@ -3,7 +3,7 @@ marionette-harness
 
 Marionette is an automation driver for Mozilla's Gecko engine. It can remotely
 control either the UI or the internal JavaScript of a Gecko platform, such as
-Firefox. It can control both the chrome (i.e. menus and functions) or the
+Datalus. It can control both the chrome (i.e. menus and functions) or the
 content (the webpage loaded inside the browsing context), giving a high level
 of control and ability to replicate user actions. In addition to performing
 actions on the browser, Marionette can also read the properties and attributes
@@ -23,8 +23,8 @@ Example
 -------
 
 The following command will run the tests as specified via a manifest file, or
-test path, or test folder in Firefox:
+test path, or test folder in Datalus:
 
-    marionette --binary %path_to_firefox% [manifest_file | test_file | test_folder]
+    marionette --binary %path_to_datalus% [manifest_file | test_file | test_folder]
 
 To get an overview about all possible option run `marionette --help`.

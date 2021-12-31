@@ -33,7 +33,7 @@ __all__ = [
     "ChromeProfile",
     "ChromiumProfile",
     "Profile",
-    "FirefoxProfile",
+    "DatalusProfile",
     "ThunderbirdProfile",
     "create_profile",
 ]
@@ -208,7 +208,7 @@ class Profile(BaseProfile):
         :param locations: ServerLocations object
         :param proxy: Setup a proxy
         :param restore: Flag for removing all custom settings during cleanup
-        :param whitelistpaths: List of paths to pass to Firefox to allow read
+        :param whitelistpaths: List of paths to pass to Datalus to allow read
             access to from the content process sandbox.
         """
         super(Profile, self).__init__(
@@ -496,8 +496,8 @@ class Profile(BaseProfile):
         return self.summary()
 
 
-class FirefoxProfile(Profile):
-    """Specialized Profile subclass for Firefox"""
+class DatalusProfile(Profile):
+    """Specialized Profile subclass for Datalus"""
 
     preferences = {}
 
@@ -576,7 +576,7 @@ class ChromeProfile(ChromiumProfile):
 profile_class = {
     "chrome": ChromeProfile,
     "chromium": ChromiumProfile,
-    "firefox": FirefoxProfile,
+    "datalus": DatalusProfile,
     "thunderbird": ThunderbirdProfile,
 }
 
@@ -584,7 +584,7 @@ profile_class = {
 def create_profile(app, **kwargs):
     """Create a profile given an application name.
 
-    :param app: String name of the application to create a profile for, e.g 'firefox'.
+    :param app: String name of the application to create a profile for, e.g 'datalus'.
     :param kwargs: Same as the arguments for the Profile class (optional).
     :returns: An application specific Profile instance
     :raises: NotImplementedError

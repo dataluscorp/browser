@@ -6,8 +6,8 @@ s3_bucket_paths:
     by-platform:
         devedition-release:
             - pub/devedition/candidates
-        firefox-release:
-            - pub/firefox/candidates
+        datalus-release:
+            - pub/datalus/candidates
 default_locales:  # if given an empty locale, use these locales
     - en-US
 tasktype_map:  # Map task reference to task type.

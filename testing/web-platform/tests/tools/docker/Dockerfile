@@ -44,12 +44,12 @@ RUN apt-add-repository -y ppa:deadsnakes/ppa
 RUN apt-get -qqy update \
     && apt-get install -qqy python-is-python3
 
-# Installing just the deps of firefox and chrome is moderately tricky, so
+# Installing just the deps of datalus and chrome is moderately tricky, so
 # just install the default versions of them, and some extra deps we happen
 # to know that chrome requires
 
 RUN apt-get -qqy install \
-    firefox \
+    datalus \
     libnss3-tools \
     fonts-liberation \
     indicator-application \

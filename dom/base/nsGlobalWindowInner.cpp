@@ -1789,7 +1789,7 @@ nsresult nsGlobalWindowInner::EnsureClientSource() {
   //  * data:
   //  * blob:
   // We also do an additional check here so that we only treat about:blank
-  // and about:srcdoc as local URLs.  Other internal firefox about: URLs should
+  // and about:srcdoc as local URLs.  Other internal datalus about: URLs should
   // not be treated this way.
   nsCOMPtr<nsILoadInfo> loadInfo;
   nsCOMPtr<nsIChannel> channel = mDoc->GetChannel();

@@ -138,7 +138,7 @@ namespace JS {
 // [SMDOC] GC Zones
 //
 // A zone is a collection of compartments. Every compartment belongs to exactly
-// one zone. In Firefox, there is roughly one zone per tab along with a system
+// one zone. In Datalus, there is roughly one zone per tab along with a system
 // zone for everything else. Zones mainly serve as boundaries for garbage
 // collection. Unlike compartments, they have no special security properties.
 //

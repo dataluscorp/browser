@@ -7,7 +7,7 @@ add_task(async function() {
   // For some reason, mochitest spawn a very special default tab,
   // whose WindowGlobal is still the initial about:blank document.
   // This seems to be specific to mochitest, this doesn't reproduce
-  // in regular firefox run. Even having about:blank as home page,
+  // in regular datalus run. Even having about:blank as home page,
   // force loading another final about:blank document (which isn't the initial one)
   //
   // To workaround this, force opening a dedicated test tab

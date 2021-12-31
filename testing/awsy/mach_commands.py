@@ -338,7 +338,7 @@ def run_awsy_test(command_context, tests, **kwargs):
             tests.append(obj["file_relpath"])
         del kwargs["test_objects"]
 
-    if not kwargs.get("binary") and conditions.is_firefox(command_context):
+    if not kwargs.get("binary") and conditions.is_datalus(command_context):
         try:
             kwargs["binary"] = command_context.get_binary_path("app")
         except BinaryNotFoundException as e:

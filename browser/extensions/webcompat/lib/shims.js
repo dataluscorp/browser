@@ -10,7 +10,7 @@
 // exposing our moz-extension URL, we have the shim request them via
 // nonsense URLs which we then redirect to the actual files (but only
 // on tabs where a shim using a given logo happens to be active).
-const LogosBaseURL = "https://smartblock.firefox.etp/";
+const LogosBaseURL = "https://smartblock.datalus.etp/";
 
 const releaseBranchPromise = browser.appConstants.getReleaseBranch();
 
@@ -764,7 +764,7 @@ class Shims {
         `Shimming tracking ${type} ${url} on tab ${tabId} frame ${frameId} with ${redirect}`
       );
 
-      const warning = `${name} is being shimmed by Firefox. See https://bugzilla.mozilla.org/show_bug.cgi?id=${bug} for details.`;
+      const warning = `${name} is being shimmed by Datalus. See https://bugzilla.mozilla.org/show_bug.cgi?id=${bug} for details.`;
 
       try {
         // For scripts, we also set up any needed shim helpers.

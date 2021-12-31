@@ -18,34 +18,34 @@ add_task(async function() {
       privateTab: false,
       cookieStoreId: null,
       success: true,
-      expectedCookieStoreId: "firefox-default",
+      expectedCookieStoreId: "datalus-default",
     },
     {
       privateTab: false,
-      cookieStoreId: "firefox-default",
+      cookieStoreId: "datalus-default",
       success: true,
-      expectedCookieStoreId: "firefox-default",
+      expectedCookieStoreId: "datalus-default",
     },
     {
       privateTab: false,
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
       success: true,
-      expectedCookieStoreId: "firefox-container-1",
+      expectedCookieStoreId: "datalus-container-1",
     },
     {
       privateTab: false,
-      cookieStoreId: "firefox-container-2",
+      cookieStoreId: "datalus-container-2",
       success: true,
-      expectedCookieStoreId: "firefox-container-2",
+      expectedCookieStoreId: "datalus-container-2",
     },
     {
       privateTab: false,
-      cookieStoreId: "firefox-container-42",
+      cookieStoreId: "datalus-container-42",
       failure: "exist",
     },
     {
       privateTab: false,
-      cookieStoreId: "firefox-private",
+      cookieStoreId: "datalus-private",
       failure: "defaultToPrivate",
     },
     { privateTab: false, cookieStoreId: "wow", failure: "illegal" },
@@ -55,22 +55,22 @@ add_task(async function() {
       privateTab: true,
       cookieStoreId: null,
       success: true,
-      expectedCookieStoreId: "firefox-private",
+      expectedCookieStoreId: "datalus-private",
     },
     {
       privateTab: true,
-      cookieStoreId: "firefox-private",
+      cookieStoreId: "datalus-private",
       success: true,
-      expectedCookieStoreId: "firefox-private",
+      expectedCookieStoreId: "datalus-private",
     },
     {
       privateTab: true,
-      cookieStoreId: "firefox-default",
+      cookieStoreId: "datalus-default",
       failure: "privateToDefault",
     },
     {
       privateTab: true,
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
       failure: "privateToDefault",
     },
     { privateTab: true, cookieStoreId: "wow", failure: "illegal" },
@@ -234,7 +234,7 @@ add_task(async function userContext_disabled() {
     },
     async background() {
       await browser.test.assertRejects(
-        browser.tabs.create({ cookieStoreId: "firefox-container-1" }),
+        browser.tabs.create({ cookieStoreId: "datalus-container-1" }),
         /Contextual identities are currently disabled/,
         "should refuse to open container tab when contextual identities are disabled"
       );
@@ -252,7 +252,7 @@ add_task(async function tabs_query_cookiestoreid_nocookiepermission() {
     async background() {
       let tab = await browser.tabs.create({});
       browser.test.assertEq(
-        "firefox-default",
+        "datalus-default",
         tab.cookieStoreId,
         "Expecting cookieStoreId for new tab"
       );
@@ -261,7 +261,7 @@ add_task(async function tabs_query_cookiestoreid_nocookiepermission() {
         cookieStoreId: tab.cookieStoreId,
       });
       browser.test.assertEq(
-        "firefox-default",
+        "datalus-default",
         query[0].cookieStoreId,
         "Expecting cookieStoreId for new tab through browser.tabs.query"
       );

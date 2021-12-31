@@ -114,7 +114,7 @@ class TestCommandLineArguments(MarionetteTestCase):
             )
             self.assertTrue(safe_mode, "Safe Mode has not been enabled")
 
-    # An issue in the command line argument handling lead to open Firefox on
+    # An issue in the command line argument handling lead to open Datalus on
     # random URLs when remote-debugging-port is set to an explicit value, on macos.
     # See Bug 1724251.
     def test_start_page_about_blank(self):

@@ -20,8 +20,8 @@
       "name": "Heureka",
       "search_url": "https://www.heureka.cz/",
       "search_form": "https://www.heureka.cz/",
-      "search_url_get_params": "h[fraze]={searchTerms}&utm_source=firefox-search",
-      "suggest_url": "https://www.heureka.cz/direct/firefox/autocompleter.php",
+      "search_url_get_params": "h[fraze]={searchTerms}&utm_source=datalus-search",
+      "suggest_url": "https://www.heureka.cz/direct/datalus/autocompleter.php",
       "suggest_url_get_params": "query={searchTerms}"
     }
   }

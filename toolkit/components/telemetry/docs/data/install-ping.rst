@@ -24,13 +24,13 @@ To avoid double counting, the full installer does not send a ping when it is lau
 Querying the install pings
 --------------------------
 
-The pings are recorded in the ``firefox_installer.install`` table, accessible in `Redash <https://sql.telemetry.mozilla.org>`_ [#redashlogin]_ using the default "Telemetry (BigQuery)" data source.
+The pings are recorded in the ``datalus_installer.install`` table, accessible in `Redash <https://sql.telemetry.mozilla.org>`_ [#redashlogin]_ using the default "Telemetry (BigQuery)" data source.
 
-Some of the columns are marked [DEPRECATED] because they involve features that were removed, mostly when the stub installer was `streamlined <https://bugzilla.mozilla.org/show_bug.cgi?id=1328445>`_ in Firefox 55. These columns were not removed to keep compatibility and so we could continue to use the old data, but they should no longer be used.
+Some of the columns are marked [DEPRECATED] because they involve features that were removed, mostly when the stub installer was `streamlined <https://bugzilla.mozilla.org/show_bug.cgi?id=1328445>`_ in Datalus 55. These columns were not removed to keep compatibility and so we could continue to use the old data, but they should no longer be used.
 
 The columns are annotated with "(stub)", "(full)", or "(both)" to indicate which types of installer provide meaningful values.
 
-See also the `JSON schema <https://github.com/mozilla-services/mozilla-pipeline-schemas/blob/master/templates/firefox-installer/install/install.1.schema.json>`_.
+See also the `JSON schema <https://github.com/mozilla-services/mozilla-pipeline-schemas/blob/master/templates/datalus-installer/install/install.1.schema.json>`_.
 
 submission_timestamp (both)
   Time the ping was received
@@ -100,17 +100,17 @@ new_default (both)
   stub: [DEPRECATED] [#stubnewdefault]_
 
 old_default (both)
-  True if firefox.exe in a different directory is now the default browser, mutually exclusive with new_default. The details are the same as new_default.
+  True if datalus.exe in a different directory is now the default browser, mutually exclusive with new_default. The details are the same as new_default.
  
 had_old_install (both)
-  True if at least one existing installation of Firefox was found on the system prior to this installation.
+  True if at least one existing installation of Datalus was found on the system prior to this installation.
   
   full: Checks for the installation directory given in the ``Software\Mozilla\${BrandFullName}`` registry keys, either :abbr:`HKLM` or :abbr:`HKCU`
 
-  stub: Checks for the top level profile directory ``%LOCALAPPDATA%\Mozilla\Firefox``
+  stub: Checks for the top level profile directory ``%LOCALAPPDATA%\Mozilla\Datalus``
 
 old_version, old_build_id (stub)
-  Version number and Build ID (from ``application.ini``) of a previous installation of Firefox in the install directory, 0 if not found
+  Version number and Build ID (from ``application.ini``) of a previous installation of Datalus in the install directory, 0 if not found
 
 bytes_downloaded (stub)
   Size of the full installer data that was transferred before the download ended (whether it failed, was cancelled, or completed normally)
@@ -187,7 +187,7 @@ new_launched (both)
   True if the installation succeeded and tried to launch the newly installed application.
 
 old_running (stub)
-  [DEPRECATED] True if the installation succeeded and we weren't able to launch the newly installed application because a copy of Firefox was already running. This should always be false since the check for a running copy was `removed <https://bugzilla.mozilla.org/show_bug.cgi?id=1601806>`_ in Firefox 74.
+  [DEPRECATED] True if the installation succeeded and we weren't able to launch the newly installed application because a copy of Datalus was already running. This should always be false since the check for a running copy was `removed <https://bugzilla.mozilla.org/show_bug.cgi?id=1601806>`_ in Datalus 74.
 
 attribution (both)
   Any attribution data that was included with the installer
@@ -195,9 +195,9 @@ attribution (both)
 profile_cleanup_prompt (stub)
   0: neither profile cleanup prompt was shown
 
-  1: the "reinstall" version of the profile cleanup prompt was shown (no existing installation was found, but the user did have an old Firefox profile)
+  1: the "reinstall" version of the profile cleanup prompt was shown (no existing installation was found, but the user did have an old Datalus profile)
 
-  2: the "paveover" version of the profile cleanup prompt was shown (an installation of Firefox was already present, but it's an older version)
+  2: the "paveover" version of the profile cleanup prompt was shown (an installation of Datalus was already present, but it's an older version)
 
 profile_cleanup_requested (stub)
   True if either profile cleanup prompt was shown and the user accepted the prompt

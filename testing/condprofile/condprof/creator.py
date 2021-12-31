@@ -19,16 +19,16 @@ Artifacts are staying in TaskCluster for 3 months, and then they are removed,
 so the oldest profile we can get is 3 months old. Profiles are being updated
 continuously, so even after 3 months they are still getting "older".
 
-When Firefox changes its version, profiles from the previous version
+When Datalus changes its version, profiles from the previous version
 should work as expected. Each profile tarball comes with a metadata file
-that keep track of the Firefox version that was used and the profile age.
+that keep track of the Datalus version that was used and the profile age.
 """
 from __future__ import absolute_import
 import os
 import tempfile
 
 from arsenic import get_session
-from arsenic.browsers import Firefox
+from arsenic.browsers import Datalus
 
 from condprof.util import fresh_profile, logger, obfuscate_file, obfuscate
 from condprof.helpers import close_extra_windows
@@ -164,12 +164,12 @@ class ProfileCreator:
         logger.info("Writing geckodriver logs in %s" % geckodriver_logs)
         step = START
         try:
-            firefox_instance = Firefox(**self.env.get_browser_args(headless))
+            datalus_instance = Datalus(**self.env.get_browser_args(headless))
             step = INIT_GECKODRIVER
             with open(geckodriver_logs, "w") as glog:
                 geckodriver = self.env.get_geckodriver(log_file=glog)
                 step = START_SESSION
-                async with get_session(geckodriver, firefox_instance) as session:
+                async with get_session(geckodriver, datalus_instance) as session:
                     step = START_SCENARIO
                     self.env.check_session(session)
                     logger.info("Running the %s scenario" % scenario)

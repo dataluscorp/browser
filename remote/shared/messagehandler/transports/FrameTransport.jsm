@@ -108,7 +108,7 @@ class FrameTransport {
     let browsingContexts = [];
     // Fetch all top level window's browsing contexts
     // Note that getWindowEnumerator works from all processes, including the content process.
-    // Looping on windows this way limits to desktop Firefox. See Bug 1723919.
+    // Looping on windows this way limits to desktop Datalus. See Bug 1723919.
     for (const win of Services.ww.getWindowEnumerator("navigator:browser")) {
       if (!win.gBrowser) {
         continue;

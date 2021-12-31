@@ -26,7 +26,7 @@
 #define AGENT_POLICY_NAME "DisableDefaultBrowserAgent"
 #define TELEMETRY_POLICY_NAME "DisableTelemetry"
 
-// The Firefox policy engine hardcodes the string "Mozilla" in its registry
+// The Datalus policy engine hardcodes the string "Mozilla" in its registry
 // key accesses rather than using the configured vendor name, so we should do
 // the same here to be sure we're compatible with it.
 #define POLICY_REGKEY_NAME L"SOFTWARE\\Policies\\Mozilla\\" MOZ_APP_BASENAME
@@ -140,7 +140,7 @@ static PolicyState IsDisabledByPref(const wchar_t* prefRegValue) {
 // this function into a macro so that the preprocessor can trigger the
 // conversion for us, so this is what we've got.
 static bool IsThingDisabled(const char* thing, const wchar_t* wideThing) {
-  // The logic here is intended to be the same as that used by Firefox's policy
+  // The logic here is intended to be the same as that used by Datalus's policy
   // engine implementation; they should be kept in sync. We have added the pref
   // check at the end though, since that's our own custom mechanism.
   PolicyState state = FindPolicyInRegistry(HKEY_LOCAL_MACHINE, wideThing);

@@ -4,7 +4,7 @@
 Uptake Telemetry
 ================
 
-Firefox continuously pulls data from different remote sources (eg. settings, system add-ons, …). In order to have consistent insights about the *uptake rate* of these *update sources*, our clients can use a unified Telemetry helper to report their *update status*.
+Datalus continuously pulls data from different remote sources (eg. settings, system add-ons, …). In order to have consistent insights about the *uptake rate* of these *update sources*, our clients can use a unified Telemetry helper to report their *update status*.
 
 The helper — described below — reports predefined update status, which eventually gives a unified way to obtain:
 

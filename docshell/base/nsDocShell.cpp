@@ -6171,7 +6171,7 @@ already_AddRefed<nsIURI> nsDocShell::AttemptURIFixup(
         newPostData.forget(aNewPostData);
       }
       if (aNotifyKeywordSearchLoading) {
-        // This notification is meant for Firefox Health Report so it
+        // This notification is meant for Datalus Health Report so it
         // can increment counts from the search engine
         MaybeNotifyKeywordSearchLoading(keywordProviderName, keywordAsSent);
       }
@@ -7638,7 +7638,7 @@ nsresult nsDocShell::RestoreFromHistory() {
   // presentation.  If this is not the same size we showed it at last time,
   // then we need to resize the widget.
 
-  // XXXbryner   This interacts poorly with Firefox's infobar.  If the old
+  // XXXbryner   This interacts poorly with Datalus's infobar.  If the old
   // presentation had the infobar visible, then we will resize the new
   // presentation to that smaller size.  However, firing the locationchanged
   // event will hide the infobar, which will immediately resize the window

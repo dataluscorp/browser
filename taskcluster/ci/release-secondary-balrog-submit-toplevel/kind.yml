@@ -30,16 +30,16 @@ job-defaults:
     whats-new-config: browser/config/whats_new_page.yml
 
 jobs:
-    firefox:
-        name: submit-toplevel-rc-firefox-release-to-balrog
-        description: submit toplevel RC Firefox release to balrog
-        shipping-product: firefox
+    datalus:
+        name: submit-toplevel-rc-datalus-release-to-balrog
+        description: submit toplevel RC Datalus release to balrog
+        shipping-product: datalus
         worker:
-            product: firefox
+            product: datalus
             channel-names: ["beta", "beta-localtest", "beta-cdntest"]
-            rules-to-update: ["firefox-beta-cdntest", "firefox-beta-localtest"]
+            rules-to-update: ["datalus-beta-cdntest", "datalus-beta-localtest"]
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             symbol: Rel(BPFxRC)
             tier: 1
             kind: build

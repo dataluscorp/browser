@@ -6,11 +6,11 @@
   "host": "",
   "logging": {
     "client": false,
-    "firefoxProxy": false
+    "datalusProxy": false
   },
   "features": {
   },
-  "firefox": {
+  "datalus": {
     "proxyHost": "localhost:9000",
     "webSocketConnection": false,
     "webSocketHost": "localhost:6080"

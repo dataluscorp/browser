@@ -81,7 +81,7 @@ var gFxaPairDeviceDialog = {
   _resetBackgroundQR() {
     // The text we encode doesn't really matter as it is un-scannable (blurry and very transparent).
     const imgData = QR.encodeToDataURI(
-      "https://accounts.firefox.com/pair",
+      "https://accounts.datalus.com/pair",
       "L"
     );
     document.getElementById(

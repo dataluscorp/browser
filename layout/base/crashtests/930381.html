@@ -56,19 +56,19 @@ READ of size 4 at 0x61700022a21c thread T0
         Line 3954 of "/builds/slave/m-in-l64-asan-0000000000000000/build/toolkit/xre/nsAppRunner.cpp"
     #14 0x7f0fe46c102b (libxul.so!XRE_main+0x3ab)
         Line 4156 of "/builds/slave/m-in-l64-asan-0000000000000000/build/toolkit/xre/nsAppRunner.cpp"
-    #15 0x459d1d (firefox!main+0x94d)
+    #15 0x459d1d (datalus!main+0x94d)
         Line 275 of "/builds/slave/m-in-l64-asan-0000000000000000/build/browser/app/nsBrowserApp.cpp"
     #16 0x7f0ff3d5876c (libc.so.6!__libc_start_main+0xec)
         Line 226 of "libc-start.c"
-    #17 0x45929c (firefox!_start+0x28)
+    #17 0x45929c (datalus!_start+0x28)
 0x61700022a21c is located 28 bytes inside of 760-byte region [0x61700022a200,0x61700022a4f8)
 freed by thread T0 here:
-    #0 0x4461a5 (firefox!free+0x55)
+    #0 0x4461a5 (datalus!free+0x55)
         Line 64 of "/builds/slave/moz-toolchain/src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc"
     #1 0x7f0fe529f118 (libxul.so!mozilla::RestyleManager::Release()+0x138)
         Line 225 of "../../dist/include/mozilla/mozalloc.h"
 previously allocated by thread T0 here:
-    #0 0x4462e5 (firefox!malloc+0x55)
+    #0 0x4462e5 (datalus!malloc+0x55)
         Line 74 of "/builds/slave/moz-toolchain/src/llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc"
     #1 0x7f0feddfe5c8 (libmozalloc.so!moz_xmalloc+0x8)
         Line 54 of "/builds/slave/m-in-l64-asan-0000000000000000/build/memory/mozalloc/mozalloc.cpp"

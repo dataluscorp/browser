@@ -16,4 +16,4 @@ job-template:
     shipping-phase: promote
     attributes:
         artifact_prefix: public
-        artifact_map: taskcluster/gecko_taskgraph/manifests/firefox_candidates_checksums.yml
+        artifact_map: taskcluster/gecko_taskgraph/manifests/datalus_candidates_checksums.yml

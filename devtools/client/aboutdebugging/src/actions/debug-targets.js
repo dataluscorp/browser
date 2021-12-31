@@ -75,7 +75,7 @@ function inspectDebugTarget(type, id) {
       type,
     };
 
-    if (runtime.id !== RUNTIMES.THIS_FIREFOX) {
+    if (runtime.id !== RUNTIMES.THIS_DATALUS) {
       urlParams.remoteId = remoteClientManager.getRemoteId(
         runtime.id,
         runtime.type
@@ -193,7 +193,7 @@ function requestExtensions() {
     const clientWrapper = getCurrentClient(getState().runtimes);
 
     try {
-      const isIconDataURLRequired = runtime.type !== RUNTIMES.THIS_FIREFOX;
+      const isIconDataURLRequired = runtime.type !== RUNTIMES.THIS_DATALUS;
       const addons = await clientWrapper.listAddons({
         iconDataURL: isIconDataURLRequired,
       });

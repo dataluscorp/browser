@@ -6,34 +6,34 @@
 
 # Default extra components to build config
 with Files("**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("devtools/**"):
     BUG_COMPONENT = ("DevTools", "General")
 
 with Files("gdbpp/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("lldbutils/**"):
     BUG_COMPONENT = ("Core", "General")
 
 with Files("mach/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Mach Core")
+    BUG_COMPONENT = ("Datalus Build System", "Mach Core")
 
 with Files("mozboot/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Bootstrap Configuration")
+    BUG_COMPONENT = ("Datalus Build System", "Bootstrap Configuration")
 
 with Files("mozbuild/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("mozlint/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Linting and Formatting")
+    BUG_COMPONENT = ("Datalus Build System", "Linting and Formatting")
 
 with Files("mozversioncontrol/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("l10n/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("mozrelease/**"):
     BUG_COMPONENT = ("Release Engineering", "General")

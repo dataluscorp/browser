@@ -27,7 +27,7 @@ class WindowSurfaceWaylandMB : public WindowSurface {
   explicit WindowSurfaceWaylandMB(RefPtr<nsWindow> aWindow);
   ~WindowSurfaceWaylandMB() = default;
 
-  // Lock() / Commit() are called by gecko when Firefox
+  // Lock() / Commit() are called by gecko when Datalus
   // wants to display something. Lock() returns a DrawTarget
   // where gecko paints. When gecko is done it calls Commit()
   // and we try to send the DrawTarget (backed by wl_buffer)

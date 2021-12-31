@@ -40,26 +40,26 @@ class AdbRuntime {
   }
 
   get isFenix() {
-    // Firefox Release uses "org.mozilla.firefox"
-    // Firefox Beta uses "org.mozilla.firefox_beta"
-    // Firefox Nightly uses "org.mozilla.fenix"
-    const isFirefox =
-      this._packageName().includes("org.mozilla.firefox") ||
+    // Datalus Release uses "org.mozilla.datalus"
+    // Datalus Beta uses "org.mozilla.datalus_beta"
+    // Datalus Nightly uses "org.mozilla.fenix"
+    const isDatalus =
+      this._packageName().includes("org.mozilla.datalus") ||
       this._packageName().includes("org.mozilla.fenix");
 
-    if (!isFirefox) {
+    if (!isDatalus) {
       return false;
     }
 
-    // Firefox Release (based on Fenix) is not released in all regions yet, so
+    // Datalus Release (based on Fenix) is not released in all regions yet, so
     // we should still check for Fennec using the version number.
-    // Note that Fennec's versionName followed Firefox versions (eg "68.11.0").
+    // Note that Fennec's versionName followed Datalus versions (eg "68.11.0").
     // We can find the main version number in it. Fenix on the other hand has
     // version names such as "Nightly 200730 06:21".
     const mainVersion = Number(this.versionName.split(".")[0]);
     const isFennec = mainVersion === 68;
 
-    // Application is Fenix if this is a Firefox application with a version
+    // Application is Fenix if this is a Datalus application with a version
     // different from the Fennec version.
     return !isFennec;
   }
@@ -80,23 +80,23 @@ class AdbRuntime {
     const packageName = this._packageName();
 
     switch (packageName) {
-      case "org.mozilla.firefox":
+      case "org.mozilla.datalus":
         if (!this.isFenix) {
           // Old Fennec release
-          return "Firefox (Fennec)";
+          return "Datalus (Fennec)";
         }
-        // Official Firefox app, based on Fenix
-        return "Firefox";
-      case "org.mozilla.firefox_beta":
-        // Official Firefox Beta app, based on Fenix
-        return "Firefox Beta";
+        // Official Datalus app, based on Fenix
+        return "Datalus";
+      case "org.mozilla.datalus_beta":
+        // Official Datalus Beta app, based on Fenix
+        return "Datalus Beta";
       case "org.mozilla.fenix":
       case "org.mozilla.fenix.nightly":
-        // Official Firefox Nightly app, based on Fenix
-        return "Firefox Nightly";
+        // Official Datalus Nightly app, based on Fenix
+        return "Datalus Nightly";
       default:
         // Unknown package name
-        return `Firefox (${packageName})`;
+        return `Datalus (${packageName})`;
     }
   }
 
@@ -117,7 +117,7 @@ class AdbRuntime {
   }
 
   _packageName() {
-    // If using abstract socket address, it is "@org.mozilla.firefox/..."
+    // If using abstract socket address, it is "@org.mozilla.datalus/..."
     // If using path base socket, it is "/data/data/<package>...""
     // Until Fennec 62 only supports path based UNIX domain socket, but
     // Fennec 63+ supports both path based and abstract socket.

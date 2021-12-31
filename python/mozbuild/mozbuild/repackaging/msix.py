@@ -264,12 +264,12 @@ def unpack_msix(input_msix, output, log=None, verbose=False):
                 var[i] = q
                 os.rename(os.path.join(dirpath, p), os.path.join(dirpath, q))
 
-    # The "package root" of our MSIX packages is like "Mozilla Firefox Beta Package Root", i.e., it
+    # The "package root" of our MSIX packages is like "Mozilla Datalus Beta Package Root", i.e., it
     # varies by channel.  This is an easy way to determine it.
     for p, _ in temp_finder.find("**/application.ini"):
         relpath = os.path.split(p)[0]
 
-    # The application executable, like `firefox.exe`, is in this directory.
+    # The application executable, like `datalus.exe`, is in this directory.
     return mozpath.normpath(mozpath.join(output, relpath))
 
 
@@ -283,7 +283,7 @@ def repackage_msix(
     version=None,
     vendor=None,
     displayname=None,
-    app_name="firefox",
+    app_name="datalus",
     identity=None,
     publisher=None,
     publisher_display_name="Mozilla Corporation",
@@ -439,7 +439,7 @@ def repackage_msix(
         )
     )
 
-    # Like 'Firefox Package Root', 'Firefox Nightly Package Root', 'Firefox Beta
+    # Like 'Datalus Package Root', 'Datalus Nightly Package Root', 'Datalus Beta
     # Package Root'.  This is `BrandFullName` in the installer, and we want to
     # be close but to not match.  By not matching, we hope to prevent confusion
     # and/or errors between regularly installed builds and App Package builds.
@@ -450,7 +450,7 @@ def repackage_msix(
 
     # We might want to include the publisher ID hash here.  I.e.,
     # "__{publisherID}".  My locally produced MSIX was named like
-    # `Mozilla.MozillaFirefoxNightly_89.0.0.0_x64__4gf61r4q480j0`, suggesting also a
+    # `Mozilla.MozillaDatalusNightly_89.0.0.0_x64__4gf61r4q480j0`, suggesting also a
     # missing field, but it's not necessary, since this is just an output file name.
     package_output_name = "{identity}_{version}_{arch}".format(
         identity=identity, version=version, arch=_MSIX_ARCH[arch]
@@ -475,10 +475,10 @@ def repackage_msix(
     # TODO: Bug 1710147: filter out MSVCRT files and use a dependency instead.
     for p, f in finder:
         if not os.path.isdir(dir_or_package):
-            # In archived builds, `p` is like "firefox/firefox.exe"; we want just "firefox.exe".
-            pp = os.path.relpath(p, "firefox")
+            # In archived builds, `p` is like "datalus/datalus.exe"; we want just "datalus.exe".
+            pp = os.path.relpath(p, "datalus")
         else:
-            # In local builds and unpacked MSIX directories, `p` is like "firefox.exe" already.
+            # In local builds and unpacked MSIX directories, `p` is like "datalus.exe" already.
             pp = p
 
         if pp.startswith("distribution"):
@@ -519,14 +519,14 @@ def repackage_msix(
                 # are presented in CI.
                 base, locale = os.path.split(os.path.dirname(p))
 
-                # Like "locale-LOCALE/langpack-LOCALE@firefox.mozilla.org.xpi".  This is what AMO
+                # Like "locale-LOCALE/langpack-LOCALE@datalus.mozilla.org.xpi".  This is what AMO
                 # serves and how flatpak builds name langpacks, but not how snap builds name
                 # langpacks.  I can't explain the discrepancy.
                 dest = mozpath.normsep(
                     mozpath.join(
                         base,
                         f"locale-{locale}",
-                        f"langpack-{locale}@firefox.mozilla.org.xpi",
+                        f"langpack-{locale}@datalus.mozilla.org.xpi",
                     )
                 )
 
@@ -538,7 +538,7 @@ def repackage_msix(
                 )
 
             elif os.path.basename(p).startswith("langpack-"):
-                # Turn "/path/to/langpack-LOCALE@firefox.mozilla.org.xpi" into "LOCALE".  This is
+                # Turn "/path/to/langpack-LOCALE@datalus.mozilla.org.xpi" into "LOCALE".  This is
                 # how langpacks are presented from an unpacked MSIX.
                 _, _, locale = os.path.basename(p).partition("langpack-")
                 locale, _, _ = locale.partition("@")
@@ -593,7 +593,7 @@ def repackage_msix(
     #
     # We distribute all langpacks to avoid the following issue.  Suppose a user manually installs a
     # langpack that is not supported by Windows, and then updates the installed MSIX package.  MSIX
-    # package upgrades are essentially paveover installs, so there is no opportunity for Firefox to
+    # package upgrades are essentially paveover installs, so there is no opportunity for Datalus to
     # update the langpack before the update.  But, since all langpacks are bundled with the MSIX,
     # that langpack will be up-to-date, preventing one class of YSOD.
     unadvertised = set()
@@ -617,13 +617,13 @@ def repackage_msix(
         "APPX_ARCH": _MSIX_ARCH[arch],
         "APPX_DISPLAYNAME": brandFullName,
         "APPX_DESCRIPTION": brandFullName,
-        # Like 'Mozilla.MozillaFirefox', 'Mozilla.MozillaFirefoxBeta', or
-        # 'Mozilla.MozillaFirefoxNightly'.
+        # Like 'Mozilla.MozillaDatalus', 'Mozilla.MozillaDatalusBeta', or
+        # 'Mozilla.MozillaDatalusNightly'.
         "APPX_IDENTITY": identity,
-        # Like 'Firefox Package Root', 'Firefox Nightly Package Root', 'Firefox
+        # Like 'Datalus Package Root', 'Datalus Nightly Package Root', 'Datalus
         # Beta Package Root'.  See above.
         "APPX_INSTDIR": instdir,
-        # Like 'Firefox%20Package%20Root'.
+        # Like 'Datalus%20Package%20Root'.
         "APPX_INSTDIR_QUOTED": urllib.parse.quote(instdir),
         "APPX_PUBLISHER": publisher,
         "APPX_PUBLISHER_DISPLAY_NAME": publisher_display_name,
@@ -917,7 +917,7 @@ powershell -c 'Get-AuthenticodeSignature -FilePath "{output}" | Format-List *'
 To install this MSIX:
 powershell -c 'Add-AppPackage -path "{output}"'
 To see details after installing:
-powershell -c 'Get-AppPackage -name Mozilla.MozillaFirefox(Beta,...)'
+powershell -c 'Get-AppPackage -name Mozilla.MozillaDatalus(Beta,...)'
                 """.strip(),
             )
 

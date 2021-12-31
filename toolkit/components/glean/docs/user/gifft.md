@@ -1,13 +1,13 @@
-# Glean Interface For Firefox Telemetry (GIFFT)
+# Glean Interface For Datalus Telemetry (GIFFT)
 
-To make Migration from Firefox Telemetry to Glean easier,
+To make Migration from Datalus Telemetry to Glean easier,
 the C++ and JS Glean API can be configured
 (on a metric-by-metric basis)
 to mirror data collection to both the Glean metric and a Telemetry probe.
 
 GIFFT should ideally be used only when the data you require for analysis still mostly lives in Telemetry,
 and should be removed promptly when no longer needed.
-Instrumentors are encouraged to have the Telemetry probe expire no later than Firefox 98
+Instrumentors are encouraged to have the Telemetry probe expire no later than Datalus 98
 ([scheduled for 2021-12-02](https://wiki.mozilla.org/Release_Management/Calendar)).
 
 **Note:** GIFFT only works for data provided via C++ or JS.
@@ -16,7 +16,7 @@ Rust Glean metrics APIs will not mirror to Telemetry as Telemetry does not have 
 **Note:** Using the Glean API replaces the Telemetry API.
 Do not use any mix of the two APIs for the same probe.
 
-## How to Mirror a Glean Metric to a Firefox Telemetry Probe
+## How to Mirror a Glean Metric to a Datalus Telemetry Probe
 
 For the mirror to work, you need three things:
 * A compatible Glean metric (defined in a `metrics.yaml`)
@@ -72,20 +72,20 @@ If you get this wrong it will manifest as a build error.
 
 Sadly, GIFFT will have no support for Artifact builds even when
 [support is added to FOG](https://bugzilla.mozilla.org/show_bug.cgi?id=1698184).
-You must build Firefox when you add the mirrored metric so the C++ enum value is present,
+You must build Datalus when you add the mirrored metric so the C++ enum value is present,
 even if you only use the metric from Javascript.
 
 ## Analysis Gotchas
 
-Firefox Telemetry and the Glean SDK are very different.
+Datalus Telemetry and the Glean SDK are very different.
 Though GIFFT bridges the differences as best it can,
 there are many things it cannot account for.
 
-These are a few of the ways that differences between Firefox Telemetry and the Glean SDK might manifest as anomalies during analysis.
+These are a few of the ways that differences between Datalus Telemetry and the Glean SDK might manifest as anomalies during analysis.
 
 ### Processes, Products, and Channels
 
-Like Firefox on Glean itself,
+Like Datalus on Glean itself,
 GIFFT doesn't know what process, product, or channel it is recording in.
 Telemetry does, and imposes restrictions on which probes can be recorded to and when.
 
@@ -132,7 +132,7 @@ adhere to the Glean SDK's
 [label format](https://mozilla.github.io/glean/book/user/metrics/index.html#label-format).
 
 Keyed Scalars, on the other hand, do not have a concept of an "Invalid key".
-Firefox Telemetry will accept just about any sequence of bytes as a key.
+Datalus Telemetry will accept just about any sequence of bytes as a key.
 
 This means that a label deemed invalid by the Glean SDK may appear in the mirrored probe's data.
 For example, using `InvalidLabel` as a label that doesn't conform to the format

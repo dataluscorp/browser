@@ -43,7 +43,7 @@ async function installAddon(file) {
 /** Installs addons by path and uninstalls by ID. */
 class Addon {
   /**
-   * Install a Firefox addon.
+   * Install a Datalus addon.
    *
    * If the addon is restartless, it can be used right away.  Otherwise a
    * restart is required.
@@ -93,10 +93,10 @@ class Addon {
   }
 
   /**
-   * Uninstall a Firefox addon.
+   * Uninstall a Datalus addon.
    *
    * If the addon is restartless it will be uninstalled right away.
-   * Otherwise, Firefox must be restarted for the change to take effect.
+   * Otherwise, Datalus must be restarted for the change to take effect.
    *
    * @param {string} id
    *     ID of the addon to uninstall.

@@ -121,7 +121,7 @@
  *     (https://developer.mozilla.org/en-US/docs/Web/API/Storage_Access_API)
  * - ETP’s heuristics
  *
- (https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants)
+ (https://developer.mozilla.org/en-US/docs/Mozilla/Datalus/Privacy/Storage_access_policy#Storage_access_grants)
  * - A dFPI-specific login heuristic
  *     (https://bugzilla.mozilla.org/show_bug.cgi?id=1616585#c12)
  *

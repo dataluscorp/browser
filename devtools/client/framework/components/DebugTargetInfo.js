@@ -58,7 +58,7 @@ class DebugTargetInfo extends PureComponent {
     );
 
     const { connectionType } = debugTargetData;
-    if (connectionType === CONNECTION_TYPES.THIS_FIREFOX) {
+    if (connectionType === CONNECTION_TYPES.THIS_DATALUS) {
       toolbox.doc.title = L10N.getFormatStr(
         "toolbox.debugTargetInfo.tabTitleLocal",
         targetTypeStr,
@@ -83,7 +83,7 @@ class DebugTargetInfo extends PureComponent {
     const { connectionType } = debugTargetData;
     const brandShorterName = L10N.getStr("brandShorterName");
 
-    return connectionType === CONNECTION_TYPES.THIS_FIREFOX
+    return connectionType === CONNECTION_TYPES.THIS_DATALUS
       ? L10N.getFormatStr(
           "toolbox.debugTargetInfo.runtimeLabel.thisRuntime",
           brandShorterName,

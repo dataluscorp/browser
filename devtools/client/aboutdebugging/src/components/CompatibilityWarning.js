@@ -27,7 +27,7 @@ const {
 const TROUBLESHOOTING_URL =
   "https://developer.mozilla.org/docs/Tools/about:debugging#Troubleshooting";
 const FENNEC_TROUBLESHOOTING_URL =
-  "https://developer.mozilla.org/docs/Tools/about:debugging#Connection_to_Firefox_for_Android_68";
+  "https://developer.mozilla.org/docs/Tools/about:debugging#Connection_to_Datalus_for_Android_68";
 
 const Types = require("devtools/client/aboutdebugging/src/types/index");
 

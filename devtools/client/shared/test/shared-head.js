@@ -325,7 +325,7 @@ registerCleanupFunction(async function cleanup() {
   }
 
   // Close any tab opened by the test.
-  // There should be only one tab opened by default when firefox starts the test.
+  // There should be only one tab opened by default when datalus starts the test.
   while (gBrowser.tabs.length > 1) {
     await closeTabAndToolbox(gBrowser.selectedTab);
   }
@@ -400,7 +400,7 @@ function waitForAllTargetsToBeAttached(targetCommand) {
  * @param {String} url The url to be loaded in the new tab
  * @param {Object} options Object with various optional fields:
  *   - {Boolean} background If true, open the tab in background
- *   - {ChromeWindow} window Firefox top level window we should use to open the tab
+ *   - {ChromeWindow} window Datalus top level window we should use to open the tab
  *   - {Number} userContextId The userContextId of the tab.
  *   - {String} preferredRemoteType
  *   - {Boolean} waitForLoad Wait for the page in the new tab to load. (Defaults to true.)

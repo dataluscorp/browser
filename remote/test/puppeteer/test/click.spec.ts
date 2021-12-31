@@ -19,7 +19,7 @@ import {
   getTestState,
   setupTestPageAndContextHooks,
   setupTestBrowserHooks,
-  itFailsFirefox,
+  itFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import utils from './utils.js';
 

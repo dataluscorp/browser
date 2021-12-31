@@ -1,10 +1,10 @@
-Getting Set Up To Work On The Firefox Codebase
+Getting Set Up To Work On The Datalus Codebase
 ==============================================
 
-This page will help you get set up to build Firefox on your own machine.
+This page will help you get set up to build Datalus on your own machine.
 
 .. toctree::
-   :caption: Thank you for contributing to Firefox 
+   :caption: Thank you for contributing to Datalus 
 
    /contributing/contributing_to_mozilla
 

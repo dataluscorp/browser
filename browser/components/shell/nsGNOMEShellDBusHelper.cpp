@@ -286,8 +286,8 @@ static void DBusAppendSearchID(DBusMessageIter* aIter, const char* aID) {
   if (GetGnomeSearchTitle(searchTerm.get(), gnomeSearchTitle)) {
     appendStringDictionary(aIter, "name", gnomeSearchTitle.get());
     // TODO: When running on flatpak/snap we may need to use
-    // icon like org.mozilla.Firefox or so.
-    appendStringDictionary(aIter, "gicon", "firefox");
+    // icon like org.mozilla.Datalus or so.
+    appendStringDictionary(aIter, "gicon", "datalus");
   }
 }
 

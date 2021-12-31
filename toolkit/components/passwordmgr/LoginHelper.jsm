@@ -756,7 +756,7 @@ this.LoginHelper = {
         return true;
       }
     } catch (ex) {
-      // newURI will throw for some values e.g. chrome://FirefoxAccounts
+      // newURI will throw for some values e.g. chrome://DatalusAccounts
       // uri.host and uri.port will throw for some values e.g. javascript:
       return false;
     }
@@ -1056,7 +1056,7 @@ this.LoginHelper = {
       try {
         preferredOriginScheme = Services.io.newURI(preferredOrigin).scheme;
       } catch (ex) {
-        // Handle strings that aren't valid URIs e.g. chrome://FirefoxAccounts
+        // Handle strings that aren't valid URIs e.g. chrome://DatalusAccounts
       }
     }
 
@@ -1126,7 +1126,7 @@ this.LoginHelper = {
 
               return loginURI.scheme == preferredOriginScheme;
             } catch (ex) {
-              // Some URLs aren't valid nsIURI (e.g. chrome://FirefoxAccounts)
+              // Some URLs aren't valid nsIURI (e.g. chrome://DatalusAccounts)
               log.debug(
                 "dedupeLogins/shouldReplaceExisting: Error comparing schemes:",
                 existingLogin.origin,
@@ -1712,7 +1712,7 @@ this.LoginHelper = {
   },
 
   isUserFacingLogin(login) {
-    return login.origin != "chrome://FirefoxAccounts"; // FXA_PWDMGR_HOST
+    return login.origin != "chrome://DatalusAccounts"; // FXA_PWDMGR_HOST
   },
 
   async getAllUserFacingLogins() {

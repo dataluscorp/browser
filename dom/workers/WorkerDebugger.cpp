@@ -531,7 +531,7 @@ RefPtr<PerformanceInfoPromise> WorkerDebugger::ReportPerformanceInfo() {
   // Workers only produce metrics for a single category -
   // DispatchCategory::Worker. We still return an array of CategoryDispatch so
   // the PerformanceInfo struct is common to all performance counters throughout
-  // Firefox.
+  // Datalus.
   FallibleTArray<CategoryDispatch> items;
 
   CategoryDispatch item =

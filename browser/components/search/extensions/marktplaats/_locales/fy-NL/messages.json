@@ -12,6 +12,6 @@
     "message": "https://www.marktplaats.nl"
   },
   "searchUrlGetParams": {
-    "message": "client=firefox-search&query={searchTerms}"
+    "message": "client=datalus-search&query={searchTerms}"
   }
 }

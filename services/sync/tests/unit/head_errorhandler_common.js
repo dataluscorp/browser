@@ -75,7 +75,7 @@ var {
   URI_LENGTH_MAX,
   VERSION_OUT_OF_DATE,
   WEAVE_VERSION,
-  kFirefoxShuttingDown,
+  kDatalusShuttingDown,
   kFirstSyncChoiceNotMade,
   kSyncBackoffNotMet,
   kSyncMasterPasswordLocked,

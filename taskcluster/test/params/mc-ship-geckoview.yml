@@ -51,7 +51,7 @@ existing_tasks:
     build-docker-image-desktop1604-test: JflqYDdRRlGgFITaxf8SOw
     build-docker-image-diffoscope: RBWk6AUZSMqw5TvWEjiiWQ
     build-docker-image-fetch: G3KvjWkoS2ym-lrahCb-Zw
-    build-docker-image-firefox-snap: LQsRfQtMREW0kkDKBy-CNQ
+    build-docker-image-datalus-snap: LQsRfQtMREW0kkDKBy-CNQ
     build-docker-image-funsize-update-generator: VkcV9D-vRyuKDWhnzlA1Mw
     build-docker-image-gdb-test: LEr2pG42RSK4el6nvpzCew
     build-docker-image-github-sync: SOAFmzQOQtOXNEPLwSyaYg
@@ -172,9 +172,9 @@ existing_tasks:
     condprof-android-hw-p2-8-0-aarch64-fenix: IbZATNyURg-8fseeRdo_bA
     condprof-android-hw-p2-8-0-aarch64-fennec: dzvQZ107Qi2p1yJnj6ZNGw
     condprof-android-hw-p2-8-0-android-aarch64-geckoview: Mr6r5ET6SROsPaTs20Ml8g
-    condprof-linux64-firefox: J18PTsE8S0iBIk8N39mg4Q
-    condprof-macosx64-firefox: IENCNOpnRr2eULPW08N-2A
-    condprof-windows2012-64-firefox: F-r0fOceSXOtQa7TjLJmJw
+    condprof-linux64-datalus: J18PTsE8S0iBIk8N39mg4Q
+    condprof-macosx64-datalus: IENCNOpnRr2eULPW08N-2A
+    condprof-windows2012-64-datalus: F-r0fOceSXOtQa7TjLJmJw
     diff-artifact-win64-aarch64-eme-validation: OpYOdJN2R3CuewBKsMQDqg
     diff-reproducible-linux32: aaHF2CzqQNGO_VK4X73PYQ
     fetch-android-rs-glue: GQOBvwnWRviPk8Q00UNVJg
@@ -705,8 +705,8 @@ existing_tasks:
     test-linux1804-64-asan-qr/opt-reftest-e10s-8: fb4yph05TQu4Ev-7qJ3CHw
     test-linux1804-64-asan/opt-cppunit-1proc: HW5c5zLUR6axC3Wu2iRO2g
     test-linux1804-64-asan/opt-crashtest-e10s: e6p7apxrTQSd_pGsMDXrbw
-    test-linux1804-64-asan/opt-firefox-ui-functional-local-e10s: PXVIc2KnSIWX9rxyQcj8AQ
-    test-linux1804-64-asan/opt-firefox-ui-functional-remote-e10s: TmkWGYsOQQegSEYi8x1k0Q
+    test-linux1804-64-asan/opt-datalus-ui-functional-local-e10s: PXVIc2KnSIWX9rxyQcj8AQ
+    test-linux1804-64-asan/opt-datalus-ui-functional-remote-e10s: TmkWGYsOQQegSEYi8x1k0Q
     test-linux1804-64-asan/opt-gtest-1proc: LgNiwFAVQwKL9Pj9SrFlfw
     test-linux1804-64-asan/opt-jsreftest-e10s-1: VNZmahDoTOaD_iPSiPg34g
     test-linux1804-64-asan/opt-jsreftest-e10s-2: dYkYkmI4SKCNIKGO45HQCQ
@@ -826,8 +826,8 @@ existing_tasks:
     test-linux1804-64-ccov/opt-awsy-e10s: Cc2HZU68SYSxbBj6Eg17DA
     test-linux1804-64-ccov/opt-cppunit-1proc: M1XEw8iYTACEgul0oDUKNA
     test-linux1804-64-ccov/opt-crashtest-e10s: PA9sFRhIRnmOWt5M9P3CNw
-    test-linux1804-64-ccov/opt-firefox-ui-functional-local-e10s: S2iy4KcKQjOBiRg46TDARA
-    test-linux1804-64-ccov/opt-firefox-ui-functional-remote-e10s: dVxBJr3oRgWdh2ICcvCpog
+    test-linux1804-64-ccov/opt-datalus-ui-functional-local-e10s: S2iy4KcKQjOBiRg46TDARA
+    test-linux1804-64-ccov/opt-datalus-ui-functional-remote-e10s: dVxBJr3oRgWdh2ICcvCpog
     test-linux1804-64-ccov/opt-gtest-1proc: OWBA7hLpSaqZi7mGUWkXMg
     test-linux1804-64-ccov/opt-jittest-1proc-1: AtbUjBwwRd6SuOqZgk7Qaw
     test-linux1804-64-ccov/opt-jittest-1proc-2: CHFymXjjRk6ZHofpLkE4hg
@@ -1258,8 +1258,8 @@ existing_tasks:
     test-linux1804-64-shippable/opt-browser-screenshots-e10s: KiQPhBBEQe-vDSIWxg6UMw
     test-linux1804-64-shippable/opt-cppunit-1proc: HONUeC7gR26OMBrjTn_0OA
     test-linux1804-64-shippable/opt-crashtest-e10s: a9C-G9aeQReEfETasrTIvw
-    test-linux1804-64-shippable/opt-firefox-ui-functional-local-e10s: YmE4pJ5GSLukpjts3EsKwg
-    test-linux1804-64-shippable/opt-firefox-ui-functional-remote-e10s: HF9ZZpj9RUGnVx6ACyCT8w
+    test-linux1804-64-shippable/opt-datalus-ui-functional-local-e10s: YmE4pJ5GSLukpjts3EsKwg
+    test-linux1804-64-shippable/opt-datalus-ui-functional-remote-e10s: HF9ZZpj9RUGnVx6ACyCT8w
     test-linux1804-64-shippable/opt-gtest-1proc: Nm4jDqOWQpyncSy0gJ5NMA
     test-linux1804-64-shippable/opt-jsreftest-e10s-1: IUJ9Z1p4SO262n56UDHt1A
     test-linux1804-64-shippable/opt-jsreftest-e10s-2: Zuvw5k8hTL-eZiJinFlUBA
@@ -1339,8 +1339,8 @@ existing_tasks:
     test-linux1804-64-shippable/opt-xpcshell-e10s-5: aE4L_J3dTdaCAJZmK5Wc0A
     test-linux1804-64/debug-cppunit-1proc: IE5gzbNtQC-1G4RsBOvHMA
     test-linux1804-64/debug-crashtest-e10s: CmTpoymARjOtAGXY0_rLDg
-    test-linux1804-64/debug-firefox-ui-functional-local-e10s: dIWrJerJTmaiOs3w9nL9xA
-    test-linux1804-64/debug-firefox-ui-functional-remote-e10s: IjmWrS5MRRmyrTHXVEu4Gw
+    test-linux1804-64/debug-datalus-ui-functional-local-e10s: dIWrJerJTmaiOs3w9nL9xA
+    test-linux1804-64/debug-datalus-ui-functional-remote-e10s: IjmWrS5MRRmyrTHXVEu4Gw
     test-linux1804-64/debug-gtest-1proc: IFUuFIP9SZiT3IlhU5v9Ww
     test-linux1804-64/debug-jsreftest-e10s-1: UShJY17DQnudv1AMjfzZZA
     test-linux1804-64/debug-jsreftest-e10s-2: FiNfSd3xRwWt_VuCExhWkQ
@@ -1518,8 +1518,8 @@ existing_tasks:
     test-linux1804-64/opt-browser-screenshots-e10s: WSHIWq4-S8-GGBiSEzZAcw
     test-linux1804-64/opt-cppunit-1proc: CD41JyX-TDSZVDbmLT6EvQ
     test-linux1804-64/opt-crashtest-e10s: cX_XFnReRQ2OLJHxNd0wNA
-    test-linux1804-64/opt-firefox-ui-functional-local-e10s: Ki62tHbLS9aKFhYbzGOtmg
-    test-linux1804-64/opt-firefox-ui-functional-remote-e10s: KMon6iADTleGJ12a6DbRRw
+    test-linux1804-64/opt-datalus-ui-functional-local-e10s: Ki62tHbLS9aKFhYbzGOtmg
+    test-linux1804-64/opt-datalus-ui-functional-remote-e10s: KMon6iADTleGJ12a6DbRRw
     test-linux1804-64/opt-gtest-1proc: I1KXCjCORjOIQ4jCzMMvCA
     test-linux1804-64/opt-jsreftest-e10s-1: PXf_H2m_RjegtrtMyKlm4w
     test-linux1804-64/opt-jsreftest-e10s-2: U-8xKFwlQfaCBVIBiVWTsg
@@ -1650,66 +1650,66 @@ existing_tasks:
     test-linux64-qr/debug-web-platform-tests-wdspec-fis-e10s-1: FyHR-c5hTr-JSbAu9lSk8w
     test-linux64-qr/debug-web-platform-tests-wdspec-fis-e10s-2: NNbWKtz9S76OYiGwtA7rbA
     test-linux64-qr/debug-web-platform-tests-wdspec-fis-e10s-3: JPQ3U_6BQIO6Yt6F0RHqYA
-    test-linux64-qr/opt-raptor-ares6-firefox-e10s: Lkd6xpPPSBiqCRUDwYLEew
-    test-linux64-qr/opt-raptor-assorted-dom-firefox-e10s: ALKw9cP9StSFpzrvBmRQog
-    test-linux64-qr/opt-raptor-jetstream2-firefox-e10s: OjiqXSqQT0yzeKlGfJROaw
-    test-linux64-qr/opt-raptor-motionmark-animometer-firefox-e10s: GB0bryw6Tm-AVUoq-_Pr2Q
-    test-linux64-qr/opt-raptor-motionmark-htmlsuite-firefox-e10s: STl_CeLcTPSZP7uNJijTHg
-    test-linux64-qr/opt-raptor-speedometer-firefox-e10s: X7eA0L6LQPuMyVX5IfrL8w
-    test-linux64-qr/opt-raptor-stylebench-firefox-e10s: AEXy9GywSX-tYmbfo_uNQg
-    test-linux64-qr/opt-raptor-sunspider-firefox-e10s: Va0LUVL9TGmwJm45rFhF1Q
-    test-linux64-qr/opt-raptor-tp6-1-firefox-cold-e10s: I5jOVXYBR_qLQRos7oOyMw
-    test-linux64-qr/opt-raptor-tp6-1-firefox-e10s: ElXBCnB6TC6QJ6xfJu2izQ
-    test-linux64-qr/opt-raptor-tp6-10-firefox-cold-e10s: cqFUG93ESH-6OhNUPjeqow
-    test-linux64-qr/opt-raptor-tp6-10-firefox-e10s: NrYby8jjTgKtRwPuoX_89w
-    test-linux64-qr/opt-raptor-tp6-11-firefox-cold-e10s: A5v1T6mATTO1DqlO5nZRXg
-    test-linux64-qr/opt-raptor-tp6-12-firefox-cold-e10s: F4YsuSRiRDGdyCksM8-W0w
-    test-linux64-qr/opt-raptor-tp6-13-firefox-cold-e10s: AZqAvm1sSgKPTuozrNnPIQ
-    test-linux64-qr/opt-raptor-tp6-14-firefox-cold-e10s: bxJ_2e5RSgKbw5BQsP2PpA
-    test-linux64-qr/opt-raptor-tp6-15-firefox-cold-e10s: Ix4itBJGTe-W187EhTPJHw
-    test-linux64-qr/opt-raptor-tp6-16-firefox-cold-e10s: cjfF5wRVTVS7nfqhXEKaGw
-    test-linux64-qr/opt-raptor-tp6-17-firefox-cold-e10s: Kyvx9YmWRoeEUvXUwDG3yQ
-    test-linux64-qr/opt-raptor-tp6-18-firefox-cold-e10s: QwSeO24RTY2E8ayglnezIw
-    test-linux64-qr/opt-raptor-tp6-19-firefox-cold-e10s: HnQIaM1IQPWOVKXgr1qSPA
-    test-linux64-qr/opt-raptor-tp6-2-firefox-cold-e10s: QDAnTaE7QYma_ZbGZY6cbQ
-    test-linux64-qr/opt-raptor-tp6-2-firefox-e10s: ZauV99ybS1eAW2YWVH6yAg
-    test-linux64-qr/opt-raptor-tp6-20-firefox-cold-e10s: eWo0DJzaR3uobgV8QY5jRw
-    test-linux64-qr/opt-raptor-tp6-21-firefox-cold-e10s: A8iJV3pZQVicJCBPSa8Jlg
-    test-linux64-qr/opt-raptor-tp6-22-firefox-cold-e10s: VwBf3jRATYCs_5Km9NPKaw
-    test-linux64-qr/opt-raptor-tp6-23-firefox-cold-e10s: AZaaKsm4QVC3dRRIDCn0gw
-    test-linux64-qr/opt-raptor-tp6-24-firefox-cold-e10s: d8HtGO9_Rg-uqGe-0EYdxg
-    test-linux64-qr/opt-raptor-tp6-25-firefox-cold-e10s: S0oQVHWaTB2UFuyHbxqU-w
-    test-linux64-qr/opt-raptor-tp6-26-firefox-cold-e10s: ekPZFBbhR--B59HqYKTXoQ
-    test-linux64-qr/opt-raptor-tp6-27-firefox-cold-e10s: Qn7YeMQUS2aNitVvniWnvw
-    test-linux64-qr/opt-raptor-tp6-28-firefox-cold-e10s: fDhzcmsNQimDydyHINJ5hg
-    test-linux64-qr/opt-raptor-tp6-29-firefox-cold-e10s: Xw4mS3ezRJCg3AQGkYiBsg
-    test-linux64-qr/opt-raptor-tp6-3-firefox-cold-e10s: VAuypSVPQlav-8FJxmEUEw
-    test-linux64-qr/opt-raptor-tp6-3-firefox-e10s: PJn7ACzySAigvBIlwHNu6w
-    test-linux64-qr/opt-raptor-tp6-30-firefox-cold-e10s: E9U1k8zQT9WmMV1unAHbqA
-    test-linux64-qr/opt-raptor-tp6-4-firefox-cold-e10s: CMoaSr6jSH2laojbZMUA7A
-    test-linux64-qr/opt-raptor-tp6-4-firefox-e10s: dew0AlCaTbG2i308VAWZjg
-    test-linux64-qr/opt-raptor-tp6-5-firefox-cold-e10s: B0kSdPH-Q1eupRN9woASOA
-    test-linux64-qr/opt-raptor-tp6-5-firefox-e10s: KcB-PjjnT-usIPTsa6hPog
-    test-linux64-qr/opt-raptor-tp6-6-firefox-cold-e10s: Zl73y4XRTeWWDuEU0zZTTg
-    test-linux64-qr/opt-raptor-tp6-6-firefox-e10s: JelyKVn3R4OlipUsPeULSw
-    test-linux64-qr/opt-raptor-tp6-7-firefox-cold-e10s: W8gtkEjzT-q69_A9d7yOYA
-    test-linux64-qr/opt-raptor-tp6-7-firefox-e10s: JVjGmK7qRgqJRGbaFyXySQ
-    test-linux64-qr/opt-raptor-tp6-8-firefox-cold-e10s: AFIt8OuITHuyUdGr9qsZaA
-    test-linux64-qr/opt-raptor-tp6-8-firefox-e10s: bsAxXZf0Sv2YQvLa3DYQNA
-    test-linux64-qr/opt-raptor-tp6-9-firefox-cold-e10s: GSV1ZxmBQziXLHjLJ_eGDw
-    test-linux64-qr/opt-raptor-tp6-9-firefox-e10s: ATtrbXXHRQavLcxqamQgEA
-    test-linux64-qr/opt-raptor-tp6-binast-1-firefox-e10s: AXg2jeqAREW4OW_HlTNv1Q
-    test-linux64-qr/opt-raptor-unity-webgl-firefox-e10s: Fd3KGOW9TyqV-E-CBfPnXw
-    test-linux64-qr/opt-raptor-wasm-godot-baseline-firefox-e10s: Auk_JWigStquuwLnQ5Su9Q
-    test-linux64-qr/opt-raptor-wasm-godot-cranelift-firefox-e10s: JW2PwagkT2anMPkqr4X7Lw
-    test-linux64-qr/opt-raptor-wasm-godot-firefox-e10s: BmUpDVvTQmqjC_jlgGZ-fQ
-    test-linux64-qr/opt-raptor-wasm-godot-ion-firefox-e10s: YPv6yq33TRyjihk7ll3R-g
-    test-linux64-qr/opt-raptor-wasm-misc-baseline-firefox-e10s: VlSyG8cJQPej1gTaWLVBuw
-    test-linux64-qr/opt-raptor-wasm-misc-cranelift-firefox-e10s: KxWa-r0vS_GFW-QvVH36cg
-    test-linux64-qr/opt-raptor-wasm-misc-firefox-e10s: QNyWGXh_R4GUA0DN06Khtw
-    test-linux64-qr/opt-raptor-wasm-misc-ion-firefox-e10s: YQXGZlToR-qqzZNb0sUnEw
-    test-linux64-qr/opt-raptor-webaudio-firefox-e10s: QUxQYzqLQDOjBod51Eq07A
-    test-linux64-qr/opt-raptor-youtube-playback-firefox-e10s: NC_aLJdPT3WwkJfmS8eSnA
+    test-linux64-qr/opt-raptor-ares6-datalus-e10s: Lkd6xpPPSBiqCRUDwYLEew
+    test-linux64-qr/opt-raptor-assorted-dom-datalus-e10s: ALKw9cP9StSFpzrvBmRQog
+    test-linux64-qr/opt-raptor-jetstream2-datalus-e10s: OjiqXSqQT0yzeKlGfJROaw
+    test-linux64-qr/opt-raptor-motionmark-animometer-datalus-e10s: GB0bryw6Tm-AVUoq-_Pr2Q
+    test-linux64-qr/opt-raptor-motionmark-htmlsuite-datalus-e10s: STl_CeLcTPSZP7uNJijTHg
+    test-linux64-qr/opt-raptor-speedometer-datalus-e10s: X7eA0L6LQPuMyVX5IfrL8w
+    test-linux64-qr/opt-raptor-stylebench-datalus-e10s: AEXy9GywSX-tYmbfo_uNQg
+    test-linux64-qr/opt-raptor-sunspider-datalus-e10s: Va0LUVL9TGmwJm45rFhF1Q
+    test-linux64-qr/opt-raptor-tp6-1-datalus-cold-e10s: I5jOVXYBR_qLQRos7oOyMw
+    test-linux64-qr/opt-raptor-tp6-1-datalus-e10s: ElXBCnB6TC6QJ6xfJu2izQ
+    test-linux64-qr/opt-raptor-tp6-10-datalus-cold-e10s: cqFUG93ESH-6OhNUPjeqow
+    test-linux64-qr/opt-raptor-tp6-10-datalus-e10s: NrYby8jjTgKtRwPuoX_89w
+    test-linux64-qr/opt-raptor-tp6-11-datalus-cold-e10s: A5v1T6mATTO1DqlO5nZRXg
+    test-linux64-qr/opt-raptor-tp6-12-datalus-cold-e10s: F4YsuSRiRDGdyCksM8-W0w
+    test-linux64-qr/opt-raptor-tp6-13-datalus-cold-e10s: AZqAvm1sSgKPTuozrNnPIQ
+    test-linux64-qr/opt-raptor-tp6-14-datalus-cold-e10s: bxJ_2e5RSgKbw5BQsP2PpA
+    test-linux64-qr/opt-raptor-tp6-15-datalus-cold-e10s: Ix4itBJGTe-W187EhTPJHw
+    test-linux64-qr/opt-raptor-tp6-16-datalus-cold-e10s: cjfF5wRVTVS7nfqhXEKaGw
+    test-linux64-qr/opt-raptor-tp6-17-datalus-cold-e10s: Kyvx9YmWRoeEUvXUwDG3yQ
+    test-linux64-qr/opt-raptor-tp6-18-datalus-cold-e10s: QwSeO24RTY2E8ayglnezIw
+    test-linux64-qr/opt-raptor-tp6-19-datalus-cold-e10s: HnQIaM1IQPWOVKXgr1qSPA
+    test-linux64-qr/opt-raptor-tp6-2-datalus-cold-e10s: QDAnTaE7QYma_ZbGZY6cbQ
+    test-linux64-qr/opt-raptor-tp6-2-datalus-e10s: ZauV99ybS1eAW2YWVH6yAg
+    test-linux64-qr/opt-raptor-tp6-20-datalus-cold-e10s: eWo0DJzaR3uobgV8QY5jRw
+    test-linux64-qr/opt-raptor-tp6-21-datalus-cold-e10s: A8iJV3pZQVicJCBPSa8Jlg
+    test-linux64-qr/opt-raptor-tp6-22-datalus-cold-e10s: VwBf3jRATYCs_5Km9NPKaw
+    test-linux64-qr/opt-raptor-tp6-23-datalus-cold-e10s: AZaaKsm4QVC3dRRIDCn0gw
+    test-linux64-qr/opt-raptor-tp6-24-datalus-cold-e10s: d8HtGO9_Rg-uqGe-0EYdxg
+    test-linux64-qr/opt-raptor-tp6-25-datalus-cold-e10s: S0oQVHWaTB2UFuyHbxqU-w
+    test-linux64-qr/opt-raptor-tp6-26-datalus-cold-e10s: ekPZFBbhR--B59HqYKTXoQ
+    test-linux64-qr/opt-raptor-tp6-27-datalus-cold-e10s: Qn7YeMQUS2aNitVvniWnvw
+    test-linux64-qr/opt-raptor-tp6-28-datalus-cold-e10s: fDhzcmsNQimDydyHINJ5hg
+    test-linux64-qr/opt-raptor-tp6-29-datalus-cold-e10s: Xw4mS3ezRJCg3AQGkYiBsg
+    test-linux64-qr/opt-raptor-tp6-3-datalus-cold-e10s: VAuypSVPQlav-8FJxmEUEw
+    test-linux64-qr/opt-raptor-tp6-3-datalus-e10s: PJn7ACzySAigvBIlwHNu6w
+    test-linux64-qr/opt-raptor-tp6-30-datalus-cold-e10s: E9U1k8zQT9WmMV1unAHbqA
+    test-linux64-qr/opt-raptor-tp6-4-datalus-cold-e10s: CMoaSr6jSH2laojbZMUA7A
+    test-linux64-qr/opt-raptor-tp6-4-datalus-e10s: dew0AlCaTbG2i308VAWZjg
+    test-linux64-qr/opt-raptor-tp6-5-datalus-cold-e10s: B0kSdPH-Q1eupRN9woASOA
+    test-linux64-qr/opt-raptor-tp6-5-datalus-e10s: KcB-PjjnT-usIPTsa6hPog
+    test-linux64-qr/opt-raptor-tp6-6-datalus-cold-e10s: Zl73y4XRTeWWDuEU0zZTTg
+    test-linux64-qr/opt-raptor-tp6-6-datalus-e10s: JelyKVn3R4OlipUsPeULSw
+    test-linux64-qr/opt-raptor-tp6-7-datalus-cold-e10s: W8gtkEjzT-q69_A9d7yOYA
+    test-linux64-qr/opt-raptor-tp6-7-datalus-e10s: JVjGmK7qRgqJRGbaFyXySQ
+    test-linux64-qr/opt-raptor-tp6-8-datalus-cold-e10s: AFIt8OuITHuyUdGr9qsZaA
+    test-linux64-qr/opt-raptor-tp6-8-datalus-e10s: bsAxXZf0Sv2YQvLa3DYQNA
+    test-linux64-qr/opt-raptor-tp6-9-datalus-cold-e10s: GSV1ZxmBQziXLHjLJ_eGDw
+    test-linux64-qr/opt-raptor-tp6-9-datalus-e10s: ATtrbXXHRQavLcxqamQgEA
+    test-linux64-qr/opt-raptor-tp6-binast-1-datalus-e10s: AXg2jeqAREW4OW_HlTNv1Q
+    test-linux64-qr/opt-raptor-unity-webgl-datalus-e10s: Fd3KGOW9TyqV-E-CBfPnXw
+    test-linux64-qr/opt-raptor-wasm-godot-baseline-datalus-e10s: Auk_JWigStquuwLnQ5Su9Q
+    test-linux64-qr/opt-raptor-wasm-godot-cranelift-datalus-e10s: JW2PwagkT2anMPkqr4X7Lw
+    test-linux64-qr/opt-raptor-wasm-godot-datalus-e10s: BmUpDVvTQmqjC_jlgGZ-fQ
+    test-linux64-qr/opt-raptor-wasm-godot-ion-datalus-e10s: YPv6yq33TRyjihk7ll3R-g
+    test-linux64-qr/opt-raptor-wasm-misc-baseline-datalus-e10s: VlSyG8cJQPej1gTaWLVBuw
+    test-linux64-qr/opt-raptor-wasm-misc-cranelift-datalus-e10s: KxWa-r0vS_GFW-QvVH36cg
+    test-linux64-qr/opt-raptor-wasm-misc-datalus-e10s: QNyWGXh_R4GUA0DN06Khtw
+    test-linux64-qr/opt-raptor-wasm-misc-ion-datalus-e10s: YQXGZlToR-qqzZNb0sUnEw
+    test-linux64-qr/opt-raptor-webaudio-datalus-e10s: QUxQYzqLQDOjBod51Eq07A
+    test-linux64-qr/opt-raptor-youtube-playback-datalus-e10s: NC_aLJdPT3WwkJfmS8eSnA
     test-linux64-qr/opt-talos-chrome-e10s: PWfl9-VJRkOovMmCcN6iBg
     test-linux64-qr/opt-talos-damp-e10s: RPhFisqFSTOYvAJC5n3-hQ
     test-linux64-qr/opt-talos-dromaeojs-e10s: Jm9Zj6DTSFWmOzVFLPo2Pg
@@ -1732,96 +1732,96 @@ existing_tasks:
     test-linux64-qr/opt-web-platform-tests-wdspec-fis-e10s-1: EnuW8MkBTgmLWUqZWU9GXg
     test-linux64-qr/opt-web-platform-tests-wdspec-fis-e10s-2: cfgfo27dSqmpSsSq3ItdYQ
     test-linux64-qr/opt-web-platform-tests-wdspec-fis-e10s-3: WfS4Z6z9SWatP-meIGx26w
-    test-linux64-shippable-qr/opt-raptor-ares6-firefox-e10s: UwVbOkPxRwuXg0rscdveMg
-    test-linux64-shippable-qr/opt-raptor-ares6-firefox-fis-e10s: NPpFkeGzScyNKxNHyPTONQ
-    test-linux64-shippable-qr/opt-raptor-assorted-dom-firefox-e10s: XVY_uiatR1aClhhQuQDiAA
-    test-linux64-shippable-qr/opt-raptor-assorted-dom-firefox-fis-e10s: VYVitYTWQJe1uk0VCRs3Wg
-    test-linux64-shippable-qr/opt-raptor-jetstream2-firefox-e10s: PLEgarGJSOmxggIw5u-3SA
-    test-linux64-shippable-qr/opt-raptor-jetstream2-firefox-fis-e10s: SkEGfYc4TZSyLpqvp4H2fg
-    test-linux64-shippable-qr/opt-raptor-motionmark-animometer-firefox-e10s: EYkSSpOnTfCbaANY9NQn_w
-    test-linux64-shippable-qr/opt-raptor-motionmark-animometer-firefox-fis-e10s: FX2nwTbXRgqPDjpT4UI09A
-    test-linux64-shippable-qr/opt-raptor-motionmark-htmlsuite-firefox-e10s: NWqnIlV1SkWH0KFgHq4s_Q
-    test-linux64-shippable-qr/opt-raptor-motionmark-htmlsuite-firefox-fis-e10s: QJ1Ya2CkQsC_YhWdaVwF2g
-    test-linux64-shippable-qr/opt-raptor-speedometer-firefox-e10s: YwmjJKbiQg2JhFHhaC9MSw
-    test-linux64-shippable-qr/opt-raptor-speedometer-firefox-fis-e10s: bNvBZ_11SiCWZdWr-jEGIg
-    test-linux64-shippable-qr/opt-raptor-stylebench-firefox-e10s: dP32C9SHRv67mBvIB9yoog
-    test-linux64-shippable-qr/opt-raptor-stylebench-firefox-fis-e10s: Gp8MZqiBRt6VzU1JJ8stuA
-    test-linux64-shippable-qr/opt-raptor-sunspider-firefox-e10s: aBl4hwhKQEyWUA8H1sJLSA
-    test-linux64-shippable-qr/opt-raptor-sunspider-firefox-fis-e10s: LUk22pzqQ2-0slX_hlptfw
-    test-linux64-shippable-qr/opt-raptor-tp6-1-firefox-cold-e10s: T380PgJUSwqG-8YpeH49Zg
-    test-linux64-shippable-qr/opt-raptor-tp6-1-firefox-e10s: TUkAAo8PTF-Runs1GhlRyA
-    test-linux64-shippable-qr/opt-raptor-tp6-1-firefox-fis-e10s: Y-HpuQhbQ5SVlfXvHdgJ-w
-    test-linux64-shippable-qr/opt-raptor-tp6-10-firefox-cold-e10s: JKcIlPdiQgSMb13uML_pqg
-    test-linux64-shippable-qr/opt-raptor-tp6-10-firefox-e10s: Xg8nM-3zQSeEtrpL6cfOew
-    test-linux64-shippable-qr/opt-raptor-tp6-10-firefox-fis-e10s: ReycFVInTAOgX_GdXGiCTA
-    test-linux64-shippable-qr/opt-raptor-tp6-11-firefox-cold-e10s: aTC7FICZRZylOU_U_X1A6A
-    test-linux64-shippable-qr/opt-raptor-tp6-12-firefox-cold-e10s: LAS3vA5VSHWn0312wZZHQQ
-    test-linux64-shippable-qr/opt-raptor-tp6-13-firefox-cold-e10s: exNoqv1rRk2EY1Jr9tC3yg
-    test-linux64-shippable-qr/opt-raptor-tp6-14-firefox-cold-e10s: egBsuRXhQNipqeJMnzWEBg
-    test-linux64-shippable-qr/opt-raptor-tp6-15-firefox-cold-e10s: EnSlT-ZwTu6hqXaxIRgjJQ
-    test-linux64-shippable-qr/opt-raptor-tp6-16-firefox-cold-e10s: K8EQOeNvTRCPJMITybRNVA
-    test-linux64-shippable-qr/opt-raptor-tp6-17-firefox-cold-e10s: SQDX9CxmR56jbbL5GPJTFQ
-    test-linux64-shippable-qr/opt-raptor-tp6-18-firefox-cold-e10s: fRDhJwpRS-ifeNwf8ReWzA
-    test-linux64-shippable-qr/opt-raptor-tp6-19-firefox-cold-e10s: Zffx61hjSK2AfQHP-ClvcQ
-    test-linux64-shippable-qr/opt-raptor-tp6-2-firefox-cold-e10s: A_r5Mjh1Q0yvB7ZZaOzQmg
-    test-linux64-shippable-qr/opt-raptor-tp6-2-firefox-e10s: DnFkTownRkOeuGK6OmJC6g
-    test-linux64-shippable-qr/opt-raptor-tp6-2-firefox-fis-e10s: A3YSD7nyQX6udUnTEYV3Ew
-    test-linux64-shippable-qr/opt-raptor-tp6-20-firefox-cold-e10s: bksHnzXcTP6DlFjdDfuBnA
-    test-linux64-shippable-qr/opt-raptor-tp6-21-firefox-cold-e10s: JcEINl-dQMiyjyVJmjxBxA
-    test-linux64-shippable-qr/opt-raptor-tp6-22-firefox-cold-e10s: VmBP-IWUSf6wNrlUyB3y-Q
-    test-linux64-shippable-qr/opt-raptor-tp6-23-firefox-cold-e10s: Cp7Pg_Z7Qim2E5RfrI7gHQ
-    test-linux64-shippable-qr/opt-raptor-tp6-24-firefox-cold-e10s: C6nwBWGASj6NZjY703LViw
-    test-linux64-shippable-qr/opt-raptor-tp6-25-firefox-cold-e10s: bmfBLy9aTAaEy5to83beKQ
-    test-linux64-shippable-qr/opt-raptor-tp6-26-firefox-cold-e10s: dWDfqFSdRoCWlq2pzq-6eA
-    test-linux64-shippable-qr/opt-raptor-tp6-27-firefox-cold-e10s: HCIjB-9ETcagnk-zKGnFCA
-    test-linux64-shippable-qr/opt-raptor-tp6-28-firefox-cold-e10s: bs3WoWIbQnCoiIy-qMYlZQ
-    test-linux64-shippable-qr/opt-raptor-tp6-29-firefox-cold-e10s: ZX9fa_j2RRmfGs6F7mH57w
-    test-linux64-shippable-qr/opt-raptor-tp6-3-firefox-cold-e10s: NGjgA3ujRiG8m4m3VyUZKg
-    test-linux64-shippable-qr/opt-raptor-tp6-3-firefox-e10s: WrG_qkE1RvyCx1C5GPuB9Q
-    test-linux64-shippable-qr/opt-raptor-tp6-3-firefox-fis-e10s: NdmtUdhCSMaRqhrK202v4A
-    test-linux64-shippable-qr/opt-raptor-tp6-30-firefox-cold-e10s: S8dax8MgQ6Kg4B3lARvrgQ
-    test-linux64-shippable-qr/opt-raptor-tp6-4-firefox-cold-e10s: aX0wBq8_RqSRBmD7PCjg7A
-    test-linux64-shippable-qr/opt-raptor-tp6-4-firefox-e10s: UfsigmdFRDiBfD15BURCGw
-    test-linux64-shippable-qr/opt-raptor-tp6-4-firefox-fis-e10s: QzlwTl7aQ8SyLn69NeV4nA
-    test-linux64-shippable-qr/opt-raptor-tp6-5-firefox-cold-e10s: J1AljdLOSY2lJ3NTDga1uQ
-    test-linux64-shippable-qr/opt-raptor-tp6-5-firefox-e10s: KcBjXNA3TTKcDvkFZf_oyQ
-    test-linux64-shippable-qr/opt-raptor-tp6-5-firefox-fis-e10s: ZLByg8zXTwWKPPIO-00m6A
-    test-linux64-shippable-qr/opt-raptor-tp6-6-firefox-cold-e10s: dV-8tRkbRgW6XDm2MtsHbw
-    test-linux64-shippable-qr/opt-raptor-tp6-6-firefox-e10s: aALnqnXnSHWEqmNu0-L7fQ
-    test-linux64-shippable-qr/opt-raptor-tp6-6-firefox-fis-e10s: dSYCuKrwRTirzwf1XYQeDQ
-    test-linux64-shippable-qr/opt-raptor-tp6-7-firefox-cold-e10s: aH_HJTlLTwymBfZfIcbg9g
-    test-linux64-shippable-qr/opt-raptor-tp6-7-firefox-e10s: KuklwL5LQ5qzGAUjixIslA
-    test-linux64-shippable-qr/opt-raptor-tp6-7-firefox-fis-e10s: YudYgwZHRlmHnBXjeJt11w
-    test-linux64-shippable-qr/opt-raptor-tp6-8-firefox-cold-e10s: CIdGwyWNQWO514BfJ3tS0g
-    test-linux64-shippable-qr/opt-raptor-tp6-8-firefox-e10s: MQtMyOYVS4GYSlymEulSyw
-    test-linux64-shippable-qr/opt-raptor-tp6-8-firefox-fis-e10s: YPAcoihETBiG361nacHe4g
-    test-linux64-shippable-qr/opt-raptor-tp6-9-firefox-cold-e10s: b_mXYhTDSoWKkineAewsxA
-    test-linux64-shippable-qr/opt-raptor-tp6-9-firefox-e10s: U9pPIq1aR7CsXWeGkxZVqA
-    test-linux64-shippable-qr/opt-raptor-tp6-9-firefox-fis-e10s: P6GAsYXMQbqa9WNx1M_g_Q
-    test-linux64-shippable-qr/opt-raptor-tp6-binast-1-firefox-e10s: O-m1oJkQTIq5RSjjO5KTLg
-    test-linux64-shippable-qr/opt-raptor-tp6-binast-1-firefox-fis-e10s: dyW4tWmzSNatLSuYo6CpFg
-    test-linux64-shippable-qr/opt-raptor-unity-webgl-firefox-e10s: c0lNAvrjSYOIZkWiLGMvCA
-    test-linux64-shippable-qr/opt-raptor-unity-webgl-firefox-fis-e10s: SxAKuoU9QUGWgxsHRB2shA
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-baseline-firefox-e10s: HBowrK19SByU-d58eEaQGw
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-baseline-firefox-fis-e10s: IvXYmX3mQR2toV6DeFTjKw
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-cranelift-firefox-e10s: FNsgROQ4Qo6GddMTL4cr5Q
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-cranelift-firefox-fis-e10s: XlKjbvnURWGAGBqRJJ7DiA
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-firefox-e10s: dM1FW6lET0um-XwlX9Dp-Q
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-firefox-fis-e10s: U0rGobDES6WPOd27UnMy7Q
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-ion-firefox-e10s: a625rjkaSWexGWturUJFSA
-    test-linux64-shippable-qr/opt-raptor-wasm-godot-ion-firefox-fis-e10s: V7i3Ir-1RxaK5jyAnul_3A
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-baseline-firefox-e10s: ENLPP6r9RbqpDFuA9kEl5g
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-baseline-firefox-fis-e10s: Az8vB-Y3QbKVshLTsPb2zg
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-cranelift-firefox-e10s: O5725izARJWKiWaJjgO1hg
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-cranelift-firefox-fis-e10s: KrY0awcoRyaj8xEvTy0UPQ
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-firefox-e10s: T4xQQXuBRxehNfv46c6dog
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-firefox-fis-e10s: VF5RNPyyTzGsQDO_oyGGuA
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-ion-firefox-e10s: cVFN8e67SRauU3n1xlzNCQ
-    test-linux64-shippable-qr/opt-raptor-wasm-misc-ion-firefox-fis-e10s: FjtZJDVXTWy2MXwlHlIbdg
-    test-linux64-shippable-qr/opt-raptor-webaudio-firefox-e10s: L59FcY9TQu-kHnKzNDeBHg
-    test-linux64-shippable-qr/opt-raptor-webaudio-firefox-fis-e10s: f1DCx9xuRnikeQsqRvRYRg
-    test-linux64-shippable-qr/opt-raptor-youtube-playback-firefox-e10s: KPb76s-LQvyufjwIKUvUBA
-    test-linux64-shippable-qr/opt-raptor-youtube-playback-firefox-fis-e10s: F6-QAgK7SmyeTIIQDAwFpw
+    test-linux64-shippable-qr/opt-raptor-ares6-datalus-e10s: UwVbOkPxRwuXg0rscdveMg
+    test-linux64-shippable-qr/opt-raptor-ares6-datalus-fis-e10s: NPpFkeGzScyNKxNHyPTONQ
+    test-linux64-shippable-qr/opt-raptor-assorted-dom-datalus-e10s: XVY_uiatR1aClhhQuQDiAA
+    test-linux64-shippable-qr/opt-raptor-assorted-dom-datalus-fis-e10s: VYVitYTWQJe1uk0VCRs3Wg
+    test-linux64-shippable-qr/opt-raptor-jetstream2-datalus-e10s: PLEgarGJSOmxggIw5u-3SA
+    test-linux64-shippable-qr/opt-raptor-jetstream2-datalus-fis-e10s: SkEGfYc4TZSyLpqvp4H2fg
+    test-linux64-shippable-qr/opt-raptor-motionmark-animometer-datalus-e10s: EYkSSpOnTfCbaANY9NQn_w
+    test-linux64-shippable-qr/opt-raptor-motionmark-animometer-datalus-fis-e10s: FX2nwTbXRgqPDjpT4UI09A
+    test-linux64-shippable-qr/opt-raptor-motionmark-htmlsuite-datalus-e10s: NWqnIlV1SkWH0KFgHq4s_Q
+    test-linux64-shippable-qr/opt-raptor-motionmark-htmlsuite-datalus-fis-e10s: QJ1Ya2CkQsC_YhWdaVwF2g
+    test-linux64-shippable-qr/opt-raptor-speedometer-datalus-e10s: YwmjJKbiQg2JhFHhaC9MSw
+    test-linux64-shippable-qr/opt-raptor-speedometer-datalus-fis-e10s: bNvBZ_11SiCWZdWr-jEGIg
+    test-linux64-shippable-qr/opt-raptor-stylebench-datalus-e10s: dP32C9SHRv67mBvIB9yoog
+    test-linux64-shippable-qr/opt-raptor-stylebench-datalus-fis-e10s: Gp8MZqiBRt6VzU1JJ8stuA
+    test-linux64-shippable-qr/opt-raptor-sunspider-datalus-e10s: aBl4hwhKQEyWUA8H1sJLSA
+    test-linux64-shippable-qr/opt-raptor-sunspider-datalus-fis-e10s: LUk22pzqQ2-0slX_hlptfw
+    test-linux64-shippable-qr/opt-raptor-tp6-1-datalus-cold-e10s: T380PgJUSwqG-8YpeH49Zg
+    test-linux64-shippable-qr/opt-raptor-tp6-1-datalus-e10s: TUkAAo8PTF-Runs1GhlRyA
+    test-linux64-shippable-qr/opt-raptor-tp6-1-datalus-fis-e10s: Y-HpuQhbQ5SVlfXvHdgJ-w
+    test-linux64-shippable-qr/opt-raptor-tp6-10-datalus-cold-e10s: JKcIlPdiQgSMb13uML_pqg
+    test-linux64-shippable-qr/opt-raptor-tp6-10-datalus-e10s: Xg8nM-3zQSeEtrpL6cfOew
+    test-linux64-shippable-qr/opt-raptor-tp6-10-datalus-fis-e10s: ReycFVInTAOgX_GdXGiCTA
+    test-linux64-shippable-qr/opt-raptor-tp6-11-datalus-cold-e10s: aTC7FICZRZylOU_U_X1A6A
+    test-linux64-shippable-qr/opt-raptor-tp6-12-datalus-cold-e10s: LAS3vA5VSHWn0312wZZHQQ
+    test-linux64-shippable-qr/opt-raptor-tp6-13-datalus-cold-e10s: exNoqv1rRk2EY1Jr9tC3yg
+    test-linux64-shippable-qr/opt-raptor-tp6-14-datalus-cold-e10s: egBsuRXhQNipqeJMnzWEBg
+    test-linux64-shippable-qr/opt-raptor-tp6-15-datalus-cold-e10s: EnSlT-ZwTu6hqXaxIRgjJQ
+    test-linux64-shippable-qr/opt-raptor-tp6-16-datalus-cold-e10s: K8EQOeNvTRCPJMITybRNVA
+    test-linux64-shippable-qr/opt-raptor-tp6-17-datalus-cold-e10s: SQDX9CxmR56jbbL5GPJTFQ
+    test-linux64-shippable-qr/opt-raptor-tp6-18-datalus-cold-e10s: fRDhJwpRS-ifeNwf8ReWzA
+    test-linux64-shippable-qr/opt-raptor-tp6-19-datalus-cold-e10s: Zffx61hjSK2AfQHP-ClvcQ
+    test-linux64-shippable-qr/opt-raptor-tp6-2-datalus-cold-e10s: A_r5Mjh1Q0yvB7ZZaOzQmg
+    test-linux64-shippable-qr/opt-raptor-tp6-2-datalus-e10s: DnFkTownRkOeuGK6OmJC6g
+    test-linux64-shippable-qr/opt-raptor-tp6-2-datalus-fis-e10s: A3YSD7nyQX6udUnTEYV3Ew
+    test-linux64-shippable-qr/opt-raptor-tp6-20-datalus-cold-e10s: bksHnzXcTP6DlFjdDfuBnA
+    test-linux64-shippable-qr/opt-raptor-tp6-21-datalus-cold-e10s: JcEINl-dQMiyjyVJmjxBxA
+    test-linux64-shippable-qr/opt-raptor-tp6-22-datalus-cold-e10s: VmBP-IWUSf6wNrlUyB3y-Q
+    test-linux64-shippable-qr/opt-raptor-tp6-23-datalus-cold-e10s: Cp7Pg_Z7Qim2E5RfrI7gHQ
+    test-linux64-shippable-qr/opt-raptor-tp6-24-datalus-cold-e10s: C6nwBWGASj6NZjY703LViw
+    test-linux64-shippable-qr/opt-raptor-tp6-25-datalus-cold-e10s: bmfBLy9aTAaEy5to83beKQ
+    test-linux64-shippable-qr/opt-raptor-tp6-26-datalus-cold-e10s: dWDfqFSdRoCWlq2pzq-6eA
+    test-linux64-shippable-qr/opt-raptor-tp6-27-datalus-cold-e10s: HCIjB-9ETcagnk-zKGnFCA
+    test-linux64-shippable-qr/opt-raptor-tp6-28-datalus-cold-e10s: bs3WoWIbQnCoiIy-qMYlZQ
+    test-linux64-shippable-qr/opt-raptor-tp6-29-datalus-cold-e10s: ZX9fa_j2RRmfGs6F7mH57w
+    test-linux64-shippable-qr/opt-raptor-tp6-3-datalus-cold-e10s: NGjgA3ujRiG8m4m3VyUZKg
+    test-linux64-shippable-qr/opt-raptor-tp6-3-datalus-e10s: WrG_qkE1RvyCx1C5GPuB9Q
+    test-linux64-shippable-qr/opt-raptor-tp6-3-datalus-fis-e10s: NdmtUdhCSMaRqhrK202v4A
+    test-linux64-shippable-qr/opt-raptor-tp6-30-datalus-cold-e10s: S8dax8MgQ6Kg4B3lARvrgQ
+    test-linux64-shippable-qr/opt-raptor-tp6-4-datalus-cold-e10s: aX0wBq8_RqSRBmD7PCjg7A
+    test-linux64-shippable-qr/opt-raptor-tp6-4-datalus-e10s: UfsigmdFRDiBfD15BURCGw
+    test-linux64-shippable-qr/opt-raptor-tp6-4-datalus-fis-e10s: QzlwTl7aQ8SyLn69NeV4nA
+    test-linux64-shippable-qr/opt-raptor-tp6-5-datalus-cold-e10s: J1AljdLOSY2lJ3NTDga1uQ
+    test-linux64-shippable-qr/opt-raptor-tp6-5-datalus-e10s: KcBjXNA3TTKcDvkFZf_oyQ
+    test-linux64-shippable-qr/opt-raptor-tp6-5-datalus-fis-e10s: ZLByg8zXTwWKPPIO-00m6A
+    test-linux64-shippable-qr/opt-raptor-tp6-6-datalus-cold-e10s: dV-8tRkbRgW6XDm2MtsHbw
+    test-linux64-shippable-qr/opt-raptor-tp6-6-datalus-e10s: aALnqnXnSHWEqmNu0-L7fQ
+    test-linux64-shippable-qr/opt-raptor-tp6-6-datalus-fis-e10s: dSYCuKrwRTirzwf1XYQeDQ
+    test-linux64-shippable-qr/opt-raptor-tp6-7-datalus-cold-e10s: aH_HJTlLTwymBfZfIcbg9g
+    test-linux64-shippable-qr/opt-raptor-tp6-7-datalus-e10s: KuklwL5LQ5qzGAUjixIslA
+    test-linux64-shippable-qr/opt-raptor-tp6-7-datalus-fis-e10s: YudYgwZHRlmHnBXjeJt11w
+    test-linux64-shippable-qr/opt-raptor-tp6-8-datalus-cold-e10s: CIdGwyWNQWO514BfJ3tS0g
+    test-linux64-shippable-qr/opt-raptor-tp6-8-datalus-e10s: MQtMyOYVS4GYSlymEulSyw
+    test-linux64-shippable-qr/opt-raptor-tp6-8-datalus-fis-e10s: YPAcoihETBiG361nacHe4g
+    test-linux64-shippable-qr/opt-raptor-tp6-9-datalus-cold-e10s: b_mXYhTDSoWKkineAewsxA
+    test-linux64-shippable-qr/opt-raptor-tp6-9-datalus-e10s: U9pPIq1aR7CsXWeGkxZVqA
+    test-linux64-shippable-qr/opt-raptor-tp6-9-datalus-fis-e10s: P6GAsYXMQbqa9WNx1M_g_Q
+    test-linux64-shippable-qr/opt-raptor-tp6-binast-1-datalus-e10s: O-m1oJkQTIq5RSjjO5KTLg
+    test-linux64-shippable-qr/opt-raptor-tp6-binast-1-datalus-fis-e10s: dyW4tWmzSNatLSuYo6CpFg
+    test-linux64-shippable-qr/opt-raptor-unity-webgl-datalus-e10s: c0lNAvrjSYOIZkWiLGMvCA
+    test-linux64-shippable-qr/opt-raptor-unity-webgl-datalus-fis-e10s: SxAKuoU9QUGWgxsHRB2shA
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-baseline-datalus-e10s: HBowrK19SByU-d58eEaQGw
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-baseline-datalus-fis-e10s: IvXYmX3mQR2toV6DeFTjKw
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-cranelift-datalus-e10s: FNsgROQ4Qo6GddMTL4cr5Q
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-cranelift-datalus-fis-e10s: XlKjbvnURWGAGBqRJJ7DiA
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-datalus-e10s: dM1FW6lET0um-XwlX9Dp-Q
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-datalus-fis-e10s: U0rGobDES6WPOd27UnMy7Q
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-ion-datalus-e10s: a625rjkaSWexGWturUJFSA
+    test-linux64-shippable-qr/opt-raptor-wasm-godot-ion-datalus-fis-e10s: V7i3Ir-1RxaK5jyAnul_3A
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-baseline-datalus-e10s: ENLPP6r9RbqpDFuA9kEl5g
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-baseline-datalus-fis-e10s: Az8vB-Y3QbKVshLTsPb2zg
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-cranelift-datalus-e10s: O5725izARJWKiWaJjgO1hg
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-cranelift-datalus-fis-e10s: KrY0awcoRyaj8xEvTy0UPQ
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-datalus-e10s: T4xQQXuBRxehNfv46c6dog
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-datalus-fis-e10s: VF5RNPyyTzGsQDO_oyGGuA
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-ion-datalus-e10s: cVFN8e67SRauU3n1xlzNCQ
+    test-linux64-shippable-qr/opt-raptor-wasm-misc-ion-datalus-fis-e10s: FjtZJDVXTWy2MXwlHlIbdg
+    test-linux64-shippable-qr/opt-raptor-webaudio-datalus-e10s: L59FcY9TQu-kHnKzNDeBHg
+    test-linux64-shippable-qr/opt-raptor-webaudio-datalus-fis-e10s: f1DCx9xuRnikeQsqRvRYRg
+    test-linux64-shippable-qr/opt-raptor-youtube-playback-datalus-e10s: KPb76s-LQvyufjwIKUvUBA
+    test-linux64-shippable-qr/opt-raptor-youtube-playback-datalus-fis-e10s: F6-QAgK7SmyeTIIQDAwFpw
     test-linux64-shippable-qr/opt-talos-chrome-e10s: O_rD6Os1S_iGfMDv5B0U8w
     test-linux64-shippable-qr/opt-talos-chrome-fis-e10s: esrk3CzxTVuecYAX71hISg
     test-linux64-shippable-qr/opt-talos-damp-e10s: RrUPu9d9S8CNLDqLWhNlLA
@@ -1858,99 +1858,99 @@ existing_tasks:
     test-linux64-shippable-qr/opt-web-platform-tests-wdspec-e10s-2: c2c_ri3ZQfqlnkMN0YhvxQ
     test-linux64-shippable-qr/opt-web-platform-tests-wdspec-e10s-3: AnXLQgMXTYS_iNSG8pSdEg
     test-linux64-shippable/opt-browsertime-tp6-chrome-cold-amazon-e10s: Jn78r1IARyKR35zF-pPKHA
-    test-linux64-shippable/opt-browsertime-tp6-firefox-amazon-e10s: Z9_Pq1ZOSWyWxc_0Y1LHLg
-    test-linux64-shippable/opt-browsertime-tp6-firefox-cold-amazon-e10s: MqeQ_SLrT6ejaXDJ35DGyQ
-    test-linux64-shippable/opt-browsertime-tp6-profiling-firefox-amazon-e10s: FHT8hVKNSBaxYNaSQ2xGZA
-    test-linux64-shippable/opt-browsertime-tp6-profiling-firefox-cold-amazon-e10s: SI1CehCuTpiB1aYI6SL6kw
+    test-linux64-shippable/opt-browsertime-tp6-datalus-amazon-e10s: Z9_Pq1ZOSWyWxc_0Y1LHLg
+    test-linux64-shippable/opt-browsertime-tp6-datalus-cold-amazon-e10s: MqeQ_SLrT6ejaXDJ35DGyQ
+    test-linux64-shippable/opt-browsertime-tp6-profiling-datalus-amazon-e10s: FHT8hVKNSBaxYNaSQ2xGZA
+    test-linux64-shippable/opt-browsertime-tp6-profiling-datalus-cold-amazon-e10s: SI1CehCuTpiB1aYI6SL6kw
     test-linux64-shippable/opt-marionette-e10s: Cmc-rSb0S6G1P3KpqN3_iw
-    test-linux64-shippable/opt-raptor-ares6-firefox-e10s: VJ1LQ85XQha3iZKMZiMZhg
-    test-linux64-shippable/opt-raptor-ares6-firefox-profiling-e10s: fxzQA_gDToaHyToKju-6dg
-    test-linux64-shippable/opt-raptor-assorted-dom-firefox-e10s: X8-cj0lIQYiI0aKPO72PNw
-    test-linux64-shippable/opt-raptor-assorted-dom-firefox-profiling-e10s: Zm5FPl9OQyCceZlCgbLv-w
-    test-linux64-shippable/opt-raptor-jetstream2-firefox-e10s: XRotk7-JS2KDjBRbaTJBug
-    test-linux64-shippable/opt-raptor-jetstream2-firefox-profiling-e10s: O-8RF_w4SDWOgwA00X59Hw
-    test-linux64-shippable/opt-raptor-motionmark-animometer-firefox-e10s: QvU40WshSTW25kTlaj5GlA
-    test-linux64-shippable/opt-raptor-motionmark-animometer-firefox-profiling-e10s: RT1oOj7hRbSzeU6SJ4QQKg
-    test-linux64-shippable/opt-raptor-motionmark-htmlsuite-firefox-e10s: Y5zQY_NKQcCkoGrMfNOC0g
-    test-linux64-shippable/opt-raptor-motionmark-htmlsuite-firefox-profiling-e10s: e6YvCwNHQoK86pbPoNLcEQ
-    test-linux64-shippable/opt-raptor-speedometer-firefox-e10s: OvT5xruGRhS1zZYPObVHJQ
-    test-linux64-shippable/opt-raptor-speedometer-firefox-profiling-e10s: T3I5Q1JjQVSrEQ4KsDwFRw
-    test-linux64-shippable/opt-raptor-stylebench-firefox-e10s: VGRFJ1GLQb2GFPKtMj1h-A
-    test-linux64-shippable/opt-raptor-stylebench-firefox-profiling-e10s: B42AwCjrQyi33Ht2GgNR3g
-    test-linux64-shippable/opt-raptor-sunspider-firefox-e10s: KbmHks2_RQOJUPad2rZgmg
-    test-linux64-shippable/opt-raptor-sunspider-firefox-profiling-e10s: f1elsQ2TSBCSNzBjnBCRlw
-    test-linux64-shippable/opt-raptor-tp6-1-firefox-cold-e10s: QzPL0X_zRZijgG_KSAQDrQ
-    test-linux64-shippable/opt-raptor-tp6-1-firefox-e10s: Ki13O8lkSneklZm_P5qB4A
-    test-linux64-shippable/opt-raptor-tp6-1-firefox-profiling-e10s: Q09OINsfRL-1C4-Oqd440A
-    test-linux64-shippable/opt-raptor-tp6-10-firefox-cold-e10s: CCsXFKI1TKiFAEgroQEmEw
-    test-linux64-shippable/opt-raptor-tp6-10-firefox-e10s: BwOJPP1CQOSmMjRTweP_eA
-    test-linux64-shippable/opt-raptor-tp6-10-firefox-profiling-e10s: PEQxDN7kQFenoK77w0e3HQ
-    test-linux64-shippable/opt-raptor-tp6-11-firefox-cold-e10s: eN5uTeP_Q0KH2IcQ2ZdG0A
-    test-linux64-shippable/opt-raptor-tp6-12-firefox-cold-e10s: EZM1hg5FTrCP2UN7cVoxpw
-    test-linux64-shippable/opt-raptor-tp6-13-firefox-cold-e10s: TfSSTYKRRhmaagMuawTd2Q
-    test-linux64-shippable/opt-raptor-tp6-14-firefox-cold-e10s: ahuFY5-sSRiqyAX1qXOgcg
-    test-linux64-shippable/opt-raptor-tp6-15-firefox-cold-e10s: Mo1Qb9nIQYSyrSfayqRJ6A
-    test-linux64-shippable/opt-raptor-tp6-16-firefox-cold-e10s: H1gFU5waQVu3QXshxvEx7g
-    test-linux64-shippable/opt-raptor-tp6-17-firefox-cold-e10s: F6VLytETQjSND6lV24l6AA
-    test-linux64-shippable/opt-raptor-tp6-18-firefox-cold-e10s: PsOUAP6JSSmIQkM1iTQ21w
-    test-linux64-shippable/opt-raptor-tp6-19-firefox-cold-e10s: HxfKdkIbQNe0dAYIO_OfVA
-    test-linux64-shippable/opt-raptor-tp6-2-firefox-cold-e10s: cUMUkUytTWGQKgTzf8L22g
-    test-linux64-shippable/opt-raptor-tp6-2-firefox-e10s: TM09ORmIRRCRsvW1Pw4qGQ
-    test-linux64-shippable/opt-raptor-tp6-2-firefox-profiling-e10s: GHko2ntQRNWU96HJdCk5fA
-    test-linux64-shippable/opt-raptor-tp6-20-firefox-cold-e10s: Sm4RyjPGQjintYSaa1ZIGA
-    test-linux64-shippable/opt-raptor-tp6-21-firefox-cold-e10s: U-bLNTLiRfSZ-aY8CySH8w
-    test-linux64-shippable/opt-raptor-tp6-22-firefox-cold-e10s: c2-3j2OfSNabw4E-eO3_-w
-    test-linux64-shippable/opt-raptor-tp6-23-firefox-cold-e10s: SulDXv5xTVG3cLI0dKP3Fg
-    test-linux64-shippable/opt-raptor-tp6-24-firefox-cold-e10s: GYLDaWBJRuSRx7INsx5Oyg
-    test-linux64-shippable/opt-raptor-tp6-25-firefox-cold-e10s: Eq4-u5OYQPiL_CzgpgPgIg
-    test-linux64-shippable/opt-raptor-tp6-26-firefox-cold-e10s: Nx29iyNERPebo5cuh0xPkw
-    test-linux64-shippable/opt-raptor-tp6-27-firefox-cold-e10s: N-Agboq3Q2GibluUXE0zQA
-    test-linux64-shippable/opt-raptor-tp6-28-firefox-cold-e10s: DabIlzoQSTi_i0fPgfGxuA
-    test-linux64-shippable/opt-raptor-tp6-29-firefox-cold-e10s: SXW-RzL0RXe_wYyg6GBV_g
-    test-linux64-shippable/opt-raptor-tp6-3-firefox-cold-e10s: XTICN29iShSt-pNWRHFJ_Q
-    test-linux64-shippable/opt-raptor-tp6-3-firefox-e10s: IAjRnrODQTGQs23jwckinw
-    test-linux64-shippable/opt-raptor-tp6-3-firefox-profiling-e10s: R5nDTUKlRuOjxN-AQBt4Og
-    test-linux64-shippable/opt-raptor-tp6-30-firefox-cold-e10s: dnYNWOi0QZ6YXkJCQX3jKg
-    test-linux64-shippable/opt-raptor-tp6-4-firefox-cold-e10s: TtS_b_0wQ6mAoqFf_Jgeuw
-    test-linux64-shippable/opt-raptor-tp6-4-firefox-e10s: UNtGqtmoQhyfYvnHFW5vxA
-    test-linux64-shippable/opt-raptor-tp6-4-firefox-profiling-e10s: WkJ1eQ4GRY-BP3ckkfuyog
-    test-linux64-shippable/opt-raptor-tp6-5-firefox-cold-e10s: OhPZWZlGRHq03Sf1IePgvw
-    test-linux64-shippable/opt-raptor-tp6-5-firefox-e10s: Po_L_miKT42nkgp3fxHWKA
-    test-linux64-shippable/opt-raptor-tp6-5-firefox-profiling-e10s: Vg19eyIOSTyjl3lQFXSeag
-    test-linux64-shippable/opt-raptor-tp6-6-firefox-cold-e10s: TZ4MAoPjRUiyfeRRYQctAg
-    test-linux64-shippable/opt-raptor-tp6-6-firefox-e10s: dLg0qHJPS_a8wHixqDnjog
-    test-linux64-shippable/opt-raptor-tp6-6-firefox-profiling-e10s: f83wNfXoTaSoLO2bqMmnHA
-    test-linux64-shippable/opt-raptor-tp6-7-firefox-cold-e10s: ds4ZAxsbRxiQ27ISwy83-g
-    test-linux64-shippable/opt-raptor-tp6-7-firefox-e10s: e5nOJ43eSHesDJy-vhn89g
-    test-linux64-shippable/opt-raptor-tp6-7-firefox-profiling-e10s: bSHIBENgRpuz9queQBOtdQ
-    test-linux64-shippable/opt-raptor-tp6-8-firefox-cold-e10s: aI2Swap4SACSYZK4bEzwiw
-    test-linux64-shippable/opt-raptor-tp6-8-firefox-e10s: CnGv7qRIS1OfSZxiDCZwmw
-    test-linux64-shippable/opt-raptor-tp6-8-firefox-profiling-e10s: UrOXwfPMQ569athYvd6FGg
-    test-linux64-shippable/opt-raptor-tp6-9-firefox-cold-e10s: LH5xawgJTTGDSjcN4fdbSA
-    test-linux64-shippable/opt-raptor-tp6-9-firefox-e10s: Amnq7jMFQoqhPrIby3eFIg
-    test-linux64-shippable/opt-raptor-tp6-9-firefox-profiling-e10s: er0ea9XYRa23sdvVfSceWQ
-    test-linux64-shippable/opt-raptor-tp6-binast-1-firefox-e10s: Scuoy1zPQPKl1Auj6XL4SQ
-    test-linux64-shippable/opt-raptor-unity-webgl-firefox-e10s: UH9aSPAMRhqScC883PNHkw
-    test-linux64-shippable/opt-raptor-unity-webgl-firefox-profiling-e10s: dIErITDnR2eGDh5qlfYhMg
-    test-linux64-shippable/opt-raptor-wasm-godot-baseline-firefox-e10s: dnlZHfdyQVec-HFoJQt-Ng
-    test-linux64-shippable/opt-raptor-wasm-godot-baseline-firefox-profiling-e10s: YFR5RuvBSSyhDLqz9YqC1w
-    test-linux64-shippable/opt-raptor-wasm-godot-cranelift-firefox-e10s: SOeFVMULR82etHugmz2ulA
-    test-linux64-shippable/opt-raptor-wasm-godot-cranelift-firefox-profiling-e10s: c_fJeFLKRHOgL5mJ0__lgA
-    test-linux64-shippable/opt-raptor-wasm-godot-firefox-e10s: b-asIQkoQpSPs_0RdlJ0JA
-    test-linux64-shippable/opt-raptor-wasm-godot-firefox-profiling-e10s: DuonX8PRQcattS5DYEutpQ
-    test-linux64-shippable/opt-raptor-wasm-godot-ion-firefox-e10s: bMHfgEIDRk6nHJEG7V07tw
-    test-linux64-shippable/opt-raptor-wasm-godot-ion-firefox-profiling-e10s: cQ0TnwDEQMe9whWpajncpA
-    test-linux64-shippable/opt-raptor-wasm-misc-baseline-firefox-e10s: UxV7GPISSCeLeK8MjfxwUw
-    test-linux64-shippable/opt-raptor-wasm-misc-baseline-firefox-profiling-e10s: PWcVxJJ2Tnm46X-MpSSSjA
-    test-linux64-shippable/opt-raptor-wasm-misc-cranelift-firefox-e10s: XDbFSmLkSrCwgcVJVgLSLA
-    test-linux64-shippable/opt-raptor-wasm-misc-firefox-e10s: BBYmEYTqTJO9WIma4yG2EQ
-    test-linux64-shippable/opt-raptor-wasm-misc-firefox-profiling-e10s: FKORX-o5Sbis1ylACblxxA
-    test-linux64-shippable/opt-raptor-wasm-misc-ion-firefox-e10s: Ni-au9LSRi-xGhGttVClDQ
-    test-linux64-shippable/opt-raptor-wasm-misc-ion-firefox-profiling-e10s: cEGIzPUUQLipb4o9pHTNEw
-    test-linux64-shippable/opt-raptor-webaudio-firefox-e10s: fXD185buSliTUug5-VbonA
-    test-linux64-shippable/opt-raptor-webaudio-firefox-profiling-e10s: IUPFVnRgQeqv7t_0zMd2lQ
-    test-linux64-shippable/opt-raptor-youtube-playback-firefox-e10s: OaVR8q_YSH2b43BzYw0ELQ
-    test-linux64-shippable/opt-raptor-youtube-playback-firefox-profiling-e10s: VvvBIsoRRUaElgFpzxvueQ
+    test-linux64-shippable/opt-raptor-ares6-datalus-e10s: VJ1LQ85XQha3iZKMZiMZhg
+    test-linux64-shippable/opt-raptor-ares6-datalus-profiling-e10s: fxzQA_gDToaHyToKju-6dg
+    test-linux64-shippable/opt-raptor-assorted-dom-datalus-e10s: X8-cj0lIQYiI0aKPO72PNw
+    test-linux64-shippable/opt-raptor-assorted-dom-datalus-profiling-e10s: Zm5FPl9OQyCceZlCgbLv-w
+    test-linux64-shippable/opt-raptor-jetstream2-datalus-e10s: XRotk7-JS2KDjBRbaTJBug
+    test-linux64-shippable/opt-raptor-jetstream2-datalus-profiling-e10s: O-8RF_w4SDWOgwA00X59Hw
+    test-linux64-shippable/opt-raptor-motionmark-animometer-datalus-e10s: QvU40WshSTW25kTlaj5GlA
+    test-linux64-shippable/opt-raptor-motionmark-animometer-datalus-profiling-e10s: RT1oOj7hRbSzeU6SJ4QQKg
+    test-linux64-shippable/opt-raptor-motionmark-htmlsuite-datalus-e10s: Y5zQY_NKQcCkoGrMfNOC0g
+    test-linux64-shippable/opt-raptor-motionmark-htmlsuite-datalus-profiling-e10s: e6YvCwNHQoK86pbPoNLcEQ
+    test-linux64-shippable/opt-raptor-speedometer-datalus-e10s: OvT5xruGRhS1zZYPObVHJQ
+    test-linux64-shippable/opt-raptor-speedometer-datalus-profiling-e10s: T3I5Q1JjQVSrEQ4KsDwFRw
+    test-linux64-shippable/opt-raptor-stylebench-datalus-e10s: VGRFJ1GLQb2GFPKtMj1h-A
+    test-linux64-shippable/opt-raptor-stylebench-datalus-profiling-e10s: B42AwCjrQyi33Ht2GgNR3g
+    test-linux64-shippable/opt-raptor-sunspider-datalus-e10s: KbmHks2_RQOJUPad2rZgmg
+    test-linux64-shippable/opt-raptor-sunspider-datalus-profiling-e10s: f1elsQ2TSBCSNzBjnBCRlw
+    test-linux64-shippable/opt-raptor-tp6-1-datalus-cold-e10s: QzPL0X_zRZijgG_KSAQDrQ
+    test-linux64-shippable/opt-raptor-tp6-1-datalus-e10s: Ki13O8lkSneklZm_P5qB4A
+    test-linux64-shippable/opt-raptor-tp6-1-datalus-profiling-e10s: Q09OINsfRL-1C4-Oqd440A
+    test-linux64-shippable/opt-raptor-tp6-10-datalus-cold-e10s: CCsXFKI1TKiFAEgroQEmEw
+    test-linux64-shippable/opt-raptor-tp6-10-datalus-e10s: BwOJPP1CQOSmMjRTweP_eA
+    test-linux64-shippable/opt-raptor-tp6-10-datalus-profiling-e10s: PEQxDN7kQFenoK77w0e3HQ
+    test-linux64-shippable/opt-raptor-tp6-11-datalus-cold-e10s: eN5uTeP_Q0KH2IcQ2ZdG0A
+    test-linux64-shippable/opt-raptor-tp6-12-datalus-cold-e10s: EZM1hg5FTrCP2UN7cVoxpw
+    test-linux64-shippable/opt-raptor-tp6-13-datalus-cold-e10s: TfSSTYKRRhmaagMuawTd2Q
+    test-linux64-shippable/opt-raptor-tp6-14-datalus-cold-e10s: ahuFY5-sSRiqyAX1qXOgcg
+    test-linux64-shippable/opt-raptor-tp6-15-datalus-cold-e10s: Mo1Qb9nIQYSyrSfayqRJ6A
+    test-linux64-shippable/opt-raptor-tp6-16-datalus-cold-e10s: H1gFU5waQVu3QXshxvEx7g
+    test-linux64-shippable/opt-raptor-tp6-17-datalus-cold-e10s: F6VLytETQjSND6lV24l6AA
+    test-linux64-shippable/opt-raptor-tp6-18-datalus-cold-e10s: PsOUAP6JSSmIQkM1iTQ21w
+    test-linux64-shippable/opt-raptor-tp6-19-datalus-cold-e10s: HxfKdkIbQNe0dAYIO_OfVA
+    test-linux64-shippable/opt-raptor-tp6-2-datalus-cold-e10s: cUMUkUytTWGQKgTzf8L22g
+    test-linux64-shippable/opt-raptor-tp6-2-datalus-e10s: TM09ORmIRRCRsvW1Pw4qGQ
+    test-linux64-shippable/opt-raptor-tp6-2-datalus-profiling-e10s: GHko2ntQRNWU96HJdCk5fA
+    test-linux64-shippable/opt-raptor-tp6-20-datalus-cold-e10s: Sm4RyjPGQjintYSaa1ZIGA
+    test-linux64-shippable/opt-raptor-tp6-21-datalus-cold-e10s: U-bLNTLiRfSZ-aY8CySH8w
+    test-linux64-shippable/opt-raptor-tp6-22-datalus-cold-e10s: c2-3j2OfSNabw4E-eO3_-w
+    test-linux64-shippable/opt-raptor-tp6-23-datalus-cold-e10s: SulDXv5xTVG3cLI0dKP3Fg
+    test-linux64-shippable/opt-raptor-tp6-24-datalus-cold-e10s: GYLDaWBJRuSRx7INsx5Oyg
+    test-linux64-shippable/opt-raptor-tp6-25-datalus-cold-e10s: Eq4-u5OYQPiL_CzgpgPgIg
+    test-linux64-shippable/opt-raptor-tp6-26-datalus-cold-e10s: Nx29iyNERPebo5cuh0xPkw
+    test-linux64-shippable/opt-raptor-tp6-27-datalus-cold-e10s: N-Agboq3Q2GibluUXE0zQA
+    test-linux64-shippable/opt-raptor-tp6-28-datalus-cold-e10s: DabIlzoQSTi_i0fPgfGxuA
+    test-linux64-shippable/opt-raptor-tp6-29-datalus-cold-e10s: SXW-RzL0RXe_wYyg6GBV_g
+    test-linux64-shippable/opt-raptor-tp6-3-datalus-cold-e10s: XTICN29iShSt-pNWRHFJ_Q
+    test-linux64-shippable/opt-raptor-tp6-3-datalus-e10s: IAjRnrODQTGQs23jwckinw
+    test-linux64-shippable/opt-raptor-tp6-3-datalus-profiling-e10s: R5nDTUKlRuOjxN-AQBt4Og
+    test-linux64-shippable/opt-raptor-tp6-30-datalus-cold-e10s: dnYNWOi0QZ6YXkJCQX3jKg
+    test-linux64-shippable/opt-raptor-tp6-4-datalus-cold-e10s: TtS_b_0wQ6mAoqFf_Jgeuw
+    test-linux64-shippable/opt-raptor-tp6-4-datalus-e10s: UNtGqtmoQhyfYvnHFW5vxA
+    test-linux64-shippable/opt-raptor-tp6-4-datalus-profiling-e10s: WkJ1eQ4GRY-BP3ckkfuyog
+    test-linux64-shippable/opt-raptor-tp6-5-datalus-cold-e10s: OhPZWZlGRHq03Sf1IePgvw
+    test-linux64-shippable/opt-raptor-tp6-5-datalus-e10s: Po_L_miKT42nkgp3fxHWKA
+    test-linux64-shippable/opt-raptor-tp6-5-datalus-profiling-e10s: Vg19eyIOSTyjl3lQFXSeag
+    test-linux64-shippable/opt-raptor-tp6-6-datalus-cold-e10s: TZ4MAoPjRUiyfeRRYQctAg
+    test-linux64-shippable/opt-raptor-tp6-6-datalus-e10s: dLg0qHJPS_a8wHixqDnjog
+    test-linux64-shippable/opt-raptor-tp6-6-datalus-profiling-e10s: f83wNfXoTaSoLO2bqMmnHA
+    test-linux64-shippable/opt-raptor-tp6-7-datalus-cold-e10s: ds4ZAxsbRxiQ27ISwy83-g
+    test-linux64-shippable/opt-raptor-tp6-7-datalus-e10s: e5nOJ43eSHesDJy-vhn89g
+    test-linux64-shippable/opt-raptor-tp6-7-datalus-profiling-e10s: bSHIBENgRpuz9queQBOtdQ
+    test-linux64-shippable/opt-raptor-tp6-8-datalus-cold-e10s: aI2Swap4SACSYZK4bEzwiw
+    test-linux64-shippable/opt-raptor-tp6-8-datalus-e10s: CnGv7qRIS1OfSZxiDCZwmw
+    test-linux64-shippable/opt-raptor-tp6-8-datalus-profiling-e10s: UrOXwfPMQ569athYvd6FGg
+    test-linux64-shippable/opt-raptor-tp6-9-datalus-cold-e10s: LH5xawgJTTGDSjcN4fdbSA
+    test-linux64-shippable/opt-raptor-tp6-9-datalus-e10s: Amnq7jMFQoqhPrIby3eFIg
+    test-linux64-shippable/opt-raptor-tp6-9-datalus-profiling-e10s: er0ea9XYRa23sdvVfSceWQ
+    test-linux64-shippable/opt-raptor-tp6-binast-1-datalus-e10s: Scuoy1zPQPKl1Auj6XL4SQ
+    test-linux64-shippable/opt-raptor-unity-webgl-datalus-e10s: UH9aSPAMRhqScC883PNHkw
+    test-linux64-shippable/opt-raptor-unity-webgl-datalus-profiling-e10s: dIErITDnR2eGDh5qlfYhMg
+    test-linux64-shippable/opt-raptor-wasm-godot-baseline-datalus-e10s: dnlZHfdyQVec-HFoJQt-Ng
+    test-linux64-shippable/opt-raptor-wasm-godot-baseline-datalus-profiling-e10s: YFR5RuvBSSyhDLqz9YqC1w
+    test-linux64-shippable/opt-raptor-wasm-godot-cranelift-datalus-e10s: SOeFVMULR82etHugmz2ulA
+    test-linux64-shippable/opt-raptor-wasm-godot-cranelift-datalus-profiling-e10s: c_fJeFLKRHOgL5mJ0__lgA
+    test-linux64-shippable/opt-raptor-wasm-godot-datalus-e10s: b-asIQkoQpSPs_0RdlJ0JA
+    test-linux64-shippable/opt-raptor-wasm-godot-datalus-profiling-e10s: DuonX8PRQcattS5DYEutpQ
+    test-linux64-shippable/opt-raptor-wasm-godot-ion-datalus-e10s: bMHfgEIDRk6nHJEG7V07tw
+    test-linux64-shippable/opt-raptor-wasm-godot-ion-datalus-profiling-e10s: cQ0TnwDEQMe9whWpajncpA
+    test-linux64-shippable/opt-raptor-wasm-misc-baseline-datalus-e10s: UxV7GPISSCeLeK8MjfxwUw
+    test-linux64-shippable/opt-raptor-wasm-misc-baseline-datalus-profiling-e10s: PWcVxJJ2Tnm46X-MpSSSjA
+    test-linux64-shippable/opt-raptor-wasm-misc-cranelift-datalus-e10s: XDbFSmLkSrCwgcVJVgLSLA
+    test-linux64-shippable/opt-raptor-wasm-misc-datalus-e10s: BBYmEYTqTJO9WIma4yG2EQ
+    test-linux64-shippable/opt-raptor-wasm-misc-datalus-profiling-e10s: FKORX-o5Sbis1ylACblxxA
+    test-linux64-shippable/opt-raptor-wasm-misc-ion-datalus-e10s: Ni-au9LSRi-xGhGttVClDQ
+    test-linux64-shippable/opt-raptor-wasm-misc-ion-datalus-profiling-e10s: cEGIzPUUQLipb4o9pHTNEw
+    test-linux64-shippable/opt-raptor-webaudio-datalus-e10s: fXD185buSliTUug5-VbonA
+    test-linux64-shippable/opt-raptor-webaudio-datalus-profiling-e10s: IUPFVnRgQeqv7t_0zMd2lQ
+    test-linux64-shippable/opt-raptor-youtube-playback-datalus-e10s: OaVR8q_YSH2b43BzYw0ELQ
+    test-linux64-shippable/opt-raptor-youtube-playback-datalus-profiling-e10s: VvvBIsoRRUaElgFpzxvueQ
     test-linux64-shippable/opt-talos-bcv-e10s: EkEnJe_ZQrOVTD_THmn6Pw
     test-linux64-shippable/opt-talos-bcv-profiling-e10s: bjLSzbm4R9Kf5LKYhfr2gg
     test-linux64-shippable/opt-talos-chrome-e10s: fkJDiBP2SOyQ2l57HVzYUw
@@ -2021,66 +2021,66 @@ existing_tasks:
     test-linux64/debug-web-platform-tests-wdspec-e10s-2: PMFqv6TUSWKGOrOh9fJxfg
     test-linux64/debug-web-platform-tests-wdspec-e10s-3: dIfU8U6MTYqRKsFD7k8qiQ
     test-linux64/opt-marionette-e10s: IiPwXuQ6RMmVcJ_NSeWu9w
-    test-linux64/opt-raptor-ares6-firefox-e10s: QLZo03KaRDyVaSywo14Vfg
-    test-linux64/opt-raptor-assorted-dom-firefox-e10s: Y3eV2BGGQFC-Ix_TkpqBFw
-    test-linux64/opt-raptor-jetstream2-firefox-e10s: XKM92pFETVKkkH2yDoDb8g
-    test-linux64/opt-raptor-motionmark-animometer-firefox-e10s: WZO_R-6jR_mG1iaNsN5vFg
-    test-linux64/opt-raptor-motionmark-htmlsuite-firefox-e10s: Sv0NnM0aSPy5n8tuSjz1Jw
-    test-linux64/opt-raptor-speedometer-firefox-e10s: AFWltKXETlG8s5Lo_PWM-w
-    test-linux64/opt-raptor-stylebench-firefox-e10s: Gf28RtlTQSqLh_DSa0lEzA
-    test-linux64/opt-raptor-sunspider-firefox-e10s: YtXjyrrCRS27KdWO1ArhgQ
-    test-linux64/opt-raptor-tp6-1-firefox-cold-e10s: GxKS6c-mQzWDptU5mR4asA
-    test-linux64/opt-raptor-tp6-1-firefox-e10s: ApLAGCnsSJOESU_zWtaMiw
-    test-linux64/opt-raptor-tp6-10-firefox-cold-e10s: B11czWKwSKuxXNtXb0cPrQ
-    test-linux64/opt-raptor-tp6-10-firefox-e10s: c_Vcv4G9RiKO5sLcLzdqGA
-    test-linux64/opt-raptor-tp6-11-firefox-cold-e10s: ZFC8-NSUT0WAHXyARPeHkw
-    test-linux64/opt-raptor-tp6-12-firefox-cold-e10s: SGTw0EytRAWi3giUejY7JA
-    test-linux64/opt-raptor-tp6-13-firefox-cold-e10s: Iyuss-76QkGMSJEszIc8Rg
-    test-linux64/opt-raptor-tp6-14-firefox-cold-e10s: BQKRxBytSUydeyIs7B3nGQ
-    test-linux64/opt-raptor-tp6-15-firefox-cold-e10s: C1AjkrEOTFqQK16ppPpQ5Q
-    test-linux64/opt-raptor-tp6-16-firefox-cold-e10s: Rrg75-4qQK6cDKDXieGINA
-    test-linux64/opt-raptor-tp6-17-firefox-cold-e10s: JAjrAtUQRPa4TE0d7Q_VTw
-    test-linux64/opt-raptor-tp6-18-firefox-cold-e10s: JXvDlTSQTx6IWsd_15cukA
-    test-linux64/opt-raptor-tp6-19-firefox-cold-e10s: RdCvUN9wSGKTCcSt8OPOuw
-    test-linux64/opt-raptor-tp6-2-firefox-cold-e10s: JmGutBUhS0-B-x71gr2bAA
-    test-linux64/opt-raptor-tp6-2-firefox-e10s: C0dUiXxyQ-Kj7JqMXsRmjQ
-    test-linux64/opt-raptor-tp6-20-firefox-cold-e10s: PW5TZkeKQSatPcJJ8DuYwg
-    test-linux64/opt-raptor-tp6-21-firefox-cold-e10s: YA0RewM9Q6aQZiRhECoaKg
-    test-linux64/opt-raptor-tp6-22-firefox-cold-e10s: Fo1v-gq2T86gybH40FaC_A
-    test-linux64/opt-raptor-tp6-23-firefox-cold-e10s: UWSduq70R4KHkFKICw7_tg
-    test-linux64/opt-raptor-tp6-24-firefox-cold-e10s: Lm7RuEIFT0OFFtuL_oWyLw
-    test-linux64/opt-raptor-tp6-25-firefox-cold-e10s: GvJbhEYJSfGR2L_TjTTbvA
-    test-linux64/opt-raptor-tp6-26-firefox-cold-e10s: MXr_P2voRFaNWYWMu4GWwQ
-    test-linux64/opt-raptor-tp6-27-firefox-cold-e10s: Zb-KFdfcSuOqZbXcZPD1mg
-    test-linux64/opt-raptor-tp6-28-firefox-cold-e10s: epXJwh6dTP2JQ812S6fThw
-    test-linux64/opt-raptor-tp6-29-firefox-cold-e10s: EaI1575ZRNSw6NJciFK5Jg
-    test-linux64/opt-raptor-tp6-3-firefox-cold-e10s: Si1Ge_bnSpi0UYImefNueg
-    test-linux64/opt-raptor-tp6-3-firefox-e10s: T84cP3eGSN6PklZ6_PTrNw
-    test-linux64/opt-raptor-tp6-30-firefox-cold-e10s: d-AQG9mMQ-CeHSAWBFI6VA
-    test-linux64/opt-raptor-tp6-4-firefox-cold-e10s: FaUU-MRbQiqXRXBnT1IUEw
-    test-linux64/opt-raptor-tp6-4-firefox-e10s: PHwHE-asQ_qiHAH6VJ3LLg
-    test-linux64/opt-raptor-tp6-5-firefox-cold-e10s: Y3yvn3z8SSiWjo8-Ok4I2Q
-    test-linux64/opt-raptor-tp6-5-firefox-e10s: MGAX-w3ARNGv_jz0Q0lptQ
-    test-linux64/opt-raptor-tp6-6-firefox-cold-e10s: JCNEcMcjTziPEUiWDJKJRA
-    test-linux64/opt-raptor-tp6-6-firefox-e10s: IXt5klkYTMecL9oxcEiuYQ
-    test-linux64/opt-raptor-tp6-7-firefox-cold-e10s: C2mN_IlHQRKT63gTAyxK6g
-    test-linux64/opt-raptor-tp6-7-firefox-e10s: WNpGllm4QVeZ4eigVDm_Lg
-    test-linux64/opt-raptor-tp6-8-firefox-cold-e10s: f8PEESldTk65FRdfG0WeeA
-    test-linux64/opt-raptor-tp6-8-firefox-e10s: O2oRd832RGCksCAbsGAm1w
-    test-linux64/opt-raptor-tp6-9-firefox-cold-e10s: BLnH8-1ZRGqneHNKXB07tw
-    test-linux64/opt-raptor-tp6-9-firefox-e10s: f_CVBA-AQYu7uC7DPjae3w
-    test-linux64/opt-raptor-tp6-binast-1-firefox-e10s: Tmk_KdNSSey9jvcDKuN2iQ
-    test-linux64/opt-raptor-unity-webgl-firefox-e10s: QH0km9tRR9ehHNnPYPhKIQ
-    test-linux64/opt-raptor-wasm-godot-baseline-firefox-e10s: V6sUoQNLTh-Wq9808oc1pA
-    test-linux64/opt-raptor-wasm-godot-cranelift-firefox-e10s: AqsFshRcSoaFbc_0LqKOuQ
-    test-linux64/opt-raptor-wasm-godot-firefox-e10s: eCZ2DJbVQYaCo-wtv6IQ8w
-    test-linux64/opt-raptor-wasm-godot-ion-firefox-e10s: J4raHJ1sQN-3LYlUBndcWw
-    test-linux64/opt-raptor-wasm-misc-baseline-firefox-e10s: W1RWXGuwRVaU6zoAStfL-A
-    test-linux64/opt-raptor-wasm-misc-cranelift-firefox-e10s: bkI0lJK_SIGgxE79JVWPBg
-    test-linux64/opt-raptor-wasm-misc-firefox-e10s: BICrs0dYT3mZr9K4sI9l0Q
-    test-linux64/opt-raptor-wasm-misc-ion-firefox-e10s: fawYpVtaSiGxsK41E6T2Iw
-    test-linux64/opt-raptor-webaudio-firefox-e10s: PXrw4cObTVm08ykDx50mZw
-    test-linux64/opt-raptor-youtube-playback-firefox-e10s: VlfyjS6JRmG09yeBY0PSIw
+    test-linux64/opt-raptor-ares6-datalus-e10s: QLZo03KaRDyVaSywo14Vfg
+    test-linux64/opt-raptor-assorted-dom-datalus-e10s: Y3eV2BGGQFC-Ix_TkpqBFw
+    test-linux64/opt-raptor-jetstream2-datalus-e10s: XKM92pFETVKkkH2yDoDb8g
+    test-linux64/opt-raptor-motionmark-animometer-datalus-e10s: WZO_R-6jR_mG1iaNsN5vFg
+    test-linux64/opt-raptor-motionmark-htmlsuite-datalus-e10s: Sv0NnM0aSPy5n8tuSjz1Jw
+    test-linux64/opt-raptor-speedometer-datalus-e10s: AFWltKXETlG8s5Lo_PWM-w
+    test-linux64/opt-raptor-stylebench-datalus-e10s: Gf28RtlTQSqLh_DSa0lEzA
+    test-linux64/opt-raptor-sunspider-datalus-e10s: YtXjyrrCRS27KdWO1ArhgQ
+    test-linux64/opt-raptor-tp6-1-datalus-cold-e10s: GxKS6c-mQzWDptU5mR4asA
+    test-linux64/opt-raptor-tp6-1-datalus-e10s: ApLAGCnsSJOESU_zWtaMiw
+    test-linux64/opt-raptor-tp6-10-datalus-cold-e10s: B11czWKwSKuxXNtXb0cPrQ
+    test-linux64/opt-raptor-tp6-10-datalus-e10s: c_Vcv4G9RiKO5sLcLzdqGA
+    test-linux64/opt-raptor-tp6-11-datalus-cold-e10s: ZFC8-NSUT0WAHXyARPeHkw
+    test-linux64/opt-raptor-tp6-12-datalus-cold-e10s: SGTw0EytRAWi3giUejY7JA
+    test-linux64/opt-raptor-tp6-13-datalus-cold-e10s: Iyuss-76QkGMSJEszIc8Rg
+    test-linux64/opt-raptor-tp6-14-datalus-cold-e10s: BQKRxBytSUydeyIs7B3nGQ
+    test-linux64/opt-raptor-tp6-15-datalus-cold-e10s: C1AjkrEOTFqQK16ppPpQ5Q
+    test-linux64/opt-raptor-tp6-16-datalus-cold-e10s: Rrg75-4qQK6cDKDXieGINA
+    test-linux64/opt-raptor-tp6-17-datalus-cold-e10s: JAjrAtUQRPa4TE0d7Q_VTw
+    test-linux64/opt-raptor-tp6-18-datalus-cold-e10s: JXvDlTSQTx6IWsd_15cukA
+    test-linux64/opt-raptor-tp6-19-datalus-cold-e10s: RdCvUN9wSGKTCcSt8OPOuw
+    test-linux64/opt-raptor-tp6-2-datalus-cold-e10s: JmGutBUhS0-B-x71gr2bAA
+    test-linux64/opt-raptor-tp6-2-datalus-e10s: C0dUiXxyQ-Kj7JqMXsRmjQ
+    test-linux64/opt-raptor-tp6-20-datalus-cold-e10s: PW5TZkeKQSatPcJJ8DuYwg
+    test-linux64/opt-raptor-tp6-21-datalus-cold-e10s: YA0RewM9Q6aQZiRhECoaKg
+    test-linux64/opt-raptor-tp6-22-datalus-cold-e10s: Fo1v-gq2T86gybH40FaC_A
+    test-linux64/opt-raptor-tp6-23-datalus-cold-e10s: UWSduq70R4KHkFKICw7_tg
+    test-linux64/opt-raptor-tp6-24-datalus-cold-e10s: Lm7RuEIFT0OFFtuL_oWyLw
+    test-linux64/opt-raptor-tp6-25-datalus-cold-e10s: GvJbhEYJSfGR2L_TjTTbvA
+    test-linux64/opt-raptor-tp6-26-datalus-cold-e10s: MXr_P2voRFaNWYWMu4GWwQ
+    test-linux64/opt-raptor-tp6-27-datalus-cold-e10s: Zb-KFdfcSuOqZbXcZPD1mg
+    test-linux64/opt-raptor-tp6-28-datalus-cold-e10s: epXJwh6dTP2JQ812S6fThw
+    test-linux64/opt-raptor-tp6-29-datalus-cold-e10s: EaI1575ZRNSw6NJciFK5Jg
+    test-linux64/opt-raptor-tp6-3-datalus-cold-e10s: Si1Ge_bnSpi0UYImefNueg
+    test-linux64/opt-raptor-tp6-3-datalus-e10s: T84cP3eGSN6PklZ6_PTrNw
+    test-linux64/opt-raptor-tp6-30-datalus-cold-e10s: d-AQG9mMQ-CeHSAWBFI6VA
+    test-linux64/opt-raptor-tp6-4-datalus-cold-e10s: FaUU-MRbQiqXRXBnT1IUEw
+    test-linux64/opt-raptor-tp6-4-datalus-e10s: PHwHE-asQ_qiHAH6VJ3LLg
+    test-linux64/opt-raptor-tp6-5-datalus-cold-e10s: Y3yvn3z8SSiWjo8-Ok4I2Q
+    test-linux64/opt-raptor-tp6-5-datalus-e10s: MGAX-w3ARNGv_jz0Q0lptQ
+    test-linux64/opt-raptor-tp6-6-datalus-cold-e10s: JCNEcMcjTziPEUiWDJKJRA
+    test-linux64/opt-raptor-tp6-6-datalus-e10s: IXt5klkYTMecL9oxcEiuYQ
+    test-linux64/opt-raptor-tp6-7-datalus-cold-e10s: C2mN_IlHQRKT63gTAyxK6g
+    test-linux64/opt-raptor-tp6-7-datalus-e10s: WNpGllm4QVeZ4eigVDm_Lg
+    test-linux64/opt-raptor-tp6-8-datalus-cold-e10s: f8PEESldTk65FRdfG0WeeA
+    test-linux64/opt-raptor-tp6-8-datalus-e10s: O2oRd832RGCksCAbsGAm1w
+    test-linux64/opt-raptor-tp6-9-datalus-cold-e10s: BLnH8-1ZRGqneHNKXB07tw
+    test-linux64/opt-raptor-tp6-9-datalus-e10s: f_CVBA-AQYu7uC7DPjae3w
+    test-linux64/opt-raptor-tp6-binast-1-datalus-e10s: Tmk_KdNSSey9jvcDKuN2iQ
+    test-linux64/opt-raptor-unity-webgl-datalus-e10s: QH0km9tRR9ehHNnPYPhKIQ
+    test-linux64/opt-raptor-wasm-godot-baseline-datalus-e10s: V6sUoQNLTh-Wq9808oc1pA
+    test-linux64/opt-raptor-wasm-godot-cranelift-datalus-e10s: AqsFshRcSoaFbc_0LqKOuQ
+    test-linux64/opt-raptor-wasm-godot-datalus-e10s: eCZ2DJbVQYaCo-wtv6IQ8w
+    test-linux64/opt-raptor-wasm-godot-ion-datalus-e10s: J4raHJ1sQN-3LYlUBndcWw
+    test-linux64/opt-raptor-wasm-misc-baseline-datalus-e10s: W1RWXGuwRVaU6zoAStfL-A
+    test-linux64/opt-raptor-wasm-misc-cranelift-datalus-e10s: bkI0lJK_SIGgxE79JVWPBg
+    test-linux64/opt-raptor-wasm-misc-datalus-e10s: BICrs0dYT3mZr9K4sI9l0Q
+    test-linux64/opt-raptor-wasm-misc-ion-datalus-e10s: fawYpVtaSiGxsK41E6T2Iw
+    test-linux64/opt-raptor-webaudio-datalus-e10s: PXrw4cObTVm08ykDx50mZw
+    test-linux64/opt-raptor-youtube-playback-datalus-e10s: VlfyjS6JRmG09yeBY0PSIw
     test-linux64/opt-talos-bcv-e10s: Ay8yMMyERe-zFgCKvdEKVg
     test-linux64/opt-talos-chrome-e10s: TPpI4NUZTX2KISiNTECneQ
     test-linux64/opt-talos-damp-e10s: MdorZUfxSvKm3BCIEIg4lQ
@@ -2118,14 +2118,14 @@ existing_tasks:
     test-macosx1014-64-shippable/opt-awsy-tp6-e10s: JyLWWC24RMitT9SyjKobrQ
     test-macosx1014-64-shippable/opt-browser-screenshots-e10s: QIWDBfe9TUK6IuiWSA72Ig
     test-macosx1014-64-shippable/opt-browsertime-tp6-chrome-cold-amazon-e10s: cWhVC_hST_Ch8HY7Z7suew
-    test-macosx1014-64-shippable/opt-browsertime-tp6-firefox-amazon-e10s: C2CwZD9sTGymW5hZICNwhw
-    test-macosx1014-64-shippable/opt-browsertime-tp6-firefox-cold-amazon-e10s: NiyYtLYyTdiuUXHXchy-dA
-    test-macosx1014-64-shippable/opt-browsertime-tp6-profiling-firefox-amazon-e10s: KQX78xfjSHC2ksF3fu-JFA
-    test-macosx1014-64-shippable/opt-browsertime-tp6-profiling-firefox-cold-amazon-e10s: FhxldskQSPS8SjiZT4spkg
+    test-macosx1014-64-shippable/opt-browsertime-tp6-datalus-amazon-e10s: C2CwZD9sTGymW5hZICNwhw
+    test-macosx1014-64-shippable/opt-browsertime-tp6-datalus-cold-amazon-e10s: NiyYtLYyTdiuUXHXchy-dA
+    test-macosx1014-64-shippable/opt-browsertime-tp6-profiling-datalus-amazon-e10s: KQX78xfjSHC2ksF3fu-JFA
+    test-macosx1014-64-shippable/opt-browsertime-tp6-profiling-datalus-cold-amazon-e10s: FhxldskQSPS8SjiZT4spkg
     test-macosx1014-64-shippable/opt-cppunit-1proc: CvPGCUD8TP6vR2W1nEBo0A
     test-macosx1014-64-shippable/opt-crashtest-e10s: RYeaaUNOQNmpVmDCRBeOmg
-    test-macosx1014-64-shippable/opt-firefox-ui-functional-local-e10s: DLgY5p8fQR6pVFTYeYPNkw
-    test-macosx1014-64-shippable/opt-firefox-ui-functional-remote-e10s: ddn3of0ySOG67zucCGmLNA
+    test-macosx1014-64-shippable/opt-datalus-ui-functional-local-e10s: DLgY5p8fQR6pVFTYeYPNkw
+    test-macosx1014-64-shippable/opt-datalus-ui-functional-remote-e10s: ddn3of0ySOG67zucCGmLNA
     test-macosx1014-64-shippable/opt-gtest-1proc: TtYcGYLtR0eBZ1rjNYVrfA
     test-macosx1014-64-shippable/opt-jittest-1proc: PaXly2kuQ9uoz7ktPq5i0A
     test-macosx1014-64-shippable/opt-jsreftest-e10s-1: ICXfqlFXQEmH7Mft9dNv7w
@@ -2165,79 +2165,79 @@ existing_tasks:
     test-macosx1014-64-shippable/opt-mochitest-webgl2-ext-e10s-3: YXkQeRslTS62estDUjZWQg
     test-macosx1014-64-shippable/opt-mochitest-webgl2-ext-e10s-4: T0AcKcGoRnOTXiki70HLrw
     test-macosx1014-64-shippable/opt-mochitest-webgpu-e10s: EuRiCjFdSby0Ybg-DzWlTw
-    test-macosx1014-64-shippable/opt-raptor-ares6-firefox-e10s: bRmbT-FPTE-yeqgpRZvU2w
-    test-macosx1014-64-shippable/opt-raptor-ares6-firefox-profiling-e10s: UMOEwximQGC74TeQ89fzUQ
-    test-macosx1014-64-shippable/opt-raptor-jetstream2-firefox-e10s: CC1Yy_bAT8-NtSKFF7QDfg
-    test-macosx1014-64-shippable/opt-raptor-jetstream2-firefox-profiling-e10s: JOBUV7t8SRGemKiKrbbulg
-    test-macosx1014-64-shippable/opt-raptor-motionmark-animometer-firefox-e10s: Frj-sQc8R-m7uBXX9ym9uw
-    test-macosx1014-64-shippable/opt-raptor-motionmark-animometer-firefox-profiling-e10s: SzG91SiHSwWGJkimAsspKA
-    test-macosx1014-64-shippable/opt-raptor-motionmark-htmlsuite-firefox-e10s: dxivJGzzQsieSWNIHIdA0g
-    test-macosx1014-64-shippable/opt-raptor-motionmark-htmlsuite-firefox-profiling-e10s: XKiR-Hf1REuq1-q4DbLPfg
-    test-macosx1014-64-shippable/opt-raptor-speedometer-firefox-e10s: DlLiI71hSa2F8bxOrC7YtA
-    test-macosx1014-64-shippable/opt-raptor-speedometer-firefox-profiling-e10s: TzTlnt9aTPCw7JwhM1nFMw
-    test-macosx1014-64-shippable/opt-raptor-stylebench-firefox-e10s: Mwr2gxyYSHSQB7Fs1gX81Q
-    test-macosx1014-64-shippable/opt-raptor-stylebench-firefox-profiling-e10s: JfJxPOjiStCFKu3gb_jLuA
-    test-macosx1014-64-shippable/opt-raptor-sunspider-firefox-e10s: FWA2X2nEToWBjBe057mdDw
-    test-macosx1014-64-shippable/opt-raptor-sunspider-firefox-profiling-e10s: GhV3XjY3Toa8-u3-g4CZBg
-    test-macosx1014-64-shippable/opt-raptor-tp6-1-firefox-cold-e10s: MFEL74SaRJq8Wwxi25sSxQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-1-firefox-e10s: CY3blSLMSseA-Q5mhBlOeg
-    test-macosx1014-64-shippable/opt-raptor-tp6-1-firefox-profiling-e10s: WIaguARSQ9ukXBzYQT5LCw
-    test-macosx1014-64-shippable/opt-raptor-tp6-10-firefox-cold-e10s: crBJ3EDZQnGtKBQfO7Kk7g
-    test-macosx1014-64-shippable/opt-raptor-tp6-10-firefox-e10s: DmjvO_20ReCxWBRNZIpEXA
-    test-macosx1014-64-shippable/opt-raptor-tp6-10-firefox-profiling-e10s: L0SRbg02STin3ZzDccR79Q
-    test-macosx1014-64-shippable/opt-raptor-tp6-11-firefox-cold-e10s: Jwq3refCRkuYab6IFLw-lw
-    test-macosx1014-64-shippable/opt-raptor-tp6-12-firefox-cold-e10s: PT25cnVjR3GoY7GVRxMeEA
-    test-macosx1014-64-shippable/opt-raptor-tp6-13-firefox-cold-e10s: UFp3khqfTqOps49Hi-p5jQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-14-firefox-cold-e10s: IxnlZc7PTYqAsymyrqp-fg
-    test-macosx1014-64-shippable/opt-raptor-tp6-15-firefox-cold-e10s: a27AruXUSL-WMbXHZQ9o4w
-    test-macosx1014-64-shippable/opt-raptor-tp6-16-firefox-cold-e10s: IbQFa6HITGGrWkK7hSRi-w
-    test-macosx1014-64-shippable/opt-raptor-tp6-17-firefox-cold-e10s: AAUafYPNTvulSKxwvwKAvg
-    test-macosx1014-64-shippable/opt-raptor-tp6-18-firefox-cold-e10s: cfn4KyIyQpG045J_W47Wgw
-    test-macosx1014-64-shippable/opt-raptor-tp6-19-firefox-cold-e10s: amPGFNbhSgGh65_jjR4fdg
-    test-macosx1014-64-shippable/opt-raptor-tp6-2-firefox-cold-e10s: G-Lv1Z8DToaDLlh80KFDhQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-2-firefox-e10s: alyvItLeSBawP8tcfA45lw
-    test-macosx1014-64-shippable/opt-raptor-tp6-2-firefox-profiling-e10s: OA11CGe3SWiAm7giY8rtJA
-    test-macosx1014-64-shippable/opt-raptor-tp6-20-firefox-cold-e10s: Wca6_7CKQGOu09TJ5y3HqA
-    test-macosx1014-64-shippable/opt-raptor-tp6-21-firefox-cold-e10s: epMwnoufQS-KP2-n80pDNw
-    test-macosx1014-64-shippable/opt-raptor-tp6-22-firefox-cold-e10s: LgzAdYObR7iWJNLCL2C1sg
-    test-macosx1014-64-shippable/opt-raptor-tp6-23-firefox-cold-e10s: XUsRtVuAQvmfnRzaTnZl5g
-    test-macosx1014-64-shippable/opt-raptor-tp6-24-firefox-cold-e10s: PP16oz2iR4m0cAQEqrGbzQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-25-firefox-cold-e10s: dqXhEh15RYWX9t7RZap46g
-    test-macosx1014-64-shippable/opt-raptor-tp6-26-firefox-cold-e10s: TwC3M6c2Q3KxRgswNhcJFQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-27-firefox-cold-e10s: blhJ0NhhRla_7wMWC1lOWQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-28-firefox-cold-e10s: VMZvknO4Sg-uWC3tdsfU1g
-    test-macosx1014-64-shippable/opt-raptor-tp6-29-firefox-cold-e10s: D77kKSBjQB6aUTwshF9SQg
-    test-macosx1014-64-shippable/opt-raptor-tp6-3-firefox-cold-e10s: aOkwxS8DQ36kdnJ27xDtjg
-    test-macosx1014-64-shippable/opt-raptor-tp6-3-firefox-e10s: PNqbPVz7RS6C0Wya0CXPQA
-    test-macosx1014-64-shippable/opt-raptor-tp6-3-firefox-profiling-e10s: TxbGLHryQxmMEPSclHOqgQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-30-firefox-cold-e10s: dMV2EfHxQ9yIkk5v1rAupQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-4-firefox-cold-e10s: cHpROPdwS--FC3iLEVsSYw
-    test-macosx1014-64-shippable/opt-raptor-tp6-4-firefox-e10s: Q090CM49R2GVlUScDR53Sg
-    test-macosx1014-64-shippable/opt-raptor-tp6-4-firefox-profiling-e10s: JlCw0r3SSJi4X1KFJ0gDKg
-    test-macosx1014-64-shippable/opt-raptor-tp6-5-firefox-cold-e10s: c-FeSwqzRO-dcuBxb86lrw
-    test-macosx1014-64-shippable/opt-raptor-tp6-5-firefox-e10s: atjY2bFfQkeKTo9X6yd07g
-    test-macosx1014-64-shippable/opt-raptor-tp6-5-firefox-profiling-e10s: JXsi-V2QRFK46YZoLg4NvA
-    test-macosx1014-64-shippable/opt-raptor-tp6-6-firefox-cold-e10s: AzRsbFbmQW2RTVC_16mx8Q
-    test-macosx1014-64-shippable/opt-raptor-tp6-6-firefox-e10s: G5w0X9LLRQCyQ8Rd_GtaFQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-6-firefox-profiling-e10s: CJUdGUCeRD27F46zv99GVw
-    test-macosx1014-64-shippable/opt-raptor-tp6-7-firefox-cold-e10s: RegwYDjgS9G99q6pQ6JiYw
-    test-macosx1014-64-shippable/opt-raptor-tp6-7-firefox-e10s: XZcwJPTVQ2uT7mx2rWiUGw
-    test-macosx1014-64-shippable/opt-raptor-tp6-7-firefox-profiling-e10s: QomXCa7uQoST_qKSU9YthA
-    test-macosx1014-64-shippable/opt-raptor-tp6-8-firefox-cold-e10s: OIzLKHDCRHWhX79ftGUArg
-    test-macosx1014-64-shippable/opt-raptor-tp6-8-firefox-e10s: d_teIiq8QIOqJo89M5u6nQ
-    test-macosx1014-64-shippable/opt-raptor-tp6-8-firefox-profiling-e10s: JXActjOfTg6LRPfU0lBBrw
-    test-macosx1014-64-shippable/opt-raptor-tp6-9-firefox-cold-e10s: eotDh4IdTlSLWErJrPOR0w
-    test-macosx1014-64-shippable/opt-raptor-tp6-9-firefox-e10s: NadjezonTp6oFtIJ-ZBj2w
-    test-macosx1014-64-shippable/opt-raptor-tp6-9-firefox-profiling-e10s: OMdsPVaPTp2Y96a5lGfuKw
-    test-macosx1014-64-shippable/opt-raptor-tp6-binast-1-firefox-e10s: WNm5Z0SFQ9SlG4UbIY2r4A
-    test-macosx1014-64-shippable/opt-raptor-wasm-godot-firefox-e10s: C_tAXbqBSvWWtA3Hnd4VBw
-    test-macosx1014-64-shippable/opt-raptor-wasm-godot-firefox-profiling-e10s: IurJGZyGQCucPSZc-woE8Q
-    test-macosx1014-64-shippable/opt-raptor-webaudio-firefox-e10s: RgmEC6VHTDu1gpxxRIRPWg
-    test-macosx1014-64-shippable/opt-raptor-webaudio-firefox-profiling-e10s: fh4_XeDtTgqfaFjG4gfQlw
-    test-macosx1014-64-shippable/opt-raptor-youtube-playback-firefox-e10s: RDJ7l75KS_280ykuKa4DKw
-    test-macosx1014-64-shippable/opt-raptor-youtube-playback-firefox-profiling-e10s: QwwVsU_TTQ2rOhdXCWy9vA
-    test-macosx1014-64-shippable/opt-raptor-youtube-playback-h264-power-firefox-e10s: fwDE4teqSiysiJFK04EFJw
-    test-macosx1014-64-shippable/opt-raptor-youtube-playback-v9-power-firefox-e10s: ROAsg9ZfQAiS7dB-3H8Ezw
+    test-macosx1014-64-shippable/opt-raptor-ares6-datalus-e10s: bRmbT-FPTE-yeqgpRZvU2w
+    test-macosx1014-64-shippable/opt-raptor-ares6-datalus-profiling-e10s: UMOEwximQGC74TeQ89fzUQ
+    test-macosx1014-64-shippable/opt-raptor-jetstream2-datalus-e10s: CC1Yy_bAT8-NtSKFF7QDfg
+    test-macosx1014-64-shippable/opt-raptor-jetstream2-datalus-profiling-e10s: JOBUV7t8SRGemKiKrbbulg
+    test-macosx1014-64-shippable/opt-raptor-motionmark-animometer-datalus-e10s: Frj-sQc8R-m7uBXX9ym9uw
+    test-macosx1014-64-shippable/opt-raptor-motionmark-animometer-datalus-profiling-e10s: SzG91SiHSwWGJkimAsspKA
+    test-macosx1014-64-shippable/opt-raptor-motionmark-htmlsuite-datalus-e10s: dxivJGzzQsieSWNIHIdA0g
+    test-macosx1014-64-shippable/opt-raptor-motionmark-htmlsuite-datalus-profiling-e10s: XKiR-Hf1REuq1-q4DbLPfg
+    test-macosx1014-64-shippable/opt-raptor-speedometer-datalus-e10s: DlLiI71hSa2F8bxOrC7YtA
+    test-macosx1014-64-shippable/opt-raptor-speedometer-datalus-profiling-e10s: TzTlnt9aTPCw7JwhM1nFMw
+    test-macosx1014-64-shippable/opt-raptor-stylebench-datalus-e10s: Mwr2gxyYSHSQB7Fs1gX81Q
+    test-macosx1014-64-shippable/opt-raptor-stylebench-datalus-profiling-e10s: JfJxPOjiStCFKu3gb_jLuA
+    test-macosx1014-64-shippable/opt-raptor-sunspider-datalus-e10s: FWA2X2nEToWBjBe057mdDw
+    test-macosx1014-64-shippable/opt-raptor-sunspider-datalus-profiling-e10s: GhV3XjY3Toa8-u3-g4CZBg
+    test-macosx1014-64-shippable/opt-raptor-tp6-1-datalus-cold-e10s: MFEL74SaRJq8Wwxi25sSxQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-1-datalus-e10s: CY3blSLMSseA-Q5mhBlOeg
+    test-macosx1014-64-shippable/opt-raptor-tp6-1-datalus-profiling-e10s: WIaguARSQ9ukXBzYQT5LCw
+    test-macosx1014-64-shippable/opt-raptor-tp6-10-datalus-cold-e10s: crBJ3EDZQnGtKBQfO7Kk7g
+    test-macosx1014-64-shippable/opt-raptor-tp6-10-datalus-e10s: DmjvO_20ReCxWBRNZIpEXA
+    test-macosx1014-64-shippable/opt-raptor-tp6-10-datalus-profiling-e10s: L0SRbg02STin3ZzDccR79Q
+    test-macosx1014-64-shippable/opt-raptor-tp6-11-datalus-cold-e10s: Jwq3refCRkuYab6IFLw-lw
+    test-macosx1014-64-shippable/opt-raptor-tp6-12-datalus-cold-e10s: PT25cnVjR3GoY7GVRxMeEA
+    test-macosx1014-64-shippable/opt-raptor-tp6-13-datalus-cold-e10s: UFp3khqfTqOps49Hi-p5jQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-14-datalus-cold-e10s: IxnlZc7PTYqAsymyrqp-fg
+    test-macosx1014-64-shippable/opt-raptor-tp6-15-datalus-cold-e10s: a27AruXUSL-WMbXHZQ9o4w
+    test-macosx1014-64-shippable/opt-raptor-tp6-16-datalus-cold-e10s: IbQFa6HITGGrWkK7hSRi-w
+    test-macosx1014-64-shippable/opt-raptor-tp6-17-datalus-cold-e10s: AAUafYPNTvulSKxwvwKAvg
+    test-macosx1014-64-shippable/opt-raptor-tp6-18-datalus-cold-e10s: cfn4KyIyQpG045J_W47Wgw
+    test-macosx1014-64-shippable/opt-raptor-tp6-19-datalus-cold-e10s: amPGFNbhSgGh65_jjR4fdg
+    test-macosx1014-64-shippable/opt-raptor-tp6-2-datalus-cold-e10s: G-Lv1Z8DToaDLlh80KFDhQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-2-datalus-e10s: alyvItLeSBawP8tcfA45lw
+    test-macosx1014-64-shippable/opt-raptor-tp6-2-datalus-profiling-e10s: OA11CGe3SWiAm7giY8rtJA
+    test-macosx1014-64-shippable/opt-raptor-tp6-20-datalus-cold-e10s: Wca6_7CKQGOu09TJ5y3HqA
+    test-macosx1014-64-shippable/opt-raptor-tp6-21-datalus-cold-e10s: epMwnoufQS-KP2-n80pDNw
+    test-macosx1014-64-shippable/opt-raptor-tp6-22-datalus-cold-e10s: LgzAdYObR7iWJNLCL2C1sg
+    test-macosx1014-64-shippable/opt-raptor-tp6-23-datalus-cold-e10s: XUsRtVuAQvmfnRzaTnZl5g
+    test-macosx1014-64-shippable/opt-raptor-tp6-24-datalus-cold-e10s: PP16oz2iR4m0cAQEqrGbzQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-25-datalus-cold-e10s: dqXhEh15RYWX9t7RZap46g
+    test-macosx1014-64-shippable/opt-raptor-tp6-26-datalus-cold-e10s: TwC3M6c2Q3KxRgswNhcJFQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-27-datalus-cold-e10s: blhJ0NhhRla_7wMWC1lOWQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-28-datalus-cold-e10s: VMZvknO4Sg-uWC3tdsfU1g
+    test-macosx1014-64-shippable/opt-raptor-tp6-29-datalus-cold-e10s: D77kKSBjQB6aUTwshF9SQg
+    test-macosx1014-64-shippable/opt-raptor-tp6-3-datalus-cold-e10s: aOkwxS8DQ36kdnJ27xDtjg
+    test-macosx1014-64-shippable/opt-raptor-tp6-3-datalus-e10s: PNqbPVz7RS6C0Wya0CXPQA
+    test-macosx1014-64-shippable/opt-raptor-tp6-3-datalus-profiling-e10s: TxbGLHryQxmMEPSclHOqgQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-30-datalus-cold-e10s: dMV2EfHxQ9yIkk5v1rAupQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-4-datalus-cold-e10s: cHpROPdwS--FC3iLEVsSYw
+    test-macosx1014-64-shippable/opt-raptor-tp6-4-datalus-e10s: Q090CM49R2GVlUScDR53Sg
+    test-macosx1014-64-shippable/opt-raptor-tp6-4-datalus-profiling-e10s: JlCw0r3SSJi4X1KFJ0gDKg
+    test-macosx1014-64-shippable/opt-raptor-tp6-5-datalus-cold-e10s: c-FeSwqzRO-dcuBxb86lrw
+    test-macosx1014-64-shippable/opt-raptor-tp6-5-datalus-e10s: atjY2bFfQkeKTo9X6yd07g
+    test-macosx1014-64-shippable/opt-raptor-tp6-5-datalus-profiling-e10s: JXsi-V2QRFK46YZoLg4NvA
+    test-macosx1014-64-shippable/opt-raptor-tp6-6-datalus-cold-e10s: AzRsbFbmQW2RTVC_16mx8Q
+    test-macosx1014-64-shippable/opt-raptor-tp6-6-datalus-e10s: G5w0X9LLRQCyQ8Rd_GtaFQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-6-datalus-profiling-e10s: CJUdGUCeRD27F46zv99GVw
+    test-macosx1014-64-shippable/opt-raptor-tp6-7-datalus-cold-e10s: RegwYDjgS9G99q6pQ6JiYw
+    test-macosx1014-64-shippable/opt-raptor-tp6-7-datalus-e10s: XZcwJPTVQ2uT7mx2rWiUGw
+    test-macosx1014-64-shippable/opt-raptor-tp6-7-datalus-profiling-e10s: QomXCa7uQoST_qKSU9YthA
+    test-macosx1014-64-shippable/opt-raptor-tp6-8-datalus-cold-e10s: OIzLKHDCRHWhX79ftGUArg
+    test-macosx1014-64-shippable/opt-raptor-tp6-8-datalus-e10s: d_teIiq8QIOqJo89M5u6nQ
+    test-macosx1014-64-shippable/opt-raptor-tp6-8-datalus-profiling-e10s: JXActjOfTg6LRPfU0lBBrw
+    test-macosx1014-64-shippable/opt-raptor-tp6-9-datalus-cold-e10s: eotDh4IdTlSLWErJrPOR0w
+    test-macosx1014-64-shippable/opt-raptor-tp6-9-datalus-e10s: NadjezonTp6oFtIJ-ZBj2w
+    test-macosx1014-64-shippable/opt-raptor-tp6-9-datalus-profiling-e10s: OMdsPVaPTp2Y96a5lGfuKw
+    test-macosx1014-64-shippable/opt-raptor-tp6-binast-1-datalus-e10s: WNm5Z0SFQ9SlG4UbIY2r4A
+    test-macosx1014-64-shippable/opt-raptor-wasm-godot-datalus-e10s: C_tAXbqBSvWWtA3Hnd4VBw
+    test-macosx1014-64-shippable/opt-raptor-wasm-godot-datalus-profiling-e10s: IurJGZyGQCucPSZc-woE8Q
+    test-macosx1014-64-shippable/opt-raptor-webaudio-datalus-e10s: RgmEC6VHTDu1gpxxRIRPWg
+    test-macosx1014-64-shippable/opt-raptor-webaudio-datalus-profiling-e10s: fh4_XeDtTgqfaFjG4gfQlw
+    test-macosx1014-64-shippable/opt-raptor-youtube-playback-datalus-e10s: RDJ7l75KS_280ykuKa4DKw
+    test-macosx1014-64-shippable/opt-raptor-youtube-playback-datalus-profiling-e10s: QwwVsU_TTQ2rOhdXCWy9vA
+    test-macosx1014-64-shippable/opt-raptor-youtube-playback-h264-power-datalus-e10s: fwDE4teqSiysiJFK04EFJw
+    test-macosx1014-64-shippable/opt-raptor-youtube-playback-v9-power-datalus-e10s: ROAsg9ZfQAiS7dB-3H8Ezw
     test-macosx1014-64-shippable/opt-reftest-e10s-1: ICScLa_qTQ--RMULihSizA
     test-macosx1014-64-shippable/opt-reftest-e10s-2: UeAl_WiIQUatZfXnSDiUeg
     test-macosx1014-64-shippable/opt-reftest-e10s-3: S-Q4ydYCSPGxyefADCYufA
@@ -2299,8 +2299,8 @@ existing_tasks:
     test-macosx1014-64-shippable/opt-xpcshell-e10s-2: C17wM9-gQXqqZcDOExV3Qg
     test-macosx1014-64/debug-cppunit-1proc: WyHzdcEiRLWiJfOPNQbIrw
     test-macosx1014-64/debug-crashtest-e10s: fqdVTYvpQ6WvVvYcl6jwBA
-    test-macosx1014-64/debug-firefox-ui-functional-local-e10s: CllJWuWnTC6EvIEJrq2AlA
-    test-macosx1014-64/debug-firefox-ui-functional-remote-e10s: TyVgpXgqTM62k06SMvRdyg
+    test-macosx1014-64/debug-datalus-ui-functional-local-e10s: CllJWuWnTC6EvIEJrq2AlA
+    test-macosx1014-64/debug-datalus-ui-functional-remote-e10s: TyVgpXgqTM62k06SMvRdyg
     test-macosx1014-64/debug-gtest-1proc: Diowb7-SRp6eqiKB2GS3vA
     test-macosx1014-64/debug-jittest-1proc-1: ST1Fqh5aRCuzZue8HpJdRA
     test-macosx1014-64/debug-jittest-1proc-2: Y2adDgdhTLeUEEyF3VWgPA
@@ -2398,18 +2398,18 @@ existing_tasks:
     test-vismet-android-hw-p2-8-0-android-aarch64/pgo-browsertime-tp6m-fenix-youtube: I8-ba2AuSkyPrnaU0nQk9w
     test-vismet-android-hw-p2-8-0-android-aarch64/pgo-browsertime-tp6m-geckoview-cold-amazon: KkSAFB5mTTuM2_gtiME9Vg
     test-vismet-android-hw-p2-8-0-android-aarch64/pgo-browsertime-tp6m-geckoview-cold-youtube: byeZACS8TY6N3gnpKjuBtw
-    test-vismet-linux64-shippable/opt-browsertime-tp6-firefox-amazon: XtSBo42GRkOtKtN9mRFLZA
-    test-vismet-linux64-shippable/opt-browsertime-tp6-firefox-cold-amazon: EsURMZyRR4-5IzyK1SbYew
-    test-vismet-macosx1014-64-shippable/opt-browsertime-tp6-firefox-amazon: S2Cgwd1dSE-aF608QrozQQ
-    test-vismet-macosx1014-64-shippable/opt-browsertime-tp6-firefox-cold-amazon: CjLXqvcZQQm5KVzxXl_-Pg
-    test-vismet-windows10-64-shippable/opt-browsertime-tp6-firefox-amazon: CssYgB5eTKCsrSRNC2RvUA
-    test-vismet-windows10-64-shippable/opt-browsertime-tp6-firefox-cold-amazon: OnYA77lvTvSfxIzh2dyCzw
-    test-vismet-windows7-32-shippable/opt-browsertime-tp6-firefox-amazon: FRHkJeJ2QUGBLCvXFoNn8Q
-    test-vismet-windows7-32-shippable/opt-browsertime-tp6-firefox-cold-amazon: d_JtccWVSn2UtdXJY3TJhQ
+    test-vismet-linux64-shippable/opt-browsertime-tp6-datalus-amazon: XtSBo42GRkOtKtN9mRFLZA
+    test-vismet-linux64-shippable/opt-browsertime-tp6-datalus-cold-amazon: EsURMZyRR4-5IzyK1SbYew
+    test-vismet-macosx1014-64-shippable/opt-browsertime-tp6-datalus-amazon: S2Cgwd1dSE-aF608QrozQQ
+    test-vismet-macosx1014-64-shippable/opt-browsertime-tp6-datalus-cold-amazon: CjLXqvcZQQm5KVzxXl_-Pg
+    test-vismet-windows10-64-shippable/opt-browsertime-tp6-datalus-amazon: CssYgB5eTKCsrSRNC2RvUA
+    test-vismet-windows10-64-shippable/opt-browsertime-tp6-datalus-cold-amazon: OnYA77lvTvSfxIzh2dyCzw
+    test-vismet-windows7-32-shippable/opt-browsertime-tp6-datalus-amazon: FRHkJeJ2QUGBLCvXFoNn8Q
+    test-vismet-windows7-32-shippable/opt-browsertime-tp6-datalus-cold-amazon: d_JtccWVSn2UtdXJY3TJhQ
     test-windows10-64-asan/opt-cppunit-1proc: edrtfN2jTEWsSJqOLIcArA
     test-windows10-64-asan/opt-crashtest-e10s: NY6lFbzcS5eZS0EgSj_HnA
-    test-windows10-64-asan/opt-firefox-ui-functional-local-e10s: HcrrKUE0TKGYVccJ52Va0Q
-    test-windows10-64-asan/opt-firefox-ui-functional-remote-e10s: EdmSu-w5TMyKuv7asTb2Ig
+    test-windows10-64-asan/opt-datalus-ui-functional-local-e10s: HcrrKUE0TKGYVccJ52Va0Q
+    test-windows10-64-asan/opt-datalus-ui-functional-remote-e10s: EdmSu-w5TMyKuv7asTb2Ig
     test-windows10-64-asan/opt-gtest-1proc: Jpnj7JGgTmSfoJVqURwfMA
     test-windows10-64-asan/opt-jsreftest-e10s-1: GFlsv67ZR_OJOwvhf_pSwA
     test-windows10-64-asan/opt-jsreftest-e10s-2: Fm9fl6PjQvaNjFXPolBNtw
@@ -2461,8 +2461,8 @@ existing_tasks:
     test-windows10-64-ccov/opt-awsy-e10s: GPDOuaFWTaK-8OTJ34StYQ
     test-windows10-64-ccov/opt-cppunit-1proc: Aq1_Hr3aR9KWFB99A191YQ
     test-windows10-64-ccov/opt-crashtest-e10s: DEx81EuLRbuvsHrsQaZ7Yg
-    test-windows10-64-ccov/opt-firefox-ui-functional-local-e10s: AoJ3_jsNRTW3mVrcJpzq6A
-    test-windows10-64-ccov/opt-firefox-ui-functional-remote-e10s: Tx4WZIjuTla7tPuMc56ijA
+    test-windows10-64-ccov/opt-datalus-ui-functional-local-e10s: AoJ3_jsNRTW3mVrcJpzq6A
+    test-windows10-64-ccov/opt-datalus-ui-functional-remote-e10s: Tx4WZIjuTla7tPuMc56ijA
     test-windows10-64-ccov/opt-gtest-1proc: eDiEioDRRqStnmx2RPfsSw
     test-windows10-64-ccov/opt-jittest-1proc-1: eRrPP9GUSuCoSdIbNO9P7A
     test-windows10-64-ccov/opt-jittest-1proc-2: Hfpx1XMtQkiC_MJqcKx1pw
@@ -2585,8 +2585,8 @@ existing_tasks:
     test-windows10-64-ccov/opt-xpcshell-e10s-5: CS245xVeSK-pfkYCECry4Q
     test-windows10-64-ccov/opt-xpcshell-e10s-6: GoSyXXEEQaaFWn-O1nC5iw
     test-windows10-64-mingwclang/debug-cppunit-1proc: YTVDC5X-SXi0cj8D86HPeQ
-    test-windows10-64-mingwclang/debug-firefox-ui-functional-local-e10s: DNPG8sFoTfa0UZJI0cZWZQ
-    test-windows10-64-mingwclang/debug-firefox-ui-functional-remote-e10s: NegZXqOzRvOTa5krGjlnWQ
+    test-windows10-64-mingwclang/debug-datalus-ui-functional-local-e10s: DNPG8sFoTfa0UZJI0cZWZQ
+    test-windows10-64-mingwclang/debug-datalus-ui-functional-remote-e10s: NegZXqOzRvOTa5krGjlnWQ
     test-windows10-64-mingwclang/debug-mochitest-a11y-1proc: NK6dfWPoTHqubw6gTvtpaA
     test-windows10-64-mingwclang/debug-mochitest-gpu-e10s: SBUQ1DHxTaSi09ZebNYq0Q
     test-windows10-64-mingwclang/debug-mochitest-webgl1-core-e10s: Fs--8o4AShuBkozlDJKH3g
@@ -2692,57 +2692,57 @@ existing_tasks:
     test-windows10-64-qr/opt-mochitest-webgl2-core-fis-e10s: Pe3EZzHATUO19_BJ9qLmQA
     test-windows10-64-qr/opt-mochitest-webgpu-e10s: JTE7TMqTTDySlL-WqXxf_w
     test-windows10-64-qr/opt-mochitest-webgpu-fis-e10s: OiWDNMfnQZ6USMgxrijARw
-    test-windows10-64-qr/opt-raptor-ares6-firefox-e10s: TFL2Kz0LThK_WWD7jETOFg
-    test-windows10-64-qr/opt-raptor-jetstream2-firefox-e10s: GJOc5SYYRImQhvor-rzFYQ
-    test-windows10-64-qr/opt-raptor-motionmark-animometer-firefox-e10s: UPIMrDeIR8mjoppXSgXSPQ
-    test-windows10-64-qr/opt-raptor-motionmark-htmlsuite-firefox-e10s: YeXC8HphSeeiqrkZNL4pOw
-    test-windows10-64-qr/opt-raptor-speedometer-firefox-e10s: NUTteFr2SqGJzWcvVl7fTA
-    test-windows10-64-qr/opt-raptor-stylebench-firefox-e10s: JTif2t2YRmy8cUIUbQkXGA
-    test-windows10-64-qr/opt-raptor-sunspider-firefox-e10s: PMqotSYvQ0K5tin4ELqNmQ
-    test-windows10-64-qr/opt-raptor-tp6-1-firefox-cold-e10s: FblKoKMnQmWsJX_U58X7ww
-    test-windows10-64-qr/opt-raptor-tp6-1-firefox-e10s: KQUgM4XhRiaPS6edmOBXIA
-    test-windows10-64-qr/opt-raptor-tp6-10-firefox-cold-e10s: dBO9fh0JQzKKI6iSZRfLyg
-    test-windows10-64-qr/opt-raptor-tp6-10-firefox-e10s: Q6311BJWRHWXIyUf4HC82w
-    test-windows10-64-qr/opt-raptor-tp6-11-firefox-cold-e10s: Mu8aAHCPS6iUKRVVuImLdA
-    test-windows10-64-qr/opt-raptor-tp6-12-firefox-cold-e10s: LPT4IsKQSWiaG0t0_vb9aQ
-    test-windows10-64-qr/opt-raptor-tp6-13-firefox-cold-e10s: Wz_9GcDvQyq5Dy-eKfaLaQ
-    test-windows10-64-qr/opt-raptor-tp6-14-firefox-cold-e10s: NDdoru8wQWKZ4pRUiPpDhg
-    test-windows10-64-qr/opt-raptor-tp6-15-firefox-cold-e10s: FQx5IBdMR6WI1OLJjQRBNg
-    test-windows10-64-qr/opt-raptor-tp6-16-firefox-cold-e10s: JlB4zSpFSgGINU5h_NypSw
-    test-windows10-64-qr/opt-raptor-tp6-17-firefox-cold-e10s: M10WuOIWTvOiwY3B_jjzXw
-    test-windows10-64-qr/opt-raptor-tp6-18-firefox-cold-e10s: e_tx8VGNSL6L2re-tUbbOw
-    test-windows10-64-qr/opt-raptor-tp6-19-firefox-cold-e10s: W5wlKC4YQfqZQ-9MyqNpUg
-    test-windows10-64-qr/opt-raptor-tp6-2-firefox-cold-e10s: a2WGMOzuQdiEMozff6x4Cw
-    test-windows10-64-qr/opt-raptor-tp6-2-firefox-e10s: f48IZ9vpS9-zieFz_qDIOA
-    test-windows10-64-qr/opt-raptor-tp6-20-firefox-cold-e10s: avzFPOKeSy6fvXVdObA-Iw
-    test-windows10-64-qr/opt-raptor-tp6-21-firefox-cold-e10s: KgFHGlHAQeKOxSUT_xgt_w
-    test-windows10-64-qr/opt-raptor-tp6-22-firefox-cold-e10s: ZZuJxuswReCrLEKEYeysVw
-    test-windows10-64-qr/opt-raptor-tp6-23-firefox-cold-e10s: BZwjdbMnQ_So1LLdWNV6Gw
-    test-windows10-64-qr/opt-raptor-tp6-24-firefox-cold-e10s: HMi_XZknRgCQHigMEvnDuA
-    test-windows10-64-qr/opt-raptor-tp6-25-firefox-cold-e10s: IH37dLcCSIq55TRwm1Z46w
-    test-windows10-64-qr/opt-raptor-tp6-26-firefox-cold-e10s: MsMWPC1ESjqLVeQlZNSQuw
-    test-windows10-64-qr/opt-raptor-tp6-27-firefox-cold-e10s: f6kM00s5SW67Ux2mGl2uTA
-    test-windows10-64-qr/opt-raptor-tp6-28-firefox-cold-e10s: bAuiQ_OaQIKioQwqez7aWA
-    test-windows10-64-qr/opt-raptor-tp6-29-firefox-cold-e10s: FPIaL7g6SZO5YJWNDf79ew
-    test-windows10-64-qr/opt-raptor-tp6-3-firefox-cold-e10s: Efn8imedTzmNbrJnqn7NCw
-    test-windows10-64-qr/opt-raptor-tp6-3-firefox-e10s: Ki4OzoszSCy0LD_WmJSvOw
-    test-windows10-64-qr/opt-raptor-tp6-30-firefox-cold-e10s: NxBCqNA-SGi1R5YtkobkAg
-    test-windows10-64-qr/opt-raptor-tp6-4-firefox-cold-e10s: VmR8t0wiS_mLMK72TyQb6A
-    test-windows10-64-qr/opt-raptor-tp6-4-firefox-e10s: Ss4HFcxhTfi8mi9uuKU7qw
-    test-windows10-64-qr/opt-raptor-tp6-5-firefox-cold-e10s: NRBRSGXLRnOykG3gn1vzaw
-    test-windows10-64-qr/opt-raptor-tp6-5-firefox-e10s: AMJ2p7emQP6ww6FHzG8K8g
-    test-windows10-64-qr/opt-raptor-tp6-6-firefox-cold-e10s: Ay7JCKr-RFymSEJkM_P73g
-    test-windows10-64-qr/opt-raptor-tp6-6-firefox-e10s: NBfmsNwMRA2CCGLvQaZRNw
-    test-windows10-64-qr/opt-raptor-tp6-7-firefox-cold-e10s: EVKjO5SOSOSzxCZfzdUJ8A
-    test-windows10-64-qr/opt-raptor-tp6-7-firefox-e10s: OeOM-XBOTza00CxM-nabhA
-    test-windows10-64-qr/opt-raptor-tp6-8-firefox-cold-e10s: U5lZ_xgWSUWCGaBV0fgNSA
-    test-windows10-64-qr/opt-raptor-tp6-8-firefox-e10s: B_yG3sQmTGyimUqEpsm0GQ
-    test-windows10-64-qr/opt-raptor-tp6-9-firefox-cold-e10s: Bq2ZM6lwQzqDTGqP70AFjw
-    test-windows10-64-qr/opt-raptor-tp6-9-firefox-e10s: T03-V0YUQaiKPxzJG3zGYw
-    test-windows10-64-qr/opt-raptor-tp6-binast-1-firefox-e10s: MQ8vOUHgRiOuGiRtXJZMqA
-    test-windows10-64-qr/opt-raptor-wasm-godot-firefox-e10s: aE2cKCskQxe21n_Wda4WUg
-    test-windows10-64-qr/opt-raptor-webaudio-firefox-e10s: dL2t2mR8SuuypDK4x6JCig
-    test-windows10-64-qr/opt-raptor-youtube-playback-firefox-e10s: O4aMzwqcSP2r-q3kcDBagA
+    test-windows10-64-qr/opt-raptor-ares6-datalus-e10s: TFL2Kz0LThK_WWD7jETOFg
+    test-windows10-64-qr/opt-raptor-jetstream2-datalus-e10s: GJOc5SYYRImQhvor-rzFYQ
+    test-windows10-64-qr/opt-raptor-motionmark-animometer-datalus-e10s: UPIMrDeIR8mjoppXSgXSPQ
+    test-windows10-64-qr/opt-raptor-motionmark-htmlsuite-datalus-e10s: YeXC8HphSeeiqrkZNL4pOw
+    test-windows10-64-qr/opt-raptor-speedometer-datalus-e10s: NUTteFr2SqGJzWcvVl7fTA
+    test-windows10-64-qr/opt-raptor-stylebench-datalus-e10s: JTif2t2YRmy8cUIUbQkXGA
+    test-windows10-64-qr/opt-raptor-sunspider-datalus-e10s: PMqotSYvQ0K5tin4ELqNmQ
+    test-windows10-64-qr/opt-raptor-tp6-1-datalus-cold-e10s: FblKoKMnQmWsJX_U58X7ww
+    test-windows10-64-qr/opt-raptor-tp6-1-datalus-e10s: KQUgM4XhRiaPS6edmOBXIA
+    test-windows10-64-qr/opt-raptor-tp6-10-datalus-cold-e10s: dBO9fh0JQzKKI6iSZRfLyg
+    test-windows10-64-qr/opt-raptor-tp6-10-datalus-e10s: Q6311BJWRHWXIyUf4HC82w
+    test-windows10-64-qr/opt-raptor-tp6-11-datalus-cold-e10s: Mu8aAHCPS6iUKRVVuImLdA
+    test-windows10-64-qr/opt-raptor-tp6-12-datalus-cold-e10s: LPT4IsKQSWiaG0t0_vb9aQ
+    test-windows10-64-qr/opt-raptor-tp6-13-datalus-cold-e10s: Wz_9GcDvQyq5Dy-eKfaLaQ
+    test-windows10-64-qr/opt-raptor-tp6-14-datalus-cold-e10s: NDdoru8wQWKZ4pRUiPpDhg
+    test-windows10-64-qr/opt-raptor-tp6-15-datalus-cold-e10s: FQx5IBdMR6WI1OLJjQRBNg
+    test-windows10-64-qr/opt-raptor-tp6-16-datalus-cold-e10s: JlB4zSpFSgGINU5h_NypSw
+    test-windows10-64-qr/opt-raptor-tp6-17-datalus-cold-e10s: M10WuOIWTvOiwY3B_jjzXw
+    test-windows10-64-qr/opt-raptor-tp6-18-datalus-cold-e10s: e_tx8VGNSL6L2re-tUbbOw
+    test-windows10-64-qr/opt-raptor-tp6-19-datalus-cold-e10s: W5wlKC4YQfqZQ-9MyqNpUg
+    test-windows10-64-qr/opt-raptor-tp6-2-datalus-cold-e10s: a2WGMOzuQdiEMozff6x4Cw
+    test-windows10-64-qr/opt-raptor-tp6-2-datalus-e10s: f48IZ9vpS9-zieFz_qDIOA
+    test-windows10-64-qr/opt-raptor-tp6-20-datalus-cold-e10s: avzFPOKeSy6fvXVdObA-Iw
+    test-windows10-64-qr/opt-raptor-tp6-21-datalus-cold-e10s: KgFHGlHAQeKOxSUT_xgt_w
+    test-windows10-64-qr/opt-raptor-tp6-22-datalus-cold-e10s: ZZuJxuswReCrLEKEYeysVw
+    test-windows10-64-qr/opt-raptor-tp6-23-datalus-cold-e10s: BZwjdbMnQ_So1LLdWNV6Gw
+    test-windows10-64-qr/opt-raptor-tp6-24-datalus-cold-e10s: HMi_XZknRgCQHigMEvnDuA
+    test-windows10-64-qr/opt-raptor-tp6-25-datalus-cold-e10s: IH37dLcCSIq55TRwm1Z46w
+    test-windows10-64-qr/opt-raptor-tp6-26-datalus-cold-e10s: MsMWPC1ESjqLVeQlZNSQuw
+    test-windows10-64-qr/opt-raptor-tp6-27-datalus-cold-e10s: f6kM00s5SW67Ux2mGl2uTA
+    test-windows10-64-qr/opt-raptor-tp6-28-datalus-cold-e10s: bAuiQ_OaQIKioQwqez7aWA
+    test-windows10-64-qr/opt-raptor-tp6-29-datalus-cold-e10s: FPIaL7g6SZO5YJWNDf79ew
+    test-windows10-64-qr/opt-raptor-tp6-3-datalus-cold-e10s: Efn8imedTzmNbrJnqn7NCw
+    test-windows10-64-qr/opt-raptor-tp6-3-datalus-e10s: Ki4OzoszSCy0LD_WmJSvOw
+    test-windows10-64-qr/opt-raptor-tp6-30-datalus-cold-e10s: NxBCqNA-SGi1R5YtkobkAg
+    test-windows10-64-qr/opt-raptor-tp6-4-datalus-cold-e10s: VmR8t0wiS_mLMK72TyQb6A
+    test-windows10-64-qr/opt-raptor-tp6-4-datalus-e10s: Ss4HFcxhTfi8mi9uuKU7qw
+    test-windows10-64-qr/opt-raptor-tp6-5-datalus-cold-e10s: NRBRSGXLRnOykG3gn1vzaw
+    test-windows10-64-qr/opt-raptor-tp6-5-datalus-e10s: AMJ2p7emQP6ww6FHzG8K8g
+    test-windows10-64-qr/opt-raptor-tp6-6-datalus-cold-e10s: Ay7JCKr-RFymSEJkM_P73g
+    test-windows10-64-qr/opt-raptor-tp6-6-datalus-e10s: NBfmsNwMRA2CCGLvQaZRNw
+    test-windows10-64-qr/opt-raptor-tp6-7-datalus-cold-e10s: EVKjO5SOSOSzxCZfzdUJ8A
+    test-windows10-64-qr/opt-raptor-tp6-7-datalus-e10s: OeOM-XBOTza00CxM-nabhA
+    test-windows10-64-qr/opt-raptor-tp6-8-datalus-cold-e10s: U5lZ_xgWSUWCGaBV0fgNSA
+    test-windows10-64-qr/opt-raptor-tp6-8-datalus-e10s: B_yG3sQmTGyimUqEpsm0GQ
+    test-windows10-64-qr/opt-raptor-tp6-9-datalus-cold-e10s: Bq2ZM6lwQzqDTGqP70AFjw
+    test-windows10-64-qr/opt-raptor-tp6-9-datalus-e10s: T03-V0YUQaiKPxzJG3zGYw
+    test-windows10-64-qr/opt-raptor-tp6-binast-1-datalus-e10s: MQ8vOUHgRiOuGiRtXJZMqA
+    test-windows10-64-qr/opt-raptor-wasm-godot-datalus-e10s: aE2cKCskQxe21n_Wda4WUg
+    test-windows10-64-qr/opt-raptor-webaudio-datalus-e10s: dL2t2mR8SuuypDK4x6JCig
+    test-windows10-64-qr/opt-raptor-youtube-playback-datalus-e10s: O4aMzwqcSP2r-q3kcDBagA
     test-windows10-64-qr/opt-reftest-e10s-1: C44GHeblRb-UA75B-txvRQ
     test-windows10-64-qr/opt-reftest-e10s-2: H4E0HYggQJ-wiiBvMLmGlg
     test-windows10-64-qr/opt-talos-chrome-e10s: CCBIFq1ASR-Mmr48W4hJYg
@@ -2801,18 +2801,18 @@ existing_tasks:
     test-windows10-64-qr/opt-web-platform-tests-wdspec-fis-e10s-1: NHoSANs4TIewNeC2vNn9Rg
     test-windows10-64-qr/opt-web-platform-tests-wdspec-fis-e10s-2: YSJlBe7uQSWm3tmFNu9gBg
     test-windows10-64-qr/opt-web-platform-tests-wdspec-fis-e10s-3: NO_-5n-4S4iahhzC0Wud_g
-    test-windows10-64-ref-hw-2017/opt-raptor-jetstream2-firefox-e10s: EsQXigsWQOatCmgq4LMx5g
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-1-firefox-e10s: NTxAqL92QSmaq_JFVJpKXA
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-10-firefox-e10s: QP-FH6K0TI259Vi0TgFt-w
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-2-firefox-e10s: LX4_c9mUR1-tw5OpsfhE9g
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-3-firefox-e10s: f-l2iaPNTwuGZRnOvtF_Kg
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-4-firefox-e10s: Bmn7omy2QlaqNhNTbIesMQ
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-5-firefox-e10s: aXwnewmPSMWsi84NM494tQ
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-6-firefox-e10s: CHKzD_lySMGoit3GNGqtgQ
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-7-firefox-e10s: E6zrIWwrR4-6dzRMEaw_hg
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-8-firefox-e10s: JsmoRLnsQimQYI9exL5NmQ
-    test-windows10-64-ref-hw-2017/opt-raptor-tp6-9-firefox-e10s: bn2eMLTWTE6S00Cl2kxa6A
-    test-windows10-64-ref-hw-2017/opt-raptor-youtube-playback-firefox-e10s: UZ4wvnZUTZez3DpOhJHW1w
+    test-windows10-64-ref-hw-2017/opt-raptor-jetstream2-datalus-e10s: EsQXigsWQOatCmgq4LMx5g
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-1-datalus-e10s: NTxAqL92QSmaq_JFVJpKXA
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-10-datalus-e10s: QP-FH6K0TI259Vi0TgFt-w
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-2-datalus-e10s: LX4_c9mUR1-tw5OpsfhE9g
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-3-datalus-e10s: f-l2iaPNTwuGZRnOvtF_Kg
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-4-datalus-e10s: Bmn7omy2QlaqNhNTbIesMQ
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-5-datalus-e10s: aXwnewmPSMWsi84NM494tQ
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-6-datalus-e10s: CHKzD_lySMGoit3GNGqtgQ
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-7-datalus-e10s: E6zrIWwrR4-6dzRMEaw_hg
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-8-datalus-e10s: JsmoRLnsQimQYI9exL5NmQ
+    test-windows10-64-ref-hw-2017/opt-raptor-tp6-9-datalus-e10s: bn2eMLTWTE6S00Cl2kxa6A
+    test-windows10-64-ref-hw-2017/opt-raptor-youtube-playback-datalus-e10s: UZ4wvnZUTZez3DpOhJHW1w
     test-windows10-64-ref-hw-2017/opt-talos-g4-e10s: dLaUMAiiQFWQvAraevSEjQ
     test-windows10-64-ref-hw-2017/opt-talos-webgl-e10s: bYxJ-4p-Tuu5ptmQHMK4DQ
     test-windows10-64-shippable-qr/opt-awsy-base-e10s: RFY7uZhJSxOnDIgNb5137w
@@ -2838,78 +2838,78 @@ existing_tasks:
     test-windows10-64-shippable-qr/opt-mochitest-webgl1-core-e10s: JAGG46nMQee9iczRooUwXw
     test-windows10-64-shippable-qr/opt-mochitest-webgl2-core-e10s: AxxNdEHySNW9Fhyw7OnwdA
     test-windows10-64-shippable-qr/opt-mochitest-webgpu-e10s: KciG9DSUQqysMu5Qh_z5oA
-    test-windows10-64-shippable-qr/opt-raptor-ares6-firefox-e10s: FhEVRKtJRn6HUTftcKtnYQ
-    test-windows10-64-shippable-qr/opt-raptor-ares6-firefox-fis-e10s: W2BfphnnSiiBVDKftgoqUw
-    test-windows10-64-shippable-qr/opt-raptor-jetstream2-firefox-e10s: fiX1iDxYQxGUcWj7EaMOeg
-    test-windows10-64-shippable-qr/opt-raptor-jetstream2-firefox-fis-e10s: UylXNLj5QnWs7AP-e7yGUA
-    test-windows10-64-shippable-qr/opt-raptor-motionmark-animometer-firefox-e10s: ElOuReuzQiWEZJRUziHlIA
-    test-windows10-64-shippable-qr/opt-raptor-motionmark-animometer-firefox-fis-e10s: ZNMuu1q2QlmL_i4lHoTHxA
-    test-windows10-64-shippable-qr/opt-raptor-motionmark-htmlsuite-firefox-e10s: MqwcmYVNTtyncq_OaLMVKg
-    test-windows10-64-shippable-qr/opt-raptor-motionmark-htmlsuite-firefox-fis-e10s: U8Qd7KpkT4Kl07LKOSQR2w
-    test-windows10-64-shippable-qr/opt-raptor-speedometer-firefox-e10s: XtUxArMcQOmfCvZ283MVVQ
-    test-windows10-64-shippable-qr/opt-raptor-speedometer-firefox-fis-e10s: IyaA8RZLRWyIqYjcr_V-Yg
-    test-windows10-64-shippable-qr/opt-raptor-stylebench-firefox-e10s: dhG9swrPRoqu51NckXWrwA
-    test-windows10-64-shippable-qr/opt-raptor-stylebench-firefox-fis-e10s: CyxgkIiwQVWY0SX7CK3fpw
-    test-windows10-64-shippable-qr/opt-raptor-sunspider-firefox-e10s: C8u00Gs8RZ270qjdtGoqfg
-    test-windows10-64-shippable-qr/opt-raptor-sunspider-firefox-fis-e10s: PWGyijwTTf26Ik8owdI39A
-    test-windows10-64-shippable-qr/opt-raptor-tp6-1-firefox-cold-e10s: aYSYH360Q7O2noNP0hMCkw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-1-firefox-e10s: HqwYD8tXT8iF4P98RFjbaA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-1-firefox-fis-e10s: JutPcnKHSDSyUZhWiEllQw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-10-firefox-cold-e10s: TlfJmr8vSTieSMxJetMCiA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-10-firefox-e10s: LOhve9i7QkeeSS4nIdD2dA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-10-firefox-fis-e10s: VI9QM1c7TIyMVqOmNWkqNQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-11-firefox-cold-e10s: VMFEWU6FQPm4b-IldtNmmw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-12-firefox-cold-e10s: JuTtAyrkR4-aLKQ-3OSquA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-13-firefox-cold-e10s: Ww4ltjDPQzWP5rsNPoHpfA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-14-firefox-cold-e10s: dxr_Lts9RAaozXtEx2tetw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-15-firefox-cold-e10s: LuyCOEugT1KpphWpWyly6g
-    test-windows10-64-shippable-qr/opt-raptor-tp6-16-firefox-cold-e10s: Cr_qBQjsSuKix3kT19kbTw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-17-firefox-cold-e10s: SzOGfGAbQiemUGpsDDkwqw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-18-firefox-cold-e10s: LA6BOTRIQx2ALs8WEHHu3w
-    test-windows10-64-shippable-qr/opt-raptor-tp6-19-firefox-cold-e10s: NZpT4U1gSMOj5xJW8rn_Dg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-2-firefox-cold-e10s: YFJnbygCShGiYfqOkUsMAw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-2-firefox-e10s: H01WN6RGQlSN4uGknzMWIA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-2-firefox-fis-e10s: acWpqZS8QOC_QSue2cVgYw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-20-firefox-cold-e10s: JRB5KA-uSkyBBhMW-GCWAg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-21-firefox-cold-e10s: ed3tfQq0TzCWmWdY-nQD5g
-    test-windows10-64-shippable-qr/opt-raptor-tp6-22-firefox-cold-e10s: KKqpNs3ISRqgpue5eionMQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-23-firefox-cold-e10s: CwZS_maXRCSVuMZMqilS3Q
-    test-windows10-64-shippable-qr/opt-raptor-tp6-24-firefox-cold-e10s: M59SkayzSKqSru5Oix2-DQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-25-firefox-cold-e10s: EoqK_WxWRumnN_OOR3cjjA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-26-firefox-cold-e10s: Sw0sp141R7ewGZgDg0sg3w
-    test-windows10-64-shippable-qr/opt-raptor-tp6-27-firefox-cold-e10s: VkTuGmhlSr-84-LPXosTFg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-28-firefox-cold-e10s: Rxs-1pPKTF2zg7Sfl8q1AA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-29-firefox-cold-e10s: MSzOviDPSDaIPLsrdGuIUg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-3-firefox-cold-e10s: MHsFhOwBTFqPPt6b__pFMA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-3-firefox-e10s: Lo0fbK0yTT2-IXfW2nNeUQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-3-firefox-fis-e10s: DZ1SMtVmQPS1NFn8VN1MVA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-30-firefox-cold-e10s: V2iLcbDMQf6gtxBRR2_Nuw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-4-firefox-cold-e10s: QE6S6C2ZR0u-FxA2NabZJQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-4-firefox-e10s: WIHdwTr3ThGyK30WAiTKlw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-4-firefox-fis-e10s: FiFwZ8o_RvOnyAzLIifb-Q
-    test-windows10-64-shippable-qr/opt-raptor-tp6-5-firefox-cold-e10s: XVhTIO9hS2S3HfCBB1gWPQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-5-firefox-e10s: LG586QSBRK6LGHVLOOrvPg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-5-firefox-fis-e10s: cWRn0M2gQby5qL5wSNEqMA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-6-firefox-cold-e10s: DmPvm9u0RNqds3GWw2qpCA
-    test-windows10-64-shippable-qr/opt-raptor-tp6-6-firefox-e10s: V0lAJzmjSJGfLsD9vp5P8w
-    test-windows10-64-shippable-qr/opt-raptor-tp6-6-firefox-fis-e10s: DQo03XwgSW6Rhe2VF18Qog
-    test-windows10-64-shippable-qr/opt-raptor-tp6-7-firefox-cold-e10s: HjsSath_Q9m8FfbWUC0-YQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-7-firefox-e10s: CCqNkujUTSaGw-eQVGqu6Q
-    test-windows10-64-shippable-qr/opt-raptor-tp6-7-firefox-fis-e10s: eHEbwreBSsG4hIaZRWNFcw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-8-firefox-cold-e10s: Lp_1sbo4REi2E_32LgOdjQ
-    test-windows10-64-shippable-qr/opt-raptor-tp6-8-firefox-e10s: D_y1-0aOSoqn3lbAJ2LUqw
-    test-windows10-64-shippable-qr/opt-raptor-tp6-8-firefox-fis-e10s: ZWazVekXS76MSEITE0emCg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-9-firefox-cold-e10s: f-txtiGPRxSjR7NUEHubpg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-9-firefox-e10s: CrEvRGvQSxWv5SwqYj_2ag
-    test-windows10-64-shippable-qr/opt-raptor-tp6-9-firefox-fis-e10s: GTzbCDenSL-wumUeEvKVGg
-    test-windows10-64-shippable-qr/opt-raptor-tp6-binast-1-firefox-e10s: UkervXjzRMa08L25Q3GP7Q
-    test-windows10-64-shippable-qr/opt-raptor-tp6-binast-1-firefox-fis-e10s: cMka0hRoQ5WPVltss68l9w
-    test-windows10-64-shippable-qr/opt-raptor-wasm-godot-firefox-e10s: IJSNtoxRSQKpMsaHwfV4dw
-    test-windows10-64-shippable-qr/opt-raptor-wasm-godot-firefox-fis-e10s: fMgNom5SQ_qF2e1ES2t-Qw
-    test-windows10-64-shippable-qr/opt-raptor-webaudio-firefox-e10s: SbX3dQH-TAuH7rYB_Ur4Ng
-    test-windows10-64-shippable-qr/opt-raptor-webaudio-firefox-fis-e10s: SyyjNoWIRB-vCEcqHxpZVQ
-    test-windows10-64-shippable-qr/opt-raptor-youtube-playback-firefox-e10s: eZMnDGhqQYmx4_1KZTaNTQ
-    test-windows10-64-shippable-qr/opt-raptor-youtube-playback-firefox-fis-e10s: JSZ5BYtSSgqwmV9AUj6CfA
+    test-windows10-64-shippable-qr/opt-raptor-ares6-datalus-e10s: FhEVRKtJRn6HUTftcKtnYQ
+    test-windows10-64-shippable-qr/opt-raptor-ares6-datalus-fis-e10s: W2BfphnnSiiBVDKftgoqUw
+    test-windows10-64-shippable-qr/opt-raptor-jetstream2-datalus-e10s: fiX1iDxYQxGUcWj7EaMOeg
+    test-windows10-64-shippable-qr/opt-raptor-jetstream2-datalus-fis-e10s: UylXNLj5QnWs7AP-e7yGUA
+    test-windows10-64-shippable-qr/opt-raptor-motionmark-animometer-datalus-e10s: ElOuReuzQiWEZJRUziHlIA
+    test-windows10-64-shippable-qr/opt-raptor-motionmark-animometer-datalus-fis-e10s: ZNMuu1q2QlmL_i4lHoTHxA
+    test-windows10-64-shippable-qr/opt-raptor-motionmark-htmlsuite-datalus-e10s: MqwcmYVNTtyncq_OaLMVKg
+    test-windows10-64-shippable-qr/opt-raptor-motionmark-htmlsuite-datalus-fis-e10s: U8Qd7KpkT4Kl07LKOSQR2w
+    test-windows10-64-shippable-qr/opt-raptor-speedometer-datalus-e10s: XtUxArMcQOmfCvZ283MVVQ
+    test-windows10-64-shippable-qr/opt-raptor-speedometer-datalus-fis-e10s: IyaA8RZLRWyIqYjcr_V-Yg
+    test-windows10-64-shippable-qr/opt-raptor-stylebench-datalus-e10s: dhG9swrPRoqu51NckXWrwA
+    test-windows10-64-shippable-qr/opt-raptor-stylebench-datalus-fis-e10s: CyxgkIiwQVWY0SX7CK3fpw
+    test-windows10-64-shippable-qr/opt-raptor-sunspider-datalus-e10s: C8u00Gs8RZ270qjdtGoqfg
+    test-windows10-64-shippable-qr/opt-raptor-sunspider-datalus-fis-e10s: PWGyijwTTf26Ik8owdI39A
+    test-windows10-64-shippable-qr/opt-raptor-tp6-1-datalus-cold-e10s: aYSYH360Q7O2noNP0hMCkw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-1-datalus-e10s: HqwYD8tXT8iF4P98RFjbaA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-1-datalus-fis-e10s: JutPcnKHSDSyUZhWiEllQw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-10-datalus-cold-e10s: TlfJmr8vSTieSMxJetMCiA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-10-datalus-e10s: LOhve9i7QkeeSS4nIdD2dA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-10-datalus-fis-e10s: VI9QM1c7TIyMVqOmNWkqNQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-11-datalus-cold-e10s: VMFEWU6FQPm4b-IldtNmmw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-12-datalus-cold-e10s: JuTtAyrkR4-aLKQ-3OSquA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-13-datalus-cold-e10s: Ww4ltjDPQzWP5rsNPoHpfA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-14-datalus-cold-e10s: dxr_Lts9RAaozXtEx2tetw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-15-datalus-cold-e10s: LuyCOEugT1KpphWpWyly6g
+    test-windows10-64-shippable-qr/opt-raptor-tp6-16-datalus-cold-e10s: Cr_qBQjsSuKix3kT19kbTw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-17-datalus-cold-e10s: SzOGfGAbQiemUGpsDDkwqw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-18-datalus-cold-e10s: LA6BOTRIQx2ALs8WEHHu3w
+    test-windows10-64-shippable-qr/opt-raptor-tp6-19-datalus-cold-e10s: NZpT4U1gSMOj5xJW8rn_Dg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-2-datalus-cold-e10s: YFJnbygCShGiYfqOkUsMAw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-2-datalus-e10s: H01WN6RGQlSN4uGknzMWIA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-2-datalus-fis-e10s: acWpqZS8QOC_QSue2cVgYw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-20-datalus-cold-e10s: JRB5KA-uSkyBBhMW-GCWAg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-21-datalus-cold-e10s: ed3tfQq0TzCWmWdY-nQD5g
+    test-windows10-64-shippable-qr/opt-raptor-tp6-22-datalus-cold-e10s: KKqpNs3ISRqgpue5eionMQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-23-datalus-cold-e10s: CwZS_maXRCSVuMZMqilS3Q
+    test-windows10-64-shippable-qr/opt-raptor-tp6-24-datalus-cold-e10s: M59SkayzSKqSru5Oix2-DQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-25-datalus-cold-e10s: EoqK_WxWRumnN_OOR3cjjA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-26-datalus-cold-e10s: Sw0sp141R7ewGZgDg0sg3w
+    test-windows10-64-shippable-qr/opt-raptor-tp6-27-datalus-cold-e10s: VkTuGmhlSr-84-LPXosTFg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-28-datalus-cold-e10s: Rxs-1pPKTF2zg7Sfl8q1AA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-29-datalus-cold-e10s: MSzOviDPSDaIPLsrdGuIUg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-3-datalus-cold-e10s: MHsFhOwBTFqPPt6b__pFMA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-3-datalus-e10s: Lo0fbK0yTT2-IXfW2nNeUQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-3-datalus-fis-e10s: DZ1SMtVmQPS1NFn8VN1MVA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-30-datalus-cold-e10s: V2iLcbDMQf6gtxBRR2_Nuw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-4-datalus-cold-e10s: QE6S6C2ZR0u-FxA2NabZJQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-4-datalus-e10s: WIHdwTr3ThGyK30WAiTKlw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-4-datalus-fis-e10s: FiFwZ8o_RvOnyAzLIifb-Q
+    test-windows10-64-shippable-qr/opt-raptor-tp6-5-datalus-cold-e10s: XVhTIO9hS2S3HfCBB1gWPQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-5-datalus-e10s: LG586QSBRK6LGHVLOOrvPg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-5-datalus-fis-e10s: cWRn0M2gQby5qL5wSNEqMA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-6-datalus-cold-e10s: DmPvm9u0RNqds3GWw2qpCA
+    test-windows10-64-shippable-qr/opt-raptor-tp6-6-datalus-e10s: V0lAJzmjSJGfLsD9vp5P8w
+    test-windows10-64-shippable-qr/opt-raptor-tp6-6-datalus-fis-e10s: DQo03XwgSW6Rhe2VF18Qog
+    test-windows10-64-shippable-qr/opt-raptor-tp6-7-datalus-cold-e10s: HjsSath_Q9m8FfbWUC0-YQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-7-datalus-e10s: CCqNkujUTSaGw-eQVGqu6Q
+    test-windows10-64-shippable-qr/opt-raptor-tp6-7-datalus-fis-e10s: eHEbwreBSsG4hIaZRWNFcw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-8-datalus-cold-e10s: Lp_1sbo4REi2E_32LgOdjQ
+    test-windows10-64-shippable-qr/opt-raptor-tp6-8-datalus-e10s: D_y1-0aOSoqn3lbAJ2LUqw
+    test-windows10-64-shippable-qr/opt-raptor-tp6-8-datalus-fis-e10s: ZWazVekXS76MSEITE0emCg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-9-datalus-cold-e10s: f-txtiGPRxSjR7NUEHubpg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-9-datalus-e10s: CrEvRGvQSxWv5SwqYj_2ag
+    test-windows10-64-shippable-qr/opt-raptor-tp6-9-datalus-fis-e10s: GTzbCDenSL-wumUeEvKVGg
+    test-windows10-64-shippable-qr/opt-raptor-tp6-binast-1-datalus-e10s: UkervXjzRMa08L25Q3GP7Q
+    test-windows10-64-shippable-qr/opt-raptor-tp6-binast-1-datalus-fis-e10s: cMka0hRoQ5WPVltss68l9w
+    test-windows10-64-shippable-qr/opt-raptor-wasm-godot-datalus-e10s: IJSNtoxRSQKpMsaHwfV4dw
+    test-windows10-64-shippable-qr/opt-raptor-wasm-godot-datalus-fis-e10s: fMgNom5SQ_qF2e1ES2t-Qw
+    test-windows10-64-shippable-qr/opt-raptor-webaudio-datalus-e10s: SbX3dQH-TAuH7rYB_Ur4Ng
+    test-windows10-64-shippable-qr/opt-raptor-webaudio-datalus-fis-e10s: SyyjNoWIRB-vCEcqHxpZVQ
+    test-windows10-64-shippable-qr/opt-raptor-youtube-playback-datalus-e10s: eZMnDGhqQYmx4_1KZTaNTQ
+    test-windows10-64-shippable-qr/opt-raptor-youtube-playback-datalus-fis-e10s: JSZ5BYtSSgqwmV9AUj6CfA
     test-windows10-64-shippable-qr/opt-reftest-e10s-1: fUcMn3EyRraVQ0aOTKztgA
     test-windows10-64-shippable-qr/opt-reftest-e10s-2: QqpwsyZrQ3q_YJ7mOeyjBQ
     test-windows10-64-shippable-qr/opt-talos-chrome-e10s: cAdYd1QxTsuGa1y_LJN2sQ
@@ -2969,14 +2969,14 @@ existing_tasks:
     test-windows10-64-shippable/opt-awsy-tp6-e10s: A9paOOf9QOmgjQux4iWoXA
     test-windows10-64-shippable/opt-browser-screenshots-e10s: e1AATKSBRSaCZydjnsti-A
     test-windows10-64-shippable/opt-browsertime-tp6-chrome-cold-amazon-e10s: CgSHBVG-SYiQ8ZH0KZQSNg
-    test-windows10-64-shippable/opt-browsertime-tp6-firefox-amazon-e10s: UySNl6a5SESOk4mPAyFdcg
-    test-windows10-64-shippable/opt-browsertime-tp6-firefox-cold-amazon-e10s: IwNvH3Y1RH2NAn7L2SBX3w
-    test-windows10-64-shippable/opt-browsertime-tp6-profiling-firefox-amazon-e10s: DJSkLMY-R1CELtio516ERA
-    test-windows10-64-shippable/opt-browsertime-tp6-profiling-firefox-cold-amazon-e10s: OHnsKmRPQCKLBPlRgITgjA
+    test-windows10-64-shippable/opt-browsertime-tp6-datalus-amazon-e10s: UySNl6a5SESOk4mPAyFdcg
+    test-windows10-64-shippable/opt-browsertime-tp6-datalus-cold-amazon-e10s: IwNvH3Y1RH2NAn7L2SBX3w
+    test-windows10-64-shippable/opt-browsertime-tp6-profiling-datalus-amazon-e10s: DJSkLMY-R1CELtio516ERA
+    test-windows10-64-shippable/opt-browsertime-tp6-profiling-datalus-cold-amazon-e10s: OHnsKmRPQCKLBPlRgITgjA
     test-windows10-64-shippable/opt-cppunit-1proc: M1FE9jUHTCaQZlluQvggdw
     test-windows10-64-shippable/opt-crashtest-e10s: TUMwnVJDRai-V-NpIXrMaw
-    test-windows10-64-shippable/opt-firefox-ui-functional-local-e10s: Agx9OAhISOS2NnXB7cB0qQ
-    test-windows10-64-shippable/opt-firefox-ui-functional-remote-e10s: D8YOjqZqTW2SiIT-mhzPrw
+    test-windows10-64-shippable/opt-datalus-ui-functional-local-e10s: Agx9OAhISOS2NnXB7cB0qQ
+    test-windows10-64-shippable/opt-datalus-ui-functional-remote-e10s: D8YOjqZqTW2SiIT-mhzPrw
     test-windows10-64-shippable/opt-jsreftest-e10s-1: f0-w5-sLRPS5503NtXec9A
     test-windows10-64-shippable/opt-jsreftest-e10s-2: CPHbjcukTR2JwLTgzlZE9w
     test-windows10-64-shippable/opt-marionette-e10s: UprRhY_FTX6Hr4Gkrs3XRA
@@ -3013,77 +3013,77 @@ existing_tasks:
     test-windows10-64-shippable/opt-mochitest-webgl2-ext-e10s-3: DoiJAsaKQQm1iPwcHPM9dw
     test-windows10-64-shippable/opt-mochitest-webgl2-ext-e10s-4: Qmajp6vHTrm3g3KHklIwiA
     test-windows10-64-shippable/opt-mochitest-webgpu-e10s: P9wBrASdSQOGKDpuag1YqQ
-    test-windows10-64-shippable/opt-raptor-ares6-firefox-e10s: L70O2h86TmeZD4G30rfw_Q
-    test-windows10-64-shippable/opt-raptor-ares6-firefox-profiling-e10s: NvOS5pZLQSSal4x-efcP5A
-    test-windows10-64-shippable/opt-raptor-jetstream2-firefox-e10s: cpf-22pWQqCmW0WRoJerlg
-    test-windows10-64-shippable/opt-raptor-jetstream2-firefox-profiling-e10s: fSegP60aQWeQXUlSyTpSWA
-    test-windows10-64-shippable/opt-raptor-motionmark-animometer-firefox-e10s: RiOVOq9bSNSAGnkKD63_4A
-    test-windows10-64-shippable/opt-raptor-motionmark-animometer-firefox-profiling-e10s: YNEb7ykVST-0sdGteo58Ig
-    test-windows10-64-shippable/opt-raptor-motionmark-htmlsuite-firefox-e10s: A2K3enRkS1etFUodGUkJ3Q
-    test-windows10-64-shippable/opt-raptor-motionmark-htmlsuite-firefox-profiling-e10s: C_Bt__ezSgCP8TBtRhZ0nA
-    test-windows10-64-shippable/opt-raptor-speedometer-firefox-e10s: F2lVcHktTDCcq-f3QV9Neg
-    test-windows10-64-shippable/opt-raptor-speedometer-firefox-profiling-e10s: aaHST-ggTO6_fuRftw9GCw
-    test-windows10-64-shippable/opt-raptor-stylebench-firefox-e10s: RItx6xnDR9a2RUdYodCmsg
-    test-windows10-64-shippable/opt-raptor-stylebench-firefox-profiling-e10s: YAp1Yj7CTzK2KuXZqBeplQ
-    test-windows10-64-shippable/opt-raptor-sunspider-firefox-e10s: TLv8NyaJSmSzGCj-11RnHQ
-    test-windows10-64-shippable/opt-raptor-sunspider-firefox-profiling-e10s: PZTlWx8TSyaAPn5QBF0PWg
-    test-windows10-64-shippable/opt-raptor-tp6-1-firefox-cold-e10s: Vj3Dp2B2TGSk58img_8_Hw
-    test-windows10-64-shippable/opt-raptor-tp6-1-firefox-e10s: Es8_u4WmQPmrqF06Pq9oEQ
-    test-windows10-64-shippable/opt-raptor-tp6-1-firefox-profiling-e10s: aL6Hwrz6S5iMOYMemPcfrQ
-    test-windows10-64-shippable/opt-raptor-tp6-10-firefox-cold-e10s: Lb63H9quRSOeOwZaxBpJmw
-    test-windows10-64-shippable/opt-raptor-tp6-10-firefox-e10s: AkrcMgosTWeqPv4Iy73AHg
-    test-windows10-64-shippable/opt-raptor-tp6-10-firefox-profiling-e10s: aqmgJoqNRZm6PPQD694FfA
-    test-windows10-64-shippable/opt-raptor-tp6-11-firefox-cold-e10s: Y6Q-Rqm9TPyZKoZcoKQ3pw
-    test-windows10-64-shippable/opt-raptor-tp6-12-firefox-cold-e10s: MiDXlKAbQc-4KVMJuNdKhw
-    test-windows10-64-shippable/opt-raptor-tp6-13-firefox-cold-e10s: E7o9-ejoTxeXWuh0Wwz9RQ
-    test-windows10-64-shippable/opt-raptor-tp6-14-firefox-cold-e10s: Q49ALU2ASFe-YfES0dJXJw
-    test-windows10-64-shippable/opt-raptor-tp6-15-firefox-cold-e10s: PI6hc0GCS0ymqWeOZUerxQ
-    test-windows10-64-shippable/opt-raptor-tp6-16-firefox-cold-e10s: MhiNg4hzT423ZiHjrKWJpw
-    test-windows10-64-shippable/opt-raptor-tp6-17-firefox-cold-e10s: RAL-e-H6Smue-U-4vXZpxw
-    test-windows10-64-shippable/opt-raptor-tp6-18-firefox-cold-e10s: EGdFwwQGRsSMsSANpymMgg
-    test-windows10-64-shippable/opt-raptor-tp6-19-firefox-cold-e10s: IVTnj3rbQqWcGMF0vx6UNA
-    test-windows10-64-shippable/opt-raptor-tp6-2-firefox-cold-e10s: JsmwV_GWSg27enm85HgVDg
-    test-windows10-64-shippable/opt-raptor-tp6-2-firefox-e10s: K3cq1zaIQ2S7Yrdvm6toQg
-    test-windows10-64-shippable/opt-raptor-tp6-2-firefox-profiling-e10s: HURBH6rmR76V9c7ztGjbLw
-    test-windows10-64-shippable/opt-raptor-tp6-20-firefox-cold-e10s: LmseXB8MQ-iDXUZRGTbNQw
-    test-windows10-64-shippable/opt-raptor-tp6-21-firefox-cold-e10s: L5mZo9WeTCydhMCibnNkvg
-    test-windows10-64-shippable/opt-raptor-tp6-22-firefox-cold-e10s: HrbnpZjxSfSXJTLXDo8Y0Q
-    test-windows10-64-shippable/opt-raptor-tp6-23-firefox-cold-e10s: YDqnNthoQyeQy6wAZL_YeA
-    test-windows10-64-shippable/opt-raptor-tp6-24-firefox-cold-e10s: aaMBIZH7QpuZSh9UU21R1g
-    test-windows10-64-shippable/opt-raptor-tp6-25-firefox-cold-e10s: ZvODqIkCT5SRjtSKBZdp2g
-    test-windows10-64-shippable/opt-raptor-tp6-26-firefox-cold-e10s: OVrflOipSKWesuVzGUQ97w
-    test-windows10-64-shippable/opt-raptor-tp6-27-firefox-cold-e10s: cWLAn7xiRPO3FTvOdgjD4A
-    test-windows10-64-shippable/opt-raptor-tp6-28-firefox-cold-e10s: ejjmY00WRJ2q1L8AN3TMmQ
-    test-windows10-64-shippable/opt-raptor-tp6-29-firefox-cold-e10s: aaBFv-DDRFqlLBU2IYmJdg
-    test-windows10-64-shippable/opt-raptor-tp6-3-firefox-cold-e10s: CQdGqK_pT5-0KOcjs3xAXg
-    test-windows10-64-shippable/opt-raptor-tp6-3-firefox-e10s: BOp02Rj7S0O3M0nR1YQrLQ
-    test-windows10-64-shippable/opt-raptor-tp6-3-firefox-profiling-e10s: YneV4veoRaGa15Ok8-U07w
-    test-windows10-64-shippable/opt-raptor-tp6-30-firefox-cold-e10s: Y1mJMelESyWc31C5rnTAEA
-    test-windows10-64-shippable/opt-raptor-tp6-4-firefox-cold-e10s: YUCoNMQbRJucufggCXuyWA
-    test-windows10-64-shippable/opt-raptor-tp6-4-firefox-e10s: f680hxAWQP62Ah-zQ7ejzw
-    test-windows10-64-shippable/opt-raptor-tp6-4-firefox-profiling-e10s: DSF13-ssS0eUS4-PZeg7UA
-    test-windows10-64-shippable/opt-raptor-tp6-5-firefox-cold-e10s: N52RHHSsTy2IBVHWMDDc3A
-    test-windows10-64-shippable/opt-raptor-tp6-5-firefox-e10s: ZA4qlHykQ4Gh95DFNApyjg
-    test-windows10-64-shippable/opt-raptor-tp6-5-firefox-profiling-e10s: SgnFK8gaRYW1WwfzJ3_F6A
-    test-windows10-64-shippable/opt-raptor-tp6-6-firefox-cold-e10s: VH1c51peTPae9feWLB1x2A
-    test-windows10-64-shippable/opt-raptor-tp6-6-firefox-e10s: RePzEQzXRByQoLzggLhUgA
-    test-windows10-64-shippable/opt-raptor-tp6-6-firefox-profiling-e10s: ZPNmGyfyRt6_cfrthyKt3A
-    test-windows10-64-shippable/opt-raptor-tp6-7-firefox-cold-e10s: QPt1VvdGRfmSzhrrXTm1xQ
-    test-windows10-64-shippable/opt-raptor-tp6-7-firefox-e10s: Wzw-RmmvQKuxJhevB3iVHA
-    test-windows10-64-shippable/opt-raptor-tp6-7-firefox-profiling-e10s: CDeItvQ_QEKR_tE6tJKG0Q
-    test-windows10-64-shippable/opt-raptor-tp6-8-firefox-cold-e10s: NBtAKKdEQPmihcEqIdrDoQ
-    test-windows10-64-shippable/opt-raptor-tp6-8-firefox-e10s: ASngoNXQTnqcgD5H8aqvSw
-    test-windows10-64-shippable/opt-raptor-tp6-8-firefox-profiling-e10s: KgteMG3sTNGYBpBsytH7mg
-    test-windows10-64-shippable/opt-raptor-tp6-9-firefox-cold-e10s: fg5HkgfmSn-bIICG5moODA
-    test-windows10-64-shippable/opt-raptor-tp6-9-firefox-e10s: Vg5bQIirRq2TKS-FYFJCHQ
-    test-windows10-64-shippable/opt-raptor-tp6-9-firefox-profiling-e10s: CPwWXxFMRdWoTnsH_1z69w
-    test-windows10-64-shippable/opt-raptor-tp6-binast-1-firefox-e10s: KVyjNNveTb-9XutNizhhEw
-    test-windows10-64-shippable/opt-raptor-wasm-godot-firefox-e10s: KKLD-M22Qv6fHg_BcB5n0w
-    test-windows10-64-shippable/opt-raptor-wasm-godot-firefox-profiling-e10s: eLjL9LrDTBmfq00NM39o4w
-    test-windows10-64-shippable/opt-raptor-webaudio-firefox-e10s: TiYFD7tXTjWmjEJT0Yt_jw
-    test-windows10-64-shippable/opt-raptor-webaudio-firefox-profiling-e10s: XRPUfz5gTES2DkLTJEEGfA
-    test-windows10-64-shippable/opt-raptor-youtube-playback-firefox-e10s: OwuuZ5WoQRKTACl_KBQ-9g
-    test-windows10-64-shippable/opt-raptor-youtube-playback-firefox-profiling-e10s: W20FHgdHToiCftAC0J45Vw
+    test-windows10-64-shippable/opt-raptor-ares6-datalus-e10s: L70O2h86TmeZD4G30rfw_Q
+    test-windows10-64-shippable/opt-raptor-ares6-datalus-profiling-e10s: NvOS5pZLQSSal4x-efcP5A
+    test-windows10-64-shippable/opt-raptor-jetstream2-datalus-e10s: cpf-22pWQqCmW0WRoJerlg
+    test-windows10-64-shippable/opt-raptor-jetstream2-datalus-profiling-e10s: fSegP60aQWeQXUlSyTpSWA
+    test-windows10-64-shippable/opt-raptor-motionmark-animometer-datalus-e10s: RiOVOq9bSNSAGnkKD63_4A
+    test-windows10-64-shippable/opt-raptor-motionmark-animometer-datalus-profiling-e10s: YNEb7ykVST-0sdGteo58Ig
+    test-windows10-64-shippable/opt-raptor-motionmark-htmlsuite-datalus-e10s: A2K3enRkS1etFUodGUkJ3Q
+    test-windows10-64-shippable/opt-raptor-motionmark-htmlsuite-datalus-profiling-e10s: C_Bt__ezSgCP8TBtRhZ0nA
+    test-windows10-64-shippable/opt-raptor-speedometer-datalus-e10s: F2lVcHktTDCcq-f3QV9Neg
+    test-windows10-64-shippable/opt-raptor-speedometer-datalus-profiling-e10s: aaHST-ggTO6_fuRftw9GCw
+    test-windows10-64-shippable/opt-raptor-stylebench-datalus-e10s: RItx6xnDR9a2RUdYodCmsg
+    test-windows10-64-shippable/opt-raptor-stylebench-datalus-profiling-e10s: YAp1Yj7CTzK2KuXZqBeplQ
+    test-windows10-64-shippable/opt-raptor-sunspider-datalus-e10s: TLv8NyaJSmSzGCj-11RnHQ
+    test-windows10-64-shippable/opt-raptor-sunspider-datalus-profiling-e10s: PZTlWx8TSyaAPn5QBF0PWg
+    test-windows10-64-shippable/opt-raptor-tp6-1-datalus-cold-e10s: Vj3Dp2B2TGSk58img_8_Hw
+    test-windows10-64-shippable/opt-raptor-tp6-1-datalus-e10s: Es8_u4WmQPmrqF06Pq9oEQ
+    test-windows10-64-shippable/opt-raptor-tp6-1-datalus-profiling-e10s: aL6Hwrz6S5iMOYMemPcfrQ
+    test-windows10-64-shippable/opt-raptor-tp6-10-datalus-cold-e10s: Lb63H9quRSOeOwZaxBpJmw
+    test-windows10-64-shippable/opt-raptor-tp6-10-datalus-e10s: AkrcMgosTWeqPv4Iy73AHg
+    test-windows10-64-shippable/opt-raptor-tp6-10-datalus-profiling-e10s: aqmgJoqNRZm6PPQD694FfA
+    test-windows10-64-shippable/opt-raptor-tp6-11-datalus-cold-e10s: Y6Q-Rqm9TPyZKoZcoKQ3pw
+    test-windows10-64-shippable/opt-raptor-tp6-12-datalus-cold-e10s: MiDXlKAbQc-4KVMJuNdKhw
+    test-windows10-64-shippable/opt-raptor-tp6-13-datalus-cold-e10s: E7o9-ejoTxeXWuh0Wwz9RQ
+    test-windows10-64-shippable/opt-raptor-tp6-14-datalus-cold-e10s: Q49ALU2ASFe-YfES0dJXJw
+    test-windows10-64-shippable/opt-raptor-tp6-15-datalus-cold-e10s: PI6hc0GCS0ymqWeOZUerxQ
+    test-windows10-64-shippable/opt-raptor-tp6-16-datalus-cold-e10s: MhiNg4hzT423ZiHjrKWJpw
+    test-windows10-64-shippable/opt-raptor-tp6-17-datalus-cold-e10s: RAL-e-H6Smue-U-4vXZpxw
+    test-windows10-64-shippable/opt-raptor-tp6-18-datalus-cold-e10s: EGdFwwQGRsSMsSANpymMgg
+    test-windows10-64-shippable/opt-raptor-tp6-19-datalus-cold-e10s: IVTnj3rbQqWcGMF0vx6UNA
+    test-windows10-64-shippable/opt-raptor-tp6-2-datalus-cold-e10s: JsmwV_GWSg27enm85HgVDg
+    test-windows10-64-shippable/opt-raptor-tp6-2-datalus-e10s: K3cq1zaIQ2S7Yrdvm6toQg
+    test-windows10-64-shippable/opt-raptor-tp6-2-datalus-profiling-e10s: HURBH6rmR76V9c7ztGjbLw
+    test-windows10-64-shippable/opt-raptor-tp6-20-datalus-cold-e10s: LmseXB8MQ-iDXUZRGTbNQw
+    test-windows10-64-shippable/opt-raptor-tp6-21-datalus-cold-e10s: L5mZo9WeTCydhMCibnNkvg
+    test-windows10-64-shippable/opt-raptor-tp6-22-datalus-cold-e10s: HrbnpZjxSfSXJTLXDo8Y0Q
+    test-windows10-64-shippable/opt-raptor-tp6-23-datalus-cold-e10s: YDqnNthoQyeQy6wAZL_YeA
+    test-windows10-64-shippable/opt-raptor-tp6-24-datalus-cold-e10s: aaMBIZH7QpuZSh9UU21R1g
+    test-windows10-64-shippable/opt-raptor-tp6-25-datalus-cold-e10s: ZvODqIkCT5SRjtSKBZdp2g
+    test-windows10-64-shippable/opt-raptor-tp6-26-datalus-cold-e10s: OVrflOipSKWesuVzGUQ97w
+    test-windows10-64-shippable/opt-raptor-tp6-27-datalus-cold-e10s: cWLAn7xiRPO3FTvOdgjD4A
+    test-windows10-64-shippable/opt-raptor-tp6-28-datalus-cold-e10s: ejjmY00WRJ2q1L8AN3TMmQ
+    test-windows10-64-shippable/opt-raptor-tp6-29-datalus-cold-e10s: aaBFv-DDRFqlLBU2IYmJdg
+    test-windows10-64-shippable/opt-raptor-tp6-3-datalus-cold-e10s: CQdGqK_pT5-0KOcjs3xAXg
+    test-windows10-64-shippable/opt-raptor-tp6-3-datalus-e10s: BOp02Rj7S0O3M0nR1YQrLQ
+    test-windows10-64-shippable/opt-raptor-tp6-3-datalus-profiling-e10s: YneV4veoRaGa15Ok8-U07w
+    test-windows10-64-shippable/opt-raptor-tp6-30-datalus-cold-e10s: Y1mJMelESyWc31C5rnTAEA
+    test-windows10-64-shippable/opt-raptor-tp6-4-datalus-cold-e10s: YUCoNMQbRJucufggCXuyWA
+    test-windows10-64-shippable/opt-raptor-tp6-4-datalus-e10s: f680hxAWQP62Ah-zQ7ejzw
+    test-windows10-64-shippable/opt-raptor-tp6-4-datalus-profiling-e10s: DSF13-ssS0eUS4-PZeg7UA
+    test-windows10-64-shippable/opt-raptor-tp6-5-datalus-cold-e10s: N52RHHSsTy2IBVHWMDDc3A
+    test-windows10-64-shippable/opt-raptor-tp6-5-datalus-e10s: ZA4qlHykQ4Gh95DFNApyjg
+    test-windows10-64-shippable/opt-raptor-tp6-5-datalus-profiling-e10s: SgnFK8gaRYW1WwfzJ3_F6A
+    test-windows10-64-shippable/opt-raptor-tp6-6-datalus-cold-e10s: VH1c51peTPae9feWLB1x2A
+    test-windows10-64-shippable/opt-raptor-tp6-6-datalus-e10s: RePzEQzXRByQoLzggLhUgA
+    test-windows10-64-shippable/opt-raptor-tp6-6-datalus-profiling-e10s: ZPNmGyfyRt6_cfrthyKt3A
+    test-windows10-64-shippable/opt-raptor-tp6-7-datalus-cold-e10s: QPt1VvdGRfmSzhrrXTm1xQ
+    test-windows10-64-shippable/opt-raptor-tp6-7-datalus-e10s: Wzw-RmmvQKuxJhevB3iVHA
+    test-windows10-64-shippable/opt-raptor-tp6-7-datalus-profiling-e10s: CDeItvQ_QEKR_tE6tJKG0Q
+    test-windows10-64-shippable/opt-raptor-tp6-8-datalus-cold-e10s: NBtAKKdEQPmihcEqIdrDoQ
+    test-windows10-64-shippable/opt-raptor-tp6-8-datalus-e10s: ASngoNXQTnqcgD5H8aqvSw
+    test-windows10-64-shippable/opt-raptor-tp6-8-datalus-profiling-e10s: KgteMG3sTNGYBpBsytH7mg
+    test-windows10-64-shippable/opt-raptor-tp6-9-datalus-cold-e10s: fg5HkgfmSn-bIICG5moODA
+    test-windows10-64-shippable/opt-raptor-tp6-9-datalus-e10s: Vg5bQIirRq2TKS-FYFJCHQ
+    test-windows10-64-shippable/opt-raptor-tp6-9-datalus-profiling-e10s: CPwWXxFMRdWoTnsH_1z69w
+    test-windows10-64-shippable/opt-raptor-tp6-binast-1-datalus-e10s: KVyjNNveTb-9XutNizhhEw
+    test-windows10-64-shippable/opt-raptor-wasm-godot-datalus-e10s: KKLD-M22Qv6fHg_BcB5n0w
+    test-windows10-64-shippable/opt-raptor-wasm-godot-datalus-profiling-e10s: eLjL9LrDTBmfq00NM39o4w
+    test-windows10-64-shippable/opt-raptor-webaudio-datalus-e10s: TiYFD7tXTjWmjEJT0Yt_jw
+    test-windows10-64-shippable/opt-raptor-webaudio-datalus-profiling-e10s: XRPUfz5gTES2DkLTJEEGfA
+    test-windows10-64-shippable/opt-raptor-youtube-playback-datalus-e10s: OwuuZ5WoQRKTACl_KBQ-9g
+    test-windows10-64-shippable/opt-raptor-youtube-playback-datalus-profiling-e10s: W20FHgdHToiCftAC0J45Vw
     test-windows10-64-shippable/opt-reftest-e10s-1: Wx51KDMITZqwRWwJekAvYQ
     test-windows10-64-shippable/opt-reftest-e10s-2: VE7OrnqwSZyW1jPGVNJBqA
     test-windows10-64-shippable/opt-talos-bcv-e10s: OrTd0EeXTeO2WU_RQMKUig
@@ -3146,8 +3146,8 @@ existing_tasks:
     test-windows10-64-shippable/opt-xpcshell-e10s-2: YXGJ6KaGR1mMu3CBsu0ycA
     test-windows10-64/debug-cppunit-1proc: fNDS_poQRVaERQa1mAr3UQ
     test-windows10-64/debug-crashtest-e10s: IR0c7Hl9TmuMcUSpxSQ3Jg
-    test-windows10-64/debug-firefox-ui-functional-local-e10s: A5MN1k_8QPiU96Tlk_S-Iw
-    test-windows10-64/debug-firefox-ui-functional-remote-e10s: NLJMdJRfSfOnCaZK8ayjsQ
+    test-windows10-64/debug-datalus-ui-functional-local-e10s: A5MN1k_8QPiU96Tlk_S-Iw
+    test-windows10-64/debug-datalus-ui-functional-remote-e10s: NLJMdJRfSfOnCaZK8ayjsQ
     test-windows10-64/debug-gtest-1proc: J0DbR21DRBCUdAHZr9jLrQ
     test-windows10-64/debug-jsreftest-e10s-1: cSZEUn7MSaSrEIYbceOa6A
     test-windows10-64/debug-jsreftest-e10s-2: eQUD5FDcSAGJF-IKpvoN0A
@@ -3227,8 +3227,8 @@ existing_tasks:
     test-windows10-64/opt-browser-screenshots-e10s: DmnU2Vv9Toe-X3gAkvxNrw
     test-windows10-64/opt-cppunit-1proc: Iid9j5ZLQ9GEg097Jk85MQ
     test-windows10-64/opt-crashtest-e10s: R2fXSFd_RpqBlAC7BUIEwg
-    test-windows10-64/opt-firefox-ui-functional-local-e10s: L-cHrnlbT7KknVoOlskxkw
-    test-windows10-64/opt-firefox-ui-functional-remote-e10s: LL3PzqLYQQaOusevEsHuKg
+    test-windows10-64/opt-datalus-ui-functional-local-e10s: L-cHrnlbT7KknVoOlskxkw
+    test-windows10-64/opt-datalus-ui-functional-remote-e10s: LL3PzqLYQQaOusevEsHuKg
     test-windows10-64/opt-gtest-1proc: BVxqFMxYS4ulGRPGj9G9HQ
     test-windows10-64/opt-jsreftest-e10s-1: G4rIbxexR0W-C23cuKSXUQ
     test-windows10-64/opt-jsreftest-e10s-2: BmMSDsTVTiOoBtNuBdpmvw
@@ -3292,57 +3292,57 @@ existing_tasks:
     test-windows10-64/opt-mochitest-webgl2-ext-fis-e10s-4: agbsd---QlKMVPRtUrGPog
     test-windows10-64/opt-mochitest-webgpu-e10s: W7luRffpSI-aA9rzuF3cIQ
     test-windows10-64/opt-mochitest-webgpu-fis-e10s: BXoAh9FvQ229OQbJmbAnVQ
-    test-windows10-64/opt-raptor-ares6-firefox-e10s: LRb6M51oQAqczTmIIsT-Eg
-    test-windows10-64/opt-raptor-jetstream2-firefox-e10s: bP6J-bAiRQW5bHgpRcYbHg
-    test-windows10-64/opt-raptor-motionmark-animometer-firefox-e10s: GDIxdSeqQiWe9pEaFlxh3g
-    test-windows10-64/opt-raptor-motionmark-htmlsuite-firefox-e10s: JpWcd5udTGWvfP0eQZ_T2g
-    test-windows10-64/opt-raptor-speedometer-firefox-e10s: DVoTh0CkRwiVb9oxNC7oVw
-    test-windows10-64/opt-raptor-stylebench-firefox-e10s: SAcgZ0a7SmO4I03JrH82aQ
-    test-windows10-64/opt-raptor-sunspider-firefox-e10s: e2FKcwvqQvWgIv3b0sKVVw
-    test-windows10-64/opt-raptor-tp6-1-firefox-cold-e10s: Or3QEM4dRBuoySCxpG0K7A
-    test-windows10-64/opt-raptor-tp6-1-firefox-e10s: HJ5Ge8_oT5u--b-lGBZV6g
-    test-windows10-64/opt-raptor-tp6-10-firefox-cold-e10s: aonqBQiuTgyjHh_eBiWs3A
-    test-windows10-64/opt-raptor-tp6-10-firefox-e10s: bKTAtGrLTbyRCcpqOSlp-Q
-    test-windows10-64/opt-raptor-tp6-11-firefox-cold-e10s: a3e5wxVaQgy3g6zsD_8acQ
-    test-windows10-64/opt-raptor-tp6-12-firefox-cold-e10s: GAuI1MV1Tp-XO2WmZvpMiQ
-    test-windows10-64/opt-raptor-tp6-13-firefox-cold-e10s: D1QRqks1RJq9d9ReCZYtbg
-    test-windows10-64/opt-raptor-tp6-14-firefox-cold-e10s: WT4WKnklQR6M6OTOymKENQ
-    test-windows10-64/opt-raptor-tp6-15-firefox-cold-e10s: ahEQfXPiTS2ykyqnbh0G-w
-    test-windows10-64/opt-raptor-tp6-16-firefox-cold-e10s: BIkVpjRjSIib5NTVCry1Ig
-    test-windows10-64/opt-raptor-tp6-17-firefox-cold-e10s: bHz_6EanSjewsK0_JsJUlg
-    test-windows10-64/opt-raptor-tp6-18-firefox-cold-e10s: fX85Rq60Tfq9MLeeAYd1iA
-    test-windows10-64/opt-raptor-tp6-19-firefox-cold-e10s: TuhoWPk_QLmUt5-RY-VgvQ
-    test-windows10-64/opt-raptor-tp6-2-firefox-cold-e10s: O9hUgTwhQlKukTcpwCGvdw
-    test-windows10-64/opt-raptor-tp6-2-firefox-e10s: f1kPhf8iTRy63o0Nh8REMA
-    test-windows10-64/opt-raptor-tp6-20-firefox-cold-e10s: eIC9nXOtQjWUEhO-MAtUHg
-    test-windows10-64/opt-raptor-tp6-21-firefox-cold-e10s: C3zyuhUcStanxFHSFwlbDA
-    test-windows10-64/opt-raptor-tp6-22-firefox-cold-e10s: bsrybdwqR0Kr92J59QCzfQ
-    test-windows10-64/opt-raptor-tp6-23-firefox-cold-e10s: Q-P0vbOnT3moStRhkHhvmg
-    test-windows10-64/opt-raptor-tp6-24-firefox-cold-e10s: UcoM7G6nTJujxZFaI26BVQ
-    test-windows10-64/opt-raptor-tp6-25-firefox-cold-e10s: YLRzCGYVTuGvn8s99aoEqQ
-    test-windows10-64/opt-raptor-tp6-26-firefox-cold-e10s: UF_sEIV3Q8CwAi17FD7iFg
-    test-windows10-64/opt-raptor-tp6-27-firefox-cold-e10s: NhS8hcKmQ1yfk145fXTULg
-    test-windows10-64/opt-raptor-tp6-28-firefox-cold-e10s: e-xV8wtcTT2K06VVBsTxbA
-    test-windows10-64/opt-raptor-tp6-29-firefox-cold-e10s: GQ5k2GV4SW6ayVWgtyM0ZA
-    test-windows10-64/opt-raptor-tp6-3-firefox-cold-e10s: YGTUyjx7SfGvpP5t5CRSlA
-    test-windows10-64/opt-raptor-tp6-3-firefox-e10s: QSXi7txWSEiz04sBAody-A
-    test-windows10-64/opt-raptor-tp6-30-firefox-cold-e10s: I93aWq8zSWa7roipvVjFuQ
-    test-windows10-64/opt-raptor-tp6-4-firefox-cold-e10s: JrHsTnBrSBmYGU7S9_buyw
-    test-windows10-64/opt-raptor-tp6-4-firefox-e10s: KEOa7nVNQP65dbM5C43XjA
-    test-windows10-64/opt-raptor-tp6-5-firefox-cold-e10s: GA7qM_8aRnC1Lbylgxt0jQ
-    test-windows10-64/opt-raptor-tp6-5-firefox-e10s: WSEek3s0Quijah7vaDjUOA
-    test-windows10-64/opt-raptor-tp6-6-firefox-cold-e10s: fn5qvaiGSYmPQyXvbgxosg
-    test-windows10-64/opt-raptor-tp6-6-firefox-e10s: aoHvOX4zR6KMOQCD_vTA3A
-    test-windows10-64/opt-raptor-tp6-7-firefox-cold-e10s: Cx5_bYzqTsmzLSg4YhSawA
-    test-windows10-64/opt-raptor-tp6-7-firefox-e10s: DCl3ggKQRVixdEexmmru5g
-    test-windows10-64/opt-raptor-tp6-8-firefox-cold-e10s: dTE80IN7Qd-XEwcHLNsgxg
-    test-windows10-64/opt-raptor-tp6-8-firefox-e10s: ek8pyRhWTJGBc3VOdBaBEw
-    test-windows10-64/opt-raptor-tp6-9-firefox-cold-e10s: XIMk--uMSS2nvqLzCMFAig
-    test-windows10-64/opt-raptor-tp6-9-firefox-e10s: b-5wN8JKQSaWD2TpRqt7cA
-    test-windows10-64/opt-raptor-tp6-binast-1-firefox-e10s: LPe8t5F8Szem4_Sw9ZvVWA
-    test-windows10-64/opt-raptor-wasm-godot-firefox-e10s: PylX0vjuTuGNPCeMOVnIJQ
-    test-windows10-64/opt-raptor-webaudio-firefox-e10s: KO0XGSKDTI2zOfL1H0lCSg
-    test-windows10-64/opt-raptor-youtube-playback-firefox-e10s: ARIBF7uESjWfpYrl8VFWZw
+    test-windows10-64/opt-raptor-ares6-datalus-e10s: LRb6M51oQAqczTmIIsT-Eg
+    test-windows10-64/opt-raptor-jetstream2-datalus-e10s: bP6J-bAiRQW5bHgpRcYbHg
+    test-windows10-64/opt-raptor-motionmark-animometer-datalus-e10s: GDIxdSeqQiWe9pEaFlxh3g
+    test-windows10-64/opt-raptor-motionmark-htmlsuite-datalus-e10s: JpWcd5udTGWvfP0eQZ_T2g
+    test-windows10-64/opt-raptor-speedometer-datalus-e10s: DVoTh0CkRwiVb9oxNC7oVw
+    test-windows10-64/opt-raptor-stylebench-datalus-e10s: SAcgZ0a7SmO4I03JrH82aQ
+    test-windows10-64/opt-raptor-sunspider-datalus-e10s: e2FKcwvqQvWgIv3b0sKVVw
+    test-windows10-64/opt-raptor-tp6-1-datalus-cold-e10s: Or3QEM4dRBuoySCxpG0K7A
+    test-windows10-64/opt-raptor-tp6-1-datalus-e10s: HJ5Ge8_oT5u--b-lGBZV6g
+    test-windows10-64/opt-raptor-tp6-10-datalus-cold-e10s: aonqBQiuTgyjHh_eBiWs3A
+    test-windows10-64/opt-raptor-tp6-10-datalus-e10s: bKTAtGrLTbyRCcpqOSlp-Q
+    test-windows10-64/opt-raptor-tp6-11-datalus-cold-e10s: a3e5wxVaQgy3g6zsD_8acQ
+    test-windows10-64/opt-raptor-tp6-12-datalus-cold-e10s: GAuI1MV1Tp-XO2WmZvpMiQ
+    test-windows10-64/opt-raptor-tp6-13-datalus-cold-e10s: D1QRqks1RJq9d9ReCZYtbg
+    test-windows10-64/opt-raptor-tp6-14-datalus-cold-e10s: WT4WKnklQR6M6OTOymKENQ
+    test-windows10-64/opt-raptor-tp6-15-datalus-cold-e10s: ahEQfXPiTS2ykyqnbh0G-w
+    test-windows10-64/opt-raptor-tp6-16-datalus-cold-e10s: BIkVpjRjSIib5NTVCry1Ig
+    test-windows10-64/opt-raptor-tp6-17-datalus-cold-e10s: bHz_6EanSjewsK0_JsJUlg
+    test-windows10-64/opt-raptor-tp6-18-datalus-cold-e10s: fX85Rq60Tfq9MLeeAYd1iA
+    test-windows10-64/opt-raptor-tp6-19-datalus-cold-e10s: TuhoWPk_QLmUt5-RY-VgvQ
+    test-windows10-64/opt-raptor-tp6-2-datalus-cold-e10s: O9hUgTwhQlKukTcpwCGvdw
+    test-windows10-64/opt-raptor-tp6-2-datalus-e10s: f1kPhf8iTRy63o0Nh8REMA
+    test-windows10-64/opt-raptor-tp6-20-datalus-cold-e10s: eIC9nXOtQjWUEhO-MAtUHg
+    test-windows10-64/opt-raptor-tp6-21-datalus-cold-e10s: C3zyuhUcStanxFHSFwlbDA
+    test-windows10-64/opt-raptor-tp6-22-datalus-cold-e10s: bsrybdwqR0Kr92J59QCzfQ
+    test-windows10-64/opt-raptor-tp6-23-datalus-cold-e10s: Q-P0vbOnT3moStRhkHhvmg
+    test-windows10-64/opt-raptor-tp6-24-datalus-cold-e10s: UcoM7G6nTJujxZFaI26BVQ
+    test-windows10-64/opt-raptor-tp6-25-datalus-cold-e10s: YLRzCGYVTuGvn8s99aoEqQ
+    test-windows10-64/opt-raptor-tp6-26-datalus-cold-e10s: UF_sEIV3Q8CwAi17FD7iFg
+    test-windows10-64/opt-raptor-tp6-27-datalus-cold-e10s: NhS8hcKmQ1yfk145fXTULg
+    test-windows10-64/opt-raptor-tp6-28-datalus-cold-e10s: e-xV8wtcTT2K06VVBsTxbA
+    test-windows10-64/opt-raptor-tp6-29-datalus-cold-e10s: GQ5k2GV4SW6ayVWgtyM0ZA
+    test-windows10-64/opt-raptor-tp6-3-datalus-cold-e10s: YGTUyjx7SfGvpP5t5CRSlA
+    test-windows10-64/opt-raptor-tp6-3-datalus-e10s: QSXi7txWSEiz04sBAody-A
+    test-windows10-64/opt-raptor-tp6-30-datalus-cold-e10s: I93aWq8zSWa7roipvVjFuQ
+    test-windows10-64/opt-raptor-tp6-4-datalus-cold-e10s: JrHsTnBrSBmYGU7S9_buyw
+    test-windows10-64/opt-raptor-tp6-4-datalus-e10s: KEOa7nVNQP65dbM5C43XjA
+    test-windows10-64/opt-raptor-tp6-5-datalus-cold-e10s: GA7qM_8aRnC1Lbylgxt0jQ
+    test-windows10-64/opt-raptor-tp6-5-datalus-e10s: WSEek3s0Quijah7vaDjUOA
+    test-windows10-64/opt-raptor-tp6-6-datalus-cold-e10s: fn5qvaiGSYmPQyXvbgxosg
+    test-windows10-64/opt-raptor-tp6-6-datalus-e10s: aoHvOX4zR6KMOQCD_vTA3A
+    test-windows10-64/opt-raptor-tp6-7-datalus-cold-e10s: Cx5_bYzqTsmzLSg4YhSawA
+    test-windows10-64/opt-raptor-tp6-7-datalus-e10s: DCl3ggKQRVixdEexmmru5g
+    test-windows10-64/opt-raptor-tp6-8-datalus-cold-e10s: dTE80IN7Qd-XEwcHLNsgxg
+    test-windows10-64/opt-raptor-tp6-8-datalus-e10s: ek8pyRhWTJGBc3VOdBaBEw
+    test-windows10-64/opt-raptor-tp6-9-datalus-cold-e10s: XIMk--uMSS2nvqLzCMFAig
+    test-windows10-64/opt-raptor-tp6-9-datalus-e10s: b-5wN8JKQSaWD2TpRqt7cA
+    test-windows10-64/opt-raptor-tp6-binast-1-datalus-e10s: LPe8t5F8Szem4_Sw9ZvVWA
+    test-windows10-64/opt-raptor-wasm-godot-datalus-e10s: PylX0vjuTuGNPCeMOVnIJQ
+    test-windows10-64/opt-raptor-webaudio-datalus-e10s: KO0XGSKDTI2zOfL1H0lCSg
+    test-windows10-64/opt-raptor-youtube-playback-datalus-e10s: ARIBF7uESjWfpYrl8VFWZw
     test-windows10-64/opt-reftest-e10s-1: KOtGsuDSSeOM5I9mL1a-PA
     test-windows10-64/opt-reftest-e10s-2: aM4I1eF0TB-7ouAhdKeJ3A
     test-windows10-64/opt-talos-bcv-e10s: Bbuoa1c9RT-jD6ocA9kgUg
@@ -3395,7 +3395,7 @@ existing_tasks:
     test-windows10-aarch64/opt-mochitest-media-e10s: LON30i8wRRuOokq0qep_TQ
     test-windows10-aarch64/opt-mochitest-media-spi-e10s: Xw_wKe0cRHaaDE1eOxTnJQ
     test-windows10-aarch64/opt-mochitest-remote-e10s: BBcBcHQHTyyJ6zX-kO1zOw
-    test-windows10-aarch64/opt-raptor-youtube-playback-firefox-e10s: FDpaPM2cSVyANI2frvoMpw
+    test-windows10-aarch64/opt-raptor-youtube-playback-datalus-e10s: FDpaPM2cSVyANI2frvoMpw
     test-windows10-aarch64/opt-reftest-e10s-1: bkNRVsg9S5W77322CGbmug
     test-windows10-aarch64/opt-reftest-e10s-2: ZhSN_EGWQp63NjC4hqBg2Q
     test-windows10-aarch64/opt-talos-sessionrestore-many-windows-e10s: SHp-2c2WT5edpmQfLZXF-g
@@ -3421,8 +3421,8 @@ existing_tasks:
     test-windows10-aarch64/opt-web-platform-tests-reftests-e10s-3: DVcx_s5mS920mqt1zZvTUQ
     test-windows10-aarch64/opt-web-platform-tests-reftests-e10s-4: Mo80i06_Sxi-Rx3rU6-fcw
     test-windows7-32-mingwclang/debug-cppunit-1proc: YI9JkoxbT-20e1WsfXz9NA
-    test-windows7-32-mingwclang/debug-firefox-ui-functional-local-e10s: BmiydPVmQZyDjKtPnatyHw
-    test-windows7-32-mingwclang/debug-firefox-ui-functional-remote-e10s: fE77pDT6TGGcer0ywji5IA
+    test-windows7-32-mingwclang/debug-datalus-ui-functional-local-e10s: BmiydPVmQZyDjKtPnatyHw
+    test-windows7-32-mingwclang/debug-datalus-ui-functional-remote-e10s: fE77pDT6TGGcer0ywji5IA
     test-windows7-32-mingwclang/debug-mochitest-a11y-1proc: RBmjdQs8S8igmFMtFR9hLQ
     test-windows7-32-mingwclang/debug-mochitest-gpu-e10s: O2q79d6PRDSQgEZeirxIeQ
     test-windows7-32-mingwclang/debug-mochitest-webgl1-core-e10s: bRg61oe9RgCFiukecAp3-g
@@ -3445,14 +3445,14 @@ existing_tasks:
     test-windows7-32-shippable/opt-awsy-tp6-e10s: eboInj41SYG692ND0HyDew
     test-windows7-32-shippable/opt-browser-screenshots-e10s: WHK_PrdrS_SqlAYMJ34xPA
     test-windows7-32-shippable/opt-browsertime-tp6-chrome-cold-amazon-e10s: INX4PGQFSEurTeFBJfjogA
-    test-windows7-32-shippable/opt-browsertime-tp6-firefox-amazon-e10s: En1RAnWUQgyLzHwr2Q6yZg
-    test-windows7-32-shippable/opt-browsertime-tp6-firefox-cold-amazon-e10s: VrIVbgiDSKeRS53tk5k-yw
-    test-windows7-32-shippable/opt-browsertime-tp6-profiling-firefox-amazon-e10s: ZJ8lixGzSR2hWRMqXGR0-Q
-    test-windows7-32-shippable/opt-browsertime-tp6-profiling-firefox-cold-amazon-e10s: cUBNVzSsQQGpm0BlYN69Mg
+    test-windows7-32-shippable/opt-browsertime-tp6-datalus-amazon-e10s: En1RAnWUQgyLzHwr2Q6yZg
+    test-windows7-32-shippable/opt-browsertime-tp6-datalus-cold-amazon-e10s: VrIVbgiDSKeRS53tk5k-yw
+    test-windows7-32-shippable/opt-browsertime-tp6-profiling-datalus-amazon-e10s: ZJ8lixGzSR2hWRMqXGR0-Q
+    test-windows7-32-shippable/opt-browsertime-tp6-profiling-datalus-cold-amazon-e10s: cUBNVzSsQQGpm0BlYN69Mg
     test-windows7-32-shippable/opt-cppunit-1proc: cQhaj_RlTrip03nXZKVROw
     test-windows7-32-shippable/opt-crashtest-e10s: MkUSfz5OQfCfuPntxQxYsg
-    test-windows7-32-shippable/opt-firefox-ui-functional-local-e10s: ZwdidMuzQqq9Yf_gAwt9nQ
-    test-windows7-32-shippable/opt-firefox-ui-functional-remote-e10s: PwFfjkeMRMW61nu1WYUh1w
+    test-windows7-32-shippable/opt-datalus-ui-functional-local-e10s: ZwdidMuzQqq9Yf_gAwt9nQ
+    test-windows7-32-shippable/opt-datalus-ui-functional-remote-e10s: PwFfjkeMRMW61nu1WYUh1w
     test-windows7-32-shippable/opt-jsreftest-e10s-1: SG1gxMGFR2ChYEQwg0QL6w
     test-windows7-32-shippable/opt-jsreftest-e10s-2: TjENsTZcRkCREsjJvrLw1w
     test-windows7-32-shippable/opt-marionette-e10s: VLvkvK30S2ylbrhnPnYIsg
@@ -3490,57 +3490,57 @@ existing_tasks:
     test-windows7-32-shippable/opt-mochitest-webgl2-ext-e10s-3: AcG6qrQrSZqYtNYhfJP9nA
     test-windows7-32-shippable/opt-mochitest-webgl2-ext-e10s-4: NAk_3oefTLWivBDdJwxp2A
     test-windows7-32-shippable/opt-mochitest-webgpu-e10s: HcCt45DRTQuzTcC1EgP-gA
-    test-windows7-32-shippable/opt-raptor-ares6-firefox-e10s: Zo0LDxWiQuCQe3vSzMCyxA
-    test-windows7-32-shippable/opt-raptor-jetstream2-firefox-e10s: MMnjv2UzRAadaqpMjXZ0uw
-    test-windows7-32-shippable/opt-raptor-motionmark-animometer-firefox-e10s: OXAnysNKS-mrjcl-wv67NQ
-    test-windows7-32-shippable/opt-raptor-motionmark-htmlsuite-firefox-e10s: WEWyMr0JR5Os30dLHjCiEw
-    test-windows7-32-shippable/opt-raptor-speedometer-firefox-e10s: V5Uz6Qv0S7GqT7Xb0dRNKQ
-    test-windows7-32-shippable/opt-raptor-stylebench-firefox-e10s: bpK9Oqs4TreV3eswkP6xbA
-    test-windows7-32-shippable/opt-raptor-sunspider-firefox-e10s: ZNvDGqsCRUGuip_nSl1T4w
-    test-windows7-32-shippable/opt-raptor-tp6-1-firefox-cold-e10s: BOB6nxeHRmywE0bDeClJWQ
-    test-windows7-32-shippable/opt-raptor-tp6-1-firefox-e10s: ZLmUmvbQTra4SzXqqIxU3g
-    test-windows7-32-shippable/opt-raptor-tp6-10-firefox-cold-e10s: erqKm04-SXC2OqTYIGzd1g
-    test-windows7-32-shippable/opt-raptor-tp6-10-firefox-e10s: dLtj-m1IR6Gj46g2d4V_9A
-    test-windows7-32-shippable/opt-raptor-tp6-11-firefox-cold-e10s: UL6JV0IbTPSo0Hfi5a-8sw
-    test-windows7-32-shippable/opt-raptor-tp6-12-firefox-cold-e10s: ZrVYcYtgTAyiGU4rVBAAZw
-    test-windows7-32-shippable/opt-raptor-tp6-13-firefox-cold-e10s: RUrmkSl5R-67BgYfVxnxLA
-    test-windows7-32-shippable/opt-raptor-tp6-14-firefox-cold-e10s: AP8-AtxlSDixQs9H8XbldQ
-    test-windows7-32-shippable/opt-raptor-tp6-15-firefox-cold-e10s: W8kUnZeYSU28Par1lPQoZA
-    test-windows7-32-shippable/opt-raptor-tp6-16-firefox-cold-e10s: Z7TTL6JOTSGJ7kaxBOTROw
-    test-windows7-32-shippable/opt-raptor-tp6-17-firefox-cold-e10s: Gctdbe45TPmpa5TevNLMcg
-    test-windows7-32-shippable/opt-raptor-tp6-18-firefox-cold-e10s: N-udlZdwTZKDVEHfdZWfJg
-    test-windows7-32-shippable/opt-raptor-tp6-19-firefox-cold-e10s: UO4Ju6JwQ2K3qDZ150QgVQ
-    test-windows7-32-shippable/opt-raptor-tp6-2-firefox-cold-e10s: eg7w9_QgTyiehDJLvKKwiQ
-    test-windows7-32-shippable/opt-raptor-tp6-2-firefox-e10s: TyUlojE3SgO_nTJrNkhT4Q
-    test-windows7-32-shippable/opt-raptor-tp6-20-firefox-cold-e10s: LR1mf09LTuO7LLodM9VV_w
-    test-windows7-32-shippable/opt-raptor-tp6-21-firefox-cold-e10s: ZzHggAVaSBqBlEWibMUPIA
-    test-windows7-32-shippable/opt-raptor-tp6-22-firefox-cold-e10s: YVTzrqtJSWeLqgFr0MJoYw
-    test-windows7-32-shippable/opt-raptor-tp6-23-firefox-cold-e10s: JDLiquc7Tv62ugfBeeRvvw
-    test-windows7-32-shippable/opt-raptor-tp6-24-firefox-cold-e10s: KfznUFY0TjCjyYWLTbCGRQ
-    test-windows7-32-shippable/opt-raptor-tp6-25-firefox-cold-e10s: DmDyoF-jR7itamtrkNiAnQ
-    test-windows7-32-shippable/opt-raptor-tp6-26-firefox-cold-e10s: GiPERflFTf-0XH2af5EYIg
-    test-windows7-32-shippable/opt-raptor-tp6-27-firefox-cold-e10s: ROWXUsebTZKOY2FBkJCq3g
-    test-windows7-32-shippable/opt-raptor-tp6-28-firefox-cold-e10s: AWnEEXplQzaUC0WABaXQVA
-    test-windows7-32-shippable/opt-raptor-tp6-29-firefox-cold-e10s: EvWX3lw0Tu2XNul3KZFGtg
-    test-windows7-32-shippable/opt-raptor-tp6-3-firefox-cold-e10s: JjiQuVDVSDqj7uRes02g-g
-    test-windows7-32-shippable/opt-raptor-tp6-3-firefox-e10s: DoV46UokQDKdmENY2DPHFA
-    test-windows7-32-shippable/opt-raptor-tp6-30-firefox-cold-e10s: MOSl3GCiTHGd5C1VibB_Qg
-    test-windows7-32-shippable/opt-raptor-tp6-4-firefox-cold-e10s: VVlt-mPwSHy_xkVIz0ACqQ
-    test-windows7-32-shippable/opt-raptor-tp6-4-firefox-e10s: cJQ88Zz0TbCgi2LM3faQpg
-    test-windows7-32-shippable/opt-raptor-tp6-5-firefox-cold-e10s: OYLb-uvETtuPBWhAThoDxg
-    test-windows7-32-shippable/opt-raptor-tp6-5-firefox-e10s: F2Gp7qmdT8y_FP5TXoGSLQ
-    test-windows7-32-shippable/opt-raptor-tp6-6-firefox-cold-e10s: d7HfZzuQTXSt1Bv-nyMKzQ
-    test-windows7-32-shippable/opt-raptor-tp6-6-firefox-e10s: FwfQoECjTHmrkjhJGV6YQw
-    test-windows7-32-shippable/opt-raptor-tp6-7-firefox-cold-e10s: P7559O48RKGcdmLCNaPBzw
-    test-windows7-32-shippable/opt-raptor-tp6-7-firefox-e10s: awZv0bDUTxy09SdEpev2QA
-    test-windows7-32-shippable/opt-raptor-tp6-8-firefox-cold-e10s: UBujl4K-SqymoCDfLcCuEA
-    test-windows7-32-shippable/opt-raptor-tp6-8-firefox-e10s: IFMfa4E-RAi2aVJ1_vslMQ
-    test-windows7-32-shippable/opt-raptor-tp6-9-firefox-cold-e10s: dvZzkx6uSACJB_XWd0TOXQ
-    test-windows7-32-shippable/opt-raptor-tp6-9-firefox-e10s: Qpm0tDKTTb2G29ELRAF0BQ
-    test-windows7-32-shippable/opt-raptor-tp6-binast-1-firefox-e10s: L2ix5G0oRsaWik2nSJagRw
-    test-windows7-32-shippable/opt-raptor-wasm-godot-firefox-e10s: aITVgOxIQaGbzuwT0gsrxg
-    test-windows7-32-shippable/opt-raptor-webaudio-firefox-e10s: VzckDIgvSH2vA0w9MI1Zwg
-    test-windows7-32-shippable/opt-raptor-youtube-playback-firefox-e10s: U_kvDIC0SgOmPu1i2dtmqQ
+    test-windows7-32-shippable/opt-raptor-ares6-datalus-e10s: Zo0LDxWiQuCQe3vSzMCyxA
+    test-windows7-32-shippable/opt-raptor-jetstream2-datalus-e10s: MMnjv2UzRAadaqpMjXZ0uw
+    test-windows7-32-shippable/opt-raptor-motionmark-animometer-datalus-e10s: OXAnysNKS-mrjcl-wv67NQ
+    test-windows7-32-shippable/opt-raptor-motionmark-htmlsuite-datalus-e10s: WEWyMr0JR5Os30dLHjCiEw
+    test-windows7-32-shippable/opt-raptor-speedometer-datalus-e10s: V5Uz6Qv0S7GqT7Xb0dRNKQ
+    test-windows7-32-shippable/opt-raptor-stylebench-datalus-e10s: bpK9Oqs4TreV3eswkP6xbA
+    test-windows7-32-shippable/opt-raptor-sunspider-datalus-e10s: ZNvDGqsCRUGuip_nSl1T4w
+    test-windows7-32-shippable/opt-raptor-tp6-1-datalus-cold-e10s: BOB6nxeHRmywE0bDeClJWQ
+    test-windows7-32-shippable/opt-raptor-tp6-1-datalus-e10s: ZLmUmvbQTra4SzXqqIxU3g
+    test-windows7-32-shippable/opt-raptor-tp6-10-datalus-cold-e10s: erqKm04-SXC2OqTYIGzd1g
+    test-windows7-32-shippable/opt-raptor-tp6-10-datalus-e10s: dLtj-m1IR6Gj46g2d4V_9A
+    test-windows7-32-shippable/opt-raptor-tp6-11-datalus-cold-e10s: UL6JV0IbTPSo0Hfi5a-8sw
+    test-windows7-32-shippable/opt-raptor-tp6-12-datalus-cold-e10s: ZrVYcYtgTAyiGU4rVBAAZw
+    test-windows7-32-shippable/opt-raptor-tp6-13-datalus-cold-e10s: RUrmkSl5R-67BgYfVxnxLA
+    test-windows7-32-shippable/opt-raptor-tp6-14-datalus-cold-e10s: AP8-AtxlSDixQs9H8XbldQ
+    test-windows7-32-shippable/opt-raptor-tp6-15-datalus-cold-e10s: W8kUnZeYSU28Par1lPQoZA
+    test-windows7-32-shippable/opt-raptor-tp6-16-datalus-cold-e10s: Z7TTL6JOTSGJ7kaxBOTROw
+    test-windows7-32-shippable/opt-raptor-tp6-17-datalus-cold-e10s: Gctdbe45TPmpa5TevNLMcg
+    test-windows7-32-shippable/opt-raptor-tp6-18-datalus-cold-e10s: N-udlZdwTZKDVEHfdZWfJg
+    test-windows7-32-shippable/opt-raptor-tp6-19-datalus-cold-e10s: UO4Ju6JwQ2K3qDZ150QgVQ
+    test-windows7-32-shippable/opt-raptor-tp6-2-datalus-cold-e10s: eg7w9_QgTyiehDJLvKKwiQ
+    test-windows7-32-shippable/opt-raptor-tp6-2-datalus-e10s: TyUlojE3SgO_nTJrNkhT4Q
+    test-windows7-32-shippable/opt-raptor-tp6-20-datalus-cold-e10s: LR1mf09LTuO7LLodM9VV_w
+    test-windows7-32-shippable/opt-raptor-tp6-21-datalus-cold-e10s: ZzHggAVaSBqBlEWibMUPIA
+    test-windows7-32-shippable/opt-raptor-tp6-22-datalus-cold-e10s: YVTzrqtJSWeLqgFr0MJoYw
+    test-windows7-32-shippable/opt-raptor-tp6-23-datalus-cold-e10s: JDLiquc7Tv62ugfBeeRvvw
+    test-windows7-32-shippable/opt-raptor-tp6-24-datalus-cold-e10s: KfznUFY0TjCjyYWLTbCGRQ
+    test-windows7-32-shippable/opt-raptor-tp6-25-datalus-cold-e10s: DmDyoF-jR7itamtrkNiAnQ
+    test-windows7-32-shippable/opt-raptor-tp6-26-datalus-cold-e10s: GiPERflFTf-0XH2af5EYIg
+    test-windows7-32-shippable/opt-raptor-tp6-27-datalus-cold-e10s: ROWXUsebTZKOY2FBkJCq3g
+    test-windows7-32-shippable/opt-raptor-tp6-28-datalus-cold-e10s: AWnEEXplQzaUC0WABaXQVA
+    test-windows7-32-shippable/opt-raptor-tp6-29-datalus-cold-e10s: EvWX3lw0Tu2XNul3KZFGtg
+    test-windows7-32-shippable/opt-raptor-tp6-3-datalus-cold-e10s: JjiQuVDVSDqj7uRes02g-g
+    test-windows7-32-shippable/opt-raptor-tp6-3-datalus-e10s: DoV46UokQDKdmENY2DPHFA
+    test-windows7-32-shippable/opt-raptor-tp6-30-datalus-cold-e10s: MOSl3GCiTHGd5C1VibB_Qg
+    test-windows7-32-shippable/opt-raptor-tp6-4-datalus-cold-e10s: VVlt-mPwSHy_xkVIz0ACqQ
+    test-windows7-32-shippable/opt-raptor-tp6-4-datalus-e10s: cJQ88Zz0TbCgi2LM3faQpg
+    test-windows7-32-shippable/opt-raptor-tp6-5-datalus-cold-e10s: OYLb-uvETtuPBWhAThoDxg
+    test-windows7-32-shippable/opt-raptor-tp6-5-datalus-e10s: F2Gp7qmdT8y_FP5TXoGSLQ
+    test-windows7-32-shippable/opt-raptor-tp6-6-datalus-cold-e10s: d7HfZzuQTXSt1Bv-nyMKzQ
+    test-windows7-32-shippable/opt-raptor-tp6-6-datalus-e10s: FwfQoECjTHmrkjhJGV6YQw
+    test-windows7-32-shippable/opt-raptor-tp6-7-datalus-cold-e10s: P7559O48RKGcdmLCNaPBzw
+    test-windows7-32-shippable/opt-raptor-tp6-7-datalus-e10s: awZv0bDUTxy09SdEpev2QA
+    test-windows7-32-shippable/opt-raptor-tp6-8-datalus-cold-e10s: UBujl4K-SqymoCDfLcCuEA
+    test-windows7-32-shippable/opt-raptor-tp6-8-datalus-e10s: IFMfa4E-RAi2aVJ1_vslMQ
+    test-windows7-32-shippable/opt-raptor-tp6-9-datalus-cold-e10s: dvZzkx6uSACJB_XWd0TOXQ
+    test-windows7-32-shippable/opt-raptor-tp6-9-datalus-e10s: Qpm0tDKTTb2G29ELRAF0BQ
+    test-windows7-32-shippable/opt-raptor-tp6-binast-1-datalus-e10s: L2ix5G0oRsaWik2nSJagRw
+    test-windows7-32-shippable/opt-raptor-wasm-godot-datalus-e10s: aITVgOxIQaGbzuwT0gsrxg
+    test-windows7-32-shippable/opt-raptor-webaudio-datalus-e10s: VzckDIgvSH2vA0w9MI1Zwg
+    test-windows7-32-shippable/opt-raptor-youtube-playback-datalus-e10s: U_kvDIC0SgOmPu1i2dtmqQ
     test-windows7-32-shippable/opt-reftest-e10s-1: TjhsPgZIRIKlID9sNpwOCg
     test-windows7-32-shippable/opt-reftest-e10s-2: EwpLAXbbTniAOOOKN8w5aw
     test-windows7-32-shippable/opt-reftest-gpu-e10s-1: KhhvA1DwQHyDdMsq_YKXKw
@@ -3592,8 +3592,8 @@ existing_tasks:
     test-windows7-32-shippable/opt-xpcshell-e10s-2: UbVEXFK0STWid53xG2a9IA
     test-windows7-32/debug-cppunit-1proc: NfhdFilPRSC7gUqpjkod5A
     test-windows7-32/debug-crashtest-e10s: I6YstPlVQbihORj5Bcy6pw
-    test-windows7-32/debug-firefox-ui-functional-local-e10s: eX4afg-SSKS-ruwg0XJRZQ
-    test-windows7-32/debug-firefox-ui-functional-remote-e10s: DNmbWGAeSOWKrWAwifasAQ
+    test-windows7-32/debug-datalus-ui-functional-local-e10s: eX4afg-SSKS-ruwg0XJRZQ
+    test-windows7-32/debug-datalus-ui-functional-remote-e10s: DNmbWGAeSOWKrWAwifasAQ
     test-windows7-32/debug-gtest-1proc: XXjU7DzeS6qZMLD4bjwC7Q
     test-windows7-32/debug-jsreftest-e10s-1: MYYwmR5rRZqUeS2xd2MrAQ
     test-windows7-32/debug-jsreftest-e10s-2: OOaQLFL2QdafA0NwCYzOng
@@ -3684,8 +3684,8 @@ existing_tasks:
     test-windows7-32/opt-browser-screenshots-e10s: Zkr9wzCJQXuau4goK0oliA
     test-windows7-32/opt-cppunit-1proc: Y5sS_dIqTTWg3px_2XmnLg
     test-windows7-32/opt-crashtest-e10s: XKTwq8a7RZmpi4B0C80dHw
-    test-windows7-32/opt-firefox-ui-functional-local-e10s: eUVURVMESmSUoEvf7b8TZg
-    test-windows7-32/opt-firefox-ui-functional-remote-e10s: cYhwpif3QeGL03zKZ3ayrQ
+    test-windows7-32/opt-datalus-ui-functional-local-e10s: eUVURVMESmSUoEvf7b8TZg
+    test-windows7-32/opt-datalus-ui-functional-remote-e10s: cYhwpif3QeGL03zKZ3ayrQ
     test-windows7-32/opt-gtest-1proc: A00Lb24hSnKvczfbYvLPgQ
     test-windows7-32/opt-jsreftest-e10s-1: c4RVF2QkT5KHVyWWmHJFKA
     test-windows7-32/opt-jsreftest-e10s-2: dR_mK9q8T9i1St_HbN1IKQ
@@ -3726,57 +3726,57 @@ existing_tasks:
     test-windows7-32/opt-mochitest-webgl2-ext-e10s-3: Hk-hzYPuRdO7qjuhvvT-yQ
     test-windows7-32/opt-mochitest-webgl2-ext-e10s-4: AnNYguk1QR6PJ-YngImL-A
     test-windows7-32/opt-mochitest-webgpu-e10s: XRLjtYyIQpmBVA8jdS_oaA
-    test-windows7-32/opt-raptor-ares6-firefox-e10s: NbYffUl9ToC_3q6RPa_-9A
-    test-windows7-32/opt-raptor-jetstream2-firefox-e10s: IScOubi6R8GSdloHiKDU5A
-    test-windows7-32/opt-raptor-motionmark-animometer-firefox-e10s: QuSqLdtEQfGygC5iaeyLsw
-    test-windows7-32/opt-raptor-motionmark-htmlsuite-firefox-e10s: RWR0CxqBRtSabj9qkpEg4g
-    test-windows7-32/opt-raptor-speedometer-firefox-e10s: Nes2ZUF1SG2g7or8LDOMWw
-    test-windows7-32/opt-raptor-stylebench-firefox-e10s: APjERCJJRtmvCPxw4wr2MA
-    test-windows7-32/opt-raptor-sunspider-firefox-e10s: fs0SP_y7TcGm8y05cGIXNA
-    test-windows7-32/opt-raptor-tp6-1-firefox-cold-e10s: QPaxI4L4SO-V5y1avH7t_Q
-    test-windows7-32/opt-raptor-tp6-1-firefox-e10s: EhSnrGi0RdyX8Pxwe0TuJg
-    test-windows7-32/opt-raptor-tp6-10-firefox-cold-e10s: IUnNi4IJQ2myrsxJdJ5u3Q
-    test-windows7-32/opt-raptor-tp6-10-firefox-e10s: ZA3oi16QSdeIq43j3QiD4A
-    test-windows7-32/opt-raptor-tp6-11-firefox-cold-e10s: ZO0yKrRVSkaoohHjebcZ8w
-    test-windows7-32/opt-raptor-tp6-12-firefox-cold-e10s: QdJtVldhTS2TM_l3_VaMwA
-    test-windows7-32/opt-raptor-tp6-13-firefox-cold-e10s: UN8uJttMQFmAYpesOF1xeA
-    test-windows7-32/opt-raptor-tp6-14-firefox-cold-e10s: X-UFrbAISge589AFS6zVzQ
-    test-windows7-32/opt-raptor-tp6-15-firefox-cold-e10s: JduXVHcUT-S-LZ8OAzlXow
-    test-windows7-32/opt-raptor-tp6-16-firefox-cold-e10s: CwGYYE91R-ySPzZlzIAGog
-    test-windows7-32/opt-raptor-tp6-17-firefox-cold-e10s: NZt_SqtPQ3iy9uqeZlwdiw
-    test-windows7-32/opt-raptor-tp6-18-firefox-cold-e10s: EJE9_avYRamex2wPjMkRiA
-    test-windows7-32/opt-raptor-tp6-19-firefox-cold-e10s: AFHw6lQ7R4yqkoxWXhbAXw
-    test-windows7-32/opt-raptor-tp6-2-firefox-cold-e10s: PP-0jwv0RkqaL97l953x7w
-    test-windows7-32/opt-raptor-tp6-2-firefox-e10s: RncgwVxdTLO_TbeOfN5OzA
-    test-windows7-32/opt-raptor-tp6-20-firefox-cold-e10s: cDllh5ilQXC0D5ZqrxB6Qg
-    test-windows7-32/opt-raptor-tp6-21-firefox-cold-e10s: BbKxUvavRyGm1BI7IQPFAA
-    test-windows7-32/opt-raptor-tp6-22-firefox-cold-e10s: fffMx4S4QaWVmdV3z16RNA
-    test-windows7-32/opt-raptor-tp6-23-firefox-cold-e10s: J5p7ap0ZSSq8UrZtxc3ZdQ
-    test-windows7-32/opt-raptor-tp6-24-firefox-cold-e10s: Xuw7xAYrSHGq7DBz2CJooQ
-    test-windows7-32/opt-raptor-tp6-25-firefox-cold-e10s: TUbMvX7nTcSEtJrVXyYnug
-    test-windows7-32/opt-raptor-tp6-26-firefox-cold-e10s: Pw1hvwMoQgG1qZGpq80zRA
-    test-windows7-32/opt-raptor-tp6-27-firefox-cold-e10s: ViHHdSk6SO2tkGPHKOnSlw
-    test-windows7-32/opt-raptor-tp6-28-firefox-cold-e10s: InIu0HxXTEWEnq3FL6c0yg
-    test-windows7-32/opt-raptor-tp6-29-firefox-cold-e10s: G9C2debgSHKqFCmf36E3_g
-    test-windows7-32/opt-raptor-tp6-3-firefox-cold-e10s: Adv-XfOuRty-mfAIE6lDtw
-    test-windows7-32/opt-raptor-tp6-3-firefox-e10s: Zil7uSuDQdyZeav33kH-Og
-    test-windows7-32/opt-raptor-tp6-30-firefox-cold-e10s: Og5_VNVtSAa3xnqRW8rCbA
-    test-windows7-32/opt-raptor-tp6-4-firefox-cold-e10s: L0GhhG1tTVisiRBNxydrwA
-    test-windows7-32/opt-raptor-tp6-4-firefox-e10s: LTsre7fcS-iydxnMkG-uWA
-    test-windows7-32/opt-raptor-tp6-5-firefox-cold-e10s: aBih6DUeQ7S35RG0Khxjbg
-    test-windows7-32/opt-raptor-tp6-5-firefox-e10s: f8GyuzcTQBarnZitIfIueQ
-    test-windows7-32/opt-raptor-tp6-6-firefox-cold-e10s: AekDXif7Q2C8tWXauFQqtw
-    test-windows7-32/opt-raptor-tp6-6-firefox-e10s: KuxX94voQpO8c-qkgQxcqw
-    test-windows7-32/opt-raptor-tp6-7-firefox-cold-e10s: CwKMeU2WSeGa8bkPhZoIvw
-    test-windows7-32/opt-raptor-tp6-7-firefox-e10s: Jpm_ec3bRzyzkk8yzCJS6Q
-    test-windows7-32/opt-raptor-tp6-8-firefox-cold-e10s: N8JiUXMaSCyTppUaqYWI1Q
-    test-windows7-32/opt-raptor-tp6-8-firefox-e10s: fNTckMTYTbeKyw4p7XvdZg
-    test-windows7-32/opt-raptor-tp6-9-firefox-cold-e10s: HjGVQz7bRBSU_cn0mbkWmA
-    test-windows7-32/opt-raptor-tp6-9-firefox-e10s: Bju_MGLIRDGSpiOvrwNV6w
-    test-windows7-32/opt-raptor-tp6-binast-1-firefox-e10s: f4xWb0ZwTdeqJj9gmEB2hw
-    test-windows7-32/opt-raptor-wasm-godot-firefox-e10s: Vpy12FmBQQCvVQr_jsPSZQ
-    test-windows7-32/opt-raptor-webaudio-firefox-e10s: ZJQcp17DSySk4ZuYJWeA3Q
-    test-windows7-32/opt-raptor-youtube-playback-firefox-e10s: KzdCA2g2TUCd434b9YIKoQ
+    test-windows7-32/opt-raptor-ares6-datalus-e10s: NbYffUl9ToC_3q6RPa_-9A
+    test-windows7-32/opt-raptor-jetstream2-datalus-e10s: IScOubi6R8GSdloHiKDU5A
+    test-windows7-32/opt-raptor-motionmark-animometer-datalus-e10s: QuSqLdtEQfGygC5iaeyLsw
+    test-windows7-32/opt-raptor-motionmark-htmlsuite-datalus-e10s: RWR0CxqBRtSabj9qkpEg4g
+    test-windows7-32/opt-raptor-speedometer-datalus-e10s: Nes2ZUF1SG2g7or8LDOMWw
+    test-windows7-32/opt-raptor-stylebench-datalus-e10s: APjERCJJRtmvCPxw4wr2MA
+    test-windows7-32/opt-raptor-sunspider-datalus-e10s: fs0SP_y7TcGm8y05cGIXNA
+    test-windows7-32/opt-raptor-tp6-1-datalus-cold-e10s: QPaxI4L4SO-V5y1avH7t_Q
+    test-windows7-32/opt-raptor-tp6-1-datalus-e10s: EhSnrGi0RdyX8Pxwe0TuJg
+    test-windows7-32/opt-raptor-tp6-10-datalus-cold-e10s: IUnNi4IJQ2myrsxJdJ5u3Q
+    test-windows7-32/opt-raptor-tp6-10-datalus-e10s: ZA3oi16QSdeIq43j3QiD4A
+    test-windows7-32/opt-raptor-tp6-11-datalus-cold-e10s: ZO0yKrRVSkaoohHjebcZ8w
+    test-windows7-32/opt-raptor-tp6-12-datalus-cold-e10s: QdJtVldhTS2TM_l3_VaMwA
+    test-windows7-32/opt-raptor-tp6-13-datalus-cold-e10s: UN8uJttMQFmAYpesOF1xeA
+    test-windows7-32/opt-raptor-tp6-14-datalus-cold-e10s: X-UFrbAISge589AFS6zVzQ
+    test-windows7-32/opt-raptor-tp6-15-datalus-cold-e10s: JduXVHcUT-S-LZ8OAzlXow
+    test-windows7-32/opt-raptor-tp6-16-datalus-cold-e10s: CwGYYE91R-ySPzZlzIAGog
+    test-windows7-32/opt-raptor-tp6-17-datalus-cold-e10s: NZt_SqtPQ3iy9uqeZlwdiw
+    test-windows7-32/opt-raptor-tp6-18-datalus-cold-e10s: EJE9_avYRamex2wPjMkRiA
+    test-windows7-32/opt-raptor-tp6-19-datalus-cold-e10s: AFHw6lQ7R4yqkoxWXhbAXw
+    test-windows7-32/opt-raptor-tp6-2-datalus-cold-e10s: PP-0jwv0RkqaL97l953x7w
+    test-windows7-32/opt-raptor-tp6-2-datalus-e10s: RncgwVxdTLO_TbeOfN5OzA
+    test-windows7-32/opt-raptor-tp6-20-datalus-cold-e10s: cDllh5ilQXC0D5ZqrxB6Qg
+    test-windows7-32/opt-raptor-tp6-21-datalus-cold-e10s: BbKxUvavRyGm1BI7IQPFAA
+    test-windows7-32/opt-raptor-tp6-22-datalus-cold-e10s: fffMx4S4QaWVmdV3z16RNA
+    test-windows7-32/opt-raptor-tp6-23-datalus-cold-e10s: J5p7ap0ZSSq8UrZtxc3ZdQ
+    test-windows7-32/opt-raptor-tp6-24-datalus-cold-e10s: Xuw7xAYrSHGq7DBz2CJooQ
+    test-windows7-32/opt-raptor-tp6-25-datalus-cold-e10s: TUbMvX7nTcSEtJrVXyYnug
+    test-windows7-32/opt-raptor-tp6-26-datalus-cold-e10s: Pw1hvwMoQgG1qZGpq80zRA
+    test-windows7-32/opt-raptor-tp6-27-datalus-cold-e10s: ViHHdSk6SO2tkGPHKOnSlw
+    test-windows7-32/opt-raptor-tp6-28-datalus-cold-e10s: InIu0HxXTEWEnq3FL6c0yg
+    test-windows7-32/opt-raptor-tp6-29-datalus-cold-e10s: G9C2debgSHKqFCmf36E3_g
+    test-windows7-32/opt-raptor-tp6-3-datalus-cold-e10s: Adv-XfOuRty-mfAIE6lDtw
+    test-windows7-32/opt-raptor-tp6-3-datalus-e10s: Zil7uSuDQdyZeav33kH-Og
+    test-windows7-32/opt-raptor-tp6-30-datalus-cold-e10s: Og5_VNVtSAa3xnqRW8rCbA
+    test-windows7-32/opt-raptor-tp6-4-datalus-cold-e10s: L0GhhG1tTVisiRBNxydrwA
+    test-windows7-32/opt-raptor-tp6-4-datalus-e10s: LTsre7fcS-iydxnMkG-uWA
+    test-windows7-32/opt-raptor-tp6-5-datalus-cold-e10s: aBih6DUeQ7S35RG0Khxjbg
+    test-windows7-32/opt-raptor-tp6-5-datalus-e10s: f8GyuzcTQBarnZitIfIueQ
+    test-windows7-32/opt-raptor-tp6-6-datalus-cold-e10s: AekDXif7Q2C8tWXauFQqtw
+    test-windows7-32/opt-raptor-tp6-6-datalus-e10s: KuxX94voQpO8c-qkgQxcqw
+    test-windows7-32/opt-raptor-tp6-7-datalus-cold-e10s: CwKMeU2WSeGa8bkPhZoIvw
+    test-windows7-32/opt-raptor-tp6-7-datalus-e10s: Jpm_ec3bRzyzkk8yzCJS6Q
+    test-windows7-32/opt-raptor-tp6-8-datalus-cold-e10s: N8JiUXMaSCyTppUaqYWI1Q
+    test-windows7-32/opt-raptor-tp6-8-datalus-e10s: fNTckMTYTbeKyw4p7XvdZg
+    test-windows7-32/opt-raptor-tp6-9-datalus-cold-e10s: HjGVQz7bRBSU_cn0mbkWmA
+    test-windows7-32/opt-raptor-tp6-9-datalus-e10s: Bju_MGLIRDGSpiOvrwNV6w
+    test-windows7-32/opt-raptor-tp6-binast-1-datalus-e10s: f4xWb0ZwTdeqJj9gmEB2hw
+    test-windows7-32/opt-raptor-wasm-godot-datalus-e10s: Vpy12FmBQQCvVQr_jsPSZQ
+    test-windows7-32/opt-raptor-webaudio-datalus-e10s: ZJQcp17DSySk4ZuYJWeA3Q
+    test-windows7-32/opt-raptor-youtube-playback-datalus-e10s: KzdCA2g2TUCd434b9YIKoQ
     test-windows7-32/opt-reftest-e10s-1: IN2kCQZuSReVf6gcWghpyQ
     test-windows7-32/opt-reftest-e10s-2: IyyHcYwdS9qIZIV36miO6w
     test-windows7-32/opt-reftest-gpu-e10s-1: DMT7hqpMSjmHup_Uv2bC5w

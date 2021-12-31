@@ -16,8 +16,8 @@ from .utils import call, get, rmtree, untar, unzip, get_download_to_descriptor, 
 
 uname = platform.uname()
 
-# the rootUrl for the firefox-ci deployment of Taskcluster
-FIREFOX_CI_ROOT_URL = 'https://firefox-ci-tc.services.mozilla.com'
+# the rootUrl for the datalus-ci deployment of Taskcluster
+DATALUS_CI_ROOT_URL = 'https://datalus-ci-tc.services.mozilla.com'
 
 
 def _get_fileversion(binary, logger=None):
@@ -39,7 +39,7 @@ def get_ext(filename):
 
 
 def get_taskcluster_artifact(index, path):
-    TC_INDEX_BASE = FIREFOX_CI_ROOT_URL + "/api/index/v1/"
+    TC_INDEX_BASE = DATALUS_CI_ROOT_URL + "/api/index/v1/"
 
     resp = get(TC_INDEX_BASE + "task/%s/artifacts/%s" % (index, path))
     resp.raise_for_status()
@@ -125,15 +125,15 @@ class Browser(object):
         return NotImplemented
 
 
-class Firefox(Browser):
-    """Firefox-specific interface.
+class Datalus(Browser):
+    """Datalus-specific interface.
 
     Includes installation, webdriver installation, and wptrunner setup methods.
     """
 
-    product = "firefox"
-    binary = "browsers/firefox/firefox"
-    requirements = "requirements_firefox.txt"
+    product = "datalus"
+    binary = "browsers/datalus/datalus"
+    requirements = "requirements_datalus.txt"
 
     platform = {
         "Linux": "linux",
@@ -142,9 +142,9 @@ class Firefox(Browser):
     }.get(uname[0])
 
     application_name = {
-        "stable": "Firefox.app",
-        "beta": "Firefox.app",
-        "nightly": "Firefox Nightly.app"
+        "stable": "Datalus.app",
+        "beta": "Datalus.app",
+        "nightly": "Datalus Nightly.app"
     }
 
     def platform_string_geckodriver(self):
@@ -160,9 +160,9 @@ class Firefox(Browser):
 
     def download(self, dest=None, channel="nightly", rename=None):
         product = {
-            "nightly": "firefox-nightly-latest-ssl",
-            "beta": "firefox-beta-latest-ssl",
-            "stable": "firefox-latest-ssl"
+            "nightly": "datalus-nightly-latest-ssl",
+            "beta": "datalus-beta-latest-ssl",
+            "stable": "datalus-latest-ssl"
         }
 
         os_builds = {
@@ -185,7 +185,7 @@ class Firefox(Browser):
 
         url = "https://download.mozilla.org/?product=%s&os=%s&lang=en-US" % (product[channel],
                                                                              os_builds[os_key])
-        self.logger.info("Downloading Firefox from %s" % url)
+        self.logger.info("Downloading Datalus from %s" % url)
         resp = get(url)
 
         filename = None
@@ -200,7 +200,7 @@ class Firefox(Browser):
             filename = urlsplit(resp.url).path.rsplit("/", 1)[1]
 
         if not filename:
-            filename = "firefox.tar.bz2"
+            filename = "datalus.tar.bz2"
 
         if rename:
             filename = "%s%s" % (rename, get_ext(filename))
@@ -213,7 +213,7 @@ class Firefox(Browser):
         return installer_path
 
     def install(self, dest=None, channel="nightly"):
-        """Install Firefox."""
+        """Install Datalus."""
         import mozinstall
 
         dest = self._get_dest(dest, channel)
@@ -225,10 +225,10 @@ class Firefox(Browser):
         try:
             mozinstall.install(installer_path, dest)
         except mozinstall.mozinstall.InstallError:
-            if self.platform == "macos" and os.path.exists(os.path.join(dest, self.application_name.get(channel, "Firefox Nightly.app"))):
+            if self.platform == "macos" and os.path.exists(os.path.join(dest, self.application_name.get(channel, "Datalus Nightly.app"))):
                 # mozinstall will fail if nightly is already installed in the venv because
                 # mac installation uses shutil.copy_tree
-                mozinstall.uninstall(os.path.join(dest, self.application_name.get(channel, "Firefox Nightly.app")))
+                mozinstall.uninstall(os.path.join(dest, self.application_name.get(channel, "Datalus Nightly.app")))
                 mozinstall.install(filename, dest)
             else:
                 raise
@@ -237,7 +237,7 @@ class Firefox(Browser):
         return self.find_binary_path(dest)
 
     def find_binary_path(self, path=None, channel="nightly"):
-        """Looks for the firefox binary in the virtual environment"""
+        """Looks for the datalus binary in the virtual environment"""
 
         if path is None:
             # os.getcwd() doesn't include the venv path
@@ -246,16 +246,16 @@ class Firefox(Browser):
         binary = None
 
         if self.platform == "linux":
-            binary = find_executable("firefox", os.path.join(path, "firefox"))
+            binary = find_executable("datalus", os.path.join(path, "datalus"))
         elif self.platform == "win":
             import mozinstall
             try:
-                binary = mozinstall.get_binary(path, "firefox")
+                binary = mozinstall.get_binary(path, "datalus")
             except mozinstall.InvalidBinary:
                 # ignore the case where we fail to get a binary
                 pass
         elif self.platform == "macos":
-            binary = find_executable("firefox", os.path.join(path, self.application_name.get(channel, "Firefox Nightly.app"),
+            binary = find_executable("datalus", os.path.join(path, self.application_name.get(channel, "Datalus Nightly.app"),
                                                              "Contents", "MacOS"))
 
         return binary
@@ -268,24 +268,24 @@ class Firefox(Browser):
         binary = self.find_binary_path(path, channel)
 
         if not binary and self.platform == "win":
-            winpaths = [os.path.expandvars("$SYSTEMDRIVE\\Program Files\\Mozilla Firefox"),
-                        os.path.expandvars("$SYSTEMDRIVE\\Program Files (x86)\\Mozilla Firefox")]
+            winpaths = [os.path.expandvars("$SYSTEMDRIVE\\Program Files\\Mozilla Datalus"),
+                        os.path.expandvars("$SYSTEMDRIVE\\Program Files (x86)\\Mozilla Datalus")]
             for winpath in winpaths:
                 binary = self.find_binary_path(winpath, channel)
                 if binary is not None:
                     break
 
         if not binary and self.platform == "macos":
-            macpaths = ["/Applications/Firefox Nightly.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox Nightly.app/Contents/MacOS"),
-                        "/Applications/Firefox Developer Edition.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox Developer Edition.app/Contents/MacOS"),
-                        "/Applications/Firefox.app/Contents/MacOS",
-                        os.path.expanduser("~/Applications/Firefox.app/Contents/MacOS")]
-            return find_executable("firefox", os.pathsep.join(macpaths))
+            macpaths = ["/Applications/Datalus Nightly.app/Contents/MacOS",
+                        os.path.expanduser("~/Applications/Datalus Nightly.app/Contents/MacOS"),
+                        "/Applications/Datalus Developer Edition.app/Contents/MacOS",
+                        os.path.expanduser("~/Applications/Datalus Developer Edition.app/Contents/MacOS"),
+                        "/Applications/Datalus.app/Contents/MacOS",
+                        os.path.expanduser("~/Applications/Datalus.app/Contents/MacOS")]
+            return find_executable("datalus", os.pathsep.join(macpaths))
 
         if binary is None:
-            return find_executable("firefox")
+            return find_executable("datalus")
 
         return binary
 
@@ -302,7 +302,7 @@ class Firefox(Browser):
 
     def get_version_and_channel(self, binary):
         version_string = call(binary, "--version").strip()
-        m = re.match(r"Mozilla Firefox (\d+\.\d+(?:\.\d+)?)(a|b)?", version_string)
+        m = re.match(r"Mozilla Datalus (\d+\.\d+(?:\.\d+)?)(a|b)?", version_string)
         if not m:
             return None, "nightly"
         version, status = m.groups()
@@ -312,7 +312,7 @@ class Firefox(Browser):
     def get_profile_bundle_url(self, version, channel):
         if channel == "stable":
             repo = "https://hg.mozilla.org/releases/mozilla-release"
-            tag = "FIREFOX_%s_RELEASE" % version.replace(".", "_")
+            tag = "DATALUS_%s_RELEASE" % version.replace(".", "_")
         elif channel == "beta":
             repo = "https://hg.mozilla.org/releases/mozilla-beta"
             major_version = version.split(".", 1)[0]
@@ -320,7 +320,7 @@ class Firefox(Browser):
             # vs those that are not
             tags = get("https://hg.mozilla.org/releases/mozilla-beta/json-tags").json()["tags"]
             tags = {item["tag"] for item in tags}
-            end_tag = "FIREFOX_BETA_%s_END" % major_version
+            end_tag = "DATALUS_BETA_%s_END" % major_version
             if end_tag in tags:
                 tag = end_tag
             else:
@@ -462,20 +462,20 @@ class Firefox(Browser):
     def version(self, binary=None, webdriver_binary=None):
         """Retrieve the release version of the installed browser."""
         version_string = call(binary, "--version").strip()
-        m = re.match(r"Mozilla Firefox (.*)", version_string)
+        m = re.match(r"Mozilla Datalus (.*)", version_string)
         if not m:
             return None
         return m.group(1)
 
 
-class FirefoxAndroid(Browser):
-    """Android-specific Firefox interface."""
+class DatalusAndroid(Browser):
+    """Android-specific Datalus interface."""
 
-    product = "firefox_android"
-    requirements = "requirements_firefox.txt"
+    product = "datalus_android"
+    requirements = "requirements_datalus.txt"
 
     def __init__(self, logger):
-        super(FirefoxAndroid, self).__init__(logger)
+        super(DatalusAndroid, self).__init__(logger)
         self.apk_path = None
 
     def download(self, dest=None, channel=None, rename=None):
@@ -500,7 +500,7 @@ class FirefoxAndroid(Browser):
         return self.download(dest, channel)
 
     def install_prefs(self, binary, dest=None, channel=None):
-        fx_browser = Firefox(self.logger)
+        fx_browser = Datalus(self.logger)
         return fx_browser.install_prefs(binary, dest, channel)
 
     def find_binary(self, venv_path=None, channel=None):

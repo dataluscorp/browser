@@ -12,7 +12,7 @@ export UPLOAD_PATH
 # Taskcluster friendly wrapper for running the profileserver
 ####
 
-PGO_RUNDIR=obj-firefox/dist
+PGO_RUNDIR=obj-datalus/dist
 export JARLOG_FILE="en-US.log"
 export LLVM_PROFDATA=$MOZ_FETCHES_DIR/clang/bin/llvm-profdata
 
@@ -32,11 +32,11 @@ if $NEED_XVFB; then
     start_xvfb '1024x768x24' 2
 fi
 
-# Move our fetched firefox into objdir/dist so the jarlog entries will match
+# Move our fetched datalus into objdir/dist so the jarlog entries will match
 # the paths when the final PGO stage packages the build.
 mkdir -p $PGO_RUNDIR
 mkdir -p $UPLOAD_PATH
-mv $MOZ_FETCHES_DIR/firefox $PGO_RUNDIR
-./mach python build/pgo/profileserver.py --binary $PGO_RUNDIR/firefox/firefox
+mv $MOZ_FETCHES_DIR/datalus $PGO_RUNDIR
+./mach python build/pgo/profileserver.py --binary $PGO_RUNDIR/datalus/datalus
 
 tar -acvf $UPLOAD_PATH/profdata.tar.xz merged.profdata en-US.log

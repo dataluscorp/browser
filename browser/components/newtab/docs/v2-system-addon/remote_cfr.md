@@ -1,5 +1,5 @@
 # Remote CFR Messages
-Starting in Firefox 68, CFR messages will be defined using [Remote Settings](https://remote-settings.readthedocs.io/en/latest/index.html). In this document, we'll cover how how to set up a dev environment.
+Starting in Datalus 68, CFR messages will be defined using [Remote Settings](https://remote-settings.readthedocs.io/en/latest/index.html). In this document, we'll cover how how to set up a dev environment.
 
 ## Using a dev server for Remote CFR
 

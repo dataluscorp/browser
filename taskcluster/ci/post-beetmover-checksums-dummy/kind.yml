@@ -15,12 +15,12 @@ kind-dependencies:
     - release-beetmover-signed-langpacks-checksums
 
 jobs:
-    firefox-promote:
+    datalus-promote:
         name: post-beetmover-checksums-dummy
         description: Dummy task to deal with max_dependencies
         run-on-projects: []
         shipping-phase: promote
-        shipping-product: firefox
+        shipping-product: datalus
         worker-type: succeed
         worker:
             implementation: succeed

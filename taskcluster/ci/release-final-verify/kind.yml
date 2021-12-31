@@ -26,12 +26,12 @@ job-defaults:
 
 
 jobs:
-    firefox:
+    datalus:
         description: final verify
         shipping-phase: push
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             kind: test
             symbol: Rel(FV)
             tier: 1

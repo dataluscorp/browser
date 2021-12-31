@@ -59,13 +59,13 @@ with Files("docs/**"):
     BUG_COMPONENT = ("Toolkit", "General")
 
 with Files("moz.*"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("toolkit.mozbuild"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("library/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("mozapps/installer/windows/**"):
     BUG_COMPONENT = ("Toolkit", "NSIS Installer")

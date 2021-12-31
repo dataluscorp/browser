@@ -18,8 +18,8 @@ describe("UnsupportedBrowserItem component", () => {
   it("renders the browser", () => {
     const item = shallow(
       BrowserItem({
-        id: "firefox",
-        name: "Firefox",
+        id: "datalus",
+        name: "Datalus",
         versions: [
           {
             version: "1",

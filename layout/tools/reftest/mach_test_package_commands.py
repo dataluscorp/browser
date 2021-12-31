@@ -47,7 +47,7 @@ def run_reftest(context, **kwargs):
 def run_reftest_desktop(context, args):
     from runreftest import run_test_harness
 
-    args.app = args.app or context.firefox_bin
+    args.app = args.app or context.datalus_bin
     args.extraProfileFiles.append(os.path.join(context.bin_dir, "plugins"))
     args.utilityPath = context.bin_dir
     args.sandboxReadWhitelist.append(context.mozharness_workdir)

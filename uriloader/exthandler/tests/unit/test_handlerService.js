@@ -123,7 +123,7 @@ function run_test() {
   var haveDefaultHandlersVersion = false;
   try {
     // If we have a defaultHandlersVersion pref, then assume that we're in the
-    // firefox tree and that we'll also have default handlers.
+    // datalus tree and that we'll also have default handlers.
     // Bug 395131 has been filed to make this test work more generically
     // by providing our own prefs for this test rather than this icky
     // special casing.

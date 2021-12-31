@@ -112,7 +112,7 @@ REPACK_CFG_QUERY = """query{
 #                             "dist_version=\"1.0\"\nlinux-i686=true\nlinux-x86_64=true\n" +
 #                             " locales=\"ach af de en-US\"\nmac=true\nwin32=true\nwin64=true\n" +
 #                             "output_dir=\"%(platform)s-EME-free/%(locale)s\"\n\n" +
-#                             "# Upload params\nbucket=\"net-mozaws-prod-delivery-firefox\"\n" +
+#                             "# Upload params\nbucket=\"net-mozaws-prod-delivery-datalus\"\n" +
 #                             "upload_to_candidates=true\n"
 #                   }
 #                 }

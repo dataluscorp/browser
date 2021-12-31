@@ -119,9 +119,9 @@ class BlockedSiteChild extends JSWindowActorChild {
         break;
     }
 
-    // Set the firefox support url.
+    // Set the datalus support url.
     doc
-      .getElementById("firefox_support")
+      .getElementById("datalus_support")
       .setAttribute(
         "href",
         Services.urlFormatter.formatURLPref("app.support.baseURL") +

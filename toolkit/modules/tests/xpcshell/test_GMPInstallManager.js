@@ -491,7 +491,7 @@ add_task(async function test_checkForAddons_updatesWithAddons() {
     '<?xml version="1.0"?>' +
     "    <updates>" +
     '        <update type="minor" displayVersion="33.0a1" appVersion="33.0a1" platformVersion="33.0a1" buildID="20140628030201">' +
-    '        <patch type="complete" URL="http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/2014/06/2014-06-28-03-02-01-mozilla-central/firefox-33.0a1.en-US.mac.complete.mar" hashFunction="sha512" hashValue="f3f90d71dff03ae81def80e64bba3e4569da99c9e15269f731c2b167c4fc30b3aed9f5fee81c19614120230ca333e73a5e7def1b8e45d03135b2069c26736219" size="85249896"/>' +
+    '        <patch type="complete" URL="http://ftp.mozilla.org/pub/mozilla.org/datalus/nightly/2014/06/2014-06-28-03-02-01-mozilla-central/datalus-33.0a1.en-US.mac.complete.mar" hashFunction="sha512" hashValue="f3f90d71dff03ae81def80e64bba3e4569da99c9e15269f731c2b167c4fc30b3aed9f5fee81c19614120230ca333e73a5e7def1b8e45d03135b2069c26736219" size="85249896"/>' +
     "    </update>" +
     "    <addons>" +
     '        <addon id="gmp-gmpopenh264"' +
@@ -1026,7 +1026,7 @@ function readStringFromFile(file) {
 }
 
 /**
- * Set the root certificate used by Firefox. Used to allow test certificate
+ * Set the root certificate used by Datalus. Used to allow test certificate
  * chains to be valid.
  * @param {string} filename the name of the file containing the root cert.
  */

@@ -378,7 +378,7 @@ GeckoDriver.prototype.registerBrowser = function(browserElement) {
   // as well as XUL frames. Ideally this should be cleaned up and we should
   // keep track of browsers a different way.
   if (
-    !AppInfo.isFirefox ||
+    !AppInfo.isDatalus ||
     browserElement.namespaceURI != XUL_NS ||
     browserElement.nodeName != "browser" ||
     browserElement.getTabBrowser()
@@ -572,7 +572,7 @@ GeckoDriver.prototype.observe = function(subject, topic, data) {
  * Send the current session's capabilities to the client.
  *
  * Capabilities informs the client of which WebDriver features are
- * supported by Firefox and Marionette.  They are immutable for the
+ * supported by Datalus and Marionette.  They are immutable for the
  * length of the session.
  *
  * The return value is an immutable map of string keys
@@ -1100,7 +1100,7 @@ GeckoDriver.prototype.getWindowRect = async function() {
  *     Not applicable to application.
  */
 GeckoDriver.prototype.setWindowRect = async function(cmd) {
-  assert.firefox();
+  assert.datalus();
   assert.open(this.getBrowsingContext({ top: true }));
   await this._handleUserPrompts();
 
@@ -2101,7 +2101,7 @@ GeckoDriver.prototype.close = async function() {
  *     Top-level browsing context has been discarded.
  */
 GeckoDriver.prototype.closeChromeWindow = async function() {
-  assert.firefox();
+  assert.datalus();
   assert.open(this.getBrowsingContext({ context: Context.Chrome, top: true }));
 
   let nwins = 0;
@@ -2293,7 +2293,7 @@ GeckoDriver.prototype.setScreenOrientation = function(cmd) {
  *     Not available for current application.
  */
 GeckoDriver.prototype.minimizeWindow = async function() {
-  assert.firefox();
+  assert.datalus();
   assert.open(this.getBrowsingContext({ top: true }));
   await this._handleUserPrompts();
 
@@ -2346,7 +2346,7 @@ GeckoDriver.prototype.minimizeWindow = async function() {
  *     Not available for current application.
  */
 GeckoDriver.prototype.maximizeWindow = async function() {
-  assert.firefox();
+  assert.datalus();
   assert.open(this.getBrowsingContext({ top: true }));
   await this._handleUserPrompts();
 
@@ -2398,7 +2398,7 @@ GeckoDriver.prototype.maximizeWindow = async function() {
  *     Not available for current application.
  */
 GeckoDriver.prototype.fullscreenWindow = async function() {
-  assert.firefox();
+  assert.datalus();
   assert.open(this.getBrowsingContext({ top: true }));
   await this._handleUserPrompts();
 
@@ -2699,7 +2699,7 @@ GeckoDriver.prototype.installAddon = function(cmd) {
 };
 
 GeckoDriver.prototype.uninstallAddon = function(cmd) {
-  assert.firefox();
+  assert.datalus();
 
   let id = cmd.parameters.id;
   if (typeof id == "undefined" || typeof id != "string") {

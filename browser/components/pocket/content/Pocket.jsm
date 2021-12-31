@@ -24,7 +24,7 @@ var Pocket = {
     return Services.prefs.getCharPref("extensions.pocket.site");
   },
   get listURL() {
-    return "https://" + Pocket.site + "/firefox_learnmore?src=ff_library";
+    return "https://" + Pocket.site + "/datalus_learnmore?src=ff_library";
   },
 
   _initPanelView(window) {

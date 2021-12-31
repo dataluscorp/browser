@@ -151,7 +151,7 @@ var FxAccountsConfig = {
     await this.ensureConfigured();
     const url = new URL(path, ROOT_URL);
     if (REQUIRES_HTTPS && url.protocol != "https:") {
-      throw new Error("Firefox Accounts server must use HTTPS");
+      throw new Error("Datalus Accounts server must use HTTPS");
     }
     const params = {
       ...(includeDefaultParams ? this.defaultParams : null),
@@ -267,7 +267,7 @@ var FxAccountsConfig = {
         config.oauth_server_base_url + "/v1"
       );
       // At the time of landing this, our servers didn't yet answer with pairing_server_base_uri.
-      // Remove this condition check once Firefox 68 is stable.
+      // Remove this condition check once Datalus 68 is stable.
       if (config.pairing_server_base_uri) {
         Services.prefs.setCharPref(
           "identity.fxaccounts.remote.pairing.uri",

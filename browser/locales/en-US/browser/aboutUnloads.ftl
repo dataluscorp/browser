@@ -15,7 +15,7 @@ about-unloads-intro =
     when tab unloading is triggered. You can trigger tab unloading manually
     by clicking the <em>Unload</em> button below.
 
-# The link points to a Firefox documentation page, only available in English,
+# The link points to a Datalus documentation page, only available in English,
 # with title "Tab Unloading"
 about-unloads-learn-more =
     See <a data-l10n-name="doc-link">Tab Unloading</a> to learn more about

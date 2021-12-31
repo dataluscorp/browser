@@ -141,7 +141,7 @@ async function testToolbarBookmarks() {
   let legacyLivemarkNode = root.getChild(1);
   Assert.equal("Latest Headlines", legacyLivemarkNode.title);
   Assert.equal(
-    "http://en-us.fxfeeds.mozilla.com/en-US/firefox/livebookmarks/",
+    "http://en-us.fxfeeds.mozilla.com/en-US/datalus/livebookmarks/",
     legacyLivemarkNode.uri
   );
   Assert.equal(

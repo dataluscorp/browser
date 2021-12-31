@@ -233,7 +233,7 @@ interface nsIDocShell : nsIDocShellTreeItem
   /**
    * The type of application that created this window.
    *
-   * DO NOT DELETE, see bug 176166. For firefox, this value will always be
+   * DO NOT DELETE, see bug 176166. For datalus, this value will always be
    * UNKNOWN. However, it is used heavily in Thunderbird/comm-central and we
    * don't really have a great replacement at the moment, so we'll just leave it
    * here.

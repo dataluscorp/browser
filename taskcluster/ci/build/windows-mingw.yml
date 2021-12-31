@@ -18,7 +18,7 @@ job-defaults:
 win32-mingwclang/opt:
     description: "Win32 MinGW-Clang Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-mingwclang-opt
     treeherder:
         platform: windows-mingw32/all
@@ -30,7 +30,7 @@ win32-mingwclang/opt:
             MOZ_AUTOMATION_PACKAGE_TESTS: "1"
     run:
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_windows_32_mingw_builds.py
             - builds/releng_sub_windows_configs/32_mingwclang.py
         mozconfig-variant: mingwclang
@@ -55,7 +55,7 @@ win32-mingwclang/opt:
 win32-mingwclang/debug:
     description: "Win32 MinGW-Clang Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-mingwclang-debug
     treeherder:
         platform: windows-mingw32/all
@@ -67,7 +67,7 @@ win32-mingwclang/debug:
             MOZ_AUTOMATION_PACKAGE_TESTS: "1"
     run:
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_windows_32_mingw_builds.py
             - builds/releng_sub_windows_configs/32_mingwclang.py
         mozconfig-variant: mingwclang-debug
@@ -92,7 +92,7 @@ win32-mingwclang/debug:
 win64-mingwclang/opt:
     description: "Win64 MinGW-Clang Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-mingwclang-opt
     treeherder:
         platform: windows-mingw32/all
@@ -104,7 +104,7 @@ win64-mingwclang/opt:
             MOZ_AUTOMATION_PACKAGE_TESTS: "1"
     run:
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_windows_64_mingw_builds.py
             - builds/releng_sub_windows_configs/64_mingwclang.py
         mozconfig-variant: mingwclang
@@ -129,7 +129,7 @@ win64-mingwclang/opt:
 win64-mingwclang/debug:
     description: "Win64 MinGW-Clang Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-mingwclang-debug
     treeherder:
         platform: windows-mingw32/all
@@ -141,7 +141,7 @@ win64-mingwclang/debug:
             MOZ_AUTOMATION_PACKAGE_TESTS: "1"
     run:
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_windows_64_mingw_builds.py
             - builds/releng_sub_windows_configs/64_mingwclang.py
         mozconfig-variant: mingwclang-debug

@@ -1266,7 +1266,7 @@
             // Since the user is switching away from a tab that has
             // a beforeunload prompt active, we remove the prompt.
             // This prevents confusing user flows like the following:
-            //   1. User attempts to close Firefox
+            //   1. User attempts to close Datalus
             //   2. User switches tabs (ingoring a beforeunload prompt)
             //   3. User returns to tab, presses "Leave page"
             let promptBox = this.getTabModalPromptBox(oldBrowser);

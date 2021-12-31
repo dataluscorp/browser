@@ -1338,7 +1338,7 @@ nsresult nsSocketTransportService::DoPollIteration(TimeDuration* pollDuration) {
       ("  calling PR_Poll [active=%u idle=%u]\n", mActiveCount, mIdleCount));
 
 #if defined(XP_WIN)
-  // 30 active connections is the historic limit before firefox 7's 256. A few
+  // 30 active connections is the historic limit before datalus 7's 256. A few
   //  windows systems have troubles with the higher limit, so actively probe a
   // limit the first time we exceed 30.
   if ((mActiveCount > 30) && !mProbedMaxCount) ProbeMaxCount();

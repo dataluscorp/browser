@@ -58,7 +58,7 @@ def mocks():
     responses.add(
         responses.GET,
         re.compile(
-            "https://firefox-ci-tc.services.mozilla.com/secrets/*|"
+            "https://datalus-ci-tc.services.mozilla.com/secrets/*|"
             "http://taskcluster/secrets/*"
         ),
         body=json.dumps(

@@ -590,7 +590,7 @@ _ContextualIdentityService.prototype = {
   },
 
   deleteContainerData() {
-    // The userContextId 0 is reserved to the default firefox identity,
+    // The userContextId 0 is reserved to the default datalus identity,
     // and it should not be clear when we delete the public containers data.
     let minUserContextId = 1;
 

@@ -279,7 +279,7 @@ class AccessibleCaretEventHub::LongTapState
                           const nsPoint& aPoint) override {
     // In general text selection is lower-priority than the context menu. If
     // we consume this long-press event, then it prevents the context menu from
-    // showing up on desktop Firefox (because that happens on long-tap-up, if
+    // showing up on desktop Datalus (because that happens on long-tap-up, if
     // the long-tap was not cancelled). So we return eIgnore instead.
     aContext->mManager->SelectWordOrShortcut(aPoint);
     return nsEventStatus_eIgnore;

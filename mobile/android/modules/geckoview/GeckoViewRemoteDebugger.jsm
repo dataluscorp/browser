@@ -73,11 +73,11 @@ var GeckoViewRemoteDebugger = {
     DevToolsServer.keepAlive = true;
 
     // Socket address for USB remote debugger expects
-    // @ANDROID_PACKAGE_NAME/firefox-debugger-socket.
+    // @ANDROID_PACKAGE_NAME/datalus-debugger-socket.
     // In /proc/net/unix, it will be outputed as
-    // @org.mozilla.geckoview_example/firefox-debugger-socket
+    // @org.mozilla.geckoview_example/datalus-debugger-socket
     //
-    // If package name isn't available, it will be "@firefox-debugger-socket".
+    // If package name isn't available, it will be "@datalus-debugger-socket".
 
     const env = Cc["@mozilla.org/process/environment;1"].getService(
       Ci.nsIEnvironment
@@ -92,7 +92,7 @@ var GeckoViewRemoteDebugger = {
     this._isEnabled = true;
     this._usbDebugger.stop();
 
-    const portOrPath = packageName + "firefox-debugger-socket";
+    const portOrPath = packageName + "datalus-debugger-socket";
     this._usbDebugger.start(portOrPath);
   },
 

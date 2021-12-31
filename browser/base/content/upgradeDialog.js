@@ -38,9 +38,9 @@ const SCREEN_STRINGS = [
 // Themes that can be selected by the button with matching index.
 const THEME_IDS = [
   [
-    "firefox-compact-light@mozilla.org",
+    "datalus-compact-light@mozilla.org",
     "default-theme@mozilla.org",
-    "firefox-compact-dark@mozilla.org",
+    "datalus-compact-dark@mozilla.org",
   ],
   [
     "abstract-soft-colorway@mozilla.org",

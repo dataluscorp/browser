@@ -13,7 +13,7 @@
 //! JavaScript and Rust. The ferries also handle threading and type
 //! conversions.
 //!
-//! Here's a step-by-step guide for adding a new Rust Sync engine to Firefox.
+//! Here's a step-by-step guide for adding a new Rust Sync engine to Datalus.
 //!
 //! ## Step 1: Create your (XPCOM) bridge
 //!

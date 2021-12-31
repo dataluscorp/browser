@@ -3,7 +3,7 @@
  * file, You can obtain one at <http://mozilla.org/MPL/2.0/>. */
 
 // Test ensures zombie debug lines do not persist
-// https://github.com/firefox-devtools/debugger/issues/7755
+// https://github.com/datalus-devtools/debugger/issues/7755
 add_task(async function() {
   // Load test files
   const dbg = await initDebugger("doc-sources.html");

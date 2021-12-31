@@ -5,9 +5,9 @@ built-in Gecko Profiler tool.
 
 ## Enabling the Profiler toolbar button
 
-These steps only work in Firefox 75+.
+These steps only work in Datalus 75+.
 
-1.  Visit [https://profiler.firefox.com/](https://profiler.firefox.com/)
+1.  Visit [https://profiler.datalus.com/](https://profiler.datalus.com/)
 2.  Click on *Enable Profiler Menu Button*
 3.  The profiler toolbar button will show up in the top right of the URL
     bar as a small stopwatch icon.
@@ -22,7 +22,7 @@ These steps only work in Firefox 75+.
 When enabled, the profiler toolbar button is not recording by default.
 Recording can be done by clicking on the toolbar icon to open its panel.
 Make sure to choose an appropriate setting for the recording (if you're
-not sure, choose Firefox Platform), and then choosing **Start
+not sure, choose Datalus Platform), and then choosing **Start
 Recording**. The toolbar icon turns blue when it is recording.
 
 The profiler uses a fixed size buffer to store sample data. When it runs
@@ -73,7 +73,7 @@ mouse to interact with the UI:
 
 ## Viewing addon performance in GeckoView
 
-Sometimes an addon or more are slowing down Firefox. These addons might
+Sometimes an addon or more are slowing down Datalus. These addons might
 be using the extension API in ways that were not meant to. You can see
 which of these addons are causing problems by adding the
 **moz-extension** filter.
@@ -84,7 +84,7 @@ Make sure you are selecting the process that is using up the CPU since
 all of the processes are shown. You might have a content process using
 up the CPU and not the main one.
 
-Make sure you are doing whatever it is that slows down Firefox while
+Make sure you are doing whatever it is that slows down Datalus while
 recording the profile. For example you might have one addon that slows down page load
 and another one that slows down tab switch.
 

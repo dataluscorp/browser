@@ -11,7 +11,7 @@ own binaries and update them as needed.
 Options are explicitly defined `in clang-format
 itself <https://github.com/llvm-mirror/clang/blob/e8a55f98df6bda77ee2eaa7f7247bd655f79ae0e/lib/Format/Format.cpp#L856>`__.
 If the options are changed in clang upstream, this might cause some
-changes in the Firefox tree. For this reason, it is best to use the
+changes in the Datalus tree. For this reason, it is best to use the
 mozilla-provided binaries.
 
 Manual formatting

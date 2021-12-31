@@ -15,7 +15,7 @@ namespace PingSender {
 
 // System-specific function that changes the current working directory to be
 // the same as the one containing the ping file. This is currently required on
-// Windows to release the Firefox installation folder (see bug 1597803 for more
+// Windows to release the Datalus installation folder (see bug 1597803 for more
 // details) and is a no-op on other platforms.
 void ChangeCurrentWorkingDirectory(const std::string& pingPath);
 

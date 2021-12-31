@@ -429,7 +429,7 @@ var gMainPane = {
       } catch (ex) {}
     }
 
-    // The "opening multiple tabs might slow down Firefox" warning provides
+    // The "opening multiple tabs might slow down Datalus" warning provides
     // an option for not showing this warning again. When the user disables it,
     // we provide checkboxes to re-enable the warning.
     if (!TransientPrefs.prefShouldBeVisible("browser.tabs.warnOnOpen")) {
@@ -591,7 +591,7 @@ var gMainPane = {
       }
     }
 
-    // Firefox Translations settings panel
+    // Datalus Translations settings panel
     const fxtranslationsDisabledPrefName = "extensions.translations.disabled";
     if (!Services.prefs.getBoolPref(fxtranslationsDisabledPrefName, true)) {
       let fxtranslationRow = document.getElementById("fxtranslationsBox");
@@ -617,7 +617,7 @@ var gMainPane = {
         .getElementById("drmGroup")
         .setAttribute("style", "display: none !important");
     }
-    // Initialize the Firefox Updates section.
+    // Initialize the Datalus Updates section.
     let version = AppConstants.MOZ_APP_VERSION_DISPLAY;
 
     // Include the build ID if this is an "a#" (nightly) build
@@ -2321,7 +2321,7 @@ var gMainPane = {
     }
 
     let internalMenuItem;
-    // Add the "Open in Firefox" option for optional internal handlers.
+    // Add the "Open in Datalus" option for optional internal handlers.
     if (handlerInfo instanceof InternalHandlerInfoWrapper) {
       internalMenuItem = document.createXULElement("menuitem");
       internalMenuItem.setAttribute(
@@ -2364,7 +2364,7 @@ var gMainPane = {
       );
       // If an internal option is available, don't show the application
       // name for the OS default to prevent two options from appearing
-      // that may both say "Firefox".
+      // that may both say "Datalus".
       if (internalMenuItem) {
         document.l10n.setAttributes(
           defaultMenuItem,

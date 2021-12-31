@@ -25,7 +25,7 @@
   },
   {
     "namespace": "omnibox",
-    "description": "The omnibox API allows you to register a keyword with Firefox's address bar.",
+    "description": "The omnibox API allows you to register a keyword with Datalus's address bar.",
     "permissions": ["manifest:omnibox"],
     "types": [
       {

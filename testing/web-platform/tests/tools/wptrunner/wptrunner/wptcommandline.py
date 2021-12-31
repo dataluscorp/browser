@@ -107,11 +107,11 @@ scheme host and port.""")
     chaos_mode_group.add_argument("--verify-no-chaos-mode", action="store_false",
                                   default=True,
                                   dest="verify_chaos_mode",
-                                  help="Disable chaos mode when running on Firefox")
+                                  help="Disable chaos mode when running on Datalus")
     chaos_mode_group.add_argument("--verify-chaos-mode", action="store_true",
                                   default=True,
                                   dest="verify_chaos_mode",
-                                  help="Enable chaos mode when running on Firefox")
+                                  help="Enable chaos mode when running on Datalus")
     mode_group.add_argument("--verify-max-time", action="store",
                             default=None,
                             help="The maximum number of minutes for the job to run",
@@ -264,7 +264,7 @@ scheme host and port.""")
     ssl_group.add_argument("--openssl-binary", action="store",
                            help="Path to openssl binary", default="openssl")
     ssl_group.add_argument("--certutil-binary", action="store",
-                           help="Path to certutil binary for use with Firefox + ssl")
+                           help="Path to certutil binary for use with Datalus + ssl")
 
     ssl_group.add_argument("--ca-cert-path", action="store", type=abs_path,
                            help="Path to ca certificate when using pregenerated ssl certificates")
@@ -510,7 +510,7 @@ def check_args(kwargs):
     set_from_config(kwargs)
 
     if kwargs["product"] is None:
-        kwargs["product"] = "firefox"
+        kwargs["product"] = "datalus"
 
     if kwargs["manifest_update"] is None:
         kwargs["manifest_update"] = True
@@ -586,7 +586,7 @@ def check_args(kwargs):
             sys.exit(1)
         kwargs["openssl_binary"] = path
 
-    if kwargs["ssl_type"] != "none" and kwargs["product"] == "firefox" and kwargs["certutil_binary"]:
+    if kwargs["ssl_type"] != "none" and kwargs["product"] == "datalus" and kwargs["certutil_binary"]:
         path = exe_path(kwargs["certutil_binary"])
         if path is None:
             print("certutil-binary argument missing or not a valid executable", file=sys.stderr)
@@ -621,7 +621,7 @@ def check_args_update(kwargs):
     set_from_config(kwargs)
 
     if kwargs["product"] is None:
-        kwargs["product"] = "firefox"
+        kwargs["product"] = "datalus"
     if kwargs["patch"] is None:
         kwargs["patch"] = kwargs["sync"]
 

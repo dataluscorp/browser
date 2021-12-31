@@ -2,10 +2,10 @@ commit a26655b3144ed273940486fc15ccdac12b0562ec
 Author: Jeff Muizelaar <jmuizelaar@mozilla.com>
 Date:   Tue Mar 17 15:08:50 2009 -0400
 
-    Jeff Muizelaar noted that the treatment of edges differed with firefox's
+    Jeff Muizelaar noted that the treatment of edges differed with datalus's
     canvas definition, which considers a point on any edge as inside. The
     current implementation has a similar definition to that of flash, for
-    which the top and right edges are outside. Arguably, firefox has the more
+    which the top and right edges are outside. Arguably, datalus has the more
     intuitive definition here...
 
 diff --git a/src/cairo-path-in-fill.c b/src/cairo-path-in-fill.c

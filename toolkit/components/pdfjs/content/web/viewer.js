@@ -13571,7 +13571,7 @@ exports.ViewHistory = ViewHistory;
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports.FirefoxCom = exports.DownloadManager = void 0;
+exports.DatalusCom = exports.DownloadManager = void 0;
 
 __webpack_require__(39);
 
@@ -13587,7 +13587,7 @@ var _l10n_utils = __webpack_require__(29);
 
 ;
 
-class FirefoxCom {
+class DatalusCom {
   static requestSync(action, data) {
     const request = document.createTextNode("");
     document.documentElement.appendChild(request);
@@ -13635,7 +13635,7 @@ class FirefoxCom {
 
 }
 
-exports.FirefoxCom = FirefoxCom;
+exports.DatalusCom = DatalusCom;
 
 class DownloadManager {
   constructor() {
@@ -13643,7 +13643,7 @@ class DownloadManager {
   }
 
   downloadUrl(url, filename) {
-    FirefoxCom.request("download", {
+    DatalusCom.request("download", {
       originalUrl: url,
       filename
     });
@@ -13653,7 +13653,7 @@ class DownloadManager {
     const blobUrl = URL.createObjectURL(new Blob([data], {
       type: contentType
     }));
-    FirefoxCom.requestAsync("download", {
+    DatalusCom.requestAsync("download", {
       blobUrl,
       originalUrl: blobUrl,
       filename,
@@ -13697,7 +13697,7 @@ class DownloadManager {
 
   download(blob, url, filename, sourceEventType = "download") {
     const blobUrl = URL.createObjectURL(blob);
-    FirefoxCom.requestAsync("download", {
+    DatalusCom.requestAsync("download", {
       blobUrl,
       originalUrl: url,
       filename,
@@ -13715,13 +13715,13 @@ class DownloadManager {
 
 exports.DownloadManager = DownloadManager;
 
-class FirefoxPreferences extends _preferences.BasePreferences {
+class DatalusPreferences extends _preferences.BasePreferences {
   async _writeToStorage(prefObj) {
-    return FirefoxCom.requestAsync("setPreferences", prefObj);
+    return DatalusCom.requestAsync("setPreferences", prefObj);
   }
 
   async _readFromStorage(prefObj) {
-    const prefStr = await FirefoxCom.requestAsync("getPreferences", prefObj);
+    const prefStr = await DatalusCom.requestAsync("getPreferences", prefObj);
     return JSON.parse(prefStr);
   }
 
@@ -13829,23 +13829,23 @@ class MozL10n {
   window.addEventListener("save", handleEvent);
 })();
 
-class FirefoxComDataRangeTransport extends _pdfjsLib.PDFDataRangeTransport {
+class DatalusComDataRangeTransport extends _pdfjsLib.PDFDataRangeTransport {
   requestDataRange(begin, end) {
-    FirefoxCom.request("requestDataRange", {
+    DatalusCom.request("requestDataRange", {
       begin,
       end
     });
   }
 
   abort() {
-    FirefoxCom.requestSync("abortLoading", null);
+    DatalusCom.requestSync("abortLoading", null);
   }
 
 }
 
-class FirefoxScripting {
+class DatalusScripting {
   static async createSandbox(data) {
-    const success = await FirefoxCom.requestAsync("createSandbox", data);
+    const success = await DatalusCom.requestAsync("createSandbox", data);
 
     if (!success) {
       throw new Error("Cannot create sandbox.");
@@ -13853,22 +13853,22 @@ class FirefoxScripting {
   }
 
   static async dispatchEventInSandbox(event) {
-    FirefoxCom.request("dispatchEventInSandbox", event);
+    DatalusCom.request("dispatchEventInSandbox", event);
   }
 
   static async destroySandbox() {
-    FirefoxCom.request("destroySandbox", null);
+    DatalusCom.request("destroySandbox", null);
   }
 
 }
 
-class FirefoxExternalServices extends _app.DefaultExternalServices {
+class DatalusExternalServices extends _app.DefaultExternalServices {
   static updateFindControlState(data) {
-    FirefoxCom.request("updateFindControlState", data);
+    DatalusCom.request("updateFindControlState", data);
   }
 
   static updateFindMatchesCount(data) {
-    FirefoxCom.request("updateFindMatchesCount", data);
+    DatalusCom.request("updateFindMatchesCount", data);
   }
 
   static initPassiveLoading(callbacks) {
@@ -13887,7 +13887,7 @@ class FirefoxExternalServices extends _app.DefaultExternalServices {
 
       switch (args.pdfjsLoadAction) {
         case "supportsRangedLoading":
-          pdfDataRangeTransport = new FirefoxComDataRangeTransport(args.length, args.data, args.done, args.filename);
+          pdfDataRangeTransport = new DatalusComDataRangeTransport(args.length, args.data, args.done, args.filename);
           callbacks.onOpenWithTransport(args.pdfUrl, args.length, pdfDataRangeTransport);
           break;
 
@@ -13925,15 +13925,15 @@ class FirefoxExternalServices extends _app.DefaultExternalServices {
           break;
       }
     });
-    FirefoxCom.requestSync("initPassiveLoading", null);
+    DatalusCom.requestSync("initPassiveLoading", null);
   }
 
   static async fallback(data) {
-    return FirefoxCom.requestAsync("fallback", data);
+    return DatalusCom.requestAsync("fallback", data);
   }
 
   static reportTelemetry(data) {
-    FirefoxCom.request("reportTelemetry", JSON.stringify(data));
+    DatalusCom.request("reportTelemetry", JSON.stringify(data));
   }
 
   static createDownloadManager(options) {
@@ -13941,7 +13941,7 @@ class FirefoxExternalServices extends _app.DefaultExternalServices {
   }
 
   static createPreferences() {
-    return new FirefoxPreferences();
+    return new DatalusPreferences();
   }
 
   static createL10n(options) {
@@ -13950,39 +13950,39 @@ class FirefoxExternalServices extends _app.DefaultExternalServices {
   }
 
   static createScripting(options) {
-    return FirefoxScripting;
+    return DatalusScripting;
   }
 
   static get supportsIntegratedFind() {
-    const support = FirefoxCom.requestSync("supportsIntegratedFind");
+    const support = DatalusCom.requestSync("supportsIntegratedFind");
     return (0, _pdfjsLib.shadow)(this, "supportsIntegratedFind", support);
   }
 
   static get supportsDocumentFonts() {
-    const support = FirefoxCom.requestSync("supportsDocumentFonts");
+    const support = DatalusCom.requestSync("supportsDocumentFonts");
     return (0, _pdfjsLib.shadow)(this, "supportsDocumentFonts", support);
   }
 
   static get supportedMouseWheelZoomModifierKeys() {
-    const support = FirefoxCom.requestSync("supportedMouseWheelZoomModifierKeys");
+    const support = DatalusCom.requestSync("supportedMouseWheelZoomModifierKeys");
     return (0, _pdfjsLib.shadow)(this, "supportedMouseWheelZoomModifierKeys", support);
   }
 
   static get isInAutomation() {
-    const isInAutomation = FirefoxCom.requestSync("isInAutomation");
+    const isInAutomation = DatalusCom.requestSync("isInAutomation");
     return (0, _pdfjsLib.shadow)(this, "isInAutomation", isInAutomation);
   }
 
 }
 
-_app.PDFViewerApplication.externalServices = FirefoxExternalServices;
+_app.PDFViewerApplication.externalServices = DatalusExternalServices;
 document.mozL10n.setExternalLocalizerServices({
   getLocale() {
-    return FirefoxCom.requestSync("getLocale", null);
+    return DatalusCom.requestSync("getLocale", null);
   },
 
   getStrings(key) {
-    return FirefoxCom.requestSync("getStrings", key);
+    return DatalusCom.requestSync("getStrings", key);
   }
 
 });
@@ -14250,7 +14250,7 @@ exports.BasePreferences = BasePreferences;
 Object.defineProperty(exports, "__esModule", ({
   value: true
 }));
-exports.FirefoxPrintService = FirefoxPrintService;
+exports.DatalusPrintService = DatalusPrintService;
 
 var _pdfjsLib = __webpack_require__(4);
 
@@ -14320,7 +14320,7 @@ function composePage(pdfDocument, pageNumber, size, printContainer, printResolut
   };
 }
 
-function FirefoxPrintService(pdfDocument, pagesOverview, printContainer, printResolution, optionalContentConfigPromise = null) {
+function DatalusPrintService(pdfDocument, pagesOverview, printContainer, printResolution, optionalContentConfigPromise = null) {
   this.pdfDocument = pdfDocument;
   this.pagesOverview = pagesOverview;
   this.printContainer = printContainer;
@@ -14328,7 +14328,7 @@ function FirefoxPrintService(pdfDocument, pagesOverview, printContainer, printRe
   this._optionalContentConfigPromise = optionalContentConfigPromise || pdfDocument.getOptionalContentConfig();
 }
 
-FirefoxPrintService.prototype = {
+DatalusPrintService.prototype = {
   layout() {
     const {
       pdfDocument,
@@ -14365,7 +14365,7 @@ _app.PDFPrintServiceFactory.instance = {
   },
 
   createPrintService(pdfDocument, pagesOverview, printContainer, printResolution, optionalContentConfigPromise) {
-    return new FirefoxPrintService(pdfDocument, pagesOverview, printContainer, printResolution, optionalContentConfigPromise);
+    return new DatalusPrintService(pdfDocument, pagesOverview, printContainer, printResolution, optionalContentConfigPromise);
   }
 
 };

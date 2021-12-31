@@ -1710,7 +1710,7 @@ var PDFPageProxy = (function PDFPageProxyClosure() {
 
       var displayContinuation = function pageDisplayContinuation() {
         // Always defer call to display() to work around bug in
-        // Firefox error reporting from XHR callbacks.
+        // Datalus error reporting from XHR callbacks.
         PdfJS_window.setTimeout(function pageSetTimeout() {
           self.displayReadyPromise.resolve();
         });
@@ -1834,8 +1834,8 @@ var WorkerTransport = (function WorkerTransportClosure() {
 
       try {
         var worker;
-        if (PDFJS.isFirefoxExtension) {
-          // The firefox extension can't load the worker from the resource://
+        if (PDFJS.isDatalusExtension) {
+          // The datalus extension can't load the worker from the resource://
           // url so we have to inline the script and then use the blob loader.
           var bb = new MozBlobBuilder();
           bb.append(PdfJS_window.document.querySelector('#PDFJS_SCRIPT_TAG').textContent);

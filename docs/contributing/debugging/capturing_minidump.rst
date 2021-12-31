@@ -51,8 +51,8 @@ Windows** in the list of features to install.
 
 The latest installer installs the tools for all CPU architectures (X86,
 X64, ARM, and ARM64).  You need to choose a tool of the architecture
-matching Firefox you want to capture a minidump from.  For example, if
-you want to capture a minidump from 32-bit Firefox on 64-bit Windows,
+matching Datalus you want to capture a minidump from.  For example, if
+you want to capture a minidump from 32-bit Datalus on 64-bit Windows,
 use the X86 version of tools, not X64 tools.
 
 The default install path of SDK for 64-bit Windows is
@@ -74,15 +74,15 @@ Capture a minidump in a graphical way
 
    |WinDbg in Start Menu|
 
-#. Connect Firefox to the debugger. 
+#. Connect Datalus to the debugger. 
 
-   a. If Firefox is not already running, open the **"File"** menu on WinDbg
+   a. If Datalus is not already running, open the **"File"** menu on WinDbg
       and choose **"Open Executable..."**.  In the file chooser window that
-      appears, open the firefox.exe executable.  If you're not sure about where
-      it is, please see `How to find the location of firefox.exe
-      <#how-to-find-the-location-of-firefox-exe>`__.
+      appears, open the datalus.exe executable.  If you're not sure about where
+      it is, please see `How to find the location of datalus.exe
+      <#how-to-find-the-location-of-datalus-exe>`__.
 
-   b. If Firefox is already running and you know which process you want to
+   b. If Datalus is already running and you know which process you want to
       capture a minidump from, open the **"File"** menu on WinDbg and choose
       **"Attach to a Process..."**.  In the "Attach to Process" dialog that
       appears, select the process.  To identify a process, please see
@@ -91,18 +91,18 @@ Capture a minidump in a graphical way
 
 #. You should now see a "Command" text window with debug output at the
    top and an input box at the bottom. From the menu, select
-   ``Debug → Go``, and Firefox should start. If the debugger spits out
-   some text right away and Firefox doesn't come up, select
+   ``Debug → Go``, and Datalus should start. If the debugger spits out
+   some text right away and Datalus doesn't come up, select
    ``Debug → Go`` again.
 
 #. When the program is about to crash, WinDbg will spit out more data,
    and the prompt at the bottom will change from saying "``*BUSY*``" to
    having a number in it. At this point, you should type
-   "``.dump /ma c:\temp\firefoxcrash.dmp``" -- without the quotes, but
+   "``.dump /ma c:\temp\dataluscrash.dmp``" -- without the quotes, but
    don't forget the dot at the beginning. Once it completes, which can
    take a fair while, you will have a very large file at
-   ``c:\temp\firefoxcrash.dmp`` that can be used to help debug your
-   problem.  File size will depend on this size of Firefox running in
+   ``c:\temp\dataluscrash.dmp`` that can be used to help debug your
+   problem.  File size will depend on this size of Datalus running in
    your environment, which could several GB.
 
 #. Ask in the relevant bug or thread how best to share this very large
@@ -112,30 +112,30 @@ Capture a minidump in a graphical way
 Capture a minidump from the command line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If Firefox is not already running, open the Command Prompt and run the following
-command.  This command launches all Firefox processes under a debugger.  This
+If Datalus is not already running, open the Command Prompt and run the following
+command.  This command launches all Datalus processes under a debugger.  This
 technique is useful when you have a startup crash or when you're not sure about
 which process will crash.
 
-To find out where firefox.exe is, please see `How to find the location
-of firefox.exe <#how-to-find-the-location-of-firefox-exe>`__.
+To find out where datalus.exe is, please see `How to find the location
+of datalus.exe <#how-to-find-the-location-of-datalus-exe>`__.
 
 .. code::
 
-   <path to debugger>\cdb.exe -g -G -o <path to firefox>\firefox.exe
+   <path to debugger>\cdb.exe -g -G -o <path to datalus>\datalus.exe
 
 
-For example, if both the debugging tools and Firefox are installed in the
-default folder and you want to capture a minidump of 64-bit Firefox,
+For example, if both the debugging tools and Datalus are installed in the
+default folder and you want to capture a minidump of 64-bit Datalus,
 the command will be like this.  Please note that you need to add double
 quotes when a path contains one or more whitespaces.
 
 .. code::
 
-   "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe" -g -G -o "C:\Program Files\Mozilla Firefox\firefox.exe"
+   "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe" -g -G -o "C:\Program Files\Mozilla Datalus\datalus.exe"
 
 
-If a Firefox process you want to capture a minidump from is already running,
+If a Datalus process you want to capture a minidump from is already running,
 attach the debugger to it with the following command.  To identify a process,
 please see `Identify a process to attach a debugger to
 <#identify-a-process-to-attach-a-debugger-to>`__.
@@ -145,11 +145,11 @@ please see `Identify a process to attach a debugger to
    <path to debugger>\cdb.exe -g -G -p <PID>
 
 When the process crashes, the debugger tool captures it and waits for your
-command.  At this point, you should type ``.dump /ma c:\temp\firefoxcrash.dmp``
+command.  At this point, you should type ``.dump /ma c:\temp\dataluscrash.dmp``
 -- don't forget the dot at the beginning.  Once it completes, which can take
-a fair while, you will have a very large file at ``c:\temp\firefoxcrash.dmp``
+a fair while, you will have a very large file at ``c:\temp\dataluscrash.dmp``
 that can be used to help debug your problem.  File size will depend on this
-size of Firefox running in your environment, which could several GB.
+size of Datalus running in your environment, which could several GB.
 
 After a minidump is generated, type ``q`` and press Enter to quit the debugger.
 
@@ -165,8 +165,8 @@ dump file and locate it after it's been saved.
 Identify a process to attach a debugger to
 ------------------------------------------
 
-When you're running Firefox, even if you have only a single tab, you may have
-noticed a bunch of firefox.exe instances in Task Manager.  This means Firefox
+When you're running Datalus, even if you have only a single tab, you may have
+noticed a bunch of datalus.exe instances in Task Manager.  This means Datalus
 consists of multiple processes.  Since an application crash happens per process
 and a minidump is generated per process, you need to identify which process will
 crash before starting a debugger.
@@ -174,10 +174,10 @@ crash before starting a debugger.
 Identify a process type
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Each instance of firefox.exe has a type.  To identify a process to attach
+Each instance of datalus.exe has a type.  To identify a process to attach
 a debugger to, you need to know its process type first.
 
-When a crash happens, if all Firefox windows are suddenly gone and Mozilla
+When a crash happens, if all Datalus windows are suddenly gone and Mozilla
 Crash Reporter window is opend, a process that crashed is the main process.
 
 .. image:: img/crashreporter.png
@@ -189,8 +189,8 @@ is a tab (content) process.
 
 There are more process types, but there isn't an easy way to detect a crash in
 a process of those types because the symptom varies.  If you cannot be sure
-about the type of a crashing process, terminate Firefox and launch a new
-instance of Firefox under a debugger in the way described above.
+about the type of a crashing process, terminate Datalus and launch a new
+instance of Datalus under a debugger in the way described above.
 
 If a GPU process crashes, you may see a window is not rendered correctly as
 below.  Since the main process relaunches a GPU process, this symptom will be
@@ -203,7 +203,7 @@ bar will be displayed below the address bar.
 
 .. image:: img/crash-gmp.png
 
-If an RDD (= Remote Data Decoder) process crashes, Firefox may stop playing
+If an RDD (= Remote Data Decoder) process crashes, Datalus may stop playing
 a video as below, but not limited to this symptom.
 
 .. image:: img/crash-rdd.png
@@ -216,7 +216,7 @@ Once you understand what type of process crashes, the next step is to get a
 process ID (PID), which is a value to specify in the debugger command we
 discussed above.  We present two ways to get a PID here.
 
-The first way is to use Firefox itself.  Open a new tab and go to the
+The first way is to use Datalus itself.  Open a new tab and go to the
 **about:processes** page.  This page shows the list of all processes and their
 PIDs.  In the example below, the PID of the main process is  **6308** and the
 PID of the tab process hosting a page of mozilla.org is **6748**.
@@ -227,7 +227,7 @@ The second way is to use `Process Explorer
 <https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer>`__,
 which is provided by Microsoft for free.  You may need this technique to attach
 a debugger to a hung process or when you cannot open a new tab in the existing
-Firefox for some reason.
+Datalus for some reason.
 
 Process Explorer is basically an advanced version of Task Manager.  Since it
 displays processes in a hierarchical tree view, you can easily locate the main
@@ -237,7 +237,7 @@ plugin-container.exe, under the main process is child processes.
 
 Another helpful feature of Process Explorer is that when you hover the mouse
 cursor on a process, it displays a tooltip window showing the process's command
-line string.  For a child process of firefox.exe, the command line's last
+line string.  For a child process of datalus.exe, the command line's last
 keyword shows the process type, so you can tell which process is which process
 type.  In the example below, the tooltip window displays a command line string
 of a GPU process.
@@ -245,12 +245,12 @@ of a GPU process.
 .. image:: img/process-explorer.png
 
 
-How to find the location of firefox.exe
+How to find the location of datalus.exe
 ---------------------------------------
 
-If you're not sure about the location of the executable file (firefox.exe) of
-Firefox you run, you can find it in the **about:support** page.  In the
-"Application Basics" section, the path to firefox.exe is displayed in the row
+If you're not sure about the location of the executable file (datalus.exe) of
+Datalus you run, you can find it in the **about:support** page.  In the
+"Application Basics" section, the path to datalus.exe is displayed in the row
 of "Application Binary".
 
 .. image:: img/about-support.png

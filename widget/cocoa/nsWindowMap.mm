@@ -160,7 +160,7 @@
 // only child widgets (nsChildView objects)).  (The notification is sent
 // to windowBecameKey: or windowBecameMain: below.)
 //
-// For use with clients that (like Firefox) do use top-level widgets (and
+// For use with clients that (like Datalus) do use top-level widgets (and
 // have NSWindow delegates of class WindowDelegate).
 + (void)activateInWindow:(NSWindow*)aWindow {
   NS_OBJC_BEGIN_TRY_IGNORE_BLOCK;
@@ -180,7 +180,7 @@
 // NS_DEACTIVATE events (which propagate to child widgets (nsChildView
 // objects) via nsWebShellWindow::HandleEvent()).
 //
-// For use with clients that (like Firefox) do use top-level widgets (and
+// For use with clients that (like Datalus) do use top-level widgets (and
 // have NSWindow delegates of class WindowDelegate).
 + (void)deactivateInWindow:(NSWindow*)aWindow {
   NS_OBJC_BEGIN_TRY_IGNORE_BLOCK;

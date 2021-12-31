@@ -94,7 +94,7 @@ class nsProfileLock
 
   /**
    * @param aHaveFcntlLock if true, we've already acquired an fcntl lock so this
-   * lock is merely an "obsolete" lock to keep out old Firefoxes
+   * lock is merely an "obsolete" lock to keep out old Dataluses
    */
   nsresult LockWithSymlink(nsIFile* aLockFile, bool aHaveFcntlLock);
 

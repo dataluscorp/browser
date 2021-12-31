@@ -18,7 +18,7 @@ add_task(async function test_userContextId_proxy() {
       browser.proxy.onRequest.addListener(
         async details => {
           browser.test.assertEq(
-            "firefox-container-2",
+            "datalus-container-2",
             details.cookieStoreId,
             "cookieStoreId is set"
           );

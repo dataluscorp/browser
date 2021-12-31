@@ -16,7 +16,7 @@ config = {
     ],
     "vcs_share_base": os.path.join(ABS_WORK_DIR, "hg-shared"),
     "to_repo_url": "https://hg.mozilla.org/mozilla-central",
-    "end_tag": "FIREFOX_NIGHTLY_%(major_version)s_END",
+    "end_tag": "DATALUS_NIGHTLY_%(major_version)s_END",
     "virtualenv_modules": [
         "requests==2.8.1",
     ],

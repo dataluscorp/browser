@@ -40,11 +40,11 @@ job-defaults:
                 default: false
 
 jobs:
-    firefox:
-        name: firefox-version-bump
-        shipping-product: firefox
+    datalus:
+        name: datalus-version-bump
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             symbol: Rel(VerBump)
             tier: 1
             kind: build

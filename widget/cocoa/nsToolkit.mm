@@ -127,7 +127,7 @@ void nsToolkit::RemoveSleepWakeNotifications() {
   NS_OBJC_END_TRY_IGNORE_BLOCK;
 }
 
-// Cocoa Firefox's use of custom context menus requires that we explicitly
+// Cocoa Datalus's use of custom context menus requires that we explicitly
 // handle mouse events from other processes that the OS handles
 // "automatically" for native context menus -- mouseMoved events so that
 // right-click context menus work properly when our browser doesn't have the

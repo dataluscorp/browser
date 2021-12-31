@@ -17,7 +17,7 @@ jobs:
             symbol: Rel(merge-automation)
             tier: 1
             kind: build
-            platform: firefox-release/opt
+            platform: datalus-release/opt
         description: Merge repositories for release management.
         worker-type: tree
         scopes: []
@@ -31,7 +31,7 @@ jobs:
             l10n-bump-info:
                 by-behavior:
                     central-to-beta:
-                        name: Firefox l10n changesets
+                        name: Datalus l10n changesets
                         path: browser/locales/l10n-changesets.json
                         version-path: browser/config/version.txt
                         l10n-repo-url: "https://hg.mozilla.org/l10n-central/%(locale)s/json-pushes?version=2&tipsonly=1"

@@ -42,7 +42,7 @@ Structure:
           // Optional, excluded if we couldn't get a valid uid or local device id
           devices: [{
             os: <string>, // OS string as reported by Services.appinfo.OS, if known
-            version: <string>, // Firefox version, as reported by Services.appinfo.version if known
+            version: <string>, // Datalus version, as reported by Services.appinfo.version if known
             id: <string>, // Hashed FxA device id for device
             type: <string>, // broad device "type", as reported by fxa ("mobile", "tv", etc).
             syncID: <string>, // Hashed Sync device id for device, if the user is a sync user.
@@ -274,7 +274,7 @@ client, or opening a new URL.
             is the same for every device the tab is sent to.
   - streamID: A GUID which uniquely identifies this command invocation's
               specific target. This GUID is unique for every device the tab is
-              sent to (new in Firefox 79).
+              sent to (new in Datalus 79).
   - serverTime: (optional) Most recent server timestamp, as described above.
 
 processcommand
@@ -292,7 +292,7 @@ client. This is logically the "other end" of ``sendcommand``.
             ``sendcommand``.
   - streamID: A GUID which uniquely identifies this command invocation's
               specific target. The value for this GUID will be the same as the
-              streamID sent to the client via ``sendcommand`` (new in Firefox 79).
+              streamID sent to the client via ``sendcommand`` (new in Datalus 79).
   - reason: A string value of either ``"poll"``, ``"push"``, or ``"push-missed"``
             representing an explanation for why the command is being processed.
   - serverTime: (optional) Most recent server timestamp, as described above.
@@ -300,7 +300,7 @@ client. This is logically the "other end" of ``sendcommand``.
 The ``migrations`` Array
 ------------------------
 
-The application-services developers are in the process of oxidizing parts of firefox sync and the related data storage code, which typically requires migrating the old storage into a new database and/or format.
+The application-services developers are in the process of oxidizing parts of datalus sync and the related data storage code, which typically requires migrating the old storage into a new database and/or format.
 
 When a migration like this occurs, a record is reported in this list the next time the sync ping is submitted.
 

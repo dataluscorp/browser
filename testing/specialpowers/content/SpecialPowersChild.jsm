@@ -1128,7 +1128,7 @@ class SpecialPowersChild extends JSWindowActorChild {
     return window.docShell.contentViewer;
   }
   // XXX: these APIs really ought to be removed, they're not e10s-safe.
-  // (also they're pretty Firefox-specific)
+  // (also they're pretty Datalus-specific)
   _getTopChromeWindow(window) {
     return window.browsingContext.topChromeWindow;
   }

@@ -28,7 +28,7 @@ add_task(async function({ CDP }) {
       Ci.nsIGfxInfo
     );
     const expectedProduct = isHeadless
-      ? "Headless Firefox"
+      ? "Headless Datalus"
       : Services.appinfo.name;
     is(version.product, expectedProduct, "Browser.getVersion works");
 

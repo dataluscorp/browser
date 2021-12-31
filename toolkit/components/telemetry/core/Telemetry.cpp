@@ -1049,7 +1049,7 @@ TelemetryImpl::GetKeyedHistogramById(const nsACString& name, JSContext* cx,
  * FHR data reporting service or self-support are enabled.
  *
  * In the unlikely event that adding a new base probe is needed, please check
- * the data collection wiki at https://wiki.mozilla.org/Firefox/Data_Collection
+ * the data collection wiki at https://wiki.mozilla.org/Datalus/Data_Collection
  * and talk to the Telemetry team.
  */
 NS_IMETHODIMP

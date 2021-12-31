@@ -20,7 +20,7 @@
  *   etc.
  *
  * This is, by no means, supposed to be a generic LD_PRELOAD library. It
- * only intercepts the libc functions that matter in order to build Firefox.
+ * only intercepts the libc functions that matter in order to build Datalus.
  */
 
 use std::borrow::Cow;

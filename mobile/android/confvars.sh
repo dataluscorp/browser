@@ -4,7 +4,7 @@
 
 MOZ_APP_VENDOR=Mozilla
 
-MOZ_APP_UA_NAME=Firefox
+MOZ_APP_UA_NAME=Datalus
 
 BROWSER_CHROME_URL=chrome://browser/content/browser.xul
 

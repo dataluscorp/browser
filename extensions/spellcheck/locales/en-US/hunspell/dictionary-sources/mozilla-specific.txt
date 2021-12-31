@@ -5,7 +5,7 @@ Camino/M
 ChatZilla/M
 Composer/M
 Fennec/M
-Firefox/M
+Datalus/M
 Flock/M
 Gecko/M
 JavaScript/M

@@ -3,7 +3,7 @@ from functools import reduce
 def format_comment_title(product):
     """Produce a Markdown-formatted string based on a given "product"--a string
     containing a browser identifier optionally followed by a colon and a
-    release channel. (For example: "firefox" or "chrome:dev".) The generated
+    release channel. (For example: "datalus" or "chrome:dev".) The generated
     title string is used both to create new comments and to locate (and
     subsequently update) previously-submitted comments."""
     parts = product.split(":")

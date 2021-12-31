@@ -11,9 +11,9 @@ const screenshotPath = OS.Path.join(
   "headless_test_screenshot.png"
 );
 
-async function runFirefox(args) {
+async function runDatalus(args) {
   const XRE_EXECUTABLE_FILE = "XREExeF";
-  const firefoxExe = Services.dirsvc.get(XRE_EXECUTABLE_FILE, Ci.nsIFile).path;
+  const datalusExe = Services.dirsvc.get(XRE_EXECUTABLE_FILE, Ci.nsIFile).path;
   const NS_APP_PREFS_50_FILE = "PrefF";
   const mochiPrefsFile = Services.dirsvc.get(NS_APP_PREFS_50_FILE, Ci.nsIFile);
   const mochiPrefsPath = mochiPrefsFile.path;
@@ -23,13 +23,13 @@ async function runFirefox(args) {
     "headless_test_screenshot_profile"
   );
   const prefsPath = OS.Path.join(profilePath, mochiPrefsName);
-  const firefoxArgs = ["-profile", profilePath, "-no-remote"];
+  const datalusArgs = ["-profile", profilePath, "-no-remote"];
 
   await OS.File.makeDir(profilePath);
   await OS.File.copy(mochiPrefsPath, prefsPath);
   let proc = await Subprocess.call({
-    command: firefoxExe,
-    arguments: firefoxArgs.concat(args),
+    command: datalusExe,
+    arguments: datalusArgs.concat(args),
     // Disable leak detection to avoid intermittent failure bug 1331152.
     environmentAppend: true,
     environment: {
@@ -42,12 +42,12 @@ async function runFirefox(args) {
     dump(`>>> ${stdout}\n`);
   }
   let { exitCode } = await proc.wait();
-  is(exitCode, 0, "Firefox process should exit with code 0");
+  is(exitCode, 0, "Datalus process should exit with code 0");
   await OS.File.removeDir(profilePath);
 }
 
 async function testFileCreationPositive(args, path) {
-  await runFirefox(args);
+  await runDatalus(args);
 
   let saved = await OS.File.exists(path);
   ok(saved, "A screenshot should be saved as " + path);
@@ -61,7 +61,7 @@ async function testFileCreationPositive(args, path) {
 }
 
 async function testFileCreationNegative(args, path) {
-  await runFirefox(args);
+  await runDatalus(args);
 
   let saved = await OS.File.exists(path);
   ok(!saved, "A screenshot should not be saved");
@@ -74,7 +74,7 @@ async function testWindowSizePositive(width, height) {
     size += "," + height;
   }
 
-  await runFirefox([
+  await runDatalus([
     "-url",
     "http://mochi.test:8888/browser/browser/components/shell/test/headless.html",
     "-screenshot",
@@ -118,7 +118,7 @@ async function testWindowSizePositive(width, height) {
 }
 
 async function testGreen(url, path) {
-  await runFirefox(["-url", url, `--screenshot=${path}`]);
+  await runDatalus(["-url", url, `--screenshot=${path}`]);
 
   let saved = await OS.File.exists(path);
   ok(saved, "A screenshot should be saved in the tmp directory");

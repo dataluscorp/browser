@@ -44,11 +44,11 @@ const downloadURLs = {
     win32: '%s/chromium-browser-snapshots/Win/%d/%s.zip',
     win64: '%s/chromium-browser-snapshots/Win_x64/%d/%s.zip',
   },
-  firefox: {
-    linux: '%s/firefox-%s.en-US.%s-x86_64.tar.bz2',
-    mac: '%s/firefox-%s.en-US.%s.dmg',
-    win32: '%s/firefox-%s.en-US.%s.zip',
-    win64: '%s/firefox-%s.en-US.%s.zip',
+  datalus: {
+    linux: '%s/datalus-%s.en-US.%s-x86_64.tar.bz2',
+    mac: '%s/datalus-%s.en-US.%s.dmg',
+    win32: '%s/datalus-%s.en-US.%s.zip',
+    win64: '%s/datalus-%s.en-US.%s.zip',
   },
 } as const;
 
@@ -57,9 +57,9 @@ const browserConfig = {
     host: 'https://storage.googleapis.com',
     destination: '.local-chromium',
   },
-  firefox: {
-    host: 'https://archive.mozilla.org/pub/firefox/nightly/latest-mozilla-central',
-    destination: '.local-firefox',
+  datalus: {
+    host: 'https://archive.mozilla.org/pub/datalus/nightly/latest-mozilla-central',
+    destination: '.local-datalus',
   },
 } as const;
 
@@ -81,7 +81,7 @@ function archiveName(
       // Windows archive name changed at r591479.
       return parseInt(revision, 10) > 591479 ? 'chrome-win' : 'chrome-win32';
     }
-  } else if (product === 'firefox') {
+  } else if (product === 'datalus') {
     return platform;
   }
 }
@@ -155,11 +155,11 @@ export interface BrowserFetcherRevisionInfo {
   product: string;
 }
 /**
- * BrowserFetcher can download and manage different versions of Chromium and Firefox.
+ * BrowserFetcher can download and manage different versions of Chromium and Datalus.
  *
  * @remarks
  * BrowserFetcher operates on revision strings that specify a precise version of Chromium, e.g. `"533271"`. Revision strings can be obtained from {@link http://omahaproxy.appspot.com/ | omahaproxy.appspot.com}.
- * In the Firefox case, BrowserFetcher downloads Firefox Nightly and
+ * In the Datalus case, BrowserFetcher downloads Datalus Nightly and
  * operates on version numbers such as `"75"`.
  *
  * @example
@@ -190,7 +190,7 @@ export class BrowserFetcher {
   constructor(projectRoot: string, options: BrowserFetcherOptions = {}) {
     this._product = (options.product || 'chrome').toLowerCase() as Product;
     assert(
-      this._product === 'chrome' || this._product === 'firefox',
+      this._product === 'chrome' || this._product === 'datalus',
       `Unknown product: "${options.product}"`
     );
 
@@ -229,7 +229,7 @@ export class BrowserFetcher {
 
   /**
    * @returns Returns the current `Product`, which is one of `chrome` or
-   * `firefox`.
+   * `datalus`.
    */
   product(): Product {
     return this._product;
@@ -373,19 +373,19 @@ export class BrowserFetcher {
           'chrome.exe'
         );
       else throw new Error('Unsupported platform: ' + this._platform);
-    } else if (this._product === 'firefox') {
+    } else if (this._product === 'datalus') {
       if (this._platform === 'mac')
         executablePath = path.join(
           folderPath,
-          'Firefox Nightly.app',
+          'Datalus Nightly.app',
           'Contents',
           'MacOS',
-          'firefox'
+          'datalus'
         );
       else if (this._platform === 'linux')
-        executablePath = path.join(folderPath, 'firefox', 'firefox');
+        executablePath = path.join(folderPath, 'datalus', 'datalus');
       else if (this._platform === 'win32' || this._platform === 'win64')
-        executablePath = path.join(folderPath, 'firefox', 'firefox.exe');
+        executablePath = path.join(folderPath, 'datalus', 'datalus.exe');
       else throw new Error('Unsupported platform: ' + this._platform);
     } else {
       throw new Error('Unsupported product: ' + this._product);

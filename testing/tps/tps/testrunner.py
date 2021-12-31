@@ -17,7 +17,7 @@ import mozinfo
 from mozprofile import Profile
 import mozversion
 
-from .firefoxrunner import TPSFirefoxRunner
+from .datalusrunner import TPSDatalusRunner
 from .phase import TPSTestPhase
 
 
@@ -96,8 +96,8 @@ class TPSTestRunner(object):
     }
 
     syncVerRe = re.compile(r"Sync version: (?P<syncversion>.*)\n")
-    ffVerRe = re.compile(r"Firefox version: (?P<ffver>.*)\n")
-    ffBuildIDRe = re.compile(r"Firefox buildid: (?P<ffbuildid>.*)\n")
+    ffVerRe = re.compile(r"Datalus version: (?P<ffver>.*)\n")
+    ffBuildIDRe = re.compile(r"Datalus buildid: (?P<ffbuildid>.*)\n")
 
     def __init__(
         self,
@@ -130,7 +130,7 @@ class TPSTestRunner(object):
         self.changeset = None
         self.errorlogs = {}
         self.extensionDir = extensionDir
-        self.firefoxRunner = None
+        self.datalusRunner = None
         self.nightly = False
         self.numfailed = 0
         self.numpassed = 0
@@ -174,8 +174,8 @@ class TPSTestRunner(object):
             postdata["numpassed"] = self.numpassed
         if self.numfailed is not None:
             postdata["numfailed"] = self.numfailed
-        if self.firefoxRunner and self.firefoxRunner.url:
-            postdata["firefoxrunnerurl"] = self.firefoxRunner.url
+        if self.datalusRunner and self.datalusRunner.url:
+            postdata["datalusrunnerurl"] = self.datalusRunner.url
 
         postdata["sendTo"] = sendTo
         results["results"].append(postdata)
@@ -265,7 +265,7 @@ class TPSTestRunner(object):
                     testpath,
                     self.logfile,
                     self.env,
-                    self.firefoxRunner,
+                    self.datalusRunner,
                     self.log,
                     ignore_unused_engines=self.ignore_unused_engines,
                 )
@@ -291,7 +291,7 @@ class TPSTestRunner(object):
                 testpath,
                 self.logfile,
                 self.env,
-                self.firefoxRunner,
+                self.datalusRunner,
                 self.log,
             )
 
@@ -309,9 +309,9 @@ class TPSTestRunner(object):
         match = self.syncVerRe.search(logdata)
         sync_version = match.group("syncversion") if match else "unknown"
         match = self.ffVerRe.search(logdata)
-        firefox_version = match.group("ffver") if match else "unknown"
+        datalus_version = match.group("ffver") if match else "unknown"
         match = self.ffBuildIDRe.search(logdata)
-        firefox_buildid = match.group("ffbuildid") if match else "unknown"
+        datalus_buildid = match.group("ffbuildid") if match else "unknown"
         f.close()
         if phase.status == "PASS":
             logdata = ""
@@ -347,14 +347,14 @@ class TPSTestRunner(object):
 
         resultdata = {
             "productversion": {
-                "version": firefox_version,
-                "buildid": firefox_buildid,
-                "builddate": firefox_buildid[0:8],
-                "product": "Firefox",
+                "version": datalus_version,
+                "buildid": datalus_buildid,
+                "builddate": datalus_buildid[0:8],
+                "product": "Datalus",
                 "repository": apprepo,
                 "changeset": appchangeset,
             },
-            "addonversion": {"version": sync_version, "product": "Firefox Sync"},
+            "addonversion": {"version": sync_version, "product": "Datalus Sync"},
             "name": testname,
             "message": result[1],
             "state": result[0],
@@ -405,10 +405,10 @@ class TPSTestRunner(object):
             self.rlock.acquire()
 
         try:
-            # Create the Firefox runner, which will download and install the
+            # Create the Datalus runner, which will download and install the
             # build, as needed.
-            if not self.firefoxRunner:
-                self.firefoxRunner = TPSFirefoxRunner(self.binary)
+            if not self.datalusRunner:
+                self.datalusRunner = TPSDatalusRunner(self.binary)
 
             # now, run the test group
             self.run_test_group()

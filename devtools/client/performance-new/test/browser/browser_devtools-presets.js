@@ -32,15 +32,15 @@ add_task(async function test() {
 
     {
       const presets = await getNearestInputFromText(document, "Settings");
-      setReactFriendlyInputValue(presets, "firefox-platform");
+      setReactFriendlyInputValue(presets, "datalus-platform");
       is(
         presets.value,
-        "firefox-platform",
-        "The preset was changed to Firefox Platform"
+        "datalus-platform",
+        "The preset was changed to Datalus Platform"
       );
       ok(
         await devToolsActiveConfigurationHasFeature(document, "stackwalk"),
-        "Stack walking is used in Firefox Platform mode."
+        "Stack walking is used in Datalus Platform mode."
       );
     }
   });

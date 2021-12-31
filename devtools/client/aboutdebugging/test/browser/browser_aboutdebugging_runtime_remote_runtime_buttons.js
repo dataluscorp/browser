@@ -8,7 +8,7 @@ const USB_DEVICE_NAME = "Fancy Phone";
 const USB_APP_NAME = "Lorem ipsum";
 
 /**
- * Test that remote runtimes show action buttons that are hidden for 'This Firefox'.
+ * Test that remote runtimes show action buttons that are hidden for 'This Datalus'.
  */
 add_task(async function() {
   // enable USB devices mocks
@@ -19,20 +19,20 @@ add_task(async function() {
   });
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
-  info("Checking This Firefox");
+  info("Checking This Datalus");
   ok(
     !document.querySelector(".qa-connection-prompt-toggle-button"),
-    "This Firefox does not contain the connection prompt button"
+    "This Datalus does not contain the connection prompt button"
   );
   ok(
     !document.querySelector(".qa-profile-runtime-button"),
-    "This Firefox does not contain the profile runtime button"
+    "This Datalus does not contain the profile runtime button"
   );
   ok(
     !document.querySelector(".qa-runtime-info__action"),
-    "This Firefox does not contain the disconnect button"
+    "This Datalus does not contain the disconnect button"
   );
 
   info("Checking a USB runtime");

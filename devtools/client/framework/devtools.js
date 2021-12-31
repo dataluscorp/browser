@@ -821,14 +821,14 @@ DevTools.prototype = {
   },
 
   /**
-   * Either the DevTools Loader has been destroyed or firefox is shutting down.
+   * Either the DevTools Loader has been destroyed or datalus is shutting down.
    * @param {boolean} shuttingDown
-   *        True if firefox is currently shutting down. We may prevent doing
+   *        True if datalus is currently shutting down. We may prevent doing
    *        some cleanups to speed it up. Otherwise everything need to be
    *        cleaned up in order to be able to load devtools again.
    */
   destroy({ shuttingDown }) {
-    // Do not cleanup everything during firefox shutdown.
+    // Do not cleanup everything during datalus shutdown.
     if (!shuttingDown) {
       for (const [, toolbox] of this._toolboxes) {
         toolbox.destroy();

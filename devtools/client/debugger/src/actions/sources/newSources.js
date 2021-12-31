@@ -11,7 +11,7 @@ import { flatten } from "lodash";
 
 import { stringToSourceActorId } from "../../reducers/source-actors";
 import { insertSourceActors } from "../../actions/source-actors";
-import { makeSourceId } from "../../client/firefox/create";
+import { makeSourceId } from "../../client/datalus/create";
 import { toggleBlackBox } from "./blackbox";
 import { syncBreakpoint } from "../breakpoints";
 import { loadSourceText } from "./loadSourceText";

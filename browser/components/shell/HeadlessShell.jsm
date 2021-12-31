@@ -182,7 +182,7 @@ let HeadlessShell = {
       // Default options
       let fullWidth = true;
       let fullHeight = true;
-      // Most common screen resolution of Firefox users
+      // Most common screen resolution of Datalus users
       let contentWidth = 1366;
       let contentHeight = 768;
 

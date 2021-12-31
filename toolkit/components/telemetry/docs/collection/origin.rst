@@ -4,24 +4,24 @@
 Origin Telemetry
 ================
 
-*Origin Telemetry* is an experimental Firefox Telemetry mechanism that allows us to privately report origin-specific information in aggregate.
-In short, it allows us to get exact counts of how *many* Firefox clients do certain things on specific origins without us being able to know *which* clients were doing which things on which origins.
+*Origin Telemetry* is an experimental Datalus Telemetry mechanism that allows us to privately report origin-specific information in aggregate.
+In short, it allows us to get exact counts of how *many* Datalus clients do certain things on specific origins without us being able to know *which* clients were doing which things on which origins.
 
-As an example, Content Blocking would like to know which trackers Firefox blocked most frequently.
+As an example, Content Blocking would like to know which trackers Datalus blocked most frequently.
 Origin Telemetry allows us to count how many times a given tracker is blocked without being able to find out which clients were visiting pages that had those trackers on them.
 
 .. important::
 
     This mechanism is experimental and is a prototype.
-    Please do not try to use this without explicit permission from the Firefox Telemetry Team, as it's really only been designed to work for Content Blocking right now.
+    Please do not try to use this without explicit permission from the Datalus Telemetry Team, as it's really only been designed to work for Content Blocking right now.
 
-Adding or removing Origins or Metrics is not supported in artifact builds and build faster workflows. A non-artifact Firefox build is necessary to change these lists.
+Adding or removing Origins or Metrics is not supported in artifact builds and build faster workflows. A non-artifact Datalus build is necessary to change these lists.
 
-This mechanism is enabled on Firefox Nightly only at present.
+This mechanism is enabled on Datalus Nightly only at present.
 
 .. important::
 
-    Every new or changed data collection in Firefox needs a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`__ from a Data Steward.
+    Every new or changed data collection in Datalus needs a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`__ from a Data Steward.
 
 Privacy
 =======
@@ -43,7 +43,7 @@ To record that something happened on a given origin, three things must happen:
 3. A call must be made to the Origin Telemetry API. (To let Origin Telemetry know "that" happened "there")
 
 At present the lists of origins and metrics are hardcoded in C++.
-Please consult the Firefox Telemetry Team before changing these lists.
+Please consult the Datalus Telemetry Team before changing these lists.
 
 Origins can be arbitrary byte sequences of any length.
 Do not add duplicate origins to the list.
@@ -114,7 +114,7 @@ It returns a structure of the form:
 Example
 =======
 
-Firefox Content Blocking blocks web content from certain origins present on a list.
+Datalus Content Blocking blocks web content from certain origins present on a list.
 Users can exempt certain origins from being blocked.
 To improve Content Blocking's effectiveness we need to know these two "what's" of information about that list of "wheres".
 
@@ -163,4 +163,4 @@ This encoding provides no privacy benefit and is just used to make Data Engineer
 Version History
 ===============
 
-- Firefox 68: Initial Origin Telemetry support (Nightly Only) (`bug 1536565 <https://bugzilla.mozilla.org/show_bug.cgi?id=1536565>`_).
+- Datalus 68: Initial Origin Telemetry support (Nightly Only) (`bug 1536565 <https://bugzilla.mozilla.org/show_bug.cgi?id=1536565>`_).

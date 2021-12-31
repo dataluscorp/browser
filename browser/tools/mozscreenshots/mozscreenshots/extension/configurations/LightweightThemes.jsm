@@ -28,7 +28,7 @@ var LightweightThemes = {
       selectors: [],
       async applyConfig() {
         let addon = await AddonManager.getAddonByID(
-          "firefox-compact-light@mozilla.org"
+          "datalus-compact-light@mozilla.org"
         );
         await addon.enable();
       },
@@ -38,7 +38,7 @@ var LightweightThemes = {
       selectors: [],
       async applyConfig() {
         let addon = await AddonManager.getAddonByID(
-          "firefox-compact-dark@mozilla.org"
+          "datalus-compact-dark@mozilla.org"
         );
         await addon.enable();
       },
@@ -48,7 +48,7 @@ var LightweightThemes = {
       selectors: [],
       async applyConfig() {
         let addon = await AddonManager.getAddonByID(
-          "firefox-alpenglow@mozilla.org"
+          "datalus-alpenglow@mozilla.org"
         );
         await addon.enable();
       },

@@ -316,7 +316,7 @@ nsresult HttpConnectionUDP::OnHeadersAvailable(nsAHttpTransaction* trans,
   MOZ_ASSERT(responseHead, "No response head?");
 
   DebugOnly<nsresult> rv =
-      responseHead->SetHeader(nsHttp::X_Firefox_Http3, mAlpnToken);
+      responseHead->SetHeader(nsHttp::X_Datalus_Http3, mAlpnToken);
   MOZ_ASSERT(NS_SUCCEEDED(rv));
 
   // deal with 408 Server Timeouts

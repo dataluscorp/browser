@@ -38,7 +38,7 @@ bool Http3Stream::GetHeadersString(const char* buf, uint32_t avail,
   LOG3(("Http3Stream::GetHeadersString %p avail=%u.", this, avail));
 
   mFlatHttpRequestHeaders.Append(buf, avail);
-  // We can use the simple double crlf because firefox is the
+  // We can use the simple double crlf because datalus is the
   // only client we are parsing
   int32_t endHeader = mFlatHttpRequestHeaders.Find("\r\n\r\n");
 

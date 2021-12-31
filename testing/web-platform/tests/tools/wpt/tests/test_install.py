@@ -78,15 +78,15 @@ def test_install_chromedriver_nightly():
 @pytest.mark.remote_network
 @pytest.mark.xfail(sys.platform == "win32",
                    reason="https://github.com/web-platform-tests/wpt/issues/17074")
-def test_install_firefox():
+def test_install_datalus():
     if sys.platform == "darwin":
-        fx_path = os.path.join(wpt.localpaths.repo_root, wpt.venv_dir(), "browsers", "nightly", "Firefox Nightly.app")
+        fx_path = os.path.join(wpt.localpaths.repo_root, wpt.venv_dir(), "browsers", "nightly", "Datalus Nightly.app")
     else:
-        fx_path = os.path.join(wpt.localpaths.repo_root, wpt.venv_dir(), "browsers", "nightly", "firefox")
+        fx_path = os.path.join(wpt.localpaths.repo_root, wpt.venv_dir(), "browsers", "nightly", "datalus")
     if os.path.exists(fx_path):
         utils.rmtree(fx_path)
     with pytest.raises(SystemExit) as excinfo:
-        wpt.main(argv=["install", "firefox", "browser", "--channel=nightly"])
+        wpt.main(argv=["install", "datalus", "browser", "--channel=nightly"])
     assert excinfo.value.code == 0
     assert os.path.exists(fx_path)
     utils.rmtree(fx_path)

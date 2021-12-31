@@ -602,7 +602,7 @@ this.TopSitesFeed = class TopSitesFeed {
         const nextAvailable = pinnedSites.indexOf(null);
         // Only add a search shortcut if the site isn't already pinned, we
         // haven't previously inserted it, there's space to pin it, and the
-        // search engine is available in Firefox
+        // search engine is available in Datalus
         if (
           !pinnedSites.find(s => s && shortURL(s) === shortcut.shortURL) &&
           !prevInsertedShortcuts.includes(shortcut.shortURL) &&

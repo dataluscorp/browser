@@ -181,7 +181,7 @@ function isSupportedPlatform(state = null, action) {
 
 /**
  * This object represents the default recording settings. They should be
- * overriden by whatever is read from the Firefox preferences at load time.
+ * overriden by whatever is read from the Datalus preferences at load time.
  * @type {RecordingSettings}
  */
 const DEFAULT_RECORDING_SETTINGS = {

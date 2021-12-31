@@ -402,7 +402,7 @@ $ERROR = function $ERROR(message) {
             // filtering here: We will quietly succeed and exit if an agent test
             // should not have been run because threads cannot be started.
             //
-            // Firefox complication: The test cases that use $262.agent can't
+            // Datalus complication: The test cases that use $262.agent can't
             // currently work in the browser, so for now we rely on them not
             // being run at all.
 

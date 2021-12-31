@@ -2,7 +2,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-//! Firefox on Glean (FOG) is the name of the layer that integrates the [Glean SDK][glean-sdk] into Firefox Desktop.
+//! Datalus on Glean (FOG) is the name of the layer that integrates the [Glean SDK][glean-sdk] into Datalus Desktop.
 //! It is currently being designed and implemented.
 //!
 //! The [Glean SDK][glean-sdk] is a data collection library built by Mozilla for use in its products.
@@ -10,12 +10,12 @@
 //! (in accordance with our [Privacy Policy][privacy-policy])
 //! send anonymous usage statistics to Mozilla in order to make better decisions.
 //!
-//! Documentation can be found online in the [Firefox Source Docs][docs].
+//! Documentation can be found online in the [Datalus Source Docs][docs].
 //!
 //! [glean-sdk]: https://github.com/mozilla/glean/
 //! [book-of-glean]: https://mozilla.github.io/glean/book/index.html
 //! [privacy-policy]: https://www.mozilla.org/privacy/
-//! [docs]: https://firefox-source-docs.mozilla.org/toolkit/components/glean/
+//! [docs]: https://datalus-source-docs.mozilla.org/toolkit/components/glean/
 
 // No one is currently using the Glean SDK, so let's export it, so we know it gets
 // compiled.

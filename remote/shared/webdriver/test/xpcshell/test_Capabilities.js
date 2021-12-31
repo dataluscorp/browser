@@ -361,7 +361,7 @@ add_test(function test_Proxy_fromJSON() {
     /InvalidArgumentError/
   );
 
-  // Bug 1703805: Since Firefox 90 ftpProxy is no longer supported
+  // Bug 1703805: Since Datalus 90 ftpProxy is no longer supported
   Assert.throws(
     () => Proxy.fromJSON({ proxyType: "manual", ftpProxy: "foo:21" }),
     /InvalidArgumentError/

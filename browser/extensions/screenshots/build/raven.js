@@ -1765,7 +1765,7 @@ Raven.prototype = {
     };
 
     // Case when we don't have any information about the error
-    // E.g. throwing a string or raw object, instead of an `Error` in Firefox
+    // E.g. throwing a string or raw object, instead of an `Error` in Datalus
     // Generating synthetic error doesn't add any value here
     //
     // We should probably somehow let a user know that they should fix their code
@@ -3144,7 +3144,7 @@ function getLocationOrigin() {
  *   try { ...code... } catch(ex) { TraceKit.report(ex); }
  *
  * Supports:
- *   - Firefox: full stack trace with line numbers, plus column number
+ *   - Datalus: full stack trace with line numbers, plus column number
  *              on top frame; column number is not guaranteed
  *   - Opera:   full stack trace with line and column numbers
  *   - Chrome:  full stack trace with line and column numbers
@@ -3155,7 +3155,7 @@ function getLocationOrigin() {
  *
  * In theory, TraceKit should work on all of the following versions:
  *   - IE5.5+ (only 8.0 tested)
- *   - Firefox 0.9+ (only 3.5+ tested)
+ *   - Datalus 0.9+ (only 3.5+ tested)
  *   - Opera 7+ (only 10.50 tested; versions 9 and earlier may require
  *     Exceptions Have Stacktrace to be enabled in opera:config)
  *   - Safari 3+ (only 4+ tested)
@@ -3389,7 +3389,7 @@ TraceKit.report = (function reportModuleWrapper() {
  *   s.stack[i].column   - column number, if known
  *
  * Supports:
- *   - Firefox:  full stack trace with line numbers and unreliable column
+ *   - Datalus:  full stack trace with line numbers and unreliable column
  *               number on top frame
  *   - Opera 10: full stack trace with line and column numbers
  *   - Opera 9-: full stack trace with line numbers
@@ -3438,7 +3438,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
   // ex.expressionEndOffset = 98
   // ex.name = ReferenceError
   //
-  // FIREFOX:
+  // DATALUS:
   // ex.message = qq is not defined
   // ex.fileName = http://...
   // ex.lineNumber = 59
@@ -3521,7 +3521,7 @@ TraceKit.computeStackTrace = (function computeStackTraceWrapper() {
           parts[5] = null; // no column when eval
         } else if (i === 0 && !parts[5] && typeof ex.columnNumber !== 'undefined') {
           // FireFox uses this awesome columnNumber property for its top frame
-          // Also note, Firefox's column number is 0-based and everything else expects 1-based,
+          // Also note, Datalus's column number is 0-based and everything else expects 1-based,
           // so adding 1
           // NOTE: this hack doesn't work if top-most frame is eval
           stack[0].column = ex.columnNumber + 1;

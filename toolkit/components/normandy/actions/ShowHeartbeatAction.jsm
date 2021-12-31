@@ -222,7 +222,7 @@ class ShowHeartbeatAction extends BaseAction {
       updateChannel: UpdateUtils.getUpdateChannel(false),
       utm_campaign: encodeURIComponent(message.replace(/\s+/g, "")),
       utm_medium: recipe.action,
-      utm_source: "firefox",
+      utm_source: "datalus",
     };
     if (includeTelemetryUUID) {
       args.userId = userId;

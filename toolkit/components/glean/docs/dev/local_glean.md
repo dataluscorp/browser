@@ -49,7 +49,7 @@ For local development and try runs you can replace this Glean implementation wit
     **Note:** If you're using a path dependency, `mach vendor rust` doesn't actually change files.
     Instead it pulls the files directly from the location on disk you specify.
 
-5. Finally build Firefox:
+5. Finally build Datalus:
 
     ```
     ./mach build

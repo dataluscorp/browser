@@ -10,7 +10,7 @@ added or removed and also the maintenance task to fix wrong counts.
 */
 
 const T_URI = Services.io.newURI(
-  "https://www.mozilla.org/firefox/nightly/firstrun/"
+  "https://www.mozilla.org/datalus/nightly/firstrun/"
 );
 
 async function getForeignCountForURL(conn, url) {

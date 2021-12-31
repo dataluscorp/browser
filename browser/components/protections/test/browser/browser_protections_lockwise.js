@@ -48,7 +48,7 @@ add_task(async function testNoLoginsLockwiseCardUI() {
     ).textContent;
     ok(
       lockwiseHeaderString.includes(
-        "Firefox Lockwise securely stores your passwords in your browser"
+        "Datalus Lockwise securely stores your passwords in your browser"
       ),
       "Correct lockwise header string is shown"
     );

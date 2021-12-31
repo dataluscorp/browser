@@ -212,7 +212,7 @@ LibSecret::~LibSecret() {
 }
 
 static const SecretSchema kSchema = {
-    "mozilla.firefox",
+    "mozilla.datalus",
     SECRET_SCHEMA_NONE,
     {{"string", SECRET_SCHEMA_ATTRIBUTE_STRING}, /* the label */
      {"NULL", SECRET_SCHEMA_ATTRIBUTE_STRING}}};

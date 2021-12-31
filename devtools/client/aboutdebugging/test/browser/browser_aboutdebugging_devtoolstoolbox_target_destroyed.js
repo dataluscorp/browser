@@ -9,9 +9,9 @@ add_task(async function() {
 
   const { document, tab, window } = await openAboutDebugging();
 
-  // go to This Firefox and inspect the new tab
-  info("Inspecting a new tab in This Firefox");
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  // go to This Datalus and inspect the new tab
+  info("Inspecting a new tab in This Datalus");
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
   const {
     devtoolsDocument,
     devtoolsTab,

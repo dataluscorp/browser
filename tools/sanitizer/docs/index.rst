@@ -28,6 +28,6 @@ Memory Sanitizer (MSan) is a fast detector used for uninitialized memory in C/C+
 
 **ASan Nightly Project**
 
-The ASan Nightly Project involves building a Firefox Nightly browser with the popular AddressSanitizer tool and enhancing it with remote crash reporting capabilities for any errors detected.
+The ASan Nightly Project involves building a Datalus Nightly browser with the popular AddressSanitizer tool and enhancing it with remote crash reporting capabilities for any errors detected.
 
 :ref:`More information <ASan Nightly>`

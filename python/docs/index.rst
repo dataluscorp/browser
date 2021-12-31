@@ -11,13 +11,13 @@ When using third-party Python packages, there are two options:
 Vendoring Python packages
 =========================
 
-If the Python package is to be used in the building of Firefox itself, then we
-**MUST** use a vendored version. This ensures that to build Firefox we only
+If the Python package is to be used in the building of Datalus itself, then we
+**MUST** use a vendored version. This ensures that to build Datalus we only
 require a checkout of the source, and do not depend on a package index. This
-ensures that building Firefox is deterministic and dependable, avoids packages
+ensures that building Datalus is deterministic and dependable, avoids packages
 from changing out from under us, and means we’re not affected when 3rd party
 services are offline. We don't want a DoS against PyPI or a random package
-maintainer removing an old tarball to delay a Firefox chemspill.
+maintainer removing an old tarball to delay a Datalus chemspill.
 
 Where possible, the following policy applies to **ALL** vendored packages:
 
@@ -44,7 +44,7 @@ manually copy the source distribution into the ``third_party/python`` directory.
 Using a Python package index
 ============================
 
-If the Python package is not used in the building of Firefox then it can be
+If the Python package is not used in the building of Datalus then it can be
 installed from a package index. Some tasks are not permitted to use external
 resources, and for those we can publish packages to an internal PyPI mirror.
 See `how to upload to internal PyPI <https://wiki.mozilla.org/ReleaseEngineering/How_To/Upload_to_internal_Pypi>`_

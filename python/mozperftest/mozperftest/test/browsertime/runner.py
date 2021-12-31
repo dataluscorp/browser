@@ -252,9 +252,9 @@ class BrowsertimeRunner(NodeRunner):
         # difficult to interpret type errors.
         extra_args = []
 
-        # Default to Firefox.  Override with `-b ...` or `--browser=...`.
+        # Default to Datalus.  Override with `-b ...` or `--browser=...`.
         if not matches(args, "-b", "--browser"):
-            extra_args.extend(("-b", "firefox"))
+            extra_args.extend(("-b", "datalus"))
 
         # Default to not collect HAR.  Override with `--skipHar=false`.
         if not matches(args, "--har", "--skipHar", "--gzipHar"):
@@ -265,27 +265,27 @@ class BrowsertimeRunner(NodeRunner):
         if not matches(args, "--android"):
             binary = self.get_arg("binary")
             if binary is not None:
-                extra_args.extend(("--firefox.binaryPath", binary))
+                extra_args.extend(("--datalus.binaryPath", binary))
             else:
-                # If --firefox.binaryPath is not specified, default to the objdir binary
-                # Note: --firefox.release is not a real browsertime option, but it will
+                # If --datalus.binaryPath is not specified, default to the objdir binary
+                # Note: --datalus.release is not a real browsertime option, but it will
                 #       silently ignore it instead and default to a release installation.
                 if (
                     not matches(
                         args,
-                        "--firefox.binaryPath",
-                        "--firefox.release",
-                        "--firefox.nightly",
-                        "--firefox.beta",
-                        "--firefox.developer",
+                        "--datalus.binaryPath",
+                        "--datalus.release",
+                        "--datalus.nightly",
+                        "--datalus.beta",
+                        "--datalus.developer",
                     )
                     and extract_browser_name(args) != "chrome"
                 ):
-                    extra_args.extend(("--firefox.binaryPath", self.get_binary_path()))
+                    extra_args.extend(("--datalus.binaryPath", self.get_binary_path()))
 
         geckodriver = self.get_arg("geckodriver")
         if geckodriver is not None:
-            extra_args.extend(("--firefox.geckodriverPath", geckodriver))
+            extra_args.extend(("--datalus.geckodriverPath", geckodriver))
 
         if extra_args:
             self.debug(
@@ -301,16 +301,16 @@ class BrowsertimeRunner(NodeRunner):
         args_list = [
             "--android",
             # Work around a `selenium-webdriver` issue where Browsertime
-            # fails to find a Firefox binary even though we're going to
+            # fails to find a Datalus binary even though we're going to
             # actually do things on an Android device.
-            "--firefox.binaryPath",
+            "--datalus.binaryPath",
             self.node_path,
-            "--firefox.android.package",
+            "--datalus.android.package",
             app_name,
         ]
         activity = self.get_arg("android-activity")
         if activity is not None:
-            args_list += ["--firefox.android.activity", activity]
+            args_list += ["--datalus.android.activity", activity]
 
         return args_list
 
@@ -360,7 +360,7 @@ class BrowsertimeRunner(NodeRunner):
         args = [
             "--resultDir",
             str(result_dir),
-            "--firefox.profileTemplate",
+            "--datalus.profileTemplate",
             profile,
             "--iterations",
             str(self.get_arg("iterations")),
@@ -368,13 +368,13 @@ class BrowsertimeRunner(NodeRunner):
         ]
 
         # Set *all* prefs found in browser_prefs because
-        # browsertime will override the ones found in firefox.profileTemplate
-        # with its own defaults at `firefoxPreferences.js`
-        # Using `--firefox.preference` ensures we override them.
+        # browsertime will override the ones found in datalus.profileTemplate
+        # with its own defaults at `datalusPreferences.js`
+        # Using `--datalus.preference` ensures we override them.
         # see https://github.com/sitespeedio/browsertime/issues/1427
         browser_prefs = metadata.get_options("browser_prefs")
         for key, value in browser_prefs.items():
-            args += ["--firefox.preference", f"{key}:{value}"]
+            args += ["--datalus.preference", f"{key}:{value}"]
 
         if self.get_arg("verbose"):
             args += ["-vvv"]
@@ -384,7 +384,7 @@ class BrowsertimeRunner(NodeRunner):
         if visualmetrics:
             args += ["--video", "true"]
             if not self.get_arg("no-window-recorder"):
-                args += ["--firefox.windowRecorder", "true"]
+                args += ["--datalus.windowRecorder", "true"]
 
         extra_options = self.get_arg("extra-options")
         if extra_options:

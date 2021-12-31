@@ -192,7 +192,7 @@ add_task(async function() {
 
   // And hosts with no dot in them are special, due to requiring safelisting.
   info("unknown host");
-  query = "firefox";
+  query = "datalus";
   context = createContext(query, { isPrivate: false });
   await check_results({
     context,
@@ -205,7 +205,7 @@ add_task(async function() {
   });
 
   info("string with known host");
-  query = "firefox/get";
+  query = "datalus/get";
   context = createContext(query, { isPrivate: false });
   await check_results({
     context,
@@ -217,13 +217,13 @@ add_task(async function() {
     ],
   });
 
-  Services.prefs.setBoolPref("browser.fixup.domainwhitelist.firefox", true);
+  Services.prefs.setBoolPref("browser.fixup.domainwhitelist.datalus", true);
   registerCleanupFunction(() => {
-    Services.prefs.clearUserPref("browser.fixup.domainwhitelist.firefox");
+    Services.prefs.clearUserPref("browser.fixup.domainwhitelist.datalus");
   });
 
   info("known host");
-  query = "firefox";
+  query = "datalus";
   context = createContext(query, { isPrivate: false });
   await check_results({
     context,
@@ -241,7 +241,7 @@ add_task(async function() {
   });
 
   info("url with known host");
-  query = "firefox/get";
+  query = "datalus/get";
   context = createContext(query, { isPrivate: false });
   await check_results({
     context,
@@ -250,7 +250,7 @@ add_task(async function() {
         source: UrlbarUtils.RESULT_SOURCE.OTHER_LOCAL,
         uri: `http://${query}`,
         title: `http://${query}`,
-        iconUri: "page-icon:http://firefox/",
+        iconUri: "page-icon:http://datalus/",
         heuristic: true,
       }),
     ],

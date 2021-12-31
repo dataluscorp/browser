@@ -486,7 +486,7 @@ case "$target" in
     if test -n "$GNU_CC" -o -n "$CLANG_CC"; then
         # $GNU_CC will match gcc and clang; while $CLANG_CC will match only clang
         if test -z "$CLANG_CC"; then
-            AC_MSG_ERROR(Firefox cannot be built with mingw-gcc and requires a mingw-clang toolchain to work)
+            AC_MSG_ERROR(Datalus cannot be built with mingw-gcc and requires a mingw-clang toolchain to work)
         fi
 
         DSO_LDOPTS='-shared'
@@ -1269,7 +1269,7 @@ dnl Check for gcc -pipe support
 dnl ========================================================
 AC_MSG_CHECKING([for -pipe support])
 if test -n "$GNU_CC" -a -n "$GNU_CXX"; then
-    dnl Any gcc that supports firefox supports -pipe.
+    dnl Any gcc that supports datalus supports -pipe.
     CFLAGS="$CFLAGS -pipe"
     CXXFLAGS="$CXXFLAGS -pipe"
     AC_MSG_RESULT([yes])

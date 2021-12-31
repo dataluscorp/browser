@@ -366,14 +366,14 @@ Let's say you want to make a series of manifests for a given directory structure
 
 .. code-block:: text
 
-    testing/mozmill/tests/firefox/
-    testing/mozmill/tests/firefox/testAwesomeBar/
-    testing/mozmill/tests/firefox/testPreferences/
-    testing/mozmill/tests/firefox/testPrivateBrowsing/
-    testing/mozmill/tests/firefox/testSessionStore/
-    testing/mozmill/tests/firefox/testTechnicalTools/
-    testing/mozmill/tests/firefox/testToolbar/
-    testing/mozmill/tests/firefox/restartTests
+    testing/mozmill/tests/datalus/
+    testing/mozmill/tests/datalus/testAwesomeBar/
+    testing/mozmill/tests/datalus/testPreferences/
+    testing/mozmill/tests/datalus/testPrivateBrowsing/
+    testing/mozmill/tests/datalus/testSessionStore/
+    testing/mozmill/tests/datalus/testTechnicalTools/
+    testing/mozmill/tests/datalus/testToolbar/
+    testing/mozmill/tests/datalus/restartTests
 
 You can use `manifestparser create` to do this:
 
@@ -404,13 +404,13 @@ This creates a manifest.ini per directory that we care about with the JS test fi
 
 .. code-block:: text
 
-    testing/mozmill/tests/firefox/manifest.ini
-    testing/mozmill/tests/firefox/testAwesomeBar/manifest.ini
-    testing/mozmill/tests/firefox/testPreferences/manifest.ini
-    testing/mozmill/tests/firefox/testPrivateBrowsing/manifest.ini
-    testing/mozmill/tests/firefox/testSessionStore/manifest.ini
-    testing/mozmill/tests/firefox/testTechnicalTools/manifest.ini
-    testing/mozmill/tests/firefox/testToolbar/manifest.ini
+    testing/mozmill/tests/datalus/manifest.ini
+    testing/mozmill/tests/datalus/testAwesomeBar/manifest.ini
+    testing/mozmill/tests/datalus/testPreferences/manifest.ini
+    testing/mozmill/tests/datalus/testPrivateBrowsing/manifest.ini
+    testing/mozmill/tests/datalus/testSessionStore/manifest.ini
+    testing/mozmill/tests/datalus/testTechnicalTools/manifest.ini
+    testing/mozmill/tests/datalus/testToolbar/manifest.ini
 
 The top-level `manifest.ini` merely has `[include:]` references to the sub manifests:
 
@@ -437,11 +437,11 @@ You may need to update tests as given in manifests from a different source direc
 
         update the tests as listed in a manifest from a directory
 
-To update from a directory of tests in `~/mozmill/src/mozmill-tests/firefox/` run:
+To update from a directory of tests in `~/mozmill/src/mozmill-tests/datalus/` run:
 
 .. code-block:: text
 
-    manifestparser update manifest.ini ~/mozmill/src/mozmill-tests/firefox/
+    manifestparser update manifest.ini ~/mozmill/src/mozmill-tests/datalus/
 
 Tests
 `````

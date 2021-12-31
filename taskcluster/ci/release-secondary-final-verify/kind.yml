@@ -27,12 +27,12 @@ job-defaults:
         retry-exit-status: [1]
 
 jobs:
-    firefox:
+    datalus:
         description: secondary final verify
         shipping-phase: promote
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             kind: test
             symbol: Rel(FVS)
             tier: 1

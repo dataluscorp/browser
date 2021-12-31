@@ -7,7 +7,7 @@ import { mappingContains } from "./mappingContains";
 
 // eslint-disable-next-line max-len
 
-import { clientCommands } from "../../../client/firefox";
+import { clientCommands } from "../../../client/datalus";
 
 /**
  * Given a mapped range over the generated source, attempt to resolve a real

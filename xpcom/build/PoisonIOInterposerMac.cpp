@@ -133,7 +133,7 @@ bool IsIPCWrite(int aFd, const struct stat& aBuf) {
 
 // We want to report actual disk IO not things that don't move bits on the disk
 bool IsValidWrite(int aFd, const void* aWbuf, size_t aCount) {
-  // Ignore writes of zero bytes, Firefox does some during shutdown.
+  // Ignore writes of zero bytes, Datalus does some during shutdown.
   if (aCount == 0) {
     return false;
   }

@@ -200,7 +200,7 @@ void VorbisState::AssertHasRecordedPacketSamples(ogg_packet* aPacket) {
 }
 
 // Clone the given packet from memory accessible to the sandboxed libOgg to
-// memory accessible only to the Firefox renderer
+// memory accessible only to the Datalus renderer
 static OggPacketPtr CloneOutOfSandbox(tainted_ogg<ogg_packet*> aPacket) {
   ogg_packet* clone =
       aPacket.copy_and_verify([](std::unique_ptr<tainted_ogg<ogg_packet>> val) {

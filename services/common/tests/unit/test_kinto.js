@@ -4,7 +4,7 @@
 const { Kinto } = ChromeUtils.import(
   "resource://services-common/kinto-offline-client.js"
 );
-const { FirefoxAdapter } = ChromeUtils.import(
+const { DatalusAdapter } = ChromeUtils.import(
   "resource://services-common/kinto-storage-adapter.js"
 );
 
@@ -20,14 +20,14 @@ var server;
 const kintoFilename = "kinto.sqlite";
 
 function do_get_kinto_sqliteHandle() {
-  return FirefoxAdapter.openConnection({ path: kintoFilename });
+  return DatalusAdapter.openConnection({ path: kintoFilename });
 }
 
 function do_get_kinto_collection(sqliteHandle, collection = "test_collection") {
   let config = {
     remote: `http://localhost:${server.identity.primaryPort}/v1/`,
     headers: { Authorization: "Basic " + btoa("user:pass") },
-    adapter: FirefoxAdapter,
+    adapter: DatalusAdapter,
     adapterOptions: { sqliteHandle },
   };
   return new Kinto(config).collection(collection);

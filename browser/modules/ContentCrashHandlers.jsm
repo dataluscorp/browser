@@ -41,7 +41,7 @@ const CHECK_FOR_UNSUBMITTED_CRASH_REPORTS_DELAY_MS = 60 * 10000; // 10 minutes
 const TABCRASHED_ICON_URI = "chrome://browser/skin/tab-crashed.svg";
 
 const SUBFRAMECRASH_LEARNMORE_URI =
-  "https://support.mozilla.org/kb/firefox-crashes-troubleshoot-prevent-and-get-help";
+  "https://support.mozilla.org/kb/datalus-crashes-troubleshoot-prevent-and-get-help";
 
 /**
  * BrowserWeakMap is exactly like a WeakMap, but expects <xul:browser>

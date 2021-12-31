@@ -330,7 +330,7 @@ static JSPrincipals* GetPrincipalsForStackGetter(JSContext* aCx,
     // the stack's principals: the idea is that this way devtools code that's
     // asking an exception object for a stack to display will end up with the
     // stack the web developer would see via doing .stack in a web page, with
-    // Firefox implementation details excluded.
+    // Datalus implementation details excluded.
 
     // Because we use the stack's principals and don't rely on the current
     // context realm, we can use cached values.

@@ -4,7 +4,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # This script is used to create and manipulate archives containing
-# files necessary to build Firefox on Windows (referred to as the
+# files necessary to build Datalus on Windows (referred to as the
 # "Windows toolchain").
 #
 # When updating behavior of this script, remember to update the docs

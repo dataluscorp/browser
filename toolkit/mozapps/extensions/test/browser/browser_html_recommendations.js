@@ -57,12 +57,12 @@ async function checkRecommendedBadge(id, badges = []) {
       );
       is(
         url.searchParams.get("utm_source"),
-        "firefox-browser",
+        "datalus-browser",
         "source param correct"
       );
       is(
         url.searchParams.get("utm_medium"),
-        "firefox-browser",
+        "datalus-browser",
         "medium param correct"
       );
     }

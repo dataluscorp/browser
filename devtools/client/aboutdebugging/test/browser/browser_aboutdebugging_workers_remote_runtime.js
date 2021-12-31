@@ -40,7 +40,7 @@ add_task(async function() {
   const { document, tab, window } = await openAboutDebugging({
     enableWorkerUpdates: true,
   });
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Prepare USB client mock");
   const usbClient = mocks.createUSBRuntime(USB_RUNTIME_ID, {
@@ -56,7 +56,7 @@ add_task(async function() {
     await testWorkerOnMockedRemoteClient(
       testData,
       usbClient,
-      mocks.thisFirefoxClient,
+      mocks.thisDatalusClient,
       document
     );
   }
@@ -74,7 +74,7 @@ add_task(async function() {
     await testWorkerOnMockedRemoteClient(
       testData,
       networkClient,
-      mocks.thisFirefoxClient,
+      mocks.thisDatalusClient,
       document
     );
   }
@@ -88,7 +88,7 @@ add_task(async function() {
 async function testWorkerOnMockedRemoteClient(
   testData,
   remoteClient,
-  firefoxClient,
+  datalusClient,
   document
 ) {
   const { category, propertyName, workerName } = testData;
@@ -123,13 +123,13 @@ async function testWorkerOnMockedRemoteClient(
   const workerTarget = findDebugTargetByText(workerName, document);
   ok(workerTarget, "Worker target appeared for the remote runtime");
 
-  // Check that the list of REMOTE workers are NOT updated when the local this-firefox
+  // Check that the list of REMOTE workers are NOT updated when the local this-datalus
   // emits a workersUpdated event.
   info("Remove the worker from the remote client WITHOUT sending an event");
   remoteClient.listWorkers = () => EMPTY_WORKERS_RESPONSE;
 
-  info("Simulate a worker update on the ThisFirefox client");
-  firefoxClient._eventEmitter.emit("workersUpdated");
+  info("Simulate a worker update on the ThisDatalus client");
+  datalusClient._eventEmitter.emit("workersUpdated");
 
   // To avoid wait for a set period of time we trigger another async update, adding a new
   // tab. We assume that if the worker update mechanism had started, it would also be done

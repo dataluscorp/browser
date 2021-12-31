@@ -119,14 +119,14 @@ ARCHIVE_FILES = {
         {
             "source": buildconfig.topsrcdir,
             "base": "testing",
-            "pattern": "firefox-ui/**",
-            "ignore": ["firefox-ui/tests"],
+            "pattern": "datalus-ui/**",
+            "ignore": ["datalus-ui/tests"],
         },
         {
             "source": buildconfig.topsrcdir,
             "base": "",
-            "pattern": "testing/firefox-ui/tests",
-            "dest": "firefox-ui/tests",
+            "pattern": "testing/datalus-ui/tests",
+            "dest": "datalus-ui/tests",
         },
         {
             "source": buildconfig.topsrcdir,

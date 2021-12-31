@@ -9,11 +9,11 @@ from telemetry_harness.ping_filters import EVENT_PING
 def test_event_ping(browser, helpers):
     """
     Barebones test for "event" ping:
-    Search, close Firefox, check "event" ping for search events.
+    Search, close Datalus, check "event" ping for search events.
     """
     browser.enable_search_events()
     browser.wait_for_search_service_init()
-    browser.search("mozilla firefox")
+    browser.search("mozilla datalus")
 
     payload = helpers.wait_for_ping(browser.restart, EVENT_PING)["payload"]
 

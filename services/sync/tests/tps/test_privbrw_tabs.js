@@ -22,8 +22,8 @@ var phases = {
 var tabs1 = [
   {
     uri:
-      "data:text/html,<html><head><title>Firefox</title></head><body>Firefox</body></html>",
-    title: "Firefox",
+      "data:text/html,<html><head><title>Datalus</title></head><body>Datalus</body></html>",
+    title: "Datalus",
     profile: "profile1",
   },
   {

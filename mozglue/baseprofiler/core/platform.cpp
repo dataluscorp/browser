@@ -567,7 +567,7 @@ class ActivePS {
   // - A big size, which helps with reducing the rate of allocations and IPCs.
   // - A small size, which helps with equalizing the duration of recorded data
   //   (as the inter-process controller will discard the oldest chunks in all
-  //   Firefox processes).
+  //   Datalus processes).
   constexpr static uint32_t scMaximumChunkSize = 1024 * 1024;
 
  public:
@@ -3419,7 +3419,7 @@ void profiler_unregister_thread() {
     // We cannot record a marker on this thread because it was already
     // unregistered. Send it to the main thread (unless this *is* already the
     // main thread, which has been unregistered); this may be useful to catch
-    // mismatched register/unregister pairs in Firefox.
+    // mismatched register/unregister pairs in Datalus.
     if (BaseProfilerThreadId tid = profiler_current_thread_id();
         tid != profiler_main_thread_id()) {
       BASE_PROFILER_MARKER_TEXT(

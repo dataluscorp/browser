@@ -46,7 +46,7 @@ def ipg_obj():
     return IntelPowerGadget(
         "ipg-path",
         output_file_path=os.path.abspath(os.path.dirname(__file__))
-        + "/files/raptor-tp6-amazon-firefox_powerlog",
+        + "/files/raptor-tp6-amazon-datalus_powerlog",
     )
 
 
@@ -62,9 +62,9 @@ def ipg_rh_obj():
     # Return the results handler for the test
     yield IPGResultsHandler(
         [
-            base_path + "raptor-tp6-amazon-firefox_powerlog_1_.txt",
-            base_path + "raptor-tp6-amazon-firefox_powerlog_2_.txt",
-            base_path + "raptor-tp6-amazon-firefox_powerlog_3_.txt",
+            base_path + "raptor-tp6-amazon-datalus_powerlog_1_.txt",
+            base_path + "raptor-tp6-amazon-datalus_powerlog_2_.txt",
+            base_path + "raptor-tp6-amazon-datalus_powerlog_3_.txt",
         ],
         tmpdir,
     )

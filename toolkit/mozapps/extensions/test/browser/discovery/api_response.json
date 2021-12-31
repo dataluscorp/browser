@@ -11,7 +11,7 @@
                   "name" : "Sondergaard",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/7/7804/7804538.png?modified=1392125542",
                   "username" : "EatingStick",
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/7804538/"
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/7804538/"
                }
             ],
             "previews" : [
@@ -60,7 +60,7 @@
             ],
             "name" : "Tigers Matter ** DON'T DELTE ME**",
             "id" : 496012,
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/tigers-matter/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/tigers-matter/",
             "type" : "statictheme",
             "ratings" : {
                "average" : 4.7636,
@@ -72,7 +72,7 @@
             "average_daily_users" : 1,
             "current_version" : {
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "max" : "*",
                      "min" : "53.0"
                   },
@@ -86,7 +86,7 @@
                "files" : [
                   {
                      "is_restart_required" : false,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/376561/tigers_matter_dont_delte_me-2.0-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/376561/tigers_matter_dont_delte_me-2.0-an+fx.xpi?src=",
                      "created" : "2019-04-18T13:11:48Z",
                      "size" : 86337,
                      "status" : "public",
@@ -105,7 +105,7 @@
       {
          "is_recommendation" : false,
          "addon" : {
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/awesome-screenshot-plus-/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/awesome-screenshot-plus-/",
             "type" : "extension",
             "ratings" : {
                "count" : 848,
@@ -120,7 +120,7 @@
                "id" : 1532816,
                "files" : [
                   {
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/253549/awesome_screenshot_plus-7-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/253549/awesome_screenshot_plus-7-an+fx.xpi?src=",
                      "is_restart_required" : false,
                      "size" : 4196,
                      "created" : "2017-09-01T13:31:17Z",
@@ -138,7 +138,7 @@
                      "min" : "48.0",
                      "max" : "*"
                   },
-                  "firefox" : {
+                  "datalus" : {
                      "max" : "*",
                      "min" : "48.0"
                   }
@@ -149,7 +149,7 @@
                   "username" : "diigo-inc",
                   "name" : "Diigo Inc.",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/0/6/6724.png?modified=1554393597",
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/6724/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/6724/",
                   "id" : 6724
                }
             ],
@@ -213,7 +213,7 @@
                "files" : [
                   {
                      "is_restart_required" : false,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/255370/amo_admin_assistant-4.2-fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/255370/amo_admin_assistant-4.2-fx.xpi?src=",
                      "size" : 16016,
                      "created" : "2018-08-21T16:49:21Z",
                      "is_webextension" : true,
@@ -231,13 +231,13 @@
                "is_strict_compatibility_enabled" : false,
                "id" : 1534709,
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "min" : "45.0",
                      "max" : "*"
                   }
                }
             },
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/amo-admin-assistant-test/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/amo-admin-assistant-test/",
             "ratings" : {
                "bayesian_average" : 0,
                "count" : 0,
@@ -251,7 +251,7 @@
             "authors" : [
                {
                   "id" : 4230,
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/4230/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/4230/",
                   "username" : "jorge-villalobos",
                   "name" : "Jorge Villalobos",
                   "picture_url" : null
@@ -269,7 +269,7 @@
                   "name" : "LexaDev",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/10/10640/10640485.png?modified=1554812253",
                   "username" : "LexaSV",
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/10640485/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/10640485/",
                   "id" : 10640485
                }
             ],
@@ -321,7 +321,7 @@
             ],
             "name" : "iarba",
             "id" : 495969,
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/iarba/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/iarba/",
             "ratings" : {
                "bayesian_average" : 4.86128,
                "count" : 10,
@@ -333,7 +333,7 @@
             "current_version" : {
                "files" : [
                   {
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/376535/iarba-2.0-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/376535/iarba-2.0-an+fx.xpi?src=",
                      "is_restart_required" : false,
                      "size" : 895804,
                      "created" : "2019-04-18T13:11:35Z",
@@ -353,7 +353,7 @@
                      "min" : "65.0",
                      "max" : "*"
                   },
-                  "firefox" : {
+                  "datalus" : {
                      "min" : "53.0",
                      "max" : "*"
                   }
@@ -371,7 +371,7 @@
             "authors" : [
                {
                   "id" : 10641527,
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/10641527/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/10641527/",
                   "name" : "Amoga-dev",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/10/10641/10641527.png?modified=1555333028",
                   "username" : "Amoga_dev_REST"
@@ -404,7 +404,7 @@
                      "is_webextension" : true,
                      "status" : "public",
                      "is_mozilla_signed_extension" : false,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/262328/forecastfox_fix_version-4.20-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/262328/forecastfox_fix_version-4.20-an+fx.xpi?src=",
                      "is_restart_required" : false,
                      "created" : "2019-01-16T07:54:26Z",
                      "size" : 1331686
@@ -415,14 +415,14 @@
                      "min" : "51.0",
                      "max" : "*"
                   },
-                  "firefox" : {
+                  "datalus" : {
                      "min" : "51.0",
                      "max" : "*"
                   }
                }
             },
             "average_daily_users" : 0,
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/forecastfox-fix-version/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/forecastfox-fix-version/",
             "type" : "extension",
             "ratings" : {
                "count" : 0,
@@ -442,7 +442,7 @@
             "icon_url" : "https://addons-dev-cdn.allizom.org/user-media/addon_icons/502/502774-64.png?modified=f289a992",
             "authors" : [
                {
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/10641572/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/10641572/",
                   "username" : "AdminUserTestDev1",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/10/10641/10641572.png?modified=1555675110",
                   "name" : "úþÿ Ψ Φ ֎",
@@ -457,10 +457,10 @@
                "average" : 0
             },
             "type" : "extension",
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/tabby-catextension/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/tabby-catextension/",
             "current_version" : {
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "max" : "*",
                      "min" : "48.0"
                   },
@@ -476,7 +476,7 @@
                      "created" : "2018-12-04T09:54:24Z",
                      "size" : 4374,
                      "is_restart_required" : false,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/262231/tabby_cat-1.0-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/262231/tabby_cat-1.0-an+fx.xpi?src=",
                      "is_mozilla_signed_extension" : false,
                      "status" : "public",
                      "is_webextension" : true,
@@ -494,7 +494,7 @@
       },
       {
          "addon" : {
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/the-moon-cat/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/the-moon-cat/",
             "ratings" : {
                "average" : 4.8182,
                "text_count" : 11,
@@ -515,7 +515,7 @@
                      "hash" : "sha256:d159190add69c739b0fe07b19ad3ff48045c5ded502a8df0f892b8feb645c5ae",
                      "platform" : "all",
                      "is_restart_required" : false,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/262333/the_moon_cat-1.0-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/262333/the_moon_cat-1.0-an+fx.xpi?src=",
                      "size" : 102889,
                      "created" : "2019-01-16T08:31:21Z"
                   }
@@ -523,7 +523,7 @@
                "is_strict_compatibility_enabled" : false,
                "id" : 1541672,
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "max" : "*",
                      "min" : "53.0"
                   },
@@ -536,7 +536,7 @@
             "icon_url" : "https://addons-dev-cdn.allizom.org/static/img/addon-icons/default-64.png",
             "authors" : [
                {
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/5822165/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/5822165/",
                   "username" : "Rallara",
                   "name" : "Rallara",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/5/5822/5822165.png?modified=1391855104",
@@ -602,7 +602,7 @@
             "authors" : [
                {
                   "id" : 10641570,
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/10641570/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/10641570/",
                   "name" : "BobsDisplayName",
                   "picture_url" : "https://addons-dev-cdn.allizom.org/user-media/userpics/10/10641/10641570.png?modified=1536063975",
                   "username" : "BobsUserName"
@@ -611,7 +611,7 @@
             "previews" : [],
             "name" : "SI",
             "id" : 495710,
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/search_by_image/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/search_by_image/",
             "ratings" : {
                "average" : 3.8333,
                "text_count" : 5,
@@ -643,7 +643,7 @@
                      "is_mozilla_signed_extension" : false,
                      "is_webextension" : true,
                      "status" : "public",
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/262271/search_by_image_reverse_image_search-1.12.6-fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/262271/search_by_image_reverse_image_search-1.12.6-fx.xpi?src=",
                      "is_restart_required" : false,
                      "size" : 372225,
                      "created" : "2018-12-14T13:48:23Z"
@@ -652,7 +652,7 @@
                "id" : 1541610,
                "is_strict_compatibility_enabled" : false,
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "min" : "57.0",
                      "max" : "*"
                   }
@@ -669,7 +669,7 @@
             "authors" : [
                {
                   "id" : 8733220,
-                  "url" : "https://addons-dev.allizom.org/en-US/firefox/user/8733220/",
+                  "url" : "https://addons-dev.allizom.org/en-US/datalus/user/8733220/",
                   "username" : "michellet-2",
                   "name" : "michellet",
                   "picture_url" : null
@@ -721,7 +721,7 @@
             ],
             "name" : "Purple Sparkles",
             "id" : 502858,
-            "url" : "https://addons-dev.allizom.org/en-US/firefox/addon/purple-sparkles/",
+            "url" : "https://addons-dev.allizom.org/en-US/datalus/addon/purple-sparkles/",
             "type" : "statictheme",
             "ratings" : {
                "count" : 4,
@@ -733,7 +733,7 @@
             "average_daily_users" : 445,
             "current_version" : {
                "compatibility" : {
-                  "firefox" : {
+                  "datalus" : {
                      "min" : "53.0",
                      "max" : "*"
                   },
@@ -748,7 +748,7 @@
                   {
                      "created" : "2019-01-16T08:31:18Z",
                      "size" : 237348,
-                     "url" : "https://addons-dev.allizom.org/firefox/downloads/file/262332/purple_sparkles-1.0-an+fx.xpi?src=",
+                     "url" : "https://addons-dev.allizom.org/datalus/downloads/file/262332/purple_sparkles-1.0-an+fx.xpi?src=",
                      "is_restart_required" : false,
                      "is_mozilla_signed_extension" : false,
                      "is_webextension" : true,

@@ -18,21 +18,21 @@ XPCOMUtils.defineLazyModuleGetters(this, {
 // resource://builtin-themes/.
 const STANDARD_THEMES = new Map([
   [
-    "firefox-compact-light@mozilla.org",
+    "datalus-compact-light@mozilla.org",
     {
       version: "1.2",
       path: "light/",
     },
   ],
   [
-    "firefox-compact-dark@mozilla.org",
+    "datalus-compact-dark@mozilla.org",
     {
       version: "1.2",
       path: "dark/",
     },
   ],
   [
-    "firefox-alpenglow@mozilla.org",
+    "datalus-alpenglow@mozilla.org",
     {
       version: "1.4",
       path: "alpenglow/",

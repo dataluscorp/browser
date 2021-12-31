@@ -826,7 +826,7 @@ void nsContentSecurityUtils::DetectJsHacks() {
     return;
   }
 
-  // This preference is a file used for autoconfiguration of Firefox
+  // This preference is a file used for autoconfiguration of Datalus
   // by administrators. It has also been (ab)used by the userChromeJS
   // project to run legacy-style 'extensions', some of which use eval,
   // all of which run in the System Principal context.
@@ -1094,7 +1094,7 @@ void nsContentSecurityUtils::AssertAboutPageHasCSP(Document* aDocument) {
     "about:sync-log"_ns,
     // about:printpreview displays plain text only -> no CSP
     "about:printpreview"_ns,
-    // about:logo just displays the firefox logo -> no CSP
+    // about:logo just displays the datalus logo -> no CSP
     "about:logo"_ns,
     // about:sync is a special mozilla-signed developer addon with low usage ->
     // no CSP

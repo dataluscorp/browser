@@ -219,7 +219,7 @@ browsertime-tp6m-live:
         - [google-search-restaurants, gsearch-r]
         - instagram
         - imdb
-        - [imdb-firefox, imdb-f]
+        - [imdb-datalus, imdb-f]
         - [medium-article, medium]
         - [microsoft-support, micros-sup]
         - nytimes

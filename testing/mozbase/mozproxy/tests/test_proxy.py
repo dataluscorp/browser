@@ -65,7 +65,7 @@ def get_status_code(url, playback):
 
 def test_mitm_check_proxy(*args):
     # test setup
-    pageset_name = os.path.join(here, "files", "mitm5-linux-firefox-amazon.manifest")
+    pageset_name = os.path.join(here, "files", "mitm5-linux-datalus-amazon.manifest")
 
     config = {
         "playback_tool": "mitmproxy",
@@ -73,8 +73,8 @@ def test_mitm_check_proxy(*args):
         "playback_version": "5.1.1",
         "platform": mozinfo.os,
         "run_local": "MOZ_AUTOMATION" not in os.environ,
-        "binary": "firefox",
-        "app": "firefox",
+        "binary": "datalus",
+        "app": "datalus",
         "host": "127.0.0.1",
     }
 
@@ -100,7 +100,7 @@ def test_mitm_check_proxy(*args):
 @mock.patch("mozproxy.utils.ProcessHandler", new=Process)
 @mock.patch("os.kill", new=kill)
 def test_mitm(*args):
-    pageset_name = os.path.join(here, "files", "mitm5-linux-firefox-amazon.manifest")
+    pageset_name = os.path.join(here, "files", "mitm5-linux-datalus-amazon.manifest")
 
     config = {
         "playback_tool": "mitmproxy",
@@ -108,8 +108,8 @@ def test_mitm(*args):
         "playback_version": "5.1.1",
         "platform": mozinfo.os,
         "run_local": True,
-        "binary": "firefox",
-        "app": "firefox",
+        "binary": "datalus",
+        "app": "datalus",
         "host": "example.com",
     }
 
@@ -137,7 +137,7 @@ def test_playback_setup_failed(*args):
 
         return _s
 
-    pageset_name = os.path.join(here, "files", "mitm5-linux-firefox-amazon.manifest")
+    pageset_name = os.path.join(here, "files", "mitm5-linux-datalus-amazon.manifest")
 
     config = {
         "playback_tool": "mitmproxy",
@@ -145,8 +145,8 @@ def test_playback_setup_failed(*args):
         "playback_version": "4.0.4",
         "platform": mozinfo.os,
         "run_local": True,
-        "binary": "firefox",
-        "app": "firefox",
+        "binary": "datalus",
+        "app": "datalus",
         "host": "example.com",
     }
 
@@ -170,7 +170,7 @@ def test_playback_setup_failed(*args):
 @mock.patch("mozproxy.utils.ProcessHandler", new=ProcessWithRetry)
 @mock.patch("os.kill", new=kill)
 def test_mitm_with_retry(*args):
-    pageset_name = os.path.join(here, "files", "mitm5-linux-firefox-amazon.manifest")
+    pageset_name = os.path.join(here, "files", "mitm5-linux-datalus-amazon.manifest")
 
     config = {
         "playback_tool": "mitmproxy",
@@ -178,8 +178,8 @@ def test_mitm_with_retry(*args):
         "playback_version": "5.1.1",
         "platform": mozinfo.os,
         "run_local": True,
-        "binary": "firefox",
-        "app": "firefox",
+        "binary": "datalus",
+        "app": "datalus",
         "host": "example.com",
     }
 

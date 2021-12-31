@@ -28,7 +28,7 @@ To confirm the functionality run mochitests for the following components:
 The sourceeditor component contains imported CodeMirror tests [3].
 
  * Some tests were commented out because we don't use that functionality
-   within Firefox (for example Ruby editing mode). Be careful when updating
+   within Datalus (for example Ruby editing mode). Be careful when updating
    files test/codemirror.html and test/vimemacs.html; they were modified to
    co-exist with Mozilla's testing infrastructure. Basically, vimemacs.html
    is a copy of codemirror.html but only with VIM and Emacs mode tests

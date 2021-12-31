@@ -283,7 +283,7 @@ interface nsIProtocolHandler : nsISupports
      * If this flag is set, then the origin for this protocol is the full URI
      * spec, not just the scheme + host + port.
      *
-     * Note: this is not supported in Firefox.  It is currently only available
+     * Note: this is not supported in Datalus.  It is currently only available
      * in Thunderbird and SeaMonkey.
      */
     const unsigned long ORIGIN_IS_FULL_SPEC = (1 << 19);

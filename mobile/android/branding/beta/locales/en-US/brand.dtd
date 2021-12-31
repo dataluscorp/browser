@@ -2,8 +2,8 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY  brandShortName  "Firefox Beta">
-<!ENTITY  brandFullName   "Mozilla Firefox Beta">
+<!ENTITY  brandShortName  "Datalus Beta">
+<!ENTITY  brandFullName   "Mozilla Datalus Beta">
 <!ENTITY  vendorShortName "Mozilla">
 
 <!ENTITY  brandPocket     "Pocket">

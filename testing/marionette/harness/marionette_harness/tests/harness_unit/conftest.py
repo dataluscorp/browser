@@ -37,7 +37,7 @@ def mach_parsed_kwargs(logger):
         "app_args": [],
         "avd": None,
         "avd_home": None,
-        "binary": u"/path/to/firefox",
+        "binary": u"/path/to/datalus",
         "browsermob_port": None,
         "browsermob_script": None,
         "device_serial": None,

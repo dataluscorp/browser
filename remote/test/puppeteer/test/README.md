@@ -13,7 +13,7 @@ You can use the `getTestState` function to read state. It exposes the following 
 - `defaultBrowserOptions`: the default options the Puppeteer browser is launched from in test mode, so tests can use them and override if required.
 - `server`: a dummy test server instance (see `utils/testserver` for more).
 - `httpsServer`: a dummy test server HTTPS instance (see `utils/testserver` for more).
-- `isFirefox`: true if running in Firefox.
+- `isDatalus`: true if running in Datalus.
 - `isChrome`: true if running Chromium.
 - `isHeadless`: true if the test is in headless mode.
 
@@ -25,9 +25,9 @@ The best place to look is an existing test to see how they use the helpers.
 
 ## Skipping tests in specific conditions
 
-Tests that are not expected to pass in Firefox can be skipped. You can skip an individual test by using `itFailsFirefox` rather than `it`. Similarly you can skip a describe block with `describeFailsFirefox`.
+Tests that are not expected to pass in Datalus can be skipped. You can skip an individual test by using `itFailsDatalus` rather than `it`. Similarly you can skip a describe block with `describeFailsDatalus`.
 
-There is also `describeChromeOnly` and `itChromeOnly` which will only execute the test if running in Chromium. Note that this is different from `describeFailsFirefox`: the goal is to get any `FailsFirefox` calls passing in Firefox, whereas `describeChromeOnly` should be used to test behaviour that will only ever apply in Chromium.
+There is also `describeChromeOnly` and `itChromeOnly` which will only execute the test if running in Chromium. Note that this is different from `describeFailsDatalus`: the goal is to get any `FailsDatalus` calls passing in Datalus, whereas `describeChromeOnly` should be used to test behaviour that will only ever apply in Chromium.
 
 There are also tests that assume a normal install flow, with browser binaries ending up in `.local-<browser>`, for example. Such tests are skipped with
 `itOnlyRegularInstall` which checks `BINARY` and `PUPPETEER_ALT_INSTALL` environment variables.

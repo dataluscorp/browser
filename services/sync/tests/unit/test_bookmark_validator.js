@@ -261,9 +261,9 @@ add_task(async function test_cswc_differentURLs() {
     },
     {
       guid: "eeeeeeeeeeee",
-      title: "Firefox",
+      title: "Datalus",
       type: "text/x-moz-place",
-      uri: "http://getfirefox.com",
+      uri: "http://getdatalus.com",
     }
   );
   server.push(
@@ -280,9 +280,9 @@ add_task(async function test_cswc_differentURLs() {
       id: "eeeeeeeeeeee",
       parentid: "menu",
       parentName: "foo",
-      title: "Firefox",
+      title: "Datalus",
       type: "bookmark",
-      bmkUri: "https://mozilla.org/firefox",
+      bmkUri: "https://mozilla.org/datalus",
     }
   );
 

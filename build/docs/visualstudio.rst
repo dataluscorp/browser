@@ -32,8 +32,8 @@ Build Targets
 
 Binaries
    This folder contains common binaries that can be executed from within
-   Visual Studio. If you are building the Firefox desktop application,
-   the *firefox* project will launch firefox.exe. You probably want one of
+   Visual Studio. If you are building the Datalus desktop application,
+   the *datalus* project will launch datalus.exe. You probably want one of
    these set to your startup project.
 
 Libraries

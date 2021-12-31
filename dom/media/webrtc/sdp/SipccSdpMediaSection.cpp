@@ -362,7 +362,7 @@ void SipccSdpMediaSection::AddDataChannel(const std::string& name,
     sctpmap->PushEntry(port_str, name, streams);
     mAttributeList.SetAttribute(sctpmap);
     if (message_size) {
-      // This is a workaround to allow detecting Firefox's w/o EOR support
+      // This is a workaround to allow detecting Datalus's w/o EOR support
       mAttributeList.SetAttribute(new SdpNumberAttribute(
           SdpAttribute::kMaxMessageSizeAttribute, message_size));
     }

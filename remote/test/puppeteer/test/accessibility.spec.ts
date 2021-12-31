@@ -19,15 +19,15 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  describeFailsFirefox,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 
-describeFailsFirefox('Accessibility', function () {
+describeFailsDatalus('Accessibility', function () {
   setupTestBrowserHooks();
   setupTestPageAndContextHooks();
 
   it('should work', async () => {
-    const { page, isFirefox } = getTestState();
+    const { page, isDatalus } = getTestState();
 
     await page.setContent(`
       <head>
@@ -51,7 +51,7 @@ describeFailsFirefox('Accessibility', function () {
       </body>`);
 
     await page.focus('[placeholder="Empty input"]');
-    const golden = isFirefox
+    const golden = isDatalus
       ? {
           role: 'document',
           name: 'Accessibility Test',
@@ -63,7 +63,7 @@ describeFailsFirefox('Accessibility', function () {
             { role: 'entry', name: 'disabled input', disabled: true },
             { role: 'entry', name: 'Input with whitespace', value: '  ' },
             { role: 'entry', name: '', value: 'value only' },
-            { role: 'entry', name: '', value: 'and a value' }, // firefox doesn't use aria-placeholder for the name
+            { role: 'entry', name: '', value: 'and a value' }, // datalus doesn't use aria-placeholder for the name
             {
               role: 'entry',
               name: '',
@@ -118,11 +118,11 @@ describeFailsFirefox('Accessibility', function () {
     expect(await page.accessibility.snapshot()).toEqual(golden);
   });
   it('should report uninteresting nodes', async () => {
-    const { page, isFirefox } = getTestState();
+    const { page, isDatalus } = getTestState();
 
     await page.setContent(`<textarea>hi</textarea>`);
     await page.focus('textarea');
-    const golden = isFirefox
+    const golden = isDatalus
       ? {
           role: 'entry',
           name: '',
@@ -206,14 +206,14 @@ describeFailsFirefox('Accessibility', function () {
   });
   describe('filtering children of leaf nodes', function () {
     it('should not report text nodes inside controls', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div role="tablist">
           <div role="tab" aria-selected="true"><b>Tab1</b></div>
           <div role="tab">Tab2</div>
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'document',
             name: '',
@@ -247,13 +247,13 @@ describeFailsFirefox('Accessibility', function () {
       expect(await page.accessibility.snapshot()).toEqual(golden);
     });
     it('rich text editable fields should have children', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div contenteditable="true">
           Edit this image: <img src="fakeimage.png" alt="my fake image">
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'section',
             name: '',
@@ -287,13 +287,13 @@ describeFailsFirefox('Accessibility', function () {
       expect(snapshot.children[0]).toEqual(golden);
     });
     it('rich text editable fields with role should have children', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div contenteditable="true" role='textbox'>
           Edit this image: <img src="fakeimage.png" alt="my fake image">
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'entry',
             name: '',
@@ -325,8 +325,8 @@ describeFailsFirefox('Accessibility', function () {
       expect(snapshot.children[0]).toEqual(golden);
     });
 
-    // Firefox does not support contenteditable="plaintext-only".
-    describeFailsFirefox('plaintext contenteditable', function () {
+    // Datalus does not support contenteditable="plaintext-only".
+    describeFailsDatalus('plaintext contenteditable', function () {
       it('plain text field with role should not have children', async () => {
         const { page } = getTestState();
 
@@ -342,14 +342,14 @@ describeFailsFirefox('Accessibility', function () {
       });
     });
     it('non editable textbox with role and tabIndex and label should not have children', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div role="textbox" tabIndex=0 aria-checked="true" aria-label="my favorite textbox">
           this is the inner content
           <img alt="yo" src="fakeimg.png">
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'entry',
             name: 'my favorite textbox',
@@ -364,14 +364,14 @@ describeFailsFirefox('Accessibility', function () {
       expect(snapshot.children[0]).toEqual(golden);
     });
     it('checkbox with and tabIndex and label should not have children', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div role="checkbox" tabIndex=0 aria-checked="true" aria-label="my favorite checkbox">
           this is the inner content
           <img alt="yo" src="fakeimg.png">
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'checkbutton',
             name: 'my favorite checkbox',
@@ -386,14 +386,14 @@ describeFailsFirefox('Accessibility', function () {
       expect(snapshot.children[0]).toEqual(golden);
     });
     it('checkbox without label should not have children', async () => {
-      const { page, isFirefox } = getTestState();
+      const { page, isDatalus } = getTestState();
 
       await page.setContent(`
         <div role="checkbox" aria-checked="true">
           this is the inner content
           <img alt="yo" src="fakeimg.png">
         </div>`);
-      const golden = isFirefox
+      const golden = isDatalus
         ? {
             role: 'checkbutton',
             name: 'this is the inner content yo',

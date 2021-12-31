@@ -1,8 +1,8 @@
 /* Any copyright is dedicated to the Public Domain.
    http://creativecommons.org/publicdomain/zero/1.0/ */
 
-const FIREFOX_RELEASE_TIMESTAMP = 1032800850000;
-const FIREFOX_RELEASE_DATE = new Date(FIREFOX_RELEASE_TIMESTAMP);
+const DATALUS_RELEASE_TIMESTAMP = 1032800850000;
+const DATALUS_RELEASE_DATE = new Date(DATALUS_RELEASE_TIMESTAMP);
 
 add_task(function test_date_time_format() {
   const bundle = new FluentBundle(["en-US"]);
@@ -42,32 +42,32 @@ dt-style = Style formatting: { DATETIME($dateArg, dateStyle: "short", timeStyle:
   // specified.
   testMessage(
     "dt-arg",
-    FIREFOX_RELEASE_DATE,
+    DATALUS_RELEASE_DATE,
     /^Just the arg is: (Sun|Mon|Tue) Sep \d+ 2002 \d+:\d+:\d+ .* \(.*\)$/
   );
   testMessage(
     "dt-bare",
-    FIREFOX_RELEASE_TIMESTAMP,
+    DATALUS_RELEASE_TIMESTAMP,
     /^The bare date is: Sep \d+, 2002, \d+:\d+:\d+ (AM|PM)$/
   );
   testMessage(
     "dt-month-year",
-    FIREFOX_RELEASE_TIMESTAMP,
+    DATALUS_RELEASE_TIMESTAMP,
     "Months and year are not time-zone dependent here: September"
   );
   testMessage(
     "dt-bad",
-    FIREFOX_RELEASE_TIMESTAMP,
+    DATALUS_RELEASE_TIMESTAMP,
     /^This is a bad month: Sep \d+, 2002, \d+:\d+:\d+ (AM|PM)$/
   );
   testMessage(
     "dt-unknown",
-    FIREFOX_RELEASE_TIMESTAMP,
+    DATALUS_RELEASE_TIMESTAMP,
     /^Unknown: Sep \d+, 2002, \d+:\d+:\d+ (AM|PM)$/
   );
   testMessage(
     "dt-style",
-    FIREFOX_RELEASE_TIMESTAMP,
+    DATALUS_RELEASE_TIMESTAMP,
     /^Style formatting: \d+\/\d+\/\d+, \d+:\d+ (AM|PM)$/
   );
 

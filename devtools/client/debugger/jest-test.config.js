@@ -16,7 +16,7 @@ module.exports = {
     "/helpers/",
     "/fixtures/",
     "src/test/mochitest/examples/",
-    "<rootDir>/firefox",
+    "<rootDir>/datalus",
     "package.json",
     "<rootDir>/packages",
   ],

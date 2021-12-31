@@ -114,7 +114,7 @@ class NetErrorParent extends JSWindowActorParent {
     // We will exclude the query strings from the reporting URIs.
     //
     // More details about the data we send can be found in
-    // https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/xfocsp-error-report-ping.html
+    // https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/xfocsp-error-report-ping.html
     //
 
     let topBC = BrowsingContext.get(bcID).top;
@@ -216,7 +216,7 @@ class NetErrorParent extends JSWindowActorParent {
         );
 
         // MitM issues are sometimes caused by software not registering their root certs in the
-        // Firefox root store. We might opt for using third party roots from the system root store.
+        // Datalus root store. We might opt for using third party roots from the system root store.
         if (
           Services.prefs.getBoolPref(
             "security.certerrors.mitm.auto_enable_enterprise_roots"

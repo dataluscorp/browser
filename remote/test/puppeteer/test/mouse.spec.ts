@@ -19,7 +19,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
+  itFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import { KeyInput } from '../lib/cjs/puppeteer/common/USKeyboardLayout.js';
 
@@ -95,7 +95,7 @@ describe('Mouse', function () {
     const text =
       "This is the text that we are going to try to select. Let's see how it goes.";
     await page.keyboard.type(text);
-    // Firefox needs an extra frame here after typing or it will fail to set the scrollTop
+    // Datalus needs an extra frame here after typing or it will fail to set the scrollTop
     await page.evaluate(() => new Promise(requestAnimationFrame));
     await page.evaluate(
       () => (document.querySelector('textarea').scrollTop = 0)
@@ -146,7 +146,7 @@ describe('Mouse', function () {
     }
   );
   it('should set modifier keys on click', async () => {
-    const { page, server, isFirefox } = getTestState();
+    const { page, server, isDatalus } = getTestState();
 
     await page.goto(server.PREFIX + '/input/scrollable.html');
     await page.evaluate(() =>
@@ -160,8 +160,8 @@ describe('Mouse', function () {
       ['Alt', 'altKey'],
       ['Meta', 'metaKey'],
     ]);
-    // In Firefox, the Meta modifier only exists on Mac
-    if (isFirefox && os.platform() !== 'darwin') delete modifiers['Meta'];
+    // In Datalus, the Meta modifier only exists on Mac
+    if (isDatalus && os.platform() !== 'darwin') delete modifiers['Meta'];
     for (const [modifier, key] of modifiers) {
       await page.keyboard.down(modifier);
       await page.click('#button-3');

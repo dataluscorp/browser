@@ -35,8 +35,8 @@ def run_gtest(context, **kwargs):
 
 
 def run_gtest_desktop(context, args):
-    prog = context.firefox_bin
-    xre_path = os.path.dirname(context.firefox_bin)
+    prog = context.datalus_bin
+    xre_path = os.path.dirname(context.datalus_bin)
     if sys.platform == "darwin":
         xre_path = os.path.join(xre_path, "Resources")
     utility_path = context.bin_dir

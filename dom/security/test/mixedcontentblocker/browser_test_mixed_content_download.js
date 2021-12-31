@@ -297,7 +297,7 @@ add_task(async function test_unblock_download_visible() {
   }
 });
 
-// Test Download an insecure pdf and choose "Open with Firefox"
+// Test Download an insecure pdf and choose "Open with Datalus"
 add_task(async function download_open_insecure_pdf() {
   for (let prefVal of [true, false]) {
     await SpecialPowers.pushPrefEnv({

@@ -12,7 +12,7 @@ from mozperftest.system.android_perf_tuner import tune_performance
 from mozperftest.utils import download_file
 
 
-_ROOT_URL = "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/"
+_ROOT_URL = "https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/"
 _FENIX_NIGHTLY_BUILDS = (
     "mobile.v2.fenix.nightly.latest.{architecture}"
     "/artifacts/public/build/{architecture}/target.apk"
@@ -66,7 +66,7 @@ class AndroidDevice(Layer):
     arguments = {
         "app-name": {
             "type": str,
-            "default": "org.mozilla.firefox",
+            "default": "org.mozilla.datalus",
             "help": "Android app name",
         },
         "timeout": {

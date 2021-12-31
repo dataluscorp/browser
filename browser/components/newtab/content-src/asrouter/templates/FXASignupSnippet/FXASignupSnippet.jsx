@@ -6,8 +6,8 @@ import React from "react";
 import { SubmitFormSnippet } from "../SubmitFormSnippet/SubmitFormSnippet.jsx";
 
 export const FXASignupSnippet = props => {
-  const userAgent = window.navigator.userAgent.match(/Firefox\/([0-9]+)\./);
-  const firefox_version = userAgent ? parseInt(userAgent[1], 10) : 0;
+  const userAgent = window.navigator.userAgent.match(/Datalus\/([0-9]+)\./);
+  const datalus_version = userAgent ? parseInt(userAgent[1], 10) : 0;
   const extendedContent = {
     scene1_button_label: "Learn more",
     retry_button_label: "Try again",
@@ -20,7 +20,7 @@ export const FXASignupSnippet = props => {
       context: "fx_desktop_v3",
       entrypoint: "snippets",
       utm_source: "snippet",
-      utm_content: firefox_version,
+      utm_content: datalus_version,
       utm_campaign: props.content.utm_campaign,
       utm_term: props.content.utm_term,
       ...props.content.hidden_inputs,
@@ -31,7 +31,7 @@ export const FXASignupSnippet = props => {
     <SubmitFormSnippet
       {...props}
       content={extendedContent}
-      form_action={"https://accounts.firefox.com/"}
+      form_action={"https://accounts.datalus.com/"}
       form_method="GET"
     />
   );

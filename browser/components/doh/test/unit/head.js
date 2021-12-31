@@ -83,7 +83,7 @@ function setup() {
 
   Services.prefs.setCharPref(
     "doh-rollout.trrRace.canonicalDomain",
-    "firefox-dns-perf-test.net."
+    "datalus-dns-perf-test.net."
   );
 
   let TRRPerformance = ChromeUtils.import(

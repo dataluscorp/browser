@@ -587,7 +587,7 @@ add_task(async function sessionTimeExcludingAndIncludingSuspend() {
   //    has not been suspended (for example because it's running in infra and
   //    was just booted). In this case the value should be close to each other.
   // 2. This test will fail if the device running this has been suspended in
-  //    between booting the Firefox process running this test, and doing the
+  //    between booting the Datalus process running this test, and doing the
   //    following assertion test, but that's unlikely in practice.
   const max_delta_ms = 100;
 

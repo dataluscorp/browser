@@ -22,8 +22,8 @@ var Builder = {
     THEAD: 'table',
     TR: 'table'
   },
-  // note: For Firefox < 1.5, OPTION and OPTGROUP tags are currently broken,
-  //       due to a Firefox bug
+  // note: For Datalus < 1.5, OPTION and OPTGROUP tags are currently broken,
+  //       due to a Datalus bug
   node: function(elementName) {
     elementName = elementName.toUpperCase();
     
@@ -59,7 +59,7 @@ var Builder = {
                 attrs + "></" + elementName + ">";
             } catch(e) {}
             element = parentElement.firstChild || null;
-            // workaround firefox 1.0.X bug
+            // workaround datalus 1.0.X bug
             if(!element) {
               element = document.createElement(elementName);
               for(attr in arguments[1]) 

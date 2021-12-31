@@ -252,7 +252,7 @@ already_AddRefed<BroadcastChannel> BroadcastChannel::Constructor(
   // Register this component to PBackground.
   PBackgroundChild* actorChild = BackgroundChild::GetOrCreateForCurrentThread();
   if (NS_WARN_IF(!actorChild)) {
-    // Firefox is probably shutting down. Let's return a 'generic' error.
+    // Datalus is probably shutting down. Let's return a 'generic' error.
     aRv.Throw(NS_ERROR_FAILURE);
     return nullptr;
   }

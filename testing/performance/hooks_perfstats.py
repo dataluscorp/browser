@@ -6,7 +6,7 @@ from mozperftest.test.browsertime import add_options
 from mozperftest.test.browsertime.runner import NodeException
 
 
-common_options = [("firefox.perfStats", "true")]
+common_options = [("datalus.perfStats", "true")]
 
 
 def on_exception(env, layer, exc):

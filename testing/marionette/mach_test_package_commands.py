@@ -22,7 +22,7 @@ def run_marionette(context, **kwargs):
     from mozlog.structured import commandline
 
     args = argparse.Namespace(**kwargs)
-    args.binary = args.binary or context.firefox_bin
+    args.binary = args.binary or context.datalus_bin
 
     test_root = os.path.join(context.package_root, "marionette", "tests")
     if not args.tests:

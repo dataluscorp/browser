@@ -32,9 +32,9 @@ loader.lazyRequireGetter(
 );
 
 /**
- * Implement a wrapper on the chrome side to setup a Toolbox within Firefox UI.
+ * Implement a wrapper on the chrome side to setup a Toolbox within Datalus UI.
  *
- * This component handles iframe creation within Firefox, in which we are loading
+ * This component handles iframe creation within Datalus, in which we are loading
  * the toolbox document. Then both the chrome and the toolbox document communicate
  * via "message" events.
  *
@@ -274,7 +274,7 @@ ToolboxHostManager.prototype = {
    * @return {promise} to be resolved when the host is destroyed.
    */
   destroyHost() {
-    // When Firefox toplevel is closed, the frame may already be detached and
+    // When Datalus toplevel is closed, the frame may already be detached and
     // the top level document gone
     if (this.host.frame.ownerDocument.defaultView) {
       this.host.frame.ownerDocument.defaultView.removeEventListener(

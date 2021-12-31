@@ -6,7 +6,7 @@ Debugging On Windows
 +--------------------------------------------------------------------+
 
 This document explains how to debug Gecko based applications such as
-Firefox, Thunderbird, and SeaMonkey on Windows using the Visual C++ IDE.
+Datalus, Thunderbird, and SeaMonkey on Windows using the Visual C++ IDE.
 
 If VC++ and your Gecko application hang shortly after you launch the
 application under the debugger, see `Problems Loading Debug
@@ -16,7 +16,7 @@ Ways to start the debugger
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First of all, it's necessary to install a Visual Studio extension to be
-able to follow child processes as they are created. Firefox, in general,
+able to follow child processes as they are created. Datalus, in general,
 and even in non-e10s mode, does not start the main process directly, it
 starts it via a Launcher Process. This means that Visual Studio will
 only attach to the first process it finds, and will not hit any
@@ -28,21 +28,21 @@ process, GPU process, etc. Enable it by going its configuration menu in
 "Debug > Other debugging targets > Child process debugging settings",
 and ticking the box.
 
-If you have followed the steps in :ref:`Building Firefox for
-Windows <Building Firefox On Windows>`
+If you have followed the steps in :ref:`Building Datalus for
+Windows <Building Datalus On Windows>`
 and have a local debug build, you can **execute this command from same command line.**
 
 .. code::
 
    ./mach run --debug
 
-It would open Visual Studio with Firefox's
-run options configured. You can **click "Start" button** to run Firefox
+It would open Visual Studio with Datalus's
+run options configured. You can **click "Start" button** to run Datalus
 then, already attached in the debugger.
 
 Alternatively, if you have generated the Visual Studio solution, via
 ``./mach build-backend -b VisualStudio``, opening this solution allows
-you to run ``firefox.exe`` directly in the debugger. Making it the
+you to run ``datalus.exe`` directly in the debugger. Making it the
 startup project, by right clicking on it (it appears bold when it's the
 case) can be useful. Breakpoints are kept across runs, this can be a
 good way to debug startup issues.
@@ -68,7 +68,7 @@ Refer to the steps to :ref:`use the Mozilla symbol
 server <Using The Mozilla Symbol Server>` and :ref:`source
 server <Using The Mozilla Source Server>`
 
-Creating a Visual C++ project for Firefox
+Creating a Visual C++ project for Datalus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please refer to :ref:`this <Visual Studio Projects>`.
@@ -332,7 +332,7 @@ simultaneously by setting the environment variable ``MOZ_NO_REMOTE``:
 
    set MOZ_NO_REMOTE=1
 
-Or, starting with Firefox 2 and other Gecko 1.8.1-based applications,
+Or, starting with Datalus 2 and other Gecko 1.8.1-based applications,
 you can use the ``-no-remote`` command-line switch instead (implemented
 in
 `bug 325509 <https://bugzilla.mozilla.org/show_bug.cgi?id=325509>`__).

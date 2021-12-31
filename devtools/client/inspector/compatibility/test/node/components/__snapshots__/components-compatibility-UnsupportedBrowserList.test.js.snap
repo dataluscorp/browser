@@ -5,9 +5,9 @@ exports[`UnsupportedBrowserList component renders the browsers 1`] = `
   className="compatibility-unsupported-browser-list"
 >
   <UnsupportedBrowserItem
-    id="firefox"
-    key="firefox"
-    name="Firefox"
+    id="datalus"
+    key="datalus"
+    name="Datalus"
     versions={
       Array [
         Object {

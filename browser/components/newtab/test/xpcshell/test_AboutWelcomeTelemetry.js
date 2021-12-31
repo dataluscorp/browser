@@ -73,7 +73,7 @@ add_task(function test_mayAttachAttribution() {
   const attr = {
     source: "google.com",
     medium: "referral",
-    campaign: "Firefox-Brand-US-Chrome",
+    campaign: "Datalus-Brand-US-Chrome",
     content: "(not set)",
     experiment: "(not set)",
     variation: "(not set)",

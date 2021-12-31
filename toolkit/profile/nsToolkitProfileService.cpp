@@ -1509,7 +1509,7 @@ nsresult nsToolkitProfileService::SelectStartupProfile(
         if (descriptor.Equals(defaultDescriptor)) {
           // Found the default profile. Copy the install section over to
           // the correct location. We leave the old info in place for older
-          // versions of Firefox to use.
+          // versions of Datalus to use.
           nsTArray<UniquePtr<KeyValue>> strings =
               GetSectionStrings(&mProfileDB, mLegacyInstallSection.get());
           for (const auto& kv : strings) {
@@ -1591,8 +1591,8 @@ nsresult nsToolkitProfileService::SelectStartupProfile(
     rv = CreateDefaultProfile(getter_AddRefs(mCurrent));
     if (NS_SUCCEEDED(rv)) {
       // If there is only one profile and it isn't meant to be the profile that
-      // older versions of Firefox use then we must create a default profile
-      // for older versions of Firefox to avoid the existing profile being
+      // older versions of Datalus use then we must create a default profile
+      // for older versions of Datalus to avoid the existing profile being
       // auto-selected.
       if ((mUseDedicatedProfile || mUseDevEditionProfile) &&
           mProfiles.getFirst() == mProfiles.getLast()) {
@@ -1930,7 +1930,7 @@ bool nsToolkitProfileService::IsSnapEnvironment() {
   }
 
   // snapName as defined on e.g.
-  // https://snapcraft.io/firefox or https://snapcraft.io/thunderbird
+  // https://snapcraft.io/datalus or https://snapcraft.io/thunderbird
   return (strcmp(snapName, MOZ_APP_NAME) == 0);
 }
 

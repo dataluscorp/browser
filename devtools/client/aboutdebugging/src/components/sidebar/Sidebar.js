@@ -42,8 +42,8 @@ const SidebarRuntimeItem = createFactory(
 const RefreshDevicesButton = createFactory(
   require("devtools/client/aboutdebugging/src/components/sidebar/RefreshDevicesButton")
 );
-const FIREFOX_ICON =
-  "chrome://devtools/skin/images/aboutdebugging-firefox-logo.svg";
+const DATALUS_ICON =
+  "chrome://devtools/skin/images/aboutdebugging-datalus-logo.svg";
 const CONNECT_ICON = "chrome://devtools/skin/images/settings.svg";
 const GLOBE_ICON =
   "chrome://devtools/skin/images/aboutdebugging-globe-icon.svg";
@@ -225,15 +225,15 @@ class Sidebar extends PureComponent {
           })
         ),
         Localized(
-          { id: "about-debugging-sidebar-this-firefox", attrs: { name: true } },
+          { id: "about-debugging-sidebar-this-datalus", attrs: { name: true } },
           SidebarFixedItem({
-            icon: FIREFOX_ICON,
+            icon: DATALUS_ICON,
             isSelected:
               PAGE_TYPES.RUNTIME === selectedPage &&
-              selectedRuntimeId === RUNTIMES.THIS_FIREFOX,
-            key: RUNTIMES.THIS_FIREFOX,
-            name: "This Firefox",
-            to: `/runtime/${RUNTIMES.THIS_FIREFOX}`,
+              selectedRuntimeId === RUNTIMES.THIS_DATALUS,
+            key: RUNTIMES.THIS_DATALUS,
+            name: "This Datalus",
+            to: `/runtime/${RUNTIMES.THIS_DATALUS}`,
           })
         ),
         SidebarItem(

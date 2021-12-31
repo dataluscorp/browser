@@ -8,7 +8,7 @@ import os
 PYTHON = "/usr/bin/env python"
 VENV_PATH = "%s/build/venv" % os.getcwd()
 ABS_WORK_DIR = os.path.join(os.getcwd(), "build")
-BINARY_PATH = os.path.join(ABS_WORK_DIR, "application", "firefox", "firefox-bin")
+BINARY_PATH = os.path.join(ABS_WORK_DIR, "application", "datalus", "datalus-bin")
 INSTALLER_PATH = os.path.join(ABS_WORK_DIR, "installer.tar.bz2")
 
 config = {

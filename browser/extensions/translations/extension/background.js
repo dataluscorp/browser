@@ -2850,7 +2850,7 @@ class WebExtStore {
     constructor(rootKey) {
         if (typeof browser === "undefined") {
             throw Error(`The web extensions store should only be user in a browser extension context.
-        If running is a browser different from Firefox, make sure you have installed
+        If running is a browser different from Datalus, make sure you have installed
         the webextension-polyfill peer dependency. To do so, run \`npm i webextension-polyfill\`.`);
         }
         this.store = browser.storage.local;
@@ -8495,7 +8495,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LanguageDetector = void 0;
 const webextension_polyfill_ts_1 = __webpack_require__(/*! webextension-polyfill-ts */ 5006);
-const browserWithExperimentAPIs_1 = __webpack_require__(/*! firefox-infobar-ui/ts/background-scripts/background.js/browserWithExperimentAPIs */ 2975);
+const browserWithExperimentAPIs_1 = __webpack_require__(/*! datalus-infobar-ui/ts/background-scripts/background.js/browserWithExperimentAPIs */ 2975);
 // Since Emscripten can handle heap growth, but not heap shrinkage, we
 // need to refresh the worker after we've processed a particularly large
 // string in order to prevent unnecessary resident memory growth.
@@ -8624,7 +8624,7 @@ exports.LanguageDetector = {
             if (typeof params === "string") {
                 params = { text: params };
             }
-            // Either use the Firefox experimental web extension API or the bundled WASM-based language detection
+            // Either use the Datalus experimental web extension API or the bundled WASM-based language detection
             if (true) {
                 return browserWithExperimentAPIs_1.browserWithExperimentAPIs.experiments.languageDetector.detectLanguage(params);
             }
@@ -8888,7 +8888,7 @@ class Store {
         });
         /**
          * Returns a persistent unique identifier of the extension installation
-         * sent with each report. Not related to the Firefox client id
+         * sent with each report. Not related to the Datalus client id
          */
         this.extensionInstallationId = () => __awaiter(this, void 0, void 0, function* () {
             const { extensionInstallationId } = yield this.get("extensionInstallationId");
@@ -8901,7 +8901,7 @@ class Store {
         });
         /**
          * Returns a persistent unique identifier of the extension installation
-         * sent with each error report. Not related to the Firefox client id
+         * sent with each error report. Not related to the Datalus client id
          * nor the extension installation id that identifies shared data.
          */
         this.extensionInstallationErrorReportingId = () => __awaiter(this, void 0, void 0, function* () {
@@ -9091,7 +9091,7 @@ const bergamot_translator_version_1 = __webpack_require__(/*! ../../../web-worke
  *
  * Synchronous methods here is important, since it is the only way to guarantee that multiple Glean API calls are
  * executed sequentially and not interleaved with other asynchronous Telemetry recording.
- * For more information, see: https://github.com/mozilla-extensions/firefox-translations/pull/76#discussion_r602128568
+ * For more information, see: https://github.com/mozilla-extensions/datalus-translations/pull/76#discussion_r602128568
  *
  * Glean.js guarantees zero exceptions, but our glue code or specific way of invoking Glean.js may result in exceptions.
  * For this reason we surround all code invoking Glean.js in try/catch blocks.
@@ -9150,9 +9150,9 @@ class Telemetry {
             }
         };
     }
-    initialize(uploadEnabled, $firefoxClientId, telemetryInactivityThresholdInSecondsOverride) {
+    initialize(uploadEnabled, $datalusClientId, telemetryInactivityThresholdInSecondsOverride) {
         const appId = config_1.config.telemetryAppId;
-        this.setFirefoxClientId($firefoxClientId);
+        this.setDatalusClientId($datalusClientId);
         const manifest = webextension_polyfill_ts_1.browser.runtime.getManifest();
         this.extensionVersion = manifest.version;
         try {
@@ -9173,8 +9173,8 @@ class Telemetry {
         console.log("Telemetry: communicating updated uploadEnabled preference to Glean.js", { uploadEnabled });
         webext_1.default.setUploadEnabled(uploadEnabled);
     }
-    setFirefoxClientId($firefoxClientId) {
-        this.firefoxClientId = $firefoxClientId;
+    setDatalusClientId($datalusClientId) {
+        this.datalusClientId = $datalusClientId;
     }
     setTranslationRelevantFxTelemetryMetrics(translationRelevantFxTelemetryMetrics) {
         this.translationRelevantFxTelemetryMetrics = translationRelevantFxTelemetryMetrics;
@@ -9182,7 +9182,7 @@ class Telemetry {
     recordCommonMetadata(from, to) {
         metadata_1.fromLang.set(from);
         metadata_1.toLang.set(to);
-        metadata_1.firefoxClientId.set(this.firefoxClientId);
+        metadata_1.datalusClientId.set(this.datalusClientId);
         metadata_1.extensionVersion.set(this.extensionVersion);
         metadata_1.extensionBuildId.set(config_1.config.extensionBuildId.substring(0, 100));
         metadata_1.bergamotTranslatorVersion.set(bergamot_translator_version_1.BERGAMOT_VERSION_FULL);
@@ -9552,7 +9552,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.cpuExtensions = exports.cpuSpeed = exports.cpuL3Cache = exports.cpuL2Cache = exports.cpuStepping = exports.cpuModel = exports.cpuFamily = exports.cpuVendor = exports.cpuCoresCount = exports.cpuCount = exports.systemMemory = exports.bergamotTranslatorVersion = exports.extensionBuildId = exports.extensionVersion = exports.firefoxClientId = exports.toLang = exports.fromLang = void 0;
+exports.cpuExtensions = exports.cpuSpeed = exports.cpuL3Cache = exports.cpuL2Cache = exports.cpuStepping = exports.cpuModel = exports.cpuFamily = exports.cpuVendor = exports.cpuCoresCount = exports.cpuCount = exports.systemMemory = exports.bergamotTranslatorVersion = exports.extensionBuildId = exports.extensionVersion = exports.datalusClientId = exports.toLang = exports.fromLang = void 0;
 // AUTOGENERATED BY glean_parser. DO NOT EDIT. DO NOT COMMIT.
 const string_1 = __importDefault(__webpack_require__(/*! @mozilla/glean/webext/private/metrics/string */ 4245));
 const quantity_1 = __importDefault(__webpack_require__(/*! @mozilla/glean/webext/private/metrics/quantity */ 4717));
@@ -9581,13 +9581,13 @@ exports.toLang = new string_1.default({
     disabled: false,
 });
 /**
- * Firefox Telemetry client id.
+ * Datalus Telemetry client id.
  *
- * Generated from `metadata.firefox_client_id`.
+ * Generated from `metadata.datalus_client_id`.
  */
-exports.firefoxClientId = new string_1.default({
+exports.datalusClientId = new string_1.default({
     category: "metadata",
-    name: "firefox_client_id",
+    name: "datalus_client_id",
     sendInPings: ["custom"],
     lifetime: "ping",
     disabled: false,
@@ -10465,7 +10465,7 @@ class NativeTranslateUiBroker {
         return __awaiter(this, void 0, void 0, function* () {
             const cachedClientID = yield browserWithExperimentAPIs_1.browserWithExperimentAPIs.experiments.telemetryPreferences.getCachedClientIDPref();
             // console.debug("onCachedClientIDPrefChange", { cachedClientID });
-            Telemetry_1.telemetry.setFirefoxClientId(cachedClientID);
+            Telemetry_1.telemetry.setDatalusClientId(cachedClientID);
         });
     }
     onInfoBarDisplayed(tabId, from, to) {
@@ -10840,7 +10840,7 @@ if (false) {}
 /******/ 			return checkDeferredModules();
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkfirefox_infobar_ui"] = self["webpackChunkfirefox_infobar_ui"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkdatalus_infobar_ui"] = self["webpackChunkdatalus_infobar_ui"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 		

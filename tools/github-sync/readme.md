@@ -61,9 +61,9 @@ scenarios here is quite large and they were not really tested.
 
 ## Ownership and access
 
-When this tool is run in Firefox CI, it needs to have push permissions to
+When this tool is run in Datalus CI, it needs to have push permissions to
 the `moz-gfx` github user's account. It gets this permission via a secret token
-stored in the Firefox CI taskcluster secrets service. If you need to update
+stored in the Datalus CI taskcluster secrets service. If you need to update
 the token, you need to find somebody who is a member of the
 [webrender-ci access group](https://people.mozilla.org/a/webrender-ci/). The
 Google Drive associated with that access group has additional documentation

@@ -36,9 +36,9 @@ class TestGenerateManifest(unittest.TestCase):
             "57.0.1",
             "57.0",
             "57.0.*",
-            "Firefox",
+            "Datalus",
             "/var/vcs/l10n-central",
-            "langpack-fi@firefox.mozilla.og",
+            "langpack-fi@datalus.mozilla.og",
             ctx,
             {},
         )
@@ -59,9 +59,9 @@ class TestGenerateManifest(unittest.TestCase):
             "57.0.1",
             "57.0",
             "57.0.*",
-            "Firefox",
+            "Datalus",
             "/var/vcs/l10n-central",
-            "langpack-fi@firefox.mozilla.og",
+            "langpack-fi@datalus.mozilla.og",
             ctx,
             {},
         )

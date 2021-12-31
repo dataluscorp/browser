@@ -202,7 +202,7 @@ void mozHunspellCallbacks::DestructFilemgr(rlbox_sandbox_hunspell& aSandbox,
   }
 }
 
-// Callbacks for using Firefox's encoding instead of hunspell's
+// Callbacks for using Datalus's encoding instead of hunspell's
 
 /* static */
 tainted_hunspell<uint32_t> mozHunspellCallbacks::ToUpperCase(

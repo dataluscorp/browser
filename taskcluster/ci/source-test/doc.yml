@@ -47,8 +47,8 @@ upload:
         taskcluster-proxy: true
         artifacts:
             - type: file
-              name: public/firefox-source-docs-url.txt
-              path: /builds/worker/firefox-source-docs-url.txt
+              name: public/datalus-source-docs-url.txt
+              path: /builds/worker/datalus-source-docs-url.txt
     run:
         using: run-task
         cwd: '{checkout}'
@@ -56,7 +56,7 @@ upload:
             cp -r /build/node_modules_eslint node_modules &&
             ln -s ../tools/lint/eslint/eslint-plugin-mozilla node_modules &&
             ln -s ../tools/lint/eslint/eslint-plugin-spidermonkey-js node_modules &&
-            ./mach doc --upload --no-open --no-serve --write-url /builds/worker/firefox-source-docs-url.txt
+            ./mach doc --upload --no-open --no-serve --write-url /builds/worker/datalus-source-docs-url.txt
         sparse-profile: sphinx-docs
     scopes:
         - secrets:get:project/releng/gecko/build/level-{level}/gecko-docs-upload

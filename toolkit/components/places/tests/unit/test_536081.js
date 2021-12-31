@@ -6,7 +6,7 @@
 
 const TEST_URL = {
   u:
-    "http://www.google.com/search?q=testing%3Bthis&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=firefox-a",
+    "http://www.google.com/search?q=testing%3Bthis&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:unofficial&client=datalus-a",
   s: "goog",
 };
 

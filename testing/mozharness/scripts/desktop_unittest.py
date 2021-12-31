@@ -667,7 +667,7 @@ class DesktopUnittest(TestingMixin, MercurialScript, MozbaseMixin, CodeCoverageM
         else:
             self.fatal(
                 "'binary_path' could not be determined.\n This should "
-                "be like '/path/build/application/firefox/firefox'"
+                "be like '/path/build/application/datalus/datalus'"
                 "\nIf you are running this script without the 'install' "
                 "action (where binary_path is set), please ensure you are"
                 " either:\n(1) specifying it in the config file under "

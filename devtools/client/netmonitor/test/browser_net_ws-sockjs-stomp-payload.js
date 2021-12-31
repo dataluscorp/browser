@@ -26,7 +26,7 @@ add_task(async function() {
   await SpecialPowers.spawn(tab.linkedBrowser, [], async () => {
     await content.wrappedJSObject.openConnection(0);
     content.wrappedJSObject.sendData(
-      `a[\"SEND\\nx-firefox-test:true\\ncontent-length:17\\n\\n[{\\\"key\\\":\\\"value\\\"}]\\u0000\"]`
+      `a[\"SEND\\nx-datalus-test:true\\ncontent-length:17\\n\\n[{\\\"key\\\":\\\"value\\\"}]\\u0000\"]`
     );
   });
   await onNetworkEvents;
@@ -104,7 +104,7 @@ add_task(async function() {
 
   is(
     document.querySelector("#messages-view .message-rawData-payload").value,
-    `a[\"SEND\\nx-firefox-test:true\\ncontent-length:17\\n\\n[{\\\"key\\\":\\\"value\\\"}]\\u0000\"]`,
+    `a[\"SEND\\nx-datalus-test:true\\ncontent-length:17\\n\\n[{\\\"key\\\":\\\"value\\\"}]\\u0000\"]`,
     "The raw data must be shown correctly"
   );
 

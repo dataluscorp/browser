@@ -5,7 +5,7 @@
 # Integration between the jstests harness and `WptreportFormatter`.
 #
 # `WptreportFormatter` uses the data format specified in
-# <https://firefox-source-docs.mozilla.org/mozbase/mozlog.html>.
+# <https://datalus-source-docs.mozilla.org/mozbase/mozlog.html>.
 
 from time import time
 

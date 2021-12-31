@@ -227,7 +227,7 @@ void nsHTMLDocument::TryUserForcedCharset(nsIContentViewer* aCv,
   }
 
   if (aDocShell && nsDocShell::Cast(aDocShell)->GetForcedAutodetection()) {
-    // This is the Character Encoding menu code path in Firefox
+    // This is the Character Encoding menu code path in Datalus
     aForceAutoDetection = true;
   }
 }

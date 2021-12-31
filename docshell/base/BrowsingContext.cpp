@@ -2205,7 +2205,7 @@ PopupBlocker::PopupControlState BrowsingContext::RevisePopupAbuseLevel(
   // activations.
   if (doc) {
     // HACK: Some pages using bogus library + UA sniffing call window.open()
-    // from a blank iframe, only on Firefox, see bug 1685056.
+    // from a blank iframe, only on Datalus, see bug 1685056.
     //
     // This is a hack-around to preserve behavior in that particular and
     // specific case, by consuming activation on the parent document, so we

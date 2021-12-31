@@ -24,8 +24,8 @@ jobs:
         shipping-product: devedition
         treeherder-platform: devedition-release/opt
 
-    firefox-push-to-release:
-        name: firefox_push_to_release
-        product: firefox
-        shipping-product: firefox
-        treeherder-platform: firefox-release/opt
+    datalus-push-to-release:
+        name: datalus_push_to_release
+        product: datalus
+        shipping-product: datalus
+        treeherder-platform: datalus-release/opt

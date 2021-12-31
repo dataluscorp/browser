@@ -115,7 +115,7 @@ rental! {
 /// this, we attempt to open and dynamically load these functions and symbols
 /// at runtime. Unfortunately this does mean that if a user is not on a new
 /// enough version of macOS, they will not be able to use client certificates
-/// from their keychain in Firefox until they upgrade.
+/// from their keychain in Datalus until they upgrade.
 struct SecurityFramework {
     rental: Option<rent_libloading::RentedSecurityFramework>,
 }
@@ -824,7 +824,7 @@ impl Sign for Key {
             return result;
         }
         // Some devices appear to not work well when the key handle is held for too long or if a
-        // card is inserted/removed while Firefox is running. Try refreshing the key handle.
+        // card is inserted/removed while Datalus is running. Try refreshing the key handle.
         let _ = self.key_handle.take();
         self.sign_internal(data, params)
     }

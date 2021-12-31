@@ -12,7 +12,7 @@
 
 // RLBox uses c++17's shared_locks by default, even for the noop_sandbox
 // However c++17 shared_lock is not supported on macOS 10.9 to 10.11
-// Thus we use Firefox's shared lock implementation
+// Thus we use Datalus's shared lock implementation
 // This can be removed if macOS 10.9 to 10.11 support is dropped
 #  include "mozilla/RWLock.h"
 namespace rlbox {
@@ -36,7 +36,7 @@ struct rlbox_shared_lock {
 #define RLBOX_CUSTOM_ABORT(msg) MOZ_CRASH_UNSAFE_PRINTF("RLBox crash: %s", msg)
 
 // The MingW compiler does not correctly handle static thread_local inline
-// members. This toggles a workaround that allows the host application (firefox)
+// members. This toggles a workaround that allows the host application (datalus)
 // to provide TLS storage via functions. This can be removed if the MingW bug is
 // fixed.
 #define RLBOX_EMBEDDER_PROVIDES_TLS_STATIC_VARIABLES

@@ -6239,7 +6239,7 @@ public abstract class TreeBuilder<T> implements TokenHandler,
      * @throws SAXException
      */
     private void errDeepTree() throws SAXException {
-        err("The document tree is more than 513 elements deep, which causes Firefox and Chrome to flatten the tree.");
+        err("The document tree is more than 513 elements deep, which causes Datalus and Chrome to flatten the tree.");
     }
 
     /**

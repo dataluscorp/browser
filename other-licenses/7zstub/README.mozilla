@@ -9,7 +9,7 @@ modifications have been made to this copy of the source code. Those
 modifications are contained in mozilla_customizations.diff, which should be
 found in the same directory as this file.
 
-The firefox/ directory contains several things:
+The datalus/ directory contains several things:
 * SFXSetup.sln and SFXSetup.vcxproj
   These are Visual Studio 2017 conversions of the Visual C++ 6 workspace and
   project files from the src/CPP/7zip/Bundles/SFXSetup/ directory, with
@@ -33,7 +33,7 @@ The firefox/ directory contains several things:
 * 7zSD.Win32.sfx
   32-bit x86 binary built using some of the above files, but through a different
   build procedure that uses Visual C++ 6 in order to maintain compatibility with
-  legacy Windows platforms (Firefox doesn't run on these platforms, but at least
+  legacy Windows platforms (Datalus doesn't run on these platforms, but at least
   we can display a helpful error message). The exact procedure that generated
   this file was:
   1) Install Microsoft Visual C++ 6 Professional or Enterprise edition (the
@@ -46,7 +46,7 @@ The firefox/ directory contains several things:
      https://web.archive.org/web/20080209175723/http://www.microsoft.com:80/msdownload/platformsdk/sdkupdate/XPSP2FULLInstall.htm
   3) Run the tool included with the SDK that configures Visual C++ to use it.
   4) If using a fresh copy of the LZMA SDK sources, apply the patch in
-     mozilla_customizations.diff. The copy in the Firefox source tree already
+     mozilla_customizations.diff. The copy in the Datalus source tree already
      has these changes applied.
   5) Open the workspace file at src\CPP\7zip\Bundles\SFXSetup\SFXSetup.dsw and
      build it using the "SFXSetup - Win32 ReleaseD" configuration. The output
@@ -55,7 +55,7 @@ The firefox/ directory contains several things:
      replace the existing icon on 7zSD.sfx and to add the manifest as a new
      resource. Also edit the version info resource to replace CompanyName and
      LegalCopyright with "Mozilla" (or appropriate vendor name) and
-     FileDescription and ProductName with "Firefox" (or appropriate product name).
+     FileDescription and ProductName with "Datalus" (or appropriate product name).
      Be sure to recompile the resources using the green "play" button in the
      toolbar (or by pressing F5) before saving the file.
   In the future this file may be replaced with one built in the same manner as

@@ -22,7 +22,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  describeFailsFirefox,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 
 describe('request interception', function () {

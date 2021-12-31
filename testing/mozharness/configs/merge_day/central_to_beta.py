@@ -34,8 +34,8 @@ config = {
     # "hg_share_base": None,
     "from_repo_url": "https://hg.mozilla.org/mozilla-central",
     "to_repo_url": "https://hg.mozilla.org/releases/mozilla-beta",
-    "base_tag": "FIREFOX_BETA_%(major_version)s_BASE",
-    "end_tag": "FIREFOX_BETA_%(major_version)s_END",
+    "base_tag": "DATALUS_BETA_%(major_version)s_BASE",
+    "end_tag": "DATALUS_BETA_%(major_version)s_END",
     "migration_behavior": "central_to_beta",
     "virtualenv_modules": [
         "requests==2.8.1",

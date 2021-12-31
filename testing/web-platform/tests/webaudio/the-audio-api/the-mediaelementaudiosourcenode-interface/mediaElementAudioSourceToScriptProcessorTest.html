@@ -85,7 +85,7 @@ https://searchfox.org/mozilla-central/source/dom/media/webaudio/test/test_mediaE
      source.disconnect();
      processor.disconnect();
 
-     // firefox seems to process events after disconnect
+     // datalus seems to process events after disconnect
      processor.removeEventListener('audioprocess', audioprocessListener)
 
      // Note: the expected result is from a mono source file.

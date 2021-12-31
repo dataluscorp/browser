@@ -434,7 +434,7 @@ proto.throws = function(block, expected, message) {
   // that we probably need to clean it up.
   let cleanupRecentJSDevError = false;
   if ("recentJSDevError" in ChromeUtils) {
-    // Check that we're in a build of Firefox that supports
+    // Check that we're in a build of Datalus that supports
     // the `recentJSDevError` mechanism (i.e. Nightly build).
     if (ChromeUtils.recentJSDevError === undefined) {
       // There was no previous error, so if we throw

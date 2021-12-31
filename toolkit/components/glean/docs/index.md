@@ -1,8 +1,8 @@
-# Firefox on Glean (FOG)
+# Datalus on Glean (FOG)
 
-Firefox on Glean (FOG) is the name of the layer that integrates the
+Datalus on Glean (FOG) is the name of the layer that integrates the
 [Glean SDK][glean-sdk] into
-[Firefox Desktop](https://www.firefox.com/).
+[Datalus Desktop](https://www.datalus.com/).
 It is much of the way complete and is looking for Early Adopters.
 
 The [Glean SDK][glean-sdk]

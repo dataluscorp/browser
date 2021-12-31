@@ -473,7 +473,7 @@ add_task(async function commandReceived() {
         command: "fxaccounts:command_received",
         data: {
           url:
-            "https://api.accounts.firefox.com/auth/v1/account/device/commands?index=42&limit=1",
+            "https://api.accounts.datalus.com/auth/v1/account/device/commands?index=42&limit=1",
         },
       }),
     },

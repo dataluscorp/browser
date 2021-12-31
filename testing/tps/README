@@ -1,4 +1,4 @@
-TPS is a test automation framework for Firefox Sync. See
+TPS is a test automation framework for Datalus Sync. See
 https://developer.mozilla.org/en/TPS for documentation.
 
 Installation
@@ -12,7 +12,7 @@ required packages, use the INSTALL.sh script, provided:
 This script will create a virtalenv and install TPS into it. TPS can then
 be run by activating the virtualenv and executing:
 
-  runtps --binary=/path/to/firefox
+  runtps --binary=/path/to/datalus
 
 
 Configuration
@@ -28,15 +28,15 @@ something like:
 Setting Up Test Accounts
 ========================
 
-Firefox Accounts
+Datalus Accounts
 ----------------
-To create a test account for using the Firefox Account authentication perform the
+To create a test account for using the Datalus Account authentication perform the
 following steps:
 
 1. Go to a URL like http://restmail.net/mail/%account_prefix%@restmail.net
-2. Go to https://accounts.firefox.com/signup?service=sync&context=fx_desktop_v1
+2. Go to https://accounts.datalus.com/signup?service=sync&context=fx_desktop_v1
 3. Sign in with the previous chosen email address and a password
 4. Go back to the Restmail URL, reload the page
 5. Search for the verification link and open that page
 
-Now you will be able to use your setup Firefox Account for Sync.
+Now you will be able to use your setup Datalus Account for Sync.

@@ -289,7 +289,7 @@ static nsresult CheckPinsForHostname(
       Telemetry::HistogramID histogram;
       int32_t bucket;
       // We can collect per-host pinning violations for this host because it is
-      // operationally critical to Firefox.
+      // operationally critical to Datalus.
       if (staticFingerprints->mIsMoz) {
         histogram = staticFingerprints->mTestMode
                         ? Telemetry::CERT_PINNING_MOZ_TEST_RESULTS_BY_HOST

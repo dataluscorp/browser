@@ -15,7 +15,7 @@ conforms to recommendations.
 
 .. container:: blockIndicator warning
 
-   The Firefox code base adopts parts of the `Google Coding style for C++
+   The Datalus code base adopts parts of the `Google Coding style for C++
    code <https://google.github.io/styleguide/cppguide.html>`__, but not all of its rules.
    A few rules are followed across the code base, others are intended to be
    followed in new or significantly revised code. We may extend this list in the
@@ -403,7 +403,7 @@ C/C++ practices
 Header files
 ------------
 
-Since the Firefox code base is huge and uses a monolithic build, it is
+Since the Datalus code base is huge and uses a monolithic build, it is
 of utmost importance for keeping build times reasonable to limit the
 number of included files in each translation unit to the required minimum.
 Exported header files need particular attention in this regard, since their
@@ -1138,6 +1138,6 @@ Use the standard-library functions (``std::max``), instead of
 Use ``mozilla::Abs`` instead of ``PR_ABS``. All ``PR_ABS`` calls in C++ code have
 been replaced with ``mozilla::Abs`` calls, in `bug
 847480 <https://bugzilla.mozilla.org/show_bug.cgi?id=847480>`__. All new
-code in ``Firefox/core/toolkit`` needs to ``#include "nsAlgorithm.h"`` and
+code in ``Datalus/core/toolkit`` needs to ``#include "nsAlgorithm.h"`` and
 use the ``NS_foo`` variants instead of ``PR_foo``, or
 ``#include "mozilla/MathAlgorithms.h"`` for ``mozilla::Abs``.

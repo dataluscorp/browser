@@ -362,7 +362,7 @@ var gPrivacyPane = {
   _pane: null,
 
   /**
-   * Whether the prompt to restart Firefox should appear when changing the autostart pref.
+   * Whether the prompt to restart Datalus should appear when changing the autostart pref.
    */
   _shouldPromptForRestart: true,
 
@@ -1553,7 +1553,7 @@ var gPrivacyPane = {
    * value of the private browsing auto-start preference.
    */
   updatePrivacyMicroControls() {
-    // Check the "Delete cookies when Firefox is closed" checkbox and disable the setting
+    // Check the "Delete cookies when Datalus is closed" checkbox and disable the setting
     // when we're in auto private mode (or reset it back otherwise).
     document.getElementById("deleteOnClose").checked = this.readDeleteOnClose();
 
@@ -1989,12 +1989,12 @@ var gPrivacyPane = {
    * Initializes the address bar section.
    */
   _initAddressBar() {
-    // Update the Firefox Suggest section when Firefox Suggest's enabled status
+    // Update the Datalus Suggest section when Datalus Suggest's enabled status
     // or scenario changes.
     this._urlbarPrefObserver = {
       onPrefChanged: pref => {
         if (pref == "quicksuggest.enabled") {
-          this._updateFirefoxSuggestSection();
+          this._updateDatalusSuggestSection();
         }
       },
     };
@@ -2005,7 +2005,7 @@ var gPrivacyPane = {
       this._urlbarPrefObserver = null;
     });
 
-    // The Firefox Suggest info box potentially needs updating when any of the
+    // The Datalus Suggest info box potentially needs updating when any of the
     // toggles change.
     let infoBoxPrefs = [
       "browser.urlbar.suggest.quicksuggest.nonsponsored",
@@ -2014,34 +2014,34 @@ var gPrivacyPane = {
     ];
     for (let pref of infoBoxPrefs) {
       Preferences.get(pref).on("change", () =>
-        this._updateFirefoxSuggestInfoBox()
+        this._updateDatalusSuggestInfoBox()
       );
     }
 
-    // Set the URL of the Firefox Suggest learn-more links.
-    let links = document.querySelectorAll(".firefoxSuggestLearnMore");
+    // Set the URL of the Datalus Suggest learn-more links.
+    let links = document.querySelectorAll(".datalusSuggestLearnMore");
     for (let link of links) {
       link.setAttribute("href", UrlbarProviderQuickSuggest.helpUrl);
     }
 
-    this._updateFirefoxSuggestSection(true);
+    this._updateDatalusSuggestSection(true);
   },
 
   /**
-   * Updates the Firefox Suggest section (in the address bar section) depending
-   * on whether the user is enrolled in a Firefox Suggest rollout.
+   * Updates the Datalus Suggest section (in the address bar section) depending
+   * on whether the user is enrolled in a Datalus Suggest rollout.
    *
    * @param {boolean} [onInit]
    *   Pass true when calling this when initializing the pane.
    */
-  _updateFirefoxSuggestSection(onInit = false) {
-    let container = document.getElementById("firefoxSuggestContainer");
+  _updateDatalusSuggestSection(onInit = false) {
+    let container = document.getElementById("datalusSuggestContainer");
 
     if (UrlbarPrefs.get("quickSuggestEnabled")) {
       // Update the l10n IDs of text elements.
       let l10nIdByElementId = {
-        locationBarGroupHeader: "addressbar-header-firefox-suggest",
-        locationBarSuggestionLabel: "addressbar-suggest-firefox-suggest",
+        locationBarGroupHeader: "addressbar-header-datalus-suggest",
+        locationBarSuggestionLabel: "addressbar-suggest-datalus-suggest",
       };
       for (let [elementId, l10nId] of Object.entries(l10nIdByElementId)) {
         let element = document.getElementById(elementId);
@@ -2053,10 +2053,10 @@ var gPrivacyPane = {
         .getElementById("openSearchEnginePreferences")
         .classList.add("extraMargin");
       // Show the container.
-      this._updateFirefoxSuggestInfoBox();
+      this._updateDatalusSuggestInfoBox();
       container.removeAttribute("hidden");
     } else if (!onInit) {
-      // Firefox Suggest is not enabled. This is the default, so to avoid
+      // Datalus Suggest is not enabled. This is the default, so to avoid
       // accidentally messing anything up, only modify the doc if we're being
       // called due to a change in the rollout-enabled status (!onInit).
       container.setAttribute("hidden", "true");
@@ -2074,10 +2074,10 @@ var gPrivacyPane = {
   },
 
   /**
-   * Updates the Firefox Suggest info box (in the address bar section) depending
-   * on the states of the Firefox Suggest toggles.
+   * Updates the Datalus Suggest info box (in the address bar section) depending
+   * on the states of the Datalus Suggest toggles.
    */
-  _updateFirefoxSuggestInfoBox() {
+  _updateDatalusSuggestInfoBox() {
     let nonsponsored = Preferences.get(
       "browser.urlbar.suggest.quicksuggest.nonsponsored"
     ).value;
@@ -2092,34 +2092,34 @@ var gPrivacyPane = {
     // prefs.
     let l10nId;
     if (nonsponsored && sponsored && dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-all";
+      l10nId = "addressbar-datalus-suggest-info-all";
     } else if (nonsponsored && sponsored && !dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-nonsponsored-sponsored";
+      l10nId = "addressbar-datalus-suggest-info-nonsponsored-sponsored";
     } else if (nonsponsored && !sponsored && dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-nonsponsored-data";
+      l10nId = "addressbar-datalus-suggest-info-nonsponsored-data";
     } else if (nonsponsored && !sponsored && !dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-nonsponsored";
+      l10nId = "addressbar-datalus-suggest-info-nonsponsored";
     } else if (!nonsponsored && sponsored && dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-sponsored-data";
+      l10nId = "addressbar-datalus-suggest-info-sponsored-data";
     } else if (!nonsponsored && sponsored && !dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-sponsored";
+      l10nId = "addressbar-datalus-suggest-info-sponsored";
     } else if (!nonsponsored && !sponsored && dataCollection) {
-      l10nId = "addressbar-firefox-suggest-info-data";
+      l10nId = "addressbar-datalus-suggest-info-data";
     }
 
-    let instance = (this._firefoxSuggestInfoBoxInstance = {});
-    let infoBox = document.getElementById("firefoxSuggestInfoBox");
+    let instance = (this._datalusSuggestInfoBoxInstance = {});
+    let infoBox = document.getElementById("datalusSuggestInfoBox");
     if (!l10nId) {
       infoBox.hidden = true;
     } else {
-      let infoText = document.getElementById("firefoxSuggestInfoText");
+      let infoText = document.getElementById("datalusSuggestInfoText");
       infoText.dataset.l10nId = l10nId;
 
       // If the info box is currently hidden and we unhide it immediately, it
       // will show its old text until the new text is asyncly fetched and shown.
       // That's ugly, so wait for the fetch to finish before unhiding it.
       document.l10n.translateElements([infoText]).then(() => {
-        if (instance == this._firefoxSuggestInfoBoxInstance) {
+        if (instance == this._datalusSuggestInfoBoxInstance) {
           infoBox.hidden = false;
         }
       });

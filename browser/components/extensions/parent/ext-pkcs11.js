@@ -119,7 +119,7 @@ this.pkcs11 = class extends ExtensionAPI {
          * The PKCS#11 standard defines slots as an abstract concept
          * that may or may not have at most one token. In practice, when
          * using PKCS#11 for smartcards (the most likely use case of
-         * PKCS#11 for Firefox), a slot corresponds to a cardreader, and
+         * PKCS#11 for Datalus), a slot corresponds to a cardreader, and
          * a token corresponds to a card.
          *
          * @param {string} name The name of the PKCS#11 module, as

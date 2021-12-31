@@ -29,8 +29,8 @@ job-defaults:
                 default: []
 
 jobs:
-    firefox-rc:
-        shipping-product: firefox
+    datalus-rc:
+        shipping-product: datalus
         notifications:
             subject: "{task[shipping-product]} {release_config[version]} build{release_config[build_number]}/{config[params][project]} RC updates are ready!"
             message: "{task[shipping-product]} {release_config[version]} build{release_config[build_number]}/{config[params][project]} RC updates are ready!"

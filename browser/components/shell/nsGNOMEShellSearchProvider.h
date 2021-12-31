@@ -45,7 +45,7 @@ class GnomeHistoryIcon {
 
 // nsGNOMEShellHistorySearchResult is a container with contains search results
 // which are files asynchronously by nsGNOMEShellHistoryService.
-// The search results can be opened by Firefox then.
+// The search results can be opened by Datalus then.
 class nsGNOMEShellHistorySearchResult : public nsUnixRemoteServer {
  public:
   NS_INLINE_DECL_THREADSAFE_REFCOUNTING(nsGNOMEShellHistorySearchResult)

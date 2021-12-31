@@ -15,7 +15,7 @@ add_task(async function() {
   const mocks = new Mocks();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   const usbRuntime = mocks.createUSBRuntime(RUNTIME_ID, {
     deviceName: RUNTIME_DEVICE_NAME,
@@ -30,10 +30,10 @@ add_task(async function() {
   };
   mocks.emitUSBUpdate();
 
-  info("Check the process category existence for this firefox");
+  info("Check the process category existence for this datalus");
   ok(
     !getDebugTargetPane(CATEGORY_NAME, document),
-    "Process category should not display for this firefox"
+    "Process category should not display for this datalus"
   );
 
   info("Check the process category existence for USB runtime");

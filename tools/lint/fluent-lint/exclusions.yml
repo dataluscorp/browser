@@ -30,7 +30,7 @@ ID01:
         - memory-unit-PB
         - memory-unit-EB
         - enableSafeBrowsing-label
-        - about-telemetry-show-in-Firefox-json-viewer
+        - about-telemetry-show-in-Datalus-json-viewer
         - url-classifier-search-listType
         # aboutDialog.ftl: Do not add new exceptions for this file,
         # new strings should follow the naming convention.

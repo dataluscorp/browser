@@ -118,11 +118,11 @@ const struct message requests[] =
   }
 
 #define FIREFOX_GET 1
-, {.name= "firefox get"
+, {.name= "datalus get"
   ,.type= HTTP_REQUEST
   ,.raw= "GET /favicon.ico HTTP/1.1\r\n"
          "Host: 0.0.0.0=5000\r\n"
-         "User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9) Gecko/2008061015 Firefox/3.0\r\n"
+         "User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9) Gecko/2008061015 Datalus/3.0\r\n"
          "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n"
          "Accept-Language: en-us,en;q=0.5\r\n"
          "Accept-Encoding: gzip,deflate\r\n"
@@ -142,7 +142,7 @@ const struct message requests[] =
   ,.num_headers= 8
   ,.headers=
     { { "Host", "0.0.0.0=5000" }
-    , { "User-Agent", "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9) Gecko/2008061015 Firefox/3.0" }
+    , { "User-Agent", "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9) Gecko/2008061015 Datalus/3.0" }
     , { "Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" }
     , { "Accept-Language", "en-us,en;q=0.5" }
     , { "Accept-Encoding", "gzip,deflate" }

@@ -60,7 +60,7 @@ MFBT_API TimeStamp TimeStamp::ProcessCreation(bool* aIsInconsistent) {
      * be unset or set to the empty string depending on the underlying platform
      * thus we have to check if the variable is present and not empty. */
     if (mozAppRestart && (strcmp(mozAppRestart, "") != 0)) {
-      /* Firefox was restarted, use the first time-stamp we've taken as the new
+      /* Datalus was restarted, use the first time-stamp we've taken as the new
        * process startup time. */
       ts = sInitOnce.mFirstTimeStamp;
     } else {

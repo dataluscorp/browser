@@ -29,11 +29,11 @@ class ManifestJsonLink extends PureComponent {
 
   get shouldRenderLink() {
     const { url } = this.props;
-    // Firefox blocks the loading of Data URLs with mimetypes manifest+json unless
+    // Datalus blocks the loading of Data URLs with mimetypes manifest+json unless
     // explicitly typed by the user in the address bar.
     // So we are not showing the link in this case.
     // See more details in this post:
-    // https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/
+    // https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-datalus-59/
     return !url.startsWith("data:");
   }
 

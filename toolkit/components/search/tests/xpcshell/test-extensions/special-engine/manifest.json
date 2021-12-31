@@ -25,16 +25,16 @@
           "name": "client",
           "condition": "purpose",
           "purpose": "keyword",
-          "value": "firefox-b-1-ab"
+          "value": "datalus-b-1-ab"
         },
         {
           "name": "client",
           "condition": "purpose",
           "purpose": "searchbar",
-          "value": "firefox-b-1"
+          "value": "datalus-b-1"
         }
       ],
-      "suggest_url": "https://www.google.com/complete/search?client=firefox&q={searchTerms}"
+      "suggest_url": "https://www.google.com/complete/search?client=datalus&q={searchTerms}"
     }
   }
 }

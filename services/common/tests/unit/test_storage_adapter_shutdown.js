@@ -6,12 +6,12 @@ const { AsyncShutdown } = ChromeUtils.import(
   "resource://gre/modules/AsyncShutdown.jsm"
 );
 
-const { FirefoxAdapter } = ChromeUtils.import(
+const { DatalusAdapter } = ChromeUtils.import(
   "resource://services-common/kinto-storage-adapter.js"
 );
 
 add_task(async function test_sqlite_shutdown() {
-  const sqliteHandle = await FirefoxAdapter.openConnection({
+  const sqliteHandle = await DatalusAdapter.openConnection({
     path: "kinto.sqlite",
   });
 

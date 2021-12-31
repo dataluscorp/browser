@@ -54,7 +54,7 @@
       "schema": 1601840497837,
       "telemetryId": "google",
       "codePrefixes": [
-        "firefox"
+        "datalus"
       ],
       "codeParamName": "client",
       "queryParamName": "q",

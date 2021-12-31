@@ -37,7 +37,7 @@ def get_parser():
 @Command(
     "perftest",
     category="testing",
-    conditions=[partial(conditions.is_buildapp_in, apps=["firefox", "android"])],
+    conditions=[partial(conditions.is_buildapp_in, apps=["datalus", "android"])],
     description="Run any flavor of perftest",
     parser=get_perftest_parser,
 )
@@ -155,7 +155,7 @@ def run_perftest(command_context, **kwargs):
 
     run_tests(command_context, kwargs, original_parser.get_user_args(kwargs))
 
-    print("\nFirefox. Fast For Good.\n")
+    print("\nDatalus. Fast For Good.\n")
 
 
 @Command(

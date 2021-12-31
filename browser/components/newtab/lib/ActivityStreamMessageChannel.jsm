@@ -44,7 +44,7 @@ const DEFAULT_OPTIONS = {
 
 this.ActivityStreamMessageChannel = class ActivityStreamMessageChannel {
   /**
-   * ActivityStreamMessageChannel - This module connects a Redux store to a RemotePageManager in Firefox.
+   * ActivityStreamMessageChannel - This module connects a Redux store to a RemotePageManager in Datalus.
    *                  Call .createChannel to start the connection, and .destroyChannel to destroy it.
    *                  You should use the BroadcastToContent, AlsoToOneContent, and AlsoToMain action creators
    *                  in common/Actions.jsm to help you create actions that will be automatically routed

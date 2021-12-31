@@ -26,7 +26,7 @@ function fetchManifest() {
     } catch (error) {
       let errorMessage = error.message;
 
-      // since Firefox DevTools errors may not make sense for the user, swap
+      // since Datalus DevTools errors may not make sense for the user, swap
       // their message for a generic one.
       if (error instanceof ManifestDevToolsError) {
         console.error(error);

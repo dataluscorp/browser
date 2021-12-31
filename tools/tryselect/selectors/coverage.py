@@ -134,7 +134,7 @@ def download_coverage_mapping(base_revision):
     except (OSError, ValueError):
         print("Chunk mapping file not found.")
 
-    CHUNK_MAPPING_URL_TEMPLATE = "https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/project.relman.code-coverage.production.cron.{}/artifacts/public/chunk_mapping.tar.xz"  # noqa
+    CHUNK_MAPPING_URL_TEMPLATE = "https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/project.relman.code-coverage.production.cron.{}/artifacts/public/chunk_mapping.tar.xz"  # noqa
     JSON_PUSHES_URL_TEMPLATE = "https://hg.mozilla.org/mozilla-central/json-pushes?version=2&tipsonly=1&startdate={}"  # noqa
 
     # Get pushes from at most one month ago.

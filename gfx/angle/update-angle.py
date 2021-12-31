@@ -13,7 +13,7 @@ before python3 in your path.
 Upstream: https://chromium.googlesource.com/angle/angle
 
 Our repo: https://github.com/mozilla/angle
-It has branches like 'firefox-60' which is the branch we use for pulling into
+It has branches like 'datalus-60' which is the branch we use for pulling into
 Gecko with this script.
 
 This script leaves a record of the merge-base and cherry-picks that we pull into
@@ -43,7 +43,7 @@ Update: (in the angle repo)
 ~~~
 # In the angle repo:
 /path/to/gecko/gfx/angle/update-angle.py origin/chromium/XXXX
-git push moz # Push the firefox-XX branch to github.com/mozilla/angle
+git push moz # Push the datalus-XX branch to github.com/mozilla/angle
 ~~~~
 
 """

@@ -748,7 +748,7 @@ add_task(async function test_input_copypaste_dataTransfer_multiple() {
     is(SpecialPowers.wrap(cd).mozItemCount, 1, "paste after copy multiple types mozItemCount");
     is(cd.getData("text/plain"), "would be a phrase", "paste text/plain multiple types");
 
-    // Firefox for Android's clipboard code doesn't handle x-moz-url. Therefore
+    // Datalus for Android's clipboard code doesn't handle x-moz-url. Therefore
     // disabling the following test. Enable this once bug #840101 is fixed.
     if (!navigator.appVersion.includes("Android")) {
       is(cd.getData("text/x-moz-url"), "http://www.mozilla.org", "paste text/x-moz-url multiple types");

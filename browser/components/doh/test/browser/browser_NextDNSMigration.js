@@ -8,7 +8,7 @@ add_task(setup);
 
 add_task(async function testNextDNSMigration() {
   let oldURL = "https://trr.dns.nextdns.io/";
-  let newURL = "https://firefox.dns.nextdns.io/";
+  let newURL = "https://datalus.dns.nextdns.io/";
 
   let prefChangePromises = [];
   let prefsToMigrate = {

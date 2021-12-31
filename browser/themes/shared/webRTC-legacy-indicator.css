@@ -8,7 +8,7 @@ window {
 
 #audioVideoButton,
 #screenShareButton,
-#firefoxButton {
+#datalusButton {
   height: 29px;
   margin: 0;
   appearance: none;
@@ -21,7 +21,7 @@ window {
   fill: white;
 }
 
-#firefoxButton {
+#datalusButton {
   background-image: url("chrome://branding/content/icon48.png");
   background-repeat: no-repeat;
   background-size: 22px;
@@ -30,7 +30,7 @@ window {
   background-color: white;
 }
 
-#firefoxButton:hover {
+#datalusButton:hover {
   background-color: #f2f2f2;
 }
 
@@ -116,6 +116,6 @@ window[sharingscreen][sharingaudio] > #shareSeparator {
   display: -moz-box;
 }
 
-:is(#audioVideoButton, #screenShareButton, #firefoxButton):-moz-focusring {
+:is(#audioVideoButton, #screenShareButton, #datalusButton):-moz-focusring {
   outline: none;
 }

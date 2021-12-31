@@ -85,8 +85,8 @@ add_task(async function containerIsolation_restricted() {
 
       // Check that create method fails
       await browser.test.assertRejects(
-        browser.tabs.create({ cookieStoreId: "firefox-container-1" }),
-        /Cannot access firefox-container-1/,
+        browser.tabs.create({ cookieStoreId: "datalus-container-1" }),
+        /Cannot access datalus-container-1/,
         "should refuse to create container tab for the container which doesn't have permission"
       );
 
@@ -259,7 +259,7 @@ add_task(async function containerIsolation_restricted() {
       let gettab = await browser.tabs.get(unrestrictedTab);
       browser.test.assertEq(
         gettab.cookieStoreId,
-        "firefox-container-2",
+        "datalus-container-2",
         "get tab should open"
       );
 
@@ -274,7 +274,7 @@ add_task(async function containerIsolation_restricted() {
 
       browser.test.assertEq(
         duptab.cookieStoreId,
-        "firefox-container-2",
+        "datalus-container-2",
         "duplicated tab should open"
       );
       await browser.tabs.remove(duptab.id);
@@ -286,7 +286,7 @@ add_task(async function containerIsolation_restricted() {
 
       //Test for query method of tab
       let tabs = await browser.tabs.query({
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       });
       await browser.test.assertEq(
         0,
@@ -300,8 +300,8 @@ add_task(async function containerIsolation_restricted() {
           .map(tab => tab.cookieStoreId)
           .sort()
           .join(","),
-        "firefox-container-2,firefox-default",
-        "should return two tabs - firefox-default and firefox-container-2"
+        "datalus-container-2,datalus-default",
+        "should return two tabs - datalus-default and datalus-container-2"
       );
 
       // Check that remove method fails.
@@ -331,7 +331,7 @@ add_task(async function containerIsolation_restricted() {
     subject: "createTab",
     data: {
       url: "http://www.example.com/",
-      cookieStoreId: "firefox-container-2",
+      cookieStoreId: "datalus-container-2",
     },
   });
   const unrestrictedTab = await helperExtension.awaitMessage("tabCreated");
@@ -340,7 +340,7 @@ add_task(async function containerIsolation_restricted() {
     subject: "createTab",
     data: {
       url: "http://www.example.com/",
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
     },
   });
   const restrictedTab = await helperExtension.awaitMessage("tabCreated");

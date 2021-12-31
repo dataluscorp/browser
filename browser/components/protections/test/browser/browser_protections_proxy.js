@@ -73,7 +73,7 @@ add_task(async function() {
   const extension = ExtensionTestUtils.loadExtension({
     manifest: {
       applications: { gecko: { id } },
-      name: "Firefox Proxy",
+      name: "Datalus Proxy",
     },
     useAddonManager: "temporary",
   });

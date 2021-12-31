@@ -54,7 +54,7 @@ add_task(async function testLocalStorage() {
 
     browser.test.assertRejects(
       browser.browsingData.removeLocalStorage({ since: Date.now() }),
-      "Firefox does not support clearing localStorage with 'since'.",
+      "Datalus does not support clearing localStorage with 'since'.",
       "Expected error received when using unimplemented parameter 'since'."
     );
 
@@ -91,7 +91,7 @@ add_task(async function testLocalStorage() {
       await sendMessageToTabs(tabs, "resetLocalStorage");
       await sendMessageToTabs(tabs, "checkLocalStorageSet");
       await browser.browsingData.removeLocalStorage({
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       });
       await browser.tabs.sendMessage(tabs["https://example.com/"].id, "checkLocalStorageSet");
       await browser.tabs.sendMessage(tabs["https://example.net/"].id, "checkLocalStorageSet");
@@ -105,7 +105,7 @@ add_task(async function testLocalStorage() {
       await sendMessageToTabs(tabs, "checkLocalStorageSet");
       // Hostname doesn't match, so nothing cleared.
       await browser.browsingData.removeLocalStorage({
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
         hostnames: ["example.net"],
       });
       await sendMessageToTabs(tabs, "checkLocalStorageSet");
@@ -114,15 +114,15 @@ add_task(async function testLocalStorage() {
       await sendMessageToTabs(tabs, "checkLocalStorageSet");
       // Deleting private browsing mode data is silently ignored.
       await browser.browsingData.removeLocalStorage({
-        cookieStoreId: "firefox-private",
+        cookieStoreId: "datalus-private",
       });
       await sendMessageToTabs(tabs, "checkLocalStorageSet");
     } else {
       await browser.test.assertRejects(
         browser.browsingData.removeLocalStorage({
-          cookieStoreId: "firefox-container-1",
+          cookieStoreId: "datalus-container-1",
         }),
-        "Firefox does not support clearing localStorage with 'cookieStoreId'.",
+        "Datalus does not support clearing localStorage with 'cookieStoreId'.",
         "removeLocalStorage with cookieStoreId requires LSNG"
       );
     }
@@ -171,7 +171,7 @@ add_task(async function testLocalStorage() {
         { url: "https://example.net" },
         {
           url: "https://test1.example.com",
-          cookieStoreId: 'firefox-container-1',
+          cookieStoreId: 'datalus-container-1',
         },
       ];
 

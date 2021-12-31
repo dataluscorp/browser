@@ -139,7 +139,7 @@ async function insertBookmarksToMigrate() {
   let fxBmk = await PlacesUtils.bookmarks.insert({
     guid: "0dbpnMdxKxfg",
     parentGuid: PlacesUtils.bookmarks.menuGuid,
-    url: "http://getfirefox.com",
+    url: "http://getdatalus.com",
   });
   let tbBmk = await PlacesUtils.bookmarks.insert({
     guid: "r5ouWdPB3l28",
@@ -195,9 +195,9 @@ add_task(async function test_tracking() {
   function createBmk() {
     return PlacesUtils.bookmarks.insertBookmark(
       folder,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
   }
 
@@ -358,10 +358,10 @@ add_task(async function test_async_onItemChanged() {
     let fxBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
-    _(`Firefox GUID: ${fxBmk.guid}`);
+    _(`Datalus GUID: ${fxBmk.guid}`);
 
     await startTracking();
 
@@ -369,8 +369,8 @@ add_task(async function test_async_onItemChanged() {
     let totalSyncChanges = PlacesUtils.bookmarks.totalSyncChanges;
     await PlacesUtils.bookmarks.update({
       guid: fxBmk.guid,
-      title: "Download Firefox",
-      url: "https://www.mozilla.org/firefox",
+      title: "Download Datalus",
+      url: "https://www.mozilla.org/datalus",
       // PlacesUtils.bookmarks.update rejects last modified dates older than
       // the added date.
       lastModified: new Date(Date.now() + DAY_IN_MS),
@@ -394,10 +394,10 @@ add_task(async function test_onItemChanged_itemDates() {
     _("Insert a bookmark");
     let fx_bm = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
-    _(`Firefox GUID: ${fx_bm.guid}`);
+    _(`Datalus GUID: ${fx_bm.guid}`);
 
     await startTracking();
 
@@ -461,12 +461,12 @@ add_task(async function test_onItemTagged() {
     _("Folder GUID: " + folderGUID);
 
     _("Track changes to tags");
-    let uri = CommonUtils.makeURI("http://getfirefox.com");
+    let uri = CommonUtils.makeURI("http://getdatalus.com");
     let b = PlacesUtils.bookmarks.insertBookmark(
       folder,
       uri,
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let bGUID = await PlacesUtils.promiseItemGuid(b);
     _("New item is " + b);
@@ -495,12 +495,12 @@ add_task(async function test_onItemUntagged() {
     await tracker.stop();
 
     _("Insert tagged bookmarks");
-    let uri = CommonUtils.makeURI("http://getfirefox.com");
+    let uri = CommonUtils.makeURI("http://getdatalus.com");
     let fx1ID = PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.bookmarksMenuFolder,
       uri,
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let fx1GUID = await PlacesUtils.promiseItemGuid(fx1ID);
     // Different parent and title; same URL.
@@ -508,7 +508,7 @@ add_task(async function test_onItemUntagged() {
       PlacesUtils.bookmarks.toolbarFolder,
       uri,
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Download Firefox"
+      "Download Datalus"
     );
     let fx2GUID = await PlacesUtils.promiseItemGuid(fx2ID);
     PlacesUtils.tagging.tagURI(uri, ["foo"]);
@@ -538,14 +538,14 @@ add_task(async function test_async_onItemUntagged() {
     let fxBmk1 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     let fxBmk2 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com",
-      title: "Download Firefox",
+      url: "http://getdatalus.com",
+      title: "Download Datalus",
     });
     let tag = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_FOLDER,
@@ -555,7 +555,7 @@ add_task(async function test_async_onItemUntagged() {
     let fxTag = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: tag.guid,
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
     });
 
     await startTracking();
@@ -588,8 +588,8 @@ add_task(async function test_async_onItemTagged() {
     let fxBmk1 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: folder1.guid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     let folder2 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_FOLDER,
@@ -600,8 +600,8 @@ add_task(async function test_async_onItemTagged() {
     let fxBmk2 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: folder2.guid,
-      url: "http://getfirefox.com",
-      title: "Download Firefox",
+      url: "http://getdatalus.com",
+      title: "Download Datalus",
     });
 
     await startTracking();
@@ -621,7 +621,7 @@ add_task(async function test_async_onItemTagged() {
     await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: tag.guid,
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
     });
 
     await verifyTrackedItems([fxBmk1.guid, fxBmk2.guid]);
@@ -643,14 +643,14 @@ add_task(async function test_async_onItemKeywordChanged() {
     let fxBmk1 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     let fxBmk2 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com",
-      title: "Download Firefox",
+      url: "http://getdatalus.com",
+      title: "Download Datalus",
     });
 
     await startTracking();
@@ -659,7 +659,7 @@ add_task(async function test_async_onItemKeywordChanged() {
     let totalSyncChanges = PlacesUtils.bookmarks.totalSyncChanges;
     await PlacesUtils.keywords.insert({
       keyword: "the_keyword",
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
       postData: "postData",
     });
 
@@ -682,18 +682,18 @@ add_task(async function test_async_onItemKeywordDeleted() {
     let fxBmk1 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     let fxBmk2 = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com",
-      title: "Download Firefox",
+      url: "http://getdatalus.com",
+      title: "Download Datalus",
     });
     await PlacesUtils.keywords.insert({
       keyword: "the_keyword",
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
     });
 
     await startTracking();
@@ -739,9 +739,9 @@ add_task(async function test_bookmarkAdded_filtered_root() {
     _("Insert a bookmark underneath the Places root");
     let rootBmkID = PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.placesRoot,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let rootBmkGUID = await PlacesUtils.promiseItemGuid(rootBmkID);
     _(`New Places root bookmark GUID: ${rootBmkGUID}`);
@@ -764,9 +764,9 @@ add_task(async function test_onItemDeleted_filtered_root() {
     _("Insert a bookmark underneath the Places root");
     let rootBmkID = PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.placesRoot,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let rootBmkGUID = await PlacesUtils.promiseItemGuid(rootBmkID);
     _(`New Places root bookmark GUID: ${rootBmkGUID}`);
@@ -791,11 +791,11 @@ add_task(async function test_onPageAnnoChanged() {
     await tracker.stop();
 
     _("Insert a bookmark without an annotation");
-    let pageURI = "http://getfirefox.com";
+    let pageURI = "http://getdatalus.com";
     await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.menuGuid,
       url: pageURI,
-      title: "Get Firefox!",
+      title: "Get Datalus!",
     });
 
     await startTracking();
@@ -828,13 +828,13 @@ add_task(async function test_onFaviconChanged() {
   try {
     await tracker.stop();
 
-    let pageURI = CommonUtils.makeURI("http://getfirefox.com");
-    let iconURI = CommonUtils.makeURI("http://getfirefox.com/icon");
+    let pageURI = CommonUtils.makeURI("http://getdatalus.com");
+    let iconURI = CommonUtils.makeURI("http://getdatalus.com/icon");
     PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.bookmarksMenuFolder,
       pageURI,
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
 
     await PlacesTestUtils.addVisits(pageURI);
@@ -962,8 +962,8 @@ add_task(async function test_async_onItemMoved_update() {
     await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     let tbBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
@@ -1012,10 +1012,10 @@ add_task(async function test_async_onItemMoved_reorder() {
     let fxBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
-    _(`Firefox GUID: ${fxBmk.guid}`);
+    _(`Datalus GUID: ${fxBmk.guid}`);
 
     let tbBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
@@ -1070,12 +1070,12 @@ add_task(async function test_onItemDeleted_removeFolderTransaction() {
     _(`Folder GUID: ${folder_guid}`);
     let fx_id = PlacesUtils.bookmarks.insertBookmark(
       folder_id,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let fx_guid = await PlacesUtils.promiseItemGuid(fx_id);
-    _(`Firefox GUID: ${fx_guid}`);
+    _(`Datalus GUID: ${fx_guid}`);
     let tb_id = PlacesUtils.bookmarks.insertBookmark(
       folder_id,
       CommonUtils.makeURI("http://getthunderbird.com"),
@@ -1135,8 +1135,8 @@ add_task(async function test_treeMoved() {
     // Create a couple of bookmarks in the second folder.
     await PlacesUtils.bookmarks.insert({
       parentGuid: folder2.guid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     await PlacesUtils.bookmarks.insert({
       parentGuid: folder2.guid,
@@ -1170,9 +1170,9 @@ add_task(async function test_onItemDeleted() {
   try {
     PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.bookmarksMenuFolder,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let tb_id = PlacesUtils.bookmarks.insertBookmark(
       PlacesUtils.bookmarks.bookmarksMenuFolder,
@@ -1206,8 +1206,8 @@ add_task(async function test_async_onItemDeleted() {
     let fxBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.menuGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
     await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
@@ -1240,10 +1240,10 @@ add_task(async function test_async_onItemDeleted_eraseEverything() {
     let fxBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.mobileGuid,
-      url: "http://getfirefox.com",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com",
+      title: "Get Datalus!",
     });
-    _(`Firefox GUID: ${fxBmk.guid}`);
+    _(`Datalus GUID: ${fxBmk.guid}`);
     let tbBmk = await PlacesUtils.bookmarks.insert({
       type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
       parentGuid: PlacesUtils.bookmarks.mobileGuid,
@@ -1349,9 +1349,9 @@ add_task(async function test_onItemDeleted_tree() {
     // Create a couple of bookmarks in the second folder.
     let fx_id = PlacesUtils.bookmarks.insertBookmark(
       folder2_id,
-      CommonUtils.makeURI("http://getfirefox.com"),
+      CommonUtils.makeURI("http://getdatalus.com"),
       PlacesUtils.bookmarks.DEFAULT_INDEX,
-      "Get Firefox!"
+      "Get Datalus!"
     );
     let fx_guid = await PlacesUtils.promiseItemGuid(fx_id);
     let tb_id = PlacesUtils.bookmarks.insertBookmark(

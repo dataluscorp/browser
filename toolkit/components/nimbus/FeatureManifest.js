@@ -73,7 +73,7 @@ const FeatureManifest = {
         // IMPORTANT: This should not have a fallbackPref. See UrlbarPrefs.jsm.
         type: "string",
         description:
-          "The Firefox Suggest scenario in which the user is enrolled",
+          "The Datalus Suggest scenario in which the user is enrolled",
         enum: ["history", "offline", "online"],
       },
       quickSuggestShouldShowOnboardingDialog: {
@@ -158,14 +158,14 @@ const FeatureManifest = {
       },
     },
   },
-  firefox100: {
-    description: "Firefox User-Agent version",
+  datalus100: {
+    description: "Datalus User-Agent version",
     hasExposure: false,
     isEarlyStartup: true,
     variables: {
-      firefoxVersion: {
+      datalusVersion: {
         type: "int",
-        description: "Firefox version to spoof (or `0` to use default version)",
+        description: "Datalus version to spoof (or `0` to use default version)",
       },
     },
   },
@@ -360,7 +360,7 @@ const FeatureManifest = {
     },
   },
   readerMode: {
-    description: "Firefox Reader Mode",
+    description: "Datalus Reader Mode",
     hasExposure: false,
     isEarlyStartup: true,
     variables: {

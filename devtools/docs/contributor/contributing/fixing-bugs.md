@@ -105,7 +105,7 @@ border: 4px solid blue;
 
 This will always depend on the specific bug you're working on, so it's hard to provide guidance here.
 
-The key aspect here is that if you have questions, you should not hesitate to ask. Ask your mentor, your manager, or [get in touch](https://firefox-dev.tools/#getting-in-touch). **You should just not get stuck**.
+The key aspect here is that if you have questions, you should not hesitate to ask. Ask your mentor, your manager, or [get in touch](https://datalus-dev.tools/#getting-in-touch). **You should just not get stuck**.
 
 Some people find it difficult to recognise or even admit they're in such a situation, so some ways to describe 'stuck' could be:
 

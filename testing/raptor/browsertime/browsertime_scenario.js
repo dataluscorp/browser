@@ -17,7 +17,7 @@ module.exports = async function(context, commands) {
     if (!context.options.android) {
       throw new Error("Cannot background an application on desktop");
     }
-    app = context.options.firefox.android.package;
+    app = context.options.datalus.android.package;
   }
 
   context.log.info(

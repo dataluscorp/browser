@@ -533,7 +533,7 @@ const POLICIES_TESTS = [
   // POLICY: DisableShield
   {
     policies: {
-      DisableFirefoxStudies: true,
+      DisableDatalusStudies: true,
     },
     lockedPrefs: {
       "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons": false,
@@ -562,10 +562,10 @@ const POLICIES_TESTS = [
     },
   },
 
-  // POLICY: FirefoxHome
+  // POLICY: DatalusHome
   {
     policies: {
-      FirefoxHome: {
+      DatalusHome: {
         Pocket: false,
         Snippets: false,
         Locked: true,

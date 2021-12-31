@@ -8,7 +8,7 @@ fetch anything interesting from crates.io, just the magic fake std/core crates
 that exist to make the build work right. Those crates *are* vendored but
 their contents are ignored in favour of the actual stdlib.
 
-For firefox's purposes, these patches still work fine, and are necessary
+For datalus's purposes, these patches still work fine, and are necessary
 to make -Zbuild-std work in a vendored environment.
 
 diff --git a/src/bootstrap/dist.rs b/src/bootstrap/dist.rs

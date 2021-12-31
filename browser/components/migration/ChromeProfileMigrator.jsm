@@ -58,7 +58,7 @@ function convertBookmarks(items, errorAccumulator) {
           continue;
         }
         if (item.url.trim().startsWith("edge:")) {
-          // Don't import internal Microsoft Edge URIs as they won't resolve within Firefox.
+          // Don't import internal Microsoft Edge URIs as they won't resolve within Datalus.
           continue;
         }
         itemsToInsert.push({ url: item.url, title: item.name });

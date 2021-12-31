@@ -39,7 +39,7 @@ TEXT_FORMATTERS = ("raw", "mach")
 """a subset of formatters for non test harnesses related applications"""
 
 
-DOCS_URL = "https://firefox-source-docs.mozilla.org/mozbase/mozlog.html"
+DOCS_URL = "https://datalus-source-docs.mozilla.org/mozbase/mozlog.html"
 
 
 def level_filter_wrapper(formatter, level):

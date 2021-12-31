@@ -10,14 +10,14 @@ test_infrastructure() {
 }
 
 main() {
-    PRODUCTS=( "firefox" "chrome" )
+    PRODUCTS=( "datalus" "chrome" )
     ./wpt manifest --rebuild -p ~/meta/MANIFEST.json
     for PRODUCT in "${PRODUCTS[@]}"; do
         if [[ "$PRODUCT" == "chrome" ]]; then
             # Taskcluster machines do not have GPUs, so use software rendering via --enable-swiftshader.
             test_infrastructure "--binary=$(which google-chrome-unstable) --enable-swiftshader --channel dev" "$1"
         else
-            test_infrastructure "--binary=~/build/firefox/firefox" "$1"
+            test_infrastructure "--binary=~/build/datalus/datalus" "$1"
         fi
     done
 }

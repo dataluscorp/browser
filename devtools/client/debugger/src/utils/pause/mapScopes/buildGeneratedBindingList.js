@@ -3,7 +3,7 @@
  * file, You can obtain one at <http://mozilla.org/MPL/2.0/>. */
 
 import { has } from "lodash";
-import { clientCommands } from "../../../client/firefox";
+import { clientCommands } from "../../../client/datalus";
 
 import { locColumn } from "./locColumn";
 import { getOptimizedOutGrip } from "./optimizedOut";

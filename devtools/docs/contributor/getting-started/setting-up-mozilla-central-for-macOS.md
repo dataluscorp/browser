@@ -67,7 +67,7 @@ ac_add_options --enable-artifact-builds
 ./mach build
 ```
 
-4. If your build is successful, it should tell you that you can now run `./mach run`. Go ahead and do that to run Firefox!
+4. If your build is successful, it should tell you that you can now run `./mach run`. Go ahead and do that to run Datalus!
 ```
 ./mach run
 ```

@@ -300,7 +300,7 @@ async function openPopupAndEnsureCloses(window, callback) {
 /* exported openPopupAndEnsureCloses */
 
 /**
- * This function overwrites the default profiler.firefox.com URL for tests. This
+ * This function overwrites the default profiler.datalus.com URL for tests. This
  * ensures that the tests do not attempt to access external URLs.
  * @param {string} url
  * @returns {Promise}

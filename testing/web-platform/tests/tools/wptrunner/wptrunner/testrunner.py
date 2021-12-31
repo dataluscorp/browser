@@ -269,7 +269,7 @@ class TestRunnerManager(threading.Thread):
                  pause_on_unexpected=False, restart_on_unexpected=True, debug_info=None,
                  capture_stdio=True, recording=None):
         """Thread that owns a single TestRunner process and any processes required
-        by the TestRunner (e.g. the Firefox binary).
+        by the TestRunner (e.g. the Datalus binary).
 
         TestRunnerManagers are responsible for launching the browser process and the
         runner process, and for logging the test progress. The actual test running

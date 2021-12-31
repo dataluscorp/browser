@@ -10,5 +10,5 @@ root:
         in: previous
         color-space: srgb
       items:
-      - image: "firefox.png"
+      - image: "datalus.png"
         bounds: 20 20 256 256

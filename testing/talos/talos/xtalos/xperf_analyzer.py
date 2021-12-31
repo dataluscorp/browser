@@ -16,7 +16,7 @@ import six
 
 # This constant must match the event declared in
 # toolkit/components/startup/mozprofilerprobe.mof
-EVENT_ID_FIREFOX_WINDOW_RESTORED = "{917B96B1-ECAD-4DAB-A760-8D49027748AE}"
+EVENT_ID_DATALUS_WINDOW_RESTORED = "{917B96B1-ECAD-4DAB-A760-8D49027748AE}"
 
 
 class XPerfSession(object):
@@ -652,15 +652,15 @@ class ClassicEvent(XPerfEvent):
 
 
 class SessionStoreWindowRestored(ClassicEvent):
-    """ The Firefox session store window restored event """
+    """ The Datalus session store window restored event """
 
     def __init__(self):
         super(SessionStoreWindowRestored, self).__init__(
-            EVENT_ID_FIREFOX_WINDOW_RESTORED
+            EVENT_ID_DATALUS_WINDOW_RESTORED
         )
 
     def __str__(self):
-        return "Firefox Session Store Window Restored"
+        return "Datalus Session Store Window Restored"
 
 
 class ProcessStart(XPerfEvent):
@@ -1161,22 +1161,22 @@ if __name__ == "__main__":
 
             myfilters = {XPerfEvent.EVENT_FILE_NAME: test_filter_exclude_dll}
 
-            fxstart1 = ProcessStart("firefox.exe")
+            fxstart1 = ProcessStart("datalus.exe")
             sess_restore = SessionStoreWindowRestored()
             interval1 = XPerfInterval(
                 fxstart1, sess_restore, output=lambda a: print(str(a))
             )
             etl.add_attr(interval1)
 
-            fxstart2 = ProcessStart("firefox.exe")
+            fxstart2 = ProcessStart("datalus.exe")
             ready = EventSequence(
-                Nth(2, ProcessStart("firefox.exe")), ThreadStart(), ReadyThread()
+                Nth(2, ProcessStart("datalus.exe")), ThreadStart(), ReadyThread()
             )
             interval2 = XPerfInterval(fxstart2, ready, output=structured_output)
             etl.add_attr(interval2)
 
             browser_main_thread_file_io_read = EventSequence(
-                Nth(2, ProcessStart("firefox.exe")),
+                Nth(2, ProcessStart("datalus.exe")),
                 ThreadStart(),
                 BindThread(FileIOReadOrWrite(FileIOReadOrWrite.READ)),
             )
@@ -1187,7 +1187,7 @@ if __name__ == "__main__":
             )
 
             browser_main_thread_file_io_write = EventSequence(
-                Nth(2, ProcessStart("firefox.exe")),
+                Nth(2, ProcessStart("datalus.exe")),
                 ThreadStart(),
                 BindThread(FileIOReadOrWrite(FileIOReadOrWrite.WRITE)),
             )
@@ -1196,7 +1196,7 @@ if __name__ == "__main__":
             )
 
             # This is equivalent to the old-style xperf test (with launcher)
-            parent_process_started = Nth(2, ProcessStart("firefox.exe"))
+            parent_process_started = Nth(2, ProcessStart("datalus.exe"))
             interval3 = XPerfInterval(
                 parent_process_started,
                 SessionStoreWindowRestored(),
@@ -1205,7 +1205,7 @@ if __name__ == "__main__":
             )
             etl.add_attr(interval3)
 
-            parent_process_started2 = Nth(2, ProcessStart("firefox.exe"))
+            parent_process_started2 = Nth(2, ProcessStart("datalus.exe"))
             interval4 = XPerfInterval(
                 parent_process_started2,
                 SessionStoreWindowRestored(),

@@ -35,7 +35,7 @@ function getHomepagePref(useDefault) {
     prefs = prefs.getDefaultBranch(null);
   }
   try {
-    // Historically, this was a localizable pref, but default Firefox builds
+    // Historically, this was a localizable pref, but default Datalus builds
     // don't use this.
     // Distributions and local customizations might still use this, so let's
     // keep it.

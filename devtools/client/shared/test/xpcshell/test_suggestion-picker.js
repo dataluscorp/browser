@@ -27,8 +27,8 @@ function run_test() {
 const TEST_DATA = [
   {
     // Match in sortedItems array.
-    items: ["chrome", "edge", "firefox"],
-    sortedItems: ["firefox", "chrome", "edge"],
+    items: ["chrome", "edge", "datalus"],
+    sortedItems: ["datalus", "chrome", "edge"],
     expectedIndex: 2,
   },
   {

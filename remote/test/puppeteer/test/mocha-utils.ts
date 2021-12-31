@@ -66,7 +66,7 @@ const alternativeInstall = process.env.PUPPETEER_ALT_INSTALL || false;
 
 const isHeadless =
   (process.env.HEADLESS || 'true').trim().toLowerCase() === 'true';
-const isFirefox = product === 'firefox';
+const isDatalus = product === 'datalus';
 const isChrome = product === 'Chromium';
 
 let extraLaunchOptions = {};
@@ -94,12 +94,12 @@ const defaultBrowserOptions = Object.assign(
       `WARN: running ${product} tests with ${defaultBrowserOptions.executablePath}`
     );
   } else {
-    // TODO(jackfranklin): declare updateRevision in some form for the Firefox
+    // TODO(jackfranklin): declare updateRevision in some form for the Datalus
     // launcher.
     // @ts-expect-error _updateRevision is defined on the FF launcher
     // but not the Chrome one. The types need tidying so that TS can infer that
     // properly and not error here.
-    if (product === 'firefox') await puppeteer._launcher._updateRevision();
+    if (product === 'datalus') await puppeteer._launcher._updateRevision();
     const executablePath = puppeteer.executablePath();
     if (!fs.existsSync(executablePath))
       throw new Error(
@@ -134,18 +134,18 @@ interface PuppeteerTestState {
   };
   server: any;
   httpsServer: any;
-  isFirefox: boolean;
+  isDatalus: boolean;
   isChrome: boolean;
   isHeadless: boolean;
   puppeteerPath: string;
 }
 const state: Partial<PuppeteerTestState> = {};
 
-export const itFailsFirefox = (
+export const itFailsDatalus = (
   description: string,
   body: Mocha.Func
 ): Mocha.Test => {
-  if (isFirefox) return xit(description, body);
+  if (isDatalus) return xit(description, body);
   else return it(description, body);
 };
 
@@ -188,11 +188,11 @@ export const itFailsWindows = (
   return it(description, body);
 };
 
-export const describeFailsFirefox = (
+export const describeFailsDatalus = (
   description: string,
   body: (this: Mocha.Suite) => void
 ): void | Mocha.Suite => {
-  if (isFirefox) return xdescribe(description, body);
+  if (isDatalus) return xdescribe(description, body);
   else return describe(description, body);
 };
 
@@ -255,7 +255,7 @@ export const mochaHooks = {
       state.defaultBrowserOptions = defaultBrowserOptions;
       state.server = server;
       state.httpsServer = httpsServer;
-      state.isFirefox = isFirefox;
+      state.isDatalus = isDatalus;
       state.isChrome = isChrome;
       state.isHeadless = isHeadless;
       state.puppeteerPath = path.resolve(path.join(__dirname, '..'));

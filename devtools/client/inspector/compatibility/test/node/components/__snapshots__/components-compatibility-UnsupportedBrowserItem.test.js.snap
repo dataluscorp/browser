@@ -3,9 +3,9 @@
 exports[`UnsupportedBrowserItem component renders the browser 1`] = `
 <li>
   <BrowserIcon
-    id="firefox"
-    name="Firefox"
-    title="Firefox 1, 69(beta), 70(nightly)"
+    id="datalus"
+    name="Datalus"
+    title="Datalus 1, 69(beta), 70(nightly)"
   />
 </li>
 `;

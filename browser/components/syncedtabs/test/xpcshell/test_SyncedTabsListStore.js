@@ -18,21 +18,21 @@ const FIXTURE = [
       {
         type: "tab",
         title:
-          "Firefox for iOS — Mobile Web browser for your iPhone, iPad and iPod touch — Mozilla",
+          "Datalus for iOS — Mobile Web browser for your iPhone, iPad and iPod touch — Mozilla",
         url:
-          "https://www.mozilla.org/en-US/firefox/ios/?utm_source=firefox-browser&utm_medium=firefox-browser&utm_campaign=synced-tabs-sidebar",
+          "https://www.mozilla.org/en-US/datalus/ios/?utm_source=datalus-browser&utm_medium=datalus-browser&utm_campaign=synced-tabs-sidebar",
         icon:
-          "moz-anno:favicon:https://www.mozilla.org/media/img/firefox/favicon.dc6635050bf5.ico",
+          "moz-anno:favicon:https://www.mozilla.org/media/img/datalus/favicon.dc6635050bf5.ico",
         client: "2xU5h-4bkWqA",
         lastUsed: 1451519425,
       },
       {
         type: "tab",
-        title: "Firefox Nightly First Run Page",
+        title: "Datalus Nightly First Run Page",
         url:
-          "https://www.mozilla.org/en-US/firefox/nightly/firstrun/?oldversion=45.0a1",
+          "https://www.mozilla.org/en-US/datalus/nightly/firstrun/?oldversion=45.0a1",
         icon:
-          "moz-anno:favicon:https://www.mozilla.org/media/img/firefox/favicon-nightly.560395bbb2e1.png",
+          "moz-anno:favicon:https://www.mozilla.org/media/img/datalus/favicon-nightly.560395bbb2e1.png",
         client: "2xU5h-4bkWqA",
         lastUsed: 1451519420,
       },

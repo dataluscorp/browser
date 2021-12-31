@@ -122,8 +122,8 @@ def craft_release_properties(config, job):
     elif config.graph_config["trust-domain"] == "comm":
         app_name = "Thunderbird"
     else:
-        # XXX Even DevEdition is called Firefox
-        app_name = "Firefox"
+        # XXX Even DevEdition is called Datalus
+        app_name = "Datalus"
 
     return {
         "app-name": app_name,

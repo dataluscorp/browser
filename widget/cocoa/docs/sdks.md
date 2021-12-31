@@ -7,7 +7,7 @@ Apple distributes SDKs as part of the Xcode app bundle. Each Xcode version comes
 the SDK for the most recent released version of macOS at the time of the Xcode release.
 The SDK is located at `/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk`.
 
-Compiling Firefox for macOS requires a macOS SDK. The build system uses the SDK from Xcode.app by
+Compiling Datalus for macOS requires a macOS SDK. The build system uses the SDK from Xcode.app by
 default, and you can select a different SDK using the `mozconfig` option `--with-macos-sdk`:
 
 ```text
@@ -16,19 +16,19 @@ ac_add_options --with-macos-sdk=/Users/username/SDKs/MacOSX10.12.sdk
 
 ## Supported SDKs
 
-First off, Firefox runs on 10.9 and above. This is called the "minimum deployment target" and is
+First off, Datalus runs on 10.9 and above. This is called the "minimum deployment target" and is
 independent of the SDK version.
 
-Our official Firefox builds compiled in CI (continuous integration) currently use the 10.12 SDK.
+Our official Datalus builds compiled in CI (continuous integration) currently use the 10.12 SDK.
 [Bug 1475652](https://bugzilla.mozilla.org/show_bug.cgi?id=1475652) tracks updating this SDK.
 
-For local builds, all SDKs from 10.12 to 10.15 are supported. Firefox should compile successfully
+For local builds, all SDKs from 10.12 to 10.15 are supported. Datalus should compile successfully
 with all of those SDKs, but minor differences in runtime behavior can occur.
 
 However, since only the 10.12 SDK is used in CI, compiling with different SDKs breaks from time to time.
-Such breakages should be [reported in Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?blocked=mach-busted&bug_type=defect&cc=:spohl,:mstange&component=General&form_name=enter_bug&keywords=regression&op_sys=macOS&product=Firefox%20Build%20System&rep_platform=All) and fixed quickly.
+Such breakages should be [reported in Bugzilla](https://bugzilla.mozilla.org/enter_bug.cgi?blocked=mach-busted&bug_type=defect&cc=:spohl,:mstange&component=General&form_name=enter_bug&keywords=regression&op_sys=macOS&product=Datalus%20Build%20System&rep_platform=All) and fixed quickly.
 
-Aside: Firefox seems to be a bit of a special snowflake with its ability to build with an arbitrary SDK.
+Aside: Datalus seems to be a bit of a special snowflake with its ability to build with an arbitrary SDK.
 For example, at the time of this writing (June 2020),
 [building Chrome requires the 10.15 SDK](https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md#system-requirements).
 Some apps even require a certain version of Xcode and only support building with the SDK of that Xcode version.
@@ -112,12 +112,12 @@ Apple's expectation is that you upgrade to the new macOS version when it is rele
 Xcode version when it is released, synchronize these updates across the machines of all developers
 that work on your app, use the SDK in the newest Xcode to compile your app, and make changes to your
 app to be compatible with any behavior changes whenever you update Xcode.
-This expectation does not always match reality. It definitely doesn't match what we're doing with Firefox.
+This expectation does not always match reality. It definitely doesn't match what we're doing with Datalus.
 
-For Firefox, SDK-dependent compatibility behaviors mean that developers who build Firefox locally
+For Datalus, SDK-dependent compatibility behaviors mean that developers who build Datalus locally
 can see different runtime behavior than the users of our CI builds, if they use a different SDK than
 the SDK used in CI.
-That is, unless we change the Firefox code so that it has the same behavior regardless of SDK version.
+That is, unless we change the Datalus code so that it has the same behavior regardless of SDK version.
 Often this can be achieved by using APIs in a way that's more in line with the API's recommended use.
 
 For example, we've had cases of
@@ -129,7 +129,7 @@ For example, we've had cases of
 [broken vibrancy](https://bugzilla.mozilla.org/show_bug.cgi?id=1475694), and
 [broken colors in dark mode](https://bugzilla.mozilla.org/show_bug.cgi?id=1578917).
 
-In most of these cases, the breakage was either very minor, or it was caused by Firefox doing things
+In most of these cases, the breakage was either very minor, or it was caused by Datalus doing things
 that were explicitly discouraged, like creating unexpected NSView hierarchies, or relying on unspecified
 implementation details. (With one exception: In 10.14, HiDPI-aware `NSOpenGLContext` rendering in
 layer-backed windows simply broke.)
@@ -137,7 +137,7 @@ layer-backed windows simply broke.)
 And in all of these cases, it was the SDK-dependent compatibility behavior that protected our users from being
 exposed to the breakage. Our CI builds continued to work because they were built with an older SDK.
 
-We have addressed all known cases of breakage when building Firefox with newer SDKs.
+We have addressed all known cases of breakage when building Datalus with newer SDKs.
 I am not aware of any current instances of this problem as of this writing (June 2020).
 
 For more information about how these compatibility tricks work,
@@ -145,7 +145,7 @@ read the [Overriding SDK-dependent runtime behavior](#overriding-sdk-dependent-r
 
 ## Supporting multiple SDKs
 
-As described under [Supported SDKs](#supported-sdks), Firefox can be built with a wide variety of SDK versions.
+As described under [Supported SDKs](#supported-sdks), Datalus can be built with a wide variety of SDK versions.
 
 This ability comes at the cost of some manual labor; it requires some well-placed `#ifdefs` and
 copying of header definitions.
@@ -199,7 +199,7 @@ For each of these SDK-dependent behavior differences, both the old and the new b
 in the version of AppKit that ships with the new macOS version.
 At runtime, AppKit selects one of the behaviors based on the SDK version, with a call to
 `_CFExecutableLinkedOnOrAfter()`. This call checks the SDK version of the main executable of the
-process that's running AppKit code; in our case that's the `firefox` or `plugin-container` executable.
+process that's running AppKit code; in our case that's the `datalus` or `plugin-container` executable.
 The SDK version is stored in the mach-o headers of the executable by the linker.
 
 One interesting design aspect of AppKit's compatibility tricks is the fact that most of these behavior differences

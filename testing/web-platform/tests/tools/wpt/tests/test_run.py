@@ -60,7 +60,7 @@ def test_check_environ_fail(platform):
 
 @pytest.mark.parametrize("product", product_list)
 def test_setup_wptrunner(venv, logger, product):
-    if product == "firefox_android":
+    if product == "datalus_android":
         pytest.skip("Android emulator doesn't work on docker")
     parser = run.create_parser()
     kwargs = vars(parser.parse_args(["--channel=nightly", product]))
@@ -69,6 +69,6 @@ def test_setup_wptrunner(venv, logger, product):
     kwargs["binary"] = sys.argv[0]
     kwargs["webdriver_binary"] = sys.argv[0]
     if kwargs["product"] == "sauce":
-        kwargs["sauce_browser"] = "firefox"
+        kwargs["sauce_browser"] = "datalus"
         kwargs["sauce_version"] = "63"
     run.setup_wptrunner(venv, **kwargs)

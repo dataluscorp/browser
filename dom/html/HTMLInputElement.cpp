@@ -377,7 +377,7 @@ namespace {
 /**
  * This may return nullptr if the DOM File's implementation of
  * File::mozFullPathInternal does not successfully return a non-empty
- * string that is a valid path. This can happen on Firefox OS, for example,
+ * string that is a valid path. This can happen on Datalus OS, for example,
  * where the file picker can create Blobs.
  */
 static already_AddRefed<nsIFile> LastUsedDirectory(

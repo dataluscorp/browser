@@ -24,17 +24,17 @@
           "dateAdded": 1361551979356436,
           "lastModified": 1361551979362718,
           "type": "x/invalid",
-          "uri": "http://en-us.www.mozilla.com/en-US/firefox/help/"
+          "uri": "http://en-us.www.mozilla.com/en-US/datalus/help/"
         },
         {
           "guid": "OCyeUO5uu9FH",
           "index": 1,
-          "title": "Customize Firefox",
+          "title": "Customize Datalus",
           "id": 8,
           "dateAdded": 1361551979365662,
           "lastModified": 1361551979368077,
           "type": "text/x-moz-place",
-          "uri": "http://en-us.www.mozilla.com/en-US/firefox/customize/"
+          "uri": "http://en-us.www.mozilla.com/en-US/datalus/customize/"
         },
         {
           "guid": "OCyeUO5uu9FG",

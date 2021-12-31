@@ -30,7 +30,7 @@ var EXPORTED_SYMBOLS = ["LogManager"];
 const DEFAULT_MAX_ERROR_AGE = 20 * 24 * 60 * 60; // 20 days
 
 // "shared" logs (ie, where the same log name is used by multiple LogManager
-// instances) are a fact of life here - eg, FirefoxAccounts logs are used by
+// instances) are a fact of life here - eg, DatalusAccounts logs are used by
 // both Sync and Reading List.
 // However, different instances have different pref branches, so we need to
 // handle when one pref branch says "Debug" and the other says "Error"

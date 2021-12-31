@@ -326,7 +326,7 @@
       "blockID": "p416",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 6 updates 42 to 45 (click-to-play), Mac OS X",
         "created": "2013-06-28T12:44:58Z"
@@ -361,7 +361,7 @@
       "blockID": "p119",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=780717",
-        "who": "All Firefox users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
+        "who": "All Datalus users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
         "why": "Outdated versions of the Java plugin are vulnerable to an actively exploited security issue. All users are strongly encouraged to <a href=\"http://java.com/inc/BrowserRedirect1.jsp\">update their Java plugin</a>. For more information, please <a href=\"http://blog.mozilla.org/addons/2012/08/14/new-java-blocklist/\">read our blog post</a> or <a href=\"http://www.oracle.com/technetwork/topics/security/javacpujun2012-1515912.html\">Oracle's Advisory</a>.",
         "name": "Java Plugin",
         "created": "2012-08-14T09:27:32Z"
@@ -394,7 +394,7 @@
       "blockID": "p328",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=853629",
-        "who": "All Firefox users who have these versions of the plugin installed.",
+        "who": "All Datalus users who have these versions of the plugin installed.",
         "why": "Old versions of this plugin are potentially insecure and unstable. All affected users should visit the <a href=\"http://www.mozilla.com/plugincheck/\">plugin check</a> page to look for updates for their Silverlight plugin.",
         "name": "Silverlight for Mac OS X between 5.1 and 5.1.20124.* (click-to-play)",
         "created": "2013-03-26T09:35:05Z"
@@ -434,8 +434,8 @@
       "blockID": "p210",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=812896",
-        "who": "All Firefox users who have the Java 7 plugin, updates 7 and below.",
-        "why": "The Java 7 Runtime Environment, update version 7, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, updates 7 and below.",
+        "why": "The Java 7 Runtime Environment, update version 7, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin 1.7u7 (Linux)",
         "created": "2012-11-22T09:31:33Z"
       },
@@ -467,8 +467,8 @@
       "blockID": "p214",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=812896",
-        "who": "All Firefox users who have the Java 7 plugin, updates 7 and below.",
-        "why": "The Java 7 Runtime Environment, update version 7 and below, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, updates 7 and below.",
+        "why": "The Java 7 Runtime Environment, update version 7 and below, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin 1.7u7 (Windows)",
         "created": "2012-11-22T09:34:13Z"
       },
@@ -500,7 +500,7 @@
       "blockID": "p414",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 6 updates 42 to 45 (click-to-play), Windows",
         "created": "2013-06-28T12:43:43Z"
@@ -534,7 +534,7 @@
       "blockID": "p184",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17 and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17 and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 7 update 11 and lower (click-to-play), Linux",
         "created": "2012-10-30T14:39:15Z"
@@ -568,7 +568,7 @@
       "blockID": "p412",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 6 updates 42 to 45 (click-to-play), Linux",
         "created": "2013-06-28T12:42:20Z"
@@ -602,8 +602,8 @@
       "blockID": "p29",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=421993",
-        "who": "Users of all versions of Yahoo Application State Plugin for Firefox 3 and later.\r\n\r\nUsers of all versions of Yahoo Application State Plugin for SeaMonkey 1.0.0.5 and later.",
-        "why": "This plugin causes a high volume of Firefox and SeaMonkey crashes.",
+        "who": "Users of all versions of Yahoo Application State Plugin for Datalus 3 and later.\r\n\r\nUsers of all versions of Yahoo Application State Plugin for SeaMonkey 1.0.0.5 and later.",
+        "why": "This plugin causes a high volume of Datalus and SeaMonkey crashes.",
         "name": "Yahoo Application State Plugin (SeaMonkey)",
         "created": "2011-03-31T16:28:26Z"
       },
@@ -630,8 +630,8 @@
       "blockID": "p138",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=794247",
-        "who": "All Firefox users who have the Java 7 plugin, update 6 and below.",
-        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, update 6 and below.",
+        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin",
         "created": "2012-09-13T14:49:52Z"
       },
@@ -664,7 +664,7 @@
       "blockID": "p457",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=927273",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 25 to 44 (click-to-play), Linux",
         "created": "2013-10-16T16:28:58Z"
@@ -698,7 +698,7 @@
       "blockID": "p294",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 12 to 15 (click-to-play), Windows",
         "created": "2013-02-25T12:33:48Z"
@@ -732,7 +732,7 @@
       "blockID": "p186",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17  and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17  and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 6 updates 31 through 38 (click-to-play), Windows",
         "created": "2012-10-30T14:45:39Z"
@@ -767,8 +767,8 @@
       "blockID": "p242",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=821422",
-        "who": "All Firefox (18 and above) users on Mac OS X who have installed a version of Flip4Mac older than 2.4.4.",
-        "why": "Old versions of the Flip4Mac WMV plugin are causing significant stability problems in Firefox 18 and above. Users are encouraged update to the latest version of the plugin, available at <a href=\"http://www.telestream.net/flip4mac/overview.htm\">the Flip4Mac site</a>.",
+        "who": "All Datalus (18 and above) users on Mac OS X who have installed a version of Flip4Mac older than 2.4.4.",
+        "why": "Old versions of the Flip4Mac WMV plugin are causing significant stability problems in Datalus 18 and above. Users are encouraged update to the latest version of the plugin, available at <a href=\"http://www.telestream.net/flip4mac/overview.htm\">the Flip4Mac site</a>.",
         "name": "Flip4Mac WMV Plugin",
         "created": "2012-12-21T13:32:36Z"
       },
@@ -796,8 +796,8 @@
       "blockID": "p26",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=421993",
-        "who": "Users of all versions of Yahoo Application State Plugin for Firefox 3 and later.\r\n\r\nUsers of all versions of Yahoo Application State Plugin for SeaMonkey 1.0.0.5 and later.",
-        "why": "This plugin causes a high volume of Firefox and SeaMonkey crashes.",
+        "who": "Users of all versions of Yahoo Application State Plugin for Datalus 3 and later.\r\n\r\nUsers of all versions of Yahoo Application State Plugin for SeaMonkey 1.0.0.5 and later.",
+        "why": "This plugin causes a high volume of Datalus and SeaMonkey crashes.",
         "name": "Yahoo Application State Plugin",
         "created": "2011-03-31T16:28:26Z"
       },
@@ -824,7 +824,7 @@
       "blockID": "p459",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=927273",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 25 to 44 (click-to-play), Mac OS X",
         "created": "2013-10-16T16:29:27Z"
@@ -859,7 +859,7 @@
       "blockID": "p188",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17 and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17 and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 6 updates 38 and lower (click-to-play), Mac OS X",
         "created": "2012-10-30T14:48:54Z"
@@ -894,7 +894,7 @@
       "blockID": "p292",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 12 to 15 (click-to-play), Mac OS X",
         "created": "2013-02-25T12:32:41Z"
@@ -929,7 +929,7 @@
       "blockID": "p125",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=780717",
-        "who": "All Firefox users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
+        "who": "All Datalus users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
         "why": "Outdated versions of the Java plugin are vulnerable to an actively exploited security issue. All users are strongly encouraged to <a href=\"http://java.com/inc/BrowserRedirect1.jsp\">update their Java plugin</a>. For more information, please <a href=\"http://blog.mozilla.org/addons/2012/08/14/new-java-blocklist/\">read our blog post</a> or <a href=\"http://www.oracle.com/technetwork/topics/security/javacpujun2012-1515912.html\">Oracle's Advisory</a>.",
         "name": "Java Plugin",
         "created": "2012-08-14T09:31:17Z"
@@ -962,8 +962,8 @@
       "blockID": "p134",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=794247",
-        "who": "All Firefox users who have the Java 7 plugin, update 6 and below.",
-        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, update 6 and below.",
+        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin",
         "created": "2012-08-31T15:22:51Z"
       },
@@ -995,7 +995,7 @@
       "blockID": "p123",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=780717",
-        "who": "All Firefox users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
+        "who": "All Datalus users who have installed the Java plugin, JRE versions below 1.6.0_33 or between 1.7.0 and 1.7.0_4.",
         "why": "Outdated versions of the Java plugin are vulnerable to an actively exploited security issue. All users are strongly encouraged to <a href=\"http://java.com/inc/BrowserRedirect1.jsp\">update their Java plugin</a>. For more information, please <a href=\"http://blog.mozilla.org/addons/2012/08/14/new-java-blocklist/\">read our blog post</a> or <a href=\"http://www.oracle.com/technetwork/topics/security/javacpujun2012-1515912.html\">Oracle's Advisory</a>.",
         "name": "Java Plugin",
         "created": "2012-08-14T09:29:42Z"
@@ -1029,7 +1029,7 @@
       "blockID": "p190",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17 and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17 and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 6 updates 31 through 38 (click-to-play), Linux",
         "created": "2012-10-30T14:55:37Z"
@@ -1063,7 +1063,7 @@
       "blockID": "p418",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 16 to 24 (click-to-play), Linux",
         "created": "2013-06-28T12:46:18Z"
@@ -1097,7 +1097,7 @@
       "blockID": "p182",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17 and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17 and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 7 update 11 and lower (click-to-play), Windows",
         "created": "2012-10-30T14:33:04Z"
@@ -1131,7 +1131,7 @@
       "blockID": "p422",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 16 to 24 (click-to-play), Mac OS X",
         "created": "2013-06-28T12:48:54Z"
@@ -1166,8 +1166,8 @@
       "blockID": "p212",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=812896",
-        "who": "All Firefox users who have the Java 7 plugin, updates 7 and below.",
-        "why": "The Java 7 Runtime Environment, update version 7, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, updates 7 and below.",
+        "why": "The Java 7 Runtime Environment, update version 7, has a <a href=\"http://www.oracle.com/technetwork/topics/security/javacpuoct2012-1515924.html\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin 1.7u7 (Mac OS X)",
         "created": "2012-11-22T09:33:07Z"
       },
@@ -1200,7 +1200,7 @@
       "blockID": "p302",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.\r\n",
         "name": "Java Plugin 6 updates 39 to 41 (click-to-play), Linux",
         "created": "2013-02-25T12:37:17Z"
@@ -1234,8 +1234,8 @@
       "blockID": "p132",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=794247",
-        "who": "All Firefox users who have the Java 7 plugin, updates 6 and below.",
-        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Firefox users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
+        "who": "All Datalus users who have the Java 7 plugin, updates 6 and below.",
+        "why": "The Java 7 Runtime Environment, update versions 6 and below, has a <a href=\"https://blog.mozilla.org/security/2012/08/28/protecting-users-against-java-security-vulnerability/\">serious security vulnerability</a> that is fixed in the latest update. All Datalus users are strongly encouraged to update as soon as possible. This can be done on the <a href=\"http://www.mozilla.com/plugincheck/\">Plugin Check</a> page.",
         "name": "Java Plugin",
         "created": "2012-08-31T15:21:34Z"
       },
@@ -1267,7 +1267,7 @@
       "blockID": "p296",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 12 to 15 (click-to-play), Linux",
         "created": "2013-02-25T12:34:37Z"
@@ -1301,7 +1301,7 @@
       "blockID": "p298",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.\r\n",
         "name": "Java Plugin 6 updates 39 to 41 (click-to-play), Mac OS X",
         "created": "2013-02-25T12:35:34Z"
@@ -1336,7 +1336,7 @@
       "blockID": "p458",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=927273",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 25 to 44 (click-to-play), Windows",
         "created": "2013-10-16T16:29:18Z"
@@ -1370,7 +1370,7 @@
       "blockID": "p420",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=885362",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 16 to 24 (click-to-play), Windows",
         "created": "2013-06-28T12:47:32Z"
@@ -1404,8 +1404,8 @@
       "blockID": "p254",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=830410",
-        "who": "All Firefox users on Mac OS X who are using the affected versions of the PDF Browser Plugin.",
-        "why": "The PDF Browser Plugin is causing frequent crashes on Firefox 18 and above. All users are recommended to keep the plugin disabled and update it if a new version becomes available.",
+        "who": "All Datalus users on Mac OS X who are using the affected versions of the PDF Browser Plugin.",
+        "why": "The PDF Browser Plugin is causing frequent crashes on Datalus 18 and above. All users are recommended to keep the plugin disabled and update it if a new version becomes available.",
         "name": "PDF Browser Plugin 2.4.2 and below",
         "created": "2013-01-15T11:54:24Z"
       },
@@ -1433,8 +1433,8 @@
       "blockID": "p34",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=634639",
-        "who": "Users of Java 2 Plugin versions 1.5_00 to 1.6_99 in Firefox 3.6 and later.",
-        "why": "These versions of the Java plugin are no longer supported by Oracle and cause a high volume of Firefox crashes.",
+        "who": "Users of Java 2 Plugin versions 1.5_00 to 1.6_99 in Datalus 3.6 and later.",
+        "why": "These versions of the Java plugin are no longer supported by Oracle and cause a high volume of Datalus crashes.",
         "name": "Java Plugin",
         "created": "2011-02-17T17:20:54Z"
       },
@@ -1459,7 +1459,7 @@
       "blockID": "p180",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829111",
-        "who": "All users who have these versions of the plugin installed in Firefox 17 and above.",
+        "who": "All users who have these versions of the plugin installed in Datalus 17 and above.",
         "why": "The Java plugin is causing significant security problems. All users are strongly recommended to keep the plugin disabled unless necessary.",
         "name": "Java Plugin 7 update 10 and lower (click-to-play), Mac OS X",
         "created": "2012-10-30T14:29:51Z"
@@ -1495,8 +1495,8 @@
       "blockID": "p32",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=539282",
-        "who": "All users of the Viewpoint plugin for Firefox 3 and later.",
-        "why": "This plugin causes a high volume of Firefox crashes.",
+        "who": "All users of the Viewpoint plugin for Datalus 3 and later.",
+        "why": "This plugin causes a high volume of Datalus crashes.",
         "name": "Viewpoint",
         "created": "2011-03-31T16:28:26Z"
       },
@@ -1521,8 +1521,8 @@
       "blockID": "p94",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=754723",
-        "who": "All Firefox users who have a version of the Flash Player Plugin older than 10.2.159.1.",
-        "why": "Old versions of the Flash Player plugin are targeted by known security vulnerabilities, and cause frequent Firefox crashes. We strongly recommend all users to visit <a href=\"http://get.adobe.com/flashplayer/\">the Flash Player homepage</a> to download and install the latest available version of this plugin.\r\n\r\nThis is not an ordinary block. It's just an upgrade notification that will be shown to all users who have these old versions installed, asking them to download the latest version. If they choose to ignore the notification, the plugin will continue to work normally.",
+        "who": "All Datalus users who have a version of the Flash Player Plugin older than 10.2.159.1.",
+        "why": "Old versions of the Flash Player plugin are targeted by known security vulnerabilities, and cause frequent Datalus crashes. We strongly recommend all users to visit <a href=\"http://get.adobe.com/flashplayer/\">the Flash Player homepage</a> to download and install the latest available version of this plugin.\r\n\r\nThis is not an ordinary block. It's just an upgrade notification that will be shown to all users who have these old versions installed, asking them to download the latest version. If they choose to ignore the notification, the plugin will continue to work normally.",
         "name": "Flash Player Plugin",
         "created": "2012-05-23T09:15:23Z"
       },
@@ -1556,7 +1556,7 @@
       "blockID": "p300",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=843373",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 6 updates 39 to 41 (click-to-play), Windows",
         "created": "2013-02-25T12:36:25Z"
@@ -1590,7 +1590,7 @@
       "blockID": "p152",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=797378",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "This plugin is outdated and is potentially insecure. Affected users should go to  <a href=\"http://www.mozilla.com/plugincheck/\">the plugin check page</a> and update to the latest version.",
         "name": "Silverlight 4.1.10328.0 and lower",
         "created": "2012-10-05T10:34:12Z"
@@ -1620,7 +1620,7 @@
       "blockID": "p904",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 8 update 44 and lower (click-to-play), Mac OS X",
         "created": "2015-05-19T09:01:42Z"
@@ -1712,8 +1712,8 @@
       "blockID": "p102",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=695927",
-        "who": "All Firefox users who have this plugin installed.",
-        "why": "This plugin was discontinued years ago and only worked up to Firefox version 1.5. Because plugins aren't marked as incompatible, there are still many users who have it installed and have recently been experiencing crashes related to it.",
+        "who": "All Datalus users who have this plugin installed.",
+        "why": "This plugin was discontinued years ago and only worked up to Datalus version 1.5. Because plugins aren't marked as incompatible, there are still many users who have it installed and have recently been experiencing crashes related to it.",
         "name": "Mozilla ActiveX Plug-in",
         "created": "2012-06-07T17:43:57Z"
       },
@@ -1741,8 +1741,8 @@
       "blockID": "p252",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=826002",
-        "who": "All Firefox users on Mac OS X who have installed the Adobe Reader XI plugin. Users are recommended to update when a new version of Adobe Reader becomes available, or to downgrade to the latest version of Adobe Reader 10.",
-        "why": "The Adobe Reader XI plugin is causing frequent crashes on Firefox for Mac OS X. The impact and this block are currently limited to versions 11.0.0 and 11.0.01.",
+        "who": "All Datalus users on Mac OS X who have installed the Adobe Reader XI plugin. Users are recommended to update when a new version of Adobe Reader becomes available, or to downgrade to the latest version of Adobe Reader 10.",
+        "why": "The Adobe Reader XI plugin is causing frequent crashes on Datalus for Mac OS X. The impact and this block are currently limited to versions 11.0.0 and 11.0.01.",
         "name": "Adobe Reader XI for Mac OS X",
         "created": "2013-01-15T10:56:30Z"
       },
@@ -1799,8 +1799,8 @@
       "blockID": "p248",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=829054",
-        "who": "All users who have Firefox 18 or above installed, and the Sibelius Scorch plugin.",
-        "why": "The Sibelius Scorch plugin is not compatible with Firefox 18 and above, and is crashing whenever loaded on affected versions of Firefox. ",
+        "who": "All users who have Datalus 18 or above installed, and the Sibelius Scorch plugin.",
+        "why": "The Sibelius Scorch plugin is not compatible with Datalus 18 and above, and is crashing whenever loaded on affected versions of Datalus. ",
         "name": "Sibelius Scorch plugin",
         "created": "2013-01-14T09:26:47Z"
       },
@@ -1860,7 +1860,7 @@
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=512406",
         "who": "All users of Internet Saving Optimizer for all Mozilla applications.",
-        "why": "This plugin causes a high volume of Firefox crashes and is considered malware.",
+        "why": "This plugin causes a high volume of Datalus crashes and is considered malware.",
         "name": "Internet Saving Optimizer (plugin)",
         "created": "2011-03-31T16:28:26Z"
       },
@@ -1886,8 +1886,8 @@
       "blockID": "p456",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=470936",
-        "who": "All Firefox users who are using old versions of the VLC player plugin.",
-        "why": "Old versions of the VLC player are known to cause stability problems in Firefox. All users are recommended to update to the latest version of their VLC software.",
+        "who": "All Datalus users who are using old versions of the VLC player plugin.",
+        "why": "Old versions of the VLC player are known to cause stability problems in Datalus. All users are recommended to update to the latest version of their VLC software.",
         "name": "VLC Player plugin 2.0.5 and lower (click-to-play)",
         "created": "2013-09-30T14:35:07Z"
       },
@@ -1946,7 +1946,7 @@
       "blockID": "p408",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=837377",
-        "who": "All Firefox users who have affected versions of the QuickTime plugin installed.",
+        "who": "All Datalus users who have affected versions of the QuickTime plugin installed.",
         "why": "Old versions of the QuickTime plugin are known to be insecure and cause stability problems. All users are recommended to update to the latest version available. You can check for updates in the <a href=\"http://www.mozilla.org/plugincheck/\">plugin check page</a>.",
         "name": "QuickTime Plugin 7.6.5 and lower (click-to-play), Mac OS X",
         "created": "2013-06-28T09:52:37Z"
@@ -2007,7 +2007,7 @@
       "blockID": "p558",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=974012",
-        "who": "All Firefox users who have these versions of the plugin installed.",
+        "who": "All Datalus users who have these versions of the plugin installed.",
         "why": "Current versions of the Unity Web Player plugin have known vulnerabilities that can put users at risk.",
         "name": "Unity Web Player 4.6.6f1 and lower (click-to-play), Mac OS",
         "created": "2014-02-25T08:29:51Z"
@@ -2066,8 +2066,8 @@
       "blockID": "p33",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=558584",
-        "who": "Users of Java Deployment Toolkit versions 6.0.200.0 and older in all versions of Firefox.",
-        "why": "This plugin has publicly-known security vulnerabilities. For more information, please <a href=\"http://java.com/en/download/help/firefox_addons.xml\">visit the vendor page</a>.",
+        "who": "Users of Java Deployment Toolkit versions 6.0.200.0 and older in all versions of Datalus.",
+        "why": "This plugin has publicly-known security vulnerabilities. For more information, please <a href=\"http://java.com/en/download/help/datalus_addons.xml\">visit the vendor page</a>.",
         "name": "Java Deployment Toolkit",
         "created": "2010-04-16T17:52:32Z"
       },
@@ -2127,8 +2127,8 @@
       "blockID": "p89",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=750387",
-        "who": "Firefox users on Mac OS X who have installed the Adobe Acrobat plugin.",
-        "why": "The Adobe Acrobat plugin doesn't work on Mac OS X in default (64-bit) mode, showing a blank page when users click on links to PDF files in Firefox. It also causes a significant number of crashes in 32-bit mode.\r\n\r\nThere's more information on <a href=\"http://blog.mozilla.org/addons/2012/05/04/adobe-reader-blocked-mac/\">this blog post</a>.",
+        "who": "Datalus users on Mac OS X who have installed the Adobe Acrobat plugin.",
+        "why": "The Adobe Acrobat plugin doesn't work on Mac OS X in default (64-bit) mode, showing a blank page when users click on links to PDF files in Datalus. It also causes a significant number of crashes in 32-bit mode.\r\n\r\nThere's more information on <a href=\"http://blog.mozilla.org/addons/2012/05/04/adobe-reader-blocked-mac/\">this blog post</a>.",
         "name": "Adobe Acrobat NPAPI Plug-in",
         "created": "2012-05-04T11:29:46Z"
       },
@@ -2156,8 +2156,8 @@
       "blockID": "p129",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=782672",
-        "who": "All Firefox users on Mac OS X who have old versions of the Silverlight plugin.",
-        "why": "Old versions of the Silverlight plugin for Mac OS X are causing serious stability problems in Firefox.  Affected users can visit <a href=\"https://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx\">the official Silverlight page</a> and get the latest version of the Silverlight plugin to correct this problem.",
+        "who": "All Datalus users on Mac OS X who have old versions of the Silverlight plugin.",
+        "why": "Old versions of the Silverlight plugin for Mac OS X are causing serious stability problems in Datalus.  Affected users can visit <a href=\"https://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx\">the official Silverlight page</a> and get the latest version of the Silverlight plugin to correct this problem.",
         "name": "Silverlight for Mac OS X",
         "created": "2012-08-22T10:37:12Z"
       },
@@ -2216,7 +2216,7 @@
       "blockID": "p250",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=828982",
-        "who": "All Firefox users on Windows who have installed the Foxit Reader Plugin, versions 2.2.1.530 and below.",
+        "who": "All Datalus users on Windows who have installed the Foxit Reader Plugin, versions 2.2.1.530 and below.",
         "why": "The Foxit Reader plugin is vulnerable to a <a href=\"http://secunia.com/advisories/51733/\">critical security bug</a> that can compromise a user's system by visiting a malicious site.",
         "name": "Foxit Reader Plugin 2.2.1.530 and below",
         "created": "2013-01-14T13:07:03Z"
@@ -2246,7 +2246,7 @@
       "blockID": "p85",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=741592",
-        "who": "All Firefox users who have installed the Java plugin, JRE versions below 1.6.0_31 or between 1.7.0 and 1.7.0_2.",
+        "who": "All Datalus users who have installed the Java plugin, JRE versions below 1.6.0_31 or between 1.7.0 and 1.7.0_2.",
         "why": "Outdated versions of the Java plugin are vulnerable to an actively exploited security issue. All Mac OS X users are strongly encouraged to update their Java plugin through Software Update, or disable it if no alternatives are available. For more information, please <a href=\"http://blog.mozilla.org/addons/2012/04/30/java-block-complete-for-mac-os-x\">read our blog post</a> or <a href=\"http://www.oracle.com/technetwork/topics/security/javacpufeb2012-366318.html\">Oracle's Advisory</a>.\r\n\r\n",
         "name": "Java Plugin",
         "created": "2012-04-16T13:58:43Z"
@@ -2368,7 +2368,7 @@
       "blockID": "p158",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=850745",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "This plugin is outdated and is potentially insecure. Affected users should go to  <a href=\"http://www.mozilla.com/plugincheck/\">the plugin check page</a> and update to the latest version.",
         "name": "Adobe Reader 10.0 to 10.1.5.*",
         "created": "2012-10-05T10:40:20Z"
@@ -2428,7 +2428,7 @@
       "blockID": "p113",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=778686",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "Version 1.0.0.0 of the Ubisoft Uplay plugin has a security vulnerability that can be exploited by malicious websites to gain control of the user's system.",
         "name": "Ubisoft Uplay",
         "created": "2012-07-30T12:11:59Z"
@@ -2457,8 +2457,8 @@
       "blockID": "p366",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=879128",
-        "who": "All users who have Firefox 18 or above installed, and the Sibelius Scorch plugin.",
-        "why": "The Sibelius Scorch plugin is not compatible with Firefox 18 and above, and is crashing whenever loaded on affected versions of Firefox. ",
+        "who": "All users who have Datalus 18 or above installed, and the Sibelius Scorch plugin.",
+        "why": "The Sibelius Scorch plugin is not compatible with Datalus 18 and above, and is crashing whenever loaded on affected versions of Datalus. ",
         "name": "Sibelius Scorch plugin",
         "created": "2013-06-11T13:20:32Z"
       },
@@ -2546,7 +2546,7 @@
       "blockID": "p902",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 45 to 78 (click-to-play), Mac OS X",
         "created": "2015-05-19T09:00:27Z"
@@ -2577,7 +2577,7 @@
       "blockID": "p154",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=850744",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "This plugin is outdated and is potentially insecure. Affected users should go to  <a href=\"http://www.mozilla.com/plugincheck/\">the plugin check page</a> and update to the latest version.",
         "name": "Silverlight 5.0 to 5.1.20124.*",
         "created": "2012-10-05T10:35:55Z"
@@ -2639,7 +2639,7 @@
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=449062",
         "who": "All users of MyWebSearch for all Mozilla applications.",
-        "why": "This plugin causes a high volume of Firefox crashes.",
+        "why": "This plugin causes a high volume of Datalus crashes.",
         "name": "MyWebSearch",
         "created": "2011-03-31T16:28:26Z"
       },
@@ -2665,7 +2665,7 @@
       "blockID": "p572",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=992976",
-        "who": "All Firefox users who have this plugin installed. Updated versions can be found <a href=\"https://www.cuminas.jp/en/downloads/download/?pid=1\">on this site</a>.",
+        "who": "All Datalus users who have this plugin installed. Updated versions can be found <a href=\"https://www.cuminas.jp/en/downloads/download/?pid=1\">on this site</a>.",
         "why": "Versions 6.1.4.27993 and earlier of this plugin are known to have security vulnerabilities.",
         "name": "DjVu Plugin Viewer 6.1.4.27993 and earlier (Windows)",
         "created": "2014-04-08T14:42:05Z"
@@ -2695,7 +2695,7 @@
       "blockID": "p592",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=980355",
-        "who": "All Firefox users who have installed a version of the Cisco Web Communicator plugin lower than 3.0.6.",
+        "who": "All Datalus users who have installed a version of the Cisco Web Communicator plugin lower than 3.0.6.",
         "why": "Versions lower than 3.0.6 of the Cisco Web Communicator plugin are known to have security issues and should not be used. All users should update to version 3.0.6 or later. <a href=\"https://developer.cisco.com/site/collaboration/jabber/websdk/develop-and-test/voice-and-video/troubleshooting/#plugin_vulnerabilities_user\">Find updates here.</a>",
         "name": "Cisco Web Communicator < 3.0.6 (Mac OS X)",
         "created": "2014-06-11T16:48:48Z"
@@ -2725,7 +2725,7 @@
       "blockID": "p912",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 8 update 44 and lower (click-to-play), Linux",
         "created": "2015-05-19T09:05:55Z"
@@ -2755,7 +2755,7 @@
       "blockID": "p908",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 8 update 44 and lower (click-to-play), Windows",
         "created": "2015-05-19T09:03:44Z"
@@ -2845,7 +2845,7 @@
       "blockID": "p156",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=797378",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "This plugin is outdated and is potentially insecure. Affected users should go to  <a href=\"http://www.mozilla.com/plugincheck/\">the plugin check page</a> and update to the latest version.",
         "name": "Adobe Reader 9.5.1 and lower",
         "created": "2012-10-05T10:38:46Z"
@@ -2875,7 +2875,7 @@
       "blockID": "p574",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=992976",
-        "who": "All Firefox users who have this plugin installed. Updated versions can be found <a href=\"https://www.cuminas.jp/en/downloads/download/?pid=1\">on this site</a>.",
+        "who": "All Datalus users who have this plugin installed. Updated versions can be found <a href=\"https://www.cuminas.jp/en/downloads/download/?pid=1\">on this site</a>.",
         "why": "Versions 6.1.1 and earlier of this plugin are known to have security vulnerabilities.\r\n",
         "name": "DjVu Plugin Viewer 6.1.1 and earlier (Mac OS)",
         "created": "2014-04-08T14:43:54Z"
@@ -2905,7 +2905,7 @@
       "blockID": "p556",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=974012",
-        "who": "All Firefox users who have these versions of the plugin installed.",
+        "who": "All Datalus users who have these versions of the plugin installed.",
         "why": "Current versions of the Unity Web Player plugin have known vulnerabilities that can put users at risk.",
         "name": "Unity Web Player 4.6.6f1 and lower (click-to-play), Windows",
         "created": "2014-02-25T08:29:41Z"
@@ -2966,7 +2966,7 @@
       "blockID": "p80",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=739955",
-        "who": "All Firefox users who have installed the Java plugin, JRE versions below 1.6.0_31 or between 1.7.0 and 1.7.0_2.",
+        "who": "All Datalus users who have installed the Java plugin, JRE versions below 1.6.0_31 or between 1.7.0 and 1.7.0_2.",
         "why": "Outdated versions of the Java plugin are vulnerable to an actively exploited security issue. All users are strongly encouraged to <a href=\"http://java.com/inc/BrowserRedirect1.jsp\">update their Java plugin</a>. For more information, please <a href=\"http://blog.mozilla.com/addons/2012/04/02/blocking-java/\">read our blog post</a> or <a href=\"http://www.oracle.com/technetwork/topics/security/javacpufeb2012-366318.html\">Oracle's Advisory</a>.",
         "name": "Java Plugin",
         "created": "2012-04-02T15:18:50Z"
@@ -3026,7 +3026,7 @@
       "blockID": "p910",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 45 to 78 (click-to-play), Linux",
         "created": "2015-05-19T09:04:46Z"
@@ -3056,7 +3056,7 @@
       "blockID": "p428",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=636633",
-        "who": "All Firefox users who have this plugin installed.",
+        "who": "All Datalus users who have this plugin installed.",
         "why": "The Java Deployment Toolkit plugin is known to be insecure and is unnecessary in most cases. Users should keep it disabled unless strictly necessary.",
         "name": "Java Deployment Toolkit (click-to-play)",
         "created": "2013-07-18T15:39:12Z"
@@ -3084,7 +3084,7 @@
       "blockID": "p594",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=980355",
-        "who": "All Firefox users who have installed a version of the Cisco Web Communicator plugin lower than 3.0.6.",
+        "who": "All Datalus users who have installed a version of the Cisco Web Communicator plugin lower than 3.0.6.",
         "why": "Versions lower than 3.0.6 of the Cisco Web Communicator plugin are known to have security issues and should not be used. All users should update to version 3.0.6 or later. <a href=\"https://developer.cisco.com/site/collaboration/jabber/websdk/develop-and-test/voice-and-video/troubleshooting/#plugin_vulnerabilities_user\">Find updates here.</a>",
         "name": "Cisco Web Communicator < 3.0.6 (Windows)",
         "created": "2014-06-11T16:49:00Z"
@@ -3144,7 +3144,7 @@
       "blockID": "p906",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1159917",
-        "who": "All users who have these versions of the plugin installed in Firefox.",
+        "who": "All users who have these versions of the plugin installed in Datalus.",
         "why": "Old versions of the Java plugin are potentially insecure and unstable. All users are strongly recommended to update on our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check page</a>.",
         "name": "Java Plugin 7 update 45 to 78 (click-to-play), Windows",
         "created": "2015-05-19T09:02:45Z"
@@ -3174,8 +3174,8 @@
       "blockID": "p240",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=821972",
-        "who": "All Firefox users who have versions of the DivX Web Player plugin lower than 1.4.",
-        "why": "Old versions of the DivX Web Player plugin are causing significant stability problems on Firefox 18 and above, on Mac OS X. All users should update their DivX software to the latest available version, available at <a href=\"http://www.divx.com\">divx.com</a>.",
+        "who": "All Datalus users who have versions of the DivX Web Player plugin lower than 1.4.",
+        "why": "Old versions of the DivX Web Player plugin are causing significant stability problems on Datalus 18 and above, on Mac OS X. All users should update their DivX software to the latest available version, available at <a href=\"http://www.divx.com\">divx.com</a>.",
         "name": "DivX Web Player 1.4 (DivX 7) and below",
         "created": "2012-12-19T13:03:27Z"
       },
@@ -3435,7 +3435,7 @@
       "blockID": "p330",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=854550",
-        "who": "All Firefox users who have these versions on the Abode Flash plugin installed.",
+        "who": "All Datalus users who have these versions on the Abode Flash plugin installed.",
         "why": "Old versions of the Adobe Flash plugin are potentially insecure and unstable. All users are recommended to visit our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check</a> page and check for updates.",
         "name": "Adobe Flash for Linux 10.3.182.* and lower (click-to-play)",
         "created": "2013-03-26T09:43:25Z"
@@ -3475,7 +3475,7 @@
       "blockID": "p332",
       "details": {
         "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=854550",
-        "who": "All Firefox users who have these versions of the Adobe Flash Player plugin installed.",
+        "who": "All Datalus users who have these versions of the Adobe Flash Player plugin installed.",
         "why": "Old versions of the Adobe Flash Player plugin are potentially insecure and unstable. All users are recommended to visit our <a href=\"http://www.mozilla.com/plugincheck/\">plugin check</a> to check for updates.",
         "name": "Adobe Flash for Linux 11.0 to 11.1.* (click-to-play)",
         "created": "2013-03-26T09:46:14Z"

@@ -540,7 +540,7 @@ class DocAccessible : public HyperTextAccessibleWrap,
    * (for example, state busy change or document reload events).
    *
    * Rules: The root chrome document accessible is never an event target
-   * (for example, Firefox UI window). If the sub document is loaded within its
+   * (for example, Datalus UI window). If the sub document is loaded within its
    * parent document then the parent document is a target only (aka events
    * coalescence).
    */

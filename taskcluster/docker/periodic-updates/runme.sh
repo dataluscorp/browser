@@ -6,7 +6,7 @@ set -xe
 # --pinset --hsts --hpkp
 # -b branch
 # --use-mozilla-central
-# -p firefox
+# -p datalus
 # Artifact directory
 # Artifact names.
 

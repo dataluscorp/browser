@@ -8,7 +8,7 @@ with Files("**"):
     BUG_COMPONENT = ("Core", "XUL")
 
 with Files("*Menu*"):
-    BUG_COMPONENT = ("Firefox", "Menus")
+    BUG_COMPONENT = ("Datalus", "Menus")
 
 if CONFIG["ENABLE_TESTS"]:
     MOCHITEST_MANIFESTS += ["test/mochitest.ini"]

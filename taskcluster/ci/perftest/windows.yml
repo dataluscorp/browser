@@ -27,7 +27,7 @@ try-browsertime:
             cd $MOZ_FETCHES_DIR &&
             python3.exe python/mozperftest/mozperftest/runner.py
             --on-try
-            --browsertime-binary ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+            --browsertime-binary ${MOZ_FETCHES_DIR}/datalus/datalus.exe
             --flavor desktop-browser
             --browsertime-geckodriver ${MOZ_FETCHES_DIR}/geckodriver.exe
             --browsertime-node ${MOZ_FETCHES_DIR}/node/node.exe
@@ -46,7 +46,7 @@ domcount:
             cd $MOZ_FETCHES_DIR &&
             python3.exe python/mozperftest/mozperftest/runner.py
             browser/base/content/test/perftest_browser_xhtml_dom.js
-            --browsertime-binary ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+            --browsertime-binary ${MOZ_FETCHES_DIR}/datalus/datalus.exe
             --flavor desktop-browser
             --perfherder
             --perfherder-metrics name:totalDOMCount,unit:count name:panelMenuCount,unit:count name:lightDOMCount,unit:count name:lightDOMDetails,unit:count
@@ -138,7 +138,7 @@ livesites:
             cd $MOZ_FETCHES_DIR &&
             python3.exe python/mozperftest/mozperftest/runner.py
             {perftest_testname}
-            --browsertime-binary ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+            --browsertime-binary ${MOZ_FETCHES_DIR}/datalus/datalus.exe
             --browsertime-iterations 10
             --flavor desktop-browser
             --perfherder
@@ -163,7 +163,7 @@ controlled:
             cd $MOZ_FETCHES_DIR &&
             python3.exe python/mozperftest/mozperftest/runner.py
             netwerk/test/perf/perftest_http3_controlled.js
-            --browsertime-binary ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+            --browsertime-binary ${MOZ_FETCHES_DIR}/datalus/datalus.exe
             --browsertime-iterations 1
             --browsertime-cycles 96
             --hooks netwerk/test/perf/hooks_throttling.py
@@ -187,7 +187,7 @@ perfstats:
             mkdir -p $MOZ_FETCHES_DIR/../artifacts &&
             cd $MOZ_FETCHES_DIR &&
             python3.exe python/mozperftest/mozperftest/runner.py
-            --browsertime-binary ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+            --browsertime-binary ${MOZ_FETCHES_DIR}/datalus/datalus.exe
             --flavor desktop-browser
             --browsertime-geckodriver ${MOZ_FETCHES_DIR}/geckodriver.exe
             --browsertime-node ${MOZ_FETCHES_DIR}/node/node.exe

@@ -105,10 +105,10 @@ go-1.14.4:
         size: 123711003
 
 iris-2.0:
-    description: Iris_Firefox source code
+    description: Iris_Datalus source code
     fetch:
         type: git
-        repo: https://github.com/mozilla/iris_firefox
+        repo: https://github.com/mozilla/iris_datalus
         revision: a91a1cb88a16b0ee4d30f0dfc165d2cacf48b10c
 
 isl-0.16.1:

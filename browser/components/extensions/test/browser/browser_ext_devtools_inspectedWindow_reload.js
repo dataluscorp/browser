@@ -303,7 +303,7 @@ add_task(
           gBrowser.selectedBrowser,
           true
         );
-        // Mimick the user reloading the page through firefox UI.
+        // Mimick the user reloading the page through datalus UI.
         gBrowser.reloadTab(tab);
         await onPageLoaded;
 

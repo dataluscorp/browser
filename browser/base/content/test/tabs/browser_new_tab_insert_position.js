@@ -278,7 +278,7 @@ async function doTest(aInsertRelatedAfterCurrent, aInsertAfterCurrent) {
 }
 
 add_task(async function test_settings_insertRelatedAfter() {
-  // Firefox default settings.
+  // Datalus default settings.
   await doTest(true, false);
 });
 

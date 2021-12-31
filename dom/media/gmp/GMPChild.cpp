@@ -344,21 +344,21 @@ static bool IsFileLeafEqualToASCII(const nsCOMPtr<nsIFile>& aFile,
 #endif
 
 #if defined(XP_WIN)
-#  define FIREFOX_FILE u"firefox.exe"_ns
+#  define DATALUS_FILE u"datalus.exe"_ns
 #  define XUL_LIB_FILE u"xul.dll"_ns
 #elif defined(XP_MACOSX)
-#  define FIREFOX_FILE u"firefox"_ns
+#  define DATALUS_FILE u"datalus"_ns
 #  define XUL_LIB_FILE u"XUL"_ns
 #else
-#  define FIREFOX_FILE u"firefox"_ns
+#  define DATALUS_FILE u"datalus"_ns
 #  define XUL_LIB_FILE u"libxul.so"_ns
 #endif
 
-static nsCOMPtr<nsIFile> GetFirefoxAppPath(
+static nsCOMPtr<nsIFile> GetDatalusAppPath(
     nsCOMPtr<nsIFile> aPluginContainerPath) {
   MOZ_ASSERT(aPluginContainerPath);
 #if defined(XP_MACOSX)
-  // On MacOS the firefox binary is a few parent directories up from
+  // On MacOS the datalus binary is a few parent directories up from
   // plugin-container.
   // aPluginContainerPath will end with something like:
   // xxxx/NightlyDebug.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container
@@ -372,7 +372,7 @@ static nsCOMPtr<nsIFile> GetFirefoxAppPath(
 #  if XP_WIN
   if (IsFileLeafEqualToASCII(parent, "i686")) {
     // We must be on Windows on ARM64, where the plugin-container path will
-    // be in the 'i686' subdir. The firefox.exe is in the parent directory.
+    // be in the 'i686' subdir. The datalus.exe is in the parent directory.
     parent = GetParentFile(parent);
   }
 #  endif
@@ -387,7 +387,7 @@ static bool GetSigPath(const int aRelativeLayers,
                        nsCOMPtr<nsIFile>& aOutSigPath) {
   // The sig file will be located in
   // xxxx/NightlyDebug.app/Contents/Resources/XUL.sig
-  // xxxx/NightlyDebug.app/Contents/Resources/firefox.sig
+  // xxxx/NightlyDebug.app/Contents/Resources/datalus.sig
   // xxxx/NightlyDebug.app/Contents/MacOS/plugin-container.app/Contents/Resources/plugin-container.sig
   // On MacOS the sig file is a few parent directories up from
   // its executable file.
@@ -467,7 +467,7 @@ GMPChild::MakeCDMHostVerificationPaths() {
                                 getter_AddRefs(path))) ||
       !AppendHostPath(path, paths)) {
     // Without successfully determining plugin-container's path, we can't
-    // determine libxul's or Firefox's. So give up.
+    // determine libxul's or Datalus's. So give up.
     return paths;
   }
 
@@ -485,15 +485,15 @@ GMPChild::MakeCDMHostVerificationPaths() {
   }
 #endif
 
-  // Firefox application binary path.
-  nsCOMPtr<nsIFile> appDir = GetFirefoxAppPath(path);
-  path = AppendFile(CloneFile(appDir), FIREFOX_FILE);
+  // Datalus application binary path.
+  nsCOMPtr<nsIFile> appDir = GetDatalusAppPath(path);
+  path = AppendFile(CloneFile(appDir), DATALUS_FILE);
   if (!AppendHostPath(path, paths)) {
     return paths;
   }
 
   // Libxul path. Note: re-using 'appDir' var here, as we assume libxul is in
-  // the same directory as Firefox executable.
+  // the same directory as Datalus executable.
   appDir->GetPath(str);
   path = AppendFile(CloneFile(appDir), XUL_LIB_FILE);
   if (!AppendHostPath(path, paths)) {

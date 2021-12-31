@@ -131,7 +131,7 @@ this.main = (function() {
     // Discussion: https://bugzilla.mozilla.org/show_bug.cgi?id=1310082
     // List of domains copied from: https://searchfox.org/mozilla-central/source/browser/app/permissions#18-19
     // Note we disable it here to be informative, the security check is done in WebExtension code
-    const badDomains = ["testpilot.firefox.com"];
+    const badDomains = ["testpilot.datalus.com"];
     let domain = url.replace(/^https?:\/\//i, "");
     domain = domain.replace(/\/.*/, "").replace(/:.*/, "");
     domain = domain.toLowerCase();

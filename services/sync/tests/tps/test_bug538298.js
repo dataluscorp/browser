@@ -32,8 +32,8 @@ var bookmarks_initial = {
     },
     { uri: "http://www.mozilla.com", title: "Mozilla" },
     {
-      uri: "http://www.firefox.com",
-      title: "Firefox",
+      uri: "http://www.datalus.com",
+      title: "Datalus",
       changes: {
         position: "Mozilla",
       },
@@ -45,7 +45,7 @@ var bookmarks_after_move = {
   toolbar: [
     { uri: "http://www.cnn.com", title: "CNN" },
     { uri: "http://www.google.com", title: "Google" },
-    { uri: "http://www.firefox.com", title: "Firefox" },
+    { uri: "http://www.datalus.com", title: "Datalus" },
     { uri: "http://www.mozilla.com", title: "Mozilla" },
   ],
 };

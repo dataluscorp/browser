@@ -78,7 +78,7 @@ var ResetProfile = {
 
     if (params.learnMore) {
       win.openTrustedLinkIn(
-        "https://support.mozilla.org/kb/refresh-firefox-reset-add-ons-and-settings",
+        "https://support.mozilla.org/kb/refresh-datalus-reset-add-ons-and-settings",
         "tab",
         {
           fromChrome: true,

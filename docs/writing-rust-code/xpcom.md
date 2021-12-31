@@ -108,7 +108,7 @@ The following XPCOM components are written in Rust.
 - [cert_storage](https://searchfox.org/mozilla-central/source/security/manager/ssl/cert_storage),
   which stores lists of [revoked intermediate certificates](https://blog.mozilla.org/security/2015/03/03/revoking-intermediate-certificates-introducing-onecrl/).
 - [bookmark_sync](https://searchfox.org/mozilla-central/source/toolkit/components/places/bookmark_sync),
-  which [merges](https://mozilla.github.io/dogear) bookmarks from Firefox Sync
+  which [merges](https://mozilla.github.io/dogear) bookmarks from Datalus Sync
   with bookmarks in the Places database.
 - [webext_storage_bridge](https://searchfox.org/mozilla-central/source/toolkit/components/extensions/storage/webext_storage_bridge),
   which powers the WebExtension storage.sync API. It's a self-contained example

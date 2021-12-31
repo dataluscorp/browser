@@ -618,7 +618,7 @@ LoginTestUtils.file = {
    * @returns {window.File} The File to the CSV file that was created.
    */
   async setupCsvFileWithLines(csvLines, extension = "csv") {
-    let tmpFile = FileTestUtils.getTempFile(`firefox_logins.${extension}`);
+    let tmpFile = FileTestUtils.getTempFile(`datalus_logins.${extension}`);
     await OS.File.writeAtomic(
       tmpFile.path,
       new TextEncoder().encode(csvLines.join("\r\n"))

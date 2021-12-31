@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * This file is for the new performance panel that targets profiler.firefox.com,
+ * This file is for the new performance panel that targets profiler.datalus.com,
  * not the default-enabled DevTools performance panel.
  */
 

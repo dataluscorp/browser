@@ -181,7 +181,7 @@ var WebNavigationManager = {
           break;
         case UrlbarUtils.RESULT_TYPE.REMOTE_TAB:
           // Remote tab are autocomplete results related to
-          // tab urls from a remote synchronized Firefox.
+          // tab urls from a remote synchronized Datalus.
           tabTransitionData.typed = true;
           break;
         case UrlbarUtils.RESULT_TYPE.TAB_SWITCH:

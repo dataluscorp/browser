@@ -42,12 +42,12 @@ add_task(async function test_import_bookmarks() {
   Assert.equal(bookmark.guid, "OCyeUO5uu9FH", "should have correct guid");
   Assert.equal(
     bookmark.title,
-    "Customize Firefox",
+    "Customize Datalus",
     "should have correct title"
   );
   Assert.equal(
     bookmark.uri,
-    "http://en-us.www.mozilla.com/en-US/firefox/customize/",
+    "http://en-us.www.mozilla.com/en-US/datalus/customize/",
     "should have correct uri"
   );
 

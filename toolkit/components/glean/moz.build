@@ -159,7 +159,7 @@ GeneratedFile(
     inputs=deps + pings_yamls,
 )
 
-# Glean Interface For Firefox Telemetry Maps from Glean MetricId to Telemetry ProbeId
+# Glean Interface For Datalus Telemetry Maps from Glean MetricId to Telemetry ProbeId
 # We split it one map per header to avoid unused function warnings on build.
 GeneratedFile(
     "EventGIFFTMap.h",

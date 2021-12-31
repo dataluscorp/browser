@@ -34,9 +34,9 @@ global.EventManager = ExtensionCommon.EventManager;
 
 /* globals DEFAULT_STORE, PRIVATE_STORE, CONTAINER_STORE */
 
-global.DEFAULT_STORE = "firefox-default";
-global.PRIVATE_STORE = "firefox-private";
-global.CONTAINER_STORE = "firefox-container-";
+global.DEFAULT_STORE = "datalus-default";
+global.PRIVATE_STORE = "datalus-private";
+global.CONTAINER_STORE = "datalus-container-";
 
 global.getCookieStoreIdForTab = function(data, tab) {
   if (data.incognito) {

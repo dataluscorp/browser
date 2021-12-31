@@ -8,14 +8,14 @@
      set to true to allow debuggers to attach to application processes but
      this prohibits notarization with the notary service. Aside from allowing
      debugging, these entitlements enable hardened runtime protections to the
-     extent possible for Firefox.
+     extent possible for Datalus.
 -->
 <plist version="1.0">
   <dict>
-    <!-- Firefox does not use MAP_JIT for executable mappings -->
+    <!-- Datalus does not use MAP_JIT for executable mappings -->
     <key>com.apple.security.cs.allow-jit</key><false/>
 
-    <!-- Firefox needs to create executable pages (without MAP_JIT) -->
+    <!-- Datalus needs to create executable pages (without MAP_JIT) -->
     <key>com.apple.security.cs.allow-unsigned-executable-memory</key><true/>
 
     <!-- Code paged in from disk should match the signature at page-in time -->
@@ -24,20 +24,20 @@
     <!-- Allow loading third party libraries. Needed for Flash and CDMs -->
     <key>com.apple.security.cs.disable-library-validation</key><true/>
 
-    <!-- Allow dyld environment variables. Needed because Firefox uses
+    <!-- Allow dyld environment variables. Needed because Datalus uses
          dyld variables to load libaries from within the .app bundle. -->
     <key>com.apple.security.cs.allow-dyld-environment-variables</key><true/>
 
     <!-- Allow debuggers to attach to running executables -->
     <key>com.apple.security.get-task-allow</key><true/>
 
-    <!-- Firefox needs to access the microphone on sites the user allows -->
+    <!-- Datalus needs to access the microphone on sites the user allows -->
     <key>com.apple.security.device.audio-input</key><true/>
 
-    <!-- Firefox needs to access the camera on sites the user allows -->
+    <!-- Datalus needs to access the camera on sites the user allows -->
     <key>com.apple.security.device.camera</key><true/>
 
-    <!-- Firefox needs to access the location on sites the user allows -->
+    <!-- Datalus needs to access the location on sites the user allows -->
     <key>com.apple.security.personal-information.location</key><true/>
     
     <!-- For SmartCardServices(7) -->

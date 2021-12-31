@@ -295,15 +295,15 @@
       "type": "boolean"
     },
 
-    "DisableFirefoxAccounts": {
+    "DisableDatalusAccounts": {
       "type": "boolean"
     },
 
-    "DisableFirefoxScreenshots": {
+    "DisableDatalusScreenshots": {
       "type": "boolean"
     },
 
-    "DisableFirefoxStudies": {
+    "DisableDatalusStudies": {
       "type": "boolean"
     },
 
@@ -528,7 +528,7 @@
       "type": "boolean"
     },
 
-    "FirefoxHome": {
+    "DatalusHome": {
       "type": "object",
       "properties": {
         "Search": {

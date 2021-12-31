@@ -218,7 +218,7 @@ this.shot = (function() {
       this.documentSize = attrs.documentSize || null;
       this.thumbnail = attrs.thumbnail || null;
       this.abTests = attrs.abTests || null;
-      this.firefoxChannel = attrs.firefoxChannel || null;
+      this.datalusChannel = attrs.datalusChannel || null;
       this._clips = {};
       if (attrs.clips) {
         for (const clipId in attrs.clips) {
@@ -624,27 +624,27 @@ this.shot = (function() {
       this._abTests = val;
     }
 
-    get firefoxChannel() {
-      return this._firefoxChannel;
+    get datalusChannel() {
+      return this._datalusChannel;
     }
-    set firefoxChannel(val) {
+    set datalusChannel(val) {
       if (val === null || val === undefined) {
-        this._firefoxChannel = null;
+        this._datalusChannel = null;
         return;
       }
       assert(
         typeof val === "string",
-        "firefoxChannel should be a string, not:",
+        "datalusChannel should be a string, not:",
         typeof val
       );
-      this._firefoxChannel = val;
+      this._datalusChannel = val;
     }
   }
 
   AbstractShot.prototype.REGULAR_ATTRS = `
 origin fullUrl docTitle userTitle createdDate images
 siteName openGraph twitterCard documentSize
-thumbnail abTests firefoxChannel
+thumbnail abTests datalusChannel
 `.split(/\s+/g);
 
   // Attributes that will be accepted in the constructor, but ignored/dropped

@@ -15,7 +15,7 @@ add_task(async function() {
   Assert.equal(profiles.length, 2, "Should present two profiles");
   Assert.equal(
     profiles[0].name,
-    "test@firefox.com.cn",
+    "test@datalus.com.cn",
     "Current logged in user should be the first"
   );
   Assert.equal(

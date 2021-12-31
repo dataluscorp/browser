@@ -56,21 +56,21 @@ exports[`Settings component renders default browsers with a selected browsers 1`
       >
         <input
           checked={false}
-          data-id="firefox"
+          data-id="datalus"
           data-status="nightly"
-          id="firefox-nightly"
+          id="datalus-nightly"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-nightly"
+          htmlFor="datalus-nightly"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox nightly"
+            id="datalus"
+            title="Datalus nightly"
           />
-          Firefox nightly (78)
+          Datalus nightly (78)
         </label>
       </li>
       <li
@@ -78,21 +78,21 @@ exports[`Settings component renders default browsers with a selected browsers 1`
       >
         <input
           checked={true}
-          data-id="firefox"
+          data-id="datalus"
           data-status="beta"
-          id="firefox-beta"
+          id="datalus-beta"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-beta"
+          htmlFor="datalus-beta"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox beta"
+            id="datalus"
+            title="Datalus beta"
           />
-          Firefox beta (77)
+          Datalus beta (77)
         </label>
       </li>
       <li
@@ -100,21 +100,21 @@ exports[`Settings component renders default browsers with a selected browsers 1`
       >
         <input
           checked={false}
-          data-id="firefox"
+          data-id="datalus"
           data-status="current"
-          id="firefox-current"
+          id="datalus-current"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-current"
+          htmlFor="datalus-current"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox current"
+            id="datalus"
+            title="Datalus current"
           />
-          Firefox current (76)
+          Datalus current (76)
         </label>
       </li>
     </ul>
@@ -178,21 +178,21 @@ exports[`Settings component renders default browsers with full selected browsers
       >
         <input
           checked={true}
-          data-id="firefox"
+          data-id="datalus"
           data-status="nightly"
-          id="firefox-nightly"
+          id="datalus-nightly"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-nightly"
+          htmlFor="datalus-nightly"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox nightly"
+            id="datalus"
+            title="Datalus nightly"
           />
-          Firefox nightly (78)
+          Datalus nightly (78)
         </label>
       </li>
       <li
@@ -200,21 +200,21 @@ exports[`Settings component renders default browsers with full selected browsers
       >
         <input
           checked={true}
-          data-id="firefox"
+          data-id="datalus"
           data-status="beta"
-          id="firefox-beta"
+          id="datalus-beta"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-beta"
+          htmlFor="datalus-beta"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox beta"
+            id="datalus"
+            title="Datalus beta"
           />
-          Firefox beta (77)
+          Datalus beta (77)
         </label>
       </li>
       <li
@@ -222,21 +222,21 @@ exports[`Settings component renders default browsers with full selected browsers
       >
         <input
           checked={true}
-          data-id="firefox"
+          data-id="datalus"
           data-status="current"
-          id="firefox-current"
+          id="datalus-current"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-current"
+          htmlFor="datalus-current"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox current"
+            id="datalus"
+            title="Datalus current"
           />
-          Firefox current (76)
+          Datalus current (76)
         </label>
       </li>
     </ul>
@@ -300,21 +300,21 @@ exports[`Settings component renders default browsers with no selected browsers 1
       >
         <input
           checked={false}
-          data-id="firefox"
+          data-id="datalus"
           data-status="nightly"
-          id="firefox-nightly"
+          id="datalus-nightly"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-nightly"
+          htmlFor="datalus-nightly"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox nightly"
+            id="datalus"
+            title="Datalus nightly"
           />
-          Firefox nightly (78)
+          Datalus nightly (78)
         </label>
       </li>
       <li
@@ -322,21 +322,21 @@ exports[`Settings component renders default browsers with no selected browsers 1
       >
         <input
           checked={false}
-          data-id="firefox"
+          data-id="datalus"
           data-status="beta"
-          id="firefox-beta"
+          id="datalus-beta"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-beta"
+          htmlFor="datalus-beta"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox beta"
+            id="datalus"
+            title="Datalus beta"
           />
-          Firefox beta (77)
+          Datalus beta (77)
         </label>
       </li>
       <li
@@ -344,21 +344,21 @@ exports[`Settings component renders default browsers with no selected browsers 1
       >
         <input
           checked={false}
-          data-id="firefox"
+          data-id="datalus"
           data-status="current"
-          id="firefox-current"
+          id="datalus-current"
           onChange={[Function]}
           type="checkbox"
         />
         <label
           className="compatibility-settings__target-browsers-item-label"
-          htmlFor="firefox-current"
+          htmlFor="datalus-current"
         >
           <BrowserIcon
-            id="firefox"
-            title="Firefox current"
+            id="datalus"
+            title="Datalus current"
           />
-          Firefox current (76)
+          Datalus current (76)
         </label>
       </li>
     </ul>

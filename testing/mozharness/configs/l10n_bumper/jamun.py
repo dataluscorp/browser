@@ -51,7 +51,7 @@ config = {
         {
             "path": "browser/locales/l10n-changesets.json",
             "format": "json",
-            "name": "Firefox l10n changesets",
+            "name": "Datalus l10n changesets",
             "revision_url": "https://l10n.mozilla.org/shipping/l10n-changesets?av=fx%(MAJOR_VERSION)s",
             "ignore_config": {
                 "ja": ["macosx64"],
@@ -68,7 +68,7 @@ config = {
         {
             "path": "browser/locales/central-changesets.json",
             "format": "json",
-            "name": "Firefox l10n changesets",
+            "name": "Datalus l10n changesets",
             "ignore_config": {
                 "ja": ["macosx64"],
                 "ja-JP-mac": ["linux", "linux64", "win32", "win64"],

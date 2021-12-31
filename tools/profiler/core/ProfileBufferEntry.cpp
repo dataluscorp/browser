@@ -2118,7 +2118,7 @@ bool ProfileBuffer::DuplicateLastSample(ProfilerThreadId aThreadId,
 
 void ProfileBuffer::DiscardSamplesBeforeTime(double aTime) {
   // This function does nothing!
-  // The duration limit will be removed from Firefox, see bug 1632365.
+  // The duration limit will be removed from Datalus, see bug 1632365.
   Unused << aTime;
 }
 

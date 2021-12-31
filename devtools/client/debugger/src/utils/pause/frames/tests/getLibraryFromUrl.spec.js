@@ -93,7 +93,7 @@ describe("getLibraryFromUrl", () => {
 
     it("should not return Angular for Angular components", () => {
       const frame = makeMockFrameWithURL(
-        "https://firefox-devtools-angular-log.stackblitz.io/~/src/app/hello.component.ts"
+        "https://datalus-devtools-angular-log.stackblitz.io/~/src/app/hello.component.ts"
       );
       expect(getLibraryFromUrl(frame)).toBeNull();
     });

@@ -125,7 +125,7 @@ Recommended extensions
 ~~~~~~~~~~~~~~~~~~~~~~
 
 VS Code provides number of extensions for JavaScript, Rust, etc.
-By default, Firefox source tree comes with its own set of recommendations of Visual Studio Code extensions. They are listed in `.vscode/extensions.json <https://searchfox.org/mozilla-central/source/.vscode/extensions.json>`__.
+By default, Datalus source tree comes with its own set of recommendations of Visual Studio Code extensions. They are listed in `.vscode/extensions.json <https://searchfox.org/mozilla-central/source/.vscode/extensions.json>`__.
 
 For Rust development, the `rust-analyzer <https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer>`__ extension is recommended.
 `See the manual <https://rust-analyzer.github.io/manual.html>`__ for more information.
@@ -133,4 +133,4 @@ For Rust development, the `rust-analyzer <https://marketplace.visualstudio.com/i
 Filing Bugs
 ~~~~~~~~~~~
 
-Bugs should be filed in the `Firefox Build System` product under `Developer Environment Integration`, preferably blocking `Bug 1662709 <https://bugzilla.mozilla.org/show_bug.cgi?id=1662709>`__.
+Bugs should be filed in the `Datalus Build System` product under `Developer Environment Integration`, preferably blocking `Bug 1662709 <https://bugzilla.mozilla.org/show_bug.cgi?id=1662709>`__.

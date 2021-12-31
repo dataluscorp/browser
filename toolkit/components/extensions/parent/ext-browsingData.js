@@ -207,7 +207,7 @@ const clearIndexedDB = async function(options) {
 const clearLocalStorage = async function(options) {
   if (options.since) {
     return Promise.reject({
-      message: "Firefox does not support clearing localStorage with 'since'.",
+      message: "Datalus does not support clearing localStorage with 'since'.",
     });
   }
 
@@ -305,7 +305,7 @@ class BrowsingDataImpl {
     ) {
       return Promise.reject({
         message:
-          "Firefox does not support protectedWeb or extension as originTypes.",
+          "Datalus does not support protectedWeb or extension as originTypes.",
       });
     }
 
@@ -319,7 +319,7 @@ class BrowsingDataImpl {
       for (let dataType in dataToRemove) {
         if (dataToRemove[dataType] && !SUPPORTED_TYPES.includes(dataType)) {
           return Promise.reject({
-            message: `Firefox does not support clearing ${dataType} with 'cookieStoreId'.`,
+            message: `Datalus does not support clearing ${dataType} with 'cookieStoreId'.`,
           });
         }
       }
@@ -349,7 +349,7 @@ class BrowsingDataImpl {
     }
     if (invalidDataTypes.length) {
       this.extension.logger.warn(
-        `Firefox does not support dataTypes: ${invalidDataTypes.toString()}.`
+        `Datalus does not support dataTypes: ${invalidDataTypes.toString()}.`
       );
     }
     return Promise.all(removalPromises);

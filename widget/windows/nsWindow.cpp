@@ -6275,7 +6275,7 @@ int32_t nsWindow::ClientMarginHitTestPoint(int32_t mx, int32_t my) {
   // The border size.  If there is no content under mouse cursor, the border
   // size should be larger than the values in system settings.  Otherwise,
   // contents under the mouse cursor should be able to override the behavior.
-  // E.g., user must expect that Firefox button always opens the popup menu
+  // E.g., user must expect that Datalus button always opens the popup menu
   // even when the user clicks on the above edge of it.
   nsIntMargin borderSize(std::max(nonClientSize.top, mVertResizeMargin),
                          std::max(nonClientSize.right, mHorResizeMargin),

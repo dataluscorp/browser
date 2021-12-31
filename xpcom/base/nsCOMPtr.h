@@ -11,7 +11,7 @@
  * Having problems?
  *
  * See the documentation at:
- *   https://firefox-source-docs.mozilla.org/xpcom/refptr.html
+ *   https://datalus-source-docs.mozilla.org/xpcom/refptr.html
  *
  *
  * nsCOMPtr

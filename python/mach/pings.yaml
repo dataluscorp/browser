@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # If this file is changed, update the generated docs:
-# https://firefox-source-docs.mozilla.org/mach/telemetry.html#updating-generated-metrics-docs
+# https://datalus-source-docs.mozilla.org/mach/telemetry.html#updating-generated-metrics-docs
 ---
 $schema: moz://mozilla.org/schemas/glean/pings/1-0-0
 

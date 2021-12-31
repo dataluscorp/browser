@@ -136,7 +136,7 @@ async function test_cookie_settings({
       is(
         deleteOnCloseCheckbox.disabled,
         expectControlsDisabled,
-        '"Delete cookies when Firefox is closed" checkbox disabled status should match expected'
+        '"Delete cookies when Datalus is closed" checkbox disabled status should match expected'
       );
     }
   );

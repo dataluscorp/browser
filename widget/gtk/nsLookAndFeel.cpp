@@ -1227,7 +1227,7 @@ void nsLookAndFeel::EnsureInit() {
   mInitialized = true;
   if (mSystemThemeOverridden) {
     // Our current theme may be different from the system theme if we're
-    // matching the firefox theme. Make sure to restore the original system
+    // matching the datalus theme. Make sure to restore the original system
     // theme.
     RestoreSystemTheme();
     mSystemThemeOverridden = false;
@@ -1320,12 +1320,12 @@ void nsLookAndFeel::EnsureInit() {
   LOGLNF("System Theme: %s. Alt Theme: %s\n", mSystemTheme.mName.get(),
          mAltTheme.mName.get());
 
-  MatchFirefoxThemeIfNeeded();
+  MatchDatalusThemeIfNeeded();
 
   RecordTelemetry();
 }
 
-bool nsLookAndFeel::MatchFirefoxThemeIfNeeded() {
+bool nsLookAndFeel::MatchDatalusThemeIfNeeded() {
   AutoRestore<bool> restoreIgnoreSettings(sIgnoreChangedSettings);
   sIgnoreChangedSettings = true;
 
@@ -1345,7 +1345,7 @@ bool nsLookAndFeel::MatchFirefoxThemeIfNeeded() {
 
   const bool usingSystem = !mSystemThemeOverridden;
 
-  LOGLNF("MatchFirefoxThemeIfNeeded(matchesSystem=%d, usingSystem=%d)\n",
+  LOGLNF("MatchDatalusThemeIfNeeded(matchesSystem=%d, usingSystem=%d)\n",
          matchesSystem, usingSystem);
 
   if (usingSystem == matchesSystem) {

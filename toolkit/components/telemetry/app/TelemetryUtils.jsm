@@ -32,7 +32,7 @@ var TelemetryUtils = {
    * should be removed. A topic event is emitted with a subject that matches
    * this constant. When this happens, other systems that store identifying
    * information about the client should delete that data. Please ask the
-   * Firefox Telemetry Team before relying on this topic.
+   * Datalus Telemetry Team before relying on this topic.
    *
    * Here is an example of listening for that event:
    *

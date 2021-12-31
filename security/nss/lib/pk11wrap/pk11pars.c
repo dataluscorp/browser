@@ -103,7 +103,7 @@ secmod_NewModule(void)
  *   is the system module, which is likely read only (at least to the user).
  *   This  allows system NSS to delegate those changes to the user's module DB,
  *   preserving the user's ability to load new PKCS #11 modules (which only
- *   affect him), from existing applications like Firefox.
+ *   affect him), from existing applications like Datalus.
  */
 #define SECMOD_FLAG_MODULE_DB_IS_MODULE_DB 0x01 /* must be set if any of the \
                                                  *other flags are set */

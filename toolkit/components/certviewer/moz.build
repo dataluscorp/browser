@@ -16,4 +16,4 @@ EXTRA_JS_MODULES += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Security")
+    BUG_COMPONENT = ("Datalus", "Security")

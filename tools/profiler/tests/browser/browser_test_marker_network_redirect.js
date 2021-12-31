@@ -185,7 +185,7 @@ add_task(async function test_network_markers_redirect_resources() {
       `We should get 4 pairs of network markers in the content thread.`
     );
 
-    // The same resource firefox-logo-nightly.svg is requested twice, but the
+    // The same resource datalus-logo-nightly.svg is requested twice, but the
     // second time it is redirected.
     // We're not interested in the main page, as we test that in other files.
     // In this page we're only interested in the marker for requested resources.
@@ -229,8 +229,8 @@ add_task(async function test_network_markers_redirect_resources() {
 
     // These properties are present when a connection is fully opened. This is
     // most often the case, unless we're in verify mode, because in that case
-    // we run the same tests several times in the same Firefox and they might be
-    // cached, or in chaos mode Firefox may make all requests sequentially on
+    // we run the same tests several times in the same Datalus and they might be
+    // cached, or in chaos mode Datalus may make all requests sequentially on
     // the same connection.
     // In these cases, these properties won't always be present.
     const expectedConnectionProperties = {
@@ -245,21 +245,21 @@ add_task(async function test_network_markers_redirect_resources() {
     };
 
     const expectedPropertiesForStopMarker = {
-      name: Expect.stringMatches(/Load \d+:.*\/firefox-logo-nightly\.svg/),
+      name: Expect.stringMatches(/Load \d+:.*\/datalus-logo-nightly\.svg/),
     };
 
     const expectedDataPropertiesForStopMarker = {
       ...expectedCommonDataProperties,
       ...expectedConnectionProperties,
       status: "STATUS_STOP",
-      URI: Expect.stringContains("/firefox-logo-nightly.svg"),
+      URI: Expect.stringContains("/datalus-logo-nightly.svg"),
       contentType: "image/svg+xml",
       count: Expect.number(),
     };
 
     const expectedPropertiesForRedirectMarker = {
       name: Expect.stringMatches(
-        /Load \d+:.*\/redirect.sjs\?firefox-logo-nightly\.svg/
+        /Load \d+:.*\/redirect.sjs\?datalus-logo-nightly\.svg/
       ),
     };
 
@@ -267,8 +267,8 @@ add_task(async function test_network_markers_redirect_resources() {
       ...expectedCommonDataProperties,
       ...expectedConnectionProperties,
       status: "STATUS_REDIRECT",
-      URI: Expect.stringContains("/redirect.sjs?firefox-logo-nightly.svg"),
-      RedirectURI: Expect.stringContains("/firefox-logo-nightly.svg"),
+      URI: Expect.stringContains("/redirect.sjs?datalus-logo-nightly.svg"),
+      RedirectURI: Expect.stringContains("/datalus-logo-nightly.svg"),
       contentType: null,
       redirectType: "Permanent",
       isHttpToHttpsRedirect: false,

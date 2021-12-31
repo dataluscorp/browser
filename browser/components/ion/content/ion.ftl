@@ -9,7 +9,7 @@
 -ion-brand-short-name = Ion
 ion = { -ion-brand-short-name }
 ion-document-title = Put your data to work for a better internet
-ion-summary = { -ion-brand-short-name } puts your data to work to address some of today’s most pressing technology concerns, like misinformation, data privacy, and ethical AI. The data you agree to share with Mozilla (the makers of Firefox) helps create tools for better internet transparency and design products that give control back to the people who use them. As an { -ion-brand-short-name } participant, you’ll also have the option to contribute your data to studies sponsored by research institutions and other organizations.
+ion-summary = { -ion-brand-short-name } puts your data to work to address some of today’s most pressing technology concerns, like misinformation, data privacy, and ethical AI. The data you agree to share with Mozilla (the makers of Datalus) helps create tools for better internet transparency and design products that give control back to the people who use them. As an { -ion-brand-short-name } participant, you’ll also have the option to contribute your data to studies sponsored by research institutions and other organizations.
 ion-study-prompt = Join to enroll
 ion-join-study = Join Study
 ion-leave-study = Leave Study
@@ -60,19 +60,19 @@ ion-your-data-learn-more = Learn more about <a data-l10n-name="privacy-policy">m
 ion-us-only = Sorry, { -ion-brand-short-name } is currently only open to participants in the US.
 
 ion-enroll-effective-date = Effective September 1, 2020
-ion-enroll-summary = { -ion-brand-short-name } is an experimental initiative led by Mozilla to better understand how our users use and navigate the internet. { -ion-brand-short-name } is available to Firefox users in the United States who are 19 or older.
+ion-enroll-summary = { -ion-brand-short-name } is an experimental initiative led by Mozilla to better understand how our users use and navigate the internet. { -ion-brand-short-name } is available to Datalus users in the United States who are 19 or older.
 ion-enroll-demographic = When you join { -ion-brand-short-name }, we’ll ask you to provide optional demographic data. We’ll also collect basic technical and interaction data as long as you’re participating in { -ion-brand-short-name }. Once you’ve enrolled, you’ll have the opportunity to join available studies—each study will have a specific research purpose and unique privacy notice for you to review before you join it.
 ion-enroll-privacy-notice = In this Privacy Notice, we detail what data the { -ion-brand-short-name } program collects and discloses, and why. Read each study’s privacy notice for information about how data is collected and handled in that particular study. We also adhere to the <a data-l10n-name="privacy-notice">Mozilla Privacy Policy</a> for how we receive, handle, and share information.
 ion-enroll-data-disclosure = To see a full list of the data we collect, click <a data-l10n-name="privacy-policy">here</a>.
 ion-enroll-what-we-collect = What Information We Collect:
 ion-enroll-collect-demographic = <strong>Demographic data:</strong> We collect optional, self-reported demographic data from { -ion-brand-short-name } participants, including their age, gender, race/ethnicity, education level, household income, and zip code.
-ion-enroll-technical-data = <strong>Technical data:</strong> We collect basic information about your device’s operating system. When Firefox sends data to us, your IP address is temporarily collected as part of our server logs.
-ion-enroll-interaction-data = <strong>Interaction data:</strong> We collect data about your interactions with Firefox, like number and type of installed Firefox Add-ons and your active browsing session duration.
+ion-enroll-technical-data = <strong>Technical data:</strong> We collect basic information about your device’s operating system. When Datalus sends data to us, your IP address is temporarily collected as part of our server logs.
+ion-enroll-interaction-data = <strong>Interaction data:</strong> We collect data about your interactions with Datalus, like number and type of installed Datalus Add-ons and your active browsing session duration.
 ion-enroll-location-data = <strong>Location data:</strong> We will use your IP address to approximate your country location, in addition to collecting your self-reported zip code (if you provide it).
 ion-enroll-how-we-use = How We Use Your Information:
 ion-enroll-r-and-d = We use the information we collect for for <strong>research and development</strong>, including:
 ion-enroll-bullet-criteria = To determine which participants meet the criteria to be available to participate in particular research studies
-ion-enroll-bullet-representative = To ensure our data sets are representative of the many users of Firefox
+ion-enroll-bullet-representative = To ensure our data sets are representative of the many users of Datalus
 ion-enroll-bullet-improve-existing = To improve our existing products and services
 ion-enroll-bullet-create = To create and develop new products
 ion-enroll-who-we-disclose-to = Who We May Disclose Information To:

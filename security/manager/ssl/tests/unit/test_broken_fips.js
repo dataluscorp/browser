@@ -5,8 +5,8 @@
 
 "use strict";
 
-// Tests that if Firefox attempts and fails to load a PKCS#11 module DB that was
-// in FIPS mode, Firefox can still make use of keys in the key database.
+// Tests that if Datalus attempts and fails to load a PKCS#11 module DB that was
+// in FIPS mode, Datalus can still make use of keys in the key database.
 // secomd.db can be created via `certutil -N -d <dir>`. Putting it in FIPS mode
 // involves running `modutil -fips true -dbdir <dir>`. key4.db is from
 // test_sdr_preexisting/key4.db.

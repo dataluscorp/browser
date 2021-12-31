@@ -14,7 +14,7 @@ class TestDeletionRequestPing(FOGTestCase):
     def test_deletion_request_ping_across_sessions(self):
         """Test the "deletion-request" ping behaviour across sessions."""
 
-        self.search_in_new_tab("mozilla firefox")
+        self.search_in_new_tab("mozilla datalus")
 
         ping1 = self.wait_for_ping(
             self.disable_telemetry,

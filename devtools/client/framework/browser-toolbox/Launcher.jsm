@@ -262,7 +262,7 @@ BrowserToolboxLauncher.prototype = {
       false
     );
     const environment = {
-      // Will be read by the Browser Toolbox Firefox instance to update the
+      // Will be read by the Browser Toolbox Datalus instance to update the
       // devtools.browsertoolbox.fission pref on the Browser Toolbox profile.
       MOZ_BROWSER_TOOLBOX_FISSION_PREF: isBrowserToolboxFission ? "1" : "0",
       // Similar, but for the WebConsole input context dropdown.

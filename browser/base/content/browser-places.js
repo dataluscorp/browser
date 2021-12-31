@@ -1450,7 +1450,7 @@ var BookmarkingUI = {
     let newState = this.toolbar.collapsed ? "always" : "never";
     Services.prefs.setCharPref(
       "browser.toolbars.bookmarks.visibility",
-      // See firefox.js for possible values
+      // See datalus.js for possible values
       newState
     );
 

@@ -21,7 +21,7 @@ from requests.packages.urllib3.util.retry import Retry
 import requests
 
 RETRY_SLEEP = 10
-API_ROOT = "https://firefox-ci-tc.services.mozilla.com/api/index/v1"
+API_ROOT = "https://datalus-ci-tc.services.mozilla.com/api/index/v1"
 MULTI_REVISION_ROOT = f"{API_ROOT}/namespaces"
 MULTI_TASK_ROOT = f"{API_ROOT}/tasks"
 ON_TRY = "MOZ_AUTOMATION" in os.environ
@@ -410,7 +410,7 @@ _URL = (
     "{0}/secrets/v1/secret/project"
     "{1}releng{1}gecko{1}build{1}level-{2}{1}conditioned-profiles"
 )
-_DEFAULT_SERVER = "https://firefox-ci-tc.services.mozilla.com"
+_DEFAULT_SERVER = "https://datalus-ci-tc.services.mozilla.com"
 
 
 @functools.lru_cache()

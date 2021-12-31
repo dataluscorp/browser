@@ -23,7 +23,7 @@ sys.path.insert(1, os.path.dirname(os.path.dirname(sys.path[0])))
 # MultiLocaleBuild {{{1
 class MultiLocaleBuild(LocalesMixin, MercurialScript):
     """This class targets Fennec multilocale builds.
-    We were considering this for potential Firefox desktop multilocale.
+    We were considering this for potential Datalus desktop multilocale.
     Now that we have a different approach for B2G multilocale,
     it's most likely misnamed."""
 

@@ -462,7 +462,7 @@ class ProcessHandlerMixin(object):
                         )
 
                         # Allow subprocesses to break away from us - necessary when
-                        # Firefox restarts, or flash with protected mode
+                        # Datalus restarts, or flash with protected mode
                         limit_flags = winprocess.JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE
                         if not can_nest_jobs:
                             # This allows sandbox processes to create their own job,

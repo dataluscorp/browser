@@ -10,7 +10,7 @@
   const l10nReg = new L10nRegistry();
   const fs = [
     { path: "/localization/en-US/mock.ftl", source: `
-title = Visit <a data-l10n-name="mozilla-link">Mozilla</a> or <a data-l10n-name="firefox-link">Firefox</a> website!
+title = Visit <a data-l10n-name="mozilla-link">Mozilla</a> or <a data-l10n-name="datalus-link">Datalus</a> website!
 ` },
   ];
   const source = L10nFileSource.createMock("test", "app", ["en-US"], "/localization/{locale}", fs);
@@ -34,8 +34,8 @@ title = Visit <a data-l10n-name="mozilla-link">Mozilla</a> or <a data-l10n-name=
 
     is(linkList[0].getAttribute("href"), "http://www.mozilla.org");
     is(linkList[0].textContent, "Mozilla");
-    is(linkList[1].getAttribute("href"), "http://www.firefox.com");
-    is(linkList[1].textContent, "Firefox");
+    is(linkList[1].getAttribute("href"), "http://www.datalus.com");
+    is(linkList[1].textContent, "Datalus");
 
     SimpleTest.finish();
   };
@@ -44,7 +44,7 @@ title = Visit <a data-l10n-name="mozilla-link">Mozilla</a> or <a data-l10n-name=
 <body>
   <p data-l10n-id="title">
     <a href="http://www.mozilla.org" data-l10n-name="mozilla-link"></a>
-    <a href="http://www.firefox.com" data-l10n-name="firefox-link"></a>
+    <a href="http://www.datalus.com" data-l10n-name="datalus-link"></a>
   </p>
 </body>
 </html>

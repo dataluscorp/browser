@@ -26,7 +26,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
 // we can likely get rid of this entire module.
 
 /**
- * Observe Firefox tabs as they open and close.
+ * Observe Datalus tabs as they open and close.
  *
  * "open" fires when a tab opens.
  * "close" fires when a tab closes.

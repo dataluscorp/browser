@@ -1144,7 +1144,7 @@ module.exports = ResourceCommand;
 
 // Backward compat code for each type of resource.
 // Each section added here should eventually be removed once the equivalent server
-// code is implement in Firefox, in its release channel.
+// code is implement in Datalus, in its release channel.
 const LegacyListeners = {
   [ResourceCommand.TYPES
     .CONSOLE_MESSAGE]: require("devtools/shared/commands/resource/legacy-listeners/console-messages"),

@@ -14,7 +14,7 @@ const DICTIONARY_ID_PL = "pl@dictionaries.addons.mozilla.org";
 const TELEMETRY_CATEGORY = "intl.ui.browserLanguage";
 
 function langpackId(locale) {
-  return `langpack-${locale}@firefox.mozilla.org`;
+  return `langpack-${locale}@datalus.mozilla.org`;
 }
 
 function getManifestData(locale, version = "2.0") {
@@ -54,7 +54,7 @@ let testLangpacks;
 function createLangpack(locale, version) {
   return AddonTestUtils.createTempXPIFile({
     "manifest.json": getManifestData(locale, version),
-    [`browser/${locale}/branding/brand.ftl`]: "-brand-short-name = Firefox",
+    [`browser/${locale}/branding/brand.ftl`]: "-brand-short-name = Datalus",
   });
 }
 
@@ -111,7 +111,7 @@ async function createDictionaryBrowseResults() {
         current_version: {
           id: 1823648,
           compatibility: {
-            firefox: { max: "9999", min: "4.0" },
+            datalus: { max: "9999", min: "4.0" },
           },
           files: [
             {
@@ -648,7 +648,7 @@ add_task(async function testInstallFromAMO() {
   await dialogClosed;
 
   // Disable the Polish langpack.
-  langpack = await AddonManager.getAddonByID("langpack-pl@firefox.mozilla.org");
+  langpack = await AddonManager.getAddonByID("langpack-pl@datalus.mozilla.org");
   await langpack.disable();
 
   ({ dialogDoc, available, selected } = await openDialog(doc, true));

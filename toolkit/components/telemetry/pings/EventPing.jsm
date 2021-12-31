@@ -4,7 +4,7 @@
 
 /*
  * This module sends Telemetry Events periodically:
- * https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/event-ping.html
+ * https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/event-ping.html
  */
 
 "use strict";

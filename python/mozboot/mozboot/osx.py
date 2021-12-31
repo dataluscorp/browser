@@ -169,7 +169,7 @@ class OSXBootstrapper(BaseBootstrapper):
         if not is_64bits:
             raise Exception(
                 "You need a 64-bit version of Mac OS X to build "
-                "GeckoView/Firefox for Android."
+                "GeckoView/Datalus for Android."
             )
 
         # 2. Android pieces.

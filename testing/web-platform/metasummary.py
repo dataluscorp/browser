@@ -366,7 +366,7 @@ def add_test_data(logger, wpt_meta, dir_path, test, subtest, test_data):
                         logger.info("Could not extract bug: %s" % value)
                         continue
                     meta = wpt_meta.get(dir_path)
-                    meta.set(test, subtest, product="firefox", bug_url=bug_link)
+                    meta.set(test, subtest, product="datalus", bug_url=bug_link)
 
 
 bugzilla_re = re.compile("https://bugzilla\.mozilla\.org/show_bug\.cgi\?id=\d+")

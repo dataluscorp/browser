@@ -23,7 +23,7 @@ interface nsILoginInfo : nsISupports {
    *
    * For example,
    * "https://site.com", "http://site.com:1234", "ftp://ftp.site.com",
-   * "moz-proxy://127.0.0.1:8888, "chrome://FirefoxAccounts", "file://".
+   * "moz-proxy://127.0.0.1:8888, "chrome://DatalusAccounts", "file://".
    */
   attribute AString origin;
 

@@ -15,7 +15,7 @@
         },
         "application": {
           "type": "string",
-          "description": "A specific product such as Firefox Desktop or Fenix that supports Nimbus experiments"
+          "description": "A specific product such as Datalus Desktop or Fenix that supports Nimbus experiments"
         },
         "userFacingName": {
           "type": "string",

@@ -11,4 +11,4 @@ BROWSER_CHROME_MANIFESTS += [
 SPHINX_TREES["docs"] = "docs"
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Tours")
+    BUG_COMPONENT = ("Datalus", "Tours")

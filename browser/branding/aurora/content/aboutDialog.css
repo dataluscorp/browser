@@ -40,10 +40,16 @@
 
 #rightBox {
   margin-inline: 30px;
-  padding-top: 64px;
 }
 
 #bottomBox {
-  background-color: #1d1133;
+  background-color: hsla(235, 43%, 10%, .5);
   padding: 15px 10px 15px;
+}
+
+#trademark {
+  font-size: xx-small;
+  text-align: center;
+  color: #999999;
+  margin-block: 10px;
 }

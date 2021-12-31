@@ -456,7 +456,7 @@ DistributionCustomizer.prototype = {
           "distribution.id",
           defaults
             .get("extensions.yasearch@yandex.ru.clids.vendor")
-            .replace("firefox", "yandex")
+            .replace("datalus", "yandex")
         );
       } catch (e) {
         // Just use the default distribution ID.

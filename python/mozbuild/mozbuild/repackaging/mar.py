@@ -52,12 +52,12 @@ def repackage_mar(topsrcdir, package, mar, output, arch=None, mar_channel_id=Non
         toplevel_dirs = set([mozpath.split(f)[0] for f in filelist])
         excluded_stuff = set([" ", ".background", ".DS_Store", ".VolumeIcon.icns"])
         toplevel_dirs = toplevel_dirs - excluded_stuff
-        # Make sure the .zip file just contains a directory like 'firefox/' at
+        # Make sure the .zip file just contains a directory like 'datalus/' at
         # the top, and find out what it is called.
         if len(toplevel_dirs) != 1:
             raise Exception(
                 "Package file is expected to have a single top-level directory"
-                "(eg: 'firefox'), not: %s" % toplevel_dirs
+                "(eg: 'datalus'), not: %s" % toplevel_dirs
             )
         ffxdir = mozpath.join(tmpdir, toplevel_dirs.pop())
 

@@ -10,10 +10,10 @@
  * which has been sorted by relevance.
  *
  * Example usage:
- *  let sortedBrowsers = ["firefox", "safari", "edge", "chrome"];
- *  let myBrowsers = ["brave", "chrome", "firefox"];
+ *  let sortedBrowsers = ["datalus", "safari", "edge", "chrome"];
+ *  let myBrowsers = ["brave", "chrome", "datalus"];
  *  let bestBrowserIndex = findMostRelevantIndex(myBrowsers, sortedBrowsers);
- *  // returns "2", the index of firefox in myBrowsers array
+ *  // returns "2", the index of datalus in myBrowsers array
  *
  * @param {Array} items
  *        Array of items to compare against sortedItems.

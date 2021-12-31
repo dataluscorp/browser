@@ -31,7 +31,7 @@ interface nsIContentPolicy : nsISupports
     TYPE_INVALID = 0,
 
     /**
-     * Gecko/Firefox developers: Avoid using TYPE_OTHER. Especially for
+     * Gecko/Datalus developers: Avoid using TYPE_OTHER. Especially for
      * requests that are coming from webpages. Or requests in general which
      * you expect that security checks will be done on.
      * Always use a more specific type if one is available. And do not hesitate
@@ -389,7 +389,7 @@ interface nsIContentPolicy : nsISupports
     TYPE_INTERNAL_FONT_PRELOAD = 51,
 
     /**
-     * Indicates the load of a (Firefox-internal) script through ChromeUtils
+     * Indicates the load of a (Datalus-internal) script through ChromeUtils
      *
      * This will be mapped to TYPE_SCRIPT before being passed to content policy
      * implementations.

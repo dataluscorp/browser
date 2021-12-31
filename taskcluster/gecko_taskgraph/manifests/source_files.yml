@@ -6,8 +6,8 @@ s3_bucket_paths:
     by-platform:
         devedition-source:
             - pub/devedition/candidates
-        firefox-source:
-            - pub/firefox/candidates
+        datalus-source:
+            - pub/datalus/candidates
 default_locales:  # if given an empty locale, use these locales
     - en-US
 tasktype_map:  # Map task reference to task type.
@@ -33,20 +33,20 @@ mapping:
         description: "Source file with the in-tree code archived"
         pretty_name:
             by-platform:
-                firefox-source: firefox-${version}.source.tar.xz
-                devedition-source: firefox-${version}.source.tar.xz
+                datalus-source: datalus-${version}.source.tar.xz
+                devedition-source: datalus-${version}.source.tar.xz
         checksums_path:
             by-platform:
-                firefox-source: source/firefox-${version}.source.tar.xz
-                devedition-source: source/firefox-${version}.source.tar.xz
+                datalus-source: source/datalus-${version}.source.tar.xz
+                devedition-source: source/datalus-${version}.source.tar.xz
     source.tar.xz.asc:
         <<: *default
         description: "Detached signature for the source file"
         pretty_name:
             by-platform:
-                firefox-source: firefox-${version}.source.tar.xz.asc
-                devedition-source: firefox-${version}.source.tar.xz.asc
+                datalus-source: datalus-${version}.source.tar.xz.asc
+                devedition-source: datalus-${version}.source.tar.xz.asc
         checksums_path:
             by-platform:
-                firefox-source: source/firefox-${version}.source.tar.xz.asc
-                devedition-source: source/firefox-${version}.source.tar.xz.asc
+                datalus-source: source/datalus-${version}.source.tar.xz.asc
+                devedition-source: source/datalus-${version}.source.tar.xz.asc

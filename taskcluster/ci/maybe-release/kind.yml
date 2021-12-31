@@ -31,13 +31,13 @@ job-defaults:
         kind: build
 
 jobs:
-    firefox:
-        name: maybe-release-firefox
-        shipping-product: firefox
+    datalus:
+        name: maybe-release-datalus
+        shipping-product: datalus
         worker:
-            phase: ship_firefox
+            phase: ship_datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
 
     devedition:
         name: maybe-release-devedition

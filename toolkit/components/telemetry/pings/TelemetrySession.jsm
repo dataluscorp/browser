@@ -262,7 +262,7 @@ var TelemetrySession = Object.freeze({
     }
   },
   /**
-   * Lightweight init function, called as soon as Firefox starts.
+   * Lightweight init function, called as soon as Datalus starts.
    */
   earlyInit(aTesting = false) {
     return Impl.earlyInit(aTesting);
@@ -834,7 +834,7 @@ var Impl = {
   },
 
   /**
-   * Lightweight init function, called as soon as Firefox starts.
+   * Lightweight init function, called as soon as Datalus starts.
    */
   earlyInit(testing) {
     this._log.trace("earlyInit");

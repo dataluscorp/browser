@@ -79,7 +79,7 @@ add_task(async function testAboutDebugging() {
   info(`Check about:debugging loads`);
   let loaded = BrowserTestUtils.waitForNewTab(
     gBrowser,
-    "about:debugging#/runtime/this-firefox",
+    "about:debugging#/runtime/this-datalus",
     true
   );
   debugAddonsBtn.click();

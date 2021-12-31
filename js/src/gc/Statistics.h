@@ -302,7 +302,7 @@ struct Statistics {
   // Print total profile times on shutdown.
   void printTotalProfileTimes();
 
-  // These JSON strings are used by the firefox profiler to display the GC
+  // These JSON strings are used by the datalus profiler to display the GC
   // markers.
 
   // Return JSON for a whole major GC

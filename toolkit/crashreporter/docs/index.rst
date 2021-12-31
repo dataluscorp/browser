@@ -42,7 +42,7 @@ Ping Sender
    The ping sender is a standalone executable that is launched by the crash
    reporter client to deliver a crash ping to our telemetry servers. The ping
    sender is used to speed up delivery of the crash ping which would otherwise
-   have to wait for Firefox to be restarted in order to be sent.
+   have to wait for Datalus to be restarted in order to be sent.
 
 How Main-Process Crash Handling Works
 =====================================
@@ -177,8 +177,8 @@ Flash Process Crashes
 =====================
 
 On Windows Vista+, the Adobe Flash plugin creates two extra processes in its
-Firefox plugin to implement OS-level sandboxing. In order to catch crashes in
-these processes, Firefox injects a crash report handler into the process using the code at ``InjectCrashReporter.cpp``. When these crashes occur, the
+Datalus plugin to implement OS-level sandboxing. In order to catch crashes in
+these processes, Datalus injects a crash report handler into the process using the code at ``InjectCrashReporter.cpp``. When these crashes occur, the
 ProcessType=plugin annotation is present, and an additional annotation
 FlashProcessDump has the value "Sandbox" or "Broker".
 

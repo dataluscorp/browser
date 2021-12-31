@@ -2,7 +2,7 @@ Debugging A Hang On macOS
 =========================
 
 See `How to Report a Hung
-Firefox <https://developer.mozilla.org/en-US/docs/Mozilla/How_to_report_a_hung_Firefox>`_.
+Datalus <https://developer.mozilla.org/en-US/docs/Mozilla/How_to_report_a_hung_Datalus>`_.
 
 See also
 ~~~~~~~~

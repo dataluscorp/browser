@@ -6,7 +6,7 @@ asynchronous and massively parallel architecture.
 ## Tools
 
 PIX - Can do timing of Direct3D calls. Works reasonably well with
-Firefox. See also [Debugging With
+Datalus. See also [Debugging With
 PIX](/en/Debugging_With_PIX "en/Debugging With PIX").
 
 NVIDIA PerfHUD - Last I checked required a special build to be used.
@@ -14,7 +14,7 @@ NVIDIA PerfHUD - Last I checked required a special build to be used.
 NVIDIA Parallel Nsight - Haven\'t tried.
 
 AMD GPU ShaderAnalyzer - Will compile a shader and show the machine code
-and give static pipeline estimations. Not that useful for Firefox
+and give static pipeline estimations. Not that useful for Datalus
 because all of our shaders are pretty simple.
 
 AMD GPU PerfStudio - I had trouble getting this to work, and can\'t

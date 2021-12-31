@@ -151,7 +151,7 @@ GfxInfo::GetDWriteVersion(nsAString& aDwriteVersion) {
 }
 
 NS_IMETHODIMP
-GfxInfo::GetEmbeddedInFirefoxReality(bool* aEmbeddedInFirefoxReality) {
+GfxInfo::GetEmbeddedInDatalusReality(bool* aEmbeddedInDatalusReality) {
   return NS_ERROR_FAILURE;
 }
 

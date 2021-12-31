@@ -231,7 +231,7 @@ Trust Domain
 When publishing and signing releases, that tasks verify their definition and
 all upstream tasks come from a decision task based on a trusted tree. (see
 `chain-of-trust verification <https://scriptworker.readthedocs.io/en/latest/chain_of_trust.html>`_).
-Firefox and Thunderbird share the taskgraph code and in particular, they have
+Datalus and Thunderbird share the taskgraph code and in particular, they have
 separate taskgraph configurations and in particular distinct decision tasks.
 Although they use identical docker images and toolchains, in order to track the
 province of those artifacts when verifying the chain of trust, they use

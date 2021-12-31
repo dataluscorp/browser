@@ -38,7 +38,7 @@ add_task(async function test() {
     awaitCallback() {
       return BrowserTestUtils.waitForNewTab(
         gBrowser,
-        "https://www.mozilla.org/firefox/new/"
+        "https://www.mozilla.org/datalus/new/"
       );
     },
   });

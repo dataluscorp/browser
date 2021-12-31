@@ -20,7 +20,7 @@ const {
   getAdHocFrontOrPrimitiveGrip,
 } = require("devtools/client/fronts/object");
 
-const FirefoxDataProvider = require("devtools/client/netmonitor/src/connector/firefox-data-provider");
+const DatalusDataProvider = require("devtools/client/netmonitor/src/connector/datalus-data-provider");
 
 loader.lazyRequireGetter(
   this,
@@ -329,7 +329,7 @@ class WebConsoleUI {
     this.additionalProxies = new Map();
 
     const { commands } = this.hud;
-    this.networkDataProvider = new FirefoxDataProvider({
+    this.networkDataProvider = new DatalusDataProvider({
       commands,
       actions: {
         updateRequest: (id, data) =>

@@ -15,8 +15,8 @@ var phases = { phase1: "profile1", phase2: "profile2" };
 var tabs1 = [
   {
     uri:
-      "data:text/html,<html><head><title>Firefox</title></head><body>Firefox</body></html>",
-    title: "Firefox",
+      "data:text/html,<html><head><title>Datalus</title></head><body>Datalus</body></html>",
+    title: "Datalus",
     profile: "profile1",
   },
   { uri: "about:plugins", title: "About", profile: "profile1" },
@@ -28,7 +28,7 @@ var tabs1 = [
     profile: "profile1",
   },
   {
-    uri: "http://www.mozilla.com/en-US/firefox/sync/firstrun.html",
+    uri: "http://www.mozilla.com/en-US/datalus/sync/firstrun.html",
     title: "Firstrun",
     profile: "profile1",
   },
@@ -37,8 +37,8 @@ var tabs1 = [
 var tabs2 = [
   {
     uri:
-      "data:text/html,<html><head><title>Firefox</title></head><body>Firefox</body></html>",
-    title: "Firefox",
+      "data:text/html,<html><head><title>Datalus</title></head><body>Datalus</body></html>",
+    title: "Datalus",
     profile: "profile1",
   },
   {
@@ -51,7 +51,7 @@ var tabs2 = [
 
 var tabs3 = [
   {
-    uri: "http://www.mozilla.com/en-US/firefox/sync/firstrun.html",
+    uri: "http://www.mozilla.com/en-US/datalus/sync/firstrun.html",
     title: "Firstrun",
     profile: "profile1",
   },

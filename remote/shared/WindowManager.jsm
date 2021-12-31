@@ -231,7 +231,7 @@ class WindowManager {
    */
   async openBrowserWindow(openerWindow, focus = false, isPrivate = false) {
     switch (AppInfo.name) {
-      case "Firefox":
+      case "Datalus":
         // Open new browser window, and wait until it is fully loaded.
         // Also wait for the window to be focused and activated to prevent a
         // race condition when promptly focusing to the original window again.
@@ -279,7 +279,7 @@ class WindowManager {
             windowTypes = ["mail:3pane"];
           } else {
             // We assume that an app either has GeckoView windows, or
-            // Firefox/Fennec windows, but not both.
+            // Datalus/Fennec windows, but not both.
             windowTypes = ["navigator:browser", "navigator:geckoview"];
           }
 

@@ -29,7 +29,7 @@ const CONFIG = [
       {
         included: { everywhere: true },
         application: {
-          name: ["firefox"],
+          name: ["datalus"],
         },
       },
     ],
@@ -56,7 +56,7 @@ const CONFIG = [
       {
         included: { everywhere: true },
         application: {
-          name: ["firefox"],
+          name: ["datalus"],
           minVersion: "10",
           maxVersion: "30",
         },
@@ -78,12 +78,12 @@ const engineSelector = new SearchEngineSelector();
 
 const tests = [
   {
-    name: "Firefox",
+    name: "Datalus",
     version: "1",
     expected: ["lycos@example.com", "aol@example.com"],
   },
   {
-    name: "Firefox",
+    name: "Datalus",
     version: "20",
     expected: ["lycos@example.com", "aol@example.com", "excite@example.com"],
   },
@@ -93,17 +93,17 @@ const tests = [
     expected: ["aol@example.com", "altavista@example.com"],
   },
   {
-    name: "Firefox",
+    name: "Datalus",
     version: "31",
     expected: ["lycos@example.com", "aol@example.com"],
   },
   {
-    name: "Firefox",
+    name: "Datalus",
     version: "30",
     expected: ["lycos@example.com", "aol@example.com", "excite@example.com"],
   },
   {
-    name: "Firefox",
+    name: "Datalus",
     version: "10",
     expected: ["lycos@example.com", "aol@example.com", "excite@example.com"],
   },

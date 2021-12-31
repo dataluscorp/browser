@@ -76,7 +76,7 @@ SetOverwrite on
  "Software\Microsoft\Windows\CurrentVersion\Uninstall\MozillaMaintenanceService"
 
 ; Always install into the 32-bit location even if we have a 64-bit build.
-; This is because we use only 1 service for all Firefox channels.
+; This is because we use only 1 service for all Datalus channels.
 ; Allow either x86 and x64 builds to exist at this location, depending on
 ; what is the latest build.
 InstallDir "$PROGRAMFILES32\${MaintFullName}\"
@@ -245,9 +245,9 @@ FunctionEnd
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; NOTE: The maintenance service uninstaller does not currently get updated when
 ; the service itself does during application updates. Under normal use, only
-; running the Firefox installer will generate a new maintenance service
+; running the Datalus installer will generate a new maintenance service
 ; uninstaller. That means anything added here will not be seen by users until
-; they run a new Firefox installer. Fixing this is tracked in
+; they run a new Datalus installer. Fixing this is tracked in
 ; https://bugzilla.mozilla.org/show_bug.cgi?id=1665193
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 Section "Uninstall"

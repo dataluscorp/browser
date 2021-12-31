@@ -61,7 +61,7 @@ add_task(async function test_webextension_target_allowSource_on_eager_eval() {
   info("Wait for eager eval element");
   await TestUtils.waitForCondition(() => getEagerEvaluationElement(hud));
 
-  // The following step will force Firefox to list the source actors, one of those
+  // The following step will force Datalus to list the source actors, one of those
   // source actors is going to be the one related to the js code evaluated by the
   // eager evaluation and it does make sure that WebExtensionTargetPrototype._allowSource
   // is going to be called with the source actor with url "debugger eager eval code".

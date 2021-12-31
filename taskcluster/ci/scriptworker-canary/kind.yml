@@ -11,7 +11,7 @@ transforms:
 
 job-defaults:
     treeherder:
-        platform: firefox-release/opt
+        platform: datalus-release/opt
         tier: 1
         kind: build
     worker-type: b-linux

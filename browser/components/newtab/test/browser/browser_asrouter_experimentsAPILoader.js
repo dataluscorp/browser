@@ -32,7 +32,7 @@ const MESSAGE_CONTENT = {
       users: 1455872,
       author: "Mozilla",
       rating: 4.5,
-      amo_url: "https://addons.mozilla.org/firefox/addon/facebook-container/",
+      amo_url: "https://addons.mozilla.org/datalus/addon/facebook-container/",
     },
     buttons: {
       primary: {

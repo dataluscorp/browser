@@ -1,7 +1,7 @@
 # Source Maps
 
 This package contains DevTools utilities for working with source maps.
-The toolbox inside Firefox loads this package and passes it down to interested tools so
+The toolbox inside Datalus loads this package and passes it down to interested tools so
 that they can share a common instance of the utilities
 
 # Application Requirements

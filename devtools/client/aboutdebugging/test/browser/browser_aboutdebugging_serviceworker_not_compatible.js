@@ -43,7 +43,7 @@ add_task(async function testLocalRuntime() {
     } = testData;
 
     info(
-      `Test warning message on this-firefox ` +
+      `Test warning message on this-datalus ` +
         `with serviceWorkersEnabled: ${serviceWorkersEnabled} ` +
         `and with privateBrowsingEnabled: ${privateBrowsingEnabled}`
     );
@@ -61,7 +61,7 @@ add_task(async function testLocalRuntime() {
       // Set enableWorkerUpdates to false to avoid intermittent failures.
       enableWorkerUpdates: false,
     });
-    await selectThisFirefoxPage(document, window.AboutDebugging.store);
+    await selectThisDatalusPage(document, window.AboutDebugging.store);
     assertWarningMessage(document, expectedMessage);
     await removeTab(tab);
   }
@@ -101,7 +101,7 @@ add_task(async function testRemoteRuntime() {
     const { document, tab, window } = await openAboutDebugging({
       enableWorkerUpdates: false,
     });
-    await selectThisFirefoxPage(document, window.AboutDebugging.store);
+    await selectThisDatalusPage(document, window.AboutDebugging.store);
 
     info("Checking a USB runtime");
     mocks.emitUSBUpdate();

@@ -191,7 +191,7 @@ add_task(async function privileged_xpi_not_blocked() {
 // langpack_blocked_by_stash in test_blocklist_mlbf_stashes.js.
 add_task(async function langpack_not_blocked_on_Nightly() {
   mockMLBF({
-    blocked: ["langpack-klingon@firefox.mozilla.org:1.0"],
+    blocked: ["langpack-klingon@datalus.mozilla.org:1.0"],
     notblocked: [],
     generationTime: 1546297200000, // 1 jan 2019 = after the cert's notBefore
   });
@@ -200,7 +200,7 @@ add_task(async function langpack_not_blocked_on_Nightly() {
   await promiseInstallFile(
     do_get_file("../data/signing_checks/langpack_signed.xpi")
   );
-  let addon = await promiseAddonByID("langpack-klingon@firefox.mozilla.org");
+  let addon = await promiseAddonByID("langpack-klingon@datalus.mozilla.org");
   Assert.equal(addon.signedState, AddonManager.SIGNEDSTATE_SIGNED);
   if (AppConstants.NIGHTLY_BUILD) {
     // Langpacks built for Nightly are currently signed by releng and not

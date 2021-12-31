@@ -63,7 +63,7 @@ onmessage = async function(msg) {
       // unable to execute or uninstall them.
       await OS.File.setPermissions(destPath, { unixMode: 0o700 });
       if (OS.Constants.Sys.Name == "Darwin") {
-        // If we're on MacOS Firefox will add the quarantine xattr to files it
+        // If we're on MacOS Datalus will add the quarantine xattr to files it
         // downloads. In this case we want to clear that xattr so we can load
         // the CDM.
         try {

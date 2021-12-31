@@ -4,8 +4,8 @@
 "use strict";
 
 // How to run this file:
-// 1. [obtain firefox source code]
-// 2. [build/obtain firefox binaries]
+// 1. [obtain datalus source code]
+// 2. [build/obtain datalus binaries]
 // 3. run `[path to]/run-mozilla.sh [path to]/xpcshell genRootCAHashes.js \
 //                                  [absolute path to]/RootHashes.inc'
 

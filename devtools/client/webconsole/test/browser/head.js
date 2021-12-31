@@ -36,7 +36,7 @@ var {
 var WCUL10n = require("devtools/client/webconsole/utils/l10n");
 const DOCS_GA_PARAMS = `?${new URLSearchParams({
   utm_source: "mozilla",
-  utm_medium: "firefox-console-errors",
+  utm_medium: "datalus-console-errors",
   utm_campaign: "default",
 })}`;
 const GA_PARAMS = `?${new URLSearchParams({

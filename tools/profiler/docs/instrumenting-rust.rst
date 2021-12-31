@@ -88,7 +88,7 @@ Adding Stack Frame Labels
 -------------------------
 
 Stack frame labels are useful for annotating a part of the call stack with a
-category. The category will appear in the various places on the Firefox Profiler
+category. The category will appear in the various places on the Datalus Profiler
 analysis page like timeline, call tree tab, flame graph tab, etc.
 
 ``gecko_profiler_label!`` macro is used to add a new label frame. The added label
@@ -116,7 +116,7 @@ See the list of all profiling categories in the `profiling_categories.yaml`_ fil
 Adding Markers
 --------------
 
-Markers are packets of arbitrary data that are added to a profile by the Firefox code,
+Markers are packets of arbitrary data that are added to a profile by the Datalus code,
 usually to indicate something important happening at a point in time, or during an interval of time.
 
 Each marker has a name, a category, some common optional information (timing, backtrace, etc.),
@@ -191,7 +191,7 @@ Short examples, details are below.
         fn marker_type_name() -> &'static str {
             "example number"
         }
-        // Data specific to this marker type, serialized to JSON for profiler.firefox.com.
+        // Data specific to this marker type, serialized to JSON for profiler.datalus.com.
         fn stream_json_marker_data(&self, json_writer: &mut gecko_profiler::JSONWriter) {
             json_writer.int_property("number", self.number.into());
         }
@@ -280,7 +280,7 @@ the marker name. Use the following macro:
 
 As useful as it is, using an expensive ``format!`` operation to generate a complex text
 comes with a variety of issues. It can leak potentially sensitive information
-such as URLs during the profile sharing step. profiler.firefox.com cannot
+such as URLs during the profile sharing step. profiler.datalus.com cannot
 access the information programmatically. It won't get the formatting benefits of the
 built-in marker schema. Please consider using a custom marker type to separate and
 better present the data.
@@ -314,7 +314,7 @@ How to Define New Marker Types
 Each marker type must be defined once and only once.
 The definition is a Rust ``struct``, it's constructed when recording markers of
 that type in Rust. Each marker struct holds the data that is required for them
-to show in the profiler.firefox.com.
+to show in the profiler.datalus.com.
 By convention, the suffix "Marker" is recommended to better distinguish them
 from non-profiler entities in the source.
 
@@ -342,7 +342,7 @@ needs to be implemented:
 
 1. ``marker_type_name() -> &'static str``:
     A marker type must have a unique name, it is used to keep track of the type of
-    markers in the profiler storage, and to identify them uniquely on profiler.firefox.com.
+    markers in the profiler storage, and to identify them uniquely on profiler.datalus.com.
     (It does not need to be the same as the struct's name.)
 
     E.g.:
@@ -364,7 +364,7 @@ needs to be implemented:
 
     It's a member method and takes a ``&mut JSONWriter`` as a parameter,
     it will be used to stream the data as JSON, to later be read by
-    profiler.firefox.com. See `JSONWriter object and its methods`_.
+    profiler.datalus.com. See `JSONWriter object and its methods`_.
 
     E.g.:
 
@@ -376,12 +376,12 @@ needs to be implemented:
         }
 
 3. ``marker_type_display() -> schema::MarkerSchema``
-    Now that how to stream type-specific data (from Firefox to
-    profiler.firefox.com) is defined, it needs to be described where and how this
-    data will be displayed on profiler.firefox.com.
+    Now that how to stream type-specific data (from Datalus to
+    profiler.datalus.com) is defined, it needs to be described where and how this
+    data will be displayed on profiler.datalus.com.
 
     The static member function ``marker_type_display`` returns an opaque ``MarkerSchema``
-    object, which will be forwarded to profiler.firefox.com.
+    object, which will be forwarded to profiler.datalus.com.
 
     See the `MarkerSchema::Location enumeration for the full list`_. Also see the
     `MarkerSchema struct for its possible methods`_.
@@ -395,7 +395,7 @@ needs to be implemented:
             use crate::marker::schema::*;
             // Create a MarkerSchema struct with a list of locations provided.
             // One or more constructor arguments determine where this marker will be displayed in
-            // the profiler.firefox.com UI.
+            // the profiler.datalus.com UI.
             let mut schema = MarkerSchema::new(&[Location::MarkerChart]);
 
             // Some labels can optionally be specified, to display certain information in different

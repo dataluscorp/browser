@@ -4,7 +4,7 @@
 "use strict";
 
 /**
- * Firefox Accounts Web Channel.
+ * Datalus Accounts Web Channel.
  *
  * Uses the WebChannel component to receive messages
  * about account state changes.
@@ -109,7 +109,7 @@ XPCOMUtils.defineLazyPreferenceGetter(
 
 // These engines were added years after Sync had been introduced, they need
 // special handling since they are system add-ons and are un-available on
-// older versions of Firefox.
+// older versions of Datalus.
 const EXTRA_ENGINES = ["addresses", "creditcards"];
 
 /**
@@ -537,7 +537,7 @@ FxAccountsWebChannelHelpers.prototype = {
     // expectations as to what is and what isn't part of the browser.
     // Sync is viewed as an integral part of the browser, interacting
     // with FxA as part of a Sync flow should work all the time. If
-    // Sync is broken in PB mode, users will think Firefox is broken.
+    // Sync is broken in PB mode, users will think Datalus is broken.
     // See https://bugzilla.mozilla.org/show_bug.cgi?id=1323853
     log.debug("service", service);
     return (
@@ -604,7 +604,7 @@ FxAccountsWebChannelHelpers.prototype = {
     // that hard-codes field names.
     // However, in this case the field names aren't really in our control.
     // We *could* still insist the server know what fields names are valid,
-    // but that makes life difficult for the server when Firefox adds new
+    // but that makes life difficult for the server when Datalus adds new
     // features (ie, new fields) - forcing the server to track a map of
     // versions to supported field names doesn't buy us much.
     // So we just remove field names we know aren't handled.

@@ -35,7 +35,7 @@ INCLUDE_VERSION_REGEXES = {
 }
 
 MAR_CHANNEL_ID_OVERRIDE_REGEXES = {
-    "beta": r"'^\d+\.\d+(\.\d+)?$$,firefox-mozilla-beta,firefox-mozilla-release'",
+    "beta": r"'^\d+\.\d+(\.\d+)?$$,datalus-mozilla-beta,datalus-mozilla-release'",
 }
 
 

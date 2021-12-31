@@ -32,7 +32,7 @@ def test_ipg_pathsplitting(ipg_obj):
     assert (
         ipg_obj.output_dir_path == os.path.abspath(os.path.dirname(__file__)) + "/files"
     )
-    assert ipg_obj.output_file_prefix == "raptor-tp6-amazon-firefox_powerlog"
+    assert ipg_obj.output_file_prefix == "raptor-tp6-amazon-datalus_powerlog"
 
 
 def test_ipg_get_output_file_path(ipg_obj):

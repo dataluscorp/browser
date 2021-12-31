@@ -9,7 +9,7 @@ import sys
 
 # OS Specifics
 ABS_WORK_DIR = os.path.join(os.getcwd(), "build")
-BINARY_PATH = os.path.join(ABS_WORK_DIR, "firefox", "firefox.exe")
+BINARY_PATH = os.path.join(ABS_WORK_DIR, "datalus", "datalus.exe")
 INSTALLER_PATH = os.path.join(ABS_WORK_DIR, "installer.zip")
 NODEJS_PATH = None
 if "MOZ_FETCHES_DIR" in os.environ:

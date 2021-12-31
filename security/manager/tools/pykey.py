@@ -16,10 +16,10 @@ default: a 2048-bit RSA key
 alternate: a different 2048-bit RSA key
 ev: a 2048-bit RSA key that, when combined with the right pycert
     specification, results in a certificate that is enabled for
-    extended validation in debug Firefox (see ExtendedValidation.cpp).
+    extended validation in debug Datalus (see ExtendedValidation.cpp).
 evRSA2040: a 2040-bit RSA key that, when combined with the right pycert
            specification, results in a certificate that is enabled for
-           extended validation in debug Firefox.
+           extended validation in debug Datalus.
 rsa2040: a 2040-bit RSA key
 rsa1024: a 1024-bit RSA key
 rsa1016: a 1016-bit RSA key

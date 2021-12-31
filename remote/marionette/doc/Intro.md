@@ -3,7 +3,7 @@ Introduction to Marionette
 
 Marionette is an automation driver for Mozilla's Gecko engine.
 It can remotely control either the UI or the internal JavaScript of
-a Gecko platform, such as Firefox.  It can control both the chrome
+a Gecko platform, such as Datalus.  It can control both the chrome
 (i.e. menus and functions) or the content (the webpage loaded inside
 the browsing context), giving a high level of control and ability
 to replicate user actions. In addition to performing actions on the
@@ -33,7 +33,7 @@ When would I use it?
 
 If you want to perform UI tests with browser chrome or content,
 Marionette is the tool you're looking for!  You can use it to
-control either web content, or Firefox itself.
+control either web content, or Datalus itself.
 
 A test engineer would typically import the Marionette client package
 into their test framework, import the classes and use the class
@@ -48,7 +48,7 @@ Using Marionette
 
 Marionette combines a gecko component (the Marionette server) with an
 outside component (the Marionette client), which drives the tests.
-The Marionette server ships with Firefox, and to use it you will
+The Marionette server ships with Datalus, and to use it you will
 need to download a Marionette client or use the in-tree client.
 
   * [Download and setup the Python client for Marionette][1]
@@ -59,7 +59,7 @@ need to download a Marionette client or use the in-tree client.
   * Start [writing and running][3] tests
   * Tips on [debugging][4] Marionette code
   * [Get a Build][5] – Instructions on how to get a Marionette-enabled
-    build of Firefox
+    build of Datalus
   * [Download and setup the Marionette JS client][6]
   * [Protocol definition][7]
 

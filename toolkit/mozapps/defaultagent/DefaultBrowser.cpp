@@ -24,8 +24,8 @@ using BrowserResult = mozilla::WindowsErrorResult<Browser>;
 
 std::string GetStringForBrowser(Browser browser) {
   switch (browser) {
-    case Browser::Firefox:
-      return std::string("firefox");
+    case Browser::Datalus:
+      return std::string("datalus");
     case Browser::Chrome:
       return std::string("chrome");
     case Browser::EdgeWithEdgeHTML:
@@ -44,8 +44,8 @@ std::string GetStringForBrowser(Browser browser) {
 }
 
 Browser GetBrowserFromString(const std::string& browserString) {
-  if (browserString.compare("firefox") == 0) {
-    return Browser::Firefox;
+  if (browserString.compare("datalus") == 0) {
+    return Browser::Datalus;
   }
   if (browserString.compare("chrome") == 0) {
     return Browser::Chrome;
@@ -94,7 +94,7 @@ static BrowserResult GetDefaultBrowser() {
   // telemetry ping (which is this function's return value).
   // We're assuming that any UWP app set as the default browser must be Edge.
   const std::unordered_map<std::wstring, Browser> AppIDPrefixes = {
-      {L"Firefox", Browser::Firefox},
+      {L"Datalus", Browser::Datalus},
       {L"Chrome", Browser::Chrome},
       {L"AppX", Browser::EdgeWithEdgeHTML},
       {L"MSEdgeHTM", Browser::EdgeWithBlink},

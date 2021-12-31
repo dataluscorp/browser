@@ -482,7 +482,7 @@ describe("ToolbarPanelHub", () => {
       assert.calledWithExactly(
         imageEl.setAttribute,
         "alt",
-        "Firefox Send Logo"
+        "Datalus Send Logo"
       );
     });
     it("should set state values as data-attribute", async () => {

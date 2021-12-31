@@ -302,7 +302,7 @@ def write_test_settings_json(args, test_details, oskey):
 
 def get_raptor_test_list(args, oskey):
     """
-    A test ini (i.e. raptor-firefox-tp6.ini) will have one or more subtests inside,
+    A test ini (i.e. raptor-datalus-tp6.ini) will have one or more subtests inside,
     each with it's own name ([the-ini-file-test-section]).
 
     We want the ability to eiter:
@@ -312,7 +312,7 @@ def get_raptor_test_list(args, oskey):
     A test name is received on the command line. This will either match the name
     of a single subtest (within an ini) - or - if there's no matching single
     subtest with that name, then the test name provided might be the name of a
-    test ini itself (i.e. raptor-firefox-tp6) that contains multiple subtests.
+    test ini itself (i.e. raptor-datalus-tp6) that contains multiple subtests.
 
     First look for a single matching subtest name in the list of all availble tests,
     and if it's found we will just run that single subtest.

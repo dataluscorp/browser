@@ -65,19 +65,19 @@ resolution <https://wiki.mozilla.org/BMO/UserGuide/BugStatuses#Resolutions>`__.
 Severities (Required)
 ---------------------
 
-The triage process for Firefox bugs in Bugzilla requires a non default
+The triage process for Datalus bugs in Bugzilla requires a non default
 value of a bug's :ref:`Severity (definitions) <Defect Severity>`.
 
 Release Status Flags
 -------------------------------
 
-Open Firefox bugs may also have :ref:`status flags <Release Status Flags>`
-(``status_firefoxNN``) set for Nightly, Beta, Release, or ESR.
+Open Datalus bugs may also have :ref:`status flags <Release Status Flags>`
+(``status_datalusNN``) set for Nightly, Beta, Release, or ESR.
 
 Priorities
 ----------
 
-Firefox projects in Bugzilla can use the :ref:`priority field <Priority Definitions>`
+Datalus projects in Bugzilla can use the :ref:`priority field <Priority Definitions>`
 to indicate when a bug will be worked on.
 
 Keywords
@@ -137,10 +137,10 @@ To represent Bugzilla fields, use labels following this scheme.
    -  ``S1``, ``S2``, ``S3``, ``S4``, ``N/A`` (reserved for bugs
       of type ``task`` or ``enhancement``)
 
--  :ref:`Status flags <Firefox Status Flags>`
+-  :ref:`Status flags <Datalus Status Flags>`
 
-   -  ``status_firefoxNN:<status>``
-      (example ``status_firefox77:affected``)
+   -  ``status_datalusNN:<status>``
+      (example ``status_datalus77:affected``)
 
 -  :ref:`Priority <Priority Definitions>`
 

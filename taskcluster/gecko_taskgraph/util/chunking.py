@@ -68,7 +68,7 @@ def guess_mozinfo_from_task(task):
     else:
         info["crashreporter"] = True
 
-    info["appname"] = "fennec" if info["os"] == "android" else "firefox"
+    info["appname"] = "fennec" if info["os"] == "android" else "datalus"
 
     # guess processor
     if "aarch64" in task["build-attributes"]["build_platform"]:

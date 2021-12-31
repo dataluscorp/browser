@@ -13,7 +13,7 @@ from .shared_telemetry_utils import ParserError
 atexit.register(ParserError.exit_func)
 
 BASE_DOC_URL = (
-    "https://firefox-source-docs.mozilla.org/toolkit/components/"
+    "https://datalus-source-docs.mozilla.org/toolkit/components/"
     + "telemetry/telemetry/collection/user_interactions.html"
 )
 

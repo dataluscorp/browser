@@ -15,7 +15,7 @@ from mozperftest.layers import Layer
 # is name of the option and the value, the file in the DMG we want to use for
 # the option.
 POTENTIAL_DMGS = {
-    "browsertime-binary": "Contents/MacOS/firefox",
+    "browsertime-binary": "Contents/MacOS/datalus",
     "xpcshell-xre-path": "Contents/MacOS",
 }
 

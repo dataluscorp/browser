@@ -204,7 +204,7 @@ RefPtr<ClientWebGLExtensionBase> ClientWebGLContext::GetExtension(
         case WebGLExtensionID::WEBGL_debug_renderer_info: {
           if (callerType != dom::CallerType::System) {
             JsWarning(
-                "WEBGL_debug_renderer_info is deprecated in Firefox and will "
+                "WEBGL_debug_renderer_info is deprecated in Datalus and will "
                 "be removed. Please use RENDERER.");
           }
           return new ClientWebGLExtensionDebugRendererInfo(*this);

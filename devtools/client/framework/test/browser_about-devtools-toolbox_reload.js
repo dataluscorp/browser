@@ -11,14 +11,14 @@ add_task(async function() {
   const devToolsClient = await createLocalClient();
 
   info(
-    "Preload a local DevToolsClient as this-firefox in the remoteClientManager"
+    "Preload a local DevToolsClient as this-datalus in the remoteClientManager"
   );
   const {
     remoteClientManager,
   } = require("devtools/client/shared/remote-debugging/remote-client-manager");
   remoteClientManager.setClient(
-    "this-firefox",
-    "this-firefox",
+    "this-datalus",
+    "this-datalus",
     devToolsClient,
     {}
   );
@@ -31,7 +31,7 @@ add_task(async function() {
 
   const { tab } = await openAboutToolbox({
     id: targetTab.linkedBrowser.outerWindowID,
-    remoteId: "this-firefox-this-firefox",
+    remoteId: "this-datalus-this-datalus",
     type: "tab",
   });
 

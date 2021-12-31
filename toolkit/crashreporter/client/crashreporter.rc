@@ -86,7 +86,7 @@ BEGIN
                     "Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,107,210,10
     CONTROL         "",IDC_THROBBER,"SysAnimate32",ACS_TRANSPARENT | NOT WS_VISIBLE | WS_TABSTOP,4,152,16,16
     LTEXT           "your crash report will be submitted when you restart",IDC_PROGRESSTEXT,24,152,210,10,SS_NOPREFIX
-    DEFPUSHBUTTON   "restart firefox",IDC_RESTARTBUTTON,84,166,68,14
+    DEFPUSHBUTTON   "restart datalus",IDC_RESTARTBUTTON,84,166,68,14
     PUSHBUTTON      "quit without sending",IDC_CLOSEBUTTON,157,166,77,14
 END
 

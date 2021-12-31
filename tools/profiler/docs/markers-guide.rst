@@ -1,7 +1,7 @@
 Markers
 =======
 
-Markers are packets of arbitrary data that are added to a profile by the Firefox code, usually to
+Markers are packets of arbitrary data that are added to a profile by the Datalus code, usually to
 indicate something important happening at a point in time, or during an interval of time.
 
 Each marker has a name, a category, some common optional information (timing, backtrace, etc.),
@@ -36,7 +36,7 @@ Note: Most marker-related identifiers are in the ``mozilla`` namespace, to be ad
     struct ExampleNumberMarker {
       // Unique marker type name.
       static constexpr Span<const char> MarkerTypeName() { return MakeStringSpan("number"); }
-      // Data specific to this marker type, serialized to JSON for profiler.firefox.com.
+      // Data specific to this marker type, serialized to JSON for profiler.datalus.com.
       static void StreamJSONMarkerData(SpliceableJSONWriter& aWriter, int aNumber) {
         aWriter.IntProperty("number", aNumber);
       }
@@ -81,7 +81,7 @@ instead:
     #include "GeckoProfiler.h"
 
 The above works from source files that end up in libxul, which is true for the majority
-of Firefox source code. But some files live outside of libxul, such as mfbt, in which
+of Datalus source code. But some files live outside of libxul, such as mfbt, in which
 case the advice is the same but the equivalent headers are from the Base Profiler instead:
 
 .. code-block:: c++
@@ -143,7 +143,7 @@ Name, category, options.
         it to the marker with ``MarkerStack::TakeBacktrace(std::move(stack))``.
     * `MarkerInnerWindowId <https://searchfox.org/mozilla-central/define?q=T_mozilla%3A%3AMarkerInnerWindowId>`_
         If you have access to an "inner window id", consider specifying it as an option, to
-        help profiler.firefox.com to classify them by tab.
+        help profiler.datalus.com to classify them by tab.
 
 Text Markers
 ^^^^^^^^^^^^
@@ -162,7 +162,7 @@ the marker name. Use the following macro:
 
 As useful as it is, using an expensive ``printf`` operation to generate a complex text
 comes with a variety of issues string. It can leak potentially sensitive information
-such as URLs can be leaked during the profile sharing step. profiler.firefox.com cannot
+such as URLs can be leaked during the profile sharing step. profiler.datalus.com cannot
 access the information programmatically. It won't get the formatting benefits of the
 built-in marker schema. Please consider using a custom marker type to separate and
 better present the data.
@@ -257,7 +257,7 @@ Marker Type Name
 ^^^^^^^^^^^^^^^^
 
 A marker type must have a unique name, it is used to keep track of the type of
-markers in the profiler storage, and to identify them uniquely on profiler.firefox.com.
+markers in the profiler storage, and to identify them uniquely on profiler.datalus.com.
 (It does not need to be the same as the ``struct``'s name.)
 
 This name is defined in a special static member function ``MarkerTypeName``:
@@ -282,7 +282,7 @@ These are defined in a special static member function ``StreamJSONMarkerData``.
 
 The first function parameters is always ``SpliceableJSONWriter& aWriter``,
 it will be used to stream the data as JSON, to later be read by
-profiler.firefox.com.
+profiler.datalus.com.
 
 .. code-block:: c++
 
@@ -330,7 +330,7 @@ types like arrays or objects are not supported by the profiler.)
 As a special case, ``TimeStamps`` must be streamed using ``aWriter.TimeProperty(timestamp)``.
 
 The property names will be used to identify where each piece of data is stored and
-how it should be displayed on profiler.firefox.com (see next section).
+how it should be displayed on profiler.datalus.com (see next section).
 
 Here's how the above functions parameters could be streamed:
 
@@ -348,12 +348,12 @@ Here's how the above functions parameters could be streamed:
 Marker Type Display Schema
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now that we have defined how to stream type-specific data (from Firefox to
-profiler.firefox.com), we need to describe where and how this data will be
-displayed on profiler.firefox.com.
+Now that we have defined how to stream type-specific data (from Datalus to
+profiler.datalus.com), we need to describe where and how this data will be
+displayed on profiler.datalus.com.
 
 The static member function ``MarkerTypeDisplay`` returns an opaque ``MarkerSchema``
-object, which will be forwarded to profiler.firefox.com.
+object, which will be forwarded to profiler.datalus.com.
 
 .. code-block:: c++
 
@@ -371,7 +371,7 @@ a local type alias:
 First, we construct the ``MarkerSchema`` object to be returned at the end.
 
 One or more constructor arguments determine where this marker will be displayed in
-the profiler.firefox.com UI. See the `MarkerSchema::Location enumeration for the
+the profiler.datalus.com UI. See the `MarkerSchema::Location enumeration for the
 full list <https://searchfox.org/mozilla-central/define?q=T_mozilla%3A%3AMarkerSchema%3A%3ALocation>`_.
 
 Here is the most common set of locations, showing markers of that type in both the
@@ -399,15 +399,15 @@ For example, here's how to set the Marker Chart label to show the marker name an
     // …
         schema.SetChartLabel("{marker.name} – {marker.data.myBytes}");
 
-profiler.firefox.com will apply the label with the data in a consistent manner. For
+profiler.datalus.com will apply the label with the data in a consistent manner. For
 example, with this label definition, it could display marker information like the
-following in the Firefox Profiler's Marker Chart:
+following in the Datalus Profiler's Marker Chart:
 
  * "Marker Name – 10B"
  * "Marker Name – 25.204KB"
  * "Marker Name – 512.54MB"
 
-For implementation details on this processing, see `src/profiler-logic/marker-schema.js <https://github.com/firefox-devtools/profiler/blob/main/src/profile-logic/marker-schema.js>`_
+For implementation details on this processing, see `src/profiler-logic/marker-schema.js <https://github.com/datalus-devtools/profiler/blob/main/src/profile-logic/marker-schema.js>`_
 in the profiler's front-end.
 
 Next, define the main display of marker data, which will appear in the Marker

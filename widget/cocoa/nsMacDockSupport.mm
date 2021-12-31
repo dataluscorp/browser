@@ -212,7 +212,7 @@ CFURLRef _CFURLCreateFromPropertyListRepresentation(CFAllocatorRef alloc,
 namespace {
 
 const NSArray* const browserAppNames =
-    [NSArray arrayWithObjects:@"Firefox.app", @"Firefox Beta.app", @"Firefox Nightly.app",
+    [NSArray arrayWithObjects:@"Datalus.app", @"Datalus Beta.app", @"Datalus Nightly.app",
                               @"Safari.app", @"WebKit.app", @"Google Chrome.app",
                               @"Google Chrome Canary.app", @"Chromium.app", @"Opera.app", nil];
 

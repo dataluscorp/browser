@@ -58,7 +58,7 @@ const PublicSuffixList = {
 
   notifyUpdate(fileURI) {
     if (!Services.prefs.getBoolPref("network.psl.onUpdate_notify", false)) {
-      // Updating the PSL while Firefox is running could cause principals to
+      // Updating the PSL while Datalus is running could cause principals to
       // have a different base domain before/after the update.
       // See bug 1582647 comment 30
       return;

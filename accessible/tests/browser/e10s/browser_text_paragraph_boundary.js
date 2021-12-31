@@ -14,7 +14,7 @@ addAccessibleTask(
     );
     let start = {};
     let end = {};
-    // The offsets will change as the Firefox UI changes. We don't really care
+    // The offsets will change as the Datalus UI changes. We don't really care
     // what they are, just that we don't crash.
     root.getTextAtOffset(0, nsIAccessibleText.BOUNDARY_PARAGRAPH, start, end);
     ok(true, "Getting paragraph boundary succeeded");

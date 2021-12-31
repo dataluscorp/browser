@@ -13,7 +13,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description="AreWeSlimYet",
-    long_description="A memory testing framework for Firefox.",
+    long_description="A memory testing framework for Datalus.",
     author="Mozilla Automation and Testing Team",
     author_email="tools@lists.mozilla.org",
     license="MPL 1.1/GPL 2.0/LGPL 2.1",

@@ -168,7 +168,7 @@ locales = [
 [[filters]]
     path = [
         "{l}browser/defines.inc",
-        "{l}browser/firefox-l10n.js",
+        "{l}browser/datalus-l10n.js",
     ]
     action = "ignore"
 

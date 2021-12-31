@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Documentation: https://firefox-source-docs.mozilla.org/taskcluster/partner-repacks.html
+# Documentation: https://datalus-source-docs.mozilla.org/taskcluster/partner-repacks.html
 
 import sys
 import os
@@ -31,18 +31,18 @@ PARTNERS_DIR = path.join("..", "..", "workspace", "partners")
 # No platform in this path because script only supports repacking a single platform at once
 DEFAULT_OUTPUT_DIR = "%(partner)s/%(partner_distro)s/%(locale)s"
 TASKCLUSTER_ARTIFACTS = (
-    os.environ.get("TASKCLUSTER_ROOT_URL", "https://firefox-ci-tc.services.mozilla.com")
+    os.environ.get("TASKCLUSTER_ROOT_URL", "https://datalus-ci-tc.services.mozilla.com")
     + "/api/queue/v1/task/{taskId}/artifacts"
 )
 UPSTREAM_ENUS_PATH = "public/build/{filename}"
 UPSTREAM_L10N_PATH = "public/build/{locale}/{filename}"
 
-WINDOWS_DEST_DIR = "firefox"
+WINDOWS_DEST_DIR = "datalus"
 MAC_DEST_DIR = "{}/Contents/Resources"
-LINUX_DEST_DIR = "firefox"
+LINUX_DEST_DIR = "datalus"
 
 BOUNCER_PRODUCT_TEMPLATE = (
-    "partner-firefox-{release_type}-{partner}-{partner_distro}-latest"
+    "partner-datalus-{release_type}-{partner}-{partner_distro}-latest"
 )
 
 
@@ -553,7 +553,7 @@ class RepackMac(RepackBase):
         self.appName = self.getAppName()
 
     def getAppName(self):
-        # Cope with Firefox.app vs Firefox Nightly.app by returning the first line that
+        # Cope with Datalus.app vs Datalus Nightly.app by returning the first line that
         # ends with .app
         t = tarfile.open(self.build.rsplit(".", 1)[0])
         for name in t.getnames():
@@ -568,7 +568,7 @@ class RepackMac(RepackBase):
             tar_flags = "rf"
         else:
             tar_flags = "rvf"
-        # the final arg is quoted because it may contain a space, eg Firefox Nightly.app/....
+        # the final arg is quoted because it may contain a space, eg Datalus Nightly.app/....
         tar_cmd = "tar %s %s '%s'" % (
             tar_flags,
             self.uncompressed_build,
@@ -625,8 +625,8 @@ class RepackWin(RepackBase):
                 l = l.replace("%BOUNCER_PRODUCT%", self.repack_info["bouncer_product"])
                 partner_ini += l
             z.writestr("partner.ini", partner_ini)
-            # we need an empty firefox directory to use the repackage code
-            d = zipfile.ZipInfo("firefox/")
+            # we need an empty datalus directory to use the repackage code
+            d = zipfile.ZipInfo("datalus/")
             # https://stackoverflow.com/a/6297838, zip's representation of drwxr-xr-x permissions
             # is 040755 << 16L, bitwise OR with 0x10 for the MS-DOS directory flag
             d.external_attr = 1106051088

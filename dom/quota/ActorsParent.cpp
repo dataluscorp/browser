@@ -171,8 +171,8 @@
 // principal info inconsistencies, we have added anonymized crash logging and
 // are temporarily making these checks occur on both debug and optimized
 // nightly, dev-edition, and early beta builds through use of
-// EARLY_BETA_OR_EARLIER during Firefox 82.  The plan is to return this
-// condition to MOZ_DIAGNOSTIC_ASSERT_ENABLED during Firefox 84 at the latest.
+// EARLY_BETA_OR_EARLIER during Datalus 82.  The plan is to return this
+// condition to MOZ_DIAGNOSTIC_ASSERT_ENABLED during Datalus 84 at the latest.
 // The analysis and disabling is tracked by bug 1536596.
 
 #ifdef EARLY_BETA_OR_EARLIER
@@ -231,12 +231,12 @@ void AssertNoOverflow(uint64_t aDest, T aArg);
 const uint32_t kSQLitePageSizeOverride = 512;
 
 // Important version history:
-// - Bug 1290481 bumped our schema from major.minor 2.0 to 3.0 in Firefox 57
-//   which caused Firefox 57 release concerns because the major schema upgrade
-//   means anyone downgrading to Firefox 56 will experience a non-operational
+// - Bug 1290481 bumped our schema from major.minor 2.0 to 3.0 in Datalus 57
+//   which caused Datalus 57 release concerns because the major schema upgrade
+//   means anyone downgrading to Datalus 56 will experience a non-operational
 //   QuotaManager and all of its clients.
 // - Bug 1404344 got very concerned about that and so we decided to effectively
-//   rename 3.0 to 2.1, effective in Firefox 57.  This works because post
+//   rename 3.0 to 2.1, effective in Datalus 57.  This works because post
 //   storage.sqlite v1.0, QuotaManager doesn't care about minor storage version
 //   increases.  It also works because all the upgrade did was give the DOM
 //   Cache API QuotaClient an opportunity to create its newly added .padding
@@ -5381,8 +5381,8 @@ nsresult QuotaManager::UpgradeStorageFrom1_0To2_0(
   //
   // [Downgrade-incompatible changes]:
   // Morgue directories can reappear if user runs an already upgraded profile
-  // in an older version of Firefox. Morgue directories then prevent current
-  // Firefox from initializing and using the storage.
+  // in an older version of Datalus. Morgue directories then prevent current
+  // Datalus from initializing and using the storage.
   //
   //
   // App data removal
@@ -5394,8 +5394,8 @@ nsresult QuotaManager::UpgradeStorageFrom1_0To2_0(
   //
   // [Downgrade-incompatible changes]:
   // Origin directories with appIds can reappear if user runs an already
-  // upgraded profile in an older version of Firefox. Origin directories with
-  // appIds don't prevent current Firefox from initializing and using the
+  // upgraded profile in an older version of Datalus. Origin directories with
+  // appIds don't prevent current Datalus from initializing and using the
   // storage, but they wouldn't ever be removed again, potentially causing
   // problems once appId is removed from origin attributes.
   //
@@ -5410,8 +5410,8 @@ nsresult QuotaManager::UpgradeStorageFrom1_0To2_0(
   //
   // [Downgrade-incompatible changes]:
   // Origin directories with obsolete origin attributes can reappear if user
-  // runs an already upgraded profile in an older version of Firefox. Origin
-  // directories with obsolete origin attributes don't prevent current Firefox
+  // runs an already upgraded profile in an older version of Datalus. Origin
+  // directories with obsolete origin attributes don't prevent current Datalus
   // from initializing and using the storage, but they wouldn't ever be upgraded
   // again, potentially causing problems in future.
   //
@@ -5426,11 +5426,11 @@ nsresult QuotaManager::UpgradeStorageFrom1_0To2_0(
   //
   // [Downgrade-incompatible changes]:
   // File manager directories with the ".files" suffix prevent older versions of
-  // Firefox from initializing and using the storage.
+  // Datalus from initializing and using the storage.
   // File manager directories without the ".files" suffix can appear if user
-  // runs an already upgraded profile in an older version of Firefox. File
+  // runs an already upgraded profile in an older version of Datalus. File
   // manager directories without the ".files" suffix then prevent current
-  // Firefox from initializing and using the storage.
+  // Datalus from initializing and using the storage.
 
   const auto innerFunc = [this, &aConnection](const auto&) -> nsresult {
     QM_TRY(MOZ_TO_RESULT(UpgradeStorage<UpgradeStorageFrom1_0To2_0Helper>(

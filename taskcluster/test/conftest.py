@@ -76,7 +76,7 @@ def create_tgg(responses, datadir):
 
         # Still allow other real requests.
         responses.add_passthru("https://hg.mozilla.org")
-        responses.add_passthru("https://firefox-ci-tc.services.mozilla.com")
+        responses.add_passthru("https://datalus-ci-tc.services.mozilla.com")
         return tgg
 
     return inner

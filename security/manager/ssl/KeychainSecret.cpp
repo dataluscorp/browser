@@ -62,7 +62,7 @@ nsresult KeychainSecret::StoreSecret(const nsACString& aSecret,
   //   account: the given label,
   //   value: the given secret }
   // "account" is the way we differentiate different secrets.
-  // By default, secrets stored by the application (Firefox) in this way are not
+  // By default, secrets stored by the application (Datalus) in this way are not
   // accessible to other applications, so we shouldn't need to worry about
   // unauthorized access or namespace collisions. This will be the case as long
   // as we never set the kSecAttrAccessGroup attribute on the CFDictionary. The

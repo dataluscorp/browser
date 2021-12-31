@@ -30,7 +30,7 @@ const {
 loader.lazyRequireGetter(
   this,
   "openRequestInTab",
-  "devtools/client/netmonitor/src/utils/firefox/open-request-in-tab",
+  "devtools/client/netmonitor/src/utils/datalus/open-request-in-tab",
   true
 );
 loader.lazyGetter(this, "setImageTooltip", function() {

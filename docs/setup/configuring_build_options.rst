@@ -5,7 +5,7 @@ Configuring Build Options
 | This page is an import from MDN and the contents might be outdated |
 +--------------------------------------------------------------------+
 
-This document details how to configure Firefox builds.
+This document details how to configure Datalus builds.
 Most of the time a ``mozconfig`` file is not required. The default
 options are the most well-supported, so it is preferable to add as few
 options as possible. Please read the following directions carefully
@@ -44,7 +44,7 @@ Setting the ``mozconfig`` path:
 
 .. code:: bash
 
-   export MOZCONFIG=$HOME/mozilla/mozconfig-firefox
+   export MOZCONFIG=$HOME/mozilla/mozconfig-datalus
 
 .. note::
 
@@ -71,7 +71,7 @@ Building with an objdir
 
 This means that the source code and object files are not intermingled in
 your directory system and you can build multiple applications (e.g.,
-Firefox and Thunderbird) from the same source tree. If you do not
+Datalus and Thunderbird) from the same source tree. If you do not
 specify a ``MOZ_OBJDIR``, it will be automatically set to
 ``@TOPSRCDIR@/obj-@CONFIG_GUESS@``.
 
@@ -152,11 +152,11 @@ Choose an application
 ~~~~~~~~~~~~~~~~~~~~~
 
 The ``--enable-application=application`` flag is used to select an
-application to build. Firefox is the default.
+application to build. Datalus is the default.
 
 Choose one of the following options to add to your ``mozconfig`` file:
 
-Browser (Firefox)
+Browser (Datalus)
    .. code::
 
       ac_add_options --enable-application=browser
@@ -216,7 +216,7 @@ C / C++ builds by caching compilation results. Unlike
 supports `distributed compilation
 <https://github.com/mozilla/sccache/blob/master/docs/DistributedQuickstart.md>`__.
 
-In order to enable ``sccache`` for Firefox builds, you can use
+In order to enable ``sccache`` for Datalus builds, you can use
 ``ac_add_options --with-ccache=sccache``.
 
 Optimization
@@ -270,7 +270,7 @@ Extensions
    with all apps, for example:
 
    - ``cookie`` is not compatible with thunderbird
-   - ``typeaheadfind`` is not compatible with any toolkit app (Firefox,
+   - ``typeaheadfind`` is not compatible with any toolkit app (Datalus,
       Thunderbird)
 
    Unless you know which extensions are compatible with which apps, do
@@ -305,7 +305,7 @@ Other Options
    manually clobber and exiting.
 
 ``ac_add_options --enable-crashreporter``
-   This enables the machinery that allows Firefox to write out a
+   This enables the machinery that allows Datalus to write out a
    `minidump <https://docs.microsoft.com/en-us/windows/desktop/Debug/minidump-files>`__
    files when crashing as well as the tools to process and submit crash
    reports to Mozilla. After enabling the crash reporter in your local
@@ -333,9 +333,9 @@ directory within each repository.
    needed. The production builds aren't really appropriate for local
    builds."
 
--  .. rubric:: Firefox, `Debugging Build (macOS
+-  .. rubric:: Datalus, `Debugging Build (macOS
       64bits) <http://hg.mozilla.org/mozilla-central/file/tip/browser/config/mozconfigs/macosx64/debug>`__
-      :name: Firefox.2C_Default_Release_Configuration
+      :name: Datalus.2C_Default_Release_Configuration
 
 Building multiple applications from the same source tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -346,7 +346,7 @@ each application.
 
 You need to create multiple ``mozconfig`` files.
 
-As an example, the following steps can be used to build Firefox and
+As an example, the following steps can be used to build Datalus and
 Thunderbird. You should first create three ``mozconfig`` files.
 
 ``mozconfig-common``:
@@ -357,15 +357,15 @@ Thunderbird. You should first create three ``mozconfig`` files.
    mk_add_options MOZ_PARALLEL_BUILD=4
    ac_add_options --enable-optimize --disable-debug
 
-``mozconfig-firefox``:
+``mozconfig-datalus``:
 
 .. code::
 
    # include the common mozconfig
    . ./mozconfig-common
 
-   # Build Firefox
-   mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-firefox
+   # Build Datalus
+   mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-datalus
    ac_add_options --enable-application=browser
 
 ``mozconfig-thunderbird``:
@@ -379,11 +379,11 @@ Thunderbird. You should first create three ``mozconfig`` files.
    mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/obj-thunderbird
    ac_add_options --enable-application=comm/mail
 
-To build Firefox, run the following commands:
+To build Datalus, run the following commands:
 
 .. code::
 
-   export MOZCONFIG=/path/to/mozilla/mozconfig-firefox
+   export MOZCONFIG=/path/to/mozilla/mozconfig-datalus
    ./mach build
 
 To build Thunderbird, run the following commands:

@@ -19,7 +19,7 @@ a11y:
       - accessibility@mozilla.com
       - mreschenberg@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -38,7 +38,7 @@ a11y:
       - accessibility@mozilla.com
       - mreschenberg@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -56,7 +56,7 @@ a11y:
       - accessibility@mozilla.com
       - mreschenberg@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -76,7 +76,7 @@ a11y:
       - accessibility@mozilla.com
       - jteh@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -95,7 +95,7 @@ a11y:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -115,7 +115,7 @@ a11y:
       - eisaacson@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -135,7 +135,7 @@ browser.engagement:
       - rweiss@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -153,7 +153,7 @@ browser.engagement:
       - rweiss@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -170,7 +170,7 @@ browser.engagement:
       - rweiss@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -188,7 +188,7 @@ browser.engagement:
       - rweiss@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -199,7 +199,7 @@ browser.engagement:
     description: >
       The count of maximum number of pinned tabs open during a subsession. This
       includes private windows and the ones opened when starting the browser.
-      Starting Firefox 85 this includes number of restored pinned tabs at
+      Starting Datalus 85 this includes number of restored pinned tabs at
       startup.
     expires: never
     kind: uint
@@ -208,7 +208,7 @@ browser.engagement:
       - aoprea@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -226,7 +226,7 @@ browser.engagement:
       - aoprea@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -242,7 +242,7 @@ browser.engagement:
       - tkikuchi@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -257,7 +257,7 @@ browser.engagement:
       - tkikuchi@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -277,7 +277,7 @@ browser.engagement:
       - loines@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -299,7 +299,7 @@ browser.engagement:
       - loines@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -321,7 +321,7 @@ browser.engagement:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -341,7 +341,7 @@ browser.engagement:
       - rweiss@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -362,7 +362,7 @@ browser.engagement:
       - loines@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -385,7 +385,7 @@ browser.engagement:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     operating_systems:
@@ -404,7 +404,7 @@ browser.engagement:
       - jaws@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -423,7 +423,7 @@ browser.engagement:
       - jaws@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -447,7 +447,7 @@ browser.engagement:
       - gijs@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -463,7 +463,7 @@ browser.engagement:
       - padenot@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -479,7 +479,7 @@ browser.engagement:
       - padenot@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -499,7 +499,7 @@ browser.engagement.navigation:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -518,7 +518,7 @@ browser.engagement.navigation:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -535,7 +535,7 @@ browser.engagement.navigation:
       - htwyford@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -552,7 +552,7 @@ browser.engagement.navigation:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -570,7 +570,7 @@ browser.engagement.navigation:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -588,7 +588,7 @@ browser.engagement.navigation:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -606,7 +606,7 @@ browser.engagement.navigation:
       - bcolloran@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -623,7 +623,7 @@ browser.engagement.navigation:
       - mkaply@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -657,7 +657,7 @@ browser.startup:
       - perf-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -679,7 +679,7 @@ browser.startup:
       - perf-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -696,7 +696,7 @@ browser.usage:
       - tom@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all'
@@ -712,7 +712,7 @@ browser.usage:
       - bsmedberg@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -724,7 +724,7 @@ browser.ui:
       - 1620358
     description: >
       The widgets in the toolbars.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: boolean
     keyed: true
@@ -733,7 +733,7 @@ browser.ui:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -742,7 +742,7 @@ browser.ui:
       - 1620358
     description: >
       Records when widgets are added, removed or moved in the UI.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -751,7 +751,7 @@ browser.ui:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -761,7 +761,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with keyboard shortcuts.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -770,7 +770,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -779,7 +779,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the menu bar.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -788,7 +788,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -797,7 +797,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the tab bar.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -806,7 +806,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -815,7 +815,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the nav bar.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -824,7 +824,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -833,7 +833,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the bookmarks bar.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -842,7 +842,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -851,7 +851,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the app menu.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -860,7 +860,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -869,7 +869,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the tab context menu.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -878,7 +878,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -887,7 +887,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the content context menu.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -896,7 +896,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -905,7 +905,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with items in the overflow menu.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -914,7 +914,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -924,7 +924,7 @@ browser.ui.interaction:
     description: >
       Records a count of interactions with items in the pinned area of the
       overflow menu.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -933,7 +933,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -942,7 +942,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with page action items in the url bar.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -951,7 +951,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -960,7 +960,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records a count of interactions with page action items in the panel.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -969,7 +969,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -978,7 +978,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records the items interacted with in the Home section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -987,7 +987,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -996,7 +996,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records the items interacted with in the General section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1005,7 +1005,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1014,7 +1014,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records the items interacted with in the Privacy section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1023,7 +1023,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1032,7 +1032,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records the items interacted with in the Search section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1041,7 +1041,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1051,7 +1051,7 @@ browser.ui.interaction:
     description: >
       Records the items interacted with in the Search results section of
       preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1060,7 +1060,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1069,7 +1069,7 @@ browser.ui.interaction:
       - 1620358
     description: >
       Records the items interacted with in the Sync section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1078,7 +1078,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1088,7 +1088,7 @@ browser.ui.interaction:
     description: >
       Records the items interacted with in the Containers section of
       preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1097,7 +1097,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1108,7 +1108,7 @@ browser.ui.interaction:
     description: >
       Records the items interacted with in the Experimental section of
       preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1117,7 +1117,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1127,7 +1127,7 @@ browser.ui.interaction:
     description: >
       Records the items interacted with in the More From Mozilla section of
       preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1136,7 +1136,7 @@ browser.ui.interaction:
       - pdahiya@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1146,7 +1146,7 @@ browser.ui.interaction:
       - 1651986
     description: >
       Records the items interacted with in any other section of preferences.
-      See https://firefox-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
+      See https://datalus-source-docs.mozilla.org/browser/BrowserUsageTelemetry.html
     expires: never
     kind: uint
     keyed: true
@@ -1155,7 +1155,7 @@ browser.ui.interaction:
       - dtownsend@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1207,7 +1207,7 @@ extensions.updates:
     notification_emails:
       - addons-dev-internal@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1231,7 +1231,7 @@ security:
       - jjones@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1248,7 +1248,7 @@ security:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   https_only_mode_enabled_pbm:
@@ -1267,7 +1267,7 @@ security:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   global_privacy_control_enabled:
@@ -1282,7 +1282,7 @@ security:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1300,7 +1300,7 @@ pwmgr:
       - passwords-dev@mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -1317,7 +1317,7 @@ contentblocking:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1333,7 +1333,7 @@ contentblocking:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1349,7 +1349,7 @@ contentblocking:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1368,7 +1368,7 @@ contentblocking:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -1386,7 +1386,7 @@ privacy:
       - pbz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -1406,7 +1406,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_sanitize_sanitizeOnShutdown:
@@ -1424,7 +1424,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_cookies:
@@ -1442,7 +1442,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_history:
@@ -1460,7 +1460,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_formdata:
@@ -1478,7 +1478,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_downloads:
@@ -1496,7 +1496,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_cache:
@@ -1514,7 +1514,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_sessions:
@@ -1532,7 +1532,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_offlineApps:
@@ -1550,7 +1550,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_siteSettings:
@@ -1568,7 +1568,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   privacy_clearOnShutdown_openWindows:
@@ -1586,7 +1586,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   session_permission_exceptions:
@@ -1604,7 +1604,7 @@ datasanitization:
       - seceng-telemetry@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -1621,7 +1621,7 @@ downloads:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   file_opened:
@@ -1636,7 +1636,7 @@ downloads:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1654,7 +1654,7 @@ sandbox:
       - bowen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1673,7 +1673,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1688,7 +1688,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1703,7 +1703,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1718,7 +1718,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1733,7 +1733,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1748,7 +1748,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1763,7 +1763,7 @@ findbar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -1783,7 +1783,7 @@ sidebar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   search:
@@ -1799,7 +1799,7 @@ sidebar:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -1816,7 +1816,7 @@ os.environment:
       - tkikuchi@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
     operating_systems:
@@ -1838,7 +1838,7 @@ os.environment:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'thunderbird'
     record_in_processes:
       - main
@@ -1850,7 +1850,7 @@ os.environment:
       - 1685213
       - 1725298
     description: >
-      Records how Firefox was started on Windows.
+      Records how Datalus was started on Windows.
       Currently will be one of "Desktop", "StartMenu" (including pins),
       "Taskbar", "OtherShortcut", or "Other"
     expires: "100"
@@ -1860,7 +1860,7 @@ os.environment:
       - shong@mozilla.com
     release_channel_collection: opt-out
     products:
-      - firefox
+      - datalus
     record_in_processes:
       - main
     operating_systems:
@@ -1877,7 +1877,7 @@ os.environment:
       - shong@mozilla.com
     release_channel_collection: opt-out
     products:
-      - firefox
+      - datalus
     record_in_processes:
       - main
     operating_systems:
@@ -1895,7 +1895,7 @@ os.environment:
       - shong@mozilla.com
     release_channel_collection: opt-out
     products:
-      - firefox
+      - datalus
     record_in_processes:
       - main
     operating_systems:
@@ -1916,7 +1916,7 @@ pictureinpicture:
       - mconley@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - content
   closed_method:
@@ -1934,7 +1934,7 @@ pictureinpicture:
       - mconley@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   saw_toggle:
@@ -1949,7 +1949,7 @@ pictureinpicture:
       - mconley@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - content
   most_concurrent_players:
@@ -1964,7 +1964,7 @@ pictureinpicture:
       - mconley@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -1981,7 +1981,7 @@ preferences:
       - bsmedberg@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -1997,7 +1997,7 @@ preferences:
       - kwright@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   read_user_js:
@@ -2011,7 +2011,7 @@ preferences:
       - bsmedberg@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2029,7 +2029,7 @@ preferences:
       - chsiang@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2046,7 +2046,7 @@ preferences:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2065,7 +2065,7 @@ preferences:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2084,7 +2084,7 @@ webrtc.video:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -2102,7 +2102,7 @@ webrtc.video:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -2128,7 +2128,7 @@ webrtc.sdp:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -2149,7 +2149,7 @@ mathml:
       - dev-tech-layout@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -2170,7 +2170,7 @@ mediarecorder:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2192,7 +2192,7 @@ media:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -2209,7 +2209,7 @@ media:
       - nohlmeier@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -2226,7 +2226,7 @@ media:
       - bvandyk@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -2243,7 +2243,7 @@ media:
       - bvandyk@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -2261,7 +2261,7 @@ media:
       - bvandyk@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -2280,7 +2280,7 @@ dom.contentprocess:
       - spohl@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2296,7 +2296,7 @@ dom.contentprocess:
       - alissy@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   os_priority_lowered:
@@ -2312,7 +2312,7 @@ dom.contentprocess:
       - gsvelto@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2330,7 +2330,7 @@ dom.contentprocess:
       - gsvelto@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2347,7 +2347,7 @@ dom.contentprocess:
       - gsvelto@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2362,7 +2362,7 @@ dom.contentprocess:
       - nlayzell@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   # Note that the unsubmitted notification is currently only enabled on Nightly builds
@@ -2377,7 +2377,7 @@ dom.contentprocess:
     notification_emails:
       - nlayzell@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -2395,7 +2395,7 @@ dom.parentprocess:
       - ehsan+telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2412,7 +2412,7 @@ devtools.toolbar.eyedropper:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2431,7 +2431,7 @@ devtools.copy.unique.css.selector:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2450,7 +2450,7 @@ devtools.copy.full.css.selector:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2468,7 +2468,7 @@ devtools.copy.xpath:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2485,7 +2485,7 @@ devtools.layout.flexboxhighlighter:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2502,7 +2502,7 @@ devtools.markup.flexboxhighlighter:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2519,7 +2519,7 @@ devtools.rules.flexboxhighlighter:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2536,7 +2536,7 @@ devtools.markup.gridinspector:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2553,7 +2553,7 @@ devtools.rules.gridinspector:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2570,7 +2570,7 @@ devtools.grid.gridinspector:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2587,7 +2587,7 @@ devtools.grid.showGridAreasOverlay:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2604,7 +2604,7 @@ devtools.grid.showGridLineNumbers:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2621,7 +2621,7 @@ devtools.grid.showInfiniteLines:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2643,7 +2643,7 @@ devtools.inspector:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2661,7 +2661,7 @@ devtools.inspector:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2680,7 +2680,7 @@ devtools.shadowdom:
       - jdescottes@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2698,7 +2698,7 @@ devtools.shadowdom:
       - jdescottes@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2717,7 +2717,7 @@ devtools.shadowdom:
       - jdescottes@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2735,7 +2735,7 @@ devtools:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2753,7 +2753,7 @@ devtools.tooltip:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2770,7 +2770,7 @@ devtools.responsive:
       - dev-developer-tools@lists.mozilla.org
       - jryans@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2787,7 +2787,7 @@ devtools.responsive:
       - dev-developer-tools@lists.mozilla.org
       - jryans@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -2812,7 +2812,7 @@ devtools.tool:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2833,7 +2833,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2852,7 +2852,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2872,7 +2872,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2894,7 +2894,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2914,7 +2914,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2933,7 +2933,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2954,7 +2954,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2975,7 +2975,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -2996,7 +2996,7 @@ devtools.accessibility:
       - accessibility@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3014,7 +3014,7 @@ devtools.application:
       - jdescottes@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3035,7 +3035,7 @@ devtools.toolbox:
       - daisuke@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3053,7 +3053,7 @@ devtools.changesview:
       - mbalfanz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3070,7 +3070,7 @@ devtools.markup.scrollable.badge:
       - dev-developer-tools@lists.mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3091,7 +3091,7 @@ dom.event:
       - mnakano@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -3111,7 +3111,7 @@ dom.event:
       - mnakano@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -3129,7 +3129,7 @@ navigator.storage:
       - ttung@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3147,7 +3147,7 @@ navigator.storage:
       - ttung@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3168,7 +3168,7 @@ mozstorage:
       - mak@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -3187,7 +3187,7 @@ telemetry:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -3207,7 +3207,7 @@ telemetry:
       - chutten@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3227,7 +3227,7 @@ telemetry:
       - chutten@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all'
@@ -3244,7 +3244,7 @@ telemetry:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -3262,7 +3262,7 @@ telemetry:
       - chutten@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3282,7 +3282,7 @@ telemetry:
       - brizental@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -3301,7 +3301,7 @@ telemetry.discarded:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all_childs'
@@ -3316,7 +3316,7 @@ telemetry.discarded:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all_childs'
@@ -3331,7 +3331,7 @@ telemetry.discarded:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all_childs'
@@ -3346,7 +3346,7 @@ telemetry.discarded:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all_childs'
@@ -3361,7 +3361,7 @@ telemetry.discarded:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'all_childs'
@@ -3379,7 +3379,7 @@ normandy:
       - product-delivery@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -3401,7 +3401,7 @@ gfx.advanced.layers:
       - gfx-telemetry-alerts@mozilla.com
       - rhunt@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3425,7 +3425,7 @@ gfx.omtp:
       - perf-telemetry-alerts@mozilla.com
       - barret@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -3445,7 +3445,7 @@ gfx.canvas.remote:
       - bowen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'gpu'
 
@@ -3463,7 +3463,7 @@ gfx.canvas.remote:
       - bowen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'gpu'
 
@@ -3481,7 +3481,7 @@ gfx.canvas.remote:
       - bowen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'gpu'
 
@@ -3502,7 +3502,7 @@ gfx.hdr:
       - gfx-telemetry-alerts@mozilla.com
       - jmuizelaaar@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -3764,7 +3764,7 @@ gfx:
       - gfx-telemetry-alerts@mozilla.com
       - jmuizelaar@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out
@@ -3780,7 +3780,7 @@ gfx:
       - aosmond@mozilla.com
       - mkaply@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out
@@ -3799,7 +3799,7 @@ formautofill:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3817,7 +3817,7 @@ formautofill.addresses:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3833,7 +3833,7 @@ formautofill.addresses:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3851,7 +3851,7 @@ formautofill.addresses:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3869,7 +3869,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3885,7 +3885,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3903,7 +3903,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -3920,7 +3920,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
   detected_sections_count:
@@ -3937,7 +3937,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
   submitted_sections_count:
@@ -3953,7 +3953,7 @@ formautofill.creditCards:
       - chsiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -3972,7 +3972,7 @@ notificationbar:
       - nlayzell@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -3989,7 +3989,7 @@ notificationbar:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4006,7 +4006,7 @@ notificationbar:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4017,7 +4017,7 @@ screenshots:
       - 1412411
     description: >
       The count of new screenshots created, then downloaded per session
-      via the Firefox Screenshots feature. Excludes failed attempts due
+      via the Datalus Screenshots feature. Excludes failed attempts due
       to any error.
     expires: never
     kind: uint
@@ -4027,7 +4027,7 @@ screenshots:
       - clouserw@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4037,7 +4037,7 @@ screenshots:
       - 1412411
     description: >
       The count of new screenshots created, then uploaded per session
-      via the Firefox Screenshots feature. Excludes attempts to create
+      via the Datalus Screenshots feature. Excludes attempts to create
       and upload the screenshot that may have failed.
     expires: never
     kind: uint
@@ -4047,7 +4047,7 @@ screenshots:
       - clouserw@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4057,7 +4057,7 @@ screenshots:
       - 1412411
     description: >
       The count of new screenshots created, then copied directly to the
-      clipboard per session via the Firefox Screenshots feature.
+      clipboard per session via the Datalus Screenshots feature.
     expires: never
     kind: uint
     notification_emails:
@@ -4066,7 +4066,7 @@ screenshots:
       - clouserw@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4083,7 +4083,7 @@ screenshots:
       - screenshots-dev@mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4100,7 +4100,7 @@ screenshots:
       - screenshots-dev@mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4117,7 +4117,7 @@ screenshots:
       - screenshots-dev@mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4134,7 +4134,7 @@ screenshots:
       - screenshots-dev@mozilla.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4153,7 +4153,7 @@ idb.failure:
       - ttung@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4169,7 +4169,7 @@ idb.failure:
       - storage-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
   unknown_objectstore_non_empty_database:
@@ -4184,7 +4184,7 @@ idb.failure:
       - storage-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4201,7 +4201,7 @@ pdf.viewer:
       - bdahl@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -4218,7 +4218,7 @@ pdf.viewer:
       - bdahl@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -4235,7 +4235,7 @@ pdf.viewer:
       - bdahl@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -4256,7 +4256,7 @@ printing:
       - jkew@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4272,7 +4272,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4288,7 +4288,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4305,7 +4305,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4322,7 +4322,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4338,7 +4338,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4354,7 +4354,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4397,7 +4397,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4413,7 +4413,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4429,7 +4429,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4446,7 +4446,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4463,7 +4463,7 @@ printing:
       - emalysz@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4481,7 +4481,7 @@ printing:
       - rtestard@mozilla.com
     release_channel_collection: opt-out
     products:
-      - "firefox"
+      - "datalus"
     record_in_processes:
       - 'main'
 
@@ -4499,7 +4499,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'content'
 
@@ -4527,7 +4527,7 @@ printing:
       - jwatt@jwatt.org
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4544,7 +4544,7 @@ timestamps:
       - perf-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4562,7 +4562,7 @@ timestamps:
       - gfx-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - firefox
+      - datalus
       - fennec
     record_in_processes:
       - main
@@ -4580,7 +4580,7 @@ timestamps:
       - mconley@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4600,7 +4600,7 @@ browser.timings:
       - florian@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4620,7 +4620,7 @@ sw:
       - ttung@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4639,7 +4639,7 @@ sw:
       - ttung@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4658,7 +4658,7 @@ sw:
       - echuang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4681,7 +4681,7 @@ widget:
       - mnakano@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4698,7 +4698,7 @@ widget:
       - cmccormack@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4718,7 +4718,7 @@ widget:
       - mnakano@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4738,7 +4738,7 @@ widget:
       - mnakano@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -4754,7 +4754,7 @@ widget:
       - layout-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4770,7 +4770,7 @@ widget:
       - layout-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4785,7 +4785,7 @@ widget:
       - layout-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -4802,7 +4802,7 @@ memoryreporter:
       - memshrink-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'content'
@@ -4824,7 +4824,7 @@ update:
       - dkeeler@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4836,7 +4836,7 @@ update:
       - 1520321
     description: >
       If a BITS download fails on the Windows side (that is to say, BITS
-      ecounters an error rather than Firefox failing to interact with BITS),
+      ecounters an error rather than Datalus failing to interact with BITS),
       it will likely give an hresult error indicating what happened. This probe
       reports those error codes to allow us to see if BITS is commonly failing
       on some systems. This probe is keyed on the type of update download,
@@ -4849,7 +4849,7 @@ update:
       - bytesized@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4860,7 +4860,7 @@ update:
     bug_numbers:
       - 353804
     description: >
-      Firefox keeps downloading updates in a different place from updates that
+      Datalus keeps downloading updates in a different place from updates that
       are ready to install. Once the download completes, the resulting file has
       to be moved from the downloading update directory to the ready update
       directory. This probe counts the results that we get when attempting to
@@ -4874,7 +4874,7 @@ update:
       - bytesized@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -4882,7 +4882,7 @@ update:
     bug_numbers:
       - 1720742
     description: >
-      On macOS, all browser windows can be closed without exiting Firefox. If
+      On macOS, all browser windows can be closed without exiting Datalus. If
       there is an update pending in that case, and we can install it silently,
       we restart automatically in order to do so. This probe counts the number
       of times the browser restarts to silently install a pending update.
@@ -4894,7 +4894,7 @@ update:
       - bytesized@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -4915,7 +4915,7 @@ browser.search:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4935,7 +4935,7 @@ browser.search:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -4961,7 +4961,7 @@ browser.search:
     notification_emails:
       - tihuang@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out
@@ -4984,7 +4984,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5002,7 +5002,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -5023,7 +5023,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5044,7 +5044,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5065,7 +5065,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5086,7 +5086,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5107,7 +5107,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5128,7 +5128,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5149,7 +5149,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5166,7 +5166,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5183,7 +5183,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5204,7 +5204,7 @@ browser.search.content:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5222,7 +5222,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5240,7 +5240,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -5257,7 +5257,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5274,7 +5274,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5291,7 +5291,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5308,7 +5308,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5325,7 +5325,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5342,7 +5342,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5359,7 +5359,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5376,7 +5376,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5393,7 +5393,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5410,7 +5410,7 @@ browser.search.withads:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5428,7 +5428,7 @@ browser.search.adclicks:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5446,7 +5446,7 @@ browser.search.adclicks:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -5463,7 +5463,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5480,7 +5480,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5497,7 +5497,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5514,7 +5514,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5531,7 +5531,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5548,7 +5548,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5565,7 +5565,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5582,7 +5582,7 @@ browser.search.adclicks:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5599,7 +5599,7 @@ browser.search.adclicks:
       - rev-data@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5616,7 +5616,7 @@ browser.search.adclicks:
       - teon@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5639,7 +5639,7 @@ browser.searchinit:
       - fx-search@mozilla.com
       - mbanner@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out
@@ -5661,7 +5661,7 @@ encoding:
       - hsivonen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
       - content
@@ -5678,7 +5678,7 @@ encoding:
       - hsivonen@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
       - content
@@ -5733,7 +5733,7 @@ startup:
       - wlachance@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -5754,7 +5754,7 @@ startup:
       - dothayer@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -5773,7 +5773,7 @@ startup:
       - dothayer@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -5818,7 +5818,7 @@ startup:
           Encountered some error getting the path to a file or reading from a
           particular file while trying to show the skeleton UI.
         NoStartWithLastProfile:
-          The user has set up their profiles so Firefox always shows the
+          The user has set up their profiles so Datalus always shows the
           profile manager during startup.
         FailedRegisteringWindowClass:
           We failed to register the window class needed to show the skeleton UI
@@ -5852,7 +5852,7 @@ startup:
       - dothayer@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -5860,8 +5860,8 @@ startup:
     bug_numbers:
       - 1700795
     description: >
-      Recorded on every run of a Firefox install on macOS, with a boolean value
-      indicating whether Firefox is being run directly from .dmg without
+      Recorded on every run of a Datalus install on macOS, with a boolean value
+      indicating whether Datalus is being run directly from .dmg without
       installing, or not.
     expires: "99"
     keyed: false
@@ -5872,7 +5872,7 @@ startup:
     operating_systems:
       - mac
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out
@@ -5892,7 +5892,7 @@ script.preloader:
       - plawless@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -5913,7 +5913,7 @@ networking:
       - dkeeler@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -5932,7 +5932,7 @@ networking:
       - dkeeler@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -5990,7 +5990,7 @@ networking:
       - tanvi@mozilla.com
       - tihuang@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -6007,7 +6007,7 @@ networking:
     notification_emails:
       - ddamjanovic@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -6023,7 +6023,7 @@ networking:
     notification_emails:
       - ddamjanovic@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -6039,7 +6039,7 @@ networking:
     notification_emails:
       - ddamjanovic@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - 'main'
@@ -6057,7 +6057,7 @@ networking:
       - ddamjanovic@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
       - 'content'
@@ -6077,7 +6077,7 @@ networking:
       - necko@mozilla.com
       - kershaw@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -6102,7 +6102,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -6127,7 +6127,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6149,7 +6149,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6176,7 +6176,7 @@ blocklist:
       - addons-dev-internal@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6200,7 +6200,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6223,7 +6223,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6246,7 +6246,7 @@ blocklist:
       - awagner@mozilla.com
       - rwu@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6264,7 +6264,7 @@ deletion.request:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     record_into_store:
@@ -6274,7 +6274,7 @@ deletion.request:
     bug_numbers:
       - 1604844
     description: >
-      An identifier used by sync ping, to identify the current Firefox profile for a specific Account.
+      An identifier used by sync ping, to identify the current Datalus profile for a specific Account.
     expires: never
     kind: string
     notification_emails:
@@ -6282,7 +6282,7 @@ deletion.request:
       - sync-team@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     record_into_store:
@@ -6301,7 +6301,7 @@ deletion.request:
       - sync-team@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     record_into_store:
@@ -6318,7 +6318,7 @@ deletion.request:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     record_into_store:
@@ -6337,7 +6337,7 @@ policies:
       - mkaply@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6356,7 +6356,7 @@ urlbar:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6375,7 +6375,7 @@ urlbar.tabtosearch:
       - tbrooks@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   impressions_onboarding:
@@ -6392,7 +6392,7 @@ urlbar.tabtosearch:
       - tbrooks@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6410,7 +6410,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6427,7 +6427,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6444,7 +6444,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6461,7 +6461,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6478,7 +6478,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6495,7 +6495,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6512,7 +6512,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6529,7 +6529,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6546,7 +6546,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6563,7 +6563,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6580,7 +6580,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6597,7 +6597,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6614,7 +6614,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6631,7 +6631,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6648,7 +6648,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6665,7 +6665,7 @@ urlbar.picked:
         - tbrooks@mozilla.com
       release_channel_collection: opt-out
       products:
-        - 'firefox'
+        - 'datalus'
       record_in_processes:
         - main
 
@@ -6684,7 +6684,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   handoff:
@@ -6702,7 +6702,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   keywordoffer:
@@ -6719,7 +6719,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   oneoff:
@@ -6736,7 +6736,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   shortcut:
@@ -6753,7 +6753,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabmenu:
@@ -6770,7 +6770,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabtosearch:
@@ -6787,7 +6787,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabtosearch_onboard:
@@ -6804,7 +6804,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   topsites_newtab:
@@ -6821,7 +6821,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   topsites_urlbar:
@@ -6838,7 +6838,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   touchbar:
@@ -6855,7 +6855,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   typed:
@@ -6872,7 +6872,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   other:
@@ -6890,7 +6890,7 @@ urlbar.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -6910,7 +6910,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   handoff:
@@ -6928,7 +6928,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   keywordoffer:
@@ -6946,7 +6946,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   oneoff:
@@ -6964,7 +6964,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   shortcut:
@@ -6982,7 +6982,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabmenu:
@@ -7000,7 +7000,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabtosearch:
@@ -7018,7 +7018,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   tabtosearch_onboard:
@@ -7036,7 +7036,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   topsites_newtab:
@@ -7054,7 +7054,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   topsites_urlbar:
@@ -7072,7 +7072,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   touchbar:
@@ -7090,7 +7090,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   typed:
@@ -7107,7 +7107,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   other:
@@ -7126,7 +7126,7 @@ urlbar.picked.searchmode:
       - tbrooks@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -7144,7 +7144,7 @@ migration:
       - application-update-telemetry-alerts@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
     operating_systems:
@@ -7166,7 +7166,7 @@ contextual.services.topsites:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   click:
@@ -7183,7 +7183,7 @@ contextual.services.topsites:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -7193,7 +7193,7 @@ contextual.services.quicksuggest:
     bug_numbers:
       - 1693927
     description: >
-      A keyed uint recording how many times the user has viewed Firefox Suggest
+      A keyed uint recording how many times the user has viewed Datalus Suggest
       (a.k.a. Quick Suggest) results in the urlbar. The key is the 1-based index
       of each result.
     expires: never
@@ -7203,14 +7203,14 @@ contextual.services.quicksuggest:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   click:
     bug_numbers:
       - 1693927
     description: >
-      A keyed uint recording how many times the user has clicked on Firefox
+      A keyed uint recording how many times the user has clicked on Datalus
       Suggests (a.k.a. Quick Suggest) results in the urlbar (not including the
       help button). The key is the 1-based index of each result.
     expires: never
@@ -7220,7 +7220,7 @@ contextual.services.quicksuggest:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
   help:
@@ -7228,7 +7228,7 @@ contextual.services.quicksuggest:
       - 1693927
     description: >
       A keyed uint recording how many times the user has clicked on the help
-      button in Firefox Suggests (a.k.a. Quick Suggest) results in the urlbar.
+      button in Datalus Suggests (a.k.a. Quick Suggest) results in the urlbar.
       The key is the 1-based index of each result.
     expires: never
     kind: uint
@@ -7237,7 +7237,7 @@ contextual.services.quicksuggest:
       - najiang@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - main
 
@@ -7258,7 +7258,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'geckoview_streaming'
       - 'thunderbird'
@@ -7276,7 +7276,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'geckoview_streaming'
       - 'thunderbird'
@@ -7294,7 +7294,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'geckoview_streaming'
       - 'thunderbird'
@@ -7310,7 +7310,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7325,7 +7325,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7341,7 +7341,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7357,7 +7357,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7374,7 +7374,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-in
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7391,7 +7391,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7407,7 +7407,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7424,7 +7424,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7445,7 +7445,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7461,7 +7461,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7478,7 +7478,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7494,7 +7494,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7509,7 +7509,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7524,7 +7524,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7539,7 +7539,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7554,7 +7554,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7571,7 +7571,7 @@ telemetry.test:
     record_in_processes:
       - 'all'
     products:
-      - firefox
+      - datalus
       - thunderbird
 
   keyed_desktop_only:
@@ -7586,7 +7586,7 @@ telemetry.test:
     record_in_processes:
       - 'all'
     products:
-      - firefox
+      - datalus
       - thunderbird
 
   multiproduct:
@@ -7600,7 +7600,7 @@ telemetry.test:
     record_in_processes:
       - 'all'
     products:
-      - firefox
+      - datalus
       - fennec
       - thunderbird
 
@@ -7641,7 +7641,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7659,7 +7659,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7678,7 +7678,7 @@ telemetry.test:
       - telemetry-client-dev@mozilla.com
       - najiang@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7696,7 +7696,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7716,7 +7716,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7735,7 +7735,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7755,7 +7755,7 @@ telemetry.test:
     notification_emails:
       - telemetry-client-dev@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
       - 'thunderbird'
     record_in_processes:
@@ -7770,7 +7770,7 @@ telemetry.test:
     expires: never
     kind: string
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
   mirror_for_timespan:
@@ -7779,7 +7779,7 @@ telemetry.test:
     expires: never
     kind: uint
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
   mirror_for_timespan_nanos:
@@ -7788,7 +7788,7 @@ telemetry.test:
     expires: never
     kind: uint
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
   mirror_for_labeled_bool:
@@ -7798,7 +7798,7 @@ telemetry.test:
     kind: boolean
     keyed: true
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
   mirror_for_quantity:
@@ -7807,7 +7807,7 @@ telemetry.test:
     expires: never
     kind: uint
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
   mirror_for_rate:
@@ -7819,7 +7819,7 @@ telemetry.test:
     kind: uint
     keyed: true
     notification_emails: [glean-team@mozilla.com]
-    products: ["firefox", "thunderbird"]
+    products: ["datalus", "thunderbird"]
     record_in_processes: ["all"]
 
 
@@ -7836,7 +7836,7 @@ corroborate:
       - rhelmer@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
       - 'fennec'
     record_in_processes:
       - main
@@ -7853,7 +7853,7 @@ cache:
       - storage-telemetry@mozilla.com
     release_channel_collection: opt-out
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
 
@@ -7869,7 +7869,7 @@ opaque.response.blocking:
       - echuang@mozilla.com
       - necko@mozilla.com
     products:
-      - 'firefox'
+      - 'datalus'
     record_in_processes:
       - 'main'
     release_channel_collection: opt-out

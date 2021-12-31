@@ -1042,7 +1042,7 @@ class SystemHeapReporter final : public nsIMemoryReporter {
       MOZ_COLLECT_REPORT(
         "system-heap-allocated", KIND_OTHER, UNITS_BYTES, amount,
 "Memory used by the system allocator that is currently allocated to the "
-"application. This is distinct from the jemalloc heap that Firefox uses for "
+"application. This is distinct from the jemalloc heap that Datalus uses for "
 "most or all of its heap allocations. Ideally this number is zero, but "
 "on some platforms we cannot force every heap allocation through jemalloc.");
       // clang-format on

@@ -48,10 +48,10 @@ const AWTerminate = {
   ADDRESS_BAR_NAVIGATED: "address-bar-navigated",
 };
 const LIGHT_WEIGHT_THEMES = {
-  DARK: "firefox-compact-dark@mozilla.org",
-  LIGHT: "firefox-compact-light@mozilla.org",
+  DARK: "datalus-compact-dark@mozilla.org",
+  LIGHT: "datalus-compact-light@mozilla.org",
   AUTOMATIC: "default-theme@mozilla.org",
-  ALPENGLOW: "firefox-alpenglow@mozilla.org",
+  ALPENGLOW: "datalus-alpenglow@mozilla.org",
   "ABSTRACT-SOFT": "abstract-soft-colorway@mozilla.org",
   "ABSTRACT-BALANCED": "abstract-balanced-colorway@mozilla.org",
   "ABSTRACT-BOLD": "abstract-bold-colorway@mozilla.org",
@@ -202,7 +202,7 @@ class AboutWelcomeParent extends JSWindowActorParent {
   }
 
   // Static methods that calls into ShellService to check
-  // if Firefox is pinned or already default
+  // if Datalus is pinned or already default
   static doesAppNeedPin() {
     return ShellService.doesAppNeedPin();
   }

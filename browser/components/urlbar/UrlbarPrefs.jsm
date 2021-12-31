@@ -25,7 +25,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
 
 const PREF_URLBAR_BRANCH = "browser.urlbar.";
 
-const FIREFOX_SUGGEST_UPDATE_TOPIC = "firefox-suggest-update";
+const DATALUS_SUGGEST_UPDATE_TOPIC = "datalus-suggest-update";
 
 // Prefs are defined as [pref name, default value] or [pref name, [default
 // value, type]].  In the former case, the getter method name is inferred from
@@ -107,7 +107,7 @@ const PREF_URLBAR_DEFAULTS = new Map([
   // Applies URL highlighting and other styling to the text in the urlbar input.
   ["formatting.enabled", true],
 
-  // Whether Firefox Suggest group labels are shown in the urlbar view in en-*
+  // Whether Datalus Suggest group labels are shown in the urlbar view in en-*
   // locales. Labels are not shown in other locales but likely will be in the
   // future.
   ["groupLabels.enabled", true],
@@ -207,7 +207,7 @@ const PREF_URLBAR_DEFAULTS = new Map([
   // Whether to show QuickSuggest related logs.
   ["quicksuggest.log", false],
 
-  // The user's response to the Firefox Suggest online opt-in dialog.
+  // The user's response to the Datalus Suggest online opt-in dialog.
   ["quicksuggest.onboardingDialogChoice", ""],
 
   // If the user has gone through a quick suggest prefs migration, then this
@@ -231,8 +231,8 @@ const PREF_URLBAR_DEFAULTS = new Map([
   // Whether Remote Settings is enabled as a quick suggest source.
   ["quicksuggest.remoteSettings.enabled", true],
 
-  // The Firefox Suggest scenario in which the user is enrolled. This is set
-  // when the scenario is updated (see `updateFirefoxSuggestScenario`) and is
+  // The Datalus Suggest scenario in which the user is enrolled. This is set
+  // when the scenario is updated (see `updateDatalusSuggestScenario`) and is
   // not a pref the user should set. Once initialized, its value is one of:
   // "history", "offline", "online"
   ["quicksuggest.scenario", ""],
@@ -481,9 +481,9 @@ class Preferences {
       "suggest.searches",
     ];
 
-    // This is set to true when we update the Firefox Suggest scenario to
+    // This is set to true when we update the Datalus Suggest scenario to
     // prevent re-entry due to pref observers.
-    this._updatingFirefoxSuggestScenario = false;
+    this._updatingDatalusSuggestScenario = false;
 
     NimbusFeatures.urlbar.onUpdate(() => this._onNimbusUpdate());
   }
@@ -565,21 +565,21 @@ class Preferences {
   }
 
   /**
-   * Sets the appropriate Firefox Suggest scenario based on the current Nimbus
+   * Sets the appropriate Datalus Suggest scenario based on the current Nimbus
    * rollout (if any) and "hardcoded" rollouts (if any). The possible scenarios
    * are:
    *
    * history
-   *   This is the scenario when the user is not in any rollouts. Firefox
+   *   This is the scenario when the user is not in any rollouts. Datalus
    *   Suggest suggestions are disabled.
    * offline
-   *   This is the scenario for the "offline" rollout. Firefox Suggest
+   *   This is the scenario for the "offline" rollout. Datalus Suggest
    *   suggestions are enabled by default. Data collection is not enabled by
    *   default, but the user can opt in in about:preferences. The onboarding
    *   dialog is not shown.
    * online
    *   This is the scenario for the "online" rollout. The onboarding dialog will
-   *   be shown and the user must opt in to enable Firefox Suggest suggestions
+   *   be shown and the user must opt in to enable Datalus Suggest suggestions
    *   and data collection. If the user does not opt in via the dialog, they can
    *   opt in later in about:preferences.
    *
@@ -589,17 +589,17 @@ class Preferences {
    * @param {string} [scenarioOverride]
    *   This is intended for tests only. Pass to force a scenario.
    */
-  async updateFirefoxSuggestScenario(isStartup, scenarioOverride = undefined) {
+  async updateDatalusSuggestScenario(isStartup, scenarioOverride = undefined) {
     // Make sure we don't re-enter this method while updating prefs. Updates to
     // prefs that are fallbacks for Nimbus variables trigger the pref observer
     // in Nimbus, which triggers our Nimbus `onUpdate` callback, which calls
     // this method again.
-    if (this._updatingFirefoxSuggestScenario) {
+    if (this._updatingDatalusSuggestScenario) {
       return;
     }
 
     try {
-      this._updatingFirefoxSuggestScenario = true;
+      this._updatingDatalusSuggestScenario = true;
 
       // This is called early in startup by BrowserGlue, so make sure the user's
       // region and our Nimbus variables are initialized since the scenario may
@@ -609,13 +609,13 @@ class Preferences {
       await Region.init();
       await NimbusFeatures.urlbar.ready();
 
-      this._updateFirefoxSuggestScenarioHelper(isStartup, scenarioOverride);
+      this._updateDatalusSuggestScenarioHelper(isStartup, scenarioOverride);
     } finally {
-      this._updatingFirefoxSuggestScenario = false;
+      this._updatingDatalusSuggestScenario = false;
     }
   }
 
-  _updateFirefoxSuggestScenarioHelper(isStartup, scenarioOverride) {
+  _updateDatalusSuggestScenarioHelper(isStartup, scenarioOverride) {
     // Updating the scenario is tricky and it's important to preserve the user's
     // choices, so we describe the process in detail below. tl;dr:
     //
@@ -629,14 +629,14 @@ class Preferences {
     //   that's a `fallbackPref` for a Nimbus variable will trigger the pref
     //   observer inside Nimbus and call all `NimbusFeatures.urlbar.onUpdate`
     //   callbacks. Inside this class we guard against that by using
-    //   `updatingFirefoxSuggestScenario`.
+    //   `updatingDatalusSuggestScenario`.
     //
     // The scenario-update process is described next.
     //
     // 1. Pick a scenario. If the user is in a Nimbus rollout, then Nimbus will
     //    define it. Otherwise the user may be in a "hardcoded" rollout
     //    depending on their region and locale. If the user is not in any
-    //    rollouts, then the scenario is "history", which means no Firefox
+    //    rollouts, then the scenario is "history", which means no Datalus
     //    Suggest suggestions should appear.
     //
     // 2. Set prefs on the default branch appropriate for the scenario. We use
@@ -659,8 +659,8 @@ class Preferences {
     //    It's important to note that the defaults we set here do not persist
     //    across app restarts. (This is a feature of the pref service; prefs set
     //    programmatically on the default branch are not stored anywhere
-    //    permanent like firefox.js or user.js.) That's why BrowserGlue calls
-    //    `updateFirefoxSuggestScenario` on every startup.
+    //    permanent like datalus.js or user.js.) That's why BrowserGlue calls
+    //    `updateDatalusSuggestScenario` on every startup.
     //
     // 3. Some prefs are both exposed in the UI and configurable via Nimbus,
     //    like whether data collection is enabled. We absolutely want to
@@ -710,13 +710,13 @@ class Preferences {
         scenario = "history";
       }
     }
-    if (!this.FIREFOX_SUGGEST_DEFAULT_PREFS.hasOwnProperty(scenario)) {
+    if (!this.DATALUS_SUGGEST_DEFAULT_PREFS.hasOwnProperty(scenario)) {
       scenario = "history";
-      Cu.reportError(`Unrecognized Firefox Suggest scenario "${scenario}"`);
+      Cu.reportError(`Unrecognized Datalus Suggest scenario "${scenario}"`);
     }
 
     // 2. Set default-branch values for the scenario
-    let prefs = this.FIREFOX_SUGGEST_DEFAULT_PREFS[scenario];
+    let prefs = this.DATALUS_SUGGEST_DEFAULT_PREFS[scenario];
 
     // 3. Set default-branch values for prefs that are both exposed in the UI
     // and configurable via Nimbus
@@ -746,7 +746,7 @@ class Preferences {
     //
     // The `prefHasUserValue` check isn't necessary because if the scenario is
     // online, `quicksuggest.dataCollection.enabled` is false by default (it's
-    // also false in firefox.js), so if `quicksuggest.dataCollection.enabled` is
+    // also false in datalus.js), so if `quicksuggest.dataCollection.enabled` is
     // true then it must be true on the user branch. We check it anyway to be
     // defensive and to guard against errors if this code or pref defaults are
     // changed in the future.
@@ -767,7 +767,7 @@ class Preferences {
 
     // 4. Migrate prefs across app versions
     if (isStartup) {
-      this._ensureFirefoxSuggestPrefsMigrated(scenario);
+      this._ensureDatalusSuggestPrefsMigrated(scenario);
     }
 
     // Set the scenario pref only after migrating so that migrations can tell
@@ -784,21 +784,21 @@ class Preferences {
     // TelemetryEnvironment updates its cache by fetching the prefs from the
     // pref service, so the new values need to be set beforehand. See also the
     // comments in D126017.
-    Services.obs.notifyObservers(null, FIREFOX_SUGGEST_UPDATE_TOPIC);
+    Services.obs.notifyObservers(null, DATALUS_SUGGEST_UPDATE_TOPIC);
   }
 
   /**
-   * Default prefs relative to `browser.urlbar` per Firefox Suggest
+   * Default prefs relative to `browser.urlbar` per Datalus Suggest
    * scenario. This returns a new object on every access, so it's OK to modify
    * it.
    */
-  get FIREFOX_SUGGEST_DEFAULT_PREFS() {
+  get DATALUS_SUGGEST_DEFAULT_PREFS() {
     // Important notes when modifying this:
     //
     // Callers currently assume a new object is returned per access.
     //
     // If you add a pref to one scenario, you typically need to add it to all
-    // scenarios even if the pref is in firefox.js. That's because we need to
+    // scenarios even if the pref is in datalus.js. That's because we need to
     // allow for switching from one scenario to another at any time after
     // startup. If we set a pref for one scenario on the default branch, we
     // switch to a new scenario, and we don't set the pref for the new scenario,
@@ -807,7 +807,7 @@ class Preferences {
     // when `quicksuggest.enabled` is false, none of the other prefs matter.
     //
     // Prefs not listed here for any scenario keep their values set in
-    // firefox.js.
+    // datalus.js.
     return {
       history: {
         "quicksuggest.enabled": false,
@@ -830,12 +830,12 @@ class Preferences {
   }
 
   /**
-   * Migrates the unversioned set of Firefox Suggest prefs to version 1.
+   * Migrates the unversioned set of Datalus Suggest prefs to version 1.
    *
    * @param {string} scenario
-   *   The current Firefox Suggest scenario.
+   *   The current Datalus Suggest scenario.
    */
-  _ensureFirefoxSuggestPrefsMigrated(scenario) {
+  _ensureDatalusSuggestPrefsMigrated(scenario) {
     if (this.get("quicksuggest.migrationVersion")) {
       // Already migrated to version 1.
       return;
@@ -885,13 +885,13 @@ class Preferences {
 
   /**
    * @returns {boolean}
-   *   Whether the Firefox Suggest scenario is being updated. While true,
+   *   Whether the Datalus Suggest scenario is being updated. While true,
    *   changes to related prefs should be ignored, depending on the observer.
    *   Telemetry intended to capture user changes to the prefs should not be
    *   recorded, for example.
    */
-  get updatingFirefoxSuggestScenario() {
-    return this._updatingFirefoxSuggestScenario;
+  get updatingDatalusSuggestScenario() {
+    return this._updatingDatalusSuggestScenario;
   }
 
   /**
@@ -972,7 +972,7 @@ class Preferences {
     }
     this.__nimbus = null;
 
-    this.updateFirefoxSuggestScenario(false);
+    this.updateDatalusSuggestScenario(false);
   }
 
   get _nimbus() {

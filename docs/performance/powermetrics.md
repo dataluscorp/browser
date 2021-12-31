@@ -25,7 +25,7 @@ sudo powermetrics --samplers tasks --show-process-coalition --show-process-gpu -
 
 -   `--samplers tasks` tells it to just do per-process measurements.
 -   `--show-process-coalition`` `tells it to group *coalitions* of
-    related processes, e.g. the Firefox parent process and child
+    related processes, e.g. the Datalus parent process and child
     processes.
 -   `--show-process-gpu` tells it to show per-process GPU measurements.
 -   `-n 1` tells it to take one sample and then stop.
@@ -40,7 +40,7 @@ The following is example output from such an invocation:
 
     Name                               ID     CPU ms/s  User%  Deadlines (<2 ms, 2-5 ms)  Wakeups (Intr, Pkg idle)  GPU ms/s
     com.apple.Terminal                 293    447.66                                      274.83  120.35            221.74
-      firefox                          84627  77.59     55.55  15.37   2.59               91.42   42.12             204.47
+      datalus                          84627  77.59     55.55  15.37   2.59               91.42   42.12             204.47
       plugin-container                 84628  377.22    37.18  43.91   18.56              178.65  75.85             17.29
       Terminal                         694    9.86      79.94  0.00    0.00               4.39    2.20              0.00
       powermetrics                     84694  1.21      31.53  0.00    0.00               0.20    0.20              0.00
@@ -56,14 +56,14 @@ The following is example output from such an invocation:
       com.apple.WebKit.Networking      84678  26.89     58.89  0.40    0.00               1.60    0.00              0.00
       Safari                           84676  1.56      55.74  0.00    0.00               2.59    1.40              0.00
       com.apple.Safari.SearchHelper    84690  0.15      49.49  0.00    0.00               0.20    0.20              0.00
-    org.mozilla.firefox                482    76.56                                       124.34  63.47             0.00
-      firefox                          84496  76.70     89.18  10.58   5.59               124.55  63.48             0.00
+    org.mozilla.datalus                482    76.56                                       124.34  63.47             0.00
+      datalus                          84496  76.70     89.18  10.58   5.59               124.55  63.48             0.00
 
 This sample was taken while the following programs were running:
 
--   Firefox Beta (single process, invoked from the Mac OS dock, shown in
-    the `org.mozilla.firefox` coalition.)
--   Firefox Nightly (multi-process, invoked from the command line, shown
+-   Datalus Beta (single process, invoked from the Mac OS dock, shown in
+    the `org.mozilla.datalus` coalition.)
+-   Datalus Nightly (multi-process, invoked from the command line, shown
     in the `com.apple.Terminal` coalition.)
 -   Google Chrome.
 -   Safari.
@@ -114,7 +114,7 @@ Other things to note.
 activity, disk activity, interrupt distribution, device power states,
 C-state residency, P-state residency, quality of service classes, and
 thermal pressure. These are less likely to be useful for profiling
-Firefox, however. Run with the `--show-all` to see all of these at once,
+Datalus, however. Run with the `--show-all` to see all of these at once,
 but note that you\'ll need a very wide window to see all the data.
 
 Also note that `powermetrics -h` is a better guide to the the
@@ -124,7 +124,7 @@ command-line options than `man powermetrics`.
 
 You can use the `mach power` command to run `powermetrics` in
 combination with `rapl` in a way that gives the most useful summary
-measurements for each of Firefox, Chrome and Safari. The following is
+measurements for each of Datalus, Chrome and Safari. The following is
 sample output.
 
         total W = _pkg_ (cores + _gpu_ + other) + _ram_ W
@@ -152,8 +152,8 @@ sample output.
       com.apple.WebKit.WebContent      67296  0.07      43.51  0.00    0.00               0.10    0.03              0.00
     kernel_coalition                   1      111.76                                      724.80  213.09            0.12
       kernel_task                      0      107.06    0.00   5.86    0.00               724.46  212.99            0.12
-    org.mozilla.firefox                498    92.17                                       212.69  75.67             1.81
-      firefox                          63865  61.00     87.18  1.00    0.87               25.79   9.00              1.81
+    org.mozilla.datalus                498    92.17                                       212.69  75.67             1.81
+      datalus                          63865  61.00     87.18  1.00    0.87               25.79   9.00              1.81
       plugin-container                 67269  31.49     72.46  1.80    0.00               186.90  66.68             0.00
       com.apple.WebKit.Plugin.64       67373  55.55     74.38  0.74    0.00               9.51    3.13              0.02
     com.apple.Terminal                 109    6.22                                        0.40    0.23              0.00

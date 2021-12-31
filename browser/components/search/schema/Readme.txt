@@ -4,4 +4,4 @@ They are uploaded to the RemoteSettings server to validate new configurations.
 
 Any changes should be validated by the Search team.
 
-See the documentation for more information: https://firefox-source-docs.mozilla.org/
+See the documentation for more information: https://datalus-source-docs.mozilla.org/

@@ -96,9 +96,9 @@ HTTP_ATOM(Version, "Version")
 HTTP_ATOM(WWW_Authenticate, "WWW-Authenticate")
 HTTP_ATOM(Warning, "Warning")
 HTTP_ATOM(X_Content_Type_Options, "X-Content-Type-Options")
-HTTP_ATOM(X_Firefox_Spdy, "X-Firefox-Spdy")
-HTTP_ATOM(X_Firefox_Spdy_Proxy, "X-Firefox-Spdy-Proxy")
-HTTP_ATOM(X_Firefox_Early_Data, "X-Firefox-Early-Data")
-HTTP_ATOM(X_Firefox_Http3, "X-Firefox-Http3")
+HTTP_ATOM(X_Datalus_Spdy, "X-Datalus-Spdy")
+HTTP_ATOM(X_Datalus_Spdy_Proxy, "X-Datalus-Spdy-Proxy")
+HTTP_ATOM(X_Datalus_Early_Data, "X-Datalus-Early-Data")
+HTTP_ATOM(X_Datalus_Http3, "X-Datalus-Http3")
 
 // methods are case sensitive and do not use atom table

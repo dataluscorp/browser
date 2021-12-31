@@ -36,14 +36,14 @@ function promiseAllEmptyArray() {
 }
 
 function promiseAllArray() {
-  var p = Promise.all([1, new Date(), Promise.resolve("firefox")]);
+  var p = Promise.all([1, new Date(), Promise.resolve("datalus")]);
   ok(p instanceof Promise, "Return value of Promise.all should be a Promise.");
   p.then(function(values) {
     ok(Array.isArray(values), "Resolved value should be an array.");
     is(values.length, 3, "Resolved array length should match iterable's length.");
     is(values[0], 1, "Array values should match.");
     ok(values[1] instanceof Date, "Array values should match.");
-    is(values[2], "firefox", "Array values should match.");
+    is(values[2], "datalus", "Array values should match.");
     runTest();
   }, function() {
     ok(false, "Promise.all shouldn't fail when iterable has no rejected Promises.");
@@ -151,12 +151,12 @@ function promiseAllCastError() {
 
 // Check that the resolved array is enumerable.
 function promiseAllEnumerable() {
-  var p = Promise.all([1, new Date(), Promise.resolve("firefox")]);
+  var p = Promise.all([1, new Date(), Promise.resolve("datalus")]);
   p.then(function(v) {
     var count = 0;
     for (let key in v) {
       ++count;
-      ok(v[key] === 1 || v[key] instanceof Date || v[key] === "firefox",
+      ok(v[key] === 1 || v[key] instanceof Date || v[key] === "datalus",
          "Enumerated properties don't match.");
     }
     is(count, 3, "Resolved array from Promise.all should be enumerable");

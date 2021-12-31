@@ -67,7 +67,7 @@ var Utils = {
       !Cu.isInAutomation &&
       !isXpcshell &&
       isNotThunderbird
-      ? "https://firefox.settings.services.mozilla.com/v1"
+      ? "https://datalus.settings.services.mozilla.com/v1"
       : gServerURL;
   },
 

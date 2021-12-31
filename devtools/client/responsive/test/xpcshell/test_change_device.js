@@ -22,13 +22,13 @@ add_task(async function() {
   dispatch(
     addDevice(
       {
-        name: "Firefox OS Flame",
+        name: "Datalus OS Flame",
         width: 320,
         height: 570,
         pixelRatio: 1.5,
-        userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Firefox/39.0",
+        userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Datalus/39.0",
         touch: true,
-        firefoxOS: true,
+        datalusOS: true,
         os: "fxos",
       },
       "phones"
@@ -39,12 +39,12 @@ add_task(async function() {
   let viewport = getState().viewports[0];
   equal(viewport.device, "", "Default device is unselected");
 
-  dispatch(changeDevice(0, "Firefox OS Flame", "phones"));
+  dispatch(changeDevice(0, "Datalus OS Flame", "phones"));
 
   viewport = getState().viewports[0];
   equal(
     viewport.device,
-    "Firefox OS Flame",
-    "Changed to Firefox OS Flame device"
+    "Datalus OS Flame",
+    "Changed to Datalus OS Flame device"
   );
 });

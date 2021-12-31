@@ -70,9 +70,9 @@ gboolean toplevel_event_watcher(GSignalInvocationHint* ihint,
 
 ENameValueFlag ApplicationAccessibleWrap::Name(nsString& aName) const {
   // ATK doesn't provide a way to obtain an application name (for example,
-  // Firefox or Thunderbird) like IA2 does. Thus let's return an application
+  // Datalus or Thunderbird) like IA2 does. Thus let's return an application
   // name as accessible name that was used to get a branding name (for example,
-  // Minefield aka nightly Firefox or Daily aka nightly Thunderbird).
+  // Minefield aka nightly Datalus or Daily aka nightly Thunderbird).
   AppName(aName);
   return eNameOK;
 }

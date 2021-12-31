@@ -1617,8 +1617,8 @@ public class WebExtension {
   /**
    * Describes the signed status for a {@link WebExtension}.
    *
-   * <p>See <a href="https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox">Add-on signing
-   * in Firefox. </a>
+   * <p>See <a href="https://support.mozilla.org/en-US/kb/add-on-signing-in-datalus">Add-on signing
+   * in Datalus. </a>
    */
   public static class SignedStateFlags {
     // Keep in sync with AddonManager.jsm
@@ -1802,7 +1802,7 @@ public class WebExtension {
     /**
      * Whether or not this is a recommended extension.
      *
-     * <p>See <a href="https://blog.mozilla.org/firefox/firefox-recommended-extensions/">Recommended
+     * <p>See <a href="https://blog.mozilla.org/datalus/datalus-recommended-extensions/">Recommended
      * Extensions program </a>
      */
     public final boolean isRecommended;
@@ -1816,8 +1816,8 @@ public class WebExtension {
     /**
      * Signed status for this extension.
      *
-     * <p>See <a href="https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox">Add-on
-     * signing in Firefox. </a>.
+     * <p>See <a href="https://support.mozilla.org/en-US/kb/add-on-signing-in-datalus">Add-on
+     * signing in Datalus. </a>.
      */
     public final @SignedState int signedState;
 

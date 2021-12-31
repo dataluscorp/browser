@@ -13,7 +13,7 @@ fn try_string_from_box_u8(input: Box<[u8]>) -> io::Result<String> {
         .map_err(|err| io::Error::new(io::ErrorKind::InvalidData, err.utf8_error()))
 }
 
-// For historical reasons we maintain a locale in Firefox with a codename `ja-JP-mac`.
+// For historical reasons we maintain a locale in Datalus with a codename `ja-JP-mac`.
 // This string is an invalid BCP-47 language tag, so we don't store it in Gecko, which uses
 // valid BCP-47 tags only, but rather keep that quirk local to Gecko L10nRegistry file fetcher.
 //

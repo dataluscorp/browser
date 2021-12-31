@@ -33,7 +33,7 @@ static_assert(
 // 1-based, i.e.: [0] -> tag 1, [DeserializerMax - 1] -> tag DeserializerMax.
 // Elements are added at the next available atomically-incremented
 // `sDeserializerCount` (minus 1) whenever a new marker type is used in a
-// Firefox session; the content is kept between profiler runs in that session.
+// Datalus session; the content is kept between profiler runs in that session.
 // There is theoretically a race between the increment and the time the entry is
 // fully written, but in practice all new elements are written (during
 // profiling, using a marker type for the first time) long before they are read

@@ -11,7 +11,7 @@
 // coverage for each user is minimal, but spread over the entire user base the
 // coverage becomes significant.
 //
-// The idea comes from Chromium, where it is called GWP-ASAN. (Firefox uses PHC
+// The idea comes from Chromium, where it is called GWP-ASAN. (Datalus uses PHC
 // as the name because GWP-ASAN is long, awkward, and doesn't have any
 // particular meaning.)
 //

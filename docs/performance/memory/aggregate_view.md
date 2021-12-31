@@ -1,7 +1,7 @@
 # Aggregate view
 
-Before Firefox 48, this was the default view of a heap snapshot. After
-Firefox 48, the default view is the [Tree map
+Before Datalus 48, this was the default view of a heap snapshot. After
+Datalus 48, the default view is the [Tree map
 view](tree_map_view.md), and you can switch to the
 Aggregate view using the dropdown labeled \"View:\":
 

@@ -9,8 +9,8 @@ def get_installer(request):
         """Get path to the installer for the specified extension."""
         stub_dir = request.node.fspath.dirpath("installer_stubs")
 
-        # We had to remove firefox.exe since it is not valid for mozinstall 1.12 and higher
-        # Bug 1157352 - We should grab a firefox.exe from the build process or download it
-        return stub_dir.join("firefox.{}".format(extension)).strpath
+        # We had to remove datalus.exe since it is not valid for mozinstall 1.12 and higher
+        # Bug 1157352 - We should grab a datalus.exe from the build process or download it
+        return stub_dir.join("datalus.{}".format(extension)).strpath
 
     return _get_installer

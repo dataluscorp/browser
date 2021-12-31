@@ -25,7 +25,7 @@ def generate_update_line(config, jobs):
 
         product = job["shipping-product"]
         if product == "devedition":
-            product = "firefox"
+            product = "datalus"
         job["worker"]["update-line"] = {}
         for blob_type, suffix in [("wnp", ""), ("no-wnp", "-No-WNP")]:
             context = {

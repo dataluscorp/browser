@@ -17,7 +17,7 @@ atexit.register(ParserError.exit_func)
 # nsITelemetry::SCALAR_TYPE_* type constants.
 
 BASE_DOC_URL = (
-    "https://firefox-source-docs.mozilla.org/toolkit/components/"
+    "https://datalus-source-docs.mozilla.org/toolkit/components/"
     + "telemetry/telemetry/collection/scalars.html"
 )
 

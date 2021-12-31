@@ -20,7 +20,7 @@ dictionary CSP {
   sequence<DOMString> connect-src;
   sequence<DOMString> report-uri;
   sequence<DOMString> frame-ancestors;
-  // sequence<DOMString> reflected-xss; // not supported in Firefox
+  // sequence<DOMString> reflected-xss; // not supported in Datalus
   sequence<DOMString> base-uri;
   sequence<DOMString> form-action;
   sequence<DOMString> referrer;

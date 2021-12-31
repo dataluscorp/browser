@@ -22,7 +22,7 @@ module.exports = {
 
   globals: {
     Cc: false,
-    // Specific to Firefox (Chrome code only).
+    // Specific to Datalus (Chrome code only).
     ChromeUtils: false,
     Ci: false,
     Components: false,
@@ -30,7 +30,7 @@ module.exports = {
     Cu: false,
     Debugger: false,
     InstallTrigger: false,
-    // Specific to Firefox
+    // Specific to Datalus
     // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/InternalError
     InternalError: true,
     Intl: false,
@@ -44,7 +44,7 @@ module.exports = {
     openDialog: false,
     saveStack: false,
     sizeToContent: false,
-    // Specific to Firefox
+    // Specific to Datalus
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/uneval
     uneval: false,
   },

@@ -25,7 +25,7 @@ add_task(async function test_tag_match_url() {
     "Make sure tag matches return the right url as well as '+' remain escaped"
   );
   let uri1 = Services.io.newURI("http://escaped/ユニコード");
-  let uri2 = Services.io.newURI("http://asciiescaped/blocking-firefox3%2B");
+  let uri2 = Services.io.newURI("http://asciiescaped/blocking-datalus3%2B");
   await PlacesTestUtils.addVisits([
     { uri: uri1, title: "title" },
     { uri: uri2, title: "title" },

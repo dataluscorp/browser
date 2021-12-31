@@ -561,8 +561,8 @@ input:-moz-focusring {
   background-image: url("chrome://devtools/skin/images/browsers/edge.svg");
 }
 
-.device-browser.firefox {
-  background-image: url("chrome://devtools/skin/images/browsers/firefox.svg");
+.device-browser.datalus {
+  background-image: url("chrome://devtools/skin/images/browsers/datalus.svg");
 }
 
 .device-browser.ie {

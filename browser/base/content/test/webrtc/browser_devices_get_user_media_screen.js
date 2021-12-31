@@ -285,12 +285,12 @@ var gTests = [
         is(
           scaryWindowIndexes.length,
           0,
-          "there are no scary Firefox windows in headless mode"
+          "there are no scary Datalus windows in headless mode"
         );
       } else {
         ok(
           scaryWindowIndexes.length,
-          "there's at least one scary window, as Firefox is running"
+          "there's at least one scary window, as Datalus is running"
         );
       }
       ok(
@@ -316,7 +316,7 @@ var gTests = [
             );
             break;
           } catch (e) {
-            // A "scary window" is Firefox. Multiple Firefox windows have been
+            // A "scary window" is Datalus. Multiple Datalus windows have been
             // observed to come and go during try runs, so we won't know which one
             // is ours. To avoid intermittents, we ignore preview failing due to
             // these going away on us, provided it succeeds on one of them.

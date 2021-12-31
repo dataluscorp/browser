@@ -9,7 +9,7 @@ Build Glossary
        system attempts to isolate all file modifications to this
        directory. By convention, object directories are commonly
        directories under the source directory prefixed with **obj-**.
-       e.g. **obj-firefox**.
+       e.g. **obj-datalus**.
 
    mozconfig
        A shell script used to configure the build system.

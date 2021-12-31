@@ -87,8 +87,8 @@ TRANSFORMS = [
         "channel_prefix": ["beta"],
         "side": "target",
         "substitution": [
-            "ACCEPTED_MAR_CHANNEL_IDS=firefox-mozilla-release\n",
-            "ACCEPTED_MAR_CHANNEL_IDS=firefox-mozilla-beta,firefox-mozilla-release\n",
+            "ACCEPTED_MAR_CHANNEL_IDS=datalus-mozilla-release\n",
+            "ACCEPTED_MAR_CHANNEL_IDS=datalus-mozilla-beta,datalus-mozilla-release\n",
         ],
     },
     {
@@ -99,8 +99,8 @@ TRANSFORMS = [
         "channel_prefix": ["beta"],
         "side": "source",
         "substitution": [
-            "ACCEPTED_MAR_CHANNEL_IDS=firefox-mozilla-release\n",
-            "ACCEPTED_MAR_CHANNEL_IDS=firefox-mozilla-beta,firefox-mozilla-release\n",
+            "ACCEPTED_MAR_CHANNEL_IDS=datalus-mozilla-release\n",
+            "ACCEPTED_MAR_CHANNEL_IDS=datalus-mozilla-beta,datalus-mozilla-release\n",
         ],
     },
 ]
@@ -217,8 +217,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         "Compare two directories recursively, with transformations for expected diffs"
     )
-    parser.add_argument("source", help="Directory containing updated Firefox")
-    parser.add_argument("target", help="Directory containing expected Firefox")
+    parser.add_argument("source", help="Directory containing updated Datalus")
+    parser.add_argument("target", help="Directory containing expected Datalus")
     parser.add_argument("channel", help="Update channel used")
     parser.add_argument(
         "--verbose", "-v", action="store_true", help="Enable verbose logging"

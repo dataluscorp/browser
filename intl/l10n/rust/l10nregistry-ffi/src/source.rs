@@ -24,7 +24,7 @@ pub enum L10nFileSourceStatus {
     InvalidLocaleCode,
 }
 
-// For historical reasons we maintain a locale in Firefox with a codename `ja-JP-mac`.
+// For historical reasons we maintain a locale in Datalus with a codename `ja-JP-mac`.
 // This string is an invalid BCP-47 language tag, so we don't store it in Gecko, which uses
 // valid BCP-47 tags only, but rather keep that quirk local to Gecko L10nRegistry file fetcher.
 //

@@ -1,6 +1,6 @@
 # DMD heap scan mode
 
-Firefox's DMD heap scan mode tracks the set of all live blocks of
+Datalus's DMD heap scan mode tracks the set of all live blocks of
 malloc-allocated memory and their allocation stacks, and allows you to
 log these blocks, and the values stored in them, to a file. When
 combined with cycle collector logging, this can be used to investigate
@@ -27,7 +27,7 @@ release that causes the leaked object to go away.
 
 ## Prerequisites
 
--   A debug DMD build of Firefox. [This
+-   A debug DMD build of Datalus. [This
     page](dmd.md)
     describes how to do that. This should probably be an optimized
     build. Non-optimized DMD builds will generate better stack traces,
@@ -51,12 +51,12 @@ The next step is to generate a number of log files. You need to get a
 shutdown CC log and a DMD log, for a single run.
 
 **Definitions** I'll write `$objdir` for the object directory for your
-Firefox DMD build, `$srcdir` for the top level of the Firefox source
+Datalus DMD build, `$srcdir` for the top level of the Datalus source
 directory, and `$heapgraph` for the location of the heapgraph repo, and
 `$logdir` for the location you want logs to go to. `$logdir` should end
 in a path separator. For instance, `~/logs/leak/`.
 
-The command you need to run Firefox will look something like this:
+The command you need to run Datalus will look something like this:
 
     XPCOM_MEM_BLOAT_LOG=1 MOZ_CC_LOG_SHUTDOWN=1 MOZ_DISABLE_CONTENT_SANDBOX=t MOZ_CC_LOG_DIRECTORY=$logdir 
     MOZ_CC_LOG_PROCESS=content MOZ_CC_LOG_THREAD=main MOZ_DMD_SHUTDOWN_LOG=$logdir MOZ_DMD_LOG_PROCESS=tab ./mach run --dmd --mode=scan
@@ -98,7 +98,7 @@ Breaking this down:
     run. `--mode=scan` is needed so that when we get a DMD log the
     entire contents of each block of memory is saved for later analysis.
 
-With that command line in hand, you can start Firefox. Be aware that
+With that command line in hand, you can start Datalus. Be aware that
 this may take multiple minutes if you have optimization disabled.
 
 Once it has started, go through the steps you need to reproduce your

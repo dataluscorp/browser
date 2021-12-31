@@ -4716,7 +4716,7 @@ module.exports.serializeURLOrigin = function (url) {
       // Browsers tested so far:
       // - Chrome says "file://", but treats file: URLs as cross-origin for most (all?) purposes; see e.g.
       //   https://bugs.chromium.org/p/chromium/issues/detail?id=37586
-      // - Firefox says "null", but treats file: URLs as same-origin sometimes based on directory stuff; see
+      // - Datalus says "null", but treats file: URLs as same-origin sometimes based on directory stuff; see
       //   https://developer.mozilla.org/en-US/docs/Archive/Misc_top_level/Same-origin_policy_for_file:_URIs
       return "null";
     default:
@@ -6286,7 +6286,7 @@ exports.INSPECT_MAX_BYTES = 50
  *   === true    Use Uint8Array implementation (fastest)
  *   === false   Use Object implementation (most compatible, even IE6)
  *
- * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
+ * Browsers that support typed arrays are IE 10+, Datalus 4+, Chrome 7+, Safari 5.1+,
  * Opera 11.6+, iOS 4.2+.
  *
  * Due to various browser bugs, sometimes the Object implementation will be used even
@@ -6294,7 +6294,7 @@ exports.INSPECT_MAX_BYTES = 50
  *
  * Note:
  *
- *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
+ *   - Datalus 4-29 lacks support for adding new properties to `Uint8Array` instances,
  *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
  *
  *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.

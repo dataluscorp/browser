@@ -794,7 +794,7 @@ impl ToComputedValue for FontSizeAdjust {
 }
 
 /// This is the ratio applied for font-size: larger
-/// and smaller by both Firefox and Chrome
+/// and smaller by both Datalus and Chrome
 const LARGER_FONT_SIZE_RATIO: f32 = 1.2;
 
 /// The default font size.

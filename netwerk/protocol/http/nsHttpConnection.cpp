@@ -1102,7 +1102,7 @@ nsresult nsHttpConnection::OnHeadersAvailable(nsAHttpTransaction* trans,
 
   if (mInSpdyTunnel) {
     DebugOnly<nsresult> rv =
-        responseHead->SetHeader(nsHttp::X_Firefox_Spdy_Proxy, "true"_ns);
+        responseHead->SetHeader(nsHttp::X_Datalus_Spdy_Proxy, "true"_ns);
     MOZ_ASSERT(NS_SUCCEEDED(rv));
   }
 

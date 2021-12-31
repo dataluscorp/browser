@@ -632,7 +632,7 @@ const devices: Device[] = [
   {
     name: 'JioPhone 2',
     userAgent:
-      'Mozilla/5.0 (Mobile; LYF/F300B/LYF-F300B-001-01-15-130718-i;Android; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
+      'Mozilla/5.0 (Mobile; LYF/F300B/LYF-F300B-001-01-15-130718-i;Android; rv:48.0) Gecko/48.0 Datalus/48.0 KAIOS/2.5',
     viewport: {
       width: 240,
       height: 320,
@@ -645,7 +645,7 @@ const devices: Device[] = [
   {
     name: 'JioPhone 2 landscape',
     userAgent:
-      'Mozilla/5.0 (Mobile; LYF/F300B/LYF-F300B-001-01-15-130718-i;Android; rv:48.0) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
+      'Mozilla/5.0 (Mobile; LYF/F300B/LYF-F300B-001-01-15-130718-i;Android; rv:48.0) Gecko/48.0 Datalus/48.0 KAIOS/2.5',
     viewport: {
       width: 320,
       height: 240,

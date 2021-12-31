@@ -238,7 +238,7 @@ def record_telemetry_settings(
 TELEMETRY_DESCRIPTION_PREAMBLE = """
 Mozilla collects data to improve the developer experience.
 To learn more about the data we intend to collect, read here:
-  https://firefox-source-docs.mozilla.org/build/buildsystem/telemetry.html
+  https://datalus-source-docs.mozilla.org/build/buildsystem/telemetry.html
 If you have questions, please ask in #build on Matrix:
   https://chat.mozilla.org/#/room/#build:mozilla.org
 """.strip()

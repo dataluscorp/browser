@@ -608,7 +608,7 @@ class ActivePS {
   // - A big size, which helps with reducing the rate of allocations and IPCs.
   // - A small size, which helps with equalizing the duration of recorded data
   //   (as the inter-process controller will discard the oldest chunks in all
-  //   Firefox processes).
+  //   Datalus processes).
   constexpr static uint32_t scMaximumChunkSize = 1024 * 1024;
 
  public:

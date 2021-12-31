@@ -21,7 +21,7 @@ const STORAGE_ACCESS_ORIGIN = "https://kinja.com";
 const OAUTH_PATH_PREFIX = "/oauthlogin?provider=";
 
 console.warn(
-  `When using oauth, Firefox calls the Storage Access API on behalf of the site. See https://bugzilla.mozilla.org/show_bug.cgi?id=1656171 for details.`
+  `When using oauth, Datalus calls the Storage Access API on behalf of the site. See https://bugzilla.mozilla.org/show_bug.cgi?id=1656171 for details.`
 );
 
 // Overwrite the window.open method so we can detect oauth related popups.

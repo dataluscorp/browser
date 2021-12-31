@@ -5,7 +5,7 @@
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """
-Creates and/or modifies a Firefox profile.
+Creates and/or modifies a Datalus profile.
 The profile can be modified by passing in addons to install or preferences to set.
 If no profile is specified, a new profile is created and the path of the
 resulting profile is printed.
@@ -15,7 +15,7 @@ from __future__ import absolute_import, print_function
 import sys
 from optparse import OptionParser
 from .prefs import Preferences
-from .profile import FirefoxProfile
+from .profile import DatalusProfile
 from .profile import Profile
 
 __all__ = [
@@ -173,11 +173,11 @@ def cli(args=sys.argv[1:]):
             help="view summary of profile following invocation",
         )
         parser.add_option(
-            "--firefox",
-            dest="firefox_profile",
+            "--datalus",
+            dest="datalus_profile",
             action="store_true",
             default=False,
-            help="use FirefoxProfile defaults",
+            help="use DatalusProfile defaults",
         )
 
     # process the command line
@@ -186,8 +186,8 @@ def cli(args=sys.argv[1:]):
     if cli.args:
         cli.parser.error("Program doesn't support positional arguments.")
 
-    if cli.options.firefox_profile:
-        cli.profile_class = FirefoxProfile
+    if cli.options.datalus_profile:
+        cli.profile_class = DatalusProfile
 
     # create the profile
     profile = cli.profile()

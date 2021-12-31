@@ -13,7 +13,7 @@
       "desc": "Automatic version bump. CLOSED TREE NO BUG a=release"
     },
     {
-      "desc": "No bug - Tagging d345b657d381ade5195f1521313ac651618f54a2 with FIREFOX_53_0_BUILD6, FIREFOX_53_0_RELEASE a=release CLOSED TREE"
+      "desc": "No bug - Tagging d345b657d381ade5195f1521313ac651618f54a2 with DATALUS_53_0_BUILD6, DATALUS_53_0_RELEASE a=release CLOSED TREE"
     },
     {
       "desc": "No bug, Automated blocklist update from host bld-linux64-spot-305 - a=blocklist-update"
@@ -79,7 +79,7 @@
       "desc": "Added FENNEC_53_0_1_RELEASE FENNEC_53_0_1_BUILD1 tag(s) for changeset f029d1a1324b. DONTBUILD CLOSED TREE a=release"
     },
     {
-      "desc": "Backout Bug 1337861 (Enforce MOZ_BUILD_DATE) due to Bug 1360550. r=catlee a=catlee\n\nBug 1360550 resulted in the buildid the Linux builds had being different than the directory they were uploaded to. This had fallout affects for QA's firefox-ui tests and presumably anything using mozdownload.\n\nMozReview-Commit-ID: 8lMvLU0vGiS"
+      "desc": "Backout Bug 1337861 (Enforce MOZ_BUILD_DATE) due to Bug 1360550. r=catlee a=catlee\n\nBug 1360550 resulted in the buildid the Linux builds had being different than the directory they were uploaded to. This had fallout affects for QA's datalus-ui tests and presumably anything using mozdownload.\n\nMozReview-Commit-ID: 8lMvLU0vGiS"
     },
     {
       "desc": "No bug, Automated blocklist update from host bld-linux64-spot-303 - a=blocklist-update"

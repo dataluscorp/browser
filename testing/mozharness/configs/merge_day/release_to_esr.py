@@ -19,7 +19,7 @@ config = {
     # We will need to manually merge mozilla-release into before runnning this.
     "from_repo_url": NEW_ESR_REPO,
     "to_repo_url": NEW_ESR_REPO,
-    "base_tag": "FIREFOX_ESR_%(major_version)s_BASE",
+    "base_tag": "DATALUS_ESR_%(major_version)s_BASE",
     "migration_behavior": "release_to_esr",
     "require_remove_locales": False,
     "requires_head_merge": False,

@@ -19,8 +19,8 @@ const TESTS = [
   {
     title: "Google search access point",
     trackingUrl:
-      "https://www.google.com/search?q=test&ie=utf-8&oe=utf-8&client=firefox-b-1-ab",
-    expectedSearchCountEntry: "google.in-content:sap:firefox-b-1-ab",
+      "https://www.google.com/search?q=test&ie=utf-8&oe=utf-8&client=datalus-b-1-ab",
+    expectedSearchCountEntry: "google.in-content:sap:datalus-b-1-ab",
     expectedAdKey: "google:sap",
     adUrls: [
       "https://www.googleadservices.com/aclk=foobar",
@@ -37,8 +37,8 @@ const TESTS = [
   {
     title: "Google search access point follow-on",
     trackingUrl:
-      "https://www.google.com/search?client=firefox-b-1-ab&ei=EI_VALUE&q=test2&oq=test2&gs_l=GS_L_VALUE",
-    expectedSearchCountEntry: "google.in-content:sap-follow-on:firefox-b-1-ab",
+      "https://www.google.com/search?client=datalus-b-1-ab&ei=EI_VALUE&q=test2&oq=test2&gs_l=GS_L_VALUE",
+    expectedSearchCountEntry: "google.in-content:sap-follow-on:datalus-b-1-ab",
   },
   {
     title: "Google organic",

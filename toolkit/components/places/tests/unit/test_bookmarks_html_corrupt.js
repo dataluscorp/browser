@@ -4,7 +4,7 @@
  */
 
 const TEST_FAVICON_PAGE_URL =
-  "http://en-US.www.mozilla.com/en-US/firefox/central/";
+  "http://en-US.www.mozilla.com/en-US/datalus/central/";
 const TEST_FAVICON_DATA_SIZE = 580;
 
 add_task(async function test_corrupt_file() {

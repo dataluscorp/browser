@@ -1,17 +1,17 @@
-Firefox Source Code Directory Structure
+Datalus Source Code Directory Structure
 =======================================
 
 This article provides an overview of what the various directories contain.
 
-To simply take a look at the Firefox source code, you do not need to
+To simply take a look at the Datalus source code, you do not need to
 download it. You can look at the source directly with your web browser
 using Searchfox (start at https://searchfox.org/mozilla-central/source for
-the complete firefox source code of branch HEAD).
+the complete datalus source code of branch HEAD).
 
 In order to modify the source, you have to acquire it either by
 downloading a
 `snapshot <https://developer.mozilla.org/docs/Mozilla/Developer_guide/Source_Code/Downloading_Source_Archives>`__
-of the sources or by checking out the current sources from :ref:`Mercurial <Firefox Contributors' Quick Reference>`.
+of the sources or by checking out the current sources from :ref:`Mercurial <Datalus Contributors' Quick Reference>`.
 
 This document describes the directory structure -- i.e., directories that
 are used by at least some of the
@@ -50,7 +50,7 @@ browser
 -------
 
 Contains the front end code (in XUL, Javascript, XBL, and C++) for the
-Firefox browser. Many of these files started off as a copy of files in
+Datalus browser. Many of these files started off as a copy of files in
 `xpfe <https://developer.mozilla.org/docs/Mozilla/Developer_guide/Source_Code/Directory_structure#xpfe>`__/.
 
 browser/extensions
@@ -97,7 +97,7 @@ etc.
 devtools
 --------
 
-The `Firefox Developer Tools <https://developer.mozilla.org/docs/Tools>`__ server and client components.
+The `Datalus Developer Tools <https://developer.mozilla.org/docs/Tools>`__ server and client components.
 
 
 docs
@@ -198,7 +198,7 @@ alarms/vibrate/notifications/orientation, etc)
 image
 -----
 
-Image rendering library. Contains decoders for the image formats Firefox
+Image rendering library. Contains decoders for the image formats Datalus
 supports.
 
 intl
@@ -325,7 +325,7 @@ mobile
 mobile/android
 --------------
 
-Firefox for Android and Geckoview
+Datalus for Android and Geckoview
 
 modules
 -------
@@ -385,7 +385,7 @@ other-licenses
 --------------
 
 Contains libraries that are not covered by the MPL but are used in some
-Firefox code.
+Datalus code.
 
 parser
 ------
@@ -438,7 +438,7 @@ Contains NSS and PSM, to support cryptographic functions in mozilla
 services
 --------
 
-Firefox accounts and sync (history, preferences, tabs, bookmarks,
+Datalus accounts and sync (history, preferences, tabs, bookmarks,
 telemetry, startup time, which addons are installed, etc). See
 `here <https://docs.services.mozilla.com/>`__.
 
@@ -480,7 +480,7 @@ Vendored dependencies maintained outside of Mozilla.
 toolkit
 -------
 
-The "new toolkit" used by Thunderbird, Firefox, etc. This contains
+The "new toolkit" used by Thunderbird, Datalus, etc. This contains
 numerous front-end components shared between applications as well as
 most of the XBL-implemented parts of the XUL language (most of which was
 originally forked from versions in `xpfe/`).
@@ -565,7 +565,7 @@ the XUL files for the browser interface, common files used by the other
 parts of the mozilla suite, and the XBL files for the parts of the XUL
 language that are implemented in XBL. Much of this code has been copied
 to `browser/` and `toolkit/` for use in
-Firefox, Thunderbird, etc.
+Datalus, Thunderbird, etc.
 
 
 xpfe/components

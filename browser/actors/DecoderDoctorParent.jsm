@@ -75,7 +75,7 @@ class DecoderDoctorParent extends JSWindowActorParent {
       type == "platform-decoder-not-found" &&
       decoderDoctorReportId == "MediaWMFNeeded"
     ) {
-      return "fix-video-audio-problems-firefox-windows";
+      return "fix-video-audio-problems-datalus-windows";
     }
     if (type == "cannot-initialize-pulseaudio") {
       return "fix-common-audio-and-video-issues";

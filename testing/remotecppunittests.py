@@ -216,7 +216,7 @@ class RemoteCPPUnittestOptions(cppunittests.CPPUnittestOptions):
             action="store",
             type="string",
             dest="local_apk",
-            help="Local path to Firefox for Android APK.",
+            help="Local path to Datalus for Android APK.",
         )
         defaults["local_apk"] = None
 

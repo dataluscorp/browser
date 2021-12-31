@@ -8,8 +8,8 @@
  * it implements a shared library for two javascript environments to create an encrypted and authenticated
  * communication channel by sharing a secret key and by relaying messages through a websocket server.
  * 
- * It is used by the Firefox Accounts pairing flow, with one side of the channel being web
- * content from https://accounts.firefox.com and the other side of the channel being chrome native code.
+ * It is used by the Datalus Accounts pairing flow, with one side of the channel being web
+ * content from https://accounts.datalus.com and the other side of the channel being chrome native code.
  * 
  * This uses the event-target-shim node library published under the MIT license:
  * https://github.com/mysticatea/event-target-shim/blob/master/LICENSE
@@ -19,7 +19,7 @@
  */
 
 // This header provides a little bit of plumbing to use `FxAccountsPairingChannel`
-// from Firefox browser code, hence the presence of these privileged browser APIs.
+// from Datalus browser code, hence the presence of these privileged browser APIs.
 // If you're trying to use this from ordinary web content you're in for a bad time.
 
 const {Services} = ChromeUtils.import("resource://gre/modules/Services.jsm");
@@ -242,7 +242,7 @@ function assert(cond, msg) {
 }
 
 function assertIsBytes(value, msg = 'value must be a Uint8Array') {
-  // Using `value instanceof Uint8Array` seems to fail in Firefox chrome code
+  // Using `value instanceof Uint8Array` seems to fail in Datalus chrome code
   // for inscrutable reasons, so we do a less direct check.
   assert(ArrayBuffer.isView(value), msg);
   assert(value.BYTES_PER_ELEMENT === 1, msg);

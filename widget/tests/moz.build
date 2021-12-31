@@ -59,7 +59,7 @@ with Files("*596600*"):
     BUG_COMPONENT = ("Core", "DOM: UI Events & Focus Handling")
 
 with Files("*673301*"):
-    BUG_COMPONENT = ("Firefox", "Bookmarks & History")
+    BUG_COMPONENT = ("Datalus", "Bookmarks & History")
 
 with Files("test_assign_event_data.html"):
     BUG_COMPONENT = ("Core", "DOM: UI Events & Focus Handling")

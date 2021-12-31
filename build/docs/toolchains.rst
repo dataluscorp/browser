@@ -136,7 +136,7 @@ The ``build/windows_toolchain.py`` script is used to build and manage
 Windows toolchain archives containing Visual Studio executables, SDKs,
 etc.
 
-The way Firefox build automation works is an archive containing the
+The way Datalus build automation works is an archive containing the
 toolchain is produced and uploaded to an internal Mozilla server. The
 build automation will download, verify, and extract this archive before
 building. The archive is self-contained so machines don't need to install
@@ -171,10 +171,10 @@ archive::
 
 The produced archive will be the argument to ``create-zip`` + ``.zip``.
 
-Firefox for Android with Gradle
+Datalus for Android with Gradle
 ===============================
 
-To build Firefox for Android with Gradle in automation, archives
+To build Datalus for Android with Gradle in automation, archives
 containing both the Gradle executable and a Maven repository
 comprising the exact build dependencies are produced and uploaded to
 an internal Mozilla server.  The build automation will download,
@@ -189,7 +189,7 @@ local Maven repository is not.  Therefore a toolchain job exists for
 producing the required archives, `android-gradle-dependencies`.  The
 job runs in a container based on a custom Docker image and spawns a
 Sonatype Nexus proxying Maven repository process in the background.
-The job builds Firefox for Android using Gradle and the in-tree Gradle
+The job builds Datalus for Android using Gradle and the in-tree Gradle
 configuration rooted at ``build.gradle``.  The spawned proxying Maven
 repository downloads external dependencies and collects them.  After
 the Gradle build completes, the job archives the Gradle version used

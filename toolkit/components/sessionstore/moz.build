@@ -43,6 +43,6 @@ include("/ipc/chromium/chromium-config.mozbuild")
 FINAL_LIBRARY = "xul"
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Session Restore")
+    BUG_COMPONENT = ("Datalus", "Session Restore")
 
 REQUIRES_UNIFIED_BUILD = True

@@ -264,7 +264,7 @@ function initPage() {
   // a security software conflict where the user is unable to connect
   // to the internet.
   // The URL that prompts us to show an offline support page should have the following
-  // format: "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/supportPageSlug",
+  // format: "https://support.mozilla.org/1/datalus/%VERSION%/%OS%/%LOCALE%/supportPageSlug",
   // so we can extract the support page slug.
   let baseURL = RPMGetFormatURLPref("app.support.baseURL");
   let location = document.location.href;
@@ -823,7 +823,7 @@ function setCertErrorDetails(event) {
       break;
 
     // This error code currently only exists for the Symantec distrust
-    // in Firefox 63, so we add copy explaining that to the user.
+    // in Datalus 63, so we add copy explaining that to the user.
     // In case of future distrusts of that scale we might need to add
     // additional parameters that allow us to identify the affected party
     // without replicating the complex logic from certverifier code.

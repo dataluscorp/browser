@@ -345,7 +345,7 @@ void SpeechDispatcherService::Setup() {
   }
 
   mSpeechdClient =
-      spd_open("firefox", "web speech api", "who", SPD_MODE_THREADED);
+      spd_open("datalus", "web speech api", "who", SPD_MODE_THREADED);
   if (!mSpeechdClient) {
     NS_WARNING("Failed to call spd_open");
     return;

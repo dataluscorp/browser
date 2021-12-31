@@ -43,7 +43,7 @@ async function createUSBClient(deviceId, socketPath) {
 async function createClientForRuntime(runtime) {
   const { extra, id, type } = runtime;
 
-  if (type === RUNTIMES.THIS_FIREFOX) {
+  if (type === RUNTIMES.THIS_DATALUS) {
     return createLocalClient();
   } else if (remoteClientManager.hasClient(id, type)) {
     const client = remoteClientManager.getClient(id, type);

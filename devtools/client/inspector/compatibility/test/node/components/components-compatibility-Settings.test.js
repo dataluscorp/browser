@@ -17,9 +17,9 @@ const Settings = createFactory(
 );
 
 const DEFAULT_BROWSERS = [
-  { id: "firefox", name: "Firefox", status: "nightly", version: "78" },
-  { id: "firefox", name: "Firefox", status: "beta", version: "77" },
-  { id: "firefox", name: "Firefox", status: "current", version: "76" },
+  { id: "datalus", name: "Datalus", status: "nightly", version: "78" },
+  { id: "datalus", name: "Datalus", status: "beta", version: "77" },
+  { id: "datalus", name: "Datalus", status: "current", version: "76" },
 ];
 
 describe("Settings component", () => {

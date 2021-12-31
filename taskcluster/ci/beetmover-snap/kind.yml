@@ -15,5 +15,5 @@ kind-dependencies:
 
 job-template:
     attributes:
-        artifact_map: taskcluster/gecko_taskgraph/manifests/firefox_snap.yml
+        artifact_map: taskcluster/gecko_taskgraph/manifests/datalus_snap.yml
     shipping-phase: promote

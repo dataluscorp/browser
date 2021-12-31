@@ -37,7 +37,7 @@ for path in paths:
         raise IOError("%s does not exist. " % path)
     sys.path.insert(0, path)
 
-from cmdline import FIREFOX_ANDROID_APPS
+from cmdline import DATALUS_ANDROID_APPS
 from condprof.client import get_profile, ProfileNotFoundError
 from condprof.util import get_current_platform
 from logger.logger import RaptorLogger
@@ -148,7 +148,7 @@ class Perftest(object):
             "verbose": verbose,
         }
 
-        self.firefox_android_apps = FIREFOX_ANDROID_APPS
+        self.datalus_android_apps = DATALUS_ANDROID_APPS
 
         # We are deactivating the conditioned profiles for:
         # - win10-aarch64 : no support for geckodriver see 1582757
@@ -163,7 +163,7 @@ class Perftest(object):
         else:
             LOG.info("Using an empty profile.")
 
-        # To differentiate between chrome/firefox failures, we
+        # To differentiate between chrome/datalus failures, we
         # set an app variable in the logger which prefixes messages
         # with the app name
         if self.config["app"] in ("chrome", "chrome-m", "chromium"):
@@ -261,7 +261,7 @@ class Perftest(object):
         scenario = self.config.get("conditioned_profile")
         runner = Runner(
             profile=None,
-            firefox=self.config.get("binary"),
+            datalus=self.config.get("binary"),
             geckodriver=geckodriver,
             archive=None,
             device_name=self.config.get("device_name"),
@@ -556,7 +556,7 @@ class Perftest(object):
             self.gecko_profiler = GeckoProfile(upload_dir, self.config, test)
 
     def disable_non_local_connections(self):
-        # For Firefox we need to set MOZ_DISABLE_NONLOCAL_CONNECTIONS=1 env var before startup
+        # For Datalus we need to set MOZ_DISABLE_NONLOCAL_CONNECTIONS=1 env var before startup
         # when testing release builds from mozilla-beta/release. This is because of restrictions
         # on release builds that require webextensions to be signed unless this env var is set
         LOG.info("setting MOZ_DISABLE_NONLOCAL_CONNECTIONS=1")
@@ -585,12 +585,12 @@ class PerftestAndroid(Perftest):
         Uses mozversion as the primary method to get this meta data and for
         android this is the only method which exists to get this data. With android,
         we use the installerpath attribute to determine this and this only works
-        with Firefox browsers.
+        with Datalus browsers.
         """
         browser_name = None
         browser_version = None
 
-        if self.config["app"] in self.firefox_android_apps:
+        if self.config["app"] in self.datalus_android_apps:
             try:
                 meta = mozversion.get_version(binary=self.installerpath)
                 browser_name = meta.get("application_name")
@@ -759,7 +759,7 @@ class PerftestDesktop(Perftest):
         """Returns the browser name and version in a tuple (name, version).
 
         On desktop, we use mozversion but a fallback method also exists
-        for non-firefox browsers, where mozversion is known to fail. The
+        for non-datalus browsers, where mozversion is known to fail. The
         methods are OS-specific, with windows being the outlier.
         """
         browser_name = None

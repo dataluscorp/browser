@@ -32,10 +32,10 @@ describe("Document", () => {
     );
 
     expect(renderedComponent.text()).toEqual(
-      "HTMLDocument https://www.mozilla.org/en-US/firefox/new/"
+      "HTMLDocument https://www.mozilla.org/en-US/datalus/new/"
     );
     expect(renderedComponent.prop("title")).toEqual(
-      "HTMLDocument https://www.mozilla.org/en-US/firefox/new/"
+      "HTMLDocument https://www.mozilla.org/en-US/datalus/new/"
     );
     expectActorAttribute(renderedComponent, stub.actor);
   });

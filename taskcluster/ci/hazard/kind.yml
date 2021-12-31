@@ -28,7 +28,7 @@ jobs:
     linux64-shell-haz/debug:
         description: "JS Shell Hazard Analysis Linux"
         index:
-            product: firefox
+            product: datalus
             job-name: shell-haz-debug
         treeherder:
             platform: linux64/debug
@@ -55,7 +55,7 @@ jobs:
     linux64-haz/debug:
         description: "Browser Hazard Analysis Linux"
         index:
-            product: firefox
+            product: datalus
             job-name: browser-haz-debug
         treeherder:
             platform: linux64/debug

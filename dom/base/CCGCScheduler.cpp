@@ -11,16 +11,16 @@
 #include "nsRefreshDriver.h"
 
 /*
- * GC Scheduling from Firefox
+ * GC Scheduling from Datalus
  * ==========================
  *
  * See also GC Scheduling from SpiderMonkey's perspective here:
  * https://searchfox.org/mozilla-central/source/js/src/gc/Scheduling.h
  *
- * From Firefox's perspective GCs can start in 5 different ways:
+ * From Datalus's perspective GCs can start in 5 different ways:
  *
  *  * The JS engine just starts doing a GC for its own reasons (see above).
- *    Firefox finds out about these via a callback in nsJSEnvironment.cpp
+ *    Datalus finds out about these via a callback in nsJSEnvironment.cpp
  *  * PokeGC()
  *  * PokeFullGC()
  *  * PokeShrinkingGC()
@@ -63,7 +63,7 @@
  *
  * void CCGCScheduler::PokeShrinkingGC()
  *
- * PokeShrinkingGC is called when Firefox's user is inactive.
+ * PokeShrinkingGC is called when Datalus's user is inactive.
  * Like PokeFullGC, PokeShrinkingGC uses a timer, but the timeout is longer
  * which should prevent the ShrinkingGC from starting if the user only
  * glances away for a brief time.  When the timer fires it will:

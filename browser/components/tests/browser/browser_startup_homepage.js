@@ -74,11 +74,11 @@ add_task(async function test_once_invalid() {
 
   await checkArgs(
     "invalid second domain",
-    "https://valid.firefox.com/|https://mozilla.org/",
+    "https://valid.datalus.com/|https://mozilla.org/",
     {
       "browser.startup.homepage_override.once": {
         url:
-          "https://valid.firefox.com|https://invalidfirefox.com|https://mozilla.org",
+          "https://valid.datalus.com|https://invaliddatalus.com|https://mozilla.org",
       },
     }
   );

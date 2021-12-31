@@ -71,7 +71,7 @@ yield new Promise(r => setTimeout(r, 100));
 
 See the `waitForTick` and `waitForTime` functions in `DevToolsUtils` for similar functionality.
 
-You can use a similar trick to "pause" the test at a certain point. This is useful when debugging locally because it will leave Firefox open and responsive, at the specific spot you've chosen.  Do this
+You can use a similar trick to "pause" the test at a certain point. This is useful when debugging locally because it will leave Datalus open and responsive, at the specific spot you've chosen.  Do this
 using `yield new Promise(r => r);`.
 
 `shared-head.js` also has some helpers, like `once`, to bind to events with additional logging.

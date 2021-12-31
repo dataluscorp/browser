@@ -16,13 +16,13 @@ Privacy
 User Security
 -------------
 
--  Will this bug adversely affect Firefox users if left public?
+-  Will this bug adversely affect Datalus users if left public?
 
    -  Add to security group
 
 -  Otherwise move bug to one of:
 
    -  Core:: Security
-   -  Firefox:: Security
+   -  Datalus:: Security
    -  Toolkit:: Security
    -  Webkit:: Security

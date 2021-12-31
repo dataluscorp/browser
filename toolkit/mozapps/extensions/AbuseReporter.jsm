@@ -249,7 +249,7 @@ const AbuseReporter = {
       details.authors && details.authors[0] && details.authors[0][fieldName];
 
     // Normalize type "statictheme" (which is the type used on the AMO API side)
-    // into "theme" (because it is the type we use and expect on the Firefox side
+    // into "theme" (because it is the type we use and expect on the Datalus side
     // for this addon type).
     const addonType = details.type === "statictheme" ? "theme" : details.type;
 

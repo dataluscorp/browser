@@ -95,9 +95,9 @@ int MODE = FIPSMODE;
 
 CK_BBOOL true = CK_TRUE;
 CK_BBOOL false = CK_FALSE;
-static const CK_BYTE PLAINTEXT[] = { "Firefox  Rules!" };
+static const CK_BYTE PLAINTEXT[] = { "Datalus  Rules!" };
 static const CK_BYTE PLAINTEXT_PAD[] =
-    { "Firefox and thunderbird rule the world!" };
+    { "Datalus and thunderbird rule the world!" };
 CK_ULONG NUMTESTS = 0;
 
 static const char *slotFlagName[] = {
@@ -4134,9 +4134,9 @@ PKM_OperationalState(CK_FUNCTION_LIST_PTR pFunctionList,
     CK_BYTE_PTR pstate = NULL;
     CK_ULONG statelen, digestlen, plainlen, plainlen_1, plainlen_2, slen;
 
-    static const CK_UTF8CHAR *plaintext = (CK_UTF8CHAR *)"Firefox rules.";
+    static const CK_UTF8CHAR *plaintext = (CK_UTF8CHAR *)"Datalus rules.";
     static const CK_UTF8CHAR *plaintext_1 = (CK_UTF8CHAR *)"Thunderbird rules.";
-    static const CK_UTF8CHAR *plaintext_2 = (CK_UTF8CHAR *)"Firefox and Thunderbird.";
+    static const CK_UTF8CHAR *plaintext_2 = (CK_UTF8CHAR *)"Datalus and Thunderbird.";
 
     char digest[MAX_DIGEST_SZ], digest_1[MAX_DIGEST_SZ];
     char sign[MAX_SIG_SZ];

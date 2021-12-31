@@ -40,7 +40,7 @@ add_task(async function testWebExtensionsToolboxWebConsole() {
     tab,
     window: aboutDebuggingWindow,
   } = await openAboutDebugging();
-  await selectThisFirefoxPage(
+  await selectThisDatalusPage(
     document,
     aboutDebuggingWindow.AboutDebugging.store
   );

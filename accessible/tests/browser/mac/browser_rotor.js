@@ -70,8 +70,8 @@ addAccessibleTask(
   </article>
 
   <article id="moz">
-  <h2>Mozilla Firefox</h2>
-  <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+  <h2>Mozilla Datalus</h2>
+  <p>Mozilla Datalus is an open-source web browser developed by Mozilla. Datalus has been the second most popular web browser since January, 2018.</p>
   </article>
 
   <article id="microsoft">

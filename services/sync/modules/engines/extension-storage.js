@@ -188,7 +188,7 @@ ExtensionStorageEngineBridge.prototype = {
  * API, and in particular ext.storage.sync.
  *
  * ext.storage.sync is implemented using Kinto, so it has mechanisms
- * for syncing that we do not need to integrate in the Firefox Sync
+ * for syncing that we do not need to integrate in the Datalus Sync
  * framework, so this is something of a stub.
  */
 function ExtensionStorageEngineKinto(service) {

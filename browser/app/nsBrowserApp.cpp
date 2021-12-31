@@ -122,7 +122,7 @@ static MOZ_FORMAT_PRINTF(1, 2) void Output(const char* fmt, ...) {
     decltype(MessageBoxW)* messageBoxW =
         (decltype(MessageBoxW)*)GetProcAddress(user32, "MessageBoxW");
     if (messageBoxW) {
-      messageBoxW(nullptr, wide_msg, L"Firefox",
+      messageBoxW(nullptr, wide_msg, L"Datalus",
                   MB_OK | MB_ICONERROR | MB_SETFOREGROUND);
     }
     FreeLibrary(user32);
@@ -152,7 +152,7 @@ static bool IsArg(const char* arg, const char* s) {
 Bootstrap::UniquePtr gBootstrap;
 
 static int do_main(int argc, char* argv[], char* envp[]) {
-  // Allow firefox.exe to launch XULRunner apps via -app <application.ini>
+  // Allow datalus.exe to launch XULRunner apps via -app <application.ini>
   // Note that -app must be the *first* argument.
   const char* appDataFile = getenv("XUL_APP_FILE");
   if ((!appDataFile || !*appDataFile) && (argc > 1 && IsArg(argv[1], "app"))) {
@@ -299,7 +299,7 @@ int main(int argc, char* argv[], char* envp[]) {
 #  endif
 #  if defined(XP_WIN)
     // Ideally, we would be able to set our DPI awareness in
-    // firefox.exe.manifest Unfortunately, that would cause Win32k calls when
+    // datalus.exe.manifest Unfortunately, that would cause Win32k calls when
     // user32.dll gets loaded, which would be incompatible with Win32k Lockdown
     //
     // MSDN says that it's allowed-but-not-recommended to initialize DPI
@@ -360,7 +360,7 @@ int main(int argc, char* argv[], char* envp[]) {
 
 #if defined(XP_WIN)
 
-  // Ideally, we would be able to set our DPI awareness in firefox.exe.manifest
+  // Ideally, we would be able to set our DPI awareness in datalus.exe.manifest
   // Unfortunately, that would cause Win32k calls when user32.dll gets loaded,
   // which would be incompatible with Win32k Lockdown
   //

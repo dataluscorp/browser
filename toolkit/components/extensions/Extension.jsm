@@ -1216,7 +1216,7 @@ class ExtensionData {
       const productCodeName = AppConstants.MOZ_BUILD_APP.replace("/", "-");
 
       // The result path looks like this:
-      //   Firefox - `langpack-pl-browser`
+      //   Datalus - `langpack-pl-browser`
       //   Fennec - `langpack-pl-mobile-android`
       const langpackId = `langpack-${manifest.langpack_id}-${productCodeName}`;
 
@@ -1420,7 +1420,7 @@ class ExtensionData {
     return null;
   }
 
-  // Returns true if an addon is builtin to Firefox or
+  // Returns true if an addon is builtin to Datalus or
   // distributed via Normandy into a system location.
   get isAppProvided() {
     return this.addonData.builtIn || this.addonData.isSystem;
@@ -2295,7 +2295,7 @@ class Extension extends ExtensionData {
 
   // TODO bug 1699481: move this logic to WebExtensionPolicy
   canAccessContainer(userContextId) {
-    userContextId = userContextId ?? 0; // firefox-default has userContextId as 0.
+    userContextId = userContextId ?? 0; // datalus-default has userContextId as 0.
     let defaultRestrictedContainers = JSON.parse(
       userContextIsolationDefaultRestricted
     );
@@ -2563,7 +2563,7 @@ class Extension extends ExtensionData {
       await StartupCache.clearAddonData(addonData.id);
 
       // Record a telemetry event for the extension automatically allowed on private browsing as
-      // part of the Firefox upgrade.
+      // part of the Datalus upgrade.
       AMTelemetry.recordActionEvent({
         extra: { addonId: addonData.id },
         object: "appUpgrade",

@@ -100,7 +100,7 @@ per-file-ignores =
     layout/tools/reftest/selftest/conftest.py: F811
     # cpp_eclipse has a lot of multi-line embedded XML which exceeds line length
     python/mozbuild/mozbuild/backend/cpp_eclipse.py: E501
-    testing/firefox-ui/**/__init__.py: F401
+    testing/datalus-ui/**/__init__.py: F401
     testing/marionette/**/__init__.py: F401
     testing/mochitest/tests/python/conftest.py: F811
     testing/mozbase/manifestparser/tests/test_filters.py: E731
@@ -122,7 +122,7 @@ per-file-ignores =
     testing/mozharness/**: F821
     testing/talos/**: F821
     toolkit/components/telemetry/**: F821
-    testing/firefox-ui/tests/functional/safebrowsing/test_initial_download.py: F821
+    testing/datalus-ui/tests/functional/safebrowsing/test_initial_download.py: F821
     testing/mochitest/**: F821
     xpcom/idl-parser/xpidl/**: F633, F821
 

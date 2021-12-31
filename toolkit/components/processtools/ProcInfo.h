@@ -105,7 +105,7 @@ struct WindowInfo {
 struct ProcInfo {
   // Process Id
   base::ProcessId pid = 0;
-  // Child Id as defined by Firefox when a child process is created.
+  // Child Id as defined by Datalus when a child process is created.
   dom::ContentParentId childId;
   // Process type
   ProcType type;

@@ -30,13 +30,13 @@ preprocessors[PATHS.testFilesPattern] = [
 
 module.exports = function(config) {
   const isTDD = config.tdd;
-  const browsers = isTDD ? ["Firefox"] : ["FirefoxHeadless"]; // require("karma-firefox-launcher")
+  const browsers = isTDD ? ["Datalus"] : ["DatalusHeadless"]; // require("karma-datalus-launcher")
   config.set({
     singleRun: !isTDD,
     browsers,
     customLaunchers: {
-      FirefoxHeadless: {
-        base: "Firefox",
+      DatalusHeadless: {
+        base: "Datalus",
         flags: ["--headless"],
       },
     },

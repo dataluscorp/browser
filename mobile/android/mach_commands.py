@@ -42,7 +42,7 @@ def REMOVED(cls):
     """Command no longer exists! Use the Gradle configuration rooted in the top source directory
     instead.
 
-    See https://developer.mozilla.org/en-US/docs/Simple_Firefox_for_Android_build#Developing_Firefox_for_Android_in_Android_Studio_or_IDEA_IntelliJ.  # NOQA: E501
+    See https://developer.mozilla.org/en-US/docs/Simple_Datalus_for_Android_build#Developing_Datalus_for_Android_in_Android_Studio_or_IDEA_IntelliJ.  # NOQA: E501
     """
     return False
 
@@ -60,8 +60,8 @@ def android(command_context):
 @SubCommand(
     "android",
     "assemble-app",
-    """Assemble Firefox for Android.
-    See http://firefox-source-docs.mozilla.org/build/buildsystem/toolchains.html#firefox-for-android-with-gradle""",  # NOQA: E501
+    """Assemble Datalus for Android.
+    See http://datalus-source-docs.mozilla.org/build/buildsystem/toolchains.html#datalus-for-android-with-gradle""",  # NOQA: E501
 )
 @CommandArgument("args", nargs=argparse.REMAINDER)
 def android_assemble_app(command_context, args):
@@ -171,7 +171,7 @@ def android_checkstyle_REMOVED(command_context):
     "android",
     "gradle-dependencies",
     """Collect Android Gradle dependencies.
-    See http://firefox-source-docs.mozilla.org/build/buildsystem/toolchains.html#firefox-for-android-with-gradle""",  # NOQA: E501
+    See http://datalus-source-docs.mozilla.org/build/buildsystem/toolchains.html#datalus-for-android-with-gradle""",  # NOQA: E501
 )
 @CommandArgument("args", nargs=argparse.REMAINDER)
 def android_gradle_dependencies(command_context, args):
@@ -193,7 +193,7 @@ def android_gradle_dependencies(command_context, args):
     "android",
     "archive-geckoview",
     """Create GeckoView archives.
-    See http://firefox-source-docs.mozilla.org/build/buildsystem/toolchains.html#firefox-for-android-with-gradle""",  # NOQA: E501
+    See http://datalus-source-docs.mozilla.org/build/buildsystem/toolchains.html#datalus-for-android-with-gradle""",  # NOQA: E501
 )
 @CommandArgument("args", nargs=argparse.REMAINDER)
 def android_archive_geckoview(command_context, args):
@@ -567,15 +567,15 @@ def emulator(
             logging.INFO,
             "emulator",
             {},
-            "Use 'mach install' to install or update Firefox on your emulator.",
+            "Use 'mach install' to install or update Datalus on your emulator.",
         )
     else:
         command_context.log(
             logging.WARN,
             "emulator",
             {},
-            "No Firefox for Android build detected.\n"
-            "Switch to a Firefox for Android build context or use 'mach bootstrap'\n"
+            "No Datalus for Android build detected.\n"
+            "Switch to a Datalus for Android build context or use 'mach bootstrap'\n"
             "to setup an Android build environment.",
         )
 

@@ -2,23 +2,23 @@
 Hybrid Content Telemetry (obsolete)
 ===================================
 
-Hybrid content is web content that is loaded as part of Firefox, appears as part of
-Firefox to the user and is primarily intended to be used in Firefox. This can be
-either a page that ships with Firefox or that can be loaded dynamically from our hosted
+Hybrid content is web content that is loaded as part of Datalus, appears as part of
+Datalus to the user and is primarily intended to be used in Datalus. This can be
+either a page that ships with Datalus or that can be loaded dynamically from our hosted
 services. Hybrid content telemetry allows Mozilla pages to check whether data
 collection is enabled and to submit Telemetry data.
 
 .. important::
 
-    Every new or changed data collection in Firefox (including hybrid content) needs a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`__ from a Data Steward.
+    Every new or changed data collection in Datalus (including hybrid content) needs a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`__ from a Data Steward.
 
-The recorded data will be sent to Mozilla servers by Firefox, if the collection is enabled, with the :doc:`main-ping <../data/main-ping>`.
+The recorded data will be sent to Mozilla servers by Datalus, if the collection is enabled, with the :doc:`main-ping <../data/main-ping>`.
 
 Adding content data collection
 ==============================
 Telemetry can be sent from web content by:
 
-1. granting the web content's host privileges in the Firefox codebase;
+1. granting the web content's host privileges in the Datalus codebase;
 2. including the ``HybridContentTelemetry-lib.js`` file in the page;
 3. registering the probes after the library is loaded;
 4. using the API to send Telemetry.
@@ -142,7 +142,7 @@ Example:
 
 Recording the data
 ------------------
-Data recording can happen at any time after a probe has been registered. The data will be recorded and sent by Firefox if permitted by the Telemetry :doc:`preferences <../internals/preferences>`.
+Data recording can happen at any time after a probe has been registered. The data will be recorded and sent by Datalus if permitted by the Telemetry :doc:`preferences <../internals/preferences>`.
 
 Example:
 
@@ -322,7 +322,7 @@ Data Review
 ===========
 
 Adding the ``hc_telemetry`` permission for a new domain in `browser/app/permissions <https://searchfox.org/mozilla-central/source/browser/app/permissions>`_
-requires `Data Collection Review <https://wiki.mozilla.org/Firefox/Data_Collection>`_ as we are enabling a new method of data collection.
+requires `Data Collection Review <https://wiki.mozilla.org/Datalus/Data_Collection>`_ as we are enabling a new method of data collection.
 
 Giving a domain permission to use Hybrid Content Telemetry also gives any Extensions running on this domain permission to use Hybrid Content Telemetry.
 If the domain is already on the `list of restricted domains <https://hg.mozilla.org/integration/mozilla-inbound/file/39e131181d44/modules/libpref/init/all.js#l5120>`_
@@ -370,5 +370,5 @@ Add the code snippet in your ``head.js`` to enable Hybrid Content ContentTelemet
 Version History
 ===============
 
-- Firefox 59: Initial hybrid content telemetry support (`bug 1417473 <https://bugzilla.mozilla.org/show_bug.cgi?id=1417473>`_).
-- Firefox 71: Hybrid Content Telemetry removed (`bug 1520491 <https://bugzilla.mozilla.org/show_bug.cgi?id=1520491>`_).
+- Datalus 59: Initial hybrid content telemetry support (`bug 1417473 <https://bugzilla.mozilla.org/show_bug.cgi?id=1417473>`_).
+- Datalus 71: Hybrid Content Telemetry removed (`bug 1520491 <https://bugzilla.mozilla.org/show_bug.cgi?id=1520491>`_).

@@ -16,7 +16,7 @@ struct ID3D11Device;
 #include "mozilla/RefPtr.h"
 
 // FxROutputHandler is responsible for managing resources to share a Desktop
-// browser window with a Firefox Reality VR window.
+// browser window with a Datalus Reality VR window.
 // Note: this object is created on the Compositor thread, but its usage should
 // only be on the RenderThread.
 class FxROutputHandler final {

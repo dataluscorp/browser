@@ -19,8 +19,8 @@
     "search_provider": {
       "name": "Seznam",
       "search_url": "https://search.seznam.cz/",
-      "search_form": "https://search.seznam.cz/?q={searchTerms}&sourceid=firefox",
-      "search_url_get_params": "q={searchTerms}&sourceid=firefox",
+      "search_form": "https://search.seznam.cz/?q={searchTerms}&sourceid=datalus",
+      "search_url_get_params": "q={searchTerms}&sourceid=datalus",
       "suggest_url": "https://suggest.seznam.cz/fulltext_ff",
       "suggest_url_get_params": "phrase={searchTerms}"
     }

@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 """
-Fetch build artifacts from a Firefox tree.
+Fetch build artifacts from a Datalus tree.
 
 This provides an (at-the-moment special purpose) interface to download Android
 artifacts from Mozilla's Task Cluster.
@@ -484,7 +484,7 @@ class AndroidArtifactJob(ArtifactJob):
 
 class LinuxArtifactJob(ArtifactJob):
     package_re = r"public/build/target\.tar\.bz2"
-    product = "firefox"
+    product = "datalus"
 
     _package_artifact_patterns = {
         "{product}/crashreporter",
@@ -513,7 +513,7 @@ class LinuxArtifactJob(ArtifactJob):
                     ):
                         continue
 
-                    # We strip off the relative "firefox/" bit from the path,
+                    # We strip off the relative "datalus/" bit from the path,
                     # but otherwise preserve it.
                     destpath = mozpath.join("bin", mozpath.relpath(p, self.product))
                     self.log(
@@ -571,7 +571,7 @@ class ResignJarWriter(JarWriter):
 
 class MacArtifactJob(ArtifactJob):
     package_re = r"public/build/target\.dmg"
-    product = "firefox"
+    product = "datalus"
 
     # These get copied into dist/bin without the path, so "root/a/b/c" -> "dist/bin/c".
     _paths_no_keep_path = (
@@ -644,7 +644,7 @@ class MacArtifactJob(ArtifactJob):
                     [
                         "browser/components/libbrowsercomps.dylib",
                         "dependentlibs.list",
-                        # 'firefox',
+                        # 'datalus',
                         "gmp-clearkey/0.1/libclearkey.dylib",
                         # 'gmp-fake/1.0/libfake.dylib',
                         # 'gmp-fakeopenh264/1.0/libfakeopenh264.dylib',
@@ -695,7 +695,7 @@ class MacArtifactJob(ArtifactJob):
 
 class WinArtifactJob(ArtifactJob):
     package_re = r"public/build/target\.(zip|tar\.gz)"
-    product = "firefox"
+    product = "datalus"
 
     _package_artifact_patterns = {
         "{product}/dependentlibs.list",
@@ -738,7 +738,7 @@ class WinArtifactJob(ArtifactJob):
                 ):
                     continue
 
-                # strip off the relative "firefox/" bit from the path:
+                # strip off the relative "datalus/" bit from the path:
                 basename = mozpath.relpath(p, self.product)
                 basename = mozpath.join("bin", basename)
                 self.log(
@@ -1012,7 +1012,7 @@ class TaskCache(CacheManager):
 
 
 class Artifacts(object):
-    """Maintain state to efficiently fetch build artifacts from a Firefox tree."""
+    """Maintain state to efficiently fetch build artifacts from a Datalus tree."""
 
     def __init__(
         self,
@@ -1247,7 +1247,7 @@ class Artifacts(object):
 There are no public revisions.
 This can happen if the repository is created from bundle file and never pulled
 from remote.  Please run `hg pull` and build again.
-https://firefox-source-docs.mozilla.org/contributing/vcs/mercurial_bundles.html
+https://datalus-source-docs.mozilla.org/contributing/vcs/mercurial_bundles.html
 """
             )
 
@@ -1307,7 +1307,7 @@ https://firefox-source-docs.mozilla.org/contributing/vcs/mercurial_bundles.html
             raise Exception(
                 "Could not find any candidate pushheads in the last {num} revisions.\n"
                 "Search started with {rev}, which must be known to Mozilla automation.\n\n"
-                "see https://firefox-source-docs.mozilla.org/contributing/build/artifact_builds.html".format(  # noqa E501
+                "see https://datalus-source-docs.mozilla.org/contributing/build/artifact_builds.html".format(  # noqa E501
                     rev=last_revs[0], num=NUM_PUSHHEADS_TO_QUERY_PER_PARENT
                 )
             )

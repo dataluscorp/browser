@@ -11,14 +11,14 @@ Examples:
   "id": "7864",
   "content": {...},
   // simple equality check
-  "targeting": "usesFirefoxSync == true"
+  "targeting": "usesDatalusSync == true"
 }
 
 {
   "id": "7865",
   "content": {...},
   // using JEXL transforms and combining two attributes
-  "targeting": "usesFirefoxSync == true && profileAgeCreated > '2018-01-07'|date"
+  "targeting": "usesDatalusSync == true && profileAgeCreated > '2018-01-07'|date"
 }
 
 {

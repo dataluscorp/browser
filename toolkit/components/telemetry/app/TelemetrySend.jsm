@@ -63,7 +63,7 @@ const LOGGER_NAME = "Toolkit.Telemetry";
 const LOGGER_PREFIX = "TelemetrySend::";
 
 const TOPIC_IDLE_DAILY = "idle-daily";
-// The following topics are notified when Firefox is closing
+// The following topics are notified when Datalus is closing
 // because the OS is shutting down.
 const TOPIC_QUIT_APPLICATION_GRANTED = "quit-application-granted";
 const TOPIC_QUIT_APPLICATION_FORCED = "quit-application-forced";
@@ -1059,7 +1059,7 @@ var TelemetrySendImpl = {
     // Additionally, it could be be killed before it can complete its tasks,
     // for example after successfully sending the ping but before removing
     // the copy from the disk, resulting in receiving duplicate pings when
-    // Firefox restarts.
+    // Datalus restarts.
     if (
       options.usePingSender &&
       !this._isOSShutdown &&

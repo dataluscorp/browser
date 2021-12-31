@@ -9,10 +9,10 @@
 // Configuration vars
 let homeURL = "https://webxr.today/";
 // Bug 1586294 - Localize the privacy policy URL (Services.urlFormatter?)
-let privacyPolicyURL = "https://www.mozilla.org/en-US/privacy/firefox/";
+let privacyPolicyURL = "https://www.mozilla.org/en-US/privacy/datalus/";
 let reportIssueURL = "https://mzl.la/fxr";
 let licenseURL =
-  "https://mixedreality.mozilla.org/FirefoxRealityPC/license.html";
+  "https://mixedreality.mozilla.org/DatalusRealityPC/license.html";
 
 // https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/browser
 let browser = null;

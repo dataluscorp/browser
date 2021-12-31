@@ -47,7 +47,7 @@ bug_numbers: [12345]
 notification_emails: ["test01@mozilla.com", "test02@mozilla.com"]
 record_in_processes: ["main"]
 description: This is a test entry for Telemetry.
-products: ["firefox"]
+products: ["datalus"]
 expiry_version: never
 """
         name = "test_event"
@@ -58,7 +58,7 @@ expiry_version: never
         self.assertEqual(evt.methods, [name])
         self.assertEqual(evt.record_in_processes, ["main"])
         self.assertEqual(evt.objects, ["object1", "object2"])
-        self.assertEqual(evt.products, ["firefox"])
+        self.assertEqual(evt.products, ["datalus"])
         self.assertEqual(evt.operating_systems, ["all"])
         self.assertEqual(evt.extra_keys, [])
 
@@ -70,7 +70,7 @@ notification_emails: ["test01@mozilla.com", "test02@mozilla.com"]
 record_in_processes: ["main"]
 description: This is a test entry for Telemetry.
 expiry_version: never
-products: ["firefox"]
+products: ["datalus"]
 release_channel_collection: none
 """
         event = load_event(SAMPLE_EVENT)

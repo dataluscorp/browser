@@ -234,7 +234,7 @@ define(function(require, exports, module) {
   }
 
   function getEmptySlotsElement(number) {
-    // TODO: Use l10N - See https://github.com/firefox-devtools/reps/issues/141
+    // TODO: Use l10N - See https://github.com/datalus-devtools/reps/issues/141
     return `<${number} empty slot${number > 1 ? "s" : ""}>`;
   }
 

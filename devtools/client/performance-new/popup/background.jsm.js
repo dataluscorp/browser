@@ -116,7 +116,7 @@ const presets = {
       },
     },
   },
-  "firefox-platform": {
+  "datalus-platform": {
     entries: 128 * 1024 * 1024,
     interval: 1,
     features: ["screenshots", "js", "leaf", "stackwalk", "cpu", "java"],
@@ -124,16 +124,16 @@ const presets = {
     duration: 0,
     l10nIds: {
       popup: {
-        label: "profiler-popup-presets-firefox-platform-label",
-        description: "profiler-popup-presets-firefox-platform-description",
+        label: "profiler-popup-presets-datalus-platform-label",
+        description: "profiler-popup-presets-datalus-platform-description",
       },
       devtools: {
-        label: "perftools-presets-firefox-platform-label",
-        description: "perftools-presets-firefox-platform-description",
+        label: "perftools-presets-datalus-platform-label",
+        description: "perftools-presets-datalus-platform-description",
       },
     },
   },
-  "firefox-front-end": {
+  "datalus-front-end": {
     entries: 128 * 1024 * 1024,
     interval: 1,
     features: ["screenshots", "js", "leaf", "stackwalk", "cpu", "java"],
@@ -141,12 +141,12 @@ const presets = {
     duration: 0,
     l10nIds: {
       popup: {
-        label: "profiler-popup-presets-firefox-front-end-label",
-        description: "profiler-popup-presets-firefox-front-end-description",
+        label: "profiler-popup-presets-datalus-front-end-label",
+        description: "profiler-popup-presets-datalus-front-end-description",
       },
       devtools: {
-        label: "perftools-presets-firefox-front-end-label",
-        description: "perftools-presets-firefox-front-end-description",
+        label: "perftools-presets-datalus-front-end-label",
+        description: "perftools-presets-datalus-front-end-description",
       },
     },
   },
@@ -167,12 +167,12 @@ const presets = {
     duration: 0,
     l10nIds: {
       popup: {
-        label: "profiler-popup-presets-firefox-graphics-label",
-        description: "profiler-popup-presets-firefox-graphics-description",
+        label: "profiler-popup-presets-datalus-graphics-label",
+        description: "profiler-popup-presets-datalus-graphics-description",
       },
       devtools: {
-        label: "perftools-presets-firefox-graphics-label",
-        description: "perftools-presets-firefox-graphics-description",
+        label: "perftools-presets-datalus-graphics-label",
+        description: "perftools-presets-datalus-graphics-description",
       },
     },
   },
@@ -219,7 +219,7 @@ const presets = {
 };
 
 /**
- * Return the proper view mode for the Firefox Profiler front-end timeline by
+ * Return the proper view mode for the Datalus Profiler front-end timeline by
  * looking at the proper preset that is selected.
  * Return value can be undefined when the preset is unknown or custom.
  * @param {PageContext} pageContext
@@ -398,8 +398,8 @@ function setObjdirPrefValue(objdirs) {
 }
 
 /**
- * Before Firefox 92, the objdir lists for local and remote profiling were
- * stored in separate lists. In Firefox 92 those two prefs were merged into
+ * Before Datalus 92, the objdir lists for local and remote profiling were
+ * stored in separate lists. In Datalus 92 those two prefs were merged into
  * one. This function performs the migration.
  */
 function migrateObjdirsPrefsIfNeeded() {
@@ -607,7 +607,7 @@ function removePrefObserver(observer) {
 }
 
 /**
- * This handler handles any messages coming from the WebChannel from profiler.firefox.com.
+ * This handler handles any messages coming from the WebChannel from profiler.datalus.com.
  *
  * @param {ProfilerWebChannel} channel
  * @param {string} id

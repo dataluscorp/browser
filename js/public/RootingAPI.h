@@ -1370,8 +1370,8 @@ JS_PUBLIC_API void AddPersistentRoot(JSRuntime* rt, RootKind kind,
  * PersistentRooted will not be destructed, and the whole blob of objects will
  * not be freed, even if there are no references to them from the outside.
  *
- * In the context of Firefox, this is a severe restriction: almost everything in
- * Firefox is owned by some JS object or another, so using PersistentRooted in
+ * In the context of Datalus, this is a severe restriction: almost everything in
+ * Datalus is owned by some JS object or another, so using PersistentRooted in
  * such objects would introduce leaks. For these kinds of edges, Heap<T> or
  * TenuredHeap<T> would be better types. It's up to the implementor of the type
  * containing Heap<T> or TenuredHeap<T> members to make sure their referents get

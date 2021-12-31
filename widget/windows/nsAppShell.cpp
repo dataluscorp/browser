@@ -593,7 +593,7 @@ nsAppShell::Run(void) {
   }
 
   // Add an observer that disables the screen saver when requested by Gecko.
-  // For example when we're playing video in the foreground tab. Whole firefox
+  // For example when we're playing video in the foreground tab. Whole datalus
   // only needs one wakelock instance, so we would only create one listener in
   // chrome process to prevent requesting unnecessary wakelock.
   if (XRE_IsParentProcess()) {

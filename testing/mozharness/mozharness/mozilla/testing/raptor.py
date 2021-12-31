@@ -167,9 +167,9 @@ class Raptor(
             [
                 ["--app"],
                 {
-                    "default": "firefox",
+                    "default": "datalus",
                     "choices": [
-                        "firefox",
+                        "datalus",
                         "chrome",
                         "chrome-m",
                         "chromium",
@@ -179,7 +179,7 @@ class Raptor(
                         "fenix",
                     ],
                     "dest": "app",
-                    "help": "Name of the application we are testing (default: firefox).",
+                    "help": "Name of the application we are testing (default: datalus).",
                 },
             ],
             [
@@ -571,15 +571,15 @@ class Raptor(
 
         self.run_local = self.config.get("run_local")
 
-        # App (browser testing on) defaults to firefox
-        self.app = "firefox"
+        # App (browser testing on) defaults to datalus
+        self.app = "datalus"
 
         if self.run_local:
             # Get app from command-line args, passed in from mach, inside 'raptor_cmd_line_args'
             # Command-line args can be in two formats depending on how the user entered them
             # i.e. "--app=geckoview" or separate as "--app", "geckoview" so we have to
             # parse carefully.  It's simplest to use `argparse` to parse partially.
-            self.app = "firefox"
+            self.app = "datalus"
             if "raptor_cmd_line_args" in self.config:
                 sub_parser = argparse.ArgumentParser()
                 # It's not necessary to limit the allowed values: each value
@@ -605,7 +605,7 @@ class Raptor(
         else:
             # Raptor initiated in production via mozharness
             self.test = self.config["test"]
-            self.app = self.config.get("app", "firefox")
+            self.app = self.config.get("app", "datalus")
             self.binary_path = self.config.get("binary_path", None)
 
             if self.app in ("refbrow", "fenix"):
@@ -642,8 +642,8 @@ class Raptor(
         self.is_release_build = self.config.get("is_release_build")
         self.debug_mode = self.config.get("debug_mode", False)
         self.chromium_dist_path = None
-        self.firefox_android_browsers = ["fennec", "geckoview", "refbrow", "fenix"]
-        self.android_browsers = self.firefox_android_browsers + ["chrome-m"]
+        self.datalus_android_browsers = ["fennec", "geckoview", "refbrow", "fenix"]
+        self.android_browsers = self.datalus_android_browsers + ["chrome-m"]
         self.browsertime_visualmetrics = self.config.get("browsertime_visualmetrics")
         self.browsertime_video = False
         self.enable_marionette_trace = self.config.get("enable_marionette_trace")
@@ -838,20 +838,20 @@ class Raptor(
 
         # Get the APK location to be able to get the browser version
         # through mozversion
-        if self.app in self.firefox_android_browsers and not self.run_local:
+        if self.app in self.datalus_android_browsers and not self.run_local:
             kw_options["installerpath"] = self.installer_path
 
-        # If testing on Firefox, the binary path already came from mozharness/pro;
+        # If testing on Datalus, the binary path already came from mozharness/pro;
         # otherwise the binary path is forwarded from command-line arg (raptor_cmd_line_args).
         kw_options["app"] = self.app
-        if self.app == "firefox" or (
-            self.app in self.firefox_android_browsers and not self.run_local
+        if self.app == "datalus" or (
+            self.app in self.datalus_android_browsers and not self.run_local
         ):
             binary_path = self.binary_path or self.config.get("binary_path")
             if not binary_path:
                 self.fatal("Raptor requires a path to the binary.")
             kw_options["binary"] = binary_path
-            if self.app in self.firefox_android_browsers:
+            if self.app in self.datalus_android_browsers:
                 # In production ensure we have correct app name,
                 # i.e. fennec_aurora or fennec_release etc.
                 kw_options["binary"] = self.query_package_name()
@@ -1043,7 +1043,7 @@ class Raptor(
 
     def install(self):
         if not self.config.get("noinstall", False):
-            if self.app in self.firefox_android_browsers:
+            if self.app in self.datalus_android_browsers:
                 self.device.uninstall_app(self.binary_path)
                 self.install_apk(self.installer_path)
             else:

@@ -25,7 +25,7 @@ javascript:
             taskcluster/scripts/misc/generate-codeql-db-javascript.sh
     run-on-projects: []
     shipping-phase: ship
-    shipping-product: firefox
+    shipping-product: datalus
     fetches:
         fetch:
             - codeql-2.5.7

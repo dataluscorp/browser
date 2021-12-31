@@ -184,13 +184,13 @@ void LateWriteObserver::Observe(
     const mozilla::Telemetry::ProcessedStack::Frame& frame = stack.GetFrame(i);
     // NOTE: We write the offsets, while the atos tool expects a value with
     // the virtual address added. For example, running otool -l on the the
-    // firefox binary shows
+    // datalus binary shows
     //      cmd LC_SEGMENT_64
     //      cmdsize 632
     //      segname __TEXT
     //      vmaddr 0x0000000100000000
     // so to print the line matching the offset 123 one has to run
-    // atos -o firefox 0x100000123.
+    // atos -o datalus 0x100000123.
     sha1Stream.Printf("%d %x\n", frame.mModIndex, (unsigned)frame.mOffset);
   }
 

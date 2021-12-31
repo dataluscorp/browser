@@ -26,7 +26,7 @@ job-defaults:
             default: []
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
     devedition:
         shipping-product: devedition

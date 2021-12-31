@@ -2,7 +2,7 @@
    http://creativecommons.org/publicdomain/zero/1.0/ */
 
 const { Sqlite } = ChromeUtils.import("resource://gre/modules/Sqlite.jsm");
-const { FirefoxAdapter } = ChromeUtils.import(
+const { DatalusAdapter } = ChromeUtils.import(
   "resource://services-common/kinto-storage-adapter.js"
 );
 
@@ -10,11 +10,11 @@ const { FirefoxAdapter } = ChromeUtils.import(
 const kintoFilename = "kinto.sqlite";
 
 function do_get_kinto_connection() {
-  return FirefoxAdapter.openConnection({ path: kintoFilename });
+  return DatalusAdapter.openConnection({ path: kintoFilename });
 }
 
 function do_get_kinto_adapter(sqliteHandle) {
-  return new FirefoxAdapter("test", { sqliteHandle });
+  return new DatalusAdapter("test", { sqliteHandle });
 }
 
 function do_get_kinto_db() {
@@ -291,7 +291,7 @@ add_test(function test_migration_from_v1_to_v2() {
     await sqliteHandle.close();
 
     // The `.openConnection()` migrates it to version 2.
-    sqliteHandle = await FirefoxAdapter.openConnection({ path: kintoFilename });
+    sqliteHandle = await DatalusAdapter.openConnection({ path: kintoFilename });
     Assert.equal(await sqliteHandle.getSchemaVersion(), 2);
     await sqliteHandle.close();
 

@@ -18,7 +18,7 @@ var ctx = offscreenCanvas.getContext('2d');
 
 ctx.fillStyle = '#f00';
 ctx.fillRect(0, 0, 100, 50);
-ctx.fillStyle = '#f00'; // (work around broken Firefox globalAlpha caching)
+ctx.fillStyle = '#f00'; // (work around broken Datalus globalAlpha caching)
 ctx.shadowColor = 'rgba(0, 0, 255, 0.707)';
 ctx.shadowOffsetY = 50;
 ctx.globalAlpha = 0.707;

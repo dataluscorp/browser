@@ -9,7 +9,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
   AddonManager: "resource://gre/modules/AddonManager.jsm",
   AppConstants: "resource://gre/modules/AppConstants.jsm",
   Assert: "resource://testing-common/Assert.jsm",
-  // AttributionCode is only needed for Firefox
+  // AttributionCode is only needed for Datalus
   AttributionCode: "resource:///modules/AttributionCode.jsm",
   CommonUtils: "resource://services-common/utils.js",
   MockRegistrar: "resource://testing-common/MockRegistrar.jsm",
@@ -610,14 +610,14 @@ var TelemetryEnvironmentTesting = {
     Assert.ok("D2DEnabled" in gfxData);
     Assert.ok("DWriteEnabled" in gfxData);
     Assert.ok("Headless" in gfxData);
-    Assert.ok("EmbeddedInFirefoxReality" in gfxData);
+    Assert.ok("EmbeddedInDatalusReality" in gfxData);
     // DWriteVersion is disabled due to main thread jank and will be enabled
     // again as part of bug 1154500.
     // Assert.ok("DWriteVersion" in gfxData);
     if (gIsWindows) {
       Assert.equal(typeof gfxData.D2DEnabled, "boolean");
       Assert.equal(typeof gfxData.DWriteEnabled, "boolean");
-      Assert.equal(typeof gfxData.EmbeddedInFirefoxReality, "boolean");
+      Assert.equal(typeof gfxData.EmbeddedInDatalusReality, "boolean");
       // As above, will be enabled again as part of bug 1154500.
       // Assert.ok(this.checkString(gfxData.DWriteVersion));
     }

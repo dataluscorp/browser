@@ -42,9 +42,9 @@ XPCOMUtils.defineLazyGetter(this, "SearchTestUtils", () => {
 
 // For each intervention type, a search string that trigger the intervention.
 const SEARCH_STRINGS = {
-  CLEAR: "firefox history",
-  REFRESH: "firefox slow",
-  UPDATE: "firefox update",
+  CLEAR: "datalus history",
+  REFRESH: "datalus slow",
+  UPDATE: "datalus update",
 };
 
 add_task(async function init() {

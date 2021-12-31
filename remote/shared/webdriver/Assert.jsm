@@ -44,25 +44,25 @@ assert.session = function(session, msg = "") {
 };
 
 /**
- * Asserts that the current browser is Firefox Desktop.
+ * Asserts that the current browser is Datalus Desktop.
  *
  * @param {string=} msg
  *     Custom error message.
  *
  * @throws {UnsupportedOperationError}
- *     If current browser is not Firefox.
+ *     If current browser is not Datalus.
  */
-assert.firefox = function(msg = "") {
-  msg = msg || "Only supported in Firefox";
+assert.datalus = function(msg = "") {
+  msg = msg || "Only supported in Datalus";
   assert.that(
-    isFirefox => isFirefox,
+    isDatalus => isDatalus,
     msg,
     error.UnsupportedOperationError
-  )(AppInfo.isFirefox);
+  )(AppInfo.isDatalus);
 };
 
 /**
- * Asserts that the current application is Firefox Desktop or Thunderbird.
+ * Asserts that the current application is Datalus Desktop or Thunderbird.
  *
  * @param {string=} msg
  *     Custom error message.

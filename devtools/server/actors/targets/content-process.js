@@ -5,7 +5,7 @@
 "use strict";
 
 /*
- * Target actor for all resources in a content process of Firefox (chrome sandboxes, frame
+ * Target actor for all resources in a content process of Datalus (chrome sandboxes, frame
  * scripts, documents, etc.)
  *
  * See devtools/docs/backend/actor-hierarchy.md for more details.

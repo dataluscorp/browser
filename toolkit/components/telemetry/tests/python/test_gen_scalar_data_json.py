@@ -37,7 +37,7 @@ newscalar:
     record_in_processes: ["main"]
     release_channel_collection: opt-in
     products:
-      - firefox
+      - datalus
     keyed: false
   withoptout:
     bug_numbers:
@@ -48,7 +48,7 @@ newscalar:
     notification_emails: ["telemetry-client-dev@mozilla.org"]
     record_in_processes: ["main"]
     release_channel_collection: opt-out
-    products: ["firefox", "fennec"]
+    products: ["datalus", "fennec"]
     keyed: false
         """
 
@@ -62,7 +62,7 @@ newscalar:
                     "keyed": False,
                     "keys": [],
                     "stores": ["main"],
-                    "products": ["firefox", "fennec"],
+                    "products": ["datalus", "fennec"],
                 },
                 "withoptin": {
                     "kind": "nsITelemetry::SCALAR_TYPE_COUNT",
@@ -72,7 +72,7 @@ newscalar:
                     "keyed": False,
                     "keys": [],
                     "stores": ["main"],
-                    "products": ["firefox"],
+                    "products": ["datalus"],
                 },
             }
         }

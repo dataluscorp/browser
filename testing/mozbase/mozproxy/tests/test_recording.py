@@ -38,8 +38,8 @@ def test_record_and_replay(*args):
         "playback_version": "5.1.1",
         "platform": mozinfo.os,
         "run_local": "MOZ_AUTOMATION" not in os.environ,
-        "binary": "firefox",
-        "app": "firefox",
+        "binary": "datalus",
+        "app": "datalus",
         "host": "127.0.0.1",
         "record": True,
     }

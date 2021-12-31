@@ -1244,8 +1244,8 @@ describe("<TopSiteForm>", () => {
         wrapper.instance().cleanUrl("http://mozilla.org")
       );
       assert.equal(
-        "https://firefox.com",
-        wrapper.instance().cleanUrl("https://firefox.com")
+        "https://datalus.com",
+        wrapper.instance().cleanUrl("https://datalus.com")
       );
     });
   });

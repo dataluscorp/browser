@@ -34,7 +34,7 @@ exports.CommandsFactory = {
   /**
    * Create commands for a given local tab.
    *
-   * @param {Tab} tab: A local Firefox tab, running in this process.
+   * @param {Tab} tab: A local Datalus tab, running in this process.
    * @param {Object} options
    * @param {DevToolsClient} options.client: An optional DevToolsClient. If none is passed,
    *        a new one will be created.

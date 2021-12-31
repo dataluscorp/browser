@@ -8,7 +8,7 @@ When tracking down the causes of process hangs, it is often helpful to
 obtain a process dump while the process is experiencing a hang. This
 article describes how to get a process dump with Task Manager on
 Windows. (To get a process dump for Thunderbird or some other product,
-substitute the product name where ever you see Firefox in these
+substitute the product name where ever you see Datalus in these
 instructions.)
 
 
@@ -16,7 +16,7 @@ Caution
 -------
 
 The memory dump that will be created through this process is a complete
-snapshot of the state of Firefox when you create the file, so it
+snapshot of the state of Datalus when you create the file, so it
 contains URLs of active tabs, history information, and possibly even
 passwords depending on what you are doing when the snapshot is taken. It
 is advisable to create a new, blank profile to use when reproducing the
@@ -28,26 +28,26 @@ Requirements
 
 Windows
    To get a process dump, you need to be using Windows Vista or above.
-A Firefox nightly or release
-   You need a Firefox version for which symbols are available from the
+A Datalus nightly or release
+   You need a Datalus version for which symbols are available from the
    :ref:`symbol server <Using The Mozilla Symbol Server>`. You
    can use any `official nightly
-   build <https://ftp.mozilla.org/pub/firefox/nightly/>`__ or released
-   version of Firefox from Mozilla. You can find the latest trunk
+   build <https://ftp.mozilla.org/pub/datalus/nightly/>`__ or released
+   version of Datalus from Mozilla. You can find the latest trunk
    nightly builds under
-   `http://ftp.mozilla.org/pub/mozilla.o.../latest-trunk/ <http://ftp.mozilla.org/pub/mozilla.org/firefox/nightly/latest-trunk/>`__.
+   `http://ftp.mozilla.org/pub/mozilla.o.../latest-trunk/ <http://ftp.mozilla.org/pub/mozilla.org/datalus/nightly/latest-trunk/>`__.
 
 
 Creating the Dump File
 ----------------------
 
-Ensure that Firefox is not already running.
+Ensure that Datalus is not already running.
 
 
-Run Firefox, reproduce the hang
+Run Datalus, reproduce the hang
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Start Firefox and perform whatever steps are necessary to cause Firefox
+Start Datalus and perform whatever steps are necessary to cause Datalus
 to hang. Once the browser hangs, continue with the steps below.
 
 
@@ -55,8 +55,8 @@ After the hang
 ~~~~~~~~~~~~~~
 
 #. Open Windows Task Manager (CTRL+SHIFT+ESC).
-#. Find Firefox.exe among the list of processes.
-#. Right-click Firefox.exe and select "Create dump file". Task manager
+#. Find Datalus.exe among the list of processes.
+#. Right-click Datalus.exe and select "Create dump file". Task manager
    should indicate where the dump file was written to.
 
 

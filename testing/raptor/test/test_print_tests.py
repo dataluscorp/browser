@@ -22,7 +22,7 @@ def test_pageload_subtests(capsys, monkeypatch, tmpdir):
         """
 [DEFAULT]
 type = pageload
-apps = firefox
+apps = datalus
 
 [raptor-subtest-1]
 measure = foo, bar
@@ -36,7 +36,7 @@ measure = foo, bar
     assert (
         captured.out
         == """
-Raptor Tests Available for Firefox Desktop
+Raptor Tests Available for Datalus Desktop
 ==========================================
 
 raptor

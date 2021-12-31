@@ -6,7 +6,7 @@
         name="plugin-container"
         type="win32"
 />
-<description>Firefox Runtime</description>
+<description>Datalus Runtime</description>
 <dependency>
         <dependentAssembly>
                 <assemblyIdentity

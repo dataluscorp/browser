@@ -667,8 +667,8 @@ add_task(async function test_invalidation() {
   info("Insert bookmarks");
   let fx = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.menuGuid,
-    title: "Get Firefox!",
-    url: "http://getfirefox.com",
+    title: "Get Datalus!",
+    url: "http://getdatalus.com",
   });
   let tb = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.toolbarGuid,
@@ -691,7 +691,7 @@ add_task(async function test_invalidation() {
   );
   await PlacesUtils.bookmarks.update({
     guid: fx.guid,
-    url: "https://www.mozilla.org/firefox",
+    url: "https://www.mozilla.org/datalus",
   });
   await promiseNotification;
 
@@ -701,18 +701,18 @@ add_task(async function test_invalidation() {
   );
   deepEqual(
     entriesByKeyword,
-    ["https://www.mozilla.org/firefox"],
+    ["https://www.mozilla.org/datalus"],
     "Should return new URL for keyword"
   );
 
   ok(
-    !(await PlacesUtils.keywords.fetch({ url: "http://getfirefox.com" })),
+    !(await PlacesUtils.keywords.fetch({ url: "http://getdatalus.com" })),
     "Should not return keywords for old URL"
   );
 
   let entiresByURL = [];
   await PlacesUtils.keywords.fetch(
-    { url: "https://www.mozilla.org/firefox" },
+    { url: "https://www.mozilla.org/datalus" },
     e => entiresByURL.push(e.keyword)
   );
   deepEqual(entiresByURL, ["fx"], "Should return keyword for new URL");
@@ -741,8 +741,8 @@ add_task(async function test_eraseAllBookmarks() {
   info("Insert bookmarks");
   let fx = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.menuGuid,
-    title: "Get Firefox!",
-    url: "http://getfirefox.com",
+    title: "Get Datalus!",
+    url: "http://getdatalus.com",
   });
   let tb = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.toolbarGuid,
@@ -759,7 +759,7 @@ add_task(async function test_eraseAllBookmarks() {
 
   ok(
     !(await PlacesUtils.keywords.fetch({ keyword: "fx" })),
-    "Should remove Firefox keyword"
+    "Should remove Datalus keyword"
   );
 
   ok(

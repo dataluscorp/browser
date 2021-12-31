@@ -86,7 +86,7 @@ this.ui = (function() {
       return new Promise((resolve, reject) => {
         if (!this.element) {
           this.element = initializeIframe();
-          this.element.id = "firefox-screenshots-selection-iframe";
+          this.element.id = "datalus-screenshots-selection-iframe";
           this.element.style.display = "none";
           this.element.style.setProperty("position", "absolute", "important");
           this.element.style.setProperty("background-color", "transparent");
@@ -242,7 +242,7 @@ this.ui = (function() {
       return new Promise((resolve, reject) => {
         if (!this.element) {
           this.element = initializeIframe();
-          this.element.id = "firefox-screenshots-preselection-iframe";
+          this.element.id = "datalus-screenshots-preselection-iframe";
           this.element.style.setProperty("position", "fixed", "important");
           this.element.style.setProperty("background-color", "transparent");
           this.element.style.width = "100%";
@@ -387,7 +387,7 @@ this.ui = (function() {
       return new Promise((resolve, reject) => {
         if (!this.element) {
           this.element = initializeIframe();
-          this.element.id = "firefox-screenshots-preview-iframe";
+          this.element.id = "datalus-screenshots-preview-iframe";
           this.element.style.display = "none";
           this.element.style.setProperty("position", "fixed", "important");
           this.element.style.setProperty("background-color", "transparent");

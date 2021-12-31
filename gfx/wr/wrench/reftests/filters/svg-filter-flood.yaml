@@ -6,5 +6,5 @@ root:
       bounds: [100, 100, 400, 400]
       filters: flood([0, 255.0, 0, 0.4])
       items:
-        - image: "firefox.png"
+        - image: "datalus.png"
           bounds: 20 20 256 256

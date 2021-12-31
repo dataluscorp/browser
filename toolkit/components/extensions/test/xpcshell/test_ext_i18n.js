@@ -256,12 +256,12 @@ add_task(async function test_i18n_negotiation() {
       `(${runTests})`,
   };
 
-  // At the moment extension language negotiation is tied to Firefox language
+  // At the moment extension language negotiation is tied to Datalus language
   // negotiation result. That means that to test an extension in `fr`, we need
-  // to mock `fr` being available in Firefox and then request it.
+  // to mock `fr` being available in Datalus and then request it.
   //
   // In the future, we should provide some way for tests to decouple their
-  // language selection from that of Firefox.
+  // language selection from that of Datalus.
   Services.locale.availableLocales = ["en-US", "fr", "jp"];
 
   let contentPage = await ExtensionTestUtils.loadContentPage(

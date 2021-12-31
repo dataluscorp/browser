@@ -91,12 +91,12 @@ components:
     trigger:
       pull-request:
 
-  browser-firefox:
+  browser-datalus:
     depends-on:
-      - download-firefox-${vars.channel}
+      - download-datalus-${vars.channel}
     download-artifacts:
-      - task: download-firefox-${vars.channel}
-        glob: public/results/firefox-${vars.channel}.*
+      - task: download-datalus-${vars.channel}
+        glob: public/results/datalus-${vars.channel}.*
         dest: build/
         extract: true
 
@@ -148,19 +148,19 @@ tasks:
         $map:
           for:
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: nightly
               use:
                 - trigger-master
                 - trigger-push
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: beta
               use:
                 - trigger-weekly
                 - trigger-push
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: stable
               use:
                 - trigger-daily
@@ -227,7 +227,7 @@ tasks:
                   of ${chunks.total}), run in the ${vars.channel} release of
                   ${vars.browser}.
 
-  # print-reftest are currently only supported by Chrome and Firefox.
+  # print-reftest are currently only supported by Chrome and Datalus.
   - $map:
       for:
         - vars:
@@ -236,19 +236,19 @@ tasks:
         $map:
           for:
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: nightly
               use:
                 - trigger-master
                 - trigger-push
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: beta
               use:
                 - trigger-weekly
                 - trigger-push
             - vars:
-                browser: firefox
+                browser: datalus
                 channel: stable
               use:
                 - trigger-daily
@@ -294,7 +294,7 @@ tasks:
   - $map:
       for:
         - vars:
-            browser: firefox
+            browser: datalus
             channel: nightly
         - vars:
             browser: chrome
@@ -375,10 +375,10 @@ tasks:
         - vars:
             channel: stable
       do:
-        download-firefox-${vars.channel}:
+        download-datalus-${vars.channel}:
           use:
             - wpt-base
-          command: "./wpt install --download-only --destination /home/test/artifacts/ --channel=${vars.channel}  --rename=firefox-${vars.channel} firefox browser"
+          command: "./wpt install --download-only --destination /home/test/artifacts/ --channel=${vars.channel}  --rename=datalus-${vars.channel} datalus browser"
 
   - lint:
       use:
@@ -444,7 +444,7 @@ tasks:
       options:
         oom-killer: true
         browser:
-          - firefox
+          - datalus
           - chrome
         channel: experimental
         xvfb: true
@@ -466,7 +466,7 @@ tasks:
       options:
         oom-killer: true
         browser:
-          - firefox
+          - datalus
           - chrome
         channel: experimental
         xvfb: true
@@ -489,7 +489,7 @@ tasks:
         - python3.6-dev
       options:
         browser:
-          - firefox
+          - datalus
         xvfb: true
         hosts: true
       schedule-if:
@@ -508,7 +508,7 @@ tasks:
         - libnss3-tools
       options:
         browser:
-          - firefox
+          - datalus
         xvfb: true
         hosts: true
       schedule-if:
@@ -523,7 +523,7 @@ tasks:
       use:
         - wpt-base
         - trigger-pr
-        - browser-firefox
+        - browser-datalus
       command: ./tools/ci/ci_wptrunner_infrastructure.sh
       install:
         - python3-pip
@@ -533,7 +533,7 @@ tasks:
       options:
         oom-killer: true
         browser:
-          - firefox
+          - datalus
           - chrome
         channel: experimental
         xvfb: true

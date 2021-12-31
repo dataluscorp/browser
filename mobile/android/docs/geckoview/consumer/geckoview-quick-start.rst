@@ -18,7 +18,7 @@ You need to add or edit four stanzas inside your module's ``build.gradle`` file.
 
 **1. Set the GeckoView version**
 
-*Like Firefox, GeckoView has three release channels: Stable, Beta, and Nightly. Browse the* `Maven Repository <https://maven.mozilla.org/?prefix=maven2/org/mozilla/geckoview/>`_ *to see currently available builds.*
+*Like Datalus, GeckoView has three release channels: Stable, Beta, and Nightly. Browse the* `Maven Repository <https://maven.mozilla.org/?prefix=maven2/org/mozilla/geckoview/>`_ *to see currently available builds.*
 
 .. code-block:: groovy 
 

@@ -325,20 +325,20 @@
 
 /* Address bar */
 
-.firefoxSuggestOptionBox {
+.datalusSuggestOptionBox {
   /* With this value we're trying to keep the apparent vertical space between
      option boxes the same as the apparent vertical space between the labels of
-     the checkboxes above the Firefox Suggest subsection. */
+     the checkboxes above the Datalus Suggest subsection. */
   margin-block-start: 11px;
 }
 
-.firefoxSuggestOptionBox:first-child {
+.datalusSuggestOptionBox:first-child {
   /* Similar here: Make the apparent vertical space between the last checkbox
      and first option box the same as elsewhere. */
   margin-block-start: 5px;
 }
 
-.firefoxSuggestToggle {
+.datalusSuggestToggle {
   /* These variables and comments are copied from and override
      toggle-button.css. We include values for all variables, even those that are
      the same at the time this comment was written, for sanity and locality of
@@ -354,7 +354,7 @@
   --dot-transform-x: 16px !important;
 }
 
-.firefoxSuggestOptionDescription {
+.datalusSuggestOptionDescription {
   /* Prevent the description from flowing under the toggle button.
      32px = toggle button width
      1em = a little extra */
@@ -362,12 +362,12 @@
   color: var(--in-content-deemphasized-text);
 }
 
-#firefoxSuggestInfoBox {
+#datalusSuggestInfoBox {
   margin-block-start: 16px;
   padding: 12px;
 }
 
-#firefoxSuggestInfoBox > description {
+#datalusSuggestInfoBox > description {
   margin-inline-start: 2px;
   margin-block: 2px;
 }

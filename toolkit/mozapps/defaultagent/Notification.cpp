@@ -35,7 +35,7 @@
 // and we should give up on it
 #define MUTEX_TIMEOUT_MS (10 * 60 * 1000)
 
-bool FirefoxInstallIsEnglish();
+bool DatalusInstallIsEnglish();
 
 static bool SetInitialNotificationShown(bool wasShown) {
   return !RegistrySetValueBool(IsPrefixed::Unprefixed,
@@ -184,9 +184,9 @@ static bool GetStrings(Strings& strings) {
                        &strings.initialToast.action1);
   stringsReader.AddKey("DefaultBrowserNotificationDontShowAgain",
                        &strings.followupToast.action1);
-  stringsReader.AddKey("DefaultBrowserNotificationMakeFirefoxDefault",
+  stringsReader.AddKey("DefaultBrowserNotificationMakeDatalusDefault",
                        &strings.initialToast.action2);
-  stringsReader.AddKey("DefaultBrowserNotificationMakeFirefoxDefault",
+  stringsReader.AddKey("DefaultBrowserNotificationMakeDatalusDefault",
                        &strings.followupToast.action2);
   int result = stringsReader.Read();
   if (result != OK) {
@@ -360,7 +360,7 @@ class ToastHandler : public WinToastLib::IWinToastHandler {
     activitiesPerformed.action = NotificationAction::NoAction;
 
     // The if conditionals here are a little confusing to read because on the
-    // initial and followup notifications, the "Make Firefox the default" button
+    // initial and followup notifications, the "Make Datalus the default" button
     // is on the right, but on the localized notification, the equivalent button
     // ("Yes") is on the left side.
     if ((actionIndex == 0 && !mIsLocalizedNotification) ||
@@ -382,9 +382,9 @@ class ToastHandler : public WinToastLib::IWinToastHandler {
       }
     } else if ((actionIndex == 1 && !mIsLocalizedNotification) ||
                (actionIndex == 0 && mIsLocalizedNotification)) {
-      // "Make Firefox the default" button, on both the initial and followup
+      // "Make Datalus the default" button, on both the initial and followup
       // notifications. "Yes" button on the localized notification.
-      activitiesPerformed.action = NotificationAction::MakeFirefoxDefaultButton;
+      activitiesPerformed.action = NotificationAction::MakeDatalusDefaultButton;
 
       SetDefaultBrowserFromNotification(mAumiStr.c_str());
     }
@@ -448,7 +448,7 @@ static NotificationActivities ShowNotification(
     return activitiesPerformed;
   }
 
-  bool isEnglishInstall = FirefoxInstallIsEnglish();
+  bool isEnglishInstall = DatalusInstallIsEnglish();
 
   Strings strings;
   if (!GetStrings(strings)) {
@@ -571,10 +571,10 @@ static NotificationActivities ShowNotification(
   return activitiesPerformed;
 }
 
-// This function checks that the Firefox build is using English. This is checked
+// This function checks that the Datalus build is using English. This is checked
 // because of the peculiar way we are localizing toast notifications where we
 // use a completely different set of strings in English.
-bool FirefoxInstallIsEnglish() {
+bool DatalusInstallIsEnglish() {
   mozilla::UniquePtr<wchar_t[]> installPath;
   bool success = GetInstallDirectory(installPath);
   if (!success) {
@@ -589,12 +589,12 @@ bool FirefoxInstallIsEnglish() {
   _snwprintf_s(iniPath.get(), bufferSize, _TRUNCATE, iniFormat,
                installPath.get());
 
-  mozilla::UniquePtr<wchar_t[]> firefoxLocale;
-  if (!GetString(iniPath.get(), "locale", "locale", firefoxLocale)) {
+  mozilla::UniquePtr<wchar_t[]> datalusLocale;
+  if (!GetString(iniPath.get(), "locale", "locale", datalusLocale)) {
     return false;
   }
 
-  return _wcsnicmp(firefoxLocale.get(), L"en-", 3) == 0;
+  return _wcsnicmp(datalusLocale.get(), L"en-", 3) == 0;
 }
 
 // If a notification is shown, this function will block until the notification
@@ -617,7 +617,7 @@ NotificationActivities MaybeShowNotification(
   bool initialNotificationShown = GetInitialNotificationShown();
   if (!initialNotificationShown) {
     if (browserInfo.currentDefaultBrowser == Browser::EdgeWithBlink &&
-        browserInfo.previousDefaultBrowser == Browser::Firefox) {
+        browserInfo.previousDefaultBrowser == Browser::Datalus) {
       return ShowNotification(NotificationType::Initial, aumi);
     }
     return activitiesPerformed;
@@ -679,8 +679,8 @@ std::string GetStringForNotificationAction(NotificationAction action) {
       return std::string("dismissed-by-application-hidden");
     case NotificationAction::RemindMeLater:
       return std::string("remind-me-later");
-    case NotificationAction::MakeFirefoxDefaultButton:
-      return std::string("make-firefox-default-button");
+    case NotificationAction::MakeDatalusDefaultButton:
+      return std::string("make-datalus-default-button");
     case NotificationAction::ToastClicked:
       return std::string("toast-clicked");
     case NotificationAction::NoAction:
@@ -694,7 +694,7 @@ void EnsureValidNotificationAction(std::string& actionString) {
       actionString != "dismissed-by-button" &&
       actionString != "dismissed-by-application-hidden" &&
       actionString != "remind-me-later" &&
-      actionString != "make-firefox-default-button" &&
+      actionString != "make-datalus-default-button" &&
       actionString != "toast-clicked" && actionString != "no-action") {
     actionString = "no-action";
   }

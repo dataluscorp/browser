@@ -1,4 +1,4 @@
-add_task(async function firefoxVersionExperimentOnStartup() {
+add_task(async function datalusVersionExperimentOnStartup() {
   const BASE =
     "http://mochi.test:8888/browser/browser/components/resistfingerprinting/test/browser/";
   const TEST_TARGET_URL = `${BASE}browser_navigator_header.sjs?`;
@@ -17,8 +17,8 @@ add_task(async function firefoxVersionExperimentOnStartup() {
   );
 
   ok(
-    result.includes("Firefox/100.0"),
-    "User-Agent string does include the Firefox/100.0 segment"
+    result.includes("Datalus/100.0"),
+    "User-Agent string does include the Datalus/100.0 segment"
   );
 
   BrowserTestUtils.removeTab(tab);

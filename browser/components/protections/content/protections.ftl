@@ -6,7 +6,7 @@
 ### being translated as the feature is still in heavy development
 ### and strings are likely to change often.
 
--secure-proxy-brand-name = Firefox Private Network
+-secure-proxy-brand-name = Datalus Private Network
 
 proxy-title = Stay safe on public Wi-Fi
 proxy-header-content = { -secure-proxy-brand-name } makes wireless hotspots more secure to protect you from hackers.

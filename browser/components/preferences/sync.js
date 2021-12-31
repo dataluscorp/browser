@@ -199,7 +199,7 @@ var gSyncPane = {
       gSyncPane.openChangeProfileImage(event);
     });
     setEventListener("verifiedManage", "keypress", function(event) {
-      gSyncPane.openManageFirefoxAccount(event);
+      gSyncPane.openManageDatalusAccount(event);
     });
 
     setEventListener("fxaChangeDeviceName", "command", function() {
@@ -228,20 +228,20 @@ var gSyncPane = {
       return false;
     });
     setEventListener("fxaUnlinkButton", "command", function() {
-      gSyncPane.unlinkFirefoxAccount(true);
+      gSyncPane.unlinkDatalusAccount(true);
     });
     setEventListener(
       "verifyFxaAccount",
       "command",
-      gSyncPane.verifyFirefoxAccount
+      gSyncPane.verifyDatalusAccount
     );
     setEventListener("unverifiedUnlinkFxaAccount", "command", function() {
       /* no warning as account can't have previously synced */
-      gSyncPane.unlinkFirefoxAccount(false);
+      gSyncPane.unlinkDatalusAccount(false);
     });
     setEventListener("rejectReSignIn", "command", gSyncPane.reSignIn);
     setEventListener("rejectUnlinkFxaAccount", "command", function() {
-      gSyncPane.unlinkFirefoxAccount(true);
+      gSyncPane.unlinkDatalusAccount(true);
     });
     setEventListener("fxaSyncComputerName", "keypress", function(e) {
       if (e.keyCode == KeyEvent.DOM_VK_RETURN) {
@@ -501,15 +501,15 @@ var gSyncPane = {
     }
   },
 
-  openManageFirefoxAccount(event) {
+  openManageDatalusAccount(event) {
     if (this.clickOrSpaceOrEnterPressed(event)) {
-      this.manageFirefoxAccount();
+      this.manageDatalusAccount();
       // Prevent page from scrolling on the space key.
       event.preventDefault();
     }
   },
 
-  manageFirefoxAccount() {
+  manageDatalusAccount() {
     FxAccounts.config.promiseManageURI(this._getEntryPoint()).then(url => {
       this.openContentInBrowser(url, {
         replaceQueryString: true,
@@ -518,7 +518,7 @@ var gSyncPane = {
     });
   },
 
-  verifyFirefoxAccount() {
+  verifyDatalusAccount() {
     let showVerifyNotification = data => {
       let isError = !data;
       let maybeNot = isError ? "Not" : "";
@@ -551,7 +551,7 @@ var gSyncPane = {
   },
 
   // Disconnect the account, including everything linked.
-  unlinkFirefoxAccount(confirm) {
+  unlinkDatalusAccount(confirm) {
     window.browsingContext.topChromeWindow.gSync.disconnect({
       confirm,
     });

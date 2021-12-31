@@ -566,7 +566,7 @@ if mozinfo.isWin:
         if mozinfo.info["bits"] != ctypes.sizeof(ctypes.c_voidp) * 8 and utility_path:
             # We're not going to be able to write a minidump with ctypes if our
             # python process was compiled for a different architecture than
-            # firefox, so we invoke the minidumpwriter utility program.
+            # datalus, so we invoke the minidumpwriter utility program.
 
             minidumpwriter = os.path.normpath(
                 os.path.join(utility_path, "minidumpwriter.exe")
@@ -718,7 +718,7 @@ def cleanup_pending_crash_reports():
     affecting test results; it is best to ensure that these are removed
     before starting any browser tests.
 
-    Firefox stores pending crash reports in "<UAppData>/Crash Reports".
+    Datalus stores pending crash reports in "<UAppData>/Crash Reports".
     If the browser is not running, it cannot provide <UAppData>, so this
     code tries to anticipate its value.
 
@@ -726,14 +726,14 @@ def cleanup_pending_crash_reports():
     """
     if mozinfo.isWin:
         location = os.path.expanduser(
-            "~\\AppData\\Roaming\\Mozilla\\Firefox\\Crash Reports"
+            "~\\AppData\\Roaming\\Mozilla\\Datalus\\Crash Reports"
         )
     elif mozinfo.isMac:
         location = os.path.expanduser(
-            "~/Library/Application Support/firefox/Crash Reports"
+            "~/Library/Application Support/datalus/Crash Reports"
         )
     else:
-        location = os.path.expanduser("~/.mozilla/firefox/Crash Reports")
+        location = os.path.expanduser("~/.mozilla/datalus/Crash Reports")
     logger = get_logger()
     if os.path.exists(location):
         try:

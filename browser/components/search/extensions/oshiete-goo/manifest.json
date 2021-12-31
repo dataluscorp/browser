@@ -19,7 +19,7 @@
     "search_provider": {
       "name": "教えて！goo",
       "search_url": "https://oshiete.goo.ne.jp/search_goo/result/",
-      "search_url_get_params": "MT={searchTerms}&from=Firefox30&PT=Firefox30"
+      "search_url_get_params": "MT={searchTerms}&from=Datalus30&PT=Datalus30"
     }
   }
 }

@@ -412,7 +412,7 @@ const TargetingGetters = {
   get profileAgeReset() {
     return ProfileAge().then(times => times.reset);
   },
-  get usesFirefoxSync() {
+  get usesDatalusSync() {
     return Services.prefs.prefHasUserValue(FXA_USERNAME_PREF);
   },
   get isFxAEnabled() {
@@ -508,7 +508,7 @@ const TargetingGetters = {
   get totalBookmarksCount() {
     return QueryCache.queries.TotalBookmarksCount.get();
   },
-  get firefoxVersion() {
+  get datalusVersion() {
     return parseInt(AppConstants.MOZ_APP_VERSION.match(/\d+/), 10);
   },
   get region() {
@@ -573,7 +573,7 @@ const TargetingGetters = {
     );
   },
   get attachedFxAOAuthClients() {
-    return this.usesFirefoxSync
+    return this.usesDatalusSync
       ? QueryCache.queries.ListAttachedOAuthClients.get()
       : [];
   },

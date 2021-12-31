@@ -34,7 +34,7 @@
                 "browser": {
                     "appConstants": {
                         "ACCESSIBILITY": true,
-                        "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+                        "ANDROID_PACKAGE_NAME": "org.mozilla.datalus",
                         "ASAN": false,
                         "ASAN_REPORTER": false,
                         "BROWSER_CHROME_URL": "chrome://browser/content/browser.xhtml",
@@ -50,8 +50,8 @@
                         "MOZ_ALLOW_ADDON_SIDELOAD": false,
                         "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
                         "MOZ_ANDROID_HISTORY": false,
-                        "MOZ_APP_BASENAME": "Firefox",
-                        "MOZ_APP_NAME": "firefox",
+                        "MOZ_APP_BASENAME": "Datalus",
+                        "MOZ_APP_NAME": "datalus",
                         "MOZ_APP_VERSION": "81.0a1",
                         "MOZ_APP_VERSION_DISPLAY": "81.0a1",
                         "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
@@ -103,7 +103,7 @@
                     },
                     "asyncAppConstants": {
                         "ACCESSIBILITY": true,
-                        "ANDROID_PACKAGE_NAME": "org.mozilla.firefox",
+                        "ANDROID_PACKAGE_NAME": "org.mozilla.datalus",
                         "ASAN": false,
                         "ASAN_REPORTER": false,
                         "BROWSER_CHROME_URL": "chrome://browser/content/browser.xhtml",
@@ -119,8 +119,8 @@
                         "MOZ_ALLOW_ADDON_SIDELOAD": false,
                         "MOZ_ALLOW_LEGACY_EXTENSIONS": false,
                         "MOZ_ANDROID_HISTORY": false,
-                        "MOZ_APP_BASENAME": "Firefox",
-                        "MOZ_APP_NAME": "firefox",
+                        "MOZ_APP_BASENAME": "Datalus",
+                        "MOZ_APP_NAME": "datalus",
                         "MOZ_APP_VERSION": "81.0a1",
                         "MOZ_APP_VERSION_DISPLAY": "81.0a1",
                         "MOZ_BING_API_CLIENTID": "no-bing-api-clientid",
@@ -170,7 +170,7 @@
                         "platform": "macosx",
                         "unixstyle": "other"
                     },
-                    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0",
+                    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Datalus/81.0",
                     "windowSize": "1366x768"
                 },
                 "pageinfo": {

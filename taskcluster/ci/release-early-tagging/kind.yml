@@ -27,11 +27,11 @@ job-defaults:
 
 
 jobs:
-    firefox:
-        name: firefox-tag-buildN
-        shipping-product: firefox
+    datalus:
+        name: datalus-tag-buildN
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             symbol: Rel(TagBuild)
             tier: 1
             kind: build

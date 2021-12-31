@@ -21,7 +21,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
+  itFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import { Target } from '../lib/cjs/puppeteer/common/Target.js';
 

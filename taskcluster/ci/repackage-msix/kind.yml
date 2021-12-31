@@ -64,27 +64,27 @@ job-template:
             by-shipping-product:
                 devedition:
                     by-package-format:
-                        msix: MozillaFirefoxDevedition
-                        msix-store: FirefoxDevedition
+                        msix: MozillaDatalusDevedition
+                        msix-store: DatalusDevedition
                 default:
                     by-package-format:
                         msix:
                             by-release-type:
-                                beta.*: MozillaFirefoxBeta
-                                release.*: MozillaFirefox
-                                esr.*: MozillaFirefox
-                                default: MozillaFirefoxNightly
+                                beta.*: MozillaDatalusBeta
+                                release.*: MozillaDatalus
+                                esr.*: MozillaDatalus
+                                default: MozillaDatalusNightly
                         msix-store:
                             by-release-type:
-                                beta.*: FirefoxBeta
-                                release.*: Firefox
-                                esr.*: Firefox
-                                default: FirefoxNightly
+                                beta.*: DatalusBeta
+                                release.*: Datalus
+                                esr.*: Datalus
+                                default: DatalusNightly
         publisher:
             by-package-format:
                 msix:
                     by-level:
-                        "3": "CN=Mozilla Corporation, OU=Firefox Engineering Operations, O=Mozilla Corporation, L=Mountain View, S=California, C=US"
+                        "3": "CN=Mozilla Corporation, OU=Datalus Engineering Operations, O=Mozilla Corporation, L=Mountain View, S=California, C=US"
                         default: "CN=Mozilla Fake SPC"
                 msix-store: "CN=082E9164-EE6C-4EC8-B62C-441FAE7BEFA1"
         publisher-display-name:

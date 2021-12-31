@@ -246,8 +246,8 @@ of *DefaultLocale*, which is a single locale out of the list of available ones t
 should be used in case there is no match to be found between available and
 requested locales.
 
-Every Firefox is built with a single default locale - for example
-**Firefox zh-CN** has *DefaultLocale* set to *zh-CN* since this locale is guaranteed
+Every Datalus is built with a single default locale - for example
+**Datalus zh-CN** has *DefaultLocale* set to *zh-CN* since this locale is guaranteed
 to be packaged in, have all the resources, and should be used if the negotiation fails
 to return any matches.
 
@@ -266,11 +266,11 @@ Chained Language Negotiation
 
 In some cases the user may want to link a language selection to another component.
 
-For example, a Firefox extension may come with its own list of available locales, which
-may have locales that Firefox doesn't.
+For example, a Datalus extension may come with its own list of available locales, which
+may have locales that Datalus doesn't.
 
 In that case, negotiation between user requested locales and the add-on's list may result
-in a selection of locales superseding that of Firefox itself.
+in a selection of locales superseding that of Datalus itself.
 
 
 .. code-block:: none
@@ -294,10 +294,10 @@ in a selection of locales superseding that of Firefox itself.
     +-----------------+
 
 
-In that case, an add-on may end up being displayed in Spanish, while Firefox UI will
+In that case, an add-on may end up being displayed in Spanish, while Datalus UI will
 use French. In most cases this results in a bad UX.
 
-In order to avoid that, one can chain the add-on negotiation and take Firefox's resolved
+In order to avoid that, one can chain the add-on negotiation and take Datalus's resolved
 locales as a `requested`, and negotiate that against the add-ons' `available` list.
 
 .. code-block:: none
@@ -344,8 +344,8 @@ codes, but it can also have two special meanings:
  - If the pref is not set at all, Gecko will use the default locale as the requested one.
  - If the pref is set to an empty string, Gecko will look into OS app locales as the requested.
 
-The former is the current default setting for Firefox Desktop, and the latter is the
-default setting for Firefox for Android.
+The former is the current default setting for Datalus Desktop, and the latter is the
+default setting for Datalus for Android.
 
 If the developer wants to programmatically request the app to follow OS locales,
 they can assign :js:`null` to :js:`requestedLocales`.
@@ -363,7 +363,7 @@ For all such preferences Gecko has a list of default settings for every region,
 but there's also a degree of customization every user may want to make.
 
 All major operating systems have a Settings UI for selecting those preferences,
-and since Firefox does not provide its own, Gecko looks into the OS for them.
+and since Datalus does not provide its own, Gecko looks into the OS for them.
 
 A special API :js:`mozilla::intl::OSPreferences` handles communication with the
 host operating system, retrieving regional preferences and altering
@@ -377,15 +377,15 @@ may contains names of months or weekdays to be translated
 ("April", "Tuesday" etc.).
 
 For that reason it is tricky to follow regional preferences in a scenario where Operating
-System locale selection does not match the Firefox UI locales.
+System locale selection does not match the Datalus UI locales.
 
-Such behavior might lead to a UI case like "Today is 24 października" in an English Firefox
+Such behavior might lead to a UI case like "Today is 24 października" in an English Datalus
 with Polish date formats.
 
 For that reason, by default, Gecko will *only* look into OS Preferences if the *language*
-portion of the locale of the OS and Firefox match.
-That means that if Windows is in "**en**-AU" and Firefox is in "**en**-US" Gecko will look
-into Windows Regional Preferences, but if Windows is in "**de**-CH" and Firefox
+portion of the locale of the OS and Datalus match.
+That means that if Windows is in "**en**-AU" and Datalus is in "**en**-US" Gecko will look
+into Windows Regional Preferences, but if Windows is in "**de**-CH" and Datalus
 is in "**fr**-FR" it won't.
 In order to force Gecko to look into OS preferences irrelevant of the language match,
 set the flag :js:`intl.regional_prefs.use_os_locales` to :js:`true`.
@@ -419,8 +419,8 @@ Packaged Locales
 ================
 
 When the Gecko application is being packaged it bundles a selection of locale resources
-to be available within it. At the moment, for example, most Firefox for Android
-builds come with almost 100 locales packaged into it, while Desktop Firefox comes
+to be available within it. At the moment, for example, most Datalus for Android
+builds come with almost 100 locales packaged into it, while Desktop Datalus comes
 with usually just one packaged locale.
 
 There is currently work being done on enabling more flexibility in how
@@ -445,7 +445,7 @@ Locale management can operate in a client/server model. This allows a Gecko proc
 to manage locales (server mode) or just receive the locale selection from a parent
 process (client mode).
 
-The client mode is currently used by all child processes of Desktop Firefox, and
+The client mode is currently used by all child processes of Desktop Datalus, and
 may be used by, for example, GeckoView to follow locale selection from a parent
 process.
 

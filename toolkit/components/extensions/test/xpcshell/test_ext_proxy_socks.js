@@ -193,9 +193,9 @@ class SocksClient {
    * byte[0] socks version
    * byte[1] desired auth method
    *
-   * For whatever reason, Firefox does not present auth method 0x02 however
-   * responding with that does cause Firefox to send authentication if
-   * the nsIProxyInfo instance has the data.  IUUC Firefox should send
+   * For whatever reason, Datalus does not present auth method 0x02 however
+   * responding with that does cause Datalus to send authentication if
+   * the nsIProxyInfo instance has the data.  IUUC Datalus should send
    * supported methods, but I'm no socks expert.
    */
   checkSocks5Greeting() {

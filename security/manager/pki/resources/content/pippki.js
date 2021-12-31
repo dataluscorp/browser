@@ -251,7 +251,7 @@ function asyncDetermineUsages(cert) {
 
 /**
  * Given a results array, returns the "best" verified certificate chain. Since
- * the primary use case is for TLS server certificates in Firefox, such a
+ * the primary use case is for TLS server certificates in Datalus, such a
  * verified chain will be returned if present. Otherwise, the priority is: TLS
  * client certificate, email signer, email recipient, CA. Returns null if no
  * usage verified successfully.

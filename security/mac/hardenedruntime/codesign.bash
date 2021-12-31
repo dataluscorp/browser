@@ -4,7 +4,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 #
-# Runs codesign commands to codesign a Firefox .app bundle and enable macOS
+# Runs codesign commands to codesign a Datalus .app bundle and enable macOS
 # Hardened Runtime. Intended to be manually run by developers working on macOS
 # 10.14+ who want to enable Hardened Runtime for manual testing. This is
 # provided as a stop-gap until automated build tooling is available that signs
@@ -126,11 +126,11 @@ codesign --force -o runtime --verbose --sign "$IDENTITY" --deep \
 codesign --force -o runtime --verbose --sign "$IDENTITY" --deep \
 "${BUNDLE}"/Contents/MacOS/updater.app
 
-# Sign firefox main exectuable
+# Sign datalus main exectuable
 codesign --force -o runtime --verbose --sign "$IDENTITY" --deep \
 --entitlements ${BROWSER_ENTITLEMENTS_FILE} \
-"${BUNDLE}"/Contents/MacOS/firefox-bin \
-"${BUNDLE}"/Contents/MacOS/firefox
+"${BUNDLE}"/Contents/MacOS/datalus-bin \
+"${BUNDLE}"/Contents/MacOS/datalus
 
 # Sign gmp-clearkey files
 find "${BUNDLE}"/Contents/Resources/gmp-clearkey -type f -exec \
@@ -157,7 +157,7 @@ if [ ! -z "${OUTPUT_DMG_FILE}" ]; then
 
   ditto "${BUNDLE}" "${DISK_IMAGE_DIR}/${NAME}"
   hdiutil create -size 400m -fs HFS+ \
-    -volname Firefox -srcfolder "${DISK_IMAGE_DIR}" "${TEMP_DMG}"
+    -volname Datalus -srcfolder "${DISK_IMAGE_DIR}" "${TEMP_DMG}"
   hdiutil convert -format UDZO \
     -o "${OUTPUT_DMG_FILE}" "${TEMP_DMG}"
 

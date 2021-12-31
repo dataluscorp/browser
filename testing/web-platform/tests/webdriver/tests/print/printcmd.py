@@ -70,7 +70,7 @@ def test_large_html_document(session, inline):
     value = assert_success(response)
     pdf = decodebytes(value.encode())
 
-    # This was added to test the fix for a bug in firefox where a PDF larger
+    # This was added to test the fix for a bug in datalus where a PDF larger
     # than 500kb would cause an error. If the resulting PDF is smaller than that
     # it could pass incorrectly.
     assert len(pdf) > 500000

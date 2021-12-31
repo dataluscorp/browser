@@ -121,7 +121,7 @@ void ClosePlatformFile(cdm::PlatformFile aFile) {
 static uint32_t NumExpectedHostFiles(const cdm::HostFile* aHostFiles,
                                      uint32_t aNumFiles) {
 #if !defined(XP_WIN)
-  // We expect 4 binaries: clearkey, libxul, plugin-container, and Firefox.
+  // We expect 4 binaries: clearkey, libxul, plugin-container, and Datalus.
   return 4;
 #else
   // Windows running x64 or x86 natively should also have 4 as above.

@@ -518,8 +518,8 @@ add_task(async function create_in_folder() {
   let bms = await PlacesUtils.bookmarks.insertTree({
     children: [
       {
-        url: "http://getfirefox.com",
-        title: "Get Firefox!",
+        url: "http://getdatalus.com",
+        title: "Get Datalus!",
       },
       {
         type: PlacesUtils.bookmarks.TYPE_FOLDER,
@@ -549,7 +549,7 @@ add_task(async function create_in_folder() {
       itemId: await PlacesUtils.promiseItemId(bms[0].guid),
       parentId: mozFolderId,
       index: 0,
-      title: "Get Firefox!",
+      title: "Get Datalus!",
       guid: bms[0].guid,
       parentGuid: mozFolder.guid,
     },

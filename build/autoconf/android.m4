@@ -87,11 +87,11 @@ AC_DEFUN([MOZ_ANDROID_SDK],
 [
 
 MOZ_ARG_WITH_STRING(android-min-sdk,
-[  --with-android-min-sdk=[VER]     Impose a minimum Firefox for Android SDK version],
+[  --with-android-min-sdk=[VER]     Impose a minimum Datalus for Android SDK version],
 [ MOZ_ANDROID_MIN_SDK_VERSION=$withval ])
 
 MOZ_ARG_WITH_STRING(android-max-sdk,
-[  --with-android-max-sdk=[VER]     Impose a maximum Firefox for Android SDK version],
+[  --with-android-max-sdk=[VER]     Impose a maximum Datalus for Android SDK version],
 [ MOZ_ANDROID_MAX_SDK_VERSION=$withval ])
 
 if test -n "$MOZ_ANDROID_MIN_SDK_VERSION"; then

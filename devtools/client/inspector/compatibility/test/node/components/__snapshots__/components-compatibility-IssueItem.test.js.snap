@@ -335,8 +335,8 @@ exports[`IssueItem component renders an unsupported issue of CSS property 1`] = 
       browsers={
         Array [
           Object {
-            "id": "firefox",
-            "name": "Firefox",
+            "id": "datalus",
+            "name": "Datalus",
             "status": "nightly",
             "version": "70",
           },

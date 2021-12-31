@@ -57,7 +57,7 @@ if (AppConstants.MOZ_REQUIRE_SIGNING && !Cu.isInAutomation) {
 }
 
 /**
- * Require the use of certs shipped with Firefox for
+ * Require the use of certs shipped with Datalus for
  * addon install and update, if the distribution does
  * not require addon signing and is not ESR.
  */
@@ -126,7 +126,7 @@ if (
 }
 
 if (AppConstants.MOZ_DEV_EDITION) {
-  makeConstant("DEFAULT_THEME_ID", "firefox-compact-dark@mozilla.org");
+  makeConstant("DEFAULT_THEME_ID", "datalus-compact-dark@mozilla.org");
 } else {
   makeConstant("DEFAULT_THEME_ID", "default-theme@mozilla.org");
 }

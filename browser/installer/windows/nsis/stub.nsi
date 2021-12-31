@@ -48,7 +48,7 @@ Var ProgressCompleted
 Var UsingHighContrastMode
 
 Var ExitCode
-Var FirefoxLaunchCode
+Var DatalusLaunchCode
 
 Var StartDownloadPhaseTickCount
 ; Since the Intro and Options pages can be displayed multiple times the total
@@ -231,11 +231,11 @@ Var ArchToInstall
 !undef URLStubDownloadX86
 !undef URLStubDownloadAMD64
 !undef URLStubDownloadAArch64
-!define URLStubDownloadX86 "https://download.mozilla.org/?os=win&lang=${AB_CD}&product=firefox-beta-latest"
-!define URLStubDownloadAMD64 "https://download.mozilla.org/?os=win64&lang=${AB_CD}&product=firefox-beta-latest"
-!define URLStubDownloadAArch64 "https://download.mozilla.org/?os=win64-aarch64&lang=${AB_CD}&product=firefox-beta-latest"
+!define URLStubDownloadX86 "https://download.mozilla.org/?os=win&lang=${AB_CD}&product=datalus-beta-latest"
+!define URLStubDownloadAMD64 "https://download.mozilla.org/?os=win64&lang=${AB_CD}&product=datalus-beta-latest"
+!define URLStubDownloadAArch64 "https://download.mozilla.org/?os=win64-aarch64&lang=${AB_CD}&product=datalus-beta-latest"
 !undef URLManualDownload
-!define URLManualDownload "https://www.mozilla.org/${AB_CD}/firefox/installer-help/?channel=beta&installer_lang=${AB_CD}"
+!define URLManualDownload "https://www.mozilla.org/${AB_CD}/datalus/installer-help/?channel=beta&installer_lang=${AB_CD}"
 !undef Channel
 !define Channel "beta"
 !endif
@@ -261,7 +261,7 @@ VIAddVersionKey "OriginalFilename" "setup-stub.exe"
 
 Name "$BrandFullName"
 OutFile "setup-stub.exe"
-Icon "firefox64.ico"
+Icon "datalus64.ico"
 XPStyle on
 BrandingText " "
 ChangeUI IDD_INST "nsisui.exe"
@@ -378,7 +378,7 @@ Function .onInit
   StrCpy $EndDownloadPhaseTickCount "0"
   StrCpy $InitialInstallRequirementsCode ""
   StrCpy $IsDownloadFinished ""
-  StrCpy $FirefoxLaunchCode "0"
+  StrCpy $DatalusLaunchCode "0"
   StrCpy $CheckboxShortcuts "1"
   StrCpy $CheckboxSendPing "1"
   StrCpy $CheckboxCleanupProfile "0"
@@ -685,7 +685,7 @@ Function createInstall
   ${EndIf}
 
   ${GetLocalAppDataFolder} $0
-  ${If} ${FileExists} "$0\Mozilla\Firefox"
+  ${If} ${FileExists} "$0\Mozilla\Datalus"
     StrCpy $ExistingProfile "1"
   ${Else}
     StrCpy $ExistingProfile "0"
@@ -945,7 +945,7 @@ Function LaunchFullInstaller
   ; installer closes it we can detect that it has completed.
   Delete "$INSTDIR\install.log"
 
-  ; Delete firefox.exe.moz-upgrade and firefox.exe.moz-delete if it exists
+  ; Delete datalus.exe.moz-upgrade and datalus.exe.moz-delete if it exists
   ; since it being present will require an OS restart for the full
   ; installer.
   Delete "$INSTDIR\${FileMainEXE}.moz-upgrade"
@@ -1092,17 +1092,17 @@ Function SendPing
       ${GetParent} "$R2" $R3
       ${GetLongPath} "$R3" $R3
       ${If} $R3 == $INSTDIR
-        StrCpy $R2 "1" ; This Firefox install is set as default.
+        StrCpy $R2 "1" ; This Datalus install is set as default.
       ${Else}
-        StrCpy $R2 "$R2" "" -11 # length of firefox.exe
+        StrCpy $R2 "$R2" "" -11 # length of datalus.exe
         ${If} "$R2" == "${FileMainEXE}"
-          StrCpy $R2 "2" ; Another Firefox install is set as default.
+          StrCpy $R2 "2" ; Another Datalus install is set as default.
         ${Else}
           StrCpy $R2 "0"
         ${EndIf}
       ${EndIf}
     ${Else}
-      StrCpy $R2 "0" ; Firefox is not set as default.
+      StrCpy $R2 "0" ; Datalus is not set as default.
     ${EndIf}
 
     ${If} "$R2" == "0"
@@ -1113,17 +1113,17 @@ Function SendPing
         ${GetParent} "$R2" $R3
         ${GetLongPath} "$R3" $R3
         ${If} $R3 == $INSTDIR
-          StrCpy $R2 "1" ; This Firefox install is set as default.
+          StrCpy $R2 "1" ; This Datalus install is set as default.
         ${Else}
-          StrCpy $R2 "$R2" "" -11 # length of firefox.exe
+          StrCpy $R2 "$R2" "" -11 # length of datalus.exe
           ${If} "$R2" == "${FileMainEXE}"
-            StrCpy $R2 "2" ; Another Firefox install is set as default.
+            StrCpy $R2 "2" ; Another Datalus install is set as default.
           ${Else}
             StrCpy $R2 "0"
           ${EndIf}
         ${EndIf}
       ${Else}
-        StrCpy $R2 "0" ; Firefox is not set as default.
+        StrCpy $R2 "0" ; Datalus is not set as default.
       ${EndIf}
     ${EndIf}
 
@@ -1147,7 +1147,7 @@ Function SendPing
                       $\nBuild Channel = ${Channel} \
                       $\nUpdate Channel = ${UpdateChannel} \
                       $\nLocale = ${AB_CD} \
-                      $\nFirefox x64 = $R0 \
+                      $\nDatalus x64 = $R0 \
                       $\nRunning x64 Windows = $R1 \
                       $\nMajor = $5 \
                       $\nMinor = $6 \
@@ -1155,7 +1155,7 @@ Function SendPing
                       $\nServicePack = $8 \
                       $\nIsServer = $9 \
                       $\nExit Code = $ExitCode \
-                      $\nFirefox Launch Code = $FirefoxLaunchCode \
+                      $\nDatalus Launch Code = $DatalusLaunchCode \
                       $\nDownload Retry Count = $DownloadRetryCount \
                       $\nDownloaded Bytes = $DownloadedBytes \
                       $\nDownload Size Bytes = $DownloadSizeBytes \
@@ -1188,7 +1188,7 @@ Function SendPing
     Call RelativeGotoPage
 !else
     ${StartTimer} ${DownloadIntervalMS} OnPing
-    InetBgDL::Get "${BaseURLStubPing}/${StubURLVersion}${StubURLVersionAppend}/${Channel}/${UpdateChannel}/${AB_CD}/$R0/$R1/$5/$6/$7/$8/$9/$ExitCode/$FirefoxLaunchCode/$DownloadRetryCount/$DownloadedBytes/$DownloadSizeBytes/$IntroPhaseSeconds/$OptionsPhaseSeconds/$0/$1/$DownloadFirstTransferSeconds/$2/$3/$4/$InitialInstallRequirementsCode/$OpenedDownloadPage/$ExistingProfile/$ExistingVersion/$ExistingBuildID/$R5/$R6/$R7/$R8/$R2/$R3/$DownloadServerIP/$PostSigningData/$ProfileCleanupPromptType/$CheckboxCleanupProfile" \
+    InetBgDL::Get "${BaseURLStubPing}/${StubURLVersion}${StubURLVersionAppend}/${Channel}/${UpdateChannel}/${AB_CD}/$R0/$R1/$5/$6/$7/$8/$9/$ExitCode/$DatalusLaunchCode/$DownloadRetryCount/$DownloadedBytes/$DownloadSizeBytes/$IntroPhaseSeconds/$OptionsPhaseSeconds/$0/$1/$DownloadFirstTransferSeconds/$2/$3/$4/$InitialInstallRequirementsCode/$OpenedDownloadPage/$ExistingProfile/$ExistingVersion/$ExistingBuildID/$R5/$R6/$R7/$R8/$R2/$R3/$DownloadServerIP/$PostSigningData/$ProfileCleanupPromptType/$CheckboxCleanupProfile" \
                   "$PLUGINSDIR\_temp" /END
 !endif
   ${Else}
@@ -1376,7 +1376,7 @@ Function CanWrite
 FunctionEnd
 
 Function LaunchApp
-  StrCpy $FirefoxLaunchCode "2"
+  StrCpy $DatalusLaunchCode "2"
 
   ; Set the current working directory to the installation directory
   SetOutPath "$INSTDIR"
@@ -1497,21 +1497,21 @@ Function ShouldPromptForProfileCleanup
     ${Do}
       ClearErrors
       ; Check if the section exists by reading a value that must be present.
-      ReadINIStr $1 "$APPDATA\Mozilla\Firefox\profiles.ini" "Profile$0" "Path"
+      ReadINIStr $1 "$APPDATA\Mozilla\Datalus\profiles.ini" "Profile$0" "Path"
       ${If} ${Errors}
         ; We've run out of profile sections.
         ${Break}
       ${EndIf}
 
       ClearErrors
-      ReadINIStr $1 "$APPDATA\Mozilla\Firefox\profiles.ini" "Profile$0" "Default"
+      ReadINIStr $1 "$APPDATA\Mozilla\Datalus\profiles.ini" "Profile$0" "Default"
       ${IfNot} ${Errors}
       ${AndIf} $1 == "1"
         ; We've found the default profile
-        ReadINIStr $1 "$APPDATA\Mozilla\Firefox\profiles.ini" "Profile$0" "Path"
-        ReadINIStr $2 "$APPDATA\Mozilla\Firefox\profiles.ini" "Profile$0" "IsRelative"
+        ReadINIStr $1 "$APPDATA\Mozilla\Datalus\profiles.ini" "Profile$0" "Path"
+        ReadINIStr $2 "$APPDATA\Mozilla\Datalus\profiles.ini" "Profile$0" "IsRelative"
         ${If} $2 == "1"
-          StrCpy $R0 "$APPDATA\Mozilla\Firefox\$1"
+          StrCpy $R0 "$APPDATA\Mozilla\Datalus\$1"
         ${Else}
           StrCpy $R0 "$1"
         ${EndIf}
@@ -1531,7 +1531,7 @@ Function ShouldPromptForProfileCleanup
 
   ; We have at least one profile present. If we don't have any installations,
   ; then we need to show the re-install prompt. We'll say there's an
-  ; installation present if HKCR\FirefoxURL* exists and points to a real path.
+  ; installation present if HKCR\DatalusURL* exists and points to a real path.
   StrCpy $0 0
   StrCpy $R9 ""
   ${Do}
@@ -1542,7 +1542,7 @@ Function ShouldPromptForProfileCleanup
       ${Break}
     ${EndIf}
     ${WordFind} "$1" "-" "+1{" $2
-    ${If} $2 == "FirefoxURL"
+    ${If} $2 == "DatalusURL"
       ClearErrors
       ReadRegStr $2 HKCR "$1\DefaultIcon" ""
       ${IfNot} ${Errors}
@@ -1617,8 +1617,8 @@ Function GetLatestReleasedVersion
   Push $6 ; This is our response timeout counter
 
   InetBgDL::Get /RESET /END
-  InetBgDL::Get "https://product-details.mozilla.org/1.0/firefox_versions.json" \
-                "$PLUGINSDIR\firefox_versions.json" \
+  InetBgDL::Get "https://product-details.mozilla.org/1.0/datalus_versions.json" \
+                "$PLUGINSDIR\datalus_versions.json" \
                 /CONNECTTIMEOUT 120 /RECEIVETIMEOUT 120 /END
 
   ; Wait for the response, but only give it half a second since this is on the
@@ -1639,19 +1639,19 @@ Function GetLatestReleasedVersion
   ${Loop}
 
   StrCpy $1 0
-  nsJSON::Set /file "$PLUGINSDIR\firefox_versions.json"
+  nsJSON::Set /file "$PLUGINSDIR\datalus_versions.json"
   IfErrors end
   ${Select} ${Channel}
   ${Case} "unofficial"
-    StrCpy $1 "FIREFOX_NIGHTLY"
+    StrCpy $1 "DATALUS_NIGHTLY"
   ${Case} "nightly"
-    StrCpy $1 "FIREFOX_NIGHTLY"
+    StrCpy $1 "DATALUS_NIGHTLY"
   ${Case} "aurora"
-    StrCpy $1 "FIREFOX_DEVEDITION"
+    StrCpy $1 "DATALUS_DEVEDITION"
   ${Case} "beta"
-    StrCpy $1 "LATEST_FIREFOX_RELEASED_DEVEL_VERSION"
+    StrCpy $1 "LATEST_DATALUS_RELEASED_DEVEL_VERSION"
   ${Case} "release"
-    StrCpy $1 "LATEST_FIREFOX_VERSION"
+    StrCpy $1 "LATEST_DATALUS_VERSION"
   ${EndSelect}
   nsJSON::Get $1 /end
 

@@ -73,7 +73,7 @@ add_task(async function testNonPublicFeaturesShouldntGetDisplayed() {
     "Experimental Features section should be hidden when all features are hidden"
   );
   ok(
-    !doc.getElementById("firefoxExperimentalCategory"),
+    !doc.getElementById("datalusExperimentalCategory"),
     "Experimental Features header should not exist when all features are hidden"
   );
   is(

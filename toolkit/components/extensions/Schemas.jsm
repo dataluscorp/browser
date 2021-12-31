@@ -1999,7 +1999,7 @@ class ObjectType extends Type {
     } else if (unsupported) {
       if (prop in properties) {
         error = context.error(
-          `Property "${prop}" is unsupported by Firefox`,
+          `Property "${prop}" is unsupported by Datalus`,
           `not contain an unsupported "${prop}" property`
         );
       }

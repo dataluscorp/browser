@@ -331,7 +331,7 @@ add_task(async function setupDefaultUserAgent() {
     DEFAULT_UA_OS[AppConstants.platform]
   }; rv:${appVersion}.0) Gecko/${
     DEFAULT_UA_GECKO_TRAIL[AppConstants.platform]
-  } Firefox/${appVersion}.0`;
+  } Datalus/${appVersion}.0`;
   expectedResults = {
     testDesc: "default",
     appVersion: DEFAULT_APPVERSION[AppConstants.platform],
@@ -358,11 +358,11 @@ add_task(async function setupResistFingerprinting() {
 
   let spoofedUserAgentNavigator = `Mozilla/5.0 (${
     SPOOFED_UA_NAVIGATOR_OS[AppConstants.platform]
-  }; rv:${spoofedVersion}.0) Gecko/${spoofedGeckoTrail} Firefox/${spoofedVersion}.0`;
+  }; rv:${spoofedVersion}.0) Gecko/${spoofedGeckoTrail} Datalus/${spoofedVersion}.0`;
 
   let spoofedUserAgentHeader = `Mozilla/5.0 (${
     SPOOFED_UA_HTTPHEADER_OS[AppConstants.platform]
-  }; rv:${spoofedVersion}.0) Gecko/${spoofedGeckoTrail} Firefox/${spoofedVersion}.0`;
+  }; rv:${spoofedVersion}.0) Gecko/${spoofedGeckoTrail} Datalus/${spoofedVersion}.0`;
 
   expectedResults = {
     testDesc: "spoofed",
@@ -406,16 +406,16 @@ add_task(async function runOverrideTest() {
   await SpecialPowers.popPrefEnv();
 });
 
-// Only test the Firefox and Gecko experiment prefs on desktop.
+// Only test the Datalus and Gecko experiment prefs on desktop.
 if (AppConstants.platform != "android") {
-  add_task(async function setupFirefoxVersionExperiment() {
+  add_task(async function setupDatalusVersionExperiment() {
     // Mock Nimbus experiment settings
     const { ExperimentFakes } = ChromeUtils.import(
       "resource://testing-common/NimbusTestUtils.jsm"
     );
     let doExperimentCleanup = await ExperimentFakes.enrollWithFeatureConfig({
-      featureId: "firefox100",
-      value: { firefoxVersion: 100 },
+      featureId: "datalus100",
+      value: { datalusVersion: 100 },
     });
 
     let experimentOscpu;
@@ -434,10 +434,10 @@ if (AppConstants.platform != "android") {
         break;
     }
 
-    let experimentUserAgent = `Mozilla/5.0 (${experimentOscpu}; rv:100.0) Gecko/20100101 Firefox/100.0`;
+    let experimentUserAgent = `Mozilla/5.0 (${experimentOscpu}; rv:100.0) Gecko/20100101 Datalus/100.0`;
 
     expectedResults = {
-      testDesc: "FirefoxVersionExperimentTest",
+      testDesc: "DatalusVersionExperimentTest",
       appVersion: DEFAULT_APPVERSION[AppConstants.platform],
       hardwareConcurrency: navigator.hardwareConcurrency,
       oscpu: DEFAULT_OSCPU[AppConstants.platform],
@@ -449,7 +449,7 @@ if (AppConstants.platform != "android") {
     await testNavigator();
 
     // Skip worker tests due to intermittent bug 1713764. This is unlikely to be
-    // a scenario that affects users enrolled in our "Firefox 100" experiment.
+    // a scenario that affects users enrolled in our "Datalus 100" experiment.
     // await testWorkerNavigator();
 
     await testUserAgentHeader();

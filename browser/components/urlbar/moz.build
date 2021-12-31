@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Address Bar")
+    BUG_COMPONENT = ("Datalus", "Address Bar")
 
 JAR_MANIFESTS += ["jar.mn"]
 

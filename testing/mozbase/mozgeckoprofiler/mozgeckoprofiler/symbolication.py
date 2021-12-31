@@ -192,10 +192,10 @@ class ProfileSymbolicator:
             pass
 
     def integrate_symbol_zip(self, symbol_zip_file):
-        symbol_zip_file.extractall(self.options["symbolPaths"]["FIREFOX"])
+        symbol_zip_file.extractall(self.options["symbolPaths"]["DATALUS"])
 
     def _marker_file(self, symbol_zip_url):
-        marker_dir = os.path.join(self.options["symbolPaths"]["FIREFOX"], ".markers")
+        marker_dir = os.path.join(self.options["symbolPaths"]["DATALUS"], ".markers")
         return os.path.join(
             marker_dir, hashlib.sha1(symbol_zip_url.encode("utf-8")).hexdigest()
         )
@@ -215,7 +215,7 @@ class ProfileSymbolicator:
             "stacks": [[]],
             "memoryMap": memoryMap,
             "version": 4,
-            "symbolSources": ["FIREFOX", "WINDOWS"],
+            "symbolSources": ["DATALUS", "WINDOWS"],
         }
         request = SymbolicationRequest(self.sym_file_manager, rawRequest)
         if not request.isValidRequest:
@@ -238,7 +238,7 @@ class ProfileSymbolicator:
 
         # We integrate the dumped symbols by dumping them directly into our
         # symbol directory.
-        output_dir = self.options["symbolPaths"]["FIREFOX"]
+        output_dir = self.options["symbolPaths"]["DATALUS"]
 
         # Additionally, we add all dumped symbol files to the missingsymbols
         # zip file.
@@ -351,7 +351,7 @@ class ProfileSymbolicator:
             "stacks": [processedStack],
             "memoryMap": memoryMap,
             "version": 4,
-            "symbolSources": ["FIREFOX", "WINDOWS"],
+            "symbolSources": ["DATALUS", "WINDOWS"],
         }
         request = SymbolicationRequest(self.sym_file_manager, rawRequest)
         if not request.isValidRequest:

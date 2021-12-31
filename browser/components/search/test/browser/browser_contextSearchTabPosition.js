@@ -55,7 +55,7 @@ add_task(async function test() {
     new MouseEvent("click")
   );
   BrowserSearch.loadSearchFromContext(
-    "firefox",
+    "datalus",
     false,
     Services.scriptSecurityManager.getSystemPrincipal(),
     Services.scriptSecurityManager.getSystemPrincipal().csp,

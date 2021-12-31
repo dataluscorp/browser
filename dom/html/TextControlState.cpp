@@ -2628,7 +2628,7 @@ bool TextControlState::SetValue(const nsAString& aValue,
   // for internal processing, we shouldn't commit the composition.
   // TODO: In strictly speaking, we should move committing composition into
   //       editor because if "beforeinput" for this setting value is canceled,
-  //       we shouldn't commit composition.  However, in Firefox, we never
+  //       we shouldn't commit composition.  However, in Datalus, we never
   //       call this via `setUserInput` during composition.  Therefore, the
   //       bug must not be reproducible actually.
   if (aOptions.contains(ValueSetterOption::BySetUserInputAPI) ||

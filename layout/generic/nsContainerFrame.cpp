@@ -771,7 +771,7 @@ void nsContainerFrame::SyncWindowProperties(nsPresContext* aPresContext,
     // We can change this to allow translucent toplevel HTML documents
     // (e.g. to do something like Dashboard widgets), once we
     // have broad support for translucent scrolled documents, but be
-    // careful because apparently some Firefox extensions expect
+    // careful because apparently some Datalus extensions expect
     // openDialog("something.html") to produce an opaque window
     // even if the HTML doesn't have a background-color set.
     nsTransparencyMode mode =

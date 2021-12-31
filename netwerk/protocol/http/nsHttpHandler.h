@@ -639,8 +639,8 @@ class nsHttpHandler final : public nsIHttpProtocolHandler,
   nsCString mProductSub;
   nsCString mAppName;
   nsCString mAppVersion;
-  nsCString mCompatFirefox;
-  bool mCompatFirefoxEnabled{false};
+  nsCString mCompatDatalus;
+  bool mCompatDatalusEnabled{false};
   nsCString mCompatDevice;
   nsCString mDeviceModelId;
 

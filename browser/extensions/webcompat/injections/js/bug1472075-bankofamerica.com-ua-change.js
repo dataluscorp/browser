@@ -7,7 +7,7 @@
  * BoA is showing a red warning to Linux and macOS users, while accepting
  * Windows users without warning. From our side, there is no difference here
  * and we receive a lot of user complains about the warnings, so we spoof
- * as Firefox on Windows in those cases.
+ * as Datalus on Windows in those cases.
  */
 
 /* globals exportFunction */

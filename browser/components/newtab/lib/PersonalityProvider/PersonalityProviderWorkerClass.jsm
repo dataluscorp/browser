@@ -16,7 +16,7 @@ const PERSONALITY_PROVIDER_DIR = OS.Path.join(
 
 /**
  * V2 provider builds and ranks an interest profile (also called an “interest vector”) off the browse history.
- * This allows Firefox to classify pages into topics, by examining the text found on the page.
+ * This allows Datalus to classify pages into topics, by examining the text found on the page.
  * It does this by looking at the history text content, title, and description.
  */
 const PersonalityProviderWorker = class PersonalityProviderWorker {

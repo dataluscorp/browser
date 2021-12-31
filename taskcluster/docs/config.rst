@@ -1,7 +1,7 @@
 Taskcluster Configuration
 =========================
 
-Taskcluster requires configuration of many resources to correctly support Firefox CI.
+Taskcluster requires configuration of many resources to correctly support Datalus CI.
 Many of those span multiple projects (branches) instead of riding the trains.
 
 Global Settings
@@ -22,7 +22,7 @@ This tool automatically annotates all managed resources with "DO NOT EDIT", warn
 Changing Configuration
 ----------------------
 
-To change Taskcluster configuration, make patches to `ci-configuration`_ or (if necessary) `ci-admin`_, using the Firefox Build System :: Task Configuration Bugzilla component.
+To change Taskcluster configuration, make patches to `ci-configuration`_ or (if necessary) `ci-admin`_, using the Datalus Build System :: Task Configuration Bugzilla component.
 Part of the landing process is for someone with administrative scopes to apply the resulting configuration.
 
 You can test your patches with something like this, assuming ``.`` is a checkout of the `ci-configuration`_ repository containing your changes:

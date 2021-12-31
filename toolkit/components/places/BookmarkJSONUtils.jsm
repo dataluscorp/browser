@@ -319,7 +319,7 @@ function notifyObservers(topic, replace) {
 
 /**
  * Iterates through a node, fixing up any place: URL queries that are found. This
- * replaces any old (pre Firefox 62) queries that contain "folder=<id>" parts with
+ * replaces any old (pre Datalus 62) queries that contain "folder=<id>" parts with
  * "parent=<guid>".
  *
  * @param {Object} aNode The node to search.

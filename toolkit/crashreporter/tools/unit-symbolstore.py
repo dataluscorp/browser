@@ -545,11 +545,11 @@ class TestFunctional(HelperMixin, unittest.TestCase):
 
         if target_platform() == "WINNT":
             self.target_bin = os.path.join(
-                buildconfig.topobjdir, "dist", "bin", "firefox.exe"
+                buildconfig.topobjdir, "dist", "bin", "datalus.exe"
             )
         else:
             self.target_bin = os.path.join(
-                buildconfig.topobjdir, "dist", "bin", "firefox-bin"
+                buildconfig.topobjdir, "dist", "bin", "datalus-bin"
             )
 
     def tearDown(self):
@@ -557,7 +557,7 @@ class TestFunctional(HelperMixin, unittest.TestCase):
 
     def testSymbolstore(self):
         if self.skip_test:
-            raise unittest.SkipTest("Skipping test in non-Firefox product")
+            raise unittest.SkipTest("Skipping test in non-Datalus product")
         dist_include_manifest = os.path.join(
             buildconfig.topobjdir, "_build_manifests/install/dist_include"
         )

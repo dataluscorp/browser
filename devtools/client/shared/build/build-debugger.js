@@ -68,7 +68,7 @@ function shouldLazyLoad(value) {
 
 /**
  * This Babel plugin is used to transpile a single Debugger module into a module that
- * can be loaded in Firefox via the regular DevTools loader.
+ * can be loaded in Datalus via the regular DevTools loader.
  */
 function transformMC({ types: t }) {
   return {

@@ -32,7 +32,7 @@ struct AutoLoadSystemDependencies {
     // dlls. The order that these are loaded does not matter since they are
     // loaded using the LOAD_WITH_ALTERED_SEARCH_PATH flag.
 #ifdef HAVE_64BIT_BUILD
-    // DLLs for Firefox x64 on Windows 7 (x64).
+    // DLLs for Datalus x64 on Windows 7 (x64).
     // Note: dwmapi.dll is preloaded since a crash will try to load it from the
     // application's directory.
     static LPCWSTR delayDLLs[] = {
@@ -41,7 +41,7 @@ struct AutoLoadSystemDependencies {
         L"sspicli.dll", L"wsock32.dll"};
 
 #else
-    // DLLs for Firefox x86 on Windows XP through Windows 7 (x86 and x64).
+    // DLLs for Datalus x86 on Windows XP through Windows 7 (x86 and x64).
     // Note: dwmapi.dll is preloaded since a crash will try to load it from the
     // application's directory.
     static LPCWSTR delayDLLs[] = {

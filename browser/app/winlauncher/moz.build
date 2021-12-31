@@ -49,6 +49,6 @@ if CONFIG["MOZ_LAUNCHER_PROCESS"]:
 DisableStlWrapping()
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Launcher Process")
+    BUG_COMPONENT = ("Datalus", "Launcher Process")
 
 REQUIRES_UNIFIED_BUILD = True

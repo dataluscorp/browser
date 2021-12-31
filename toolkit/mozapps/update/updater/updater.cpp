@@ -286,7 +286,7 @@ static bool sStagedUpdate = false;
 static bool sReplaceRequest = false;
 static bool sUsingService = false;
 
-// Normally, we run updates as a result of user action (the user started Firefox
+// Normally, we run updates as a result of user action (the user started Datalus
 // or clicked a "Restart to Update" button). But there are some cases when
 // we are not:
 // a) The callback app is a background task. If true then the updater is
@@ -295,7 +295,7 @@ static bool sUsingService = false;
 //    when performing a staged update (see calls to ProcessUpdates), and there
 //    are already checks for sStagedUpdate when showing UI or elevating.
 // b) The environment variable MOZ_APP_SILENT_START is set and not empty. This
-//    is set, for instance, on macOS when Firefox had no windows open for a
+//    is set, for instance, on macOS when Datalus had no windows open for a
 //    while and restarted to apply updates.
 //
 // In these cases, the update should be installed silently, so we shouldn't:
@@ -2352,7 +2352,7 @@ static int ProcessReplaceRequest() {
        tmpDir));
   int rv = rename_file(destDir, tmpDir, true);
 #ifdef XP_WIN
-  // On Windows, if Firefox is launched using the shortcut, it will hold a
+  // On Windows, if Datalus is launched using the shortcut, it will hold a
   // handle to its installation directory open, which might not get released in
   // time. Therefore we wait a little bit here to see if the handle is released.
   // If it's not released, we just fail to perform the replace request.
@@ -3027,7 +3027,7 @@ int NS_main(int argc, NS_tchar** argv) {
       // admin who was not the installing user. Once the first update has been
       // installed, the permissions of the installation directory should be
       // changed such that we don't need to elevate in the future.
-      // Firefox shouldn't actually launch the updater at all in this case. This
+      // Datalus shouldn't actually launch the updater at all in this case. This
       // is defense in depth.
       WriteStatusFile(SILENT_UPDATE_NEEDED_ELEVATION_ERROR);
       fprintf(stderr,
@@ -3887,7 +3887,7 @@ int NS_main(int argc, NS_tchar** argv) {
     freeArguments(argc, argv);
     CleanupElevatedMacUpdate(false);
   } else if (IsOwnedByGroupAdmin(gInstallDirPath)) {
-    // If the group ownership of the Firefox .app bundle was set to the "admin"
+    // If the group ownership of the Datalus .app bundle was set to the "admin"
     // group during a previous elevated update, we need to ensure that all files
     // in the bundle have group ownership of "admin" as well as write permission
     // for the group to not break updates in the future.

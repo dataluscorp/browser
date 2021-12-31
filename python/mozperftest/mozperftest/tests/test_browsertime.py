@@ -80,7 +80,7 @@ def test_browser(*mocked):
 
     cmd = " ".join(mach_cmd.run_process.call_args[0][0])
     assert EXAMPLE_TEST in cmd
-    assert "--firefox.geckodriverPath GECKODRIVER" in cmd
+    assert "--datalus.geckodriverPath GECKODRIVER" in cmd
     assert "--one 1" in cmd
     assert "--two 2" in cmd
 
@@ -248,8 +248,8 @@ def test_browser_desktop(*mocked):
 
     assert mach_cmd.run_process.call_count == 1
     cmd = " ".join(mach_cmd.run_process.call_args[0][0])
-    # check that --firefox.binaryPath is set automatically
-    assert "--firefox.binaryPath" in cmd
+    # check that --datalus.binaryPath is set automatically
+    assert "--datalus.binaryPath" in cmd
 
 
 def test_add_options():

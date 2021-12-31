@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at <http://mozilla.org/MPL/2.0/>. */
 
-import * as firefox from "./client/firefox";
+import * as datalus from "./client/datalus";
 
 import { asyncStore, verifyPrefSchema, prefs } from "./utils/prefs";
 import { setupHelper } from "./utils/dbg";
@@ -25,7 +25,7 @@ async function syncBreakpoints() {
   return Promise.all(
     breakpointValues.map(({ disabled, options, generatedLocation }) => {
       if (!disabled) {
-        return firefox.clientCommands.setBreakpoint(generatedLocation, options);
+        return datalus.clientCommands.setBreakpoint(generatedLocation, options);
       }
     })
   );
@@ -36,7 +36,7 @@ async function syncXHRBreakpoints() {
   return Promise.all(
     breakpoints.map(({ path, method, disabled }) => {
       if (!disabled) {
-        firefox.clientCommands.setXHRBreakpoint(path, method);
+        datalus.clientCommands.setXHRBreakpoint(path, method);
       }
     })
   );
@@ -44,7 +44,7 @@ async function syncXHRBreakpoints() {
 
 function setPauseOnExceptions() {
   const { pauseOnExceptions, pauseOnCaughtException } = prefs;
-  return firefox.clientCommands.pauseOnExceptions(
+  return datalus.clientCommands.pauseOnExceptions(
     pauseOnExceptions,
     pauseOnCaughtException
   );
@@ -82,13 +82,13 @@ export async function bootstrap({
   const workers = bootstrapWorkers(panelWorkers);
 
   const { store, actions, selectors } = bootstrapStore(
-    firefox.clientCommands,
+    datalus.clientCommands,
     workers,
     panel,
     initialState
   );
 
-  const connected = firefox.onConnect(
+  const connected = datalus.onConnect(
     commands,
     resourceCommand,
     actions,
@@ -105,16 +105,16 @@ export async function bootstrap({
     selectors,
     workers,
     targetCommand: commands.targetCommand,
-    client: firefox.clientCommands,
+    client: datalus.clientCommands,
   });
 
   bootstrapApp(store, panel);
   await connected;
-  return { store, actions, selectors, client: firefox.clientCommands };
+  return { store, actions, selectors, client: datalus.clientCommands };
 }
 
 export async function destroy() {
-  firefox.onDisconnect();
+  datalus.onDisconnect();
   unmountRoot();
   teardownWorkers();
 }

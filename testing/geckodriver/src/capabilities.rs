@@ -8,9 +8,9 @@ use crate::marionette::MarionetteSettings;
 use mozdevice::AndroidStorageInput;
 use mozprofile::preferences::Pref;
 use mozprofile::profile::Profile;
-use mozrunner::firefox_args::{get_arg_value, parse_args, Arg};
-use mozrunner::runner::platform::firefox_default_path;
-use mozversion::{self, firefox_binary_version, firefox_version, Version};
+use mozrunner::datalus_args::{get_arg_value, parse_args, Arg};
+use mozrunner::runner::platform::datalus_default_path;
+use mozversion::{self, datalus_binary_version, datalus_version, Version};
 use regex::bytes::Regex;
 use serde_json::{Map, Value};
 use std::collections::BTreeMap;
@@ -53,22 +53,22 @@ impl From<VersionError> for WebDriverError {
     }
 }
 
-/// Provides matching of `moz:firefoxOptions` and resolutionnized  of which Firefox
+/// Provides matching of `moz:datalusOptions` and resolutionnized  of which Datalus
 /// binary to use.
 ///
-/// `FirefoxCapabilities` is constructed with the fallback binary, should
-/// `moz:firefoxOptions` not contain a binary entry.  This may either be the
-/// system Firefox installation or an override, for example given to the
+/// `DatalusCapabilities` is constructed with the fallback binary, should
+/// `moz:datalusOptions` not contain a binary entry.  This may either be the
+/// system Datalus installation or an override, for example given to the
 /// `--binary` flag of geckodriver.
-pub struct FirefoxCapabilities<'a> {
+pub struct DatalusCapabilities<'a> {
     pub chosen_binary: Option<PathBuf>,
     fallback_binary: Option<&'a PathBuf>,
     version_cache: BTreeMap<PathBuf, Result<Version, VersionError>>,
 }
 
-impl<'a> FirefoxCapabilities<'a> {
-    pub fn new(fallback_binary: Option<&'a PathBuf>) -> FirefoxCapabilities<'a> {
-        FirefoxCapabilities {
+impl<'a> DatalusCapabilities<'a> {
+    pub fn new(fallback_binary: Option<&'a PathBuf>) -> DatalusCapabilities<'a> {
+        DatalusCapabilities {
             chosen_binary: None,
             fallback_binary,
             version_cache: BTreeMap::new(),
@@ -77,12 +77,12 @@ impl<'a> FirefoxCapabilities<'a> {
 
     fn set_binary(&mut self, capabilities: &Map<String, Value>) {
         self.chosen_binary = capabilities
-            .get("moz:firefoxOptions")
+            .get("moz:datalusOptions")
             .and_then(|x| x.get("binary"))
             .and_then(|x| x.as_str())
             .map(PathBuf::from)
             .or_else(|| self.fallback_binary.cloned())
-            .or_else(firefox_default_path);
+            .or_else(datalus_default_path);
     }
 
     fn version(&mut self, binary: Option<&Path>) -> Result<Version, VersionError> {
@@ -106,8 +106,8 @@ impl<'a> FirefoxCapabilities<'a> {
     }
 
     fn version_from_ini(&self, binary: &Path) -> Result<Version, VersionError> {
-        debug!("Trying to read firefox version from ini files");
-        let version = firefox_version(binary)?;
+        debug!("Trying to read datalus version from ini files");
+        let version = datalus_version(binary)?;
         if let Some(version_string) = version.version_string {
             Version::from_str(&version_string).map_err(|err| err.into())
         } else {
@@ -118,18 +118,18 @@ impl<'a> FirefoxCapabilities<'a> {
     }
 
     fn version_from_binary(&self, binary: &Path) -> Result<Version, VersionError> {
-        debug!("Trying to read firefox version from binary");
-        Ok(firefox_binary_version(binary)?)
+        debug!("Trying to read datalus version from binary");
+        Ok(datalus_binary_version(binary)?)
     }
 }
 
-impl<'a> BrowserCapabilities for FirefoxCapabilities<'a> {
+impl<'a> BrowserCapabilities for DatalusCapabilities<'a> {
     fn init(&mut self, capabilities: &Capabilities) {
         self.set_binary(capabilities);
     }
 
     fn browser_name(&mut self, _: &Capabilities) -> WebDriverResult<Option<String>> {
-        Ok(Some("firefox".into()))
+        Ok(Some("datalus".into()))
     }
 
     fn browser_version(&mut self, _: &Capabilities) -> WebDriverResult<Option<String>> {
@@ -189,11 +189,11 @@ impl<'a> BrowserCapabilities for FirefoxCapabilities<'a> {
             return Ok(());
         }
         match name {
-            "moz:firefoxOptions" => {
+            "moz:datalusOptions" => {
                 let data = try_opt!(
                     value.as_object(),
                     ErrorStatus::InvalidArgument,
-                    "moz:firefoxOptions is not an object"
+                    "moz:datalusOptions is not an object"
                 );
                 for (key, value) in data.iter() {
                     match &**key {
@@ -230,7 +230,7 @@ impl<'a> BrowserCapabilities for FirefoxCapabilities<'a> {
                                 {
                                     return Err(WebDriverError::new(
                                         ErrorStatus::InvalidArgument,
-                                        format!("{} is not a Firefox executable", &**key),
+                                        format!("{} is not a Datalus executable", &**key),
                                     ));
                                 }
                             } else {
@@ -302,7 +302,7 @@ impl<'a> BrowserCapabilities for FirefoxCapabilities<'a> {
                         x => {
                             return Err(WebDriverError::new(
                                 ErrorStatus::InvalidArgument,
-                                format!("Invalid moz:firefoxOptions field {}", x),
+                                format!("Invalid moz:datalusOptions field {}", x),
                             ))
                         }
                     }
@@ -347,7 +347,7 @@ impl<'a> BrowserCapabilities for FirefoxCapabilities<'a> {
     }
 }
 
-/// Android-specific options in the `moz:firefoxOptions` struct.
+/// Android-specific options in the `moz:datalusOptions` struct.
 /// These map to "androidCamelCase", following [chromedriver's Android-specific
 /// Capabilities](http://chromedriver.chromium.org/getting-started/getting-started---android).
 #[derive(Default, Clone, Debug, PartialEq)]
@@ -369,14 +369,14 @@ impl AndroidOptions {
     }
 }
 
-/// Rust representation of `moz:firefoxOptions`.
+/// Rust representation of `moz:datalusOptions`.
 ///
-/// Calling `FirefoxOptions::from_capabilities(binary, capabilities)` causes
+/// Calling `DatalusOptions::from_capabilities(binary, capabilities)` causes
 /// the encoded profile, the binary arguments, log settings, and additional
-/// preferences to be checked and unmarshaled from the `moz:firefoxOptions`
+/// preferences to be checked and unmarshaled from the `moz:datalusOptions`
 /// JSON Object into a Rust representation.
 #[derive(Default, Debug)]
-pub struct FirefoxOptions {
+pub struct DatalusOptions {
     pub binary: Option<PathBuf>,
     pub profile: Option<Profile>,
     pub args: Option<Vec<String>>,
@@ -387,8 +387,8 @@ pub struct FirefoxOptions {
     pub use_websocket: bool,
 }
 
-impl FirefoxOptions {
-    pub fn new() -> FirefoxOptions {
+impl DatalusOptions {
+    pub fn new() -> DatalusOptions {
         Default::default()
     }
 
@@ -396,25 +396,25 @@ impl FirefoxOptions {
         binary_path: Option<PathBuf>,
         settings: &MarionetteSettings,
         matched: &mut Capabilities,
-    ) -> WebDriverResult<FirefoxOptions> {
-        let mut rv = FirefoxOptions::new();
+    ) -> WebDriverResult<DatalusOptions> {
+        let mut rv = DatalusOptions::new();
         rv.binary = binary_path;
 
-        if let Some(json) = matched.remove("moz:firefoxOptions") {
+        if let Some(json) = matched.remove("moz:datalusOptions") {
             let options = json.as_object().ok_or_else(|| {
                 WebDriverError::new(
                     ErrorStatus::InvalidArgument,
-                    "'moz:firefoxOptions' \
+                    "'moz:datalusOptions' \
                  capability is not an object",
                 )
             })?;
 
-            rv.android = FirefoxOptions::load_android(settings.android_storage, options)?;
-            rv.args = FirefoxOptions::load_args(options)?;
-            rv.env = FirefoxOptions::load_env(options)?;
-            rv.log = FirefoxOptions::load_log(options)?;
-            rv.prefs = FirefoxOptions::load_prefs(options)?;
-            rv.profile = FirefoxOptions::load_profile(options)?;
+            rv.android = DatalusOptions::load_android(settings.android_storage, options)?;
+            rv.args = DatalusOptions::load_args(options)?;
+            rv.env = DatalusOptions::load_env(options)?;
+            rv.log = DatalusOptions::load_log(options)?;
+            rv.prefs = DatalusOptions::load_prefs(options)?;
+            rv.profile = DatalusOptions::load_profile(options)?;
         }
 
         if let Some(args) = rv.args.as_ref() {
@@ -646,8 +646,8 @@ impl FirefoxOptions {
                 }
                 None => {
                     match package.as_str() {
-                        "org.mozilla.firefox"
-                        | "org.mozilla.firefox_beta"
+                        "org.mozilla.datalus"
+                        | "org.mozilla.datalus_beta"
                         | "org.mozilla.fenix"
                         | "org.mozilla.fenix.debug"
                         | "org.mozilla.reference.browser" => {
@@ -803,18 +803,18 @@ mod tests {
     }
 
     fn make_options(
-        firefox_opts: Capabilities,
+        datalus_opts: Capabilities,
         marionette_settings: Option<MarionetteSettings>,
-    ) -> WebDriverResult<FirefoxOptions> {
+    ) -> WebDriverResult<DatalusOptions> {
         let mut caps = Capabilities::new();
-        caps.insert("moz:firefoxOptions".into(), Value::Object(firefox_opts));
+        caps.insert("moz:datalusOptions".into(), Value::Object(datalus_opts));
 
-        FirefoxOptions::from_capabilities(None, &marionette_settings.unwrap_or_default(), &mut caps)
+        DatalusOptions::from_capabilities(None, &marionette_settings.unwrap_or_default(), &mut caps)
     }
 
     #[test]
     fn fx_options_default() {
-        let opts: FirefoxOptions = Default::default();
+        let opts: DatalusOptions = Default::default();
         assert_eq!(opts.android, None);
         assert_eq!(opts.args, None);
         assert_eq!(opts.binary, None);
@@ -829,8 +829,8 @@ mod tests {
         let mut caps = Capabilities::new();
 
         let marionette_settings = Default::default();
-        let opts = FirefoxOptions::from_capabilities(None, &marionette_settings, &mut caps)
-            .expect("valid firefox options");
+        let opts = DatalusOptions::from_capabilities(None, &marionette_settings, &mut caps)
+            .expect("valid datalus options");
         assert_eq!(opts.android, None);
         assert_eq!(opts.args, None);
         assert_eq!(opts.binary, None);
@@ -842,19 +842,19 @@ mod tests {
     fn fx_options_from_capabilities_with_binary_and_caps() {
         let mut caps = Capabilities::new();
         caps.insert(
-            "moz:firefoxOptions".into(),
+            "moz:datalusOptions".into(),
             Value::Object(Capabilities::new()),
         );
 
         let binary = PathBuf::from("foo");
         let marionette_settings = Default::default();
 
-        let opts = FirefoxOptions::from_capabilities(
+        let opts = DatalusOptions::from_capabilities(
             Some(binary.clone()),
             &marionette_settings,
             &mut caps,
         )
-        .expect("valid firefox options");
+        .expect("valid datalus options");
         assert_eq!(opts.android, None);
         assert_eq!(opts.args, None);
         assert_eq!(opts.binary, Some(binary));
@@ -867,12 +867,12 @@ mod tests {
         let mut caps = Capabilities::new();
 
         let marionette_settings = Default::default();
-        let opts = FirefoxOptions::from_capabilities(None, &marionette_settings, &mut caps)
-            .expect("Valid Firefox options");
+        let opts = DatalusOptions::from_capabilities(None, &marionette_settings, &mut caps)
+            .expect("Valid Datalus options");
 
         assert!(
             opts.args.is_none(),
-            "CLI arguments for Firefox unexpectedly found"
+            "CLI arguments for Datalus unexpectedly found"
         );
     }
 
@@ -882,12 +882,12 @@ mod tests {
         caps.insert("webSocketUrl".into(), json!(false));
 
         let marionette_settings = Default::default();
-        let opts = FirefoxOptions::from_capabilities(None, &marionette_settings, &mut caps)
-            .expect("Valid Firefox options");
+        let opts = DatalusOptions::from_capabilities(None, &marionette_settings, &mut caps)
+            .expect("Valid Datalus options");
 
         assert!(
             opts.args.is_none(),
-            "CLI arguments for Firefox unexpectedly found"
+            "CLI arguments for Datalus unexpectedly found"
         );
     }
 
@@ -900,8 +900,8 @@ mod tests {
             websocket_port: 1234,
             ..Default::default()
         };
-        let opts = FirefoxOptions::from_capabilities(None, &settings, &mut caps)
-            .expect("Valid Firefox options");
+        let opts = DatalusOptions::from_capabilities(None, &settings, &mut caps)
+            .expect("Valid Datalus options");
 
         if let Some(args) = opts.args {
             let mut iter = args.iter();
@@ -910,7 +910,7 @@ mod tests {
                 .is_some());
             assert_eq!(iter.next(), Some(&"1234".to_owned()));
         } else {
-            assert!(false, "CLI arguments for Firefox not found");
+            assert!(false, "CLI arguments for Datalus not found");
         }
     }
 
@@ -918,10 +918,10 @@ mod tests {
     fn fx_options_from_capabilities_with_debugger_address_not_set() {
         let caps = Capabilities::new();
 
-        let opts = make_options(caps, None).expect("valid firefox options");
+        let opts = make_options(caps, None).expect("valid datalus options");
         assert!(
             opts.args.is_none(),
-            "CLI arguments for Firefox unexpectedly found"
+            "CLI arguments for Datalus unexpectedly found"
         );
     }
 
@@ -930,10 +930,10 @@ mod tests {
         let mut caps = Capabilities::new();
         caps.insert("moz:debuggerAddress".into(), json!(false));
 
-        let opts = make_options(caps, None).expect("valid firefox options");
+        let opts = make_options(caps, None).expect("valid datalus options");
         assert!(
             opts.args.is_none(),
-            "CLI arguments for Firefox unexpectedly found"
+            "CLI arguments for Datalus unexpectedly found"
         );
     }
 
@@ -946,8 +946,8 @@ mod tests {
             websocket_port: 1234,
             ..Default::default()
         };
-        let opts = FirefoxOptions::from_capabilities(None, &settings, &mut caps)
-            .expect("Valid Firefox options");
+        let opts = DatalusOptions::from_capabilities(None, &settings, &mut caps)
+            .expect("Valid Datalus options");
 
         if let Some(args) = opts.args {
             let mut iter = args.iter();
@@ -956,7 +956,7 @@ mod tests {
                 .is_some());
             assert_eq!(iter.next(), Some(&"1234".to_owned()));
         } else {
-            assert!(false, "CLI arguments for Firefox not found");
+            assert!(false, "CLI arguments for Datalus not found");
         }
 
         assert!(opts
@@ -968,55 +968,55 @@ mod tests {
     #[test]
     fn fx_options_from_capabilities_with_invalid_caps() {
         let mut caps = Capabilities::new();
-        caps.insert("moz:firefoxOptions".into(), json!(42));
+        caps.insert("moz:datalusOptions".into(), json!(42));
 
         let marionette_settings = Default::default();
-        FirefoxOptions::from_capabilities(None, &marionette_settings, &mut caps)
-            .expect_err("Firefox options need to be of type object");
+        DatalusOptions::from_capabilities(None, &marionette_settings, &mut caps)
+            .expect_err("Datalus options need to be of type object");
     }
 
     #[test]
     fn fx_options_android_no_package() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidAvtivity".into(), json!("foo"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidAvtivity".into(), json!("foo"));
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
         assert_eq!(opts.android, None);
     }
 
     #[test]
     fn fx_options_android_package_valid_value() {
         for value in ["foo.bar", "foo.bar.cheese.is.good", "Foo.Bar_9"].iter() {
-            let mut firefox_opts = Capabilities::new();
-            firefox_opts.insert("androidPackage".into(), json!(value));
+            let mut datalus_opts = Capabilities::new();
+            datalus_opts.insert("androidPackage".into(), json!(value));
 
-            let opts = make_options(firefox_opts, None).expect("valid firefox options");
+            let opts = make_options(datalus_opts, None).expect("valid datalus options");
             assert_eq!(opts.android.unwrap().package, value.to_string());
         }
     }
 
     #[test]
     fn fx_options_android_package_invalid_type() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!(42));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!(42));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn fx_options_android_package_invalid_value() {
         for value in ["../foo", "\\foo\n", "foo", "_foo", "0foo"].iter() {
-            let mut firefox_opts = Capabilities::new();
-            firefox_opts.insert("androidPackage".into(), json!(value));
-            make_options(firefox_opts, None).expect_err("invalid firefox options");
+            let mut datalus_opts = Capabilities::new();
+            datalus_opts.insert("androidPackage".into(), json!(value));
+            make_options(datalus_opts, None).expect_err("invalid datalus options");
         }
     }
 
     #[test]
     fn fx_options_android_activity_default_known_apps() {
         let packages = vec![
-            "org.mozilla.firefox",
-            "org.mozilla.firefox_beta",
+            "org.mozilla.datalus",
+            "org.mozilla.datalus_beta",
             "org.mozilla.fenix",
             "org.mozilla.fenix.debug",
             "org.mozilla.focus",
@@ -1027,10 +1027,10 @@ mod tests {
         ];
 
         for package in packages {
-            let mut firefox_opts = Capabilities::new();
-            firefox_opts.insert("androidPackage".into(), json!(package));
+            let mut datalus_opts = Capabilities::new();
+            datalus_opts.insert("androidPackage".into(), json!(package));
 
-            let opts = make_options(firefox_opts, None).expect("valid firefox options");
+            let opts = make_options(datalus_opts, None).expect("valid datalus options");
             assert!(opts
                 .android
                 .unwrap()
@@ -1045,58 +1045,58 @@ mod tests {
         let packages = vec!["org.mozilla.geckoview_example", "com.some.other.app"];
 
         for package in packages {
-            let mut firefox_opts = Capabilities::new();
-            firefox_opts.insert("androidPackage".into(), json!(package));
+            let mut datalus_opts = Capabilities::new();
+            datalus_opts.insert("androidPackage".into(), json!(package));
 
-            let opts = make_options(firefox_opts, None).expect("valid firefox options");
+            let opts = make_options(datalus_opts, None).expect("valid datalus options");
             assert_eq!(opts.android.unwrap().activity, None);
         }
 
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert(
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert(
             "androidPackage".into(),
             json!("org.mozilla.geckoview_example"),
         );
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
         assert_eq!(opts.android.unwrap().activity, None);
     }
 
     #[test]
     fn fx_options_android_activity_override() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidActivity".into(), json!("foo"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidActivity".into(), json!("foo"));
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
         assert_eq!(opts.android.unwrap().activity, Some("foo".to_string()));
     }
 
     #[test]
     fn fx_options_android_activity_invalid_type() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidActivity".into(), json!(42));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidActivity".into(), json!(42));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn fx_options_android_activity_invalid_value() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidActivity".into(), json!("foo.bar/cheese"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidActivity".into(), json!("foo.bar/cheese"));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn fx_options_android_device_serial() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidDeviceSerial".into(), json!("cheese"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidDeviceSerial".into(), json!("cheese"));
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
         assert_eq!(
             opts.android.unwrap().device_serial,
             Some("cheese".to_string())
@@ -1105,18 +1105,18 @@ mod tests {
 
     #[test]
     fn fx_options_android_device_serial_invalid() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidDeviceSerial".into(), json!(42));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidDeviceSerial".into(), json!(42));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn fx_options_android_intent_arguments_defaults() {
         let packages = vec![
-            "org.mozilla.firefox",
-            "org.mozilla.firefox_beta",
+            "org.mozilla.datalus",
+            "org.mozilla.datalus_beta",
             "org.mozilla.fenix",
             "org.mozilla.fenix.debug",
             "org.mozilla.geckoview_example",
@@ -1125,10 +1125,10 @@ mod tests {
         ];
 
         for package in packages {
-            let mut firefox_opts = Capabilities::new();
-            firefox_opts.insert("androidPackage".into(), json!(package));
+            let mut datalus_opts = Capabilities::new();
+            datalus_opts.insert("androidPackage".into(), json!(package));
 
-            let opts = make_options(firefox_opts, None).expect("valid firefox options");
+            let opts = make_options(datalus_opts, None).expect("valid datalus options");
             assert_eq!(
                 opts.android.unwrap().intent_arguments,
                 Some(vec![
@@ -1143,11 +1143,11 @@ mod tests {
 
     #[test]
     fn fx_options_android_intent_arguments_override() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidIntentArguments".into(), json!(["lorem", "ipsum"]));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidIntentArguments".into(), json!(["lorem", "ipsum"]));
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
         assert_eq!(
             opts.android.unwrap().intent_arguments,
             Some(vec!["lorem".to_string(), "ipsum".to_string()])
@@ -1156,20 +1156,20 @@ mod tests {
 
     #[test]
     fn fx_options_android_intent_arguments_no_array() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidIntentArguments".into(), json!(42));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidIntentArguments".into(), json!(42));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn fx_options_android_intent_arguments_invalid_value() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("androidPackage".into(), json!("foo.bar"));
-        firefox_opts.insert("androidIntentArguments".into(), json!(["lorem", 42]));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("androidPackage".into(), json!("foo.bar"));
+        datalus_opts.insert("androidIntentArguments".into(), json!(["lorem", 42]));
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
@@ -1178,10 +1178,10 @@ mod tests {
         env.insert("TEST_KEY_A".into(), Value::String("test_value_a".into()));
         env.insert("TEST_KEY_B".into(), Value::String("test_value_b".into()));
 
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("env".into(), env.into());
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("env".into(), env.into());
 
-        let mut opts = make_options(firefox_opts, None).expect("valid firefox options");
+        let mut opts = make_options(datalus_opts, None).expect("valid datalus options");
         for sorted in opts.env.iter_mut() {
             sorted.sort()
         }
@@ -1198,10 +1198,10 @@ mod tests {
     fn fx_options_env_invalid_container() {
         let env = Value::Number(1.into());
 
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("env".into(), env.into());
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("env".into(), env.into());
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
@@ -1209,20 +1209,20 @@ mod tests {
         let mut env: Map<String, Value> = Map::new();
         env.insert("TEST_KEY".into(), Value::Number(1.into()));
 
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("env".into(), env.into());
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("env".into(), env.into());
 
-        make_options(firefox_opts, None).expect_err("invalid firefox options");
+        make_options(datalus_opts, None).expect_err("invalid datalus options");
     }
 
     #[test]
     fn test_profile() {
         let encoded_profile = example_profile();
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("profile".into(), encoded_profile);
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("profile".into(), encoded_profile);
 
-        let opts = make_options(firefox_opts, None).expect("valid firefox options");
-        let mut profile = opts.profile.expect("valid firefox profile");
+        let opts = make_options(datalus_opts, None).expect("valid datalus options");
+        let mut profile = opts.profile.expect("valid datalus profile");
         let prefs = profile.user_prefs().expect("valid preferences");
 
         println!("{:#?}", prefs.prefs);
@@ -1235,27 +1235,27 @@ mod tests {
 
     #[test]
     fn fx_options_args_profile() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("args".into(), json!(["--profile", "foo"]));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("args".into(), json!(["--profile", "foo"]));
 
-        make_options(firefox_opts, None).expect("Valid args");
+        make_options(datalus_opts, None).expect("Valid args");
     }
 
     #[test]
     fn fx_options_args_profile_and_profile() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("args".into(), json!(["--profile", "foo"]));
-        firefox_opts.insert("profile".into(), json!("foo"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("args".into(), json!(["--profile", "foo"]));
+        datalus_opts.insert("profile".into(), json!("foo"));
 
-        make_options(firefox_opts, None).expect_err("Invalid args");
+        make_options(datalus_opts, None).expect_err("Invalid args");
     }
 
     #[test]
     fn fx_options_args_p_and_profile() {
-        let mut firefox_opts = Capabilities::new();
-        firefox_opts.insert("args".into(), json!(["-P"]));
-        firefox_opts.insert("profile".into(), json!("foo"));
+        let mut datalus_opts = Capabilities::new();
+        datalus_opts.insert("args".into(), json!(["-P"]));
+        datalus_opts.insert("profile".into(), json!("foo"));
 
-        make_options(firefox_opts, None).expect_err("Invalid args");
+        make_options(datalus_opts, None).expect_err("Invalid args");
     }
 }

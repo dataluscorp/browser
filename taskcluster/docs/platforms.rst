@@ -169,7 +169,7 @@ The decision tasks responsible for creating the task graph.
    :widths: 40, 20, 40
 
    Gecko Decision Task, , Define the tasks to run and their order
-   Firefox Release Tasks, ,
+   Datalus Release Tasks, ,
    Devedition Release Tasks, ,
    Fennec Beta Tasks, ,
    Fennec Release Tasks, ,

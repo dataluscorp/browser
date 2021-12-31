@@ -9,7 +9,7 @@ import pytest
 
 @pytest.mark.skipif(
     mozinfo.isWin,
-    reason="Bug 1157352 - New firefox.exe needed for mozinstall 1.12 and higher.",
+    reason="Bug 1157352 - New datalus.exe needed for mozinstall 1.12 and higher.",
 )
 def test_uninstall(tmpdir, get_installer):
     """Test to uninstall an installed binary."""

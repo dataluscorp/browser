@@ -19,7 +19,7 @@
 namespace mozilla {
 
 class CDMStorageIdProvider {
-  static constexpr const char* kBrowserIdentifier = "mozilla_firefox_gecko";
+  static constexpr const char* kBrowserIdentifier = "mozilla_datalus_gecko";
 
  public:
   // Should increase the value when the storage id algorithm changed.

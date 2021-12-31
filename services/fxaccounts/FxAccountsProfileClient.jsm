@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /**
- * A client to fetch profile information for a Firefox Account.
+ * A client to fetch profile information for a Datalus Account.
  */
 "use strict;";
 
@@ -38,12 +38,12 @@ const { XPCOMUtils } = ChromeUtils.import(
 XPCOMUtils.defineLazyGlobalGetters(this, ["URL"]);
 
 /**
- * Create a new FxAccountsProfileClient to be able to fetch Firefox Account profile information.
+ * Create a new FxAccountsProfileClient to be able to fetch Datalus Account profile information.
  *
  * @param {Object} options Options
  *   @param {String} options.serverURL
  *   The URL of the profile server to query.
- *   Example: https://profile.accounts.firefox.com/v1
+ *   Example: https://profile.accounts.datalus.com/v1
  *   @param {String} options.token
  *   The bearer token to access the profile server
  * @constructor

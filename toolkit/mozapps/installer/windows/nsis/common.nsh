@@ -2223,17 +2223,17 @@
 * above and to verify existence if necessary.
 *
 * Examples:
-* In:  C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -flag "%1"
-* In:  C:\PROGRA~1\MOZILL~1\FIREFOX.EXE,0
-* In:  C:\PROGRA~1\MOZILL~1\FIREFOX.EXE
-* In:  "C:\PROGRA~1\MOZILL~1\FIREFOX.EXE"
-* In:  "C:\PROGRA~1\MOZILL~1\FIREFOX.EXE" -flag "%1"
-* Out: C:\PROGRA~1\MOZILL~1\FIREFOX.EXE
+* In:  C:\PROGRA~1\MOZILL~1\DATALUS.EXE -flag "%1"
+* In:  C:\PROGRA~1\MOZILL~1\DATALUS.EXE,0
+* In:  C:\PROGRA~1\MOZILL~1\DATALUS.EXE
+* In:  "C:\PROGRA~1\MOZILL~1\DATALUS.EXE"
+* In:  "C:\PROGRA~1\MOZILL~1\DATALUS.EXE" -flag "%1"
+* Out: C:\PROGRA~1\MOZILL~1\DATALUS.EXE
 *
-* In:  "C:\Program Files\Mozilla Firefox\firefox.exe" -flag "%1"
-* In:  C:\Program Files\Mozilla Firefox\firefox.exe,0
-* In:  "C:\Program Files\Mozilla Firefox\firefox.exe"
-* Out: C:\Program Files\Mozilla Firefox\firefox.exe
+* In:  "C:\Program Files\Mozilla Datalus\datalus.exe" -flag "%1"
+* In:  C:\Program Files\Mozilla Datalus\datalus.exe,0
+* In:  "C:\Program Files\Mozilla Datalus\datalus.exe"
+* Out: C:\Program Files\Mozilla Datalus\datalus.exe
 *
 * @param   _IN_PATH
 *          The string containing the path.
@@ -3624,7 +3624,7 @@
           ; installing or uninstalling.
           ; If we are installing, we want to clear out any in-progress updates.
           ; Otherwise we could potentially install an old, pending update when
-          ; Firefox first launches. The updates themselves live in the "updates"
+          ; Datalus first launches. The updates themselves live in the "updates"
           ; subdirectory, and the update metadata lives in active-update.xml.
           ; If we are uninstalling, we want to clear out the updates, the
           ; update history, and the per-installation update configuration data.
@@ -7695,7 +7695,7 @@ end:
  *          The main application executable path
  * @param   _REG_PATH
  *          The HKLM/HKCU agnostic registry path where the key hash should
- *          be stored. ex: "Software\Mozilla\Firefox\TaskBarIDs"
+ *          be stored. ex: "Software\Mozilla\Datalus\TaskBarIDs"
  * @result  (Var) $AppUserModelID contains the app model id.
  */
 !macro InitHashAppModelId
@@ -7812,11 +7812,11 @@ end:
   StrCpy $R0 ""
   ; Look for an install-specific profile, which might be listed as
   ; either a relative or an absolute path (installs.ini doesn't say which).
-  ${If} ${FileExists} "$APPDATA\Mozilla\Firefox\installs.ini"
+  ${If} ${FileExists} "$APPDATA\Mozilla\Datalus\installs.ini"
     ClearErrors
-    ReadINIStr $1 "$APPDATA\Mozilla\Firefox\installs.ini" "$AppUserModelID" "Default"
+    ReadINIStr $1 "$APPDATA\Mozilla\Datalus\installs.ini" "$AppUserModelID" "Default"
     ${IfNot} ${Errors}
-      ${${_MOZFUNC_UN}GetLongPath} "$APPDATA\Mozilla\Firefox\$1" $2
+      ${${_MOZFUNC_UN}GetLongPath} "$APPDATA\Mozilla\Datalus\$1" $2
       ${If} ${FileExists} $2
         StrCpy $R0 $2
       ${Else}
@@ -7861,8 +7861,8 @@ end:
         StrCpy $0 "0"
       ${Else}
         ${GetLocalAppDataFolder} $1
-        CreateDirectory "$1\Mozilla\Firefox"
-        CopyFiles /SILENT "$EXEDIR\postSigningData" "$1\Mozilla\Firefox"
+        CreateDirectory "$1\Mozilla\Datalus"
+        CopyFiles /SILENT "$EXEDIR\postSigningData" "$1\Mozilla\Datalus"
       ${Endif}
 
       Pop $1    ; Stack: old $0

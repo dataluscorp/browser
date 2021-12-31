@@ -61,7 +61,7 @@ def make_task_description(config, jobs):
             job.setdefault("scopes", []).append(
                 add_scope_prefix(
                     config,
-                    "flathub:firefox:{}".format(job["worker"]["channel"]),
+                    "flathub:datalus:{}".format(job["worker"]["channel"]),
                 )
             )
 

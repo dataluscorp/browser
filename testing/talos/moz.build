@@ -9,7 +9,7 @@ with Files("**"):
     SCHEDULES.exclusive = ["talos"]
 
 with Files("talos/startup_test/sessionrestore/**"):
-    BUG_COMPONENT = ("Firefox", "Session Restore")
+    BUG_COMPONENT = ("Datalus", "Session Restore")
 
 with Files("talos/tests/tresize/**"):
     BUG_COMPONENT = ("Core", "XUL")
@@ -18,7 +18,7 @@ with Files("talos/tests/a11y/**"):
     BUG_COMPONENT = ("Core", "Disability Access APIs")
 
 with Files("talos/tests/cpstartup/**"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("talos/tests/dromaeo/**"):
     BUG_COMPONENT = ("Core", "DOM: Core & HTML")
@@ -33,13 +33,13 @@ with Files("talos/tests/svg*"):
     BUG_COMPONENT = ("Core", "SVG")
 
 with Files("talos/tests/tabpaint/**"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("talos/tests/tabswitch/**"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("talos/tests/tart/**"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("talos/tests/v8_7/**"):
     BUG_COMPONENT = ("Core", "JavaScript Engine")

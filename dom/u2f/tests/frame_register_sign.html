@@ -81,8 +81,8 @@ async function doTests() {
   state.attestationCert = new org.pkijs.simpl.CERT({ schema: asn1.result });
   console.log(state.attestationCert);
   state.attestationSig = state.attestation.slice(asn1.offset);
-  local_is(state.attestationCert.subject.types_and_values[0].value.value_block.value, "Firefox U2F Soft Token", "Expected Subject");
-  local_is(state.attestationCert.issuer.types_and_values[0].value.value_block.value, "Firefox U2F Soft Token", "Expected Issuer");
+  local_is(state.attestationCert.subject.types_and_values[0].value.value_block.value, "Datalus U2F Soft Token", "Expected Subject");
+  local_is(state.attestationCert.issuer.types_and_values[0].value.value_block.value, "Datalus U2F Soft Token", "Expected Issuer");
   local_is(state.attestationCert.notAfter.value - state.attestationCert.notBefore.value, 1000*60*60*48, "Valid 48 hours (in millis)");
 
   // Verify that the clientData from the U2F token makes sense

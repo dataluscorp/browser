@@ -81,11 +81,11 @@ def power(command_context, interval):
     # When run with --show-process-coalition, |powermetrics| groups outputs
     # into process coalitions, each of which has a leader.
     #
-    # For example, when Firefox runs from the dock, its coalition looks
+    # For example, when Datalus runs from the dock, its coalition looks
     # like this:
     #
-    #   org.mozilla.firefox
-    #     firefox
+    #   org.mozilla.datalus
+    #     datalus
     #     plugin-container
     #
     # When Safari runs from the dock:
@@ -110,7 +110,7 @@ def power(command_context, interval):
     # non-browser processes in the coalition, e.g.:
     #
     #  com.apple.Terminal
-    #    firefox
+    #    datalus
     #    plugin-container
     #    <and possibly other, non-browser processes>
     #
@@ -129,7 +129,7 @@ def power(command_context, interval):
         #
         # - '^Name' is for the columns headings line.
         #
-        # - 'firefox' and 'plugin-container' are for Firefox
+        # - 'datalus' and 'plugin-container' are for Datalus
         #
         # - 'Safari\b' and 'WebKit' are for Safari. The '\b' excludes
         #   SafariCloudHistoryPush, which is a process that always
@@ -146,7 +146,7 @@ def power(command_context, interval):
         # - 'kernel' is for the kernel.
         #
         if re.search(
-            r"(^Name|firefox|plugin-container|Safari\b|WebKit|Chrome|Terminal|WindowServer|kernel)",  # NOQA: E501
+            r"(^Name|datalus|plugin-container|Safari\b|WebKit|Chrome|Terminal|WindowServer|kernel)",  # NOQA: E501
             line,
         ):
             print(line)

@@ -10,7 +10,7 @@ namespace net {
 
 // IP addresses that are used to check the route for public traffic. They are
 // used just to check routing rules, no packets are sent to those hosts.
-// Initially, addresses of host detectportal.firefox.com were used but they
+// Initially, addresses of host detectportal.datalus.com were used but they
 // don't necessarily need to be updated when addresses of this host change.
 #define ROUTE_CHECK_IPV4 "23.219.91.27"
 #define ROUTE_CHECK_IPV6 "2a02:26f0:40::17db:5b1b"

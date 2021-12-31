@@ -14,9 +14,9 @@ import mozcrash
 from mozbuild.base import MozbuildObject, BinaryNotFoundException
 from mozfile import TemporaryDirectory
 from mozhttpd import MozHttpd
-from mozprofile import FirefoxProfile, Preferences
+from mozprofile import DatalusProfile, Preferences
 from mozprofile.permissions import ServerLocations
-from mozrunner import FirefoxRunner, CLI
+from mozrunner import DatalusRunner, CLI
 from six import string_types
 
 PORT = 8888
@@ -118,7 +118,7 @@ if __name__ == "__main__":
         # and this is a bool pref.
         prefs["browser.tabs.remote.autostart"] = True
 
-        profile = FirefoxProfile(
+        profile = DatalusProfile(
             profile=profilePath,
             preferences=prefs,
             addons=[
@@ -152,8 +152,8 @@ if __name__ == "__main__":
                 env["UPLOAD_PATH"], "profile-run-1.log"
             )
 
-        # Run Firefox a first time to initialize its profile
-        runner = FirefoxRunner(
+        # Run Datalus a first time to initialize its profile
+        runner = DatalusRunner(
             profile=profile,
             binary=binary,
             cmdargs=["data:text/html,<script>Quitter.quit()</script>"],
@@ -163,10 +163,10 @@ if __name__ == "__main__":
         runner.start()
         ret = runner.wait()
         if ret:
-            print("Firefox exited with code %d during profile initialization" % ret)
+            print("Datalus exited with code %d during profile initialization" % ret)
             logfile = process_args.get("logfile")
             if logfile:
-                print("Firefox output (%s):" % logfile)
+                print("Datalus output (%s):" % logfile)
                 with open(logfile) as f:
                     print(f.read())
             httpd.stop()
@@ -185,7 +185,7 @@ if __name__ == "__main__":
                 env["UPLOAD_PATH"], "profile-run-2.log"
             )
         cmdargs = ["http://localhost:%d/index.html" % PORT]
-        runner = FirefoxRunner(
+        runner = DatalusRunner(
             profile=profile,
             binary=binary,
             cmdargs=cmdargs,
@@ -196,20 +196,20 @@ if __name__ == "__main__":
         ret = runner.wait()
         httpd.stop()
         if ret:
-            print("Firefox exited with code %d during profiling" % ret)
+            print("Datalus exited with code %d during profiling" % ret)
             logfile = process_args.get("logfile")
             if logfile:
-                print("Firefox output (%s):" % logfile)
+                print("Datalus output (%s):" % logfile)
                 with open(logfile) as f:
                     print(f.read())
             get_crashreports(profilePath, name="Profiling run")
             sys.exit(ret)
 
-        # Try to move the crash reports to the artifacts even if Firefox appears
+        # Try to move the crash reports to the artifacts even if Datalus appears
         # to exit successfully, in case there's a crash that doesn't set the
         # return code to non-zero for some reason.
-        if get_crashreports(profilePath, name="Firefox exited successfully?") != 0:
-            print("Firefox exited successfully, but produced a crashreport")
+        if get_crashreports(profilePath, name="Datalus exited successfully?") != 0:
+            print("Datalus exited successfully, but produced a crashreport")
             sys.exit(1)
 
         llvm_profdata = env.get("LLVM_PROFDATA")

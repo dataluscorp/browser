@@ -27,9 +27,9 @@ jobs:
     linux-shippable/opt:
         description: "Linux Profile Generation"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         index:
-            product: firefox
+            product: datalus
             job-name: linux-profile
         treeherder:
             platform: linux32-shippable/opt
@@ -58,9 +58,9 @@ jobs:
     linux64-shippable/opt:
         description: "Linux64 Profile Generation"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         index:
-            product: firefox
+            product: datalus
             job-name: linux64-profile
         treeherder:
             platform: linux64-shippable/opt
@@ -168,9 +168,9 @@ jobs:
     win32-shippable/opt:
         description: "Win32 Profile Generation"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         index:
-            product: firefox
+            product: datalus
             job-name: win32-profile
         treeherder:
             platform: windows2012-32-shippable/opt
@@ -197,9 +197,9 @@ jobs:
     win64-shippable/opt:
         description: "Win64 Profile Generation"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         index:
-            product: firefox
+            product: datalus
             job-name: win64-profile
         treeherder:
             platform: windows2012-64-shippable/opt
@@ -226,9 +226,9 @@ jobs:
     macosx64-shippable/opt:
         description: "macosx64 Profile Generation"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         index:
-            product: firefox
+            product: datalus
             job-name: macosx64-profile
         treeherder:
             platform: macosx1014-64-shippable/opt

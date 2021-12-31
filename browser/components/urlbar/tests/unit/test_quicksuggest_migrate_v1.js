@@ -24,11 +24,11 @@ add_task(async function init() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     scenario: "history",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
   });
 });
@@ -44,11 +44,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
   });
 });
@@ -64,11 +64,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -89,11 +89,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
   });
 });
@@ -113,14 +113,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -143,14 +143,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": false,
       },
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -174,7 +174,7 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": false,
         "suggest.quicksuggest.sponsored": false,
@@ -182,7 +182,7 @@ add_task(async function() {
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -207,11 +207,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -231,14 +231,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -261,14 +261,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": false,
       },
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
       },
@@ -291,7 +291,7 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": false,
         "suggest.quicksuggest.sponsored": false,
@@ -299,7 +299,7 @@ add_task(async function() {
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -324,11 +324,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
   });
 });
@@ -361,14 +361,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
       },
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
       },
@@ -391,14 +391,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest": true,
       },
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
       },
@@ -421,7 +421,7 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest": true,
         "suggest.quicksuggest.sponsored": true,
@@ -429,7 +429,7 @@ add_task(async function() {
     },
     scenario: "offline",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -454,11 +454,11 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -478,14 +478,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
       },
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -506,14 +506,14 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": true,
       },
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "quicksuggest.dataCollection.enabled": true,
@@ -538,7 +538,7 @@ add_task(async function() {
 add_task(async function() {
   await doMigrateTest({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest": true,
         "suggest.quicksuggest.sponsored": true,
@@ -546,7 +546,7 @@ add_task(async function() {
     },
     scenario: "online",
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -562,7 +562,7 @@ async function doMigrateTest({ initialPrefsToSet, scenario, expectedPrefs }) {
   );
 
   // Set initial prefs.
-  UrlbarPrefs._updatingFirefoxSuggestScenario = true;
+  UrlbarPrefs._updatingDatalusSuggestScenario = true;
   let {
     defaultBranch: initialDefaultBranch,
     userBranch: initialUserBranch,
@@ -583,14 +583,14 @@ async function doMigrateTest({ initialPrefsToSet, scenario, expectedPrefs }) {
       branch.setBoolPref(name, value);
     }
   }
-  UrlbarPrefs._updatingFirefoxSuggestScenario = false;
+  UrlbarPrefs._updatingDatalusSuggestScenario = false;
 
   // Update the scenario and check prefs twice. The first time the migration
   // should happen, and the second time the migration should not happen and all
   // the prefs should stay the same.
   for (let i = 0; i < 2; i++) {
     // Do the scenario update and pass true to simulate startup.
-    await UrlbarPrefs.updateFirefoxSuggestScenario(true, scenario);
+    await UrlbarPrefs.updateDatalusSuggestScenario(true, scenario);
 
     // Check expected pref values. Store expected effective values as we go
     // so we can check them afterward. For a given pref, the expected
@@ -640,10 +640,10 @@ async function doMigrateTest({ initialPrefsToSet, scenario, expectedPrefs }) {
   }
 
   // Clean up.
-  UrlbarPrefs._updatingFirefoxSuggestScenario = true;
+  UrlbarPrefs._updatingDatalusSuggestScenario = true;
   UrlbarPrefs.clear("quicksuggest.migrationVersion");
   for (let name of Object.keys(expectedPrefs.userBranch || {})) {
     UrlbarPrefs.clear(name);
   }
-  UrlbarPrefs._updatingFirefoxSuggestScenario = false;
+  UrlbarPrefs._updatingDatalusSuggestScenario = false;
 }

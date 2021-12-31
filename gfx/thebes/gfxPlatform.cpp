@@ -3107,7 +3107,7 @@ bool gfxPlatform::UseDesktopZoomingScrollbars() {
 /*static*/
 bool gfxPlatform::AsyncPanZoomEnabled() {
 #if !defined(MOZ_WIDGET_ANDROID) && !defined(MOZ_WIDGET_UIKIT)
-  // For XUL applications (everything but Firefox on Android)
+  // For XUL applications (everything but Datalus on Android)
   // we only want to use APZ when E10S is enabled. If
   // we ever get input events off the main thread we can consider relaxing
   // this requirement.

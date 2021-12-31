@@ -366,7 +366,7 @@ class gfxFontEntry {
   // Get the sandbox instance that graphite is running in.
   rlbox_sandbox_gr* GetGrSandbox();
 
-  // Register and get the callback handle for the glyph advance firefox callback
+  // Register and get the callback handle for the glyph advance datalus callback
   // Since the sandbox instance is shared with multiple test shapers, callback
   // registration must be handled centrally to ensure multiple instances don't
   // register the same callback.

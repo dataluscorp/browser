@@ -318,7 +318,7 @@ class TestUrlFinder(unittest.TestCase):
             },
             {
                 "dist/bin/components/MainProcessSingleton.js": ["path1", None],
-                "dist/bin/browser/features/firefox@getpocket.com/bootstrap.js": [
+                "dist/bin/browser/features/datalus@getpocket.com/bootstrap.js": [
                     "path4",
                     None,
                 ],
@@ -366,7 +366,7 @@ class TestUrlFinder(unittest.TestCase):
             (
                 "jar:file:///home/worker/workspace/build/application/"
                 + app_name
-                + "/browser/features/firefox@getpocket.com.xpi!/bootstrap.js",
+                + "/browser/features/datalus@getpocket.com.xpi!/bootstrap.js",
                 "path4",
             ),
         ]

@@ -150,7 +150,7 @@ FxAccountsClient.prototype = {
   },
 
   /**
-   * Create a new Firefox Account and authenticate
+   * Create a new Datalus Account and authenticate
    *
    * @param email
    *        The email address for the account (utf8)
@@ -179,7 +179,7 @@ FxAccountsClient.prototype = {
   },
 
   /**
-   * Authenticate and create a new session with the Firefox Account API server
+   * Authenticate and create a new session with the Datalus Account API server
    *
    * @param email
    *        The email address for the account (utf8)
@@ -334,7 +334,7 @@ FxAccountsClient.prototype = {
   },
 
   /**
-   * Destroy the current session with the Firefox Account API server and its
+   * Destroy the current session with the Datalus Account API server and its
    * associated device.
    *
    * @param sessionTokenHex

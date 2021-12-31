@@ -3519,7 +3519,7 @@ void CacheIndex::OnFileOpenedInternal(FileOpenHelper* aOpener,
 
       if (mJournalHandle) {
         // Rename journal to make sure we update index on next start in case
-        // firefox crashes
+        // datalus crashes
         rv = CacheFileIOManager::RenameFile(
             mJournalHandle, nsLiteralCString(TEMP_INDEX_NAME), this);
         if (NS_FAILED(rv)) {

@@ -308,7 +308,7 @@ Section "-InstallStartCleanup"
   ${InitHashAppModelId} "$INSTDIR" "Software\Mozilla\${AppName}\TaskBarIDs"
 
   ; Remove the updates directory
-  ${CleanUpdateDirectories} "Mozilla\Firefox" "Mozilla\updates"
+  ${CleanUpdateDirectories} "Mozilla\Datalus" "Mozilla\updates"
 
   ${RemoveDeprecatedFiles}
   ${RemovePrecompleteEntries} "false"
@@ -459,17 +459,17 @@ Section "-Application" APP_IDX
   ; it doesn't cause problems always add them.
   ${SetUninstallKeys}
 
-  ; On install always add the FirefoxHTML and FirefoxURL keys.
-  ; An empty string is used for the 5th param because FirefoxHTML is not a
+  ; On install always add the DatalusHTML and DatalusURL keys.
+  ; An empty string is used for the 5th param because DatalusHTML is not a
   ; protocol handler.
   ${GetLongPath} "$INSTDIR\${FileMainEXE}" $8
   StrCpy $2 "$\"$8$\" -osint -url $\"%1$\""
 
-  ; In Win8, the delegate execute handler picks up the value in FirefoxURL and
-  ; FirefoxHTML to launch the desktop browser when it needs to.
-  ${AddDisabledDDEHandlerValues} "FirefoxHTML-$AppUserModelID" "$2" "$8,1" \
+  ; In Win8, the delegate execute handler picks up the value in DatalusURL and
+  ; DatalusHTML to launch the desktop browser when it needs to.
+  ${AddDisabledDDEHandlerValues} "DatalusHTML-$AppUserModelID" "$2" "$8,1" \
                                  "${AppRegName} Document" ""
-  ${AddDisabledDDEHandlerValues} "FirefoxURL-$AppUserModelID" "$2" "$8,1" \
+  ${AddDisabledDDEHandlerValues} "DatalusURL-$AppUserModelID" "$2" "$8,1" \
                                  "${AppRegName} URL" "true"
 
   ; For pre win8, the following keys should only be set if we can write to HKLM.
@@ -533,7 +533,7 @@ Section "-Application" APP_IDX
   ; Launcher telemetry is opt-out, so we always enable it by default in new
   ; installs. We always use HKCU because this value is a reflection of a pref
   ; from the user profile. While this is not a perfect abstraction (given the
-  ; possibility of multiple Firefox profiles owned by the same Windows user), it
+  ; possibility of multiple Datalus profiles owned by the same Windows user), it
   ; is more accurate than a machine-wide setting, and should be accurate in the
   ; majority of cases.
   WriteRegDWORD HKCU ${MOZ_LAUNCHER_SUBKEY} "$INSTDIR\${FileMainEXE}|Telemetry" 1
@@ -798,7 +798,7 @@ Section "-InstallEndCleanup"
       ; If we have something other than empty string now, write the value.
       ${If} "$0" != ""
         ClearErrors
-        WriteRegStr HKCU "Software\Mozilla\Firefox" "OldDefaultBrowserCommand" "$0"
+        WriteRegStr HKCU "Software\Mozilla\Datalus" "OldDefaultBrowserCommand" "$0"
       ${EndIf}
 
       ${LogHeader} "Setting as the default browser"
@@ -815,7 +815,7 @@ Section "-InstallEndCleanup"
       StrCpy $SetAsDefault false
       ${LogHeader} "Writing default-browser opt-out"
       ClearErrors
-      WriteRegStr HKCU "Software\Mozilla\Firefox" "DefaultBrowserOptOut" "True"
+      WriteRegStr HKCU "Software\Mozilla\Datalus" "DefaultBrowserOptOut" "True"
       ${If} ${Errors}
         ${LogMsg} "Error writing default-browser opt-out"
       ${EndIf}
@@ -1135,7 +1135,7 @@ Function SendPing
     ${If} $1 == $INSTDIR
       nsJSON::Set /tree ping "Data" "new_default" /value true
     ${Else}
-      StrCpy $0 "$0" "" -11 # 11 == length of "firefox.exe"
+      StrCpy $0 "$0" "" -11 # 11 == length of "datalus.exe"
       ${If} "$0" == "${FileMainEXE}"
         nsJSON::Set /tree ping "Data" "old_default" /value true
       ${EndIf}
@@ -1263,7 +1263,7 @@ Function WriteInstallationTelemetryData
   ; Check for top-level profile directory
   ; Note: This is the same check used to set $ExistingProfile in stub.nsi
   ${GetLocalAppDataFolder} $0
-  ${If} ${FileExists} "$0\Mozilla\Firefox"
+  ${If} ${FileExists} "$0\Mozilla\Datalus"
     StrCpy $1 "true"
   ${Else}
     StrCpy $1 "false"
@@ -1669,11 +1669,11 @@ Function preSummary
   WriteRegStr HKLM "Software\Mozilla" "${BrandShortName}InstallerTest" "Write Test"
   ${Unless} ${Errors}
     DeleteRegValue HKLM "Software\Mozilla" "${BrandShortName}InstallerTest"
-    ; Check if Firefox is the http handler for this user.
+    ; Check if Datalus is the http handler for this user.
     SetShellVarContext current ; Set SHCTX to the current user
     ${IsHandlerForInstallDir} "http" $R9
-    ; If Firefox isn't the http handler for this user show the option to set
-    ; Firefox as the default browser.
+    ; If Datalus isn't the http handler for this user show the option to set
+    ; Datalus as the default browser.
     ${If} "$R9" != "true"
     ${AndIf} ${AtMostWin2008R2}
       WriteINIStr "$PLUGINSDIR\summary.ini" "Settings" NumFields "4"

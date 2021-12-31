@@ -16,16 +16,16 @@ as well as JS objects being held alive by those C++ objects.
 
 ## Generating logs
 
-### From within Firefox
+### From within Datalus
 
 To manually generate GC and CC logs, navigate to `about:memory` and use
 the buttons under \"Save GC & CC logs.\" \"Save concise\" will generate
 a smaller CC log, \"Save verbose\" will provide a more detailed CC log.
 (The GC log will be the same size in either case.)
 
-With multiprocess Firefox, you can't record logs from the content
+With multiprocess Datalus, you can't record logs from the content
 process, due to sandboxing. You'll need to disable sandboxing by
-setting `MOZ_DISABLE_CONTENT_SANDBOX=t` when you run Firefox.
+setting `MOZ_DISABLE_CONTENT_SANDBOX=t` when you run Datalus.
 
 ### From the commandline
 
@@ -34,18 +34,18 @@ our automated tests, you probably want something along the lines of:
 
     MOZ_DISABLE_CONTENT_SANDBOX=t MOZ_CC_LOG_DIRECTORY=/full/path/to/log/directory/ MOZ_CC_LOG_SHUTDOWN=1 MOZ_CC_ALL_TRACES=shutdown ./mach ...
 
-As noted in the previous section, with multiprocess Firefox, you can't
+As noted in the previous section, with multiprocess Datalus, you can't
 record logs from the content process, due to sandboxing. You'll need to
 disable sandboxing by setting `MOZ_DISABLE_CONTENT_SANDBOX=t` when you
-run Firefox.
+run Datalus.
 
-On desktop Firefox you can override the default location of the log
+On desktop Datalus you can override the default location of the log
 files by setting the `MOZ_CC_LOG_DIRECTORY` environment variable. By
 default, they go to a temporary directory which differs per OS - it's
 `/tmp/` on Linux/BSD, `$LOCALAPPDATA\Temp\` on Windows, and somewhere in
 `/var/folders/` on Mac (whatever the directory service returns for
 `TmpD`/`NS_OS_TEMP_DIR`). Note that just `MOZ_CC_LOG_DIRECTORY=.` won't
-work - you need to specify a full path. On Firefox for Android you can
+work - you need to specify a full path. On Datalus for Android you can
 use the cc-dump.xpi
 extension to save the files to `/sdcard`. By default, the file is
 created in some temp directory, and the path to the file is printed to
@@ -108,5 +108,5 @@ There are two add-ons that can be used to create and analyze CC graphs.
 
 -   [about:cc](https://bugzilla.mozilla.org/show_bug.cgi?id=726346)
     is simple, ugly, but rather powerful.
--   [about:ccdump](https://addons.mozilla.org/en-US/firefox/addon/cycle-collector-analyzer/?src=ss)
+-   [about:ccdump](https://addons.mozilla.org/en-US/datalus/addon/cycle-collector-analyzer/?src=ss)
     is prettier but a bit slower.

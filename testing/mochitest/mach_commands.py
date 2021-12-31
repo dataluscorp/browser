@@ -59,7 +59,7 @@ test path(s):
 Please check spelling and make sure there are mochitests living there.
 """.lstrip()
 
-SUPPORTED_APPS = ["firefox", "android", "thunderbird"]
+SUPPORTED_APPS = ["datalus", "android", "thunderbird"]
 
 parser = None
 
@@ -169,7 +169,7 @@ class MochitestRunner(MozbuildObject):
             manifest.tests.extend(tests)
             options.manifestFile = manifest
 
-        # Firefox for Android doesn't use e10s
+        # Datalus for Android doesn't use e10s
         if options.app is not None and "geckoview" not in options.app:
             options.e10s = False
             print("using e10s=False for non-geckoview app")

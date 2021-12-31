@@ -208,8 +208,8 @@ add_task(async function test_uploading() {
 
   let bmk = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-    url: "http://getfirefox.com/",
-    title: "Get Firefox!",
+    url: "http://getdatalus.com/",
+    title: "Get Datalus!",
   });
 
   try {
@@ -1077,12 +1077,12 @@ add_task(async function test_fxa_device_telem() {
         id: keep1Sync,
         fxaDeviceId: keep1,
         os: "Windows 30",
-        version: "Firefox 1 million",
+        version: "Datalus 1 million",
       },
       {
         id: keep2Sync,
         fxaDeviceId: keep2,
-        os: "firefox, but an os",
+        os: "datalus, but an os",
         verison: "twelve",
       },
       {

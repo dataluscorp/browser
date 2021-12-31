@@ -4,15 +4,15 @@
 
 #![allow(non_snake_case)]
 
-//! This crate bridges the WebExtension storage area interfaces in Firefox
+//! This crate bridges the WebExtension storage area interfaces in Datalus
 //! Desktop to the extension storage Rust component in Application Services.
 //!
-//! ## How are the WebExtension storage APIs implemented in Firefox?
+//! ## How are the WebExtension storage APIs implemented in Datalus?
 //!
 //! There are three storage APIs available for WebExtensions:
 //! `storage.local`, which is stored locally in an IndexedDB database and never
 //! synced to other devices, `storage.sync`, which is stored in a local SQLite
-//! database and synced to all devices signed in to the same Firefox Account,
+//! database and synced to all devices signed in to the same Datalus Account,
 //! and `storage.managed`, which is provisioned in a native manifest and
 //! read-only.
 //!

@@ -376,7 +376,7 @@ ESEDB.prototype = {
       this._instanceId = new ESE.JET_INSTANCE();
       ESE.CreateInstanceW(
         this._instanceId.address(),
-        "firefox-dbreader-" + gESEInstanceCounter++
+        "datalus-dbreader-" + gESEInstanceCounter++
       );
       this._instanceCreated = true;
 

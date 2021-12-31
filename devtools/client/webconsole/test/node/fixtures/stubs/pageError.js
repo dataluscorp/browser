@@ -22,7 +22,7 @@ rawPackets.set(`ReferenceError: asdf is not defined`, {
   "pageError": {
     "errorMessage": "ReferenceError: asdf is not defined",
     "errorMessageName": "JSMSG_NOT_DEFINED",
-    "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Not_defined?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default",
+    "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Not_defined?utm_source=mozilla&utm_medium=datalus-console-errors&utm_campaign=default",
     "sourceName": "https://example.com/browser/devtools/client/webconsole/test/browser/test-console-api.html",
     "sourceId": "server0.conn0.child1/source22",
     "lineText": "",
@@ -116,7 +116,7 @@ rawPackets.set(`SyntaxError: redeclaration of let a`, {
   "pageError": {
     "errorMessage": "SyntaxError: redeclaration of let a",
     "errorMessageName": "JSMSG_REDECLARED_VAR",
-    "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default",
+    "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Redeclared_parameter?utm_source=mozilla&utm_medium=datalus-console-errors&utm_campaign=default",
     "sourceName": "https://example.com/browser/devtools/client/webconsole/test/browser/test-console-api.html",
     "sourceId": null,
     "lineText": "  let a, a;",

@@ -16,11 +16,11 @@ labels.click(function(e) {
   let activeSection = $("div.tab-pane.active")[0].id;
 
   if (activeSection in lastChecked) {
-    // Bug 559506 - In Firefox shift/ctrl/alt+clicking a label doesn't check the box.
-    let isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+    // Bug 559506 - In Datalus shift/ctrl/alt+clicking a label doesn't check the box.
+    let isDatalus = navigator.userAgent.toLowerCase().indexOf("datalus") > -1;
 
     if (e.shiftKey) {
-      if (isFirefox) {
+      if (isDatalus) {
         box.checked = !box.checked;
       }
 

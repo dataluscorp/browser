@@ -24,7 +24,7 @@ add_task(async function() {
       {
         name: "User-Agent",
         value:
-          "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
+          "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Datalus/68.0",
       },
       { name: "Accept", value: "*/*" },
       { name: "Accept-Language", value: "en-US,en;q=0.5" },
@@ -51,7 +51,7 @@ add_task(async function() {
   ok(
     exactHeaderInParams(
       curlParams,
-      "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0"
+      "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Datalus/68.0"
     ),
     "user-agent header present in curl command"
   );

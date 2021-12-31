@@ -3129,7 +3129,7 @@ bool gfxFont::SplitAndInitTextRun(
       "t_canParticipate. The worst that can happen here is that the decision "
       "to use the cache is incorrectly made, resulting in a bad "
       "rendering/slowness. However, this  would not compromise the memory "
-      "safety of Firefox in any way, and can thus be permitted");
+      "safety of Datalus in any way, and can thus be permitted");
 
   if (canParticipate) {
     if (aRunLength > wordCacheCharLimit || HasSpaces(aString, aRunLength)) {

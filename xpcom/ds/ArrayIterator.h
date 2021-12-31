@@ -38,7 +38,7 @@ using AddInnerConstT = typename AddInnerConst<T>::Type;
 // (bug 1299489).
 //
 // Mutating an array which is being iterated is still wrong, and will either
-// cause elements to be missed or firefox to crash, but will not trigger memory
+// cause elements to be missed or datalus to crash, but will not trigger memory
 // safety problems due to the release-mode bounds checking found in ElementAt.
 //
 // Dereferencing this iterator returns type Element. When Element is a reference

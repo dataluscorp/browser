@@ -64,7 +64,7 @@ TEST(UrlClassifierClassifier, ReadNoiseEntriesV2)
   RefPtr<Classifier> classifier = GetClassifier();
   _PrefixArray array = {
       CreatePrefixFromURL("helloworld.com/", 4),
-      CreatePrefixFromURL("firefox.com/", 4),
+      CreatePrefixFromURL("datalus.com/", 4),
       CreatePrefixFromURL("chrome.com/", 4),
       CreatePrefixFromURL("safebrowsing.com/", 4),
       CreatePrefixFromURL("opera.com/", 4),

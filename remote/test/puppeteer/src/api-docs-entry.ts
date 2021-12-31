@@ -101,7 +101,7 @@ export declare function launch(
     BrowserLaunchArgumentOptions &
     BrowserConnectOptions & {
       product?: Product;
-      extraPrefsFirefox?: Record<string, unknown>;
+      extraPrefsDatalus?: Record<string, unknown>;
     }
 ): Promise<Browser>;
 

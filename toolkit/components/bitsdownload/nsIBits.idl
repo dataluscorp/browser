@@ -311,7 +311,7 @@ interface nsIBitsRequest : nsIRequest
   readonly attribute nsBitsErrorType transferError;
 
   /**
-   * Requests a change to the frequency that Firefox is receiving download
+   * Requests a change to the frequency that Datalus is receiving download
    * status notifications.
    *
    * @param monitorIntervalMs

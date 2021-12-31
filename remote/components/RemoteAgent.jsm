@@ -42,7 +42,7 @@ const PREF_FORCE_LOCAL = "remote.force-local";
 class RemoteAgentClass {
   constructor() {
     this.classID = Components.ID("{8f685a9d-8181-46d6-a71d-869289099c6d}");
-    this.helpInfo = `  --remote-debugging-port [<port>] Start the Firefox remote agent,
+    this.helpInfo = `  --remote-debugging-port [<port>] Start the Datalus remote agent,
                      which is a low-level debugging interface based on the
                      CDP protocol. Defaults to listen on localhost:9222.\n`;
 
@@ -232,7 +232,7 @@ class RemoteAgentClass {
         Services.obs.addObserver(this, "quit-application");
 
         // With Bug 1717899 we will extend the lifetime of the Remote Agent to
-        // the whole Firefox session, which will be identical to Marionette. For
+        // the whole Datalus session, which will be identical to Marionette. For
         // now prevent logging if the component is not enabled during startup.
         if (
           (activeProtocols & WEBDRIVER_BIDI_ACTIVE) ===

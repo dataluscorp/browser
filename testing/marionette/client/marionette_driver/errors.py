@@ -105,7 +105,7 @@ class ScriptTimeoutException(MarionetteException):
 
 
 class ElementNotVisibleException(MarionetteException):
-    """Deprecated.  Will be removed with the release of Firefox 54."""
+    """Deprecated.  Will be removed with the release of Datalus 54."""
 
     status = "element not visible"
 

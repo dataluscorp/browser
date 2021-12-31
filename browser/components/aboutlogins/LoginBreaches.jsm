@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /**
- * Manages breach alerts for saved logins using data from Firefox Monitor via
+ * Manages breach alerts for saved logins using data from Datalus Monitor via
  * RemoteSettings.
  */
 
@@ -37,7 +37,7 @@ this.LoginBreaches = {
    * This only uses the breach `Domain` and `timePasswordChanged` to determine
    * if a login may be breached which means it may contain false-positives if
    * login timestamps are incorrect, the user didn't save their password change
-   * in Firefox, or the breach didn't contain all accounts, etc. As a result,
+   * in Datalus, or the breach didn't contain all accounts, etc. As a result,
    * consumers should avoid making stronger claims than the data supports.
    *
    * @param {nsILoginInfo[]} logins Saved logins to check for potential breaches.
@@ -108,7 +108,7 @@ this.LoginBreaches = {
         }
 
         let breachAlertURL = new URL(breach.Name, baseBreachAlertURL);
-        breachAlertURL.searchParams.set("utm_source", "firefox-desktop");
+        breachAlertURL.searchParams.set("utm_source", "datalus-desktop");
         breachAlertURL.searchParams.set("utm_medium", "referral");
         breachAlertURL.searchParams.set("utm_campaign", "about-logins");
         breachAlertURL.searchParams.set("utm_content", "about-logins");

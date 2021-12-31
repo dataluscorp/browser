@@ -13,8 +13,8 @@ add_task(async function test_removeFolderTransaction_reinsert() {
   });
   let fx = await PlacesUtils.bookmarks.insert({
     parentGuid: folder.guid,
-    title: "Get Firefox!",
-    url: "http://getfirefox.com",
+    title: "Get Datalus!",
+    url: "http://getdatalus.com",
   });
   let tb = await PlacesUtils.bookmarks.insert({
     parentGuid: folder.guid,

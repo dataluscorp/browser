@@ -108,10 +108,10 @@ PRLibrary* LoadApitraceLibrary() {
   nsAutoCString logFile;
   Preferences::GetCString("gfx.apitrace.logfile", logFile);
   if (logFile.IsEmpty()) {
-    logFile = "firefox.trace";
+    logFile = "datalus.trace";
   }
 
-  // The firefox process can't write to /data/local, but it can write
+  // The datalus process can't write to /data/local, but it can write
   // to $GRE_HOME/
   nsAutoCString logPath;
   logPath.AppendPrintf("%s/%s", getenv("GRE_HOME"), logFile.get());

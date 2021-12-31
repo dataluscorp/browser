@@ -12,7 +12,7 @@ jobs:
     tps-xpi:
         description: Build the TPS add-on
         index:
-            product: firefox
+            product: datalus
             job-name: addons.tps
         treeherder:
             platform: linux64/opt

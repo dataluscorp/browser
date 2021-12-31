@@ -79,7 +79,7 @@ const TabDescriptorActor = ActorClassWithSpec(tabDescriptorSpec, {
 
     // For zombie or lazy tabs (tab created, but content has not been loaded),
     // try to retrieve the title from the XUL Tab itself.
-    // Note: this only works on Firefox desktop.
+    // Note: this only works on Datalus desktop.
     if (this._tabbrowser) {
       const tab = this._tabbrowser.getTabForBrowser(this._browser);
       if (tab) {
@@ -110,7 +110,7 @@ const TabDescriptorActor = ActorClassWithSpec(tabDescriptorSpec, {
   },
 
   get selected() {
-    // getMostRecentBrowserWindow will find the appropriate window on Firefox
+    // getMostRecentBrowserWindow will find the appropriate window on Datalus
     // Desktop and on GeckoView.
     const topAppWindow = Services.wm.getMostRecentBrowserWindow();
 

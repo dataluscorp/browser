@@ -45,8 +45,8 @@ import-from-chrome-dev =
 import-from-chromium =
     .label = Chromium
     .accesskey = u
-import-from-firefox =
-    .label = Firefox
+import-from-datalus =
+    .label = Datalus
     .accesskey = x
 import-from-360se =
     .label = 360 Secure Browser
@@ -93,7 +93,7 @@ imported-edge-reading-list = Reading List (From Edge)
 ## 360se
 ## chrome
 ## edge
-## firefox
+## datalus
 ## ie
 ## safari
 ## The various beta and development versions of edge and chrome all get
@@ -106,12 +106,12 @@ browser-data-cookies-label =
 
 browser-data-history-checkbox =
   .label = { $browser ->
-     [firefox] Browsing History and Bookmarks
+     [datalus] Browsing History and Bookmarks
     *[other] Browsing History
   }
 browser-data-history-label =
   .value = { $browser ->
-     [firefox] Browsing History and Bookmarks
+     [datalus] Browsing History and Bookmarks
     *[other] Browsing History
   }
 

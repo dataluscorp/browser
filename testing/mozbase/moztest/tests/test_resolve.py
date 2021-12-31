@@ -114,7 +114,7 @@ def all_tests(create_tests):
             (
                 "banana/currant/test_xpcshell_A.js",
                 {
-                    "firefox-appdir": "browser",
+                    "datalus-appdir": "browser",
                     "flavor": "xpcshell",
                     "head": "head_global.js head_helpers.js head_http.js",
                 },
@@ -122,7 +122,7 @@ def all_tests(create_tests):
             (
                 "banana/currant/test_xpcshell_B.js",
                 {
-                    "firefox-appdir": "browser",
+                    "datalus-appdir": "browser",
                     "flavor": "xpcshell",
                     "head": "head_global.js head_helpers.js head_http.js",
                 },

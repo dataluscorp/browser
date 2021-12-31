@@ -44,7 +44,7 @@ You are building GeckoView. After your build completes, you can open
 the top source directory in Android Studio directly and build using Gradle.
 See the documentation at
 
-https://firefox-source-docs.mozilla.org/mobile/android/geckoview/contributor/geckoview-quick-start.html#build-using-android-studio
+https://datalus-source-docs.mozilla.org/mobile/android/geckoview/contributor/geckoview-quick-start.html#build-using-android-studio
 =============
 """.strip()
 
@@ -52,7 +52,7 @@ VISUAL_STUDIO_ADVERTISEMENT = """
 ===============================
 Visual Studio Support Available
 
-You are building Firefox on Windows. You can generate Visual Studio
+You are building Datalus on Windows. You can generate Visual Studio
 files by running:
 
    mach build-backend --backend=VisualStudio

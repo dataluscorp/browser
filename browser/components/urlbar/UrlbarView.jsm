@@ -1475,9 +1475,9 @@ class UrlbarView {
       result.providerName == "UrlbarProviderQuickSuggest" &&
       result.payload.isSponsored
     ) {
-      item.toggleAttribute("firefox-suggest-sponsored", true);
+      item.toggleAttribute("datalus-suggest-sponsored", true);
     } else {
-      item.removeAttribute("firefox-suggest-sponsored");
+      item.removeAttribute("datalus-suggest-sponsored");
     }
 
     let url = item._elements.get("url");
@@ -1750,7 +1750,7 @@ class UrlbarView {
         case UrlbarUtils.RESULT_TYPE.REMOTE_TAB:
         case UrlbarUtils.RESULT_TYPE.TAB_SWITCH:
         case UrlbarUtils.RESULT_TYPE.URL:
-          return { id: "urlbar-group-firefox-suggest" };
+          return { id: "urlbar-group-datalus-suggest" };
         case UrlbarUtils.RESULT_TYPE.SEARCH:
           // Show "{ $engine } Suggestions" if it's not the first label.
           if (currentLabel && row.result.payload.suggestion) {
@@ -2173,7 +2173,7 @@ class UrlbarView {
 
     if (UrlbarPrefs.get("groupLabels.enabled")) {
       idArgs.push(
-        { id: "urlbar-group-firefox-suggest" },
+        { id: "urlbar-group-datalus-suggest" },
         ...[
           Services.search.defaultEngine?.name,
           Services.search.defaultPrivateEngine?.name,

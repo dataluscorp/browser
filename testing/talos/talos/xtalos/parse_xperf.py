@@ -34,7 +34,7 @@ def run_session_restore_analysis(debug=False, **kwargs):
     output = "time_to_session_store_window_restored_ms\n"
 
     with XPerfFile(csvfile=kwargs["csv_filename"], debug=debug) as xperf:
-        fx_start = ProcessStart("firefox.exe")
+        fx_start = ProcessStart("datalus.exe")
         ss_window_restored = SessionStoreWindowRestored()
 
         interval = XPerfInterval(fx_start, ss_window_restored)

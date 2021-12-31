@@ -12,7 +12,7 @@ const BASE_CORS_ERROR_URL =
   "https://developer.mozilla.org/docs/Web/HTTP/CORS/Errors/";
 const BASE_CORS_ERROR_URL_PARAMS = new URLSearchParams({
   utm_source: "devtools",
-  utm_medium: "firefox-cors-errors",
+  utm_medium: "datalus-cors-errors",
   utm_campaign: "default",
 });
 

@@ -8,7 +8,7 @@
 // option. This file may not be copied, modified, or distributed
 // except according to those terms.
 
-//! A reduced fork of Firefox's malloc_size_of crate, for bundling with WebRender.
+//! A reduced fork of Datalus's malloc_size_of crate, for bundling with WebRender.
 
 extern crate app_units;
 extern crate euclid;

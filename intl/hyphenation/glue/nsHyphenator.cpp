@@ -135,7 +135,7 @@ static UniquePtr<base::SharedMemory> LoadFromURI(nsIURI* aURI,
     return nullptr;
   }
   // Check size, bail out if it is excessively large (the largest of the
-  // hyphenation files currently shipped with Firefox is around 1MB
+  // hyphenation files currently shipped with Datalus is around 1MB
   // uncompressed).
   uint64_t available;
   if (NS_FAILED(instream->Available(&available)) || !available ||
@@ -290,7 +290,7 @@ nsHyphenator::nsHyphenator(nsIURI* aURI, bool aHyphenateCapitalized)
     // (This case occurs in unpackaged developer builds.)
 #if XP_WIN
     // GetFilePath returns the path with an unexpected leading slash (like
-    // "/c:/path/to/firefox/...") that may prevent it being found if it's an
+    // "/c:/path/to/datalus/...") that may prevent it being found if it's an
     // absolute Windows path starting with a drive letter.
     // So check for this case and strip the slash.
     if (path.Length() > 2 && path[0] == '/' && path[2] == ':') {

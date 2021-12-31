@@ -23,16 +23,16 @@ add_task(async function() {
 
   const { document, tab } = await openAboutDebugging();
 
-  info("Check 'This Firefox' route");
-  document.location.hash = "#/runtime/this-firefox";
+  info("Check 'This Datalus' route");
+  document.location.hash = "#/runtime/this-datalus";
   await waitUntil(() => document.querySelector(".qa-runtime-page"));
   const infoLabel = document.querySelector(".qa-runtime-name").textContent;
-  // NOTE: when using USB Mocks, we see only "Firefox" as the device name
-  ok(infoLabel.includes("Firefox"), "Runtime is displayed as Firefox");
+  // NOTE: when using USB Mocks, we see only "Datalus" as the device name
+  ok(infoLabel.includes("Datalus"), "Runtime is displayed as Datalus");
   ok(!infoLabel.includes(" on "), "Runtime is not associated to any device");
   is(
     document.title,
-    "Debugging - Runtime / this-firefox",
+    "Debugging - Runtime / this-datalus",
     "Checking title for 'runtime' page"
   );
 
@@ -68,14 +68,14 @@ add_task(async function() {
 });
 
 /**
- * Test that an invalid route redirects to / (currently This Firefox page)
+ * Test that an invalid route redirects to / (currently This Datalus page)
  */
 add_task(async function() {
   info("Check an invalid route redirects to root");
   const { document, tab } = await openAboutDebugging();
 
   info("Waiting for a non setup page to load");
-  document.location.hash = "#/runtime/this-firefox";
+  document.location.hash = "#/runtime/this-datalus";
   await waitUntil(() => document.querySelector(".qa-runtime-page"));
 
   info("Update hash & wait for a redirect to root (connect page)");
@@ -88,10 +88,10 @@ add_task(async function() {
 });
 
 /**
- * Test that routes from old about:debugging redirect to this Firefox.
+ * Test that routes from old about:debugging redirect to this Datalus.
  */
 add_task(async function testOldAboutDebuggingRoutes() {
-  info("Check that routes from old about:debugging redirect to this Firefox");
+  info("Check that routes from old about:debugging redirect to this Datalus");
   const { document, tab } = await openAboutDebugging();
 
   const routes = ["addons", "tabs", "workers"];
@@ -100,13 +100,13 @@ add_task(async function testOldAboutDebuggingRoutes() {
     document.location.hash = "#/setup";
     await waitUntil(() => document.querySelector(".qa-connect-page"));
 
-    info(`Check that navigating to ${route} redirects to This Firefox`);
+    info(`Check that navigating to ${route} redirects to This Datalus`);
     document.location.hash = route;
     await waitUntil(() => document.querySelector(".qa-runtime-page"));
     is(
       document.location.hash,
-      "#/runtime/this-firefox",
-      `${route} was redirected to This Firefox`
+      "#/runtime/this-datalus",
+      `${route} was redirected to This Datalus`
     );
   }
 

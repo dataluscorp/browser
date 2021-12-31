@@ -117,7 +117,7 @@ def _patch_absolute_paths(sentry_event, topsrcdir):
     # As discussed here (https://bugzilla.mozilla.org/show_bug.cgi?id=1636251#c28),
     # we remove usernames from file names with a best-effort basis. The most likely
     # place for usernames to manifest in Sentry information is within absolute paths,
-    # such as: "/home/mitch/dev/firefox/mach"
+    # such as: "/home/mitch/dev/datalus/mach"
     # We replace the state_dir, obj_dir, src_dir with "<...>" placeholders.
     # Note that we also do a blanket find-and-replace of the user's name with "<user>",
     # which may have ill effects if the user's name is, by happenstance, a substring

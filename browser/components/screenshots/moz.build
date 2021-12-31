@@ -11,4 +11,4 @@ EXTRA_JS_MODULES += [
 JAR_MANIFESTS += ["jar.mn"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Screenshots")
+    BUG_COMPONENT = ("Datalus", "Screenshots")

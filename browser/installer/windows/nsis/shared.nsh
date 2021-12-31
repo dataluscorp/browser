@@ -10,13 +10,13 @@
   System::Call "kernel32::ProcessIdToSessionId(i $0, *i ${NSIS_MAX_STRLEN} r9)"
 
   ; Determine if we're the protected UserChoice default or not. If so fix the
-  ; start menu tile.  In case there are 2 Firefox installations, we only do
+  ; start menu tile.  In case there are 2 Datalus installations, we only do
   ; this if the application being updated is the default.
   ReadRegStr $0 HKCU "Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice" "ProgId"
   ${WordFind} "$0" "-" "+1{" $0
-  ${If} $0 == "FirefoxURL"
+  ${If} $0 == "DatalusURL"
   ${AndIf} $9 != 0 ; We're not running in session 0
-    ReadRegStr $0 HKCU "Software\Classes\FirefoxURL\shell\open\command" ""
+    ReadRegStr $0 HKCU "Software\Classes\DatalusURL\shell\open\command" ""
     ${GetPathFromString} "$0" $0
     ${GetParent} "$0" $0
     ${If} ${FileExists} "$0"
@@ -456,7 +456,7 @@ ${RemoveDefaultBrowserAgentShortcut}
 !macroend
 !define AddAssociationIfNoneExist "!insertmacro AddAssociationIfNoneExist"
 
-; Adds the protocol and file handler registry entries for making Firefox the
+; Adds the protocol and file handler registry entries for making Datalus the
 ; default handler (uses SHCTX).
 !macro SetHandlers
   ${GetLongPath} "$INSTDIR\${FileMainEXE}" $8
@@ -473,54 +473,54 @@ ${RemoveDefaultBrowserAgentShortcut}
   StrCpy $0 "SOFTWARE\Classes"
   StrCpy $2 "$\"$8$\" -osint -url $\"%1$\""
 
-  ; Associate the file handlers with FirefoxHTML, if they aren't already.
+  ; Associate the file handlers with DatalusHTML, if they aren't already.
   ReadRegStr $6 SHCTX "$0\.htm" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "FirefoxHTML"
-    WriteRegStr SHCTX "$0\.htm"   "" "FirefoxHTML$5"
+  ${If} "$6" != "DatalusHTML"
+    WriteRegStr SHCTX "$0\.htm"   "" "DatalusHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.html" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "FirefoxHTML"
-    WriteRegStr SHCTX "$0\.html"  "" "FirefoxHTML$5"
+  ${If} "$6" != "DatalusHTML"
+    WriteRegStr SHCTX "$0\.html"  "" "DatalusHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.shtml" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "FirefoxHTML"
-    WriteRegStr SHCTX "$0\.shtml" "" "FirefoxHTML$5"
+  ${If} "$6" != "DatalusHTML"
+    WriteRegStr SHCTX "$0\.shtml" "" "DatalusHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.xht" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "FirefoxHTML"
-    WriteRegStr SHCTX "$0\.xht"   "" "FirefoxHTML$5"
+  ${If} "$6" != "DatalusHTML"
+    WriteRegStr SHCTX "$0\.xht"   "" "DatalusHTML$5"
   ${EndIf}
 
   ReadRegStr $6 SHCTX "$0\.xhtml" ""
   ${WordFind} "$6" "-" "+1{" $6
-  ${If} "$6" != "FirefoxHTML"
-    WriteRegStr SHCTX "$0\.xhtml" "" "FirefoxHTML$5"
+  ${If} "$6" != "DatalusHTML"
+    WriteRegStr SHCTX "$0\.xhtml" "" "DatalusHTML$5"
   ${EndIf}
 
 
-  ${AddAssociationIfNoneExist} ".pdf" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".oga" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".ogg" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".ogv" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".pdf" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".webm" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".svg" "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".webp"  "FirefoxHTML$5"
-  ${AddAssociationIfNoneExist} ".avif" "FirefoxHTML$5"
+  ${AddAssociationIfNoneExist} ".pdf" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".oga" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".ogg" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".ogv" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".pdf" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".webm" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".svg" "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".webp"  "DatalusHTML$5"
+  ${AddAssociationIfNoneExist} ".avif" "DatalusHTML$5"
 
-  ; An empty string is used for the 5th param because FirefoxHTML is not a
+  ; An empty string is used for the 5th param because DatalusHTML is not a
   ; protocol handler
-  ${AddDisabledDDEHandlerValues} "FirefoxHTML$5" "$2" "$8,1" \
+  ${AddDisabledDDEHandlerValues} "DatalusHTML$5" "$2" "$8,1" \
                                  "${AppRegName} HTML Document" ""
 
-  ${AddDisabledDDEHandlerValues} "FirefoxURL$5" "$2" "$8,1" "${AppRegName} URL" \
+  ${AddDisabledDDEHandlerValues} "DatalusURL$5" "$2" "$8,1" "${AppRegName} URL" \
                                  "true"
   ; An empty string is used for the 4th & 5th params because the following
   ; protocol handlers already have a display name and the additional keys
@@ -536,7 +536,7 @@ ${RemoveDefaultBrowserAgentShortcut}
 !macroend
 !define WriteApplicationsSupportedType "!insertmacro WriteApplicationsSupportedType"
 
-; Adds the HKLM\Software\Clients\StartMenuInternet\Firefox-[pathhash] registry
+; Adds the HKLM\Software\Clients\StartMenuInternet\Datalus-[pathhash] registry
 ; entries (does not use SHCTX).
 ;
 ; The values for StartMenuInternet are only valid under HKLM and there can only
@@ -558,7 +558,7 @@ ${RemoveDefaultBrowserAgentShortcut}
   ${GetLongPath} "$INSTDIR\${FileMainEXE}" $8
   ${GetLongPath} "$INSTDIR\uninstall\helper.exe" $7
 
-  ; If we already have keys at the old FIREFOX.EXE path, then just update those.
+  ; If we already have keys at the old DATALUS.EXE path, then just update those.
   ; We have to be careful to update the existing keys in place so that we don't
   ; create duplicate keys for the same installation, or cause Windows to think
   ; something "suspicious" has happened and it should reset the default browser.
@@ -597,15 +597,15 @@ ${RemoveDefaultBrowserAgentShortcut}
   WriteRegStr ${RegKey} "$0\Capabilities" "ApplicationIcon" "$8,0"
   WriteRegStr ${RegKey} "$0\Capabilities" "ApplicationName" "${BrandShortName}"
 
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".htm"   "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".html"  "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".pdf"   "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".shtml" "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xht"   "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xhtml" "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".svg"   "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".webp"  "FirefoxHTML$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".avif"  "FirefoxHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".htm"   "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".html"  "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".pdf"   "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".shtml" "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xht"   "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".xhtml" "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".svg"   "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".webp"  "DatalusHTML$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\FileAssociations" ".avif"  "DatalusHTML$2"
 
   WriteRegStr ${RegKey} "$0\Capabilities\StartMenu" "StartMenuInternet" "$1"
 
@@ -613,9 +613,9 @@ ${RemoveDefaultBrowserAgentShortcut}
   ; entire key, we need to remove any existing registration.
   DeleteRegValue ${RegKey} "$0\Capabilities\URLAssociations" "ftp"
 
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "http"   "FirefoxURL$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "https"  "FirefoxURL$2"
-  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "mailto" "FirefoxURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "http"   "DatalusURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "https"  "DatalusURL$2"
+  WriteRegStr ${RegKey} "$0\Capabilities\URLAssociations" "mailto" "DatalusURL$2"
 
   WriteRegStr ${RegKey} "Software\RegisteredApplications" "$1" "$0\Capabilities"
 
@@ -647,7 +647,7 @@ ${RemoveDefaultBrowserAgentShortcut}
     ; With context menu, even if the user has tried to add us there manually.
     ; The list here was derived from the file /layout/build/components.conf,
     ; filtered down to only those types which make sense to open on their own
-    ; in Firefox, basically meaning that plain text file types were left out,
+    ; in Datalus, basically meaning that plain text file types were left out,
     ; but not JSON or XML types because we have specific viewers for those.
     ${WriteApplicationsSupportedType} ${RegKey} ".apng"
     ${WriteApplicationsSupportedType} ${RegKey} ".bmp"
@@ -683,24 +683,24 @@ ${RemoveDefaultBrowserAgentShortcut}
 !macroend
 !define SetStartMenuInternet "!insertmacro SetStartMenuInternet"
 
-; Add registry keys to support the Firefox 32 bit to 64 bit migration. These
-; registry entries are not removed on uninstall at this time. After the Firefox
+; Add registry keys to support the Datalus 32 bit to 64 bit migration. These
+; registry entries are not removed on uninstall at this time. After the Datalus
 ; 32 bit to 64 bit migration effort is completed these registry entries can be
 ; removed during install, post update, and uninstall.
 !macro Set32to64DidMigrateReg
   ${GetLongPath} "$INSTDIR" $1
   ; These registry keys are always in the 32 bit hive since they are never
-  ; needed by a Firefox 64 bit install unless it has been updated from Firefox
+  ; needed by a Datalus 64 bit install unless it has been updated from Datalus
   ; 32 bit.
   SetRegView 32
 
 !ifdef HAVE_64BIT_BUILD
 
-  ; Running Firefox 64 bit on Windows 64 bit
+  ; Running Datalus 64 bit on Windows 64 bit
   ClearErrors
   ReadRegDWORD $2 HKLM "Software\Mozilla\${AppName}\32to64DidMigrate" "$1"
-  ; If there were no errors then the system was updated from Firefox 32 bit to
-  ; Firefox 64 bit and if the value is already 1 then the registry value has
+  ; If there were no errors then the system was updated from Datalus 32 bit to
+  ; Datalus 64 bit and if the value is already 1 then the registry value has
   ; already been updated in the HKLM registry.
   ${IfNot} ${Errors}
   ${AndIf} $2 != 1
@@ -717,8 +717,8 @@ ${RemoveDefaultBrowserAgentShortcut}
 
   ClearErrors
   ReadRegDWORD $2 HKCU "Software\Mozilla\${AppName}\32to64DidMigrate" "$1"
-  ; If there were no errors then the system was updated from Firefox 32 bit to
-  ; Firefox 64 bit and if the value is already 1 then the registry value has
+  ; If there were no errors then the system was updated from Datalus 32 bit to
+  ; Datalus 64 bit and if the value is already 1 then the registry value has
   ; already been updated in the HKCU registry.
   ${IfNot} ${Errors}
   ${AndIf} $2 != 1
@@ -727,10 +727,10 @@ ${RemoveDefaultBrowserAgentShortcut}
 
 !else
 
-  ; Running Firefox 32 bit
+  ; Running Datalus 32 bit
   ${If} ${RunningX64}
   ${OrIf} ${IsNativeARM64}
-    ; Running Firefox 32 bit on a Windows 64 bit system
+    ; Running Datalus 32 bit on a Windows 64 bit system
     ClearErrors
     ReadRegDWORD $2 HKLM "Software\Mozilla\${AppName}\32to64DidMigrate" "$1"
     ; If there were errors the value doesn't exist yet.
@@ -751,17 +751,17 @@ ${RemoveDefaultBrowserAgentShortcut}
 !macroend
 !define Set32to64DidMigrateReg "!insertmacro Set32to64DidMigrateReg"
 
-; The IconHandler reference for FirefoxHTML can end up in an inconsistent state
+; The IconHandler reference for DatalusHTML can end up in an inconsistent state
 ; due to changes not being detected by the IconHandler for side by side
 ; installs (see bug 268512). The symptoms can be either an incorrect icon or no
-; icon being displayed for files associated with Firefox (does not use SHCTX).
+; icon being displayed for files associated with Datalus (does not use SHCTX).
 !macro FixShellIconHandler RegKey
-  ; Find the correct key to update, either FirefoxHTML or FirefoxHTML-[PathHash]
-  StrCpy $3 "FirefoxHTML-$AppUserModelID"
+  ; Find the correct key to update, either DatalusHTML or DatalusHTML-[PathHash]
+  StrCpy $3 "DatalusHTML-$AppUserModelID"
   ClearErrors
   ReadRegStr $0 ${RegKey} "Software\Classes\$3\DefaultIcon" ""
   ${If} ${Errors}
-    StrCpy $3 "FirefoxHTML"
+    StrCpy $3 "DatalusHTML"
   ${EndIf}
 
   ClearErrors
@@ -905,7 +905,7 @@ ${RemoveDefaultBrowserAgentShortcut}
 ; HKCU Software\Classes keys when associating handlers. The fix uses the merged
 ; view in HKCR to check for existance of an existing association. This macro
 ; cleans affected installations by removing the HKLM and HKCU value if it is set
-; to FirefoxHTML when there is a value for PersistentHandler or by removing the
+; to DatalusHTML when there is a value for PersistentHandler or by removing the
 ; HKCU value when the HKLM value has a value other than an empty string.
 !macro FixBadFileAssociation FILE_TYPE
   ; Only delete the default value in case the key has values for OpenWithList,
@@ -916,16 +916,16 @@ ${RemoveDefaultBrowserAgentShortcut}
   ${WordFind} "$1" "-" "+1{" $1
   ReadRegStr $2 HKCR "${FILE_TYPE}\PersistentHandler" ""
   ${If} "$2" != ""
-    ; Since there is a persistent handler remove FirefoxHTML as the default
-    ; value from both HKCU and HKLM if it set to FirefoxHTML.
-    ${If} "$0" == "FirefoxHTML"
+    ; Since there is a persistent handler remove DatalusHTML as the default
+    ; value from both HKCU and HKLM if it set to DatalusHTML.
+    ${If} "$0" == "DatalusHTML"
       DeleteRegValue HKCU "Software\Classes\${FILE_TYPE}" ""
     ${EndIf}
-    ${If} "$1" == "FirefoxHTML"
+    ${If} "$1" == "DatalusHTML"
       DeleteRegValue HKLM "Software\Classes\${FILE_TYPE}" ""
     ${EndIf}
-  ${ElseIf} "$0" == "FirefoxHTML"
-    ; Since HKCU is set to FirefoxHTML remove FirefoxHTML as the default value
+  ${ElseIf} "$0" == "DatalusHTML"
+    ; Since HKCU is set to DatalusHTML remove DatalusHTML as the default value
     ; from HKCU if HKLM is set to a value other than an empty string.
     ${If} "$1" != ""
       DeleteRegValue HKCU "Software\Classes\${FILE_TYPE}" ""
@@ -981,28 +981,28 @@ ${RemoveDefaultBrowserAgentShortcut}
   ; Only set the file and protocol handlers if the existing one under HKCR is
   ; for this install location.
 
-  ${IsHandlerForInstallDir} "FirefoxHTML-$AppUserModelID" $R9
+  ${IsHandlerForInstallDir} "DatalusHTML-$AppUserModelID" $R9
   ${If} "$R9" == "true"
-    ; An empty string is used for the 5th param because FirefoxHTML is not a
+    ; An empty string is used for the 5th param because DatalusHTML is not a
     ; protocol handler.
-    ${AddDisabledDDEHandlerValues} "FirefoxHTML-$AppUserModelID" "$2" "$8,1" \
+    ${AddDisabledDDEHandlerValues} "DatalusHTML-$AppUserModelID" "$2" "$8,1" \
                                    "${AppRegName} HTML Document" ""
   ${Else}
-    ${IsHandlerForInstallDir} "FirefoxHTML" $R9
+    ${IsHandlerForInstallDir} "DatalusHTML" $R9
     ${If} "$R9" == "true"
-      ${AddDisabledDDEHandlerValues} "FirefoxHTML" "$2" "$8,1" \
+      ${AddDisabledDDEHandlerValues} "DatalusHTML" "$2" "$8,1" \
                                      "${AppRegName} HTML Document" ""
     ${EndIf}
   ${EndIf}
 
-  ${IsHandlerForInstallDir} "FirefoxURL-$AppUserModelID" $R9
+  ${IsHandlerForInstallDir} "DatalusURL-$AppUserModelID" $R9
   ${If} "$R9" == "true"
-    ${AddDisabledDDEHandlerValues} "FirefoxURL-$AppUserModelID" "$2" "$8,1" \
+    ${AddDisabledDDEHandlerValues} "DatalusURL-$AppUserModelID" "$2" "$8,1" \
                                    "${AppRegName} URL" "true"
   ${Else}
-    ${IsHandlerForInstallDir} "FirefoxURL" $R9
+    ${IsHandlerForInstallDir} "DatalusURL" $R9
     ${If} "$R9" == "true"
-      ${AddDisabledDDEHandlerValues} "FirefoxURL" "$2" "$8,1" \
+      ${AddDisabledDDEHandlerValues} "DatalusURL" "$2" "$8,1" \
                                      "${AppRegName} URL" "true"
     ${EndIf}
   ${EndIf}
@@ -1098,12 +1098,12 @@ ${RemoveDefaultBrowserAgentShortcut}
 !macro RemoveDeprecatedKeys
   StrCpy $0 "SOFTWARE\Classes"
   ; Remove support for launching chrome urls from the shell during install or
-  ; update if the DefaultIcon is from firefox.exe (Bug 301073).
+  ; update if the DefaultIcon is from datalus.exe (Bug 301073).
   ${RegCleanAppHandler} "chrome"
 
   ; Remove protocol handler registry keys added by the MS shim
-  DeleteRegKey HKLM "Software\Classes\Firefox.URL"
-  DeleteRegKey HKCU "Software\Classes\Firefox.URL"
+  DeleteRegKey HKLM "Software\Classes\Datalus.URL"
+  DeleteRegKey HKCU "Software\Classes\Datalus.URL"
 !macroend
 !define RemoveDeprecatedKeys "!insertmacro RemoveDeprecatedKeys"
 
@@ -1257,7 +1257,7 @@ ${RemoveDefaultBrowserAgentShortcut}
         ${If} $AddTaskbarSC == ""
           ; No need to check the default on Win8 and later
           ${If} ${AtMostWin2008R2}
-            ; Check if the Firefox is the http handler for this user
+            ; Check if the Datalus is the http handler for this user
             SetShellVarContext current ; Set SHCTX to the current user
             ${IsHandlerForInstallDir} "http" $R9
             ${If} $TmpVal == "HKLM"

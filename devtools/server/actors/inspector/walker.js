@@ -930,7 +930,7 @@ var WalkerActor = protocol.ActorClassWithSpec(walkerSpec, {
     const shadowHost = isShadowHost(node.rawNode);
     const shadowRoot = isShadowRoot(node.rawNode);
 
-    // UA Widgets are internal Firefox widgets such as videocontrols implemented
+    // UA Widgets are internal Datalus widgets such as videocontrols implemented
     // using shadow DOM. By default, their shadow root should be hidden for web
     // developers.
     const isUAWidget =

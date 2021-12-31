@@ -43,7 +43,7 @@
 #include "mozilla/Preferences.h"
 #include <algorithm>
 
-// XXX A hack needed for Firefox's site specific zoom.
+// XXX A hack needed for Datalus's site specific zoom.
 static bool IsSiteSpecific() {
   return !mozilla::StaticPrefs::privacy_resistFingerprinting() &&
          mozilla::Preferences::GetBool("browser.zoom.siteSpecific", false);

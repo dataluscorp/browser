@@ -305,7 +305,7 @@ const ExperimentFakes = {
       endDate: null,
       proposedEnrollment: 7,
       referenceBranch: "control",
-      application: "firefox-desktop",
+      application: "datalus-desktop",
       branches: [
         {
           slug: "control",

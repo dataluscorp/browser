@@ -129,7 +129,7 @@ export class BrowserRunner {
 
   close(): Promise<void> {
     if (this._closed) return Promise.resolve();
-    if (this._tempDirectory && this._product !== 'firefox') {
+    if (this._tempDirectory && this._product !== 'datalus') {
       this.kill();
     } else if (this.connection) {
       // Attempt to close the browser gracefully

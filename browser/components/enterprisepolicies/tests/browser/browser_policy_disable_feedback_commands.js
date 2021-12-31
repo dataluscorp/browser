@@ -6,7 +6,7 @@
 /* the buidHelpMenu() function comes from browser/base/content/utilityOverlay.js */
 
 const NORMAL_PAGE = "http://example.com";
-const PHISH_PAGE = "http://www.itisatrap.org/firefox/its-a-trap.html";
+const PHISH_PAGE = "http://www.itisatrap.org/datalus/its-a-trap.html";
 
 async function checkItemsAreDisabled(url) {
   await BrowserTestUtils.withNewTab(

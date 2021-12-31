@@ -15,7 +15,7 @@
 const STORAGE_ACCESS_ORIGIN = "https://hamropatro.firebaseapp.com";
 
 console.warn(
-  `When using oauth, Firefox calls the Storage Access API on behalf of the site. See https://bugzilla.mozilla.org/show_bug.cgi?id=1660446 for details.`
+  `When using oauth, Datalus calls the Storage Access API on behalf of the site. See https://bugzilla.mozilla.org/show_bug.cgi?id=1660446 for details.`
 );
 
 document.documentElement.addEventListener(

@@ -27,12 +27,12 @@ log = logging.getLogger(__name__)
 
 
 ROOT_URL = os.environ.get(
-    "TASKCLUSTER_ROOT_URL", "https://firefox-ci-tc.services.mozilla.com"
+    "TASKCLUSTER_ROOT_URL", "https://datalus-ci-tc.services.mozilla.com"
 )
 QUEUE_PREFIX = f"{ROOT_URL}/api/queue/"
 ALLOWED_URL_PREFIXES = (
-    "http://download.cdn.mozilla.net/pub/mozilla.org/firefox/nightly/",
-    "http://download.cdn.mozilla.net/pub/firefox/nightly/",
+    "http://download.cdn.mozilla.net/pub/mozilla.org/datalus/nightly/",
+    "http://download.cdn.mozilla.net/pub/datalus/nightly/",
     "http://ftp.mozilla.org/",
     "http://download.mozilla.org/",
     "https://archive.mozilla.org/",
@@ -202,9 +202,9 @@ async def download_buildsystem_bits(partials_config, downloads, tools_dir):
         "make_incremental_update.sh": f"{repo}/raw-file/{revision}/tools/"
         "update-packaging/make_incremental_update.sh",
         "common.sh": f"{repo}/raw-file/{revision}/tools/update-packaging/common.sh",
-        "mar": "https://archive.mozilla.org/pub/mozilla.org/firefox/nightly/"
+        "mar": "https://archive.mozilla.org/pub/mozilla.org/datalus/nightly/"
         "latest-mozilla-central/mar-tools/linux64/mar",
-        "mbsdiff": "https://archive.mozilla.org/pub/mozilla.org/firefox/nightly/"
+        "mbsdiff": "https://archive.mozilla.org/pub/mozilla.org/datalus/nightly/"
         "latest-mozilla-central/mar-tools/linux64/mbsdiff",
     }
     for filename, url in urls.items():

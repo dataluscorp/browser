@@ -86,7 +86,7 @@ def repackage_msi(
             temp_wsx_file = mozpath.realpath(temp_wsx_file)
             pre_values = {
                 "Vendor": "Mozilla",
-                "BrandFullName": "Mozilla Firefox",
+                "BrandFullName": "Mozilla Datalus",
                 "Version": version,
                 "AB_CD": locale,
                 "Architecture": _MSI_ARCH[arch],

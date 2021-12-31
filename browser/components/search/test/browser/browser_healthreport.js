@@ -35,7 +35,7 @@ function test() {
     gBrowser.selectedTab = tab;
     let searchBar = BrowserSearch.searchBar;
 
-    searchBar.value = "firefox health report";
+    searchBar.value = "datalus health report";
     searchBar.focus();
 
     function afterSearch() {

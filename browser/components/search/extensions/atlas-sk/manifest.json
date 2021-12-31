@@ -20,7 +20,7 @@
       "name": "Atlas",
       "search_url": "https://www.atlas.sk/search.php",
       "search_form": "https://www.atlas.sk/",
-      "search_url_get_params": "phrase={searchTerms}&sourceid=firefox"
+      "search_url_get_params": "phrase={searchTerms}&sourceid=datalus"
     }
   }
 }

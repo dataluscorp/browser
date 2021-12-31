@@ -178,7 +178,7 @@ async function _attemptBackgroundUpdate() {
  *
  * If data reporting upload in general is enabled Glean will submit a ping.  To determine if
  * telemetry is enabled, Glean will look at the relevant pref, which was mirrored from the default
- * profile.  Note that the Firefox policy mechanism will manage this pref, locking it to particular
+ * profile.  Note that the Datalus policy mechanism will manage this pref, locking it to particular
  * values as appropriate.
  */
 async function maybeSubmitBackgroundUpdatePing() {
@@ -299,7 +299,7 @@ async function runBackgroundTask() {
     return EXIT_CODE.DEFAULT_PROFILE_CANNOT_BE_READ;
   }
 
-  // Now that we have prefs from the default profile, we can configure Firefox-on-Glean.
+  // Now that we have prefs from the default profile, we can configure Datalus-on-Glean.
 
   // Glean has a preinit queue for metric operations that happen before init, so
   // this is safe.  We want to have these metrics set before the first possible
@@ -316,7 +316,7 @@ async function runBackgroundTask() {
     "__dummy__",
   ]).parent.path;
   let FOG = Cc["@mozilla.org/toolkit/glean;1"].createInstance(Ci.nsIFOG);
-  FOG.initializeFOG(gleanRoot, "firefox.desktop.background.update");
+  FOG.initializeFOG(gleanRoot, "datalus.desktop.background.update");
 
   // For convenience, mirror our loglevel.
   Services.prefs.setCharPref(

@@ -1,8 +1,8 @@
 Building
 ========
 
-The Remote Agent is included in the default Firefox build, but only
-ships on the Firefox Nightly release channel:
+The Remote Agent is included in the default Datalus build, but only
+ships on the Datalus Nightly release channel:
 
 	% ./mach run --remote-debugging-port
 

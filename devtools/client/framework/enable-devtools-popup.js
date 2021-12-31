@@ -8,7 +8,7 @@
  * Helper dedicated to toggle a popup triggered by pressing F12 if DevTools have
  * never been opened by the user.
  *
- * This popup should be anchored below the main hamburger menu of Firefox,
+ * This popup should be anchored below the main hamburger menu of Datalus,
  * which contains the Web Developer menu.
  *
  * This is part of the OFF12 experiment which tries to disable F12 by default to
@@ -25,7 +25,7 @@ exports.toggleEnableDevToolsPopup = function(doc) {
 
   const popup = doc.getElementById("enable-devtools-popup");
 
-  // Use the icon of the Firefox menu in order to be aligned with the
+  // Use the icon of the Datalus menu in order to be aligned with the
   // position of the hamburger menu.
   const anchor = doc
     .getElementById("PanelUI-menu-button")

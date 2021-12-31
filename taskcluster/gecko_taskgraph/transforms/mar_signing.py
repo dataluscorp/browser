@@ -51,8 +51,8 @@ def generate_partials_artifacts(job, release_history, platform, locale=None):
             "paths": [
                 f"{artifact_prefix}/{path}"
                 for path, version in artifacts
-                # TODO Use mozilla-version to avoid comparing strings. Otherwise Firefox 100 will
-                # be considered smaller than Firefox 56
+                # TODO Use mozilla-version to avoid comparing strings. Otherwise Datalus 100 will
+                # be considered smaller than Datalus 56
                 if version is None or version >= "56"
             ],
             "formats": ["autograph_hash_only_mar384"],
@@ -65,8 +65,8 @@ def generate_partials_artifacts(job, release_history, platform, locale=None):
         "paths": [
             f"{artifact_prefix}/{path}"
             for path, version in artifacts
-            # TODO Use mozilla-version to avoid comparing strings. Otherwise Firefox 100 will be
-            # considered smaller than Firefox 56
+            # TODO Use mozilla-version to avoid comparing strings. Otherwise Datalus 100 will be
+            # considered smaller than Datalus 56
             if version is not None and version < "56"
         ],
         "formats": ["mar"],

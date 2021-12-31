@@ -399,7 +399,7 @@ const proto = {
     // Most objects don't have any safe getters but inherit some from their
     // prototype. Avoid calling getOwnPropertyNames on objects that may have
     // many properties like Array, strings or js objects. That to avoid
-    // freezing firefox when doing so.
+    // freezing datalus when doing so.
     if (isArray(this.obj) || ["Object", "String"].includes(this.obj.class)) {
       obj = obj.proto;
       level++;

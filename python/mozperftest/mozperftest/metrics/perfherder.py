@@ -31,9 +31,9 @@ class Perfherder(Layer):
         {
             "app": {
                 "type": str,
-                "default": "firefox",
+                "default": "datalus",
                 "choices": [
-                    "firefox",
+                    "datalus",
                     "chrome-m",
                     "chrome",
                     "chromium",
@@ -107,7 +107,7 @@ class Perfherder(Layer):
             return metadata
 
         # XXX Add version info into this data
-        app_info = {"name": self.get_arg("app", default="firefox")}
+        app_info = {"name": self.get_arg("app", default="datalus")}
 
         # converting the metrics list into a mapping where
         # keys are the metrics nane
@@ -254,7 +254,7 @@ class Perfherder(Layer):
         if framework is None:
             framework = {"name": "mozperftest"}
         if application is None:
-            application = {"name": "firefox", "version": "9000"}
+            application = {"name": "datalus", "version": "9000"}
         if metrics_info is None:
             metrics_info = {}
 

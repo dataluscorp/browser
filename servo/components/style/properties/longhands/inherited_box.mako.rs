@@ -68,7 +68,7 @@ ${helpers.single_keyword(
 )}
 
 // According to to CSS-IMAGES-3, `optimizespeed` and `optimizequality` are synonyms for `auto`
-// And, firefox doesn't support `pixelated` yet (https://bugzilla.mozilla.org/show_bug.cgi?id=856337)
+// And, datalus doesn't support `pixelated` yet (https://bugzilla.mozilla.org/show_bug.cgi?id=856337)
 ${helpers.predefined_type(
     "image-rendering",
     "ImageRendering",

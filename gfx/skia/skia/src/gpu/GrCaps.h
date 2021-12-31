@@ -291,7 +291,7 @@ public:
     bool mustClearUploadedBufferData() const { return fMustClearUploadedBufferData; }
 
     /** For some environments, there is a performance or safety concern to not
-        initializing textures. For example, with WebGL and Firefox, there is a large
+        initializing textures. For example, with WebGL and Datalus, there is a large
         performance hit to not doing it.
      */
     bool shouldInitializeTextures() const { return fShouldInitializeTextures; }

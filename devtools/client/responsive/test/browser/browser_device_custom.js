@@ -10,7 +10,7 @@ const device = {
   width: 400,
   height: 570,
   pixelRatio: 1.5,
-  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Firefox/39.0",
+  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Datalus/39.0",
   touch: true,
 };
 
@@ -19,7 +19,7 @@ const unicodeDevice = {
   width: 400,
   height: 570,
   pixelRatio: 1.5,
-  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Firefox/39.0",
+  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Datalus/39.0",
   touch: true,
 };
 

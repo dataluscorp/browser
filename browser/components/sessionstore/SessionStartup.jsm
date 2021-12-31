@@ -231,7 +231,7 @@ var SessionStartup = {
         // If the Crash Monitor could not load a checkpoints file it will
         // provide null. This could occur on the first run after updating to
         // a version including the Crash Monitor, or if the checkpoints file
-        // was removed, or on first startup with this profile, or after Firefox Reset.
+        // was removed, or on first startup with this profile, or after Datalus Reset.
 
         // There was no checkpoints file and no sessionstore.js or its backups,
         // so we will assume that this was a fresh profile.

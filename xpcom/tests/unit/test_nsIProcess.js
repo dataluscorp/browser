@@ -4,7 +4,7 @@
 // nsIProcess unit test
 const TEST_ARGS = [
   "mozilla",
-  "firefox",
+  "datalus",
   "thunderbird",
   "seamonkey",
   "foo",

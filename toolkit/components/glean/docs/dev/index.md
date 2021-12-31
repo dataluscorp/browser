@@ -1,4 +1,4 @@
-# Developing Firefox on Glean
+# Developing Datalus on Glean
 
 ```eval_rst
 .. toctree::

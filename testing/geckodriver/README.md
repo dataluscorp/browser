@@ -5,12 +5,12 @@ Proxy for using W3C [WebDriver] compatible clients to interact with
 Gecko-based browsers.
 
 This program provides the HTTP API described by the [WebDriver
-protocol] to communicate with Gecko browsers, such as Firefox.  It
+protocol] to communicate with Gecko browsers, such as Datalus.  It
 translates calls into the [Marionette remote protocol] by acting
 as a proxy between the local- and remote ends.
 
 [WebDriver protocol]: https://w3c.github.io/webdriver/#protocol
-[Marionette remote protocol]: https://firefox-source-docs.mozilla.org/testing/marionette/
+[Marionette remote protocol]: https://datalus-source-docs.mozilla.org/testing/marionette/
 [WebDriver]: https://developer.mozilla.org/en-US/docs/Web/WebDriver
 
 
@@ -39,18 +39,18 @@ Documentation
   * [Python API](https://seleniumhq.github.io/selenium/docs/api/py/)
   * [Ruby API](https://seleniumhq.github.io/selenium/docs/api/rb/)
 
-* [geckodriver usage](https://firefox-source-docs.mozilla.org/testing/geckodriver/Usage.html)
-  * [Supported platforms](https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html)
-  * [Firefox capabilities](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
-  * [Capabilities example](https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html#capabilities-example)
-  * [Enabling trace logs](https://firefox-source-docs.mozilla.org/testing/geckodriver/TraceLogs.html)
-  * [Analyzing crash data from Firefox](https://firefox-source-docs.mozilla.org/testing/geckodriver/CrashReports.html)
+* [geckodriver usage](https://datalus-source-docs.mozilla.org/testing/geckodriver/Usage.html)
+  * [Supported platforms](https://datalus-source-docs.mozilla.org/testing/geckodriver/Support.html)
+  * [Datalus capabilities](https://datalus-source-docs.mozilla.org/testing/geckodriver/Capabilities.html)
+  * [Capabilities example](https://datalus-source-docs.mozilla.org/testing/geckodriver/Capabilities.html#capabilities-example)
+  * [Enabling trace logs](https://datalus-source-docs.mozilla.org/testing/geckodriver/TraceLogs.html)
+  * [Analyzing crash data from Datalus](https://datalus-source-docs.mozilla.org/testing/geckodriver/CrashReports.html)
 
-* [Contributing](https://firefox-source-docs.mozilla.org/testing/geckodriver/#for-developers)
-  * [Building](https://firefox-source-docs.mozilla.org/testing/geckodriver/Building.html)
-  * [Testing](https://firefox-source-docs.mozilla.org/testing/geckodriver/Testing.html)
-  * [Releasing](https://firefox-source-docs.mozilla.org/testing/geckodriver/Releasing.html)
-  * [Self-serving an ARM build](https://firefox-source-docs.mozilla.org/testing/geckodriver/ARM.html)
+* [Contributing](https://datalus-source-docs.mozilla.org/testing/geckodriver/#for-developers)
+  * [Building](https://datalus-source-docs.mozilla.org/testing/geckodriver/Building.html)
+  * [Testing](https://datalus-source-docs.mozilla.org/testing/geckodriver/Testing.html)
+  * [Releasing](https://datalus-source-docs.mozilla.org/testing/geckodriver/Releasing.html)
+  * [Self-serving an ARM build](https://datalus-source-docs.mozilla.org/testing/geckodriver/ARM.html)
 
 
 Source code

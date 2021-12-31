@@ -41,7 +41,7 @@ class MDNCompatibility {
    *                e.g. [{ name: "background-color", value: "lime" }, ...]
    * @param {Array} browsers
    *                Restrict compatibility checks to these browsers and versions.
-   *                e.g. [{ id: "firefox", name: "Firefox", version: "68" }, ...]
+   *                e.g. [{ id: "datalus", name: "Datalus", version: "68" }, ...]
    * @return {Array} issues
    */
   getCSSDeclarationBlockIssues(declarations, browsers) {
@@ -93,7 +93,7 @@ class MDNCompatibility {
    *                Assume the result of _getCSSPropertyCompatSummary().
    * @param {Array} browsers
    *                All browsers that to check
-   *                e.g. [{ id: "firefox", name: "Firefox", version: "68" }, ...]
+   *                e.g. [{ id: "datalus", name: "Datalus", version: "68" }, ...]
    * @return Object
    *                {
    *                  aliasSummaries: Array of alias summary,
@@ -265,7 +265,7 @@ class MDNCompatibility {
    *     description: {String} Description of this compatibility table.
    *     mdn_url: {String} Document in the MDN.
    *     support: {
-   *       $browserName: {String} $browserName is such as firefox, firefox_android and so on.
+   *       $browserName: {String} $browserName is such as datalus, datalus_android and so on.
    *         [
    *           {
    *              version_added: {String}
@@ -317,7 +317,7 @@ class MDNCompatibility {
    *
    * @param {Array} browsers
    *                All browsers that to check
-   *                e.g. [{ id: "firefox", name: "Firefox", version: "68" }, ...]
+   *                e.g. [{ id: "datalus", name: "Datalus", version: "68" }, ...]
    * @param {Array} database
    *                MDN compatibility dataset where finds from
    * @param {Array} terms
@@ -380,7 +380,7 @@ class MDNCompatibility {
    *
    * @param {Array} browsers
    *                All browsers that to check
-   *                e.g. [{ id: "firefox", name: "Firefox", version: "68" }, ...]
+   *                e.g. [{ id: "datalus", name: "Datalus", version: "68" }, ...]
    * @return {Object} compatibility summary
    */
   _getCSSPropertyCompatSummary(browsers, property) {

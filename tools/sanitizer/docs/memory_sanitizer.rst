@@ -41,12 +41,12 @@ recent Clang version, such as Clang 3.7+.
 You can find precompiled binaries for LLVM/Clang on `the LLVM releases
 page <https://releases.llvm.org/download.html>`__.
 
-Building Firefox
+Building Datalus
 ~~~~~~~~~~~~~~~~
 
 .. warning::
 
-   **Warning: Running Firefox with MemorySanitizer would require all
+   **Warning: Running Datalus with MemorySanitizer would require all
    external dependencies to be built with MemorySanitizer as well. To
    our knowledge, this has never been attempted yet, so the build
    configuration provided here is untested and without an appropriately
@@ -110,16 +110,16 @@ Starting the build process
 Now you start the build process using the regular ``make -f client.mk``
 command.
 
-Starting Firefox
+Starting Datalus
 ^^^^^^^^^^^^^^^^
 
-After the build has completed, you can start Firefox from the ``objdir``
+After the build has completed, you can start Datalus from the ``objdir``
 as usual.
 
 Building the JavaScript shell
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Note:** Unlike Firefox itself, the JavaScript shell does **not**
+**Note:** Unlike Datalus itself, the JavaScript shell does **not**
 require an instrumented userland. Calls to external libraries like
 zlib are handled with special annotations inside the engine.
 
@@ -132,7 +132,7 @@ zlib are handled with special annotations inside the engine.
    ``--no-ion --no-baseline --no-asmjs --no-native-regexp``.**
 
 If you want to build only the JavaScript shell instead of doing a full
-Firefox build, the build script below will probably help you to do so.
+Datalus build, the build script below will probably help you to do so.
 Before using it, you must, of course, adjust the path name for
 ``LLVM_ROOT`` to match your setup. Once you have adjusted everything,
 execute this script in the ``js/src/`` subdirectory and pass a directory

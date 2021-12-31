@@ -39,8 +39,8 @@ const utils = {
   },
   getBrowserIcon(browser) {
     switch (browser.toLowerCase()) {
-      case "firefox":
-        return "fab fa-firefox";
+      case "datalus":
+        return "fab fa-datalus";
       case "edge":
         return "fab fa-edge";
       case "chrome":

@@ -85,7 +85,7 @@ def s3_set_redirects(redirects):
             "Redirect": {"ReplaceKeyPrefixWith": redirect},
         }
         if os.environ.get("MOZ_SCM_LEVEL") == "3":
-            rule["Redirect"]["HostName"] = "firefox-source-docs.mozilla.org"
+            rule["Redirect"]["HostName"] = "datalus-source-docs.mozilla.org"
 
         configuration["RoutingRules"].append(rule)
 

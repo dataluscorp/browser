@@ -35,7 +35,7 @@ PR_REPOSITORIES = {
         "bugzilla_component": "Graphics: WebGPU",
     },
     "debugger": {
-        "github": "firefox-devtools/debugger",
+        "github": "datalus-devtools/debugger",
         "path": "devtools/client/debugger",
         "bugzilla_product": "DevTools",
         "bugzilla_component": "Debugger",

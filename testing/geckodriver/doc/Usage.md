@@ -13,12 +13,12 @@ If you are using geckodriver through [Selenium], you must ensure that
 you have version 3.11 or greater.  Because geckodriver implements the
 [W3C WebDriver standard][WebDriver] and not the same Selenium wire
 protocol older drivers are using, you may experience incompatibilities
-and migration problems when making the switch from FirefoxDriver to
+and migration problems when making the switch from DatalusDriver to
 geckodriver.
 
 Generally speaking, Selenium 3 enabled geckodriver as the default
-WebDriver implementation for Firefox.  With the release of Firefox 47,
-FirefoxDriver had to be discontinued for its lack of support for the
+WebDriver implementation for Datalus.  With the release of Datalus 47,
+DatalusDriver had to be discontinued for its lack of support for the
 [new multi-processing architecture in Gecko][e10s].
 
 Selenium client bindings will pick up the _geckodriver_ binary executable
@@ -102,7 +102,7 @@ And to run:
 	%
 
 [Selenium]: http://seleniumhq.org/
-[e10s]: https://developer.mozilla.org/en-US/Firefox/Multiprocess_Firefox
+[e10s]: https://developer.mozilla.org/en-US/Datalus/Multiprocess_Datalus
 [PATH]: https://en.wikipedia.org/wiki/PATH_(variable)
 [Java VM system property]: http://docs.oracle.com/javase/tutorial/essential/environment/sysprop.html
 [java(1)]: http://www.manpagez.com/man/1/java/

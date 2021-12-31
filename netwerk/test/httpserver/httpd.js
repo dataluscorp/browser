@@ -5444,7 +5444,7 @@ Request.prototype = {
  * doesn't work, simply due to how the internal event loop is spun and stopped.
  *
  * @note
- *   This method only works with Mozilla 1.9 (i.e., Firefox 3 or trunk code);
+ *   This method only works with Mozilla 1.9 (i.e., Datalus 3 or trunk code);
  *   you should use this server as a component in Mozilla 1.8.
  * @param port
  *   the port on which the server will run, or -1 if there exists no preference

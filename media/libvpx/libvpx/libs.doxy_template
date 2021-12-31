@@ -719,7 +719,7 @@ GENERATE_HTMLHELP      = NO
 # If the HTML_DYNAMIC_SECTIONS tag is set to YES then the generated HTML
 # documentation will contain sections that can be hidden and shown after the
 # page has loaded. For this to work a browser that supports
-# java_script and DHTML is required (for instance Mozilla 1.0+, Firefox
+# java_script and DHTML is required (for instance Mozilla 1.0+, Datalus
 # Netscape 6.0+, Internet explorer 5.0+, Konqueror, or Safari).
 
 HTML_DYNAMIC_SECTIONS  = NO

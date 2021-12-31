@@ -3,7 +3,7 @@
 
 /**
  * Tests retrieving remote LoginRecipes in the parent process.
- * See https://firefox-source-docs.mozilla.org/services/settings/#unit-tests for explanation of db.importChanges({}, 42);
+ * See https://datalus-source-docs.mozilla.org/services/settings/#unit-tests for explanation of db.importChanges({}, 42);
  */
 
 "use strict";

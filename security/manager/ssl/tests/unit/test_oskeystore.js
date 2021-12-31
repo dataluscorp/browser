@@ -25,7 +25,7 @@ async function delete_all_secrets() {
   }
 }
 
-// Test that Firefox handles locking and unlocking of the OSKeyStore properly.
+// Test that Datalus handles locking and unlocking of the OSKeyStore properly.
 // Does so by mocking out the actual dialog and "filling in" the
 // password. Also tests that providing an incorrect password will fail (well,
 // technically the user will just get prompted again, but if they then cancel

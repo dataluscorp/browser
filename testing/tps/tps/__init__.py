@@ -6,5 +6,5 @@
 
 from __future__ import absolute_import
 
-from .firefoxrunner import TPSFirefoxRunner
+from .datalusrunner import TPSDatalusRunner
 from .testrunner import TPSTestRunner

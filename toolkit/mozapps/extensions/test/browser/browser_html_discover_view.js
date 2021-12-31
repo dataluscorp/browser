@@ -276,7 +276,7 @@ add_task(async function discopane_with_real_api_data() {
 
     let amoListingLink = card.querySelector(".disco-addon-author a");
     ok(
-      amoListingLink.search.includes("utm_source=firefox-browser"),
+      amoListingLink.search.includes("utm_source=datalus-browser"),
       `Listing link should have attribution parameter, url=${amoListingLink}`
     );
 
@@ -655,7 +655,7 @@ add_task(async function discopane_interaction_telemetry() {
 
   let expectedAmoUrlFor = where => {
     // eslint-disable-next-line max-len
-    return `http://${AMO_TEST_HOST}/dummy?utm_source=firefox-browser&utm_medium=firefox-browser&utm_content=${where}`;
+    return `http://${AMO_TEST_HOST}/dummy?utm_source=datalus-browser&utm_medium=datalus-browser&utm_content=${where}`;
   };
 
   let testClickInDiscoCard = async (selector, utmContentParam) => {

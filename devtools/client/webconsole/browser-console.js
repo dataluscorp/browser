@@ -23,7 +23,7 @@ loader.lazyRequireGetter(
  * top-level window's document.
  *
  * This object only wraps the iframe that holds the Browser Console UI. This is
- * meant to be an integration point between the Firefox UI and the Browser Console
+ * meant to be an integration point between the Datalus UI and the Browser Console
  * UI and features.
  *
  * This object extends the WebConsole object located in webconsole.js

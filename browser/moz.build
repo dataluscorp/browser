@@ -38,7 +38,7 @@ TEST_DIRS += [
 DIST_SUBDIR = "browser"
 export("DIST_SUBDIR")
 
-# These defines are read in firefox.js
+# These defines are read in datalus.js
 DEFINES["APP_VERSION"] = CONFIG["MOZ_APP_VERSION"]
 
 for cdm in CONFIG["MOZ_EME_MODULES"]:
@@ -56,46 +56,46 @@ if CONFIG["MOZ_UPDATE_AGENT"]:
 # These files are specified in this moz.build to pick up DIST_SUBDIR as set in
 # this directory, which is un-set in browser/app.
 JS_PREFERENCE_PP_FILES += [
-    "app/profile/firefox.js",
+    "app/profile/datalus.js",
 ]
 FINAL_TARGET_FILES.defaults += ["app/permissions"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
     SCHEDULES.exclusive = ["linux", "macosx", "windows"]
 
 with Files("docs/**"):
     SCHEDULES.exclusive = ["docs"]
 
 with Files("Makefile.in"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("*.mk"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("**/moz.build"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("moz.configure"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("app.mozbuild"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("moz.build"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("confvars.sh"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("LICENSE"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("branding/**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("config/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("docs/**"):
     BUG_COMPONENT = ("Toolkit", "Telemetry")
@@ -104,10 +104,10 @@ with Files("fonts/**"):
     BUG_COMPONENT = ("Core", "Graphics: Text")
 
 with Files("installer/**"):
-    BUG_COMPONENT = ("Firefox", "Installer")
+    BUG_COMPONENT = ("Datalus", "Installer")
 
 with Files("tools/**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("l10n-registry.manifest"):
     BUG_COMPONENT = ("Core", "Localization")

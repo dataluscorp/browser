@@ -1,7 +1,7 @@
-Building Firefox On macOS
+Building Datalus On macOS
 =========================
 
-This document will help you get set up to build Firefox on your own
+This document will help you get set up to build Datalus on your own
 computer. Getting set up can take a while - we need to download a
 lot of bytes! Even on a fast connection, this can take ten to fifteen
 minutes of work, spread out over an hour or two.
@@ -63,12 +63,12 @@ You can test that Mercurial is installed by running:
     ``bin`` directory to your ``PATH``, as your shell probably won't pick up our
     changes in ``~/.zshenv``.
 
-2. Bootstrap a copy of the Firefox source code
+2. Bootstrap a copy of the Datalus source code
 ----------------------------------------------
 
-Now that your system is ready, we can download the source code and have Firefox
+Now that your system is ready, we can download the source code and have Datalus
 automatically download the other dependencies it needs. The below command
-will download a lot of data (years of Firefox history!) then guide you through
+will download a lot of data (years of Datalus history!) then guide you through
 the interactive setup process.
 
 .. code-block:: shell
@@ -78,7 +78,7 @@ the interactive setup process.
 
 .. note::
 
-    In general, the Firefox workflow works best with Mercurial. However,
+    In general, the Datalus workflow works best with Mercurial. However,
     if you'd prefer to use ``git``, you can grab the source code in
     "git" form by running the bootstrap script with the ``vcs`` parameter:
 
@@ -91,9 +91,9 @@ the interactive setup process.
 Choosing a build type
 ~~~~~~~~~~~~~~~~~~~~~
 
-If you aren't modifying the Firefox backend, then then select one of the
+If you aren't modifying the Datalus backend, then then select one of the
 :ref:`Artifact Mode <Understanding Artifact Builds>` options. If you are
-building Firefox for Android, you should also see the :ref:`GeckoView Contributor Guide`.
+building Datalus for Android, you should also see the :ref:`GeckoView Contributor Guide`.
 
 Cleanup
 ~~~~~~~
@@ -115,7 +115,7 @@ Now that your system is bootstrapped, you should be able to build!
     ./mach build
     ./mach run
 
-🎉 Congratulations! You've built your own home-grown Firefox!
+🎉 Congratulations! You've built your own home-grown Datalus!
 
 Now the fun starts
 ------------------
@@ -124,7 +124,7 @@ Time to start hacking! You should join us on `Matrix <https://chat.mozilla.org/>
 say hello in the `Introduction channel
 <https://chat.mozilla.org/#/room/#introduction:mozilla.org>`_, and `find a bug to
 start working on <https://codetribute.mozilla.org/>`_.
-See the :ref:`Firefox Contributors' Quick Reference` to learn how to test your changes,
+See the :ref:`Datalus Contributors' Quick Reference` to learn how to test your changes,
 send patches to Mozilla, update your source code locally, and more.
 
 Troubleshooting
@@ -140,7 +140,7 @@ macOS SDK is unsupported
     the structure of Xcode, so the SDK could be moved to a different location or
     stored differently.
 
-If the SDK included with your Xcode installation is not supported by Firefox,
+If the SDK included with your Xcode installation is not supported by Datalus,
 you'll need to manually install one that is compatible.
 We're currently using the 10.12 SDK on our build servers, so that's the one that you
 should install:
@@ -156,8 +156,8 @@ should install:
     # This assumes that Xcode is in your "Downloads" folder
     cp -aH ~/Downloads/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk ~/.mozbuild/macos-sdk/
 
-4. Finally, inform the Firefox build about this SDK by creating (or editing) a file called ``mozconfig`` file
-   in the Firefox source code directory. Add the following line:
+4. Finally, inform the Datalus build about this SDK by creating (or editing) a file called ``mozconfig`` file
+   in the Datalus source code directory. Add the following line:
 
 .. code-block::
 

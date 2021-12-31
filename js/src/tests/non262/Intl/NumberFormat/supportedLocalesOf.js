@@ -6,8 +6,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // This array contains the locales that ICU supports in
-// number formatting whose languages Mozilla localizes Firefox into.
-// Current as of ICU 50.1.2 and Firefox March 2013.
+// number formatting whose languages Mozilla localizes Datalus into.
+// Current as of ICU 50.1.2 and Datalus March 2013.
 var locales = [
     "af",
     "af-NA",

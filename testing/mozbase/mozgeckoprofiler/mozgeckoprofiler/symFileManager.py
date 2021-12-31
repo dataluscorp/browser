@@ -14,7 +14,7 @@ from mozlog import get_proxy_logger
 LOG = get_proxy_logger("profiler")
 
 # Libraries to keep prefetched
-PREFETCHED_LIBS = ["xul.pdb", "firefox.pdb"]
+PREFETCHED_LIBS = ["xul.pdb", "datalus.pdb"]
 
 
 class SymbolInfo:
@@ -45,7 +45,7 @@ class SymFileManager:
             Paths to .SYM files, expressed internally as a mapping of app or platform
             names to directories. App & OS names from requests are converted to
             all-uppercase internally
-            e.g. { "FIREFOX": "/tmp/path" }
+            e.g. { "DATALUS": "/tmp/path" }
         maxCacheEntries : number
             Maximum number of symbol files to keep in memory
         prefetchInterval : number
@@ -216,7 +216,7 @@ class SymFileManager:
         symDirsToInspect = {}
         for pdbName in PREFETCHED_LIBS:
             symDirsToInspect[pdbName] = []
-            topLibPath = self.sOptions["symbolPaths"]["FIREFOX"] + os.sep + pdbName
+            topLibPath = self.sOptions["symbolPaths"]["DATALUS"] + os.sep + pdbName
 
             try:
                 symbolDirs = os.listdir(topLibPath)

@@ -821,7 +821,7 @@ var gSync = {
   updateFxAPanel(state = {}) {
     const mainWindowEl = document.documentElement;
 
-    // The Firefox Account toolbar currently handles 3 different states for
+    // The Datalus Account toolbar currently handles 3 different states for
     // users. The default `not_configured` state shows an empty avatar, `unverified`
     // state shows an avatar with an email icon, `login-failed` state shows an avatar
     // with a danger icon and the `verified` state will show the users
@@ -953,7 +953,7 @@ var gSync = {
         fxa_avatar: hasAvatar ? "true" : "false",
       };
 
-      // When the fxa avatar panel is within the Firefox app menu,
+      // When the fxa avatar panel is within the Datalus app menu,
       // we emit different telemetry.
       let eventName = "fxa_avatar_menu";
       if (this.isPanelInsideAppMenu(panel)) {

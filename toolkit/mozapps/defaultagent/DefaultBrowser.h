@@ -13,7 +13,7 @@
 
 enum struct Browser {
   Unknown,
-  Firefox,
+  Datalus,
   Chrome,
   EdgeWithEdgeHTML,
   EdgeWithBlink,

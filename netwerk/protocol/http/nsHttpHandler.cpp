@@ -127,8 +127,8 @@
 #define NS_HTTP_PROTOCOL_FLAGS \
   (URI_STD | ALLOWS_PROXY | ALLOWS_PROXY_HTTP | URI_LOADABLE_BY_ANYONE)
 
-#define UA_EXPERIMENT_NAME "firefox100"_ns
-#define UA_EXPERIMENT_VAR "firefoxVersion"_ns
+#define UA_EXPERIMENT_NAME "datalus100"_ns
+#define UA_EXPERIMENT_VAR "datalusVersion"_ns
 
 //-----------------------------------------------------------------------------
 
@@ -143,10 +143,10 @@ static void ExperimentUserAgentUpdated(const char* /* aNimbusPref */,
   MOZ_ASSERT(aUserData != nullptr);
   nsACString* aExperimentUserAgent = static_cast<nsACString*>(aUserData);
 
-  // Is this user enrolled in the Firefox 100 experiment?
-  int firefoxVersion =
+  // Is this user enrolled in the Datalus 100 experiment?
+  int datalusVersion =
       NimbusFeatures::GetInt(UA_EXPERIMENT_NAME, UA_EXPERIMENT_VAR, 0);
-  if (firefoxVersion <= 0) {
+  if (datalusVersion <= 0) {
     aExperimentUserAgent->SetIsVoid(true);
     return;
   }
@@ -155,21 +155,21 @@ static void ExperimentUserAgentUpdated(const char* /* aNimbusPref */,
 #ifdef XP_WIN
 #  ifdef HAVE_64BIT_BUILD
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:%d.0) Gecko/20100101 "
-      "Firefox/%d.0"
+      "Datalus/%d.0"
 #  else
-      "Mozilla/5.0 (Windows NT 10.0; rv:%d.0) Gecko/20100101 Firefox/%d.0"
+      "Mozilla/5.0 (Windows NT 10.0; rv:%d.0) Gecko/20100101 Datalus/%d.0"
 #  endif
 #elif defined(XP_MACOSX)
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:%d.0) Gecko/20100101 "
-      "Firefox/%d.0"
+      "Datalus/%d.0"
 #else
       // Linux, Android, FreeBSD, etc
-      "Mozilla/5.0 (X11; Linux x86_64; rv:%d.0) Gecko/20100101 Firefox/%d.0"
+      "Mozilla/5.0 (X11; Linux x86_64; rv:%d.0) Gecko/20100101 Datalus/%d.0"
 #endif
       ;
 
   aExperimentUserAgent->Truncate();
-  aExperimentUserAgent->AppendPrintf(uaFormat, firefoxVersion, firefoxVersion);
+  aExperimentUserAgent->AppendPrintf(uaFormat, datalusVersion, datalusVersion);
 }
 
 #ifdef ANDROID
@@ -381,7 +381,7 @@ nsresult nsHttpHandler::Init() {
                                        gCallbackPrefs, this);
   PrefsChanged(nullptr);
 
-  // monitor Firefox Version Experiment enrollment
+  // monitor Datalus Version Experiment enrollment
   NimbusFeatures::OnUpdate(UA_EXPERIMENT_NAME, UA_EXPERIMENT_VAR,
                            ExperimentUserAgentUpdated, &mExperimentUserAgent);
 
@@ -393,7 +393,7 @@ nsresult nsHttpHandler::Init() {
 
   mMisc.AssignLiteral("rv:" MOZILLA_UAVERSION);
 
-  mCompatFirefox.AssignLiteral("Firefox/" MOZILLA_UAVERSION);
+  mCompatDatalus.AssignLiteral("Datalus/" MOZILLA_UAVERSION);
 
   nsCOMPtr<nsIXULAppInfo> appInfo =
       do_GetService("@mozilla.org/xre/app-info;1");
@@ -441,7 +441,7 @@ nsresult nsHttpHandler::Init() {
   LOG(("> product-sub = %s\n", mProductSub.get()));
   LOG(("> app-name = %s\n", mAppName.get()));
   LOG(("> app-version = %s\n", mAppVersion.get()));
-  LOG(("> compat-firefox = %s\n", mCompatFirefox.get()));
+  LOG(("> compat-datalus = %s\n", mCompatDatalus.get()));
   LOG(("> user-agent = %s\n", UserAgent().get()));
 #endif
 
@@ -544,7 +544,7 @@ nsresult nsHttpHandler::InitConnectionMgr() {
                             self->mLegacyAppName, self->mLegacyAppVersion,
                             self->mPlatform, self->mOscpu, self->mMisc,
                             self->mProduct, self->mProductSub, self->mAppName,
-                            self->mAppVersion, self->mCompatFirefox,
+                            self->mAppVersion, self->mCompatDatalus,
                             self->mCompatDevice, self->mDeviceModelId));
     };
     gIOService->CallOrWaitForSocketProcess(std::move(task));
@@ -750,7 +750,7 @@ const nsCString& nsHttpHandler::UserAgent() {
   }
 
   if (!mExperimentUserAgent.IsVoid()) {
-    LOG(("using Firefox 100 Experiment User-Agent : %s\n",
+    LOG(("using Datalus 100 Experiment User-Agent : %s\n",
          mExperimentUserAgent.get()));
     return mExperimentUserAgent;
   }
@@ -777,7 +777,7 @@ void nsHttpHandler::BuildUserAgent() {
 #endif
                          mOscpu.Length() + mMisc.Length() + mProduct.Length() +
                          mProductSub.Length() + mAppName.Length() +
-                         mAppVersion.Length() + mCompatFirefox.Length() +
+                         mAppVersion.Length() + mCompatDatalus.Length() +
                          mCompatDevice.Length() + mDeviceModelId.Length() + 13);
 
   // Application portion
@@ -814,13 +814,13 @@ void nsHttpHandler::BuildUserAgent() {
   mUserAgent += '/';
   mUserAgent += mProductSub;
 
-  bool isFirefox = mAppName.EqualsLiteral("Firefox");
-  if (isFirefox || mCompatFirefoxEnabled) {
-    // "Firefox/x.y" (compatibility) app token
+  bool isDatalus = mAppName.EqualsLiteral("Datalus");
+  if (isDatalus || mCompatDatalusEnabled) {
+    // "Datalus/x.y" (compatibility) app token
     mUserAgent += ' ';
-    mUserAgent += mCompatFirefox;
+    mUserAgent += mCompatDatalus;
   }
-  if (!isFirefox) {
+  if (!isDatalus) {
     // App portion
     mUserAgent += ' ';
     mUserAgent += mAppName;
@@ -1029,9 +1029,9 @@ void nsHttpHandler::PrefsChanged(const char* pref) {
 
   bool cVar = false;
 
-  if (PREF_CHANGED(UA_PREF("compatMode.firefox"))) {
-    rv = Preferences::GetBool(UA_PREF("compatMode.firefox"), &cVar);
-    mCompatFirefoxEnabled = (NS_SUCCEEDED(rv) && cVar);
+  if (PREF_CHANGED(UA_PREF("compatMode.datalus"))) {
+    rv = Preferences::GetBool(UA_PREF("compatMode.datalus"), &cVar);
+    mCompatDatalusEnabled = (NS_SUCCEEDED(rv) && cVar);
     mUserAgentIsDirty = true;
   }
 
@@ -2838,7 +2838,7 @@ void nsHttpHandler::SetHttpHandlerInitArgs(const HttpHandlerInitArgs& aArgs) {
   mProductSub = aArgs.mProductSub();
   mAppName = aArgs.mAppName();
   mAppVersion = aArgs.mAppVersion();
-  mCompatFirefox = aArgs.mCompatFirefox();
+  mCompatDatalus = aArgs.mCompatDatalus();
   mCompatDevice = aArgs.mCompatDevice();
   mDeviceModelId = aArgs.mDeviceModelId();
 }

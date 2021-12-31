@@ -5,52 +5,52 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("test/browser/*Telemetry*"):
     BUG_COMPONENT = ("Toolkit", "Telemetry")
 
 with Files("test/browser/*ContentSearch*"):
-    BUG_COMPONENT = ("Firefox", "Search")
+    BUG_COMPONENT = ("Datalus", "Search")
 
 with Files("test/browser/*PermissionUI*"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("test/browser/*SitePermissions*"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("test/browser/browser_UnsubmittedCrashHandler.js"):
     BUG_COMPONENT = ("Toolkit", "Crash Reporting")
 
 with Files("test/browser/browser_taskbar_preview.js"):
-    BUG_COMPONENT = ("Firefox", "Shell Integration")
+    BUG_COMPONENT = ("Datalus", "Shell Integration")
 
 with Files("test/browser/browser_urlBar_zoom.js"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("test/unit/test_E10SUtils_nested_URIs.js"):
     BUG_COMPONENT = ("Core", "Security: Process Sandboxing")
 
 with Files("test/unit/test_LaterRun.js"):
-    BUG_COMPONENT = ("Firefox", "Tours")
+    BUG_COMPONENT = ("Datalus", "Tours")
 
 with Files("test/unit/test_SitePermissions.js"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("AboutNewTab.jsm"):
-    BUG_COMPONENT = ("Firefox", "New Tab Page")
+    BUG_COMPONENT = ("Datalus", "New Tab Page")
 
 with Files("AsanReporter.jsm"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("AsyncTabSwitcher.jsm"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("NewTabPagePreloading.jsm"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("BrowserWindowTracker.jsm"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("*Telemetry.jsm"):
     BUG_COMPONENT = ("Toolkit", "Telemetry")
@@ -59,58 +59,58 @@ with Files("ContentCrashHandlers.jsm"):
     BUG_COMPONENT = ("Toolkit", "Crash Reporting")
 
 with Files("EveryWindow.jsm"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("ExtensionsUI.jsm"):
     BUG_COMPONENT = ("WebExtensions", "General")
 
 with Files("LaterRun.jsm"):
-    BUG_COMPONENT = ("Firefox", "Tours")
+    BUG_COMPONENT = ("Datalus", "Tours")
 
 with Files("LiveBookmarkMigrator.jsm"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("OpenInTabsUtils.jsm"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("PartnerLinkAttribution.jsm"):
-    BUG_COMPONENT = ("Firefox", "Search")
+    BUG_COMPONENT = ("Datalus", "Search")
 
 with Files("PermissionUI.jsm"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("ProcessHangMonitor.jsm"):
     BUG_COMPONENT = ("Core", "DOM: Content Processes")
 
 with Files("Sanitizer.jsm"):
-    BUG_COMPONENT = ("Firefox", "Preferences")
+    BUG_COMPONENT = ("Datalus", "Preferences")
 
 with Files("SelectionChangedMenulist.jsm"):
-    BUG_COMPONENT = ("Firefox", "Preferences")
+    BUG_COMPONENT = ("Datalus", "Preferences")
 
 with Files("SiteDataManager.jsm"):
-    BUG_COMPONENT = ("Firefox", "Preferences")
+    BUG_COMPONENT = ("Datalus", "Preferences")
 
 with Files("SitePermissions.jsm"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("TabsList.jsm"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 with Files("TransientPrefs.jsm"):
-    BUG_COMPONENT = ("Firefox", "Preferences")
+    BUG_COMPONENT = ("Datalus", "Preferences")
 
 with Files("WindowsJumpLists.jsm"):
-    BUG_COMPONENT = ("Firefox", "Shell Integration")
+    BUG_COMPONENT = ("Datalus", "Shell Integration")
 
 with Files("WindowsPreviewPerTab.jsm"):
     BUG_COMPONENT = ("Core", "Widget: Win32")
 
 with Files("webrtcUI.jsm"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("ZoomUI.jsm"):
-    BUG_COMPONENT = ("Firefox", "Toolbars and Customization")
+    BUG_COMPONENT = ("Datalus", "Toolbars and Customization")
 
 BROWSER_CHROME_MANIFESTS += [
     "test/browser/browser.ini",

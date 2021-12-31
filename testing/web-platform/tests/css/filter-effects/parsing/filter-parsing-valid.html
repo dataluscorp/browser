@@ -58,7 +58,7 @@ test_valid_value("filter", "sepia(0)");
 test_valid_value("filter", "sepia(300%)", "sepia(100%)");
 test_valid_value("filter", "sepia()", ["sepia()", "sepia(1)"]);
 
-// Edge serializes url(...) without quotes. Blink/WebKit and Firefox use quotes.
+// Edge serializes url(...) without quotes. Blink/WebKit and Datalus use quotes.
 test_valid_value("filter", "url(picture.svg#f)", ['url("picture.svg#f")', 'url(picture.svg#f)']);
 
 test_valid_value("filter", 'url("https://www.example.com/picture.svg#f")',

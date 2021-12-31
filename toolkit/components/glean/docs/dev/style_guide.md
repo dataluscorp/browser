@@ -54,5 +54,5 @@ so let's not.
 [semantic linefeeds]: https://rhodesmill.org/brandon/2012/one-sentence-per-line/
 [reference link]: https://spec.commonmark.org/0.29/#reference-link
 [Telemetry]: ../telemetry
-[#firefox-source-docs:mozilla.org]: https://chat.mozilla.org/#/room/#firefox-source-docs:mozilla.org
+[#datalus-source-docs:mozilla.org]: https://chat.mozilla.org/#/room/#datalus-source-docs:mozilla.org
 [bug 1621950]: https://bugzilla.mozilla.org/show_bug.cgi?id=1621950

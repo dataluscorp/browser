@@ -16,7 +16,7 @@ All notable changes to this program are documented in this file.
 
   Due to the requirement from Apple that all programs must be
   notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you can
   find more details on how to work around this issue in the [macOS
@@ -24,9 +24,9 @@ All notable changes to this program are documented in this file.
 
 - _Android:_
 
-  For releases of Firefox 89.0 and earlier Marionette will only be enabled in
-  GeckoView based applications when the Firefox preference
-  `devtools.debugger.remote-enabled` is set to `true` via [`moz:firefoxOptions`].
+  For releases of Datalus 89.0 and earlier Marionette will only be enabled in
+  GeckoView based applications when the Datalus preference
+  `devtools.debugger.remote-enabled` is set to `true` via [`moz:datalusOptions`].
 
 ### Added
 
@@ -42,8 +42,8 @@ All notable changes to this program are documented in this file.
   which is using the exact same port as on the device.
 
   All the supported WebDriver BiDi commands depend on the version of
-  Firefox, and not geckodriver. The first commands will be shipped in
-  Firefox 94.
+  Datalus, and not geckodriver. The first commands will be shipped in
+  Datalus 94.
 
 - It's now possible to set additional preferences when a custom profile has been
   specified. At the end of the session they will be removed.
@@ -55,7 +55,7 @@ All notable changes to this program are documented in this file.
 
 - Added validation that the `--host` argument resolves to a local IP address.
 
-- Limit the `--foreground` argument of Firefox to MacOS only.
+- Limit the `--foreground` argument of Datalus to MacOS only.
 
 - Increased Marionette handshake timeout to not fail for slow connections.
 
@@ -66,11 +66,11 @@ All notable changes to this program are documented in this file.
 
 - Android
 
-  - Starting Firefox on Android from a Windows based host will now succeed as
+  - Starting Datalus on Android from a Windows based host will now succeed as
     we are using the correct Unix path separator to construct on-device paths.
 
-  - Arguments as specified in [`moz:firefoxOptions`] are now used when starting
-    Firefox.
+  - Arguments as specified in [`moz:datalusOptions`] are now used when starting
+    Datalus.
 
   - Port forwards set for Marionette and the WebSocket server (WebDriver BiDi)
     are now correctly removed when geckodriver exits.
@@ -87,7 +87,7 @@ All notable changes to this program are documented in this file.
 
   Due to the requirement from Apple that all programs must be
   notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you can
   find more details on how to work around this issue in the [macOS
@@ -96,8 +96,8 @@ All notable changes to this program are documented in this file.
 - _Android:_
 
   Marionette will only be enabled in GeckoView based applications when the
-  Firefox preference `devtools.debugger.remote-enabled` is set to `true` via
-  [`moz:firefoxOptions`]. This will be fixed in the Firefox 90 release for
+  Datalus preference `devtools.debugger.remote-enabled` is set to `true` via
+  [`moz:datalusOptions`]. This will be fixed in the Datalus 90 release for
   Android.
 
 ### Added
@@ -137,7 +137,7 @@ All notable changes to this program are documented in this file.
 
   Due to the requirement from Apple that all programs must be
   notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you can
   find more details on how to work around this issue in the [macOS
@@ -146,8 +146,8 @@ All notable changes to this program are documented in this file.
 - _Android:_
 
   Marionette will only be enabled in GeckoView based applications when the
-  Firefox preference `devtools.debugger.remote-enabled` is set to `true` via
-  [`moz:firefoxOptions`]. This will be fixed in one of the upcoming Firefox
+  Datalus preference `devtools.debugger.remote-enabled` is set to `true` via
+  [`moz:datalusOptions`]. This will be fixed in one of the upcoming Datalus
   for Android releases.
 
   In some cases geckodriver could crash due to a stack overflow when handling
@@ -166,7 +166,7 @@ All notable changes to this program are documented in this file.
   used to query for websockets of available targets.
 
   Note: For this experimental feature the site-isolation support of
-  Firefox aka [Fission] will be not available.
+  Datalus aka [Fission] will be not available.
 
 0.28.0  (2020-11-03, `c00d2b6acd3f`)
 ------------------------------------
@@ -177,7 +177,7 @@ All notable changes to this program are documented in this file.
 
   Due to the requirement from Apple that all programs must be
   notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you can
   find more details on how to work around this issue in the [macOS
@@ -186,8 +186,8 @@ All notable changes to this program are documented in this file.
 - _Android:_
 
   Marionette will only be enabled in GeckoView based applications when the
-  Firefox preference `devtools.debugger.remote-enabled` is set to `true` via
-  [`moz:firefoxOptions`]. This will be fixed in one of the upcoming Firefox
+  Datalus preference `devtools.debugger.remote-enabled` is set to `true` via
+  [`moz:datalusOptions`]. This will be fixed in one of the upcoming Datalus
   for Android releases.
 
   In some cases geckodriver could crash due to a stack overflow when handling
@@ -200,22 +200,22 @@ All notable changes to this program are documented in this file.
 ### Added
 
 - The command line flag `--android-storage` has been added, to allow geckodriver
-  to also control Firefox on root-less Android devices.
+  to also control Datalus on root-less Android devices.
   See the [documentation][Flags] for available values.
 
 ### Fixed
 
-- Firefox can be started again via a shell script that is located outside of the
-  Firefox directory on Linux.
+- Datalus can be started again via a shell script that is located outside of the
+  Datalus directory on Linux.
 
-- If Firefox cannot be started by geckodriver the real underlying error message is
+- If Datalus cannot be started by geckodriver the real underlying error message is
   now being reported.
 
-- Version numbers for minor and extended support releases of Firefox are now parsed correctly.
+- Version numbers for minor and extended support releases of Datalus are now parsed correctly.
 
 ### Removed
 
-- Since Firefox 72 extension commands for finding an element’s anonymous children
+- Since Datalus 72 extension commands for finding an element’s anonymous children
   and querying its attributes are no longer needed, and have been removed.
 
 0.27.0  (2020-07-27, `7b8c4f32cdde`)
@@ -231,7 +231,7 @@ All notable changes to this program are documented in this file.
 
   - Added checking of the `Origin` header for `POST` requests.
 
-  - The version number of Firefox is now checked when establishing a session.
+  - The version number of Datalus is now checked when establishing a session.
 
 ### Known problems
 
@@ -239,7 +239,7 @@ All notable changes to this program are documented in this file.
 
   Due to the requirement from Apple that all programs must be
   notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you can
   find more details on how to work around this issue in the [macOS
@@ -248,8 +248,8 @@ All notable changes to this program are documented in this file.
 - _Android:_
 
   Marionette will only be enabled in GeckoView based applications when the
-  Firefox preference `devtools.debugger.remote-enabled` is set to `true` via
-  [`moz:firefoxOptions`]. This will be fixed in one of the upcoming Firefox
+  Datalus preference `devtools.debugger.remote-enabled` is set to `true` via
+  [`moz:datalusOptions`]. This will be fixed in one of the upcoming Datalus
   for Android releases.
 
   In some cases geckodriver could crash due to a stack overflow when handling
@@ -257,28 +257,28 @@ All notable changes to this program are documented in this file.
 
 ### Added
 
-- To set environment variables for the launched Firefox for Android,
-  it is now possible to add an `env` object on [`moz:firefoxOptions`]
-  (note: this is not supported for Firefox Desktop)
+- To set environment variables for the launched Datalus for Android,
+  it is now possible to add an `env` object on [`moz:datalusOptions`]
+  (note: this is not supported for Datalus Desktop)
 
 - Support for print-to-PDF
 
   The newly standardised WebDriver [Print] endpoint provides a way to
   render pages to a paginated PDF representation. This endpoint is
-  supported by geckodriver when using Firefox version ≥78.
+  supported by geckodriver when using Datalus version ≥78.
 
 - Support for same-site cookies
 
   Cookies can now be set with a `same-site` parameter, and the value
   of that parameter will be returned when cookies are
-  retrieved. Requires Firefox version ≥79. Thanks to [Peter Major] for
+  retrieved. Requires Datalus version ≥79. Thanks to [Peter Major] for
   the patch.
 
 ### Fixed
 
 - _Android:_
 
-  * Firefox running on Android devices can now be controlled from a Windows host.
+  * Datalus running on Android devices can now be controlled from a Windows host.
 
   * Setups with multiple connected Android devices are now supported.
 
@@ -291,8 +291,8 @@ All notable changes to this program are documented in this file.
 0.26.0  (2019-10-12, `e9783a644016'`)
 -------------------------------------
 
-Note that with this release the minimum recommended Firefox version
-has changed to Firefox ≥60.
+Note that with this release the minimum recommended Datalus version
+has changed to Datalus ≥60.
 
 ### Known problems
 
@@ -300,7 +300,7 @@ has changed to Firefox ≥60.
 
   Due to the recent requirement from Apple that all programs must
   be notarized, geckodriver will not work on Catalina if you manually
-  download it through another notarized program, such as Firefox.
+  download it through another notarized program, such as Datalus.
 
   Whilst we are working on a repackaging fix for this problem, you
   can find more details on how to work around this issue in the
@@ -315,8 +315,8 @@ has changed to Firefox ≥60.
 - _Android:_
 
   Marionette will only be enabled in GeckoView based applications when the
-  Firefox preference `devtools.debugger.remote-enabled` is set to `true` via
-  [`moz:firefoxOptions`]. This will be fixed in one of the upcoming Firefox
+  Datalus preference `devtools.debugger.remote-enabled` is set to `true` via
+  [`moz:datalusOptions`]. This will be fixed in one of the upcoming Datalus
   for Android releases.
 
   In some cases geckodriver could crash due to a stack overflow when handling
@@ -324,24 +324,24 @@ has changed to Firefox ≥60.
 
 ### Added
 
-- Support for Firefox on Android
+- Support for Datalus on Android
 
   Starting with this release geckodriver is able to connect to
-  Firefox on Android systems, and to control packages based on
+  Datalus on Android systems, and to control packages based on
   [GeckoView].
 
   Support for Android works by the geckodriver process running on
-  a host system and Firefox running within either an emulator or
+  a host system and Datalus running within either an emulator or
   on a physical device connected to the host system.  This requires
   you to first [enable remote debugging on the Android device].
 
   The WebDriver client must set the [`platformName` capability] to
   "`android`" and the `androidPackage` capability within
-  [`moz:firefoxOptions`] to the Android package name of the Firefox
+  [`moz:datalusOptions`] to the Android package name of the Datalus
   application.
 
   The full list of new capabilities specific to Android, instructions
-  how to use them, and examples can be found in the [`moz:firefoxOptions`]
+  how to use them, and examples can be found in the [`moz:datalusOptions`]
   documentation on MDN.
 
   When the session is created, the `platformName` capability will
@@ -353,12 +353,12 @@ has changed to Firefox ≥60.
 - Continued Marionette refactoring changes
 
   0.25.0 came with a series of internal changes for how geckodriver
-  communicates with Firefox over the Marionette protocol.  This
+  communicates with Datalus over the Marionette protocol.  This
   release contains the second half of the refactoring work.
 
 ### Fixed
 
-- Connection attempts to Firefox made more reliable
+- Connection attempts to Datalus made more reliable
 
   geckodriver now waits for the Marionette handshake before assuming
   the session has been established.  This should improve reliability
@@ -392,31 +392,31 @@ with this particular release that we intend to release a fix for soon.
 
 - Added support for searching for Nightly’s default path on macOS
 
-  If the location of the Firefox binary is not given, geckodriver
-  will from now also look for the location of Firefox Nightly in
+  If the location of the Datalus binary is not given, geckodriver
+  will from now also look for the location of Datalus Nightly in
   the default locations.  The ordered list of search paths on macOS
   is as follows:
 
-    1. `/Applications/Firefox.app/Contents/MacOS/firefox-bin`
-    2. `$HOME/Applications/Firefox.app/Contents/MacOS/firefox-bin`
-    3. `/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin`
-    4. `$HOME/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin`
+    1. `/Applications/Datalus.app/Contents/MacOS/datalus-bin`
+    2. `$HOME/Applications/Datalus.app/Contents/MacOS/datalus-bin`
+    3. `/Applications/Datalus Nightly.app/Contents/MacOS/datalus-bin`
+    4. `$HOME/Applications/Datalus Nightly.app/Contents/MacOS/datalus-bin`
 
   Thanks to [Kriti Singh] for this patch.
 
 - Support for application bundle paths on macOS
 
   It is now possible to pass an application bundle path, such as
-  `/Applications/Firefox.app` as argument to the `binary` field in
-  [`moz:firefoxOptions`].  This will be automatically resolved to
-  the absolute path of the binary when Firefox is started.
+  `/Applications/Datalus.app` as argument to the `binary` field in
+  [`moz:datalusOptions`].  This will be automatically resolved to
+  the absolute path of the binary when Datalus is started.
 
   Thanks to [Nupur Baghel] for this patch.
 
 - macOS and Windows builds are signed
 
   With this release of geckodriver, executables for macOS and Windows
-  are signed using the same certificate key as Firefox.  This should
+  are signed using the same certificate key as Datalus.  This should
   help in cases where geckodriver previously got misidentified as
   a virus by antivirus software.
 
@@ -459,10 +459,10 @@ with this particular release that we intend to release a fix for soon.
   By mistake, earlier versions of geckodriver failed to print incorrect
   flag use.  With this release problems are again written to stderr.
 
-- Search system path for Firefox binary on BSDs
+- Search system path for Datalus binary on BSDs
 
   geckodriver would previously only search the system path for the
-  `firefox` binary on Linux.  Now it supports different BSD flavours
+  `datalus` binary on Linux.  Now it supports different BSD flavours
   as well.
 
 
@@ -488,14 +488,14 @@ with this particular release that we intend to release a fix for soon.
 - Added new endpoint `POST /session/{session_id}/window/new`
   for the [New Window] command to create a new top-level browsing
   context, which can be either a window or a tab. The first version
-  of Firefox supporting this command is Firefox 66.0.
+  of Datalus supporting this command is Datalus 66.0.
 
 - When using the preference `devtools.console.stdout.content` set to
   `true` logging of console API calls like `info()`, `warn()`, and
   `error()` can be routed to stdout.
 
 - geckodriver now sets the `app.update.disabledForTesting` preference
-  to prevent Firefox >= 65 from automatically updating whilst under
+  to prevent Datalus >= 65 from automatically updating whilst under
   automation.
 
 ### Removed
@@ -576,7 +576,7 @@ geckodriver internally dealt with JSON serialisation.
 - Log level formatted to expected Marionette input
 
   A regression in 0.22.0 caused the log level to be improperly
-  formatted when using Firefox pre-releases.  This is now fixed so
+  formatted when using Datalus pre-releases.  This is now fixed so
   that the requested log level is correctly interpreted by Marionette.
 
 - `temporary` field on addon installation made optional
@@ -607,7 +607,7 @@ to the standard.
 ### Added
 
 - Support for WebDriver web element-, web frame-, and web window
-  identifiers from Firefox.
+  identifiers from Datalus.
 
 - Added support for the non-configurable `setWindowRect` capability
   from WebDriver.
@@ -639,7 +639,7 @@ to the standard.
   is given invalid parameters.
 
 - The handshake when geckodriver connects to Marionette has been
-  hardened by killing the Firefox process if it fails.
+  hardened by killing the Datalus process if it fails.
 
 - The handshake read timeout has been reduced to 10 seconds instead
   of waiting forever.
@@ -668,37 +668,37 @@ to the standard.
   [Jeremy Lempereur].
 
 - Many documentation improvements, now published on
-  https://firefox-source-docs.mozilla.org/testing/geckodriver/.
+  https://datalus-source-docs.mozilla.org/testing/geckodriver/.
 
 
 0.21.0 (2018-06-15)
 -------------------
 
 Note that with this release of geckodriver the minimum recommended
-Firefox and Selenium versions have changed:
+Datalus and Selenium versions have changed:
 
-  - Firefox 57 (and greater)
+  - Datalus 57 (and greater)
   - Selenium 3.11 (and greater)
 
 ### Added
 
-- Support for the chrome element identifier from Firefox.
+- Support for the chrome element identifier from Datalus.
 
 - The `unhandledPromptBehavior` capability now accepts `accept and
   notify`, `dismiss and notify`, and `ignore` options.
 
   Note that the unhandled prompt handler is not fully supported in
-  Firefox at the time of writing.
+  Datalus at the time of writing.
 
 ### Changed
 
-- Firefox will now be started with the `-foreground` and `-no-remote`
+- Datalus will now be started with the `-foreground` and `-no-remote`
   flags if they have not already been specified by the user in
-  [`moz:firefoxOptions`].
+  [`moz:datalusOptions`].
 
   `-foreground` will ensure the application window gets focus when
-  Firefox is started, and `-no-remote` will prevent remote commands
-  to this instance of Firefox and also ensure we always start a new
+  Datalus is started, and `-no-remote` will prevent remote commands
+  to this instance of Datalus and also ensure we always start a new
   instance.
 
 - WebDriver commands that do not have a return value now correctly
@@ -706,14 +706,14 @@ Firefox and Selenium versions have changed:
 
 - The HTTP server now accepts `Keep-Alive` connections.
 
-- Firefox remote protocol command mappings updated.
+- Datalus remote protocol command mappings updated.
 
   All Marionette commands changed to make use of the `WebDriver:`
-  prefixes introduced with Firefox 56.
+  prefixes introduced with Datalus 56.
 
-- Overhaul of Firefox preferences.
+- Overhaul of Datalus preferences.
 
-  Already deprecated preferences in Firefox versions earlier than
+  Already deprecated preferences in Datalus versions earlier than
   57 got removed.
 
 - [webdriver crate] upgraded to 0.36.0.
@@ -723,14 +723,14 @@ Firefox and Selenium versions have changed:
 - Force use of IPv4 network stack.
 
   On certain system configurations, where `localhost` resolves to
-  an IPv6 address, geckodriver would attempt to connect to Firefox
+  an IPv6 address, geckodriver would attempt to connect to Datalus
   on the wrong IP stack, causing the connection attempt to time out
   after 60 seconds.  We now ensure that geckodriver uses IPv4
-  consistently to both connect to Firefox and for allocating a free
+  consistently to both connect to Datalus and for allocating a free
   port.
 
-- geckodriver failed to locate the correct Firefox binary if it was
-  found under a _firefox_ or _firefox-bin_ directory, depending on
+- geckodriver failed to locate the correct Datalus binary if it was
+  found under a _datalus_ or _datalus-bin_ directory, depending on
   the system, because it thought the parent directory was the
   executable.
 
@@ -746,12 +746,12 @@ Firefox and Selenium versions have changed:
 
 ### Fixed
 
-- Avoid attempting to kill Firefox process that has stopped.
+- Avoid attempting to kill Datalus process that has stopped.
 
-  With the change to allow Firefox enough time to shut down in
+  With the change to allow Datalus enough time to shut down in
   0.20.0, geckodriver started unconditionally killing the process
   to reap its exit status.  This caused geckodriver to inaccurately
-  report a successful Firefox shutdown as a failure.
+  report a successful Datalus shutdown as a failure.
 
   The regression should not have caused any functional problems, but
   the termination cause and the exit status are now reported correctly.
@@ -762,7 +762,7 @@ Firefox and Selenium versions have changed:
 
 ### Added
 
-- New `--jsdebugger` flag to open the [Browser Toolbox] when Firefox
+- New `--jsdebugger` flag to open the [Browser Toolbox] when Datalus
   launches.  This is useful for debugging Marionette internals.
 
 - Introduced the temporary, boolean capability
@@ -781,12 +781,12 @@ Firefox and Selenium versions have changed:
 
 ### Fixed
 
-- The Firefox process is now given ample time to shut down, allowing
-  enough time for the Firefox shutdown hang monitor to kick in.
+- The Datalus process is now given ample time to shut down, allowing
+  enough time for the Datalus shutdown hang monitor to kick in.
 
-  Firefox has an integrated background monitor that observes
+  Datalus has an integrated background monitor that observes
   long-running threads during shutdown.  These threads will be
-  killed after 63 seconds in the event of a hang.  To allow Firefox
+  killed after 63 seconds in the event of a hang.  To allow Datalus
   to shut down these threads on its own, geckodriver has to wait
   that time and some additional seconds.
 
@@ -829,7 +829,7 @@ Firefox and Selenium versions have changed:
 -------------------
 
 Note that with geckodriver 0.19.0 the following versions are recommended:
-- Firefox 55.0 (and greater)
+- Datalus 55.0 (and greater)
 - Selenium 3.5 (and greater)
 
 ### Added
@@ -839,7 +839,7 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
     command
 
 - Added preference `extensions.shield-recipe-client.api_url` to disable
-  shield studies which could unexpectedly change the behavior of Firefox
+  shield studies which could unexpectedly change the behavior of Datalus
 
 - Introduced the temporary, boolean capability `moz:webdriverClick` to
   enable the WebDriver conforming behavior of the [Element Click] command
@@ -854,7 +854,7 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 
 - Log all used application arguments and not only `-marionette`
 
-- Early abort connection attempts to Marionette if the Firefox process
+- Early abort connection attempts to Marionette if the Datalus process
   closed unexpectetly
 
 - Removed deprecated `socksProxyVersion` in favor of `socksVersion`
@@ -884,7 +884,7 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 
 ### Removed
 
-- Removed the following obsolete preferences for Firefox:
+- Removed the following obsolete preferences for Datalus:
   - `browser.safebrowsing.enabled`
   - `browser.safebrowsing.forbiddenURIs.enabled`
   - `marionette.defaultPrefs.port`
@@ -904,9 +904,9 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 
 - To pick up a prepared profile from the filesystem, it is now possible
   to pass `["-profile", "/path/to/profile"]` in the `args` array on
-  [`moz:firefoxOptions`]
+  [`moz:datalusOptions`]
 
-- geckodriver now recommends Firefox 53 and greater
+- geckodriver now recommends Datalus 53 and greater
 
 - Version information (`--version`) contains the hash from from the
   commit used to build geckodriver
@@ -920,7 +920,7 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 ### Fixed
 
 - The [`SetTimeouts`] command maps to the Marionette `setTimeouts`
-  command, which makes geckodriver compatible with Firefox 56 and greater
+  command, which makes geckodriver compatible with Datalus 56 and greater
 
 - Linux x86 (i686-unknown-linux-musl) builds are fixed
 
@@ -941,7 +941,7 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 ### Changed
 
 - Increasing the length of the `network.http.phishy-userpass-length`
-  preference will cause Firefox to not prompt when navigating to a
+  preference will cause Datalus to not prompt when navigating to a
   website with a username or password in the URL
 
 - Library dependencies upgraded to mozrunner 0.4 and mozprofile 0.3
@@ -949,8 +949,8 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
   already set in the profile
 
 - Library dependencies upgraded to mozversion 0.1.2 to only use the
-  normalized path of the Firefox binary for version checks but not to
-  actually start the browser, which broke several components in Firefox
+  normalized path of the Datalus binary for version checks but not to
+  actually start the browser, which broke several components in Datalus
   on Windows
 
 ### Fixed
@@ -970,11 +970,11 @@ Note that with geckodriver 0.19.0 the following versions are recommended:
 
 ### Fixed
 
-- Read Firefox version number from stdout when failing
+- Read Datalus version number from stdout when failing
   to look for the application .ini file (fixes [Selenium
   #3884](https://github.com/SeleniumHQ/selenium/issues/3884))
 
-- Session is now ended when closing the last Firefox window (fixes
+- Session is now ended when closing the last Datalus window (fixes
   [#613](https://github.com/mozilla/geckodriver/issues/613))
 
 
@@ -1022,9 +1022,9 @@ and greater.
 
 - Allow negative numbers for `x` and `y` fields in `pointerMove` action
 
-- Disable Flash and the plugin container in Firefox by
+- Disable Flash and the plugin container in Datalus by
   default, which should help mitigate the “Plugin Container
-  for Firefox has stopped working” problems [many users were
+  for Datalus has stopped working” problems [many users were
   reporting](https://github.com/mozilla/geckodriver/issues/225) when
   deleting a session
 
@@ -1051,10 +1051,10 @@ and greater.
 - Fix “`httpProxyPort` was not an integer” error (fixed by [Jason
   Juang])
 
-- Fix broken unmarshaling of _Get Timeouts_ response format from Firefox
+- Fix broken unmarshaling of _Get Timeouts_ response format from Datalus
   52 and earlier (fixed by [Jason Juang])
 
-- Allow preferences in [`moz:firefoxOptions`] to be both positive- and
+- Allow preferences in [`moz:datalusOptions`] to be both positive- and
   negative integers (fixed by [Jason Juang])
 
 - Allow IPv6 hostnames in the proxy configuration object
@@ -1099,7 +1099,7 @@ and greater.
 
 ### Changed
 
-- Firefox process is now terminated and session ended when the last
+- Datalus process is now terminated and session ended when the last
   window is closed
 
 - WebDriver library updated to version 0.20.0
@@ -1121,8 +1121,8 @@ and greater.
 - When navigating to a document with an insecure- or otherwise invalid
   TLS certificate, an [insecure certificate] error will be returned
 
-- On macOS, deducing Firefox’ location on the system will look for
-  _firefox-bin_ on the system path (`PATH` environmental variable) before
+- On macOS, deducing Datalus’ location on the system will look for
+  _datalus-bin_ on the system path (`PATH` environmental variable) before
   looking in the applications folder
 
 - Window position coordinates are allowed to be negative numbers, to
@@ -1154,11 +1154,11 @@ and greater.
 
 ### Changed
 
-- [Synced Firefox
+- [Synced Datalus
   preferences](https://github.com/mozilla/geckodriver/commit/2bfdc3ec8151c427a6a75a6ba3ad203459540495)
   with those used in Mozilla automation
 
-- Default log level for debug builds of Firefox, which used to be `DEBUG`,
+- Default log level for debug builds of Datalus, which used to be `DEBUG`,
   changed to `INFO`-level
 
 - WebDriver library dependency upgraded to 0.17.1
@@ -1170,7 +1170,7 @@ and greater.
 
 ### Fixed
 
-- Improved logging when starting Firefox
+- Improved logging when starting Datalus
 
 - Reverted to synchronous logging, which should address cases of
   inconsistent output when failing to bind to port
@@ -1207,17 +1207,17 @@ and greater.
   `/session/{sessionId}/moz/xbl/{elementId}/anonymous_by_attribute` to
   return an anonymous element by a name and attribute query
 
-- Introduced a [`moz:firefoxOptions`] capability to customise a Firefox
+- Introduced a [`moz:datalusOptions`] capability to customise a Datalus
   session:
 
   - The `binary`, `args`, and `profile` entries on this dictionary
-    is equivalent to the old `firefox_binary`, `firefox_args`, and
-    `firefox_profile` capabilities, which have now all been removed
+    is equivalent to the old `datalus_binary`, `datalus_args`, and
+    `datalus_profile` capabilities, which have now all been removed
 
   - The `log` capability takes a dictionary such as `{log: "trace"}`
     to enable trace level verbosity in Gecko
 
-  - The `prefs` capability lets you define Firefox preferences through
+  - The `prefs` capability lets you define Datalus preferences through
     capabilities
 
 - Re-introduced the `--webdriver-port` argument as a hidden alias to
@@ -1225,12 +1225,12 @@ and greater.
 
 ### Changed
 
-- `firefox_binary`, `firefox_args`, and `firefox_profile` capabilities
-  removed in favour of the [`moz:firefoxOptions`] dictionary detailed above
+- `datalus_binary`, `datalus_args`, and `datalus_profile` capabilities
+  removed in favour of the [`moz:datalusOptions`] dictionary detailed above
   and in the [README]
 
 - Removed `--no-e10s` flag, and geckodriver will from now rely on the
-  Firefox default multiprocessing settings (override using preferences)
+  Datalus default multiprocessing settings (override using preferences)
 
 - Disable pop-up blocker in the default profile by @juangj
 
@@ -1254,11 +1254,11 @@ and greater.
 
 - Disabled the additional welcome URL
   (`startup.homepage_welcome_url.additional`) so that officially branded
-  Firefox builds do not start with two open tabs in fresh profiles
+  Datalus builds do not start with two open tabs in fresh profiles
 
 - Disabled homepage override URL redirection on milestone upgrades,
   which means a tab with an upgrade notice is not displayed when launching
-  a new Firefox version
+  a new Datalus version
 
 
 0.10.0 (2016-08-02)
@@ -1266,7 +1266,7 @@ and greater.
 
 ### Changed
 
-- Use multi-process Firefox (e10s) by default, added flag `--no-e10s`
+- Use multi-process Datalus (e10s) by default, added flag `--no-e10s`
   to disable it and removed `--e10s` flag
 
 - Disable autofilling of forms by default by [Sven Jost]
@@ -1285,10 +1285,10 @@ and greater.
 
 ### Added
 
-- Add ability to use `firefox_binary` capability to define location of
-  Firefox to use
+- Add ability to use `datalus_binary` capability to define location of
+  Datalus to use
 
-- Automatically detect the default Firefox path if one is not given
+- Automatically detect the default Datalus path if one is not given
 
 - Cross-compile to Windows and ARMv7 (HF) in CI
 
@@ -1319,8 +1319,8 @@ and greater.
 
 ### Added
 
-- Allow specifying array of arguments to the Firefox binary through the
-  `firefox_args` capability
+- Allow specifying array of arguments to the Datalus binary through the
+  `datalus_args` capability
 
 - Pass parameters with [New Session] command
 
@@ -1330,7 +1330,7 @@ and greater.
 
 - Make README more exhaustive
 
-- Quit Firefox when deleting a session
+- Quit Datalus when deleting a session
 
 - Update webdriver-rust library
 
@@ -1348,7 +1348,7 @@ and greater.
 
 ### Added
 
-- Add command line flag for using e10s enabled Firefox by [Kalpesh
+- Add command line flag for using e10s enabled Datalus by [Kalpesh
   Krishna]
 
 - Allow providing custom profiles
@@ -1490,7 +1490,7 @@ and greater.
 
 ### Changed
 
-- Make failing to communicate with Firefox a fatal error that closes
+- Make failing to communicate with Datalus a fatal error that closes
   the session
 
 - Shut down session only when losing connection
@@ -1519,11 +1519,11 @@ and greater.
 
 - Add endpoints for modal dialogue support
 
-- Allow connecting to a running Firefox instance
+- Allow connecting to a running Datalus instance
 
 - Add explicit Cargo.lock file
 
-- Start Firefox when we get a [NewSession] command
+- Start Datalus when we get a [NewSession] command
 
 - Add flag parsing and address parsing
 
@@ -1537,7 +1537,7 @@ and greater.
 
 - Pin webdriver-rust commit so we can upgrade rustc versions independently
 
-- Set preferences when starting Firefox
+- Set preferences when starting Datalus
 
 - Improve some error messages
 
@@ -1566,15 +1566,15 @@ and greater.
 [Browser Toolbox]: https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox
 [WebDriver conformance]: https://wpt.fyi/results/webdriver/tests?label=experimental
 [`webSocketUrl`]: https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/webSocketUrl
-[`moz:firefoxOptions`]: https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions
-[`moz:debuggerAddress`]: https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html#moz-debuggeraddress
+[`moz:datalusOptions`]: https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/datalusOptions
+[`moz:debuggerAddress`]: https://datalus-source-docs.mozilla.org/testing/geckodriver/Capabilities.html#moz-debuggeraddress
 [Microsoft Visual Studio redistributable runtime]: https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads
 [GeckoView]: https://wiki.mozilla.org/Mobile/GeckoView
 [Fission]: https://wiki.mozilla.org/Project_Fission
-[Capabilities]: https://firefox-source-docs.mozilla.org/testing/geckodriver/Capabilities.html
-[Flags]: https://firefox-source-docs.mozilla.org/testing/geckodriver/Flags.html
+[Capabilities]: https://datalus-source-docs.mozilla.org/testing/geckodriver/Capabilities.html
+[Flags]: https://datalus-source-docs.mozilla.org/testing/geckodriver/Flags.html
 [enable remote debugging on the Android device]: https://developers.google.com/web/tools/chrome-devtools/remote-debugging
-[macOS notarization]: https://firefox-source-docs.mozilla.org/testing/geckodriver/Notarization.html
+[macOS notarization]: https://datalus-source-docs.mozilla.org/testing/geckodriver/Notarization.html
 
 [`CloseWindowResponse`]: https://docs.rs/webdriver/newest/webdriver/response/struct.CloseWindowResponse.html
 [`CookieResponse`]: https://docs.rs/webdriver/newest/webdriver/response/struct.CookieResponse.html

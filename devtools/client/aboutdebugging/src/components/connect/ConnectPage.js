@@ -178,7 +178,7 @@ class ConnectPage extends PureComponent {
               },
               {
                 localizationId:
-                  "about-debugging-setup-usb-step-enable-debug-firefox2",
+                  "about-debugging-setup-usb-step-enable-debug-datalus2",
               },
               {
                 localizationId: "about-debugging-setup-usb-step-plug-device",
@@ -194,7 +194,7 @@ class ConnectPage extends PureComponent {
                 className: "qa-connect-usb-disabled-message",
               },
               "Enabling this will download and add the required Android USB debugging " +
-                "components to Firefox."
+                "components to Datalus."
             )
           ),
       this.renderTroubleshootText(RUNTIMES.USB)
@@ -281,12 +281,12 @@ class ConnectPage extends PureComponent {
       ),
       Localized(
         {
-          id: "about-debugging-setup-this-firefox2",
+          id: "about-debugging-setup-this-datalus2",
           a: Link({
-            to: `/runtime/${RUNTIMES.THIS_FIREFOX}`,
+            to: `/runtime/${RUNTIMES.THIS_DATALUS}`,
           }),
         },
-        dom.p({}, "about-debugging-setup-this-firefox")
+        dom.p({}, "about-debugging-setup-this-datalus")
       ),
       dom.section(
         {

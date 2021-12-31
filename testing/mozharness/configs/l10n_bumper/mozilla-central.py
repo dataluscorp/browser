@@ -49,7 +49,7 @@ config = {
         {
             "path": "browser/locales/l10n-changesets.json",
             "format": "json",
-            "name": "Firefox l10n changesets",
+            "name": "Datalus l10n changesets",
             "ignore_config": {
                 "ja": ["macosx64", "macosx64-devedition"],
                 "ja-JP-mac": [

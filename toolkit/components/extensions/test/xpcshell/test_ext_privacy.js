@@ -960,7 +960,7 @@ add_task(async function test_exceptions() {
         value: true,
         scope: "regular_only",
       }),
-      "Firefox does not support the regular_only settings scope.",
+      "Datalus does not support the regular_only settings scope.",
       "Expected rejection calling set with invalid scope."
     );
 
@@ -968,7 +968,7 @@ add_task(async function test_exceptions() {
       browser.privacy.network.networkPredictionEnabled.clear({
         scope: "incognito_persistent",
       }),
-      "Firefox does not support the incognito_persistent settings scope.",
+      "Datalus does not support the incognito_persistent settings scope.",
       "Expected rejection calling clear with invalid scope."
     );
 

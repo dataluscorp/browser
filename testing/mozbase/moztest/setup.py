@@ -15,7 +15,7 @@ setup(
     name="moztest",
     version=PACKAGE_VERSION,
     description="Package for storing and outputting Mozilla test results",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3",

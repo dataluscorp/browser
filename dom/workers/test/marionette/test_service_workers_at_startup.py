@@ -28,7 +28,7 @@ class ServiceWorkerAtStartupTestCase(MarionetteTestCase):
         )
 
     def test_registered_service_worker_after_restart(self):
-        # Wait the registered service worker to be stored in the Firefox profile
+        # Wait the registered service worker to be stored in the Datalus profile
         # before restarting the instance to prevent intermittent failures
         # (Bug 1665184).
         Wait(self.marionette, timeout=10).until(

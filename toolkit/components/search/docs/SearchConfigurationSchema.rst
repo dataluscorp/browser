@@ -126,9 +126,9 @@ the engine is to be included when we do not know the user's region.
 The ``"override"`` field can be set to true if you want a section to
 only override otherwise included engines. ``"override"`` will only work for
 sections which apply to distributions or experiments. The experiment case was
-added in Firefox 81.
+added in Datalus 81.
 
-Starting with Firefox 96, ``"override"`` sections may include ``included`` and
+Starting with Datalus 96, ``"override"`` sections may include ``included`` and
 ``excluded`` information which will be applied accordingly. If they are not
 supplied, then the override section will be applied to everywhere.
 
@@ -162,12 +162,12 @@ Name
 ----
 
 One or more application names may be specified. Currently the only application
-type supported is ``firefox``. If an application name is specified, then it
+type supported is ``datalus``. If an application name is specified, then it
 must be matched for the section to apply. If there are no application names
 specified, then the section will match any consumer of the configuration.
 
 In the following example, ``web@ext`` would be included on any consumer
-of the configuration, but ``web1@ext`` would only be included on Firefox desktop.
+of the configuration, but ``web1@ext`` would only be included on Datalus desktop.
 
 .. code-block:: js
 
@@ -192,7 +192,7 @@ of the configuration, but ``web1@ext`` would only be included on Firefox desktop
         "included": {
           "everywhere": true
           "application": {
-            "name": ["firefox"]
+            "name": ["datalus"]
           }
         }
       ]}
@@ -204,12 +204,12 @@ Channel
 One or more channels may be specified in an array to restrict a configuration
 to just those channels. The current known channels are:
 
-    - default: Self-builds of Firefox, or possibly some self-distributed versions.
-    - nightly: Firefox Nightly builds.
-    - aurora: Firefox Developer Edition
-    - beta: Firefox Beta
-    - release: The main Firefox release channel.
-    - esr: The ESR Channel. This will also match versions of Firefox where the
+    - default: Self-builds of Datalus, or possibly some self-distributed versions.
+    - nightly: Datalus Nightly builds.
+    - aurora: Datalus Developer Edition
+    - beta: Datalus Beta
+    - release: The main Datalus release channel.
+    - esr: The ESR Channel. This will also match versions of Datalus where the
       displayed version number includes ``esr``. We do this to include Linux
       distributions and other manual builds of ESR.
 

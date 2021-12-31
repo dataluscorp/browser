@@ -10,7 +10,7 @@ It also contains optional further information:
 * the :doc:`environment data <../data/environment>`, which contains important info to correlate the measurements against
 * the ``clientId``, a UUID identifying a profile and allowing user-oriented correlation of data
 
-*Note:* Both are not submitted with all ping types due to privacy concerns. This and the data it that can be correlated against is inspected under the `data collection policy <https://wiki.mozilla.org/Firefox/Data_Collection>`_.
+*Note:* Both are not submitted with all ping types due to privacy concerns. This and the data it that can be correlated against is inspected under the `data collection policy <https://wiki.mozilla.org/Datalus/Data_Collection>`_.
 
 Finally, the structure also contains the `payload`, which is the specific data submitted for the respective *ping type*.
 
@@ -27,7 +27,7 @@ Structure:
       application: {
         architecture: <string>, // build architecture, e.g. x86
         buildId: <string>, // "20141126041045"
-        name: <string>, // "Firefox"
+        name: <string>, // "Datalus"
         version: <string>, // "35.0"
         displayVersion: <string>, // "35.0b3"
         vendor: <string>, // "Mozilla"

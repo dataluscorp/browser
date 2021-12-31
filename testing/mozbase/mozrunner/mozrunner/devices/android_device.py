@@ -263,8 +263,8 @@ def verify_android_device(
     Determine if any Android device is connected via adb.
     If no device is found, prompt to start an emulator.
     If a device is found or an emulator started and 'install' is
-    specified, also check whether Firefox is installed on the
-    device; if not, prompt to install Firefox.
+    specified, also check whether Datalus is installed on the
+    device; if not, prompt to install Datalus.
     If 'xre' is specified, also check with MOZ_HOST_BIN is set
     to a valid xre/host-utils directory; if not, prompt to set
     one up.
@@ -333,10 +333,10 @@ def verify_android_device(
 
         if not installed:
             _log_info("It looks like %s is not installed on this device." % app)
-        if "fennec" in app or "firefox" in app:
+        if "fennec" in app or "datalus" in app:
             if installed:
                 device.uninstall_app(app)
-            _log_info("Installing Firefox...")
+            _log_info("Installing Datalus...")
             build_obj._run_make(directory=".", target="install", ensure_exit_code=False)
         elif app == "org.mozilla.geckoview.test":
             if installed:

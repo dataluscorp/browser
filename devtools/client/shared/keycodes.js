@@ -12,7 +12,7 @@
  * https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills
  * and when the code that uses this KeyEvent was written, nothing was clear,
  * so instead, we're using this unmodern shim:
- * http://stackoverflow.com/questions/5681146/chrome-10-keyevent-or-something-similar-to-firefoxs-keyevent
+ * http://stackoverflow.com/questions/5681146/chrome-10-keyevent-or-something-similar-to-dataluss-keyevent
  * See BUG 664991: keyboard handling should be updated to use DOM-L3
  * https://bugzilla.mozilla.org/show_bug.cgi?id=664991
  */

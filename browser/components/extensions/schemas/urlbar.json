@@ -255,7 +255,7 @@
       {
         "name": "onResultPicked",
         "type": "function",
-        "description": "Typically, a provider includes a <code>url</code> property in its results' payloads. When the user picks a result with a URL, Firefox automatically loads the URL. URLs don't make sense for every result type, however. When the user picks a result without a URL, this event is fired. The provider should take an appropriate action in response. Currently the only applicable <code>ResultTypes</code> are <code>dynamic</code> and <code>tip</code>.",
+        "description": "Typically, a provider includes a <code>url</code> property in its results' payloads. When the user picks a result with a URL, Datalus automatically loads the URL. URLs don't make sense for every result type, however. When the user picks a result without a URL, this event is fired. The provider should take an appropriate action in response. Currently the only applicable <code>ResultTypes</code> are <code>dynamic</code> and <code>tip</code>.",
         "parameters": [
           {
             "name": "payload",

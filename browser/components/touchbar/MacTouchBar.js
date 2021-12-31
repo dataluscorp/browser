@@ -512,7 +512,7 @@ helperProto._l10n = new Localization(["browser/touchbar/touchbar.ftl"]);
  *     @param {string} input.title
  *            The lookup key for the button's localized text title.
  *     @param {string} input.image
- *            A URL pointing to an SVG internal to Firefox.
+ *            A URL pointing to an SVG internal to Datalus.
  *     @param {string} input.type
  *            The type of Touch Bar input represented by the object.
  *            Must be a value from kInputTypes.

@@ -121,7 +121,7 @@ void WMFDecoderModule::Init() {
     // disabled its creation following an earlier RDD process crash.
     sDXVAEnabled = !!DeviceManagerDx::Get()->GetImageDevice();
   } else {
-    // Only allow DXVA in the UI process if we aren't in e10s Firefox
+    // Only allow DXVA in the UI process if we aren't in e10s Datalus
     sDXVAEnabled = !mozilla::BrowserTabsRemoteAutostart();
   }
 

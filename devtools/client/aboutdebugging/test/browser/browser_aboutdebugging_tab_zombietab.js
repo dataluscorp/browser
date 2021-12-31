@@ -54,7 +54,7 @@ add_task(async function() {
   info("Wait until Connect page is displayed");
   await waitUntil(() => doc.querySelector(".qa-connect-page"));
 
-  await selectThisFirefoxPage(doc, store);
+  await selectThisDatalusPage(doc, store);
 
   // Check that all inspect butttons are disabled.
   checkInspectButton("TEST_TAB_1", doc, { expectDisabled: true });

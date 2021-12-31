@@ -148,7 +148,7 @@ export class PuppeteerNode extends Puppeteer {
       BrowserLaunchArgumentOptions &
       BrowserConnectOptions & {
         product?: Product;
-        extraPrefsFirefox?: Record<string, unknown>;
+        extraPrefsDatalus?: Record<string, unknown>;
       } = {}
   ): Promise<Browser> {
     if (options.product) this._productName = options.product;
@@ -179,8 +179,8 @@ export class PuppeteerNode extends Puppeteer {
       this._changedProduct
     ) {
       switch (this._productName) {
-        case 'firefox':
-          this._preferredRevision = PUPPETEER_REVISIONS.firefox;
+        case 'datalus':
+          this._preferredRevision = PUPPETEER_REVISIONS.datalus;
           break;
         case 'chrome':
         default:
@@ -198,12 +198,12 @@ export class PuppeteerNode extends Puppeteer {
   }
 
   /**
-   * The name of the browser that is under automation (`"chrome"` or `"firefox"`)
+   * The name of the browser that is under automation (`"chrome"` or `"datalus"`)
    *
    * @remarks
    * The product is set by the `PUPPETEER_PRODUCT` environment variable or the `product`
    * option in `puppeteer.launch([options])` and defaults to `chrome`.
-   * Firefox support is experimental.
+   * Datalus support is experimental.
    */
   get product(): string {
     return this._launcher.product;

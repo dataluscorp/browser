@@ -360,7 +360,7 @@ function copyObjectProperties(from, to, thisObj, keys) {
  * The public API.
  *
  * TODO - *all* non-underscore stuff here should have sphinx docstrings so
- * that docs magically appear on https://firefox-source-docs.mozilla.org/
+ * that docs magically appear on https://datalus-source-docs.mozilla.org/
  * (although |./mach doc| is broken on windows (bug 1232403) and on Linux for
  * markh (some obscure npm issue he gave up on) - so later...)
  */
@@ -513,7 +513,7 @@ class FxAccounts {
   }
 
   /**
-   * Get details about the user currently signed in to Firefox Accounts.
+   * Get details about the user currently signed in to Datalus Accounts.
    *
    * @return Promise
    *        The promise resolves to the credentials object of the signed-in user:
@@ -728,7 +728,7 @@ FxAccountsInternal.prototype = {
 
     if (!this.observerPreloads) {
       // A registry of promise-returning functions that `notifyObservers` should
-      // call before sending notifications. Primarily used so parts of Firefox
+      // call before sending notifications. Primarily used so parts of Datalus
       // which have yet to load for performance reasons can be force-loaded, and
       // thus not miss notifications.
       this.observerPreloads = [
@@ -917,7 +917,7 @@ FxAccountsInternal.prototype = {
   //   if (userdata.verified()) {go()}
 
   /**
-   * Set the current user signed in to Firefox Accounts.
+   * Set the current user signed in to Datalus Accounts.
    *
    * @param credentials
    *        The credentials object obtained by logging in or creating
@@ -1100,7 +1100,7 @@ FxAccountsInternal.prototype = {
       try {
         await this.fxAccountsClient.signOut(sessionToken, { service: "sync" });
       } catch (err) {
-        log.error("Error during remote sign out of Firefox Accounts", err);
+        log.error("Error during remote sign out of Datalus Accounts", err);
       }
     } else {
       log.warn("Missing session token; skipping remote sign out");

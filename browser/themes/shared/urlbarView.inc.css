@@ -510,9 +510,9 @@
   opacity: 1;
 }
 
-/* Firefox Suggest sponsored results */
+/* Datalus Suggest sponsored results */
 
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner {
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner {
   /* 0px of top padding because the space between the favicon/title and the top
      edge of the row is determined by the favicon margin-top and we don't want
      any extra padding to complicate that. 1px of bottom padding so the bottom
@@ -522,12 +522,12 @@
   padding-block: 0 1px;
 }
 
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap {
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap {
   /* Wrap the action span onto a new row. */
   flex-wrap: wrap;
 }
 
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-favicon {
   /* The favicon should be vertically centered in the row. The action span wraps
      below the favicon and title, leaving the favicon centered with the title,
      not the row, so we add margin-top. Normally there is 8x between the top
@@ -536,13 +536,13 @@
   margin-top: 0.58em;
 }
 
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title {
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title {
   /* Move the title away from the action a little. This does not affect the
      height of the row. */
   margin-top: -0.3em;
 }
 
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
   flex-basis: 100%;
   margin-inline-start: calc(@urlbarViewFaviconWidth@ + @urlbarViewIconMarginEnd@);
   font-size: 0.73em;
@@ -608,7 +608,7 @@
 .urlbarView-row[has-url]:is([type=remotetab], [sponsored]):is([selected], :hover) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
 .urlbarView-row:is([type=search], [restyled-search]):not([selected], [show-action-text], :hover) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
 .urlbarView-row:not([has-action], [has-url], [restyled-search]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action,
-.urlbarView-row[firefox-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title-separator,
+.urlbarView-row[datalus-suggest-sponsored] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title-separator,
 .urlbarView[actionoverride] .urlbarView-row[type=switchtab] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action {
   display: none;
 }

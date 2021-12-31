@@ -28,7 +28,7 @@ class BrowsertimeAndroid(PerftestAndroid, Browsertime):
     When running raptor-browsertime tests on android, we create the profile (and set the proxy
     prefs in the profile that is using playback) but we don't need to copy it onto the device
     because geckodriver takes care of that.
-    We tell browsertime to use our profile (we pass it in with the firefox.profileTemplate arg);
+    We tell browsertime to use our profile (we pass it in with the datalus.profileTemplate arg);
     browsertime creates a copy of that and passes that into geckodriver. Geckodriver then takes
     the profile and copies it onto the mobile device's test root for us; and then it even writes
     the geckoview app config.yaml file onto the device, which points the app to the profile on
@@ -47,7 +47,7 @@ class BrowsertimeAndroid(PerftestAndroid, Browsertime):
 
     def __init__(self, app, binary, activity=None, intent=None, **kwargs):
         super(BrowsertimeAndroid, self).__init__(
-            app, binary, profile_class="firefox", **kwargs
+            app, binary, profile_class="datalus", **kwargs
         )
         self.config.update({"activity": activity, "intent": intent})
         self.remote_test_root = None
@@ -77,16 +77,16 @@ class BrowsertimeAndroid(PerftestAndroid, Browsertime):
             args_list.extend(
                 [
                     "--browser",
-                    "firefox",
+                    "datalus",
                     "--android",
                     # Work around a `selenium-webdriver` issue where Browsertime
-                    # fails to find a Firefox binary even though we're going to
+                    # fails to find a Datalus binary even though we're going to
                     # actually do things on an Android device.
-                    "--firefox.binaryPath",
+                    "--datalus.binaryPath",
                     self.browsertime_node,
-                    "--firefox.android.package",
+                    "--datalus.android.package",
                     self.config["binary"],
-                    "--firefox.android.activity",
+                    "--datalus.android.activity",
                     activity,
                 ]
             )
@@ -97,25 +97,25 @@ class BrowsertimeAndroid(PerftestAndroid, Browsertime):
 
         # If running on Fenix we must add the intent as we use a special non-default one there
         if self.config["app"] == "fenix" and self.config.get("intent") is not None:
-            args_list.extend(["--firefox.android.intentArgument=-a"])
+            args_list.extend(["--datalus.android.intentArgument=-a"])
             args_list.extend(
-                ["--firefox.android.intentArgument", self.config["intent"]]
+                ["--datalus.android.intentArgument", self.config["intent"]]
             )
 
             # Change glean ping names in all cases on Fenix
             args_list.extend(
                 [
-                    "--firefox.android.intentArgument=--es",
-                    "--firefox.android.intentArgument=startNext",
-                    "--firefox.android.intentArgument=" + self.config["activity"],
-                    "--firefox.android.intentArgument=--esa",
-                    "--firefox.android.intentArgument=sourceTags",
-                    "--firefox.android.intentArgument=automation",
+                    "--datalus.android.intentArgument=--es",
+                    "--datalus.android.intentArgument=startNext",
+                    "--datalus.android.intentArgument=" + self.config["activity"],
+                    "--datalus.android.intentArgument=--esa",
+                    "--datalus.android.intentArgument=sourceTags",
+                    "--datalus.android.intentArgument=automation",
                 ]
             )
 
-            args_list.extend(["--firefox.android.intentArgument=-d"])
-            args_list.extend(["--firefox.android.intentArgument", str("about:blank")])
+            args_list.extend(["--datalus.android.intentArgument=-d"])
+            args_list.extend(["--datalus.android.intentArgument", str("about:blank")])
 
         return args_list
 

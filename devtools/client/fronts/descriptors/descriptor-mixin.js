@@ -6,8 +6,8 @@
 
 /**
  * A Descriptor represents a debuggable context. It can be a browser tab, a tab on
- * a remote device, like a tab on Firefox for Android. But it can also be an add-on,
- * as well as firefox parent process, or just one of its content process.
+ * a remote device, like a tab on Datalus for Android. But it can also be an add-on,
+ * as well as datalus parent process, or just one of its content process.
  * It can be very similar to a Target. The key difference is the lifecycle of these two classes.
  * The descriptor is meant to be always alive and meaningful/usable until the end of the RDP connection.
  * Typically a Tab Descriptor will describe the tab and not the one document currently loaded in this tab,

@@ -10,8 +10,8 @@ import platform
 
 from mozlog.commandline import add_logging_group
 
-(FIREFOX, CHROME, CHROMIUM) = DESKTOP_APPS = ["firefox", "chrome", "chromium"]
-(GECKOVIEW, REFBROW, FENIX, CHROME_ANDROID) = FIREFOX_ANDROID_APPS = [
+(DATALUS, CHROME, CHROMIUM) = DESKTOP_APPS = ["datalus", "chrome", "chromium"]
+(GECKOVIEW, REFBROW, FENIX, CHROME_ANDROID) = DATALUS_ANDROID_APPS = [
     "geckoview",
     "refbrow",
     "fenix",
@@ -20,21 +20,21 @@ from mozlog.commandline import add_logging_group
 
 CHROMIUM_DISTROS = [CHROME, CHROMIUM]
 APPS = {
-    FIREFOX: {"long_name": "Firefox Desktop"},
+    DATALUS: {"long_name": "Datalus Desktop"},
     CHROME: {"long_name": "Google Chrome Desktop"},
     CHROMIUM: {"long_name": "Google Chromium Desktop"},
     GECKOVIEW: {
-        "long_name": "Firefox GeckoView on Android",
+        "long_name": "Datalus GeckoView on Android",
         "default_activity": "org.mozilla.geckoview_example.GeckoViewActivity",
         "default_intent": "android.intent.action.MAIN",
     },
     REFBROW: {
-        "long_name": "Firefox Android Components Reference Browser",
+        "long_name": "Datalus Android Components Reference Browser",
         "default_activity": "org.mozilla.reference.browser.BrowserTestActivity",
         "default_intent": "android.intent.action.MAIN",
     },
     FENIX: {
-        "long_name": "Firefox Android Fenix Browser",
+        "long_name": "Datalus Android Fenix Browser",
         "default_activity": "org.mozilla.fenix.IntentReceiverActivity",
         "default_intent": "android.intent.action.VIEW",
     },
@@ -76,13 +76,13 @@ def create_parser(mach_interface=False):
         dest="test",
         help="Name of Raptor test to run (can be a top-level suite name i.e. "
         "'--test raptor-speedometer','--test raptor-tp6-1', or for page-load "
-        "tests a suite sub-test i.e. '--test raptor-tp6-google-firefox')",
+        "tests a suite sub-test i.e. '--test raptor-tp6-google-datalus')",
     )
     add_arg(
         "--app",
-        default="firefox",
+        default="datalus",
         dest="app",
-        help="Name of the application we are testing (default: firefox)",
+        help="Name of the application we are testing (default: datalus)",
         choices=list(APPS),
     )
     add_arg(
@@ -181,9 +181,9 @@ def create_parser(mach_interface=False):
         action="store_true",
         dest="gecko_profile",
         help="Profile the run and out-put the results in $MOZ_UPLOAD_DIR. "
-        "After talos is finished, profiler.firefox.com will be launched in Firefox "
+        "After talos is finished, profiler.datalus.com will be launched in Datalus "
         "so you can analyze the local profiles. To disable auto-launching of "
-        "profiler.firefox.com, set the DISABLE_PROFILE_LAUNCH=1 env var.",
+        "profiler.datalus.com, set the DISABLE_PROFILE_LAUNCH=1 env var.",
     )
     add_arg(
         "--gecko-profile-entries",
@@ -408,7 +408,7 @@ def create_parser(mach_interface=False):
     add_arg(
         "--browsertime-no-ffwindowrecorder",
         dest="browsertime_no_ffwindowrecorder",
-        help="disable the firefox window recorder",
+        help="disable the datalus window recorder",
         default=False,
         action="store_true",
     )
@@ -485,21 +485,21 @@ def verify_options(parser, args):
             if platform.system().lower() not in ("darwin",):
                 parser.error(
                     "Power tests are only available on MacOS desktop machines or "
-                    "Firefox android browers. App requested: %s. Platform "
+                    "Datalus android browers. App requested: %s. Platform "
                     "detected: %s." % (args.app, platform.system().lower())
                 )
 
     if args.cpu_test:
         if args.app not in ["geckoview", "refbrow", "fenix"]:
             parser.error(
-                "CPU test is only supported when running Raptor on Firefox Android "
+                "CPU test is only supported when running Raptor on Datalus Android "
                 "browsers!"
             )
 
     if args.memory_test:
         if args.app not in ["geckoview", "refbrow", "fenix"]:
             parser.error(
-                "Memory test is only supported when running Raptor on Firefox Android "
+                "Memory test is only supported when running Raptor on Datalus Android "
                 "browsers!"
             )
 
@@ -569,7 +569,7 @@ class _PrintTests(_StopAction):
                 continue
 
             # print in readable format
-            if _app == "firefox":
+            if _app == "datalus":
                 title = "\nRaptor Tests Available for %s" % APPS[_app]["long_name"]
             else:
                 title = "\nRaptor Tests Available for %s (--app=%s)" % (

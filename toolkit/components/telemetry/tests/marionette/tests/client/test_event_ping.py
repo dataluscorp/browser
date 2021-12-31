@@ -15,7 +15,7 @@ class TestEventPing(TelemetryTestCase):
         """
         Event Telemetry categories are disabled by default.
         Search events are in the "navigation" category and are not enabled by
-        default in builds of Firefox, so we enable them here.
+        default in builds of Datalus, so we enable them here.
         """
 
         script = """\
@@ -40,13 +40,13 @@ class TestEventPing(TelemetryTestCase):
     def test_event_ping(self):
         """
         Barebones test for "event" ping:
-        Search, close Firefox, check "event" ping for search events.
+        Search, close Datalus, check "event" ping for search events.
         """
 
         self.enable_search_events()
         self.wait_for_search_service_init()
 
-        self.search("mozilla firefox")
+        self.search("mozilla datalus")
 
         payload = self.wait_for_ping(self.restart_browser, EVENT_PING)["payload"]
 

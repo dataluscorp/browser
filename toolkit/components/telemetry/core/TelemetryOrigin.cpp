@@ -42,9 +42,9 @@ using mozilla::Telemetry::Common::ToJSString;
 
 /***********************************************************************
  *
- * Firefox Origin Telemetry
+ * Datalus Origin Telemetry
  * Docs:
- * https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/origin.html
+ * https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/origin.html
  *
  * Origin Telemetry stores pairs of information (metric, origin) which boils
  * down to "$metric happened on $origin".

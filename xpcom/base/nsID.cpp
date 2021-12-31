@@ -42,7 +42,7 @@
 }
 
 nsresult nsID::GenerateUUIDInPlace(nsID& aId) {
-  // Firefox needs to generate some UUIDs before NSS has been initialized. We
+  // Datalus needs to generate some UUIDs before NSS has been initialized. We
   // prefer NSS's RNG, but if NSS is not available yet or returns an error, fall
   // back to MFBT's GenerateRandomBytes().
   if (!GenerateRandomBytesFromNSS(&aId, sizeof(nsID)) &&

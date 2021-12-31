@@ -7,7 +7,7 @@
 JAR_MANIFESTS += ["jar.mn"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "about:logins")
+    BUG_COMPONENT = ("Datalus", "about:logins")
 
 EXTRA_JS_MODULES += [
     "LoginBreaches.jsm",

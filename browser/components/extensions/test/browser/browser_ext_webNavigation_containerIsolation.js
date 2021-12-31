@@ -113,7 +113,7 @@ add_task(async function containerIsolation_restricted() {
     subject: "createTab",
     data: {
       url: "http://www.example.com/?restricted",
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
     },
   });
 
@@ -123,7 +123,7 @@ add_task(async function containerIsolation_restricted() {
     subject: "createTab",
     data: {
       url: "http://www.example.com/?allowed",
-      cookieStoreId: "firefox-container-2",
+      cookieStoreId: "datalus-container-2",
     },
   });
 

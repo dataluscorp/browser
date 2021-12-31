@@ -1,4 +1,4 @@
-const files = ["serviceworker_page.html", "firefox-logo-nightly.svg"];
+const files = ["serviceworker_page.html", "datalus-logo-nightly.svg"];
 const cacheName = "v1";
 
 self.addEventListener("install", event => {

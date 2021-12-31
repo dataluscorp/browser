@@ -4,7 +4,7 @@
 
 /*
  * This module sends Origin Telemetry periodically:
- * https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/prio-ping.html
+ * https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/prio-ping.html
  */
 
 "use strict";

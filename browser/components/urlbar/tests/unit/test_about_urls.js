@@ -102,7 +102,7 @@ add_task(async function after_general() {
   await PlacesTestUtils.addVisits([
     {
       uri: Services.io.newURI("http://example.com/guide/aboutaddons/"),
-      title: "Guide to about:addons in Firefox",
+      title: "Guide to about:addons in Datalus",
     },
   ]);
 
@@ -118,7 +118,7 @@ add_task(async function after_general() {
       }),
       makeVisitResult(context, {
         uri: "http://example.com/guide/aboutaddons/",
-        title: "Guide to about:addons in Firefox",
+        title: "Guide to about:addons in Datalus",
       }),
       makeVisitResult(context, {
         uri: "about:addons",

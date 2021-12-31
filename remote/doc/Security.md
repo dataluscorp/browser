@@ -11,7 +11,7 @@ facilitate browser-local clients communicating over IPDL.
 Design considerations
 ---------------------
 
-The Remote Agent allows consumers to interface with Firefox through
+The Remote Agent allows consumers to interface with Datalus through
 an assorted set of domains for inspecting the state and controlling
 execution of documents running in web content, injecting arbitrary
 scripts to documents, do browser service instrumentation, simulation
@@ -19,7 +19,7 @@ of user interaction for automation purposes, and for subscribing
 to updates in the browser such as network- and console logs.
 
 The remote interfaces are served over an HTTP wire protocol, by a
-server listener hosted in the Firefox binary.  This can only be
+server listener hosted in the Datalus binary.  This can only be
 started by passing the `--remote-debugging-port`
 flag.  Connections are by default restricted to loopback devices
 (such as localhost and 127.0.0.1), but this can be overridden with

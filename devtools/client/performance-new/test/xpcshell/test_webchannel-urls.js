@@ -17,7 +17,7 @@ add_task(function test() {
   const { checkUrlIsValid, checkUrlIsInvalid } = setup();
 
   info("Check all of the valid URLs");
-  checkUrlIsValid("https://profiler.firefox.com");
+  checkUrlIsValid("https://profiler.datalus.com");
   checkUrlIsValid("http://example.com");
   checkUrlIsValid("http://localhost:4242");
   checkUrlIsValid("http://localhost:32343434");
@@ -29,9 +29,9 @@ add_task(function test() {
   checkUrlIsValid("https://main--perf-html.netlify.app/");
 
   info("Check all of the invalid URLs");
-  checkUrlIsInvalid("https://profiler.firefox.com/some-other-path");
+  checkUrlIsInvalid("https://profiler.datalus.com/some-other-path");
   checkUrlIsInvalid("http://localhost:4242/some-other-path");
-  checkUrlIsInvalid("http://profiler.firefox.com.example.com");
+  checkUrlIsInvalid("http://profiler.datalus.com.example.com");
   checkUrlIsInvalid("http://mozilla.com");
   checkUrlIsInvalid("https://deploy-preview-1234--perf-html.netlify.dev");
   checkUrlIsInvalid("https://anything--perf-html.netlify.app/");
@@ -51,7 +51,7 @@ function setup() {
     info(`Check that ${url} is invalid`);
     equal(
       validateProfilerWebChannelUrl(url),
-      "https://profiler.firefox.com",
+      "https://profiler.datalus.com",
       `"${url}" was not valid, and was reset to the base URL.`
     );
   }

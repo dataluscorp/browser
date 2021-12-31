@@ -17,7 +17,7 @@ RootActor: First one, automatically instantiated when we start connecting.
    |   These actors are registered with `global: true` in
    |     devtools/server/actors/utils/actor-registry.js
    |   Examples include:
-   |   PreferenceActor (for Firefox prefs)
+   |   PreferenceActor (for Datalus prefs)
    |
    \-- Descriptor Actor's -or- Watcher Actor
          | 
@@ -69,14 +69,14 @@ RootActor (root.js)
    |   workers for the chrome of the child process.
    |
    |-- ParentProcessTargetActor (parent-process.js)
-   |   Targets all resources in the parent process of Firefox (chrome documents,
+   |   Targets all resources in the parent process of Datalus (chrome documents,
    |   JSMs, JS XPCOM, etc.).
    |   Extends the abstract class WindowGlobalTargetActor.
    |   Extended by WebExtensionTargetActor.
    |   Returned by "getProcess" request without any argument.
    |
    |-- ContentProcessTargetActor (content-process.js)
-   |   Targets all resources in a content process of Firefox (chrome sandboxes,
+   |   Targets all resources in a content process of Datalus (chrome sandboxes,
    |   frame scripts, documents, etc.)
    |   Returned by "getProcess" request with a id argument, matching the
    |   targeted process.

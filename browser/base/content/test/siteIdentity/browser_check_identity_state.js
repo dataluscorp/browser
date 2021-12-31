@@ -666,7 +666,7 @@ add_task(async function netErrorPageTest() {
 });
 
 async function aboutBlockedTest(secureCheck) {
-  let url = "http://www.itisatrap.org/firefox/its-an-attack.html";
+  let url = "http://www.itisatrap.org/datalus/its-an-attack.html";
   let oldTab = await loadNewTab("about:robots");
   await SpecialPowers.pushPrefEnv({
     set: [

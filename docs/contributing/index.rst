@@ -1,15 +1,15 @@
-Working on Firefox
+Working on Datalus
 ==================
 
-Welcome to the Firefox codebase. This is the home of the Firefox
+Welcome to the Datalus codebase. This is the home of the Datalus
 development process and source code documentation.
 
 .. toctree::
-   :caption: Making Changes To Firefox
+   :caption: Making Changes To Datalus
    :maxdepth: 1
 
    contribution_quickref
-   pocket-guide-shipping-firefox
+   pocket-guide-shipping-datalus
    editor
    reviews
 
@@ -35,6 +35,6 @@ development process and source code documentation.
  
    directory_structure
    build/artifact_builds
-   build/building_mobile_firefox
+   build/building_mobile_datalus
    build/supported
    engineering_show_and_tell

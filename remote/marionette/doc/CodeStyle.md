@@ -21,7 +21,7 @@ JavaScript
 ----------
 
 Marionette is written in [XPCOM] flavoured JavaScript and ships
-as part of Firefox.  We have access to all the latest ECMAScript
+as part of Datalus.  We have access to all the latest ECMAScript
 features currently in development, usually before it ships in the
 wild and we try to make use of new features when appropriate,
 especially when they move us off legacy internal replacements
@@ -29,7 +29,7 @@ especially when they move us off legacy internal replacements
 
 One of the peculiarities of working on JavaScript code that ships as
 part of a runtime platform is, that unlike in a regular web document,
-we share a single global state with the rest of Firefox.  This means
+we share a single global state with the rest of Datalus.  This means
 we have to be responsible and not leak resources unnecessarily.
 
 JS code in Gecko is organised into _modules_ carrying _.js_ or _.jsm_
@@ -150,7 +150,7 @@ Instead of:
 All source files should have `"use strict";` as the first directive
 so that the file is parsed in [strict mode].
 
-Every source code file that ships as part of the Firefox bundle
+Every source code file that ships as part of the Datalus bundle
 must also have a [copying header], such as this:
 
 	/* This Source Code Form is subject to the terms of the Mozilla Public
@@ -166,8 +166,8 @@ to make this happen!
 
 The practical details of working on the Marionette code is outlined
 in [Contributing.md], but generally you do not have to re-build
-Firefox when changing code.  Any change to remote/marionette/*.js
-will be picked up on restarting Firefox.  The only notable exception
+Datalus when changing code.  Any change to remote/marionette/*.js
+will be picked up on restarting Datalus.  The only notable exception
 is remote/components/Marionette.jsm, which does require
 a re-build.
 
@@ -210,7 +210,7 @@ other modules.  Documentation for non-exported symbols is not required.
 The API documentation can be regenerated to [remote/marionette/doc/internals]
 so:
 
-The API documentation uses [jsdoc] and is generated to <https://firefox-source-docs.mozilla.org/testing/marionette/internals> on Taskcluster.  You may also build the documentation locally:
+The API documentation uses [jsdoc] and is generated to <https://datalus-source-docs.mozilla.org/testing/marionette/internals> on Taskcluster.  You may also build the documentation locally:
 
 	% ./mach doc
 
@@ -249,7 +249,7 @@ run the linters on the changed files before a push and abort if
 there are any problems.  This is convenient for avoiding a try run
 failing due to a stupid linting issue.
 
-[mozlint]: https://firefox-source-docs.mozilla.org/tools/lint/usage.html
+[mozlint]: https://datalus-source-docs.mozilla.org/tools/lint/usage.html
 [eslint]: https://eslint.org/
 [flake8]: http://flake8.pycqa.org/en/latest/
-[enable automatic linting]: https://firefox-source-docs.mozilla.org/tools/lint/usage.html#using-a-vcs-hook
+[enable automatic linting]: https://datalus-source-docs.mozilla.org/tools/lint/usage.html#using-a-vcs-hook

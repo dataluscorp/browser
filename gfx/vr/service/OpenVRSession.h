@@ -65,7 +65,7 @@ class OpenVRSession : public VRSession {
   ::vr::IVRSystem* mVRSystem = nullptr;
   ::vr::IVRChaperone* mVRChaperone = nullptr;
   ::vr::IVRCompositor* mVRCompositor = nullptr;
-  ::vr::VRActionSetHandle_t mActionsetFirefox = vr::k_ulInvalidActionSetHandle;
+  ::vr::VRActionSetHandle_t mActionsetDatalus = vr::k_ulInvalidActionSetHandle;
   OpenVRHand mControllerDeviceIndex[kVRControllerMaxCount];
   ControllerInfo mControllerHand[OpenVRHand::Total];
   float mHapticPulseRemaining[kVRControllerMaxCount][kNumOpenVRHaptics];

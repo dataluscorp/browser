@@ -13,8 +13,8 @@ category-more-from-mozilla =
 
 pane-more-from-mozilla-subtitle = Check out other Mozilla products that work to support a healthy internet.
 
-firefox-mobile-title = { -brand-product-name } Mobile
-firefox-mobile-description = Get the mobile browser that puts your privacy first.
+datalus-mobile-title = { -brand-product-name } Mobile
+datalus-mobile-description = Get the mobile browser that puts your privacy first.
 
 mozilla-vpn-title = { -mozilla-vpn-brand-name }
 mozilla-vpn-description = Discover an added layer of anonymous browsing and protection.
@@ -22,7 +22,7 @@ mozilla-vpn-description = Discover an added layer of anonymous browsing and prot
 mozilla-rally-title = { -vendor-short-name } Rally
 mozilla-rally-description = Put your data to work for a better Internet for everyone.
 
-button-firefox-mobile =
+button-datalus-mobile =
   .label = Get { -brand-product-name } Mobile
 
 button-mozilla-vpn =

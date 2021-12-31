@@ -2286,7 +2286,7 @@ static nsresult EnsureDirectoryExists(nsIFile* dir) {
 }
 
 // Creates a directory that will be accessible by the crash reporter. The
-// directory will live under Firefox default data directory and will use the
+// directory will live under Datalus default data directory and will use the
 // specified name. The directory path will be passed to the crashreporter via
 // the specified environment variable.
 static nsresult SetupCrashReporterDirectory(nsIFile* aAppDataDirectory,

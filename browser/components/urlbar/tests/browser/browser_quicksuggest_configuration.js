@@ -255,8 +255,8 @@ async function doBasicScenarioTest(scenario, expectedPrefs) {
     callback: () => {
       // Pref updates should always settle down by the time enrollment is done.
       Assert.ok(
-        !UrlbarPrefs.updatingFirefoxSuggestPrefs,
-        "updatingFirefoxSuggestPrefs is false"
+        !UrlbarPrefs.updatingDatalusSuggestPrefs,
+        "updatingDatalusSuggestPrefs is false"
       );
 
       assertScenarioPrefs(expectedPrefs);
@@ -266,8 +266,8 @@ async function doBasicScenarioTest(scenario, expectedPrefs) {
   // Similarly, pref updates should always settle down by the time unenrollment
   // is done.
   Assert.ok(
-    !UrlbarPrefs.updatingFirefoxSuggestPrefs,
-    "updatingFirefoxSuggestPrefs is false"
+    !UrlbarPrefs.updatingDatalusSuggestPrefs,
+    "updatingDatalusSuggestPrefs is false"
   );
 
   assertDefaultScenarioPrefs();
@@ -348,13 +348,13 @@ function clearOnboardingPrefs() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     valueOverrides: {
       quickSuggestScenario: "history",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
   });
 });
@@ -370,13 +370,13 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     valueOverrides: {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
   });
 });
@@ -392,13 +392,13 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.history,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.history,
     },
     valueOverrides: {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -417,13 +417,13 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     valueOverrides: {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
   });
 });
@@ -444,7 +444,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -453,7 +453,7 @@ add_task(async function() {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -477,7 +477,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
       },
@@ -486,7 +486,7 @@ add_task(async function() {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
       },
@@ -510,7 +510,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -520,7 +520,7 @@ add_task(async function() {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -545,7 +545,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "quicksuggest.dataCollection.enabled": true,
       },
@@ -554,7 +554,7 @@ add_task(async function() {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "quicksuggest.dataCollection.enabled": true,
       },
@@ -578,7 +578,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -589,7 +589,7 @@ add_task(async function() {
       quickSuggestScenario: "offline",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -613,13 +613,13 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     valueOverrides: {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -640,7 +640,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -649,7 +649,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -673,7 +673,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
       },
@@ -682,7 +682,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
       },
@@ -706,7 +706,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -716,7 +716,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -741,7 +741,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "quicksuggest.dataCollection.enabled": true,
       },
@@ -750,7 +750,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -776,7 +776,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
         "quicksuggest.dataCollection.enabled": true,
@@ -786,7 +786,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": false,
@@ -812,7 +812,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "quicksuggest.dataCollection.enabled": true,
@@ -822,7 +822,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": true,
@@ -848,7 +848,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -859,7 +859,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": false,
         "suggest.quicksuggest.sponsored": false,
@@ -883,13 +883,13 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
     valueOverrides: {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
   });
 });
@@ -910,7 +910,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
       },
@@ -919,7 +919,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
       },
@@ -943,7 +943,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
       },
@@ -952,7 +952,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
       },
@@ -976,7 +976,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -986,7 +986,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -1011,7 +1011,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "quicksuggest.dataCollection.enabled": true,
       },
@@ -1020,7 +1020,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "quicksuggest.dataCollection.enabled": true,
       },
@@ -1044,7 +1044,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
         "quicksuggest.dataCollection.enabled": true,
@@ -1054,7 +1054,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": true,
         "quicksuggest.dataCollection.enabled": true,
@@ -1079,7 +1079,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "quicksuggest.dataCollection.enabled": true,
@@ -1089,7 +1089,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "quicksuggest.dataCollection.enabled": true,
@@ -1114,7 +1114,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -1125,7 +1125,7 @@ add_task(async function() {
       quickSuggestScenario: "online",
     },
     expectedPrefs: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.nonsponsored": true,
         "suggest.quicksuggest.sponsored": true,
@@ -1151,7 +1151,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     valueOverrides: {
       quickSuggestScenario: "offline",
@@ -1159,7 +1159,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
         "suggest.quicksuggest.sponsored": true,
       },
     },
@@ -1179,7 +1179,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -1190,7 +1190,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
         "suggest.quicksuggest.sponsored": true,
       },
       userBranch: {
@@ -1213,7 +1213,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
     },
     valueOverrides: {
       quickSuggestScenario: "offline",
@@ -1221,7 +1221,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
         "quicksuggest.dataCollection.enabled": true,
       },
     },
@@ -1242,7 +1242,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
       userBranch: {
         "quicksuggest.dataCollection.enabled": false,
       },
@@ -1253,7 +1253,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline,
         "quicksuggest.dataCollection.enabled": true,
       },
       userBranch: {
@@ -1276,7 +1276,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
     valueOverrides: {
       quickSuggestScenario: "online",
@@ -1284,7 +1284,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
         "suggest.quicksuggest.sponsored": true,
       },
     },
@@ -1305,7 +1305,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "suggest.quicksuggest.sponsored": false,
       },
@@ -1316,7 +1316,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
         "suggest.quicksuggest.sponsored": true,
       },
       userBranch: {
@@ -1339,7 +1339,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
     },
     valueOverrides: {
       quickSuggestScenario: "online",
@@ -1347,7 +1347,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
         "quicksuggest.dataCollection.enabled": true,
       },
     },
@@ -1368,7 +1368,7 @@ add_task(async function() {
 add_task(async function() {
   await checkEnrollments({
     initialPrefsToSet: {
-      defaultBranch: UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+      defaultBranch: UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
       userBranch: {
         "quicksuggest.dataCollection.enabled": false,
       },
@@ -1379,7 +1379,7 @@ add_task(async function() {
     },
     expectedPrefs: {
       defaultBranch: {
-        ...UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.online,
+        ...UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.online,
         "quicksuggest.dataCollection.enabled": true,
       },
       userBranch: {
@@ -1804,7 +1804,7 @@ async function checkEnrollments(options) {
     let { initialPrefsToSet, valueOverrides, expectedPrefs } = enrollments[i];
 
     // Set initial prefs.
-    UrlbarPrefs._updatingFirefoxSuggestScenario = true;
+    UrlbarPrefs._updatingDatalusSuggestScenario = true;
     let {
       defaultBranch: initialDefaultBranch,
       userBranch: initialUserBranch,
@@ -1824,7 +1824,7 @@ async function checkEnrollments(options) {
         branch.setBoolPref(name, value);
       }
     }
-    UrlbarPrefs._updatingFirefoxSuggestScenario = false;
+    UrlbarPrefs._updatingDatalusSuggestScenario = false;
 
     let {
       defaultBranch: expectedDefaultBranch,
@@ -1893,7 +1893,7 @@ async function checkEnrollments(options) {
     // scenario (the case for the U.S. region).
     let effectivePrefs = Object.assign(
       {},
-      UrlbarPrefs.FIREFOX_SUGGEST_DEFAULT_PREFS.offline
+      UrlbarPrefs.DATALUS_SUGGEST_DEFAULT_PREFS.offline
     );
     for (let [name, value] of Object.entries(expectedUserBranch)) {
       effectivePrefs[name] = value;
@@ -1907,11 +1907,11 @@ async function checkEnrollments(options) {
     }
 
     // Clean up.
-    UrlbarPrefs._updatingFirefoxSuggestScenario = true;
+    UrlbarPrefs._updatingDatalusSuggestScenario = true;
     for (let name of Object.keys(expectedUserBranch)) {
       UrlbarPrefs.clear(name);
     }
-    UrlbarPrefs._updatingFirefoxSuggestScenario = false;
+    UrlbarPrefs._updatingDatalusSuggestScenario = false;
   }
 }
 

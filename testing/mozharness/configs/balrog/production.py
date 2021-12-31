@@ -14,7 +14,7 @@ config = {
                 ),
             ],
             "balrog_usernames": {
-                "firefox": "balrog-ffxbld",
+                "datalus": "balrog-ffxbld",
                 "thunderbird": "balrog-tbirdbld",
                 "mobile": "balrog-ffxbld",
                 "Fennec": "balrog-ffxbld",
@@ -25,7 +25,7 @@ config = {
         #     'balrog_api_root': 'https://aus4-admin-dev.allizom.org/api',
         #     'ignore_failures': True,
         #     'balrog_usernames': {
-        #         'firefox': 'stage-ffxbld',
+        #         'datalus': 'stage-ffxbld',
         #         'thunderbird': 'stage-tbirdbld',
         #         'mobile': 'stage-ffxbld',
         #         'Fennec': 'stage-ffxbld',

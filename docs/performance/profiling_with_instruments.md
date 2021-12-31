@@ -22,7 +22,7 @@ profiling.
     for:\" dialog.
 -   In the top left, next to the record and pause button, there will be
     a \"\[machine name\] \> All Processes\". Click \"All Processes\" and
-    select \"firefox\" from the \"Running Applications\" section.
+    select \"datalus\" from the \"Running Applications\" section.
 -   Click the record button (red circle in top left)
 -   Wait for the amount of time that you want to profile
 -   Click the stop button

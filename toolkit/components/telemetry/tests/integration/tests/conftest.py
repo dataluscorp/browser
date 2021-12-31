@@ -26,7 +26,7 @@ UUID_PATTERN = re.compile(
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-"""Get a build object we need to find a Firefox binary"""
+"""Get a build object we need to find a Datalus binary"""
 try:
     from mozbuild.base import MozbuildObject
 
@@ -37,13 +37,13 @@ except ImportError:
 
 @pytest.fixture(name="binary")
 def fixture_binary():
-    """Return a Firefox binary"""
+    """Return a Datalus binary"""
     try:
         return build.get_binary_path()
     except Exception:
         print(str(Exception))
 
-    app = "firefox"
+    app = "datalus"
     bindir = os.path.join(os.environ["PYTHON_TEST_TMP"], app)
     if os.path.isdir(bindir):
         try:
@@ -106,7 +106,7 @@ class Browser(object):
         """
         Event Telemetry categories are disabled by default.
         Search events are in the "navigation" category and are not enabled by
-        default in builds of Firefox, so we enable them here.
+        default in builds of Datalus, so we enable them here.
         """
 
         script = """\
@@ -233,7 +233,7 @@ class Browser(object):
             urlbar.send_keys(text + keys.Keys.ENTER)
 
         # Wait for 0.1 seconds before proceeding to decrease the chance
-        # of Firefox being shut down before Telemetry is recorded
+        # of Datalus being shut down before Telemetry is recorded
         time.sleep(0.1)
 
     def search_in_new_tab(self, text):

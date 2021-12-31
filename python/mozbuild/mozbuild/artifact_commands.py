@@ -42,7 +42,7 @@ class ArtifactSubCommand(SubCommand):
     def __call__(self, func):
         after = SubCommand.__call__(self, func)
         args = [
-            CommandArgument("--tree", metavar="TREE", type=str, help="Firefox tree."),
+            CommandArgument("--tree", metavar="TREE", type=str, help="Datalus tree."),
             CommandArgument(
                 "--job", metavar="JOB", choices=JOB_CHOICES, help="Build job."
             ),
@@ -61,10 +61,10 @@ class ArtifactSubCommand(SubCommand):
 @Command(
     "artifact",
     category="post-build",
-    description="Use pre-built artifacts to build Firefox.",
+    description="Use pre-built artifacts to build Datalus.",
 )
 def artifact(command_context):
-    """Download, cache, and install pre-built binary artifacts to build Firefox.
+    """Download, cache, and install pre-built binary artifacts to build Datalus.
 
     Use |mach build| as normal to freshen your installed binary libraries:
     artifact builds automatically download, cache, and install binary

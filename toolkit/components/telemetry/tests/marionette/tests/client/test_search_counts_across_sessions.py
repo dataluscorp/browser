@@ -53,7 +53,7 @@ class TestSearchCounts(TelemetryTestCase):
         # - Perform search (awesome bar or search bar)
         # - Restart browser in new session
 
-        self.search_in_new_tab("mozilla firefox")
+        self.search_in_new_tab("mozilla datalus")
 
         ping1 = self.wait_for_ping(self.restart_browser, MAIN_SHUTDOWN_PING)
 

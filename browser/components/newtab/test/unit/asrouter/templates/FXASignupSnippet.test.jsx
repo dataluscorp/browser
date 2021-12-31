@@ -70,7 +70,7 @@ describe("FXASignupSnippet", () => {
     assert.propertyVal(
       wrapper.children().get(0).props,
       "form_action",
-      "https://accounts.firefox.com/"
+      "https://accounts.datalus.com/"
     );
   });
 

@@ -664,7 +664,7 @@ async function testFileAccessLinuxOnly() {
   if (snap.length > 1) {
     snapExpectedResult = true;
   } else {
-    snap = "/tmp/.snap_firefox_current/";
+    snap = "/tmp/.snap_datalus_current/";
   }
 
   // We need to create a fake SNAP= directory but not populate the env var

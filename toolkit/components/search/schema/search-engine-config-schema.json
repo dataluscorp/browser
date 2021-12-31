@@ -54,7 +54,7 @@
           "description": "The application this applies to (default/not specified is everywhere)",
           "enum": [
             "",
-            "firefox"
+            "datalus"
           ]
         },
         "channel": {

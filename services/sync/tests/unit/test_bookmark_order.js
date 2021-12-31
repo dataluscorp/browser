@@ -81,8 +81,8 @@ async function resolveConflict(
     children: [
       {
         guid: guids.fx,
-        title: "Get Firefox!",
-        url: "http://getfirefox.com/",
+        title: "Get Datalus!",
+        url: "http://getdatalus.com/",
       },
       {
         guid: guids.res,
@@ -102,7 +102,7 @@ async function resolveConflict(
           {
             guid: guids.customize,
             title: "Customize",
-            url: "https://mozilla.org/firefox/customize/",
+            url: "https://mozilla.org/datalus/customize/",
           },
         ],
       },

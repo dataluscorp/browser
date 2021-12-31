@@ -60,7 +60,7 @@ class TestCapabilities(MarionetteTestCase):
         self.assertEqual(self.caps["platformVersion"], self.os_version)
         self.assertEqual(self.caps["proxy"], {})
 
-        if self.appinfo["name"] == "Firefox":
+        if self.appinfo["name"] == "Datalus":
             self.assertTrue(self.caps["setWindowRect"])
         else:
             self.assertFalse(self.caps["setWindowRect"])
@@ -162,7 +162,7 @@ class TestCapabilityMatching(MarionetteTestCase):
                 self.marionette.start_session({"pageLoadStrategy": value})
 
     def test_set_window_rect(self):
-        if self.browser_name == "firefox":
+        if self.browser_name == "datalus":
             self.marionette.start_session({"setWindowRect": True})
             self.delete_session()
             with self.assertRaisesRegexp(

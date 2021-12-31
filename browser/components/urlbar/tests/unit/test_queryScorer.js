@@ -11,81 +11,81 @@ const DISTANCE_THRESHOLD = 1;
 
 const DOCUMENTS = {
   clear: [
-    "cache firefox",
-    "clear cache firefox",
-    "clear cache in firefox",
-    "clear cookies firefox",
-    "clear firefox cache",
-    "clear history firefox",
-    "cookies firefox",
-    "delete cookies firefox",
-    "delete history firefox",
-    "firefox cache",
-    "firefox clear cache",
-    "firefox clear cookies",
-    "firefox clear history",
-    "firefox cookie",
-    "firefox cookies",
-    "firefox delete cookies",
-    "firefox delete history",
-    "firefox history",
-    "firefox not loading pages",
-    "history firefox",
+    "cache datalus",
+    "clear cache datalus",
+    "clear cache in datalus",
+    "clear cookies datalus",
+    "clear datalus cache",
+    "clear history datalus",
+    "cookies datalus",
+    "delete cookies datalus",
+    "delete history datalus",
+    "datalus cache",
+    "datalus clear cache",
+    "datalus clear cookies",
+    "datalus clear history",
+    "datalus cookie",
+    "datalus cookies",
+    "datalus delete cookies",
+    "datalus delete history",
+    "datalus history",
+    "datalus not loading pages",
+    "history datalus",
     "how to clear cache",
     "how to clear history",
   ],
   refresh: [
-    "firefox crashing",
-    "firefox keeps crashing",
-    "firefox not responding",
-    "firefox not working",
-    "firefox refresh",
-    "firefox slow",
-    "how to reset firefox",
-    "refresh firefox",
-    "reset firefox",
+    "datalus crashing",
+    "datalus keeps crashing",
+    "datalus not responding",
+    "datalus not working",
+    "datalus refresh",
+    "datalus slow",
+    "how to reset datalus",
+    "refresh datalus",
+    "reset datalus",
   ],
   update: [
-    "download firefox",
+    "download datalus",
     "download mozilla",
-    "firefox browser",
-    "firefox download",
-    "firefox for mac",
-    "firefox for windows",
-    "firefox free download",
-    "firefox install",
-    "firefox installer",
-    "firefox latest version",
-    "firefox mac",
-    "firefox quantum",
-    "firefox update",
-    "firefox version",
-    "firefox windows",
-    "get firefox",
-    "how to update firefox",
-    "install firefox",
+    "datalus browser",
+    "datalus download",
+    "datalus for mac",
+    "datalus for windows",
+    "datalus free download",
+    "datalus install",
+    "datalus installer",
+    "datalus latest version",
+    "datalus mac",
+    "datalus quantum",
+    "datalus update",
+    "datalus version",
+    "datalus windows",
+    "get datalus",
+    "how to update datalus",
+    "install datalus",
     "mozilla download",
-    "mozilla firefox 2019",
-    "mozilla firefox 2020",
-    "mozilla firefox download",
-    "mozilla firefox for mac",
-    "mozilla firefox for windows",
-    "mozilla firefox free download",
-    "mozilla firefox mac",
-    "mozilla firefox update",
-    "mozilla firefox windows",
+    "mozilla datalus 2019",
+    "mozilla datalus 2020",
+    "mozilla datalus download",
+    "mozilla datalus for mac",
+    "mozilla datalus for windows",
+    "mozilla datalus free download",
+    "mozilla datalus mac",
+    "mozilla datalus update",
+    "mozilla datalus windows",
     "mozilla update",
-    "update firefox",
+    "update datalus",
     "update mozilla",
-    "www.firefox.com",
+    "www.datalus.com",
   ],
 };
 
-const VARIATIONS = new Map([["firefox", ["fire fox", "fox fire", "foxfire"]]]);
+const VARIATIONS = new Map([["datalus", ["fire fox", "fox fire", "foxfire"]]]);
 
 let tests = [
   {
-    query: "firefox",
+    query: "datalus",
     matches: [
       { id: "clear", score: Infinity },
       { id: "refresh", score: Infinity },
@@ -111,7 +111,7 @@ let tests = [
 
   // clear
   {
-    query: "firefox histo",
+    query: "datalus histo",
     matches: [
       { id: "clear", score: Infinity },
       { id: "refresh", score: Infinity },
@@ -119,7 +119,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox histor",
+    query: "datalus histor",
     matches: [
       { id: "clear", score: 1 },
       { id: "refresh", score: Infinity },
@@ -127,7 +127,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox history",
+    query: "datalus history",
     matches: [
       { id: "clear", score: 0 },
       { id: "refresh", score: Infinity },
@@ -135,7 +135,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox history we'll keep matching once we match",
+    query: "datalus history we'll keep matching once we match",
     matches: [
       { id: "clear", score: 0 },
       { id: "refresh", score: Infinity },
@@ -203,7 +203,7 @@ let tests = [
 
   // refresh
   {
-    query: "firefox sl",
+    query: "datalus sl",
     matches: [
       { id: "clear", score: Infinity },
       { id: "refresh", score: Infinity },
@@ -211,7 +211,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox slo",
+    query: "datalus slo",
     matches: [
       { id: "refresh", score: 1 },
       { id: "clear", score: Infinity },
@@ -219,7 +219,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox slow",
+    query: "datalus slow",
     matches: [
       { id: "refresh", score: 0 },
       { id: "clear", score: Infinity },
@@ -227,7 +227,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox slow we'll keep matching once we match",
+    query: "datalus slow we'll keep matching once we match",
     matches: [
       { id: "refresh", score: 0 },
       { id: "clear", score: Infinity },
@@ -295,7 +295,7 @@ let tests = [
 
   // update
   {
-    query: "firefox upda",
+    query: "datalus upda",
     matches: [
       { id: "clear", score: Infinity },
       { id: "refresh", score: Infinity },
@@ -303,7 +303,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox updat",
+    query: "datalus updat",
     matches: [
       { id: "update", score: 1 },
       { id: "clear", score: Infinity },
@@ -311,7 +311,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox update",
+    query: "datalus update",
     matches: [
       { id: "update", score: 0 },
       { id: "clear", score: Infinity },
@@ -319,7 +319,7 @@ let tests = [
     ],
   },
   {
-    query: "firefox update we'll keep matching once we match",
+    query: "datalus update we'll keep matching once we match",
     matches: [
       { id: "update", score: 0 },
       { id: "clear", score: Infinity },

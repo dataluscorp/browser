@@ -344,7 +344,7 @@ def get_version_maybe_buildid(version):
 #      'pl',
 #      '57.0',
 #      '57.0.*',
-#      'Firefox',
+#      'Datalus',
 #      '/var/vcs/l10n-central',
 #      {'MOZ_LANG_TITLE': 'Polski'},
 #      chrome_entries

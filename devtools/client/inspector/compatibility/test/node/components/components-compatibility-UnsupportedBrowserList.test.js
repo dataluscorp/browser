@@ -19,8 +19,8 @@ describe("UnsupportedBrowserList component", () => {
     const list = shallow(
       UnsupportedBrowserList({
         browsers: [
-          { id: "firefox", name: "Firefox", version: "69", status: "beta" },
-          { id: "firefox", name: "Firefox", version: "70", status: "nightly" },
+          { id: "datalus", name: "Datalus", version: "69", status: "beta" },
+          { id: "datalus", name: "Datalus", version: "70", status: "nightly" },
           { id: "test-browser", name: "Test Browser", version: "1" },
           { id: "test-browser", name: "Test Browser", version: "2" },
           { id: "sample-browser", name: "Sample Browser", version: "100" },

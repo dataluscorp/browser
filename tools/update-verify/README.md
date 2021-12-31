@@ -61,7 +61,7 @@ Docker Image
 1. [Ship-it](https://shipit.mozilla-releng.net/recent) holds the latest builds.
 1. Clicking on "Ship task" of latest build will open the task group in
 Taskcluster.
-1. On the "Name contains" lookup box, search for `release-update-verify-firefox`
+1. On the "Name contains" lookup box, search for `release-update-verify-datalus`
 and open a `update-verify` task
 1. Make note of the `CHANNEL` under Payload. ie: `beta-localtest`
 1. Click "See more" under Task Details and open the `docker-image-update-verify`

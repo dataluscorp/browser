@@ -1,4 +1,4 @@
-Writing New Firefox-Specific Static Analysis Checks
+Writing New Datalus-Specific Static Analysis Checks
 ===================================================
 
 This section is intended to help Mozilla engineers either casually play with writing a static analysis check

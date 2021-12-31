@@ -565,7 +565,7 @@ async function getAvailableLocales() {
   // If defaultLocale isn't lastFallbackLocale, then we still need the langpack
   // for lastFallbackLocale for it to be useful.
   if (defaultLocale != lastFallbackLocale) {
-    let lastFallbackId = `langpack-${lastFallbackLocale}@firefox.mozilla.org`;
+    let lastFallbackId = `langpack-${lastFallbackLocale}@datalus.mozilla.org`;
     let lastFallbackInstalled = await AddonManager.getAddonByID(lastFallbackId);
     if (!lastFallbackInstalled) {
       return availableLocales.filter(locale => locale != lastFallbackLocale);

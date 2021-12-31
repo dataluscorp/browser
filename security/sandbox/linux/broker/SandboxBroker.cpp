@@ -802,7 +802,7 @@ void SandboxBroker::ThreadMain(void) {
       }
       if (!perms) {
         // Now try the opposite case: translate symlinks to their
-        // actual destination file. Firefox always resolves symlinks,
+        // actual destination file. Datalus always resolves symlinks,
         // and in most cases we have whitelisted fixed paths that
         // libraries will rely on and try to open. So this codepath
         // is mostly useful for Mesa which had its kernel interface

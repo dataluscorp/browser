@@ -58,7 +58,7 @@ def platform():
             return "aarch64-apple-darwin"
         return "x86_64-apple-darwin"
     elif sys.platform.startswith(("win32", "msys")):
-        # Bravely assume we'll be building 64-bit Firefox.
+        # Bravely assume we'll be building 64-bit Datalus.
         return "x86_64-pc-windows-msvc"
     elif sys.platform.startswith("linux"):
         return "x86_64-unknown-linux-gnu"

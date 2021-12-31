@@ -133,7 +133,7 @@ def test_list_tests_missing_manifest(manifest_dir):
                        "--metadata", manifest_dir,
                        "--list-tests",
                        "--yes",
-                       "firefox", "/dom/nodes/Element-tagName.html"])
+                       "datalus", "/dom/nodes/Element-tagName.html"])
 
     assert excinfo.value.code == 0
 
@@ -161,7 +161,7 @@ def test_list_tests_invalid_manifest(manifest_dir):
                        "--metadata", manifest_dir,
                        "--list-tests",
                        "--yes",
-                       "firefox", "/dom/nodes/Element-tagName.html"])
+                       "datalus", "/dom/nodes/Element-tagName.html"])
 
     assert excinfo.value.code == 0
 

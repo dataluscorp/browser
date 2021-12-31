@@ -36,7 +36,7 @@ const DEPRECATED_KEY_SCOPES = [DEPRECATED_SCOPE_ECOSYSTEM_TELEMETRY];
 /**
  * Utilities for working with key material linked to the user's account.
  *
- * Each Firefox Account has 32 bytes of root key material called `kB` which is
+ * Each Datalus Account has 32 bytes of root key material called `kB` which is
  * linked to the user's password, and which is used to derive purpose-specific
  * subkeys for things like encrypting the user's sync data. This class provides
  * the interface for working with such key material.
@@ -48,12 +48,12 @@ const DEPRECATED_KEY_SCOPES = [DEPRECATED_SCOPE_ECOSYSTEM_TELEMETRY];
  * OAuth scope, and this class provides a `getKeyForScope` method that is the
  * preferred method for consumers to work with such keys.
  *
- * However, since the FxA integration in Firefox Desktop pre-dates the use of
+ * However, since the FxA integration in Datalus Desktop pre-dates the use of
  * OAuth2.0, we also have a lot of code for fetching keys via an older flow.
  * This flow uses a special `keyFetchToken` to obtain `kB` and then derive various
  * sub-keys from it. Consumers should consider this an internal implementation
  * detail of the `FxAccountsKeys` class and should prefer `getKeyForScope` where
- * possible.  We intend to remove support for Firefox ever directly handling `kB`
+ * possible.  We intend to remove support for Datalus ever directly handling `kB`
  * at some point in the future.
  */
 class FxAccountsKeys {
@@ -434,14 +434,14 @@ class FxAccountsKeys {
     // We can live without them...except for the OLDSYNC scope, whose absence would be catastrophic.
     if (!scopedKeysMetadata.hasOwnProperty(SCOPE_OLD_SYNC)) {
       log.warn(
-        "The FxA server did not grant Firefox the `oldsync` scope; this is most unexpected!" +
+        "The FxA server did not grant Datalus the `oldsync` scope; this is most unexpected!" +
           ` scopes were: ${Object.keys(scopedKeysMetadata)}`
       );
       throw new Error(
-        "The FxA server did not grant Firefox the `oldsync` scope"
+        "The FxA server did not grant Datalus the `oldsync` scope"
       );
     }
-    // Firefox Desktop invented its own special scope for legacy webextension syncing,
+    // Datalus Desktop invented its own special scope for legacy webextension syncing,
     // with its own special key. Rather than teach the rest of FxA about this scope
     // that will never be used anywhere else, just give it the same metadata as
     // the main sync scope. This can go away once legacy webext sync is removed.
@@ -458,7 +458,7 @@ class FxAccountsKeys {
    *
    * Everything that uses an encryption key from FxA uses a purpose-specific derived
    * key. For new uses this is derived in a structured way based on OAuth scopes,
-   * while for legacy uses (mainly Firefox Sync) it is derived in a more ad-hoc fashion.
+   * while for legacy uses (mainly Datalus Sync) it is derived in a more ad-hoc fashion.
    * This method does all the derivations for the uses that we know about.
    *
    */
@@ -524,7 +524,7 @@ class FxAccountsKeys {
   /**
    * Derive the `scopedKeys` data field based on current account data.
    *
-   * This is a backwards-compatibility convenience for users who are already signed in to Firefox
+   * This is a backwards-compatibility convenience for users who are already signed in to Datalus
    * and have legacy fields like `kSync` and `kXCS` in their top-level account data, but do not have
    * the newer `scopedKeys` field. We populate it with the scoped keys for sync and webext-sync.
    *

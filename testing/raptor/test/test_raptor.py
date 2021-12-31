@@ -22,7 +22,7 @@ sys.path.insert(0, raptor_dir)
 
 from browsertime import BrowsertimeDesktop, BrowsertimeAndroid
 from webextension import (
-    WebExtensionFirefox,
+    WebExtensionDatalus,
     WebExtensionDesktopChrome,
     WebExtensionAndroid,
 )
@@ -56,11 +56,11 @@ class TestBrowserThread(threading.Thread):
 @pytest.mark.parametrize(
     "perftest_class, app_name",
     [
-        [WebExtensionFirefox, "firefox"],
+        [WebExtensionDatalus, "datalus"],
         [WebExtensionDesktopChrome, "chrome"],
         [WebExtensionDesktopChrome, "chromium"],
         [WebExtensionAndroid, "geckoview"],
-        [BrowsertimeDesktop, "firefox"],
+        [BrowsertimeDesktop, "datalus"],
         [BrowsertimeDesktop, "chrome"],
         [BrowsertimeDesktop, "chromium"],
         [BrowsertimeAndroid, "geckoview"],
@@ -70,11 +70,11 @@ def test_build_profile(options, perftest_class, app_name, get_prefs):
     options["app"] = app_name
     perftest_instance = perftest_class(**options)
     assert isinstance(perftest_instance.profile, BaseProfile)
-    if app_name != "firefox":
+    if app_name != "datalus":
         return
 
     # These prefs are set in mozprofile
-    firefox_prefs = [
+    datalus_prefs = [
         'user_pref("app.update.checkInstallTime", false);',
         'user_pref("app.update.disabledForTesting", true);',
         'user_pref("'
@@ -86,8 +86,8 @@ def test_build_profile(options, perftest_class, app_name, get_prefs):
     prefs_file = os.path.join(perftest_instance.profile.profile, "user.js")
     with open(prefs_file, "r") as fh:
         prefs = fh.read()
-        for firefox_pref in firefox_prefs:
-            assert firefox_pref in prefs
+        for datalus_pref in datalus_prefs:
+            assert datalus_pref in prefs
         assert raptor_pref in prefs
 
 
@@ -102,11 +102,11 @@ def test_perftest_host_ip(ConcretePerftest, options, get_prefs):
 
 @pytest.mark.parametrize(
     "app_name, expected_e10s_flag",
-    [["firefox", True], ["geckoview", True]],
+    [["datalus", True], ["geckoview", True]],
 )
 def test_e10s_enabling(ConcretePerftest, options, app_name, expected_e10s_flag):
     options["app"] = app_name
-    perftest = ConcretePerftest(profile_class="firefox", **options)
+    perftest = ConcretePerftest(profile_class="datalus", **options)
     assert perftest.config["e10s"] == expected_e10s_flag
 
 
@@ -118,9 +118,9 @@ def test_profile_was_provided_locally(ConcretePerftest, options):
 @pytest.mark.parametrize(
     "profile_class, app, expected_profile",
     [
-        ["firefox", "firefox", "firefox"],
-        [None, "firefox", "firefox"],
-        ["firefox", None, "firefox"],
+        ["datalus", "datalus", "datalus"],
+        [None, "datalus", "datalus"],
+        ["datalus", None, "datalus"],
     ],
 )
 def test_profile_class_assignation(
@@ -188,13 +188,13 @@ def test_perftest_run_test_setup(
 
 # WebExtension tests
 @pytest.mark.parametrize(
-    "app", ["firefox", pytest.mark.xfail("chrome"), pytest.mark.xfail("chromium")]
+    "app", ["datalus", pytest.mark.xfail("chrome"), pytest.mark.xfail("chromium")]
 )
 def test_start_browser(get_binary, app):
     binary = get_binary(app)
     assert binary
 
-    raptor = WebExtensionFirefox(app, binary, post_startup_delay=0)
+    raptor = WebExtensionDatalus(app, binary, post_startup_delay=0)
 
     tests = [{"name": "raptor-{}-tp6".format(app), "page_timeout": 1000}]
     test_names = [test["name"] for test in tests]
@@ -232,7 +232,7 @@ def test_cmd_arguments(ConcreteBrowsertime, browsertime_options, mock_test):
     expected_cmd = {
         browsertime_options["browsertime_node"],
         browsertime_options["browsertime_browsertimejs"],
-        "--firefox.geckodriverPath",
+        "--datalus.geckodriverPath",
         browsertime_options["browsertime_geckodriver"],
         "--browsertime.page_cycles",
         "1",
@@ -244,7 +244,7 @@ def test_cmd_arguments(ConcreteBrowsertime, browsertime_options, mock_test):
         "1000",
         "--browsertime.post_startup_delay",
         str(DEFAULT_TIMEOUT),
-        "--firefox.profileTemplate",
+        "--datalus.profileTemplate",
         "--skipHar",
         "--video",
         "true",

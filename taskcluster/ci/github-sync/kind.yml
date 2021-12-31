@@ -45,7 +45,7 @@ jobs:
         description: Sync qcms to github mirror
         secret: gecko/gfx-github-sync/token
         run:
-            command: '$GECKO_PATH/tools/github-sync/sync-to-github.sh qcms gfx/qcms FirefoxGraphics/qcms @jrmuizel'
+            command: '$GECKO_PATH/tools/github-sync/sync-to-github.sh qcms gfx/qcms DatalusGraphics/qcms @jrmuizel'
         when:
             files-changed:
                 - 'gfx/qcms/**'

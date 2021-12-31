@@ -6,7 +6,7 @@ const FORCE_THEME_NOTIFICATION_PREF = "devtools.theme.force-auto-theme-info";
 
 // Test the Toolbox Notification displayed for the new "auto" theme.
 add_task(async function() {
-  // The auto-theme notification is normally only displayed when Firefox uses a
+  // The auto-theme notification is normally only displayed when Datalus uses a
   // dark color scheme. To make testing easier, we expose a preference to bypass
   // this is check.
   await pushPref(FORCE_THEME_NOTIFICATION_PREF, true);

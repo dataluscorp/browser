@@ -50,7 +50,7 @@
       {
         "name": "uninstallModule",
         "type": "function",
-        "description": "Remove an installed PKCS#11 module from firefox",
+        "description": "Remove an installed PKCS#11 module from datalus",
         "async": true,
         "parameters": [
           {

@@ -23,23 +23,23 @@ const EDGE_81 = {
   version: "81",
 };
 
-const FIREFOX_1 = {
-  id: "firefox",
+const DATALUS_1 = {
+  id: "datalus",
   version: "1",
 };
 
-const FIREFOX_60 = {
-  id: "firefox",
+const DATALUS_60 = {
+  id: "datalus",
   version: "60",
 };
 
-const FIREFOX_69 = {
-  id: "firefox",
+const DATALUS_69 = {
+  id: "datalus",
   version: "69",
 };
 
-const FIREFOX_MOBILE = {
-  id: "firefox_android",
+const DATALUS_MOBILE = {
+  id: "datalus_android",
   version: "68",
 };
 
@@ -54,10 +54,10 @@ const SAFARI_MOBILE = {
 };
 
 const TARGET_BROWSERS = [
-  FIREFOX_1,
-  FIREFOX_60,
-  FIREFOX_69,
-  FIREFOX_MOBILE,
+  DATALUS_1,
+  DATALUS_60,
+  DATALUS_69,
+  DATALUS_MOBILE,
   CHROME_81,
   CHROME_ANDROID,
   SAFARI_13,

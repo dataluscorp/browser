@@ -211,7 +211,7 @@ function run_test() {
   test("script-sort-by-slop", ["--sort-by=slop", jsonFile.path]);
   test("script-sort-by-num-blocks", ["--sort-by=num-blocks", jsonFile.path]);
 
-  // This file has several real stack traces taken from Firefox execution, each
+  // This file has several real stack traces taken from Datalus execution, each
   // of which tests a different allocator function (or functions).
   jsonFile = FileUtils.getFile("CurWorkD", ["script-ignore-alloc-fns.json"]);
   test("script-ignore-alloc-fns", ["--ignore-alloc-fns", jsonFile.path]);

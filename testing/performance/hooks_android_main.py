@@ -7,15 +7,15 @@ from mozperftest.test.browsertime.runner import NodeException
 
 
 common_options = [
-    ("firefox.disableBrowsertimeExtension", "true"),
+    ("datalus.disableBrowsertimeExtension", "true"),
     # The webdriver session is not created in the MAIN test so reduce the timeout
     # Bug 1640638
     ("timeouts.browserStart", "20000"),
     ("browserRestartTries", "1"),
     # Explicitly disable the Onboarding flow
-    ("firefox.android.intentArgument", "'--ez'"),
-    ("firefox.android.intentArgument", "'performancetest'"),
-    ("firefox.android.intentArgument", "'true'"),
+    ("datalus.android.intentArgument", "'--ez'"),
+    ("datalus.android.intentArgument", "'performancetest'"),
+    ("datalus.android.intentArgument", "'true'"),
 ]
 
 

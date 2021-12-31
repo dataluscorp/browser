@@ -1,7 +1,7 @@
 # Storage
 
 Both FOG and the Glean SDK require some storage in the
-[Firefox Profile Directory](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Multiple_profiles).
+[Datalus Profile Directory](https://developer.mozilla.org/en-US/docs/Mozilla/Datalus/Multiple_profiles).
 
 ## FOG
 

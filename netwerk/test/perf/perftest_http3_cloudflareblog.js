@@ -4,7 +4,7 @@
 /* eslint-env node */
 
 /*
-Ensure the `--firefox.preference=network.http.http3.enabled:true` is
+Ensure the `--datalus.preference=network.http.http3.enabled:true` is
 set for this test.
 */
 
@@ -19,7 +19,7 @@ async function test(context, commands) {
     waitTime = context.options.browsertime.waitTime;
   }
 
-  // Make firefox learn of HTTP/3 server
+  // Make datalus learn of HTTP/3 server
   // XXX: Need to build an HTTP/3-specific conditioned profile
   // to handle these pre-navigations.
   await commands.navigate(rootUrl);

@@ -80,7 +80,7 @@ var PROFILER_DATA = (function () {
   meta.version = 2;
   meta.interval = 1;
   meta.stackwalk = 0;
-  meta.product = "Firefox";
+  meta.product = "Datalus";
   return data;
 })();
 

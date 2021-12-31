@@ -39,7 +39,7 @@ job-defaults:
 
 browsertime-tp6:
     <<: &tp6-defaults
-        apps: [firefox, chrome, chromium]
+        apps: [datalus, chrome, chromium]
         description: Raptor (browsertime) tp6 page-load tests
         limit-platforms:
             by-app:
@@ -72,7 +72,7 @@ browsertime-tp6:
                         default: []
                 default:
                     by-app:
-                        firefox:
+                        datalus:
                             by-test-platform:
                                 (linux|windows|macos)(?!.*-qr).*: []
                                 linux.*shippable.*: [trunk, mozilla-beta]
@@ -113,7 +113,7 @@ browsertime-tp6:
             fission: 2
             default:
                 by-app:
-                    firefox: 2
+                    datalus: 2
                     default: 3
 
 browsertime-responsiveness:
@@ -141,7 +141,7 @@ browsertime-responsiveness:
                     default: []
             default:
                 by-app:
-                    firefox:
+                    datalus:
                         by-test-platform:
                             .*clang.*: []
                             linux.*shippable.*: [mozilla-central]
@@ -151,7 +151,7 @@ browsertime-responsiveness:
                     default: []
     tier:
         by-app:
-            firefox: 2
+            datalus: 2
             default: 3
 
 browsertime-tp6-essential:
@@ -168,7 +168,7 @@ browsertime-tp6-essential:
         - yahoo-mail
     run-on-projects:
         by-app:
-            firefox:
+            datalus:
                 by-test-platform:
                     linux.*shippable.*: [trunk, mozilla-beta]
                     macosx1014-64-shippable-qr.*: [trunk]
@@ -182,7 +182,7 @@ browsertime-tp6-essential:
             linux1804-64-clang-trunk-qr/opt: 2
             default:
                 by-app:
-                    firefox: 1
+                    datalus: 1
                     default: 3
 
 browsertime-benchmark:
@@ -198,14 +198,14 @@ browsertime-benchmark:
         - [sunspider, ss]
         - [unity-webgl, ugl]
         - [webaudio, wa]
-    apps: [firefox, chrome, chromium]
+    apps: [datalus, chrome, chromium]
     treeherder-symbol: Btime()
     tier:
         by-variant:
             fission: 3
             default:
                 by-app:
-                    firefox:
+                    datalus:
                         by-subtest:
                             motionmark-animometer:
                                 by-test-platform:
@@ -233,7 +233,7 @@ browsertime-benchmark:
                 by-subtest:
                     assorted-dom:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     (linux|windows|macos)(?!.*shippable).*: []
                                     (linux|windows|macosx1015)(?!.*-qr).*: [autoland]
@@ -245,7 +245,7 @@ browsertime-benchmark:
                             default: []
                     motionmark-htmlsuite:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     (linux|windows|macos)(?!.*shippable).*: []
                                     (linux|windows|macosx1015)(?!.*-qr).*: [autoland]
@@ -257,7 +257,7 @@ browsertime-benchmark:
                             default: []
                     speedometer:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     (linux|windows|macos)(?!.*shippable).*: []
                                     (linux|windows|macosx1015)(?!.*-qr).*: [autoland]
@@ -269,7 +269,7 @@ browsertime-benchmark:
                             default: []
                     jetstream2:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     windows.*-32.*/opt: []
                                     (linux|windows10-64|macos)(?!.*shippable).*: []
@@ -278,7 +278,7 @@ browsertime-benchmark:
                             default: []
                     unity-webgl:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     windows.*-32.*: []
                                     (linux|windows10-64|macos)(?!.*shippable).*: []
@@ -287,7 +287,7 @@ browsertime-benchmark:
                             default: []
                     default:
                         by-app:
-                            firefox:
+                            datalus:
                                 by-test-platform:
                                     (linux|windows|macos)(?!.*shippable).*: []
                                     (linux|windows|macosx1015)(?!.*-qr).*: []
@@ -317,7 +317,7 @@ browsertime-benchmark-wasm:
     description: Raptor (browsertime) WASM benchmarks
     raptor-subtests:
         by-app:
-            firefox:
+            datalus:
                 - [wasm-godot, godot]
                 - [wasm-godot-baseline, godot-b]
                 - [wasm-godot-optimizing, godot-i]
@@ -327,7 +327,7 @@ browsertime-benchmark-wasm:
             default:
                 - [wasm-misc, wm]
                 - [wasm-godot, godot]
-    apps: [firefox, chrome, chromium]
+    apps: [datalus, chrome, chromium]
     treeherder-symbol: Btime()
     tier: 2
     variants: [fission]
@@ -341,7 +341,7 @@ browsertime-benchmark-wasm:
                     default: []
             default:
                 by-app:
-                    firefox:
+                    datalus:
                         by-test-platform:
                             macosx1014.*: []
                             (linux|windows|macos)(?!.*shippable).*: []
@@ -361,10 +361,10 @@ browsertime-benchmark-wasm:
             - wasm-misc
 
 browsertime-youtube-playback:
-    description: Browsertime YouTube Playback on Firefox
+    description: Browsertime YouTube Playback on Datalus
     raptor-subtests:
         by-app:
-            firefox:
+            datalus:
                 - [youtube-playback-av1-sfr, ytp-av1-sfr]
                 - [youtube-playback-h264-sfr, ytp-h264-sfr]
                 - [youtube-playback-hfr, ytp-hfr]
@@ -372,7 +372,7 @@ browsertime-youtube-playback:
                 - [youtube-playback-widevine-hfr, ytp-widevine-hfr]
                 - [youtube-playback-widevine-h264-sfr, ytp-widevine-h264-sfr]
                 - [youtube-playback-widevine-vp9-sfr, ytp-widevine-vp9-sfr]
-    apps: [firefox]
+    apps: [datalus]
     treeherder-symbol: Btime()
     variants: [fission]
     run-on-projects:
@@ -443,7 +443,7 @@ browsertime-tp6-live:
 
 browsertime-tp6-live-sheriffed:
     <<: *tp6-defaults
-    apps: [firefox]
+    apps: [datalus]
     description: Raptor (browsertime) tp6 on live-sites
     mozharness:
         extra-options:
@@ -467,7 +467,7 @@ browsertime-tp6-live-sheriffed:
 
 browsertime-tp6-profiling:
     <<: *tp6-defaults
-    apps: [firefox]
+    apps: [datalus]
     description: Raptor (browsertime) tp6 page-load tests with Gecko Profiling
     mozharness:
         extra-options:
@@ -489,7 +489,7 @@ browsertime-tp6-profiling:
     treeherder-symbol: Btime-Prof(tp6)
 
 browsertime-custom:
-    apps: [firefox]
+    apps: [datalus]
     description: Raptor (browsertime) custom pageload tests
     run-visual-metrics: true
     max-run-time: 2700
@@ -513,7 +513,7 @@ browsertime-custom:
     treeherder-symbol: Btime(ps)
 
 browsertime-first-install:
-    apps: [firefox]
+    apps: [datalus]
     description: Raptor (browsertime) custom pageload tests
     run-visual-metrics: true
     max-run-time: 2700

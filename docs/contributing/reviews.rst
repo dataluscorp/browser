@@ -37,25 +37,25 @@ Review groups
    * - #anti-tracking or #anti-tracking-reviewers
      - `Anti-Tracking <https://wiki.mozilla.org/Modules/All#Anti-Tracking>`__
      - `Member list <https://phabricator.services.mozilla.com/project/members/157/>`__
-   * - #build or #firefox-build-system-reviewers
+   * - #build or #datalus-build-system-reviewers
      - The configure & build system
      - `Member list <https://phabricator.services.mozilla.com/project/members/20/>`__
    * - #dom-workers-and-storage-reviewers
      - DOM Workers & Storage
      - `Member list <https://phabricator.services.mozilla.com/project/members/115/>`__
    * - #devtools-reviewers
-     - Firefox DevTools
+     - Datalus DevTools
      - `Member list <https://phabricator.services.mozilla.com/project/members/153/>`__
    * - #fluent-reviewers
      - Changes to Fluent (FTL) files (translation).
      - `Member list <https://phabricator.services.mozilla.com/project/members/105/>`__
-   * - #firefox-source-docs-reviewers
+   * - #datalus-source-docs-reviewers
      - Documentation files and its build
      - `Member list <https://phabricator.services.mozilla.com/project/members/118/>`__
-   * - #firefox-ux-team
+   * - #datalus-ux-team
      - User experience (UX)
      - `Member list <https://phabricator.services.mozilla.com/project/members/91/>`__
-   * - #firefox-svg-reviewers
+   * - #datalus-svg-reviewers
      - SVG-related changes
      - `Member list <https://phabricator.services.mozilla.com/project/members/97/>`__
    * - #geckoview-reviewers
@@ -92,7 +92,7 @@ Review groups
      - Platform Internationalization
      - `Member list <https://phabricator.services.mozilla.com/project/members/150/>`__
    * - #preferences-reviewers
-     - Firefox for Desktop Preferences (Options) user interface
+     - Datalus for Desktop Preferences (Options) user interface
      - `Member list <https://phabricator.services.mozilla.com/project/members/132/>`__
    * - #remote-debugging-reviewers
      - Remote Debugging UI & tools
@@ -100,8 +100,8 @@ Review groups
    * - #static-analysis-reviewers
      - Changes related to Static Analysis
      - `Member list <https://phabricator.services.mozilla.com/project/members/120/>`__
-   * - #style or #firefox-style-system-reviewers
-     - Firefox style system (servo, layout/style).
+   * - #style or #datalus-style-system-reviewers
+     - Datalus style system (servo, layout/style).
      - `Member list <https://phabricator.services.mozilla.com/project/members/90/>`__
    * - #webcompat-reviewers
      - System addons maintained by the Web Compatibility team

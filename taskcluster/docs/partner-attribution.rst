@@ -2,7 +2,7 @@ Partner attribution
 ===================
 .. _partner attribution:
 
-In contrast to :ref:`partner repacks`, attributed builds only differ from the normal Firefox
+In contrast to :ref:`partner repacks`, attributed builds only differ from the normal Datalus
 builds by the adding a string in the dummy windows signing certificate. We support doing this for
 full installers but not stub. The parameters of the string are carried into the telemetry system,
 tagging an install into a cohort of users. This a lighter weight process because we don't
@@ -20,7 +20,7 @@ Partner attribution uses a number of parameters to control how they work:
 
 The enable parameter is a boolean, a simple on/off switch. We set it in shipit's
 `is_partner_enabled() <https://github.com/mozilla-releng/shipit/blob/main/api/src/shipit_api/admin/release.py#L93>`_ when starting a
-release. It's true for Firefox betas >= b8 and releases, but otherwise false, the same as
+release. It's true for Datalus betas >= b8 and releases, but otherwise false, the same as
 partner repacks.
 
 ``release_partner_config`` is a dictionary of configuration data which drives the task generation
@@ -29,10 +29,10 @@ GraphQL API in the `get_partner_config_by_url()
 <python/taskgraph.util.html#taskgraph.util.partners.get_partner_config_by_url>`_ function, with the
 url defined in `taskcluster/ci/config.yml <https://searchfox.org/mozilla-central/search?q=partner-urls&path=taskcluster%2Fci%2Fconfig.yml&case=true&regexp=false&redirect=true>`_.
 
-``release_partner_build_number`` is an integer used to create unique upload paths in the firefox
+``release_partner_build_number`` is an integer used to create unique upload paths in the datalus
 candidates directory, while ``release_partners`` is a list of partners that should be
 attributed (i.e. a subset of the whole config). Both are intended for use when respinning a partner after
-the regular Firefox has shipped. More information on that can be found in the
+the regular Datalus has shipped. More information on that can be found in the
 `RelEng Docs <https://moz-releng-docs.readthedocs.io/en/latest/procedures/misc-operations/off-cycle-partner-repacks-and-funnelcake.html>`_.
 
 ``release_partners`` is shared with partner repacks but we don't support doing both at the same time.
@@ -73,8 +73,8 @@ The optional parameters of ``variation``, and ``experiment`` may also be specifi
 Non-empty lists of locales and platforms are required parameters (NB the `-shippable` suffix should be used on
 the platforms).
 
-``upload_to_candidates`` is an optional setting which controls whether the Firefox installers
-are uploaded into the `candidates directory <https://archive.mozilla.org/pub/firefox/candidates/>`_.
+``upload_to_candidates`` is an optional setting which controls whether the Datalus installers
+are uploaded into the `candidates directory <https://archive.mozilla.org/pub/datalus/candidates/>`_.
 If not set the files are uploaded to the private S3 bucket for partner builds.
 
 
@@ -112,7 +112,7 @@ Beetmover
 * upstreams: ``release-partner-attribution``
 
 Moves and renames the artifacts to their public location in the `candidates directory
-<https://archive.mozilla.org/pub/firefox/candidates/>`_, or a private S3 bucket. There is one task
+<https://archive.mozilla.org/pub/datalus/candidates/>`_, or a private S3 bucket. There is one task
 for public artifacts and another for private.
 
 Each task will have the ``project:releng:beetmover:action:push-to-partner`` scope, with public uploads having

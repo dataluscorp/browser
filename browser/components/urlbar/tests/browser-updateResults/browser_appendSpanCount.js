@@ -18,11 +18,11 @@ add_task(async function viewUpdateAppendHidden() {
     UrlbarProvidersManager.unregisterProvider(provider);
   });
 
-  // We do two searches below without closing the panel.  Use "firefox cach" as
-  // the first query and "firefox cache" as the second so that (1) an
+  // We do two searches below without closing the panel.  Use "datalus cach" as
+  // the first query and "datalus cache" as the second so that (1) an
   // intervention tip is triggered both times but also so that (2) the queries
   // are different each time.
-  let baseQuery = "firefox cache";
+  let baseQuery = "datalus cache";
   let queries = [baseQuery.substring(0, baseQuery.length - 1), baseQuery];
   let maxResults = UrlbarPrefs.get("maxRichResults");
 

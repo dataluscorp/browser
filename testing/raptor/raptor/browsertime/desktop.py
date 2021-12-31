@@ -38,7 +38,7 @@ class BrowsertimeDesktop(PerftestDesktop, Browsertime):
         return args_list + [
             "--browser",
             self.config["app"],
-            "--firefox.binaryPath",
+            "--datalus.binaryPath",
             binary_path,
         ]
 

@@ -9,14 +9,14 @@ import mozinfo
 import os
 import sys
 
-from ..application import DefaultContext, FirefoxContext
+from ..application import DefaultContext, DatalusContext
 from .runner import BaseRunner
 
 
 class GeckoRuntimeRunner(BaseRunner):
     """
     The base runner class used for local gecko runtime binaries,
-    such as Firefox and Thunderbird.
+    such as Datalus and Thunderbird.
     """
 
     def __init__(self, binary, cmdargs=None, **runner_args):
@@ -29,7 +29,7 @@ class GeckoRuntimeRunner(BaseRunner):
         if (
             mozinfo.isWin
             and (
-                isinstance(self.app_ctx, FirefoxContext)
+                isinstance(self.app_ctx, DatalusContext)
                 or isinstance(self.app_ctx, DefaultContext)
             )
             and "--wait-for-browser" not in self.cmdargs
@@ -39,7 +39,7 @@ class GeckoRuntimeRunner(BaseRunner):
             # its execution.
             self.cmdargs.append("--wait-for-browser")
 
-        # allows you to run an instance of Firefox separately from any other instances
+        # allows you to run an instance of Datalus separately from any other instances
         self.env["MOZ_NO_REMOTE"] = "1"
 
         # Disable crash reporting dialogs that interfere with debugging

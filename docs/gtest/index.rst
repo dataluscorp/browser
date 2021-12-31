@@ -19,7 +19,7 @@ treeherder symbol 'GTest'.
 Running tests
 -------------
 
-The Firefox build process will build GTest on supported platforms as
+The Datalus build process will build GTest on supported platforms as
 long as you don't disable test in your mozconfig. However xul-gtest will
 only be built when tests are required to save an expensive second
 linking process.
@@ -57,7 +57,7 @@ To debug a gtest, pass --debug to the normal command.
 
    ./mach gtest --debug [ Prefix.Test ]
 
-If that doesn't work, you can try running the firefox binary under the
+If that doesn't work, you can try running the datalus binary under the
 debugger with the MOZ_RUN_GTEST environment variable set to 1.
 
 .. code-block:: shell
@@ -123,7 +123,7 @@ via Run / Open Configurations):
                "name": "(gdb) Launch gtest",
                "type": "cppdbg",
                "request": "launch",
-               "program": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/dist/bin/firefox",
+               "program": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/dist/bin/datalus",
                "args": [],
                "stopAtEntry": false,
                "cwd": "${workspaceFolder}/obj-x86_64-pc-linux-gnu/_tests/gtest",

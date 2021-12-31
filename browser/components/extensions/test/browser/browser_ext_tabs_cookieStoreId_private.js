@@ -27,7 +27,7 @@ add_task(async function perma_private_browsing_mode() {
       );
       await browser.test.assertRejects(
         browser.tabs.create({
-          cookieStoreId: "firefox-container-1",
+          cookieStoreId: "datalus-container-1",
           windowId: win.id,
         }),
         /Illegal to set non-private cookieStoreId in a private window/,

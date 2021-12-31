@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * This is the main module loaded in Firefox desktop that handles browser
+ * This is the main module loaded in Datalus desktop that handles browser
  * windows and coordinates devtools around each window.
  *
  * This module is loaded lazily by devtools-clhandler.js, once the first
@@ -81,7 +81,7 @@ const BROWSER_STYLESHEET_URL = "chrome://devtools/skin/devtools-browser.css";
 const DEVTOOLS_F12_DISABLED_PREF = "devtools.experiment.f12.shortcut_disabled";
 /**
  * gDevToolsBrowser exposes functions to connect the gDevTools instance with a
- * Firefox instance.
+ * Datalus instance.
  */
 var gDevToolsBrowser = (exports.gDevToolsBrowser = {
   /**
@@ -732,10 +732,10 @@ var gDevToolsBrowser = (exports.gDevToolsBrowser = {
 
   /**
    * Either the DevTools Loader has been destroyed by the add-on contribution
-   * workflow, or firefox is shutting down.
+   * workflow, or datalus is shutting down.
 
    * @param {boolean} shuttingDown
-   *        True if firefox is currently shutting down. We may prevent doing
+   *        True if datalus is currently shutting down. We may prevent doing
    *        some cleanups to speed it up. Otherwise everything need to be
    *        cleaned up in order to be able to load devtools again.
    */

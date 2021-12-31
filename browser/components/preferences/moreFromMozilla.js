@@ -11,7 +11,7 @@ var gMoreFromMozillaPane = {
     const URL_PARAMS = {
       utm_source: "about-preferences",
       utm_campaign: "morefrommozilla-na",
-      utm_medium: "firefox-release-browser",
+      utm_medium: "datalus-release-browser",
       entrypoint_experiment: "morefrommozilla",
       entrypoint_variation: "a",
     };
@@ -40,7 +40,7 @@ var gMoreFromMozillaPane = {
 
     document.getElementById("fxMobile").addEventListener("click", function() {
       gMoreFromMozillaPane.openURL(
-        "https://www.mozilla.org/en-US/firefox/browsers/mobile/"
+        "https://www.mozilla.org/en-US/datalus/browsers/mobile/"
       );
     });
 

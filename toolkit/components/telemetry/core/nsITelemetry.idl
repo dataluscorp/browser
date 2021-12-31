@@ -80,7 +80,7 @@ interface nsITelemetry : nsISupports
    *                   Defaults to "main".
    *                   Custom stores are available when probes have them defined.
    *                   See the `record_into_store` attribute on histograms.
-   *                   @see https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/histograms.html#record-into-store
+   *                   @see https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/histograms.html#record-into-store
    * @param aClearStore Whether to clear out the histograms in the named store after snapshotting.
    *                    Defaults to false.
    * @param aFilterTest If true, `TELEMETRY_TEST_` histograms will be filtered out.
@@ -99,7 +99,7 @@ interface nsITelemetry : nsISupports
    *                   Defaults to "main".
    *                   Custom stores are available when probes have them defined.
    *                   See the `record_into_store` attribute on histograms.
-   *                   @see https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/histograms.html#record-into-store
+   *                   @see https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/histograms.html#record-into-store
    * @param aClearStore Whether to clear out the keyed histograms in the named store after snapshotting.
    *                    Defaults to false.
    * @param aFilterTest If true, `TELEMETRY_TEST_` histograms will be filtered out.
@@ -118,7 +118,7 @@ interface nsITelemetry : nsISupports
    *                   Defaults to "main".
    *                   Custom stores are available when probes have them defined.
    *                   See the `record_into_store` attribute on scalars.
-   *                   @see https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/scalars.html#optional-fields
+   *                   @see https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/scalars.html#optional-fields
    * @param aClearStore Whether to clear out the scalars in the named store after snapshotting.
    *                    Defaults to false.
    * @param aFilterTest If true, `telemetry.test` scalars will be filtered out.
@@ -137,7 +137,7 @@ interface nsITelemetry : nsISupports
    *                   Defaults to "main".
    *                   Custom stores are available when probes have them defined.
    *                   See the `record_into_store` attribute on scalars.
-   *                   @see https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/scalars.html#optional-fields
+   *                   @see https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/scalars.html#optional-fields
    * @param aClearStore Whether to clear out the keyed scalars in the named store after snapshotting.
    *                    Defaults to false.
    * @param aFilterTest If true, `telemetry.test` scalars will be filtered out.
@@ -322,7 +322,7 @@ interface nsITelemetry : nsISupports
    * FHR data reporting service or self-support are enabled.
    *
    * In the unlikely event that adding a new base probe is needed, please check the data
-   * collection wiki at https://wiki.mozilla.org/Firefox/Data_Collection and talk to the
+   * collection wiki at https://wiki.mozilla.org/Datalus/Data_Collection and talk to the
    * Telemetry team.
    */
   attribute boolean canRecordBase;
@@ -356,7 +356,7 @@ interface nsITelemetry : nsISupports
    * a largish amount of usage data that we're prepared to handle from our
    * smallish pre-release population.
    *
-   * This is true on pre-release branches of Firefox.
+   * This is true on pre-release branches of Datalus.
    *
    * This does not indicate whether Telemetry will send any data. That is
    * governed by user preference and other mechanisms.
@@ -547,8 +547,8 @@ interface nsITelemetry : nsISupports
 
   /**
    * Register new events to record them from addons. This allows registering multiple
-   * events for a category. They will be valid only for the current Firefox session.
-   * Note that events shipping in Firefox should be registered in Events.yaml.
+   * events for a category. They will be valid only for the current Datalus session.
+   * Note that events shipping in Datalus should be registered in Events.yaml.
    *
    * @param aCategory The unique category the events are registered in.
    * @param aEventData An object that contains registration data for 1-N events of the form:
@@ -587,8 +587,8 @@ interface nsITelemetry : nsISupports
   /**
    * Parent process only. Register new scalars to record them from addons. This
    * allows registering multiple scalars for a category. They will be valid only for
-   * the current Firefox session.
-   * Note that scalars shipping in Firefox should be registered in Scalars.yaml.
+   * the current Datalus session.
+   * Note that scalars shipping in Datalus should be registered in Scalars.yaml.
    *
    * @param aCategoryName The unique category the scalars are registered in.
    * @param aScalarData An object that contains registration data for multiple scalars in the form:
@@ -690,7 +690,7 @@ interface nsITelemetry : nsISupports
   Promise getEncodedOriginSnapshot([optional] in boolean aClear);
 
   /**
-   * Clears Firefox Origin Telemetry. Only to be used in tests.
+   * Clears Datalus Origin Telemetry. Only to be used in tests.
    */
   void clearOrigins();
 };

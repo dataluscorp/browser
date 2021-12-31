@@ -14,19 +14,19 @@ const { Subprocess } = ChromeUtils.import(
   "resource://gre/modules/Subprocess.jsm"
 );
 
-function getFirefoxExecutableFilename() {
+function getDatalusExecutableFilename() {
   if (AppConstants.platform === "win") {
     return AppConstants.MOZ_APP_NAME + ".exe";
   }
   return AppConstants.MOZ_APP_NAME;
 }
 
-// Returns a nsIFile to the firefox.exe (really, application) executable file.
-function getFirefoxExecutableFile() {
+// Returns a nsIFile to the datalus.exe (really, application) executable file.
+function getDatalusExecutableFile() {
   let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsIFile);
   file = Services.dirsvc.get("GreBinD", Ci.nsIFile);
 
-  file.append(getFirefoxExecutableFilename());
+  file.append(getDatalusExecutableFilename());
   return file;
 }
 
@@ -43,7 +43,7 @@ var BackgroundTasksTestUtils = {
     options.extraArgs = options.extraArgs || [];
     options.extraEnv = options.extraEnv || {};
 
-    let command = getFirefoxExecutableFile().path;
+    let command = getDatalusExecutableFile().path;
     let args = ["--backgroundtask", task];
     args.push(...options.extraArgs);
 

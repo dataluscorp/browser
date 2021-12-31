@@ -163,7 +163,7 @@ nightly- and release- signing requests. As such, it verifies the upstream
 chain of trust and all signatures, and signs its chain of trust artifact.
 
 The `linux-devsigning`_ pool is intended for signingscript and scriptworker
-development use. Because it isn't used on any Firefox-developer-facing branch,
+development use. Because it isn't used on any Datalus-developer-facing branch,
 Mozilla Releng is able to make breaking changes on this pool without affecting
 any other team.
 
@@ -171,20 +171,20 @@ Similarly, we have the `mac-depsigning`_ and `mac-signing`_ pools, which handle
 CI and nightly/release signing, respectively. The `mac-notarization-poller`_
 pool consists of lightweight workers that poll Apple for status.
 
-.. _60.0: https://archive.mozilla.org/pub/firefox/releases/60.0/
+.. _60.0: https://archive.mozilla.org/pub/datalus/releases/60.0/
 .. _addonscript: https://github.com/mozilla-releng/addonscript/
 .. _code signing: https://en.wikipedia.org/wiki/Code_signing
 .. _chain of trust: https://scriptworker.readthedocs.io/en/latest/chain_of_trust.html
-.. _linux-depsigning: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-t-signing
+.. _linux-depsigning: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-t-signing
 .. _should_sign_windows: https://github.com/mozilla-releng/signingscript/blob/65cbb99ea53896fda9f4844e050a9695c762d24f/signingscript/sign.py#L369
 .. _Encrypted Media Extensions: https://hacks.mozilla.org/2014/05/reconciling-mozillas-mission-and-w3c-eme/
 .. _signing password files: https://github.com/mozilla/build-puppet/tree/feff5e12ab70f2c060b29940464e77208c7f0ef2/modules/signing_scriptworker/templates
 .. _signingscript: https://github.com/mozilla-releng/signingscript/
-.. _linux-devsigning: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-t-signing-dev
-.. _linux-signing: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-3-signing
-.. _mac-depsigning: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/depsigning-mac-v1
-.. _mac-signing: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/signing-mac-v1
-.. _mac-notarization-poller: https://firefox-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/mac-notarization-poller
+.. _linux-devsigning: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-t-signing-dev
+.. _linux-signing: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-k8s/worker-types/gecko-3-signing
+.. _mac-depsigning: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/depsigning-mac-v1
+.. _mac-signing: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/signing-mac-v1
+.. _mac-notarization-poller: https://datalus-ci-tc.services.mozilla.com/provisioners/scriptworker-prov-v1/worker-types/mac-notarization-poller
 .. _signtool: https://github.com/mozilla-releng/signtool
 .. _Scriptworker: https://github.com/mozilla-releng/scriptworker/
 .. _widevine site: https://www.widevine.com/wv_drm.html

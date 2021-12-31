@@ -47,7 +47,7 @@ add_task(async function() {
 
 async function testReloadAboutDevToolsToolbox(toolId) {
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
   // We set the options panel to be the default one because slower panels might lead to
   // race conditions which create leaks in debug mode.
   await pushPref("devtools.toolbox.selectedTool", "options");

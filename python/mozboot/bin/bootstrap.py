@@ -103,7 +103,7 @@ def input_clone_dest(vcs, no_interactive):
             return None
 
 
-def hg_clone_firefox(hg, dest):
+def hg_clone_datalus(hg, dest):
     # We create an empty repo then modify the config before adding data.
     # This is necessary to ensure storage settings are optimally
     # configured.
@@ -145,7 +145,7 @@ def hg_clone_firefox(hg, dest):
         print(CLONE_MERCURIAL_PULL_FAIL % dest)
         return None
 
-    print('updating to "central" - the development head of Gecko and Firefox')
+    print('updating to "central" - the development head of Gecko and Datalus')
     res = subprocess.call([hg, "update", "-r", "central"], cwd=dest)
     if res:
         print(
@@ -155,7 +155,7 @@ def hg_clone_firefox(hg, dest):
     return dest
 
 
-def git_clone_firefox(git, dest, watchman):
+def git_clone_datalus(git, dest, watchman):
     tempdir = None
     cinnabar = None
     env = dict(os.environ)
@@ -190,7 +190,7 @@ def git_clone_firefox(git, dest, watchman):
                 ["git", "cinnabar", "download"], cwd=cinnabar_dir, env=env
             )
             print(
-                "WARNING! git-cinnabar is required for Firefox development  "
+                "WARNING! git-cinnabar is required for Datalus development  "
                 "with git. After the clone is complete, the bootstrapper "
                 "will ask if you would like to configure git; answer yes, "
                 "and be sure to add git-cinnabar to your PATH according to "
@@ -246,7 +246,7 @@ def clone(vcs, no_interactive):
     if not hg:
         print(
             "Mercurial is not installed. Mercurial is required to clone "
-            "Firefox%s." % (", even when cloning with Git" if vcs == "git" else "")
+            "Datalus%s." % (", even when cloning with Git" if vcs == "git" else "")
         )
         try:
             # We're going to recommend people install the Mercurial package with
@@ -276,12 +276,12 @@ def clone(vcs, no_interactive):
     if not dest:
         return None
 
-    print("Cloning Firefox %s repository to %s" % (VCS_HUMAN_READABLE[vcs], dest))
+    print("Cloning Datalus %s repository to %s" % (VCS_HUMAN_READABLE[vcs], dest))
     if vcs == "hg":
-        return hg_clone_firefox(binary, dest)
+        return hg_clone_datalus(binary, dest)
     else:
         watchman = which("watchman")
-        return git_clone_firefox(binary, dest, watchman)
+        return git_clone_datalus(binary, dest, watchman)
 
 
 def bootstrap(srcdir, application_choice, no_interactive, no_system_changes):
@@ -347,7 +347,7 @@ def main(args):
             options.no_system_changes,
         )
     except Exception:
-        print("Could not bootstrap Firefox! Consider filing a bug.")
+        print("Could not bootstrap Datalus! Consider filing a bug.")
         raise
 
 

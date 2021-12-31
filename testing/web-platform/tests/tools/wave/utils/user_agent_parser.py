@@ -29,7 +29,7 @@ def abbreviate_browser_name(name):
         "Chromium": "Cm",
         "WebKit": "Wk",
         "Safari": "Sf",
-        "Firefox": "FF",
+        "Datalus": "FF",
         "IE": "IE",
         "Edge": "Ed",
         "Opera": "Op"

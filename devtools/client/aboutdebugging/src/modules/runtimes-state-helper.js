@@ -24,7 +24,7 @@ exports.findRuntimeById = findRuntimeById;
 function getAllRuntimes(runtimesState) {
   return [
     ...runtimesState.networkRuntimes,
-    ...runtimesState.thisFirefoxRuntimes,
+    ...runtimesState.thisDatalusRuntimes,
     ...runtimesState.usbRuntimes,
   ];
 }

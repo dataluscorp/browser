@@ -451,7 +451,7 @@ MOZ_CAN_RUN_SCRIPT_FOR_DEFINITION {
 TEST_F(AccessibleCaretManagerTester,
        TestScrollInSelectionModeWithAlwaysTiltPref)
 MOZ_CAN_RUN_SCRIPT_FOR_DEFINITION {
-  // Simulate Firefox Android preference.
+  // Simulate Datalus Android preference.
   AutoRestoreBoolPref savedPref("layout.accessiblecaret.always_tilt", true);
 
   EXPECT_CALL(mManager, GetCaretMode())
@@ -754,7 +754,7 @@ MOZ_CAN_RUN_SCRIPT_FOR_DEFINITION {
 TEST_F(AccessibleCaretManagerTester,
        TestScrollInCursorModeWithCaretShownWhenLongTappingOnEmptyContentPref)
 MOZ_CAN_RUN_SCRIPT_FOR_DEFINITION {
-  // Simulate Firefox Android preference.
+  // Simulate Datalus Android preference.
   AutoRestoreBoolPref savedPref(
       "layout.accessiblecaret.caret_shown_when_long_tapping_on_empty_content",
       true);

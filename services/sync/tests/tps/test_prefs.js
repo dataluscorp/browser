@@ -11,7 +11,7 @@ EnableEngines(["prefs"]);
 var phases = { phase1: "profile1", phase2: "profile2", phase3: "profile1" };
 
 var prefs1 = [
-  { name: "browser.startup.homepage", value: "http://www.getfirefox.com" },
+  { name: "browser.startup.homepage", value: "http://www.getdatalus.com" },
   { name: "browser.urlbar.maxRichResults", value: 20 },
   { name: "privacy.clearOnShutdown.siteSettings", value: true },
 ];

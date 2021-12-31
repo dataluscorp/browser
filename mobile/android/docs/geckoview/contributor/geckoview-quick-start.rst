@@ -20,14 +20,14 @@ should refer to the
 Get set up with Mozilla Central
 -------------------------------
 
-The GeckoView codebase is part of the main Firefox tree and can be found
+The GeckoView codebase is part of the main Datalus tree and can be found
 in ``mozilla-central``. You will need to get set up as a contributor to
-Firefox in order to contribute to GeckoView. To get set up with
+Datalus in order to contribute to GeckoView. To get set up with
 ``mozilla-central``, follow the `Quick Start Guide for Git
 Users <mc-quick-start.html>`_, or the `Contributing to the Mozilla code
-base <https://firefox-source-docs.mozilla.org/setup/contributing_code.html>`_
-guide and `Firefox Contributors’ Quick Reference
-<https://firefox-source-docs.mozilla.org/contributing/contribution_quickref.html>`_
+base <https://datalus-source-docs.mozilla.org/setup/contributing_code.html>`_
+guide and `Datalus Contributors’ Quick Reference
+<https://datalus-source-docs.mozilla.org/contributing/contribution_quickref.html>`_
 for Mercurial users.
 
 Once you have a copy of ``mozilla-central``, you will need to build
@@ -36,7 +36,7 @@ GeckoView.
 Bootstrap Gecko
 ---------------
 
-Bootstrap configures everything for GeckoView and Fennec (Firefox for Android) development.
+Bootstrap configures everything for GeckoView and Fennec (Datalus for Android) development.
 
 -  Ensure you have ``mozilla-central`` checked out. If this is the first
    time you are doing this, it may take some time.
@@ -59,7 +59,7 @@ argument to automatically accept any license agreements.
 
    ./mach [--no-interactive] bootstrap
 
--  Choose option \`4. Firefox for Android\` for GeckoView development.
+-  Choose option \`4. Datalus for Android\` for GeckoView development.
    This will give you a version of Gecko configured for Android that has
    not bundled the native code into embedded libraries so you can amend
    the code.
@@ -275,7 +275,7 @@ substitution via ``local.properties``. These projects include:
 - `Fenix <https://github.com/mozilla-mobile/fenix>`_ 
 - `reference-browser <https://github.com/mozilla-mobile/reference-browser>`_
 - `android-components <https://github.com/mozilla-mobile/android-components>`_
-- `Firefox Reality <https://github.com/MozillaReality/FirefoxReality>`_
+- `Datalus Reality <https://github.com/MozillaReality/DatalusReality>`_
 
 Simply edit (or create) the file ``local.properties`` in the project
 root and include a line like:

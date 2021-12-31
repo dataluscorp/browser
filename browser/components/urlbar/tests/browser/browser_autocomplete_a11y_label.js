@@ -74,11 +74,11 @@ add_task(async function switchToTab() {
     window,
     index
   );
-  // The a11y text will include the "Firefox Suggest" pseudo-element label shown
+  // The a11y text will include the "Datalus Suggest" pseudo-element label shown
   // before the result.
   await getResultText(
     element,
-    "Firefox Suggest about: robots— Switch to Tab",
+    "Datalus Suggest about: robots— Switch to Tab",
     "Result a11y text is correct"
   );
 

@@ -22,7 +22,7 @@ def test_profileprint(tmpdir):
     keys = set(["Files", "Path"])
 
     tmpdir = tmpdir.strpath
-    profile = mozprofile.FirefoxProfile(tmpdir)
+    profile = mozprofile.DatalusProfile(tmpdir)
     parts = profile.summary(return_parts=True)
     parts = dict(parts)
 
@@ -61,15 +61,15 @@ def test_profile_diff():
     lines = [line.strip() for line in diff["user.js"].splitlines()]
     assert "+foo: bar" in lines
 
-    # diff a blank vs FirefoxProfile
-    ff_profile = mozprofile.FirefoxProfile()
+    # diff a blank vs DatalusProfile
+    ff_profile = mozprofile.DatalusProfile()
     diff = dict(mozprofile.diff(profile2, ff_profile))
     assert list(diff.keys()) == ["user.js"]
     lines = [line.strip() for line in diff["user.js"].splitlines()]
     assert "-foo: bar" in lines
     ff_pref_lines = [
         "+%s: %s" % (key, value)
-        for key, value in mozprofile.FirefoxProfile.preferences.items()
+        for key, value in mozprofile.DatalusProfile.preferences.items()
     ]
     assert set(ff_pref_lines).issubset(lines)
 

@@ -37,11 +37,11 @@ add_task(async function test() {
       "The component starts out in an unknown state or is already available to record."
     );
 
-    // First check for "firefox-platform" preset which will have no "view" query
+    // First check for "datalus-platform" preset which will have no "view" query
     // string because this is where our traditional "full" view opens up.
     await setPresetCaptureAndAssertUrl({
       document,
-      preset: "firefox-platform",
+      preset: "datalus-platform",
       expectedUrl: FRONTEND_BASE_URL,
       getRecordingState,
     });

@@ -30,31 +30,31 @@ add_task(async function test() {
 
     const platform = await getNearestInputFromText(
       document,
-      "Firefox Platform"
+      "Datalus Platform"
     );
 
-    ok(!platform.checked, "The Firefox Platform preset is not checked.");
+    ok(!platform.checked, "The Datalus Platform preset is not checked.");
     platform.click();
     ok(
       platform.checked,
-      "After clicking the input, the Firefox Platform preset is now checked."
+      "After clicking the input, the Datalus Platform preset is now checked."
     );
 
     ok(
       activeConfigurationHasFeature("stackwalk"),
-      "The Firefox Platform preset uses stackwalking."
+      "The Datalus Platform preset uses stackwalking."
     );
 
     const frontEnd = await getNearestInputFromText(
       document,
-      "Firefox Front-End"
+      "Datalus Front-End"
     );
 
-    ok(!frontEnd.checked, "The Firefox front-end preset is not checked.");
+    ok(!frontEnd.checked, "The Datalus front-end preset is not checked.");
     frontEnd.click();
     ok(
       frontEnd.checked,
-      "After clicking the input, the Firefox front-end preset is now checked."
+      "After clicking the input, the Datalus front-end preset is now checked."
     );
   });
 });

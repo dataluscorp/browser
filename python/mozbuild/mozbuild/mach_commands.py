@@ -48,8 +48,8 @@ not enough available memory to perform the build. It's also possible some
 other system activity during the build is to blame.
 
 If you feel this message is not appropriate for your machine configuration,
-please file a Firefox Build System :: General bug at
-https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20Build%20System&component=General
+please file a Datalus Build System :: General bug at
+https://bugzilla.mozilla.org/enter_bug.cgi?product=Datalus%20Build%20System&component=General
 and tell us about your machine and build configuration so we can adjust the
 warning heuristic.
 ===================
@@ -69,7 +69,7 @@ class StoreDebugParamsAndWarnAction(argparse.Action):
     "watch",
     category="post-build",
     description="Watch and re-build (parts of) the tree.",
-    conditions=[conditions.is_firefox],
+    conditions=[conditions.is_datalus],
 )
 @CommandArgument(
     "-v",
@@ -931,7 +931,7 @@ class RunSettings:
             "runprefs.*",
             "string",
             """
-Pass a pref into Firefox when using `mach run`, of the form `foo.bar=value`.
+Pass a pref into Datalus when using `mach run`, of the form `foo.bar=value`.
 Prefs will automatically be cast into the appropriate type. Integers can be
 single quoted to force them to be strings.
 """.strip(),
@@ -1249,7 +1249,7 @@ def _run_android(
         activity_name = "org.mozilla.geckoview_example.GeckoViewActivity"
     elif app == "org.mozilla.geckoview.test":
         activity_name = "org.mozilla.geckoview.test.TestRunnerActivity"
-    elif "fennec" in app or "firefox" in app:
+    elif "fennec" in app or "datalus" in app:
         activity_name = "org.mozilla.gecko.BrowserApp"
     else:
         raise RuntimeError("Application not recognized: {}".format(app))
@@ -1725,13 +1725,13 @@ def _run_desktop(
 
     some_debugging_option = debug or debugger or debugger_args
 
-    # By default, because Firefox is a GUI app, on Windows it will not
+    # By default, because Datalus is a GUI app, on Windows it will not
     # 'create' a console to which stdout/stderr is printed. This means
     # printf/dump debugging is invisible. We default to adding the
     # -attach-console argument to fix this. We avoid this if we're launched
     # under a debugger (which can do its own picking up of stdout/stderr).
     # We also check for both the -console and -attach-console flags:
-    # -console causes Firefox to create a separate window;
+    # -console causes Datalus to create a separate window;
     # -attach-console just ends us up with output that gets relayed via mach.
     # We shouldn't override the user using -console. For more info, see
     # https://bugzilla.mozilla.org/show_bug.cgi?id=1257155
@@ -2044,7 +2044,7 @@ def repackage_installer(
     "--version",
     type=str,
     required=True,
-    help="The Firefox version used to create the installer",
+    help="The Datalus version used to create the installer",
 )
 @CommandArgument(
     "--locale", type=str, required=True, help="The locale of the installer"
@@ -2092,7 +2092,7 @@ def repackage_msi(
 @CommandArgument(
     "--version",
     type=str,
-    help="The Firefox version used to create the package "
+    help="The Datalus version used to create the package "
     "(Default: generated from package 'application.ini')",
 )
 @CommandArgument(
@@ -2129,7 +2129,7 @@ def repackage_msi(
     default=None,
     required=False,
     help="The Package/Identity/Name string to use in the App Manifest."
-    + " Defaults to '<vendor>.Firefox', '<vendor>.FirefoxBeta', etc.",
+    + " Defaults to '<vendor>.Datalus', '<vendor>.DatalusBeta', etc.",
 )
 @CommandArgument(
     "--publisher",

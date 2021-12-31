@@ -73,15 +73,15 @@ add_task(async function test_ignoreFragment() {
 add_task(async function test_ignoreQueryString() {
   let tabRefAboutHome = await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:home?hello=firefox"
+    "about:home?hello=datalus"
   );
   await BrowserTestUtils.openNewForegroundTab(gBrowser, "about:mozilla");
 
-  switchTab("about:home?hello=firefox", true);
-  switchTab("about:home?hello=firefoxos", false);
+  switchTab("about:home?hello=datalus", true);
+  switchTab("about:home?hello=datalusos", false);
   // Remove the last opened tab to test ignoreQueryString option.
   gBrowser.removeCurrentTab();
-  switchTab("about:home?hello=firefoxos", true, { ignoreQueryString: true });
+  switchTab("about:home?hello=datalusos", true, { ignoreQueryString: true });
   is(
     tabRefAboutHome,
     gBrowser.selectedTab,
@@ -89,7 +89,7 @@ add_task(async function test_ignoreQueryString() {
   );
   is(
     gBrowser.currentURI.spec,
-    "about:home?hello=firefox",
+    "about:home?hello=datalus",
     "The spec should NOT be updated to the new query string"
   );
   cleanupTestTabs();
@@ -98,16 +98,16 @@ add_task(async function test_ignoreQueryString() {
 add_task(async function test_replaceQueryString() {
   let tabRefAboutHome = await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:home?hello=firefox"
+    "about:home?hello=datalus"
   );
   await BrowserTestUtils.openNewForegroundTab(gBrowser, "about:mozilla");
 
   switchTab("about:home", false);
-  switchTab("about:home?hello=firefox", true);
-  switchTab("about:home?hello=firefoxos", false);
+  switchTab("about:home?hello=datalus", true);
+  switchTab("about:home?hello=datalusos", false);
   // Remove the last opened tab to test replaceQueryString option.
   gBrowser.removeCurrentTab();
-  switchTab("about:home?hello=firefoxos", true, { replaceQueryString: true });
+  switchTab("about:home?hello=datalusos", true, { replaceQueryString: true });
   is(
     tabRefAboutHome,
     gBrowser.selectedTab,
@@ -117,7 +117,7 @@ add_task(async function test_replaceQueryString() {
   await BrowserTestUtils.browserLoaded(tabRefAboutHome.linkedBrowser);
   is(
     gBrowser.currentURI.spec,
-    "about:home?hello=firefoxos",
+    "about:home?hello=datalusos",
     "The spec should be updated to the new spec"
   );
   cleanupTestTabs();
@@ -126,22 +126,22 @@ add_task(async function test_replaceQueryString() {
 add_task(async function test_replaceQueryStringAndFragment() {
   let tabRefAboutHome = await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:home?hello=firefox#aaa"
+    "about:home?hello=datalus#aaa"
   );
   let tabRefAboutMozilla = await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:mozilla?hello=firefoxos#aaa"
+    "about:mozilla?hello=datalusos#aaa"
   );
 
   switchTab("about:home", false);
   gBrowser.removeCurrentTab();
-  switchTab("about:home?hello=firefox#aaa", true);
+  switchTab("about:home?hello=datalus#aaa", true);
   is(
     tabRefAboutHome,
     gBrowser.selectedTab,
     "Selected tab should be the initial about:home tab"
   );
-  switchTab("about:mozilla?hello=firefox#bbb", true, {
+  switchTab("about:mozilla?hello=datalus#bbb", true, {
     replaceQueryString: true,
     ignoreFragment: "whenComparingAndReplace",
   });
@@ -150,7 +150,7 @@ add_task(async function test_replaceQueryStringAndFragment() {
     gBrowser.selectedTab,
     "Selected tab should be the initial about:mozilla tab"
   );
-  switchTab("about:home?hello=firefoxos#bbb", true, {
+  switchTab("about:home?hello=datalusos#bbb", true, {
     ignoreQueryString: true,
     ignoreFragment: "whenComparingAndReplace",
   });
@@ -165,16 +165,16 @@ add_task(async function test_replaceQueryStringAndFragment() {
 add_task(async function test_ignoreQueryStringIgnoresFragment() {
   let tabRefAboutHome = await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:home?hello=firefox#aaa"
+    "about:home?hello=datalus#aaa"
   );
   await BrowserTestUtils.openNewForegroundTab(
     gBrowser,
-    "about:mozilla?hello=firefoxos#aaa"
+    "about:mozilla?hello=datalusos#aaa"
   );
 
-  switchTab("about:home?hello=firefox#bbb", false, { ignoreQueryString: true });
+  switchTab("about:home?hello=datalus#bbb", false, { ignoreQueryString: true });
   gBrowser.removeCurrentTab();
-  switchTab("about:home?hello=firefoxos#aaa", true, {
+  switchTab("about:home?hello=datalusos#aaa", true, {
     ignoreQueryString: true,
   });
   is(

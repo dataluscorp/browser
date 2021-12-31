@@ -15,7 +15,7 @@ Definitions
   * ``organic`` is a search that a user performs by visiting a search engine
     directly.
   * ``SAP`` (search access point) is a search that a user performs by visiting
-    via one of Firefox's access points, using the associated partner codes.
+    via one of Datalus's access points, using the associated partner codes.
   * ``sap-follow-on`` is a SAP search where the user has first accessed the site
     via a SAP, and then performed an additional search.
   * ``tagged`` refers to a page that is tagged with an associated partner code.
@@ -43,7 +43,7 @@ SEARCH_COUNTS - SAP usage
     - ``alias`` This is when using an alias (like ``@google``) in the urlbar.
       Note there is often confusion between the terms alias and keyword, and
       they may be used inappropriately: aliases refer to search engines, while
-      keywords refer to bookmarks. We expect no results for this SAP in Firefox
+      keywords refer to bookmarks. We expect no results for this SAP in Datalus
       83+, since urlbar-searchmode replaces it.
     - ``abouthome``
     - ``contextmenu``

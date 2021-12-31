@@ -117,19 +117,19 @@ class TestMozconfigLoader(unittest.TestCase):
             self.assertEqual(result["make_extra"], ["FOO=BAR BAZ", "BIZ=1"])
 
     def test_read_no_mozconfig_objdir_environ(self):
-        os.environ["MOZ_OBJDIR"] = "obj-firefox"
+        os.environ["MOZ_OBJDIR"] = "obj-datalus"
         result = self.get_loader().read_mozconfig()
-        self.assertEqual(result["topobjdir"], "obj-firefox")
+        self.assertEqual(result["topobjdir"], "obj-datalus")
 
     def test_read_empty_mozconfig_objdir_environ(self):
-        os.environ["MOZ_OBJDIR"] = "obj-firefox"
+        os.environ["MOZ_OBJDIR"] = "obj-datalus"
         with NamedTemporaryFile(mode="w") as mozconfig:
             result = self.get_loader().read_mozconfig(mozconfig.name)
-            self.assertEqual(result["topobjdir"], "obj-firefox")
+            self.assertEqual(result["topobjdir"], "obj-datalus")
 
     def test_read_capture_mk_options_objdir_environ(self):
         """Ensures mk_add_options calls are captured and override the environ."""
-        os.environ["MOZ_OBJDIR"] = "obj-firefox"
+        os.environ["MOZ_OBJDIR"] = "obj-datalus"
         with NamedTemporaryFile(mode="w") as mozconfig:
             mozconfig.write("mk_add_options MOZ_OBJDIR=/foo/bar\n")
             mozconfig.flush()

@@ -1,7 +1,7 @@
 ASan Nightly
 ============
 
-The **ASan Nightly Project** involves building a Firefox Nightly browser
+The **ASan Nightly Project** involves building a Datalus Nightly browser
 with the popular
 `AddressSanitizer <https://github.com/google/sanitizers/wiki/AddressSanitizer>`__
 tool and enhancing it with remote crash reporting capabilities for any
@@ -37,12 +37,12 @@ Current requirements are:
 
 -  Windows or Linux-based Operating System
 -  16 GB of RAM recommended
--  Special ASan Nightly Firefox Build
+-  Special ASan Nightly Datalus Build
 
    -  `Linux
-      Download <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.shippable.latest.firefox.linux64-asan-reporter-opt/artifacts/public/build/target.tar.bz2>`__
+      Download <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.shippable.latest.datalus.linux64-asan-reporter-opt/artifacts/public/build/target.tar.bz2>`__
    -  `Windows
-      Download <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.shippable.latest.firefox.win64-asan-reporter-shippable-repackage-signing/artifacts/public/build/target.installer.exe>`__
+      Download <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.shippable.latest.datalus.win64-asan-reporter-shippable-repackage-signing/artifacts/public/build/target.installer.exe>`__
 
 If you are already using regular Nightly, it should be safe to share the
 profile with the regular Nightly instance. If you normally use a beta or
@@ -60,7 +60,7 @@ you should consider using a second profile.
    If you run in an environment with any sorts of additional security
    restrictions (e.g. custom process sandboxing), please make sure that
    your /tmp directory is writable and the shipped ``llvm-symbolizer``
-   binary is executable from within the Firefox process.
+   binary is executable from within the Datalus process.
 
 Preferences
 ~~~~~~~~~~~
@@ -173,7 +173,7 @@ connection.
 
    If you experience performance issues, see also the *"Known Issues"*
    section above, in particular the problem about screen refresh rate
-   slowing down Firefox.
+   slowing down Datalus.
 
 What about stability?
 ^^^^^^^^^^^^^^^^^^^^^
@@ -191,7 +191,7 @@ with a URL. Do not modify this value.
 
 .. warning::
 
-   Since Firefox 64, the *"ASan Crash Reporter"*  feature is no longer
+   Since Datalus 64, the *"ASan Crash Reporter"*  feature is no longer
    listed in ``about:support``
 
 Will there be support for Mac?

@@ -1,0 +1,39 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+---
+job-defaults:
+    suite:
+        category: datalus-ui
+    max-run-time: 5400
+    test-manifest-loader: null  # don't load tests in the taskgraph
+    mozharness:
+        script: datalus_ui_tests/functional.py
+        config:
+            by-test-platform:
+                windows.*:
+                    - datalus_ui_tests/taskcluster_windows.py
+                macosx.*:
+                    - datalus_ui_tests/taskcluster.py
+                    - datalus_ui_tests/taskcluster_mac.py
+                linux.*:
+                    - datalus_ui_tests/taskcluster.py
+                    - remove_executables.py
+    python-3: true
+
+datalus-ui-functional-local:
+    description: "Datalus-ui-tests functional run"
+    treeherder-symbol: Fxfn-l(en-US)
+    mozharness:
+        extra-options:
+            - "--tag"
+            - "local"
+
+datalus-ui-functional-remote:
+    description: "Datalus-ui-tests functional run"
+    treeherder-symbol: Fxfn-r(en-US)
+    mozharness:
+        extra-options:
+            - "--tag"
+            - "remote"
+    tier: 2

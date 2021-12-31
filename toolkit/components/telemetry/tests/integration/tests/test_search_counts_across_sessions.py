@@ -18,7 +18,7 @@ def test_search_counts(browser, helpers):
     # - Perform search (awesome bar or search bar)
     # - Restart browser in new session
     search_engine = browser.get_default_search_engine()
-    browser.search_in_new_tab("mozilla firefox")
+    browser.search_in_new_tab("mozilla datalus")
     ping1 = helpers.wait_for_ping(browser.restart, MAIN_SHUTDOWN_PING)
 
     # Session S2, subsession 1:

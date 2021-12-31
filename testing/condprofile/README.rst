@@ -58,7 +58,7 @@ If you want to play a scenario locally to modify it, run for example:
 
     $ ./mach run-condprofile --scenario settled --visible /path/to/generated/profile
 
-The project will run a webdriver session against Firefox and generate the profile.
+The project will run a webdriver session against Datalus and generate the profile.
 You can look at all the options with --help
 
 Architecture
@@ -103,7 +103,7 @@ In the example below, we install uBlock, set a pref, and pass the
   {
       "name": "intermediate",
       "addons":{
-         "uBlock":"https://addons.mozilla.org/firefox/downloads/file/3361355/ublock_origin-1.21.2-an+fx.xpi"
+         "uBlock":"https://addons.mozilla.org/datalus/downloads/file/3361355/ublock_origin-1.21.2-an+fx.xpi"
       },
       "prefs":{
          "accessibility.tabfocus": 9

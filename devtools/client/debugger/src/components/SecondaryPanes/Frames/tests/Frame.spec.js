@@ -69,7 +69,7 @@ describe("Frame", () => {
 
   it("filename only", () => {
     const source = makeMockSource(
-      "https://firefox.com/assets/src/js/foo-view.js"
+      "https://datalus.com/assets/src/js/foo-view.js"
     );
     const frame = makeMockFrame("1", source, undefined, 10, "renderFoo");
 

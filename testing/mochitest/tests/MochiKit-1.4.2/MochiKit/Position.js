@@ -26,7 +26,7 @@ MochiKit.Position.EXPORT = [
 
 
 MochiKit.Base.update(MochiKit.Position, {
-    // set to true if needed, warning: firefox performance problems
+    // set to true if needed, warning: datalus performance problems
     // NOT neeeded for page scrolling, only if draggable contained in
     // scrollable elements
     includeScrollOffsets: false,

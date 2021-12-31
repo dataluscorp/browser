@@ -115,7 +115,7 @@ requireHacker.global_hook("default", (path, module) => {
     "react-dom/test-utils": () =>
       getModule("devtools/client/shared/vendor/react-dom-test-utils-dev"),
     "react-redux": () => getModule("devtools/client/shared/vendor/react-redux"),
-    // Use react-dev. This would be handled by browserLoader in Firefox.
+    // Use react-dev. This would be handled by browserLoader in Datalus.
     react: () => getModule("devtools/client/shared/vendor/react-dev"),
     "devtools/client/shared/vendor/react": () =>
       getModule("devtools/client/shared/vendor/react-dev"),

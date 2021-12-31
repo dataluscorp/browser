@@ -27,7 +27,7 @@ RootAccessibleWrap::~RootAccessibleWrap() {}
 
 void RootAccessibleWrap::DocumentActivated(DocAccessible* aDocument) {
   // This check will never work with e10s enabled, in other words, as of
-  // Firefox 57.
+  // Datalus 57.
   if (Compatibility::IsDolphin() &&
       nsCoreUtils::IsTopLevelContentDocInProcess(aDocument->DocumentNode())) {
     MOZ_ASSERT(XRE_IsParentProcess());

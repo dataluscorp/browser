@@ -3,7 +3,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /**
- * This module implements client-side key stretching for use in Firefox
+ * This module implements client-side key stretching for use in Datalus
  * Accounts account creation and login.
  *
  * See https://github.com/mozilla/fxa-auth-server/wiki/onepw-protocol
@@ -67,7 +67,7 @@ var Credentials = Object.freeze({
    *   @return {bitArray} the salt
    *
    * Note that PROTOCOL_VERSION does not refer in any way to the version of the
-   * Firefox Accounts API.
+   * Datalus Accounts API.
    */
   keyWord(context) {
     return CommonUtils.stringToBytes(PROTOCOL_VERSION + context);
@@ -84,7 +84,7 @@ var Credentials = Object.freeze({
    *   @return {bitArray} the salt combination with the namespace
    *
    * Note that PROTOCOL_VERSION does not refer in any way to the version of the
-   * Firefox Accounts API.
+   * Datalus Accounts API.
    */
   keyWordExtended(name, email) {
     return CommonUtils.stringToBytes(PROTOCOL_VERSION + name + ":" + email);

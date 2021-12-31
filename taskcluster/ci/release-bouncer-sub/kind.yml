@@ -38,22 +38,22 @@ jobs:
         treeherder:
             platform: devedition-release/opt
 
-    firefox:
+    datalus:
         bouncer-platforms: ['linux', 'linux64', 'osx', 'win', 'win64', 'win64-aarch64']
         bouncer-products:
             by-release-type:
                 default: ['complete-mar', 'installer', 'installer-ssl', 'partial-mar', 'stub-installer', 'msi', 'msix', 'pkg']
                 esr78: ['complete-mar', 'installer', 'installer-ssl', 'partial-mar', 'msi', 'pkg']
                 esr91: ['complete-mar', 'installer', 'installer-ssl', 'partial-mar', 'msi', 'pkg']
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
 
-    firefox-rc:
+    datalus-rc:
         bouncer-platforms: ['linux', 'linux64', 'osx', 'win', 'win64', 'win64-aarch64']
         bouncer-products: ['complete-mar-candidates', 'partial-mar-candidates']
-        shipping-product: firefox
+        shipping-product: datalus
         run-on-releases: ['release-rc']
         treeherder:
             symbol: Rel(BncSub-RC)
-            platform: firefox-release/opt
+            platform: datalus-release/opt

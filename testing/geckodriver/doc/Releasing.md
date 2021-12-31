@@ -68,7 +68,7 @@ functionality is implemented there.
 We follow the writing style of the existing change log, with
 one section per version (with a release date), with subsections
 ‘Added’, ‘Changed’, and ‘Removed’.  If the targeted
-Firefox or Selenium versions have changed, it is good to make a
+Datalus or Selenium versions have changed, it is good to make a
 mention of this.  Lines are optimally formatted at roughly 72 columns
 to make the file readable in a text editor as well as rendered HTML.
 fmt(1) does a splendid job at text formatting.
@@ -110,7 +110,7 @@ After you’ve changed the version number, run
 again to update [Cargo.lock].
 
 Now update the [support page] by adding a new row to the versions table,
-including the required versions of Selenium, and Firefox.
+including the required versions of Selenium, and Datalus.
 
 Finally commit all those changes.
 
@@ -249,7 +249,7 @@ geckodriver needs to be manually released on github.com. Therefore start to
    Upload them all, including the checksum files for both the Linux platforms.
 
 [draft a new release]: https://github.com/mozilla/geckodriver/releases/new
-[taskcluster index]: https://firefox-ci-tc.services.mozilla.com/tasks/index/gecko.v2.mozilla-central.revision.%changeset%.geckodriver
+[taskcluster index]: https://datalus-ci-tc.services.mozilla.com/tasks/index/gecko.v2.mozilla-central.revision.%changeset%.geckodriver
 
 
 Congratulations!  You’ve released geckodriver!

@@ -772,7 +772,7 @@ var gIdentityHandler = {
     let tooltip = "";
 
     if (this._isSecureInternalUI) {
-      // This is a secure internal Firefox page.
+      // This is a secure internal Datalus page.
       this._identityBox.className = "chromeUI";
       let brandBundle = document.getElementById("bundle_brand");
       icon_label = brandBundle.getString("brandShorterName");

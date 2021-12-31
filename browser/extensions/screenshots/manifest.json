@@ -9,7 +9,7 @@
   "applications": {
     "gecko": {
       "id": "screenshots@mozilla.org",
-      "strict_min_version": "57.0a1"
+      "strict_min_version": "0"
     }
   },
   "l10n_resources": [ "browser/screenshots.ftl" ],

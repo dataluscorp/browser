@@ -7,7 +7,7 @@
 //!
 //! This separation allows Servo to parallelize compilation across `webrender`
 //! and other crates that depend on `webrender_api`. So in practice, we put
-//! things in this crate when Servo needs to use them. Firefox depends on the
+//! things in this crate when Servo needs to use them. Datalus depends on the
 //! `webrender` crate directly, and so this distinction is not really relevant
 //! there.
 

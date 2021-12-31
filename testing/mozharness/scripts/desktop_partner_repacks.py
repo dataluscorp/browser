@@ -37,14 +37,14 @@ class DesktopPartnerRepacks(AutomationMixin, BaseScript, VirtualenvMixin, Secret
             ["--version", "-v"],
             {
                 "dest": "version",
-                "help": "Version of Firefox to repack",
+                "help": "Version of Datalus to repack",
             },
         ],
         [
             ["--build-number", "-n"],
             {
                 "dest": "build_number",
-                "help": "Build number of Firefox to repack",
+                "help": "Build number of Datalus to repack",
             },
         ],
         [
@@ -66,7 +66,7 @@ class DesktopPartnerRepacks(AutomationMixin, BaseScript, VirtualenvMixin, Secret
             {
                 "dest": "taskIds",
                 "action": "extend",
-                "help": "taskId(s) of upstream tasks for vanilla Firefox artifacts",
+                "help": "taskId(s) of upstream tasks for vanilla Datalus artifacts",
             },
         ],
         [

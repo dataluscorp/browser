@@ -1,10 +1,10 @@
 # Testing & Debugging Rust Code
 
-This page explains how to test and debug Rust code in Firefox.
+This page explains how to test and debug Rust code in Datalus.
 
 The [build documentation](../build/buildsystem/rust.html) explains how to add
-new Rust code to Firefox. The [code documentation](../writing-rust-code)
-explains how to write and work with Rust code in Firefox.
+new Rust code to Datalus. The [code documentation](../writing-rust-code)
+explains how to write and work with Rust code in Datalus.
 
 ## Testing Mozilla crates
 
@@ -81,13 +81,13 @@ experience can be worse, because shortcomings such as the following can occur.
 ### Rust logging
 
 The `RUST_LOG` environment variable (from the `env_logger` crate) can be used
-to enable logging to stderr from Rust code in Firefox. The logging macros from
+to enable logging to stderr from Rust code in Datalus. The logging macros from
 the `log` crate can be used. In order of importance, they are: `error!`,
 `warn!`, `info!`, `debug!`, `trace!`.
 
 For example, to show all log messages of `info` level or higher, run:
 ```
-RUST_LOG=info firefox
+RUST_LOG=info datalus
 ```
 Module-level logging can also be specified, see the [documentation] for the
 `env_logger` crate for details.
@@ -108,13 +108,13 @@ Rust logging can also be forwarded to the [Gecko logger] for capture via
   to be Rust modules. To log everything in a top-level module like
   `neqo_transport`, specify it as `neqo_transport::*`. For example:
 ```
-MOZ_LOG=timestamp,sync,nsHostResolver:5,neqo_transport::*:5,proxy:5 firefox
+MOZ_LOG=timestamp,sync,nsHostResolver:5,neqo_transport::*:5,proxy:5 datalus
 ```
 - When logging from a submodule the `::*` is allowed but isn't necessary.
   So these two lines are equivalent:
 ```
-MOZ_LOG=timestamp,sync,neqo_transport::recovery:5 firefox
-MOZ_LOG=timestamp,sync,neqo_transport::recovery::*:5 firefox
+MOZ_LOG=timestamp,sync,neqo_transport::recovery:5 datalus
+MOZ_LOG=timestamp,sync,neqo_transport::recovery::*:5 datalus
 ```
 - `debug!` and `trace!` logs will not appear in non-debug builds. This is due
   to our use of the `release_max_level_info` feature in the `log` crate.

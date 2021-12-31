@@ -456,7 +456,7 @@ ToastNotificationHandler::OnActivate(IToastNotification* notification,
       mAlertListener->Observe(nullptr, "alertdisablecallback", mCookie.get());
     } else if (mClickable) {
       // When clicking toast, focus moves to another process, but we want to set
-      // focus on Firefox process.
+      // focus on Datalus process.
       nsCOMPtr<nsIWindowMediator> winMediator(
           do_GetService(NS_WINDOWMEDIATOR_CONTRACTID));
       if (winMediator) {

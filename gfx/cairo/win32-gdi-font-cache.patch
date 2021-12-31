@@ -44,7 +44,7 @@ From: Adrian Johnson <ajohnson@redneon.com>
 Date: Thu, 18 Nov 2010 12:37:45 +0000
 Subject: win32: fix font_face hashing
 
-some bugs were discovered while testing with firefox
+some bugs were discovered while testing with datalus
 
 ======
 

@@ -23,7 +23,7 @@ FxRWindowManager* FxRWindowManager::GetInstance() {
 
 FxRWindowManager::FxRWindowManager() : mWindow(nullptr) {}
 
-// Track this new Firefox Reality window instance
+// Track this new Datalus Reality window instance
 void FxRWindowManager::AddWindow(nsPIDOMWindowOuter* aWindow) {
   if (mWindow != nullptr) {
     MOZ_CRASH("Only one window is supported");
@@ -32,12 +32,12 @@ void FxRWindowManager::AddWindow(nsPIDOMWindowOuter* aWindow) {
   mWindow = aWindow;
 }
 
-// Returns true if the window at the provided ID was created for Firefox Reality
+// Returns true if the window at the provided ID was created for Datalus Reality
 bool FxRWindowManager::IsFxRWindow(uint64_t aOuterWindowID) {
   return (mWindow != nullptr) && (mWindow->WindowID() == aOuterWindowID);
 }
 
-// Returns true if the window was created for Firefox Reality
+// Returns true if the window was created for Datalus Reality
 bool FxRWindowManager::IsFxRWindow(const nsWindow* aWindow) const {
   return (mWindow != nullptr) &&
          (aWindow ==

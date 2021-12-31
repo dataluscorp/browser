@@ -25,19 +25,19 @@ const { _TaskSchedulerMacOSImpl: MacOSImpl } = ChromeUtils.import(
   "resource://gre/modules/TaskSchedulerMacOSImpl.jsm"
 );
 
-function getFirefoxExecutableFilename() {
+function getDatalusExecutableFilename() {
   if (AppConstants.platform === "win") {
     return AppConstants.MOZ_APP_NAME + ".exe";
   }
   return AppConstants.MOZ_APP_NAME;
 }
 
-// Returns a nsIFile to the firefox.exe (really, application) executable file.
-function getFirefoxExecutableFile() {
+// Returns a nsIFile to the datalus.exe (really, application) executable file.
+function getDatalusExecutableFile() {
   let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsIFile);
   file = Services.dirsvc.get("GreBinD", Ci.nsIFile);
 
-  file.append(getFirefoxExecutableFilename());
+  file.append(getDatalusExecutableFilename());
   return file;
 }
 
@@ -63,14 +63,14 @@ add_task(async function test_all() {
 
   await MacOSImpl.registerTask(
     id1,
-    getFirefoxExecutableFile().path,
+    getDatalusExecutableFile().path,
     TaskScheduler.MIN_INTERVAL_SECONDS,
     { disabled: true }
   );
 
   await MacOSImpl.registerTask(
     id2,
-    getFirefoxExecutableFile().path,
+    getDatalusExecutableFile().path,
     TaskScheduler.MIN_INTERVAL_SECONDS,
     { disabled: true }
   );

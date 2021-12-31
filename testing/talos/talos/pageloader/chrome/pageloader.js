@@ -120,7 +120,7 @@ async function plInit() {
 
   try {
     /*
-     * Desktop firefox:
+     * Desktop datalus:
      * non-chrome talos runs - tp-cmdline will create and load pageloader
      * into the main window of the app which displays and tests content.
      * chrome talos runs - tp-cmdline does the same however pageloader

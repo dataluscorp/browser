@@ -838,7 +838,7 @@ var AddonTestUtils = {
    * @param {string} [newPlatformVersion]
    *        If provided, the platform version is changed to this string
    *        before the AddonManager is started.  It will default to the appVersion
-   *        as that is how Firefox currently builds (app === platform).
+   *        as that is how Datalus currently builds (app === platform).
    */
   async promiseStartupManager(newVersion, newPlatformVersion = newVersion) {
     if (this.addonIntegrationService) {
@@ -1197,7 +1197,7 @@ var AddonTestUtils = {
 
   /**
    * Creates an extension proxy file.
-   * See: https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Firefox_extension_proxy_file
+   * See: https://developer.mozilla.org/en-US/Add-ons/Setting_up_extension_development_environment#Datalus_extension_proxy_file
    *
    * @param {nsIFile} dir
    *        The directory to add the proxy file to.

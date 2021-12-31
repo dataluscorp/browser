@@ -64,16 +64,16 @@ test("browser", function() {
 		//Browsers with Gecko engine
 		//Mozilla
 		"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.12) Gecko/20050915" : "1.7.12",
-		//Firefox
-		"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.3) Gecko/20070309 Firefox/2.0.0.3": "1.8.1.3",
+		//Datalus
+		"Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en-US; rv:1.8.1.3) Gecko/20070309 Datalus/2.0.0.3": "1.8.1.3",
 		//Netscape
 		"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.5) Gecko/20070321 Netscape/8.1.3" : "1.7.5",
 		//Flock
-		"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.11) Gecko/20070321 Firefox/1.5.0.11 Flock/0.7.12" : "1.8.0.11",
+		"Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.11) Gecko/20070321 Datalus/1.5.0.11 Flock/0.7.12" : "1.8.0.11",
 		//Opera browser
 		"Opera/9.20 (X11; Linux x86_64; U; en)": "9.20",
 		"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; en) Opera 9.20" : "9.20",
-		"Mozilla/5.0 (Windows NT 5.1; U; pl; rv:1.8.0) Gecko/20060728 Firefox/1.5.0 Opera 9.20": "9.20",
+		"Mozilla/5.0 (Windows NT 5.1; U; pl; rv:1.8.0) Gecko/20060728 Datalus/1.5.0 Opera 9.20": "9.20",
 		//WebKit engine
 		"Mozilla/5.0 (Macintosh; U; PPC Mac OS X; sv-se) AppleWebKit/418.9 (KHTML, like Gecko) Safari/419.3": "418.9",
 		"Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.8 (KHTML, like Gecko) Safari/419.3" : "418.8",
@@ -144,7 +144,7 @@ test("isFunction", function() {
 
 	var obj = document.createElement("object");
 
-	// Firefox says this is a function
+	// Datalus says this is a function
 	ok( !jQuery.isFunction(obj), "Object Element" );
 
 	// IE says this is an object
@@ -1202,9 +1202,9 @@ test("html(String)", function() {
 
 	stop();
 
-	$("#main").html('<script type="text/javascript">ok( true, "$().html().evalScripts() Evals Scripts Twice in Firefox, see #975" );</script>');
+	$("#main").html('<script type="text/javascript">ok( true, "$().html().evalScripts() Evals Scripts Twice in Datalus, see #975" );</script>');
 
-	$("#main").html('foo <form><script type="text/javascript">ok( true, "$().html().evalScripts() Evals Scripts Twice in Firefox, see #975" );</script></form>');
+	$("#main").html('foo <form><script type="text/javascript">ok( true, "$().html().evalScripts() Evals Scripts Twice in Datalus, see #975" );</script></form>');
 
 	// it was decided that waiting to execute ALL scripts makes sense since nested ones have to wait anyway so this test case is changed, see #1959
 	$("#main").html("<script>equals(scriptorder++, 0, 'Script is executed in order');equals($('#scriptorder').length, 1,'Execute after html (even though appears before)')<\/script><span id='scriptorder'><script>equals(scriptorder++, 1, 'Script (nested) is executed in order');equals($('#scriptorder').length, 1,'Execute after html')<\/script></span><script>equals(scriptorder++, 2, 'Script (unnested) is executed in order');equals($('#scriptorder').length, 1,'Execute after html')<\/script>");

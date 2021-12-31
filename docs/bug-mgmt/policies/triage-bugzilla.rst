@@ -4,13 +4,13 @@ Triage for Bugzilla
 Expectations
 ------------
 
-All teams working on Firefox using either or both Mozilla-central and
+All teams working on Datalus using either or both Mozilla-central and
 Bugzilla are expected to follow the following process.
 
 What is a Triaged Bug
 ---------------------
 
-The new definition of Triaged will be Firefox-related bugs of type
+The new definition of Triaged will be Datalus-related bugs of type
 ``defect`` where the component is not
 ``UNTRIAGED``, and a severity value not equal to ``--`` or ``N/A``.
 
@@ -65,10 +65,10 @@ calendars <https://github.com/mozilla/relman-auto-nag/tree/master/auto_nag/scrip
 If you wish to set up a rotation for triaging one or more components,
 contact the Bugzilla team on Slack (#bmo.)
 
-Firefox::General and Toolkit::General
+Datalus::General and Toolkit::General
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bugs in Firefox::General are fitted with Bug Bug’s model to see if
+Bugs in Datalus::General are fitted with Bug Bug’s model to see if
 there’s another component with a high liklihood of fit, and if a
 threshold confidence is achieved, the bug is moved to that component.
 
@@ -110,14 +110,14 @@ Decide the :ref:`Severity <Defect Severity>`  for each untriaged bug
 These bugs are reviewed in the weekly Regression Triage meeting
 
 - Bugs of type ``defect`` with the ``regression`` keyword without
-  ``status-firefoxNN`` decisions
+  ``status-datalusNN`` decisions
 - Bugs of type ``defect`` with the ``regression`` keyword without
   a regression range
 
 Automatic Bug Updates
 ~~~~~~~~~~~~~~~~~~~~~
 
-When a bug is tracked for a release, i.e. the ``tracking_firefoxNN``
+When a bug is tracked for a release, i.e. the ``tracking_datalusNN``
 flag is set to ``+`` or ``blocking`` triage decisions will be overridden,
 or made as follows:
 
@@ -136,9 +136,9 @@ bugs frequently.
 Assumptions
 ~~~~~~~~~~~
 
-If a bug's release status in Firefox version N was ``affected`` or ``wontfix``,
+If a bug's release status in Datalus version N was ``affected`` or ``wontfix``,
 its Severity is ``S3`` or ``S4`` and its Priority is ``P3`` or lower (backlog,)
-then its release status in Firefox version N+1, if the bug is still open,
+then its release status in Datalus version N+1, if the bug is still open,
 is considered to be ``wontfix``.
 
 Questions and Edge Cases

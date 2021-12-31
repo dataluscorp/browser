@@ -206,19 +206,19 @@ add_task(async function checkCurrentDate() {
   );
 });
 
-add_task(async function check_usesFirefoxSync() {
+add_task(async function check_usesDatalusSync() {
   await pushPrefs(["services.sync.username", "someone@foo.com"]);
   is(
-    await ASRouterTargeting.Environment.usesFirefoxSync,
+    await ASRouterTargeting.Environment.usesDatalusSync,
     true,
     "should return true if a fx account is set"
   );
 
-  const message = { id: "foo", targeting: "usesFirefoxSync" };
+  const message = { id: "foo", targeting: "usesDatalusSync" };
   is(
     await ASRouterTargeting.findMatchingMessage({ messages: [message] }),
     message,
-    "should select correct item by usesFirefoxSync"
+    "should select correct item by usesDatalusSync"
   );
 });
 
@@ -661,12 +661,12 @@ add_task(async function check_pinned_sites() {
   );
 });
 
-add_task(async function check_firefox_version() {
-  const message = { id: "foo", targeting: "firefoxVersion > 0" };
+add_task(async function check_datalus_version() {
+  const message = { id: "foo", targeting: "datalusVersion > 0" };
   is(
     await ASRouterTargeting.findMatchingMessage({ messages: [message] }),
     message,
-    "should select correct item when filtering by firefox version"
+    "should select correct item when filtering by datalus version"
   );
 });
 
@@ -676,7 +676,7 @@ add_task(async function check_region() {
   is(
     await ASRouterTargeting.findMatchingMessage({ messages: [message] }),
     message,
-    "should select correct item when filtering by firefox geo"
+    "should select correct item when filtering by datalus geo"
   );
 });
 

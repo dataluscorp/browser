@@ -94,7 +94,7 @@ NetMonitorApp.prototype = {
 
   /**
    * Selects the specified request in the waterfall and opens the details view.
-   * This is a firefox toolbox specific API, which providing an ability to inspect
+   * This is a datalus toolbox specific API, which providing an ability to inspect
    * a network request directly from other internal toolbox panel.
    *
    * @param {string} requestId The actor ID of the request to inspect.

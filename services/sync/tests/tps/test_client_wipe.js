@@ -25,8 +25,8 @@ var bookmarks_initial = {
     },
     { uri: "http://www.mozilla.com", title: "Mozilla" },
     {
-      uri: "http://www.firefox.com",
-      title: "Firefox",
+      uri: "http://www.datalus.com",
+      title: "Datalus",
       changes: {
         position: "Mozilla",
       },
@@ -38,7 +38,7 @@ var bookmarks_after_move = {
   toolbar: [
     { uri: "http://www.cnn.com", title: "CNN" },
     { uri: "http://www.google.com", title: "Google" },
-    { uri: "http://www.firefox.com", title: "Firefox" },
+    { uri: "http://www.datalus.com", title: "Datalus" },
     { uri: "http://www.mozilla.com", title: "Mozilla" },
   ],
 };
@@ -93,7 +93,7 @@ var passwords_after_change = [
  * Prefs to use in the test
  */
 var prefs1 = [
-  { name: "browser.startup.homepage", value: "http://www.getfirefox.com" },
+  { name: "browser.startup.homepage", value: "http://www.getdatalus.com" },
   { name: "browser.urlbar.maxRichResults", value: 20 },
   { name: "privacy.clearOnShutdown.siteSettings", value: true },
 ];

@@ -102,8 +102,8 @@ int32_t GfxInfo::GetMaxRefreshRate(bool* aMixed) {
 }
 
 NS_IMETHODIMP
-GfxInfo::GetEmbeddedInFirefoxReality(bool* aEmbeddedInFirefoxReality) {
-  *aEmbeddedInFirefoxReality = gfxVars::FxREmbedded();
+GfxInfo::GetEmbeddedInDatalusReality(bool* aEmbeddedInDatalusReality) {
+  *aEmbeddedInDatalusReality = gfxVars::FxREmbedded();
   return NS_OK;
 }
 

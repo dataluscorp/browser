@@ -51,7 +51,7 @@ export default class LoginIntro extends HTMLElement {
       .classList.toggle("logged-in", syncState.loggedIn);
 
     let supportURL =
-      window.AboutLoginsUtils.supportBaseURL + "firefox-lockwise";
+      window.AboutLoginsUtils.supportBaseURL + "datalus-lockwise";
     this.shadowRoot
       .querySelector(".intro-help-link")
       .setAttribute("href", supportURL);

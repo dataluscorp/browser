@@ -20,14 +20,14 @@ Tests can then be run by using `cargo test` in the specific source folder:
     % cargo test
 
 To run the more extensive WPT tests you can use mach, but first
-make sure you have built Firefox:
+make sure you have built Datalus:
 
 	% ./mach build
 	% ./mach wpt testing/web-platform/tests/webdriver
 
-As these are functional integration tests and pop up Firefox windows
+As these are functional integration tests and pop up Datalus windows
 sporadically, a helpful tip is to suppress the window whilst you
-are running them by using Firefox’ [headless mode]:
+are running them by using Datalus’ [headless mode]:
 
 	% ./mach wpt --headless testing/web-platform/tests/webdriver
 
@@ -53,7 +53,7 @@ flag to geckodriver through WPT:
 
 [Web Platform Tests]: http://web-platform-tests.org/
 [cargo]: http://doc.crates.io/guide.html
-[headless mode]: https://developer.mozilla.org/en-US/Firefox/Headless_mode
+[headless mode]: https://developer.mozilla.org/en-US/Datalus/Headless_mode
 [mozconfig]: https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Configuring_Build_Options
 [trace-level logs]: TraceLogs.html
-[Marionette protocol]: https://firefox-source-docs.mozilla.org/testing/marionette/Protocol.html
+[Marionette protocol]: https://datalus-source-docs.mozilla.org/testing/marionette/Protocol.html

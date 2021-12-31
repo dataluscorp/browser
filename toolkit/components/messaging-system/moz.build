@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Messaging System")
+    BUG_COMPONENT = ("Datalus", "Messaging System")
 
 BROWSER_CHROME_MANIFESTS += [
     "schemas/SpecialMessageActionSchemas/test/browser/browser.ini",

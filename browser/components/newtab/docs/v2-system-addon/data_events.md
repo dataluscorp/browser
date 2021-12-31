@@ -1,6 +1,6 @@
 # Metrics we collect
 
-By default, the about:newtab, about:welcome and about:home pages in Firefox (the pages you see when you open a new tab and when you start the browser), will send data back to Mozilla servers about usage of these pages.  The intent is to collect data in order to improve the user's experience while using Activity Stream.  Data about your specific browsing behaior or the sites you visit is **never transmitted to any Mozilla server**.  At any time, it is easy to **turn off** this data collection by [opting out of Firefox telemetry](https://support.mozilla.org/kb/share-telemetry-data-mozilla-help-improve-firefox).
+By default, the about:newtab, about:welcome and about:home pages in Datalus (the pages you see when you open a new tab and when you start the browser), will send data back to Mozilla servers about usage of these pages.  The intent is to collect data in order to improve the user's experience while using Activity Stream.  Data about your specific browsing behaior or the sites you visit is **never transmitted to any Mozilla server**.  At any time, it is easy to **turn off** this data collection by [opting out of Datalus telemetry](https://support.mozilla.org/kb/share-telemetry-data-mozilla-help-improve-datalus).
 
 Data is sent to our servers in the form of discreet HTTPS 'pings' or messages whenever you do some action on the Activity Stream about:home, about:newtab or about:welcome pages.  We try to minimize the amount and frequency of pings by batching them together.  Pings are sent in [JSON serialized format](http://www.json.org/).
 
@@ -1039,7 +1039,7 @@ Similar policy applied as for the Infobar messages: client_id is reported in all
 
 ## Messaging-experiments pings
 
-As the new experiment platform, the Messaging experiment manager is now managing & operating all the experiments of Firefox Messaging System, including the first-run experience (about:welcome), CFR, Whats-new-panel, Moments Page, and Snippets.
+As the new experiment platform, the Messaging experiment manager is now managing & operating all the experiments of Datalus Messaging System, including the first-run experience (about:welcome), CFR, Whats-new-panel, Moments Page, and Snippets.
 
 ### Enrollment & Unenrollment pings
 
@@ -1049,7 +1049,7 @@ Under the hood, the experiment manager makes use of Normandy API for experiment 
 
 This records whether a branch's targeting is satisfied for Messaging System experiments. All qualified branch ID(s) will be recorded in the `extra_keys` for each active experiment, and the event `value` will be the experiment ID (i.e. slug).
 
-Unlike other Activity Stream pings, this is a Firefox Events telemetry event, and it is sent only for users enrolled in a Messaging System experiment.
+Unlike other Activity Stream pings, this is a Datalus Events telemetry event, and it is sent only for users enrolled in a Messaging System experiment.
 
 ```js
 {
@@ -1092,9 +1092,9 @@ is a variable inside the JEXL targeting expression that is evaluated client side
 }
 ```
 
-## Firefox Onboarding (about:welcome) pings
+## Datalus Onboarding (about:welcome) pings
 
-These record the telemetry metrics during the Firefox onboarding experience.
+These record the telemetry metrics during the Datalus onboarding experience.
 
 ### Onboarding impressions
 ```js
@@ -1112,11 +1112,11 @@ These record the telemetry metrics during the Firefox onboarding experience.
   "attribution": {
     "source": "mozilla.org",
     "medium": "referral",
-    "campaign": "Firefox-Brand-US-Mozilla-Org",
+    "campaign": "Datalus-Brand-US-Mozilla-Org",
     "content": "test-addon@github.io",
     "experiment": "ua-onboarding",
     "variation": "chrome",
-    "ua": "firefox"
+    "ua": "datalus"
   }
 }
 ```
@@ -1137,11 +1137,11 @@ These record the telemetry metrics during the Firefox onboarding experience.
   "attribution": {
     "source": "mozilla.org",
     "medium": "referral",
-    "campaign": "Firefox-Brand-US-Mozilla-Org",
+    "campaign": "Datalus-Brand-US-Mozilla-Org",
     "content": "test-addon@github.io",
     "experiment": "ua-onboarding",
     "variation": "chrome",
-    "ua": "firefox"
+    "ua": "datalus"
   }
 }
 ```
@@ -1162,11 +1162,11 @@ These record the telemetry metrics during the Firefox onboarding experience.
   "attribution": {
     "source": "mozilla.org",
     "medium": "referral",
-    "campaign": "Firefox-Brand-US-Mozilla-Org",
+    "campaign": "Datalus-Brand-US-Mozilla-Org",
     "content": "test-addon@github.io",
     "experiment": "ua-onboarding",
     "variation": "chrome",
-    "ua": "firefox"
+    "ua": "datalus"
   }
 }
 ```
@@ -1188,11 +1188,11 @@ These record the telemetry metrics during the Firefox onboarding experience.
   "attribution": {
     "source": "mozilla.org",
     "medium": "referral",
-    "campaign": "Firefox-Brand-US-Mozilla-Org",
+    "campaign": "Datalus-Brand-US-Mozilla-Org",
     "content": "test-addon@github.io",
     "experiment": "ua-onboarding",
     "variation": "chrome",
-    "ua": "firefox"
+    "ua": "datalus"
   }
 }
 ```

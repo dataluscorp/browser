@@ -46,7 +46,7 @@ const isMacOS = Services.appinfo.OS === "Darwin";
  * manipulate the target's document content.
  *
  * This object only wraps the iframe that holds the Web Console UI. This is
- * meant to be an integration point between the Firefox UI and the Web Console
+ * meant to be an integration point between the Datalus UI and the Web Console
  * UI and features.
  */
 class WebConsole {
@@ -214,7 +214,7 @@ class WebConsole {
   }
 
   /**
-   * Open a link in Firefox's view source.
+   * Open a link in Datalus's view source.
    *
    * @param string sourceURL
    *        The URL of the file.

@@ -5,7 +5,7 @@
 
 const bookmarksInfo = [
   {
-    title: "firefox",
+    title: "datalus",
     url: "http://example.com",
   },
   {

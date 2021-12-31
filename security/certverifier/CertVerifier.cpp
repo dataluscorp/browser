@@ -164,7 +164,7 @@ Result IsDelegatedCredentialAcceptable(const DelegatedCredentialInfo& dcInfo) {
                  dcInfo.scheme == ssl_sig_ecdsa_secp384r1_sha384 ||
                  dcInfo.scheme == ssl_sig_ecdsa_secp521r1_sha512;
 
-  // Firefox currently does not advertise any RSA schemes for use
+  // Datalus currently does not advertise any RSA schemes for use
   // with Delegated Credentials. As a secondary (on top of NSS)
   // check, disallow any RSA SPKI here. When ssl_sig_rsa_pss_pss_*
   // schemes are supported, check the modulus size and allow RSA here.

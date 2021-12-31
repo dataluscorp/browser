@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-// Tests `UrlbarPrefs.updateFirefoxSuggestScenario` in isolation under the
+// Tests `UrlbarPrefs.updateDatalusSuggestScenario` in isolation under the
 // assumption that the offline scenario should be enabled by default for US en.
 
 "use strict";
@@ -11,7 +11,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
   Region: "resource://gre/modules/Region.jsm",
 });
 
-// All the prefs that `updateFirefoxSuggestScenario` sets along with the
+// All the prefs that `updateDatalusSuggestScenario` sets along with the
 // expected default-branch values when offline is enabled and when it's not
 // enabled.
 const PREFS = [
@@ -67,7 +67,7 @@ add_task(async function test() {
 
 /**
  * Sets the app's locale and region, calls
- * `UrlbarPrefs.updateFirefoxSuggestScenario`, and asserts that the pref values
+ * `UrlbarPrefs.updateDatalusSuggestScenario`, and asserts that the pref values
  * are correct.
  *
  * @param {string} options.locale
@@ -90,7 +90,7 @@ async function doTest({ locale, home, expectedOfflineDefault }) {
   // Set the region and locale, call the function, check the pref values.
   Region._setHomeRegion(home, false);
   await withLocales([locale], async () => {
-    await UrlbarPrefs.updateFirefoxSuggestScenario();
+    await UrlbarPrefs.updateDatalusSuggestScenario();
     for (let { name, get, expectedOfflineValue, expectedOtherValue } of PREFS) {
       let expectedValue = expectedOfflineDefault
         ? expectedOfflineValue

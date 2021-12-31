@@ -105,7 +105,7 @@ class ControllerManifestFile {
 };
 
 // We wanna keep these temporary files existing
-// until Firefox is closed instead of following OpenVRSession's lifetime.
+// until Datalus is closed instead of following OpenVRSession's lifetime.
 StaticRefPtr<ControllerManifestFile> sCosmosBindingFile;
 StaticRefPtr<ControllerManifestFile> sKnucklesBindingFile;
 StaticRefPtr<ControllerManifestFile> sViveBindingFile;
@@ -205,7 +205,7 @@ OpenVRSession::OpenVRSession()
 }
 
 OpenVRSession::~OpenVRSession() {
-  mActionsetFirefox = ::vr::k_ulInvalidActionSetHandle;
+  mActionsetDatalus = ::vr::k_ulInvalidActionSetHandle;
   Shutdown();
 }
 
@@ -286,9 +286,9 @@ bool OpenVRSession::Initialize(mozilla::gfx::VRSystemState& aSystemState,
 // "actions": [] Action paths must take the form: "/actions/<action
 // set>/in|out/<action>"
 #define CreateControllerAction(hand, name, type) \
-  ControllerAction("/actions/firefox/in/" #hand "Hand_" #name, #type)
+  ControllerAction("/actions/datalus/in/" #hand "Hand_" #name, #type)
 #define CreateControllerOutAction(hand, name, type) \
-  ControllerAction("/actions/firefox/out/" #hand "Hand_" #name, #type)
+  ControllerAction("/actions/datalus/out/" #hand "Hand_" #name, #type)
 
 bool OpenVRSession::SetupContollerActions() {
   if (!vr::VRInput()) {
@@ -914,11 +914,11 @@ void OpenVRSession::EnumerateControllers(VRSystemState& aState) {
 
   bool controllerPresent[kVRControllerMaxCount] = {false};
   uint32_t stateIndex = 0;
-  mActionsetFirefox = vr::k_ulInvalidActionSetHandle;
+  mActionsetDatalus = vr::k_ulInvalidActionSetHandle;
   VRControllerType controllerType = VRControllerType::_empty;
 
   if (vr::VRInput()->GetActionSetHandle(
-          "/actions/firefox", &mActionsetFirefox) != vr::VRInputError_None) {
+          "/actions/datalus", &mActionsetDatalus) != vr::VRInputError_None) {
     return;
   }
 
@@ -1218,7 +1218,7 @@ void OpenVRSession::StartFrame(mozilla::gfx::VRSystemState& aSystemState) {
   EnumerateControllers(aSystemState);
 
   vr::VRActiveActionSet_t actionSet = {0};
-  actionSet.ulActionSet = mActionsetFirefox;
+  actionSet.ulActionSet = mActionsetDatalus;
   vr::VRInput()->UpdateActionState(&actionSet, sizeof(actionSet), 1);
   UpdateControllerButtons(aSystemState);
   UpdateControllerPoses(aSystemState);

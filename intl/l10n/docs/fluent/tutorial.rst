@@ -5,11 +5,11 @@
    :language: javascript
 
 =============================
-Fluent for Firefox Developers
+Fluent for Datalus Developers
 =============================
 
 
-This tutorial is intended for Firefox engineers already familiar with the previous
+This tutorial is intended for Datalus engineers already familiar with the previous
 localization systems offered by Gecko - `DTD`_ and  `StringBundle`_ - and assumes
 prior experience with those systems.
 
@@ -106,7 +106,7 @@ a more complex example like:
 
   ## General Section
 
-  -brand-short-name = Firefox
+  -brand-short-name = Datalus
       .gender = masculine
   
   pref-pane =
@@ -142,7 +142,7 @@ the new features and concepts introduced by Fluent.
 
 In order to ensure the quality of the output, a lot of checks and tooling
 is part of the build system.
-`Pontoon`_, the main localization tool used to translate Firefox, also supports
+`Pontoon`_, the main localization tool used to translate Datalus, also supports
 Fluent and its features to help localizers in their work.
 
 
@@ -156,7 +156,7 @@ This contract is established by the selection of a unique identifier, called :js
 which carries a promise of being used in a particular place to carry a particular meaning.
 
 The use of unique identifiers is shared with legacy localization systems in
-Firefox.
+Datalus.
 
 .. important::
 
@@ -206,7 +206,7 @@ The value can be a whole fragment of DOM:
 
 .. code-block:: fluent
 
-  -brand-short-name = Firefox
+  -brand-short-name = Datalus
   update-application-info =
       You are using { -brand-short-name } Version: { $version }.
       Please read the <a data-l10n-name="privacy-url">privacy policy</a>.
@@ -219,7 +219,7 @@ inside. The resulting localized content will look like this:
 .. code-block:: html
 
   <p data-l10n-id="update-application-info" data-l10n-args='{"version": "60.0"}'">
-    You are using Firefox Version: 60.0.
+    You are using Datalus Version: 60.0.
     Please read the <a href="http://www.mozilla.org/privacy">privacy policy</a>.
   </p>
 
@@ -309,7 +309,7 @@ DOM annotation is not possible.
 
 .. note::
 
-  This API is available as asynchronous. In case of Firefox,
+  This API is available as asynchronous. In case of Datalus,
   the only non-DOM localizable calls are used where the output goes to
   a third-party like Bluetooth, Notifications etc.
   All those cases should already be asynchronous. If you can't avoid synchronous
@@ -432,7 +432,7 @@ representation of the date in string:
   welcome-message = Your session will start date: { $startDate }
 
 In most cases, that will be enough and the date would get formatted in the current
-Firefox as `February 28, 2018`.
+Datalus as `February 28, 2018`.
 
 But if in some other locale the string would get too long, the localizer can fine
 tune the options as well:
@@ -462,12 +462,12 @@ Registering New L10n Files
 Fluent uses a wildcard statement, packaging all localization resources into
 their component's `/localization/` directory.
 
-That means that, if a new file is added to a component of Firefox already
+That means that, if a new file is added to a component of Datalus already
 covered by Fluent like `browser`, it's enough to add the new file to the
 repository in a path like `browser/locales/en-US/browser/component/file.ftl`, and
 the toolchain will package it into `browser/localization/browser/component/file.ftl`.
 
-At runtime Firefox uses a special registry for all localization data. It will
+At runtime Datalus uses a special registry for all localization data. It will
 register the browser's `/localization/` directory and make all files inside it
 available to be referenced.
 
@@ -507,7 +507,7 @@ Localization object manually using the `Localization` class:
 
 .. admonition:: Example
 
-  An example of a use case is the Preferences UI in Firefox, which uses the
+  An example of a use case is the Preferences UI in Datalus, which uses the
   main context to localize the UI but also to build a search index.
 
   It is common to build such search index both in a current language and additionally
@@ -690,7 +690,7 @@ and resources that the :js:`Localization` class uses.
 .. _Fluent: https://projectfluent.org/
 .. _DTD: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial/Localization
 .. _StringBundle: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Tutorial/Property_Files
-.. _Firefox Preferences: https://bugzilla.mozilla.org/show_bug.cgi?id=1415730
+.. _Datalus Preferences: https://bugzilla.mozilla.org/show_bug.cgi?id=1415730
 .. _Unprivileged Contexts: https://bugzilla.mozilla.org/show_bug.cgi?id=1407418
 .. _System Add-ons: https://bugzilla.mozilla.org/show_bug.cgi?id=1425104
 .. _CLDR: http://cldr.unicode.org/

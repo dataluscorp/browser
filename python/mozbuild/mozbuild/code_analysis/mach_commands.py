@@ -204,7 +204,7 @@ TOOLS_GRADLE_FAILED = 10
 def static_analysis(command_context):
     # If no arguments are provided, just print a help message.
     """Detailed documentation:
-    https://firefox-source-docs.mozilla.org/code-quality/static-analysis.html
+    https://datalus-source-docs.mozilla.org/code-quality/static-analysis.html
     """
     mach = Mach(os.getcwd())
 

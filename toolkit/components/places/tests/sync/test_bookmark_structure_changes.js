@@ -270,8 +270,8 @@ add_task(async function test_move() {
             children: [
               {
                 guid: "fxBmk_______",
-                title: "Get Firefox!",
-                url: "http://getfirefox.com/",
+                title: "Get Datalus!",
+                url: "http://getdatalus.com/",
               },
               {
                 guid: "nightlyBmk__",
@@ -339,8 +339,8 @@ add_task(async function test_move() {
         id: "fxBmk_______",
         parentid: "mozFolder___",
         type: "bookmark",
-        title: "Get Firefox!",
-        bmkUri: "http://getfirefox.com/",
+        title: "Get Datalus!",
+        bmkUri: "http://getdatalus.com/",
       },
       {
         id: "nightlyBmk__",
@@ -494,7 +494,7 @@ add_task(async function test_move() {
         oldParentGuid: "mozFolder___",
         newParentGuid: "mozFolder___",
         source: PlacesUtils.bookmarks.SOURCES.SYNC,
-        urlHref: "http://getfirefox.com/",
+        urlHref: "http://getdatalus.com/",
         isTagging: false,
       },
     },
@@ -574,8 +574,8 @@ add_task(async function test_move() {
                   guid: "fxBmk_______",
                   type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
                   index: 2,
-                  title: "Get Firefox!",
-                  url: "http://getfirefox.com/",
+                  title: "Get Datalus!",
+                  url: "http://getdatalus.com/",
                 },
               ],
             },

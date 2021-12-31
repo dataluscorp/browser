@@ -7,8 +7,8 @@ var EXPORTED_SYMBOLS = ["LightweightThemeConsumer"];
 const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 const DEFAULT_THEME_ID = "default-theme@mozilla.org";
-const LIGHT_THEME_ID = "firefox-compact-light@mozilla.org";
-const DARK_THEME_ID = "firefox-compact-dark@mozilla.org";
+const LIGHT_THEME_ID = "datalus-compact-light@mozilla.org";
+const DARK_THEME_ID = "datalus-compact-dark@mozilla.org";
 
 ChromeUtils.defineModuleGetter(
   this,

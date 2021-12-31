@@ -168,7 +168,7 @@ def vendor_python(command_context, **kwargs):
             "You must use Python 3.6 to vendor Python packages. If you don't "
             "have Python 3.6, you can request that your package be added by "
             "creating a bug: \n"
-            "https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20Build%20System&component=Mach%20Core"  # noqa F401
+            "https://bugzilla.mozilla.org/enter_bug.cgi?product=Datalus%20Build%20System&component=Mach%20Core"  # noqa F401
         )
         return 1
 

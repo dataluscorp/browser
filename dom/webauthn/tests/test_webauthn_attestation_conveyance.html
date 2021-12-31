@@ -44,7 +44,7 @@
       return getAttestationCertFromAttestationBuffer(aResult.response.attestationObject)
       .then((attestationCert) => {
         let subject = attestationCert.subject.types_and_values[0].value.value_block.value;
-        is(subject, "Firefox U2F Soft Token", "Subject name matches the direct Soft Token")
+        is(subject, "Datalus U2F Soft Token", "Subject name matches the direct Soft Token")
       });
     }
 

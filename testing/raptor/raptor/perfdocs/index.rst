@@ -2,7 +2,7 @@
 Raptor
 ######
 
-Raptor is a performance-testing framework for running browser pageload and browser benchmark tests. Raptor is cross-browser compatible and is currently running in production on Firefox Desktop, Firefox Android GeckoView, Fenix, Reference Browser, Chromium, and Chrome.
+Raptor is a performance-testing framework for running browser pageload and browser benchmark tests. Raptor is cross-browser compatible and is currently running in production on Datalus Desktop, Datalus Android GeckoView, Fenix, Reference Browser, Chromium, and Chrome.
 
 - Contact: Dave Hunt [:davehunt]
 - Source code: https://searchfox.org/mozilla-central/source/testing/raptor
@@ -32,7 +32,7 @@ The following documents all testing we have for Raptor.
 Browsertime
 ***********
 
-Browsertime is a harness for running performance tests, similar to Mozilla's Raptor testing framework. Browsertime is written in Node.js and uses Selenium WebDriver to drive multiple browsers including Chrome, Chrome for Android, Firefox, and Firefox for Android and GeckoView-based vehicles.
+Browsertime is a harness for running performance tests, similar to Mozilla's Raptor testing framework. Browsertime is written in Node.js and uses Selenium WebDriver to drive multiple browsers including Chrome, Chrome for Android, Datalus, and Datalus for Android and GeckoView-based vehicles.
 
 Source code:
 
@@ -44,7 +44,7 @@ Running Locally
 
 **Prerequisites**
 
-- A local mozilla repository clone with a `successful Firefox build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
+- A local mozilla repository clone with a `successful Datalus build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
 
 Setup
 -----
@@ -79,7 +79,7 @@ If ``convert`` and ``compare`` are also ``FAIL`` bugs which might further help a
 
 * If you plan on running Browsertime on Android, your Android device must already be set up (see more below in the Android section)
 
-Running on Firefox Desktop
+Running on Datalus Desktop
 --------------------------
 
 Page-load tests
@@ -96,7 +96,7 @@ There are two ways to run performance tests through browsertime listed below. **
 
 ::
 
-    ./mach browsertime https://www.sitespeed.io --firefox.binaryPath '/Users/{userdir}/moz_src/mozilla-unified/obj-x86_64-apple-darwin18.7.0/dist/Nightly.app/Contents/MacOS/firefox'
+    ./mach browsertime https://www.sitespeed.io --datalus.binaryPath '/Users/{userdir}/moz_src/mozilla-unified/obj-x86_64-apple-darwin18.7.0/dist/Nightly.app/Contents/MacOS/datalus'
 
 Benchmark tests
 ---------------
@@ -122,17 +122,17 @@ Running on Raptor-Browsertime (recommended):
   ./mach raptor --browsertime -t amazon --app geckoview --binary org.mozilla.geckoview_example
 
 Running on vanilla Browsertime:
-* Running on Fenix/Firefox Preview
+* Running on Fenix/Datalus Preview
 
 ::
 
-    ./mach browsertime --android --browser firefox --firefox.android.package org.mozilla.fenix.debug --firefox.android.activity org.mozilla.fenix.IntentReceiverActivity https://www.sitespeed.io
+    ./mach browsertime --android --browser datalus --datalus.android.package org.mozilla.fenix.debug --datalus.android.activity org.mozilla.fenix.IntentReceiverActivity https://www.sitespeed.io
 
 * Running on the GeckoView Example app
 
 ::
 
-  ./mach browsertime --android --browser firefox https://www.sitespeed.io
+  ./mach browsertime --android --browser datalus https://www.sitespeed.io
 
 Running on Google Chrome
 ------------------------
@@ -234,7 +234,7 @@ WebExtension Page-Load Tests
 
 Page-load tests involve loading a specific web page and measuring the load performance (i.e. `time-to-first-non-blank-paint <https://wiki.mozilla.org/TestEngineering/Performance/Glossary#First_Non-Blank_Paint_.28fnbpaint.29>`_, first-contentful-paint, `dom-content-flushed <https://wiki.mozilla.org/TestEngineering/Performance/Glossary#DOM_Content_Flushed_.28dcf.29>`_).
 
-For page-load tests by default, instead of using live web pages for performance testing, Raptor uses a tool called `Mitmproxy <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Mitmproxy>`_. Mitmproxy allows us to record and playback test pages via a local Firefox proxy. The Mitmproxy recordings are stored on `tooltool <https://github.com/mozilla/build-tooltool>`_ and are automatically downloaded by Raptor when they are required for a test. Raptor uses mitmproxy via the `mozproxy <https://searchfox.org/mozilla-central/source/testing/mozbase/mozproxy>`_ package.
+For page-load tests by default, instead of using live web pages for performance testing, Raptor uses a tool called `Mitmproxy <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Mitmproxy>`_. Mitmproxy allows us to record and playback test pages via a local Datalus proxy. The Mitmproxy recordings are stored on `tooltool <https://github.com/mozilla/build-tooltool>`_ and are automatically downloaded by Raptor when they are required for a test. Raptor uses mitmproxy via the `mozproxy <https://searchfox.org/mozilla-central/source/testing/mozbase/mozproxy>`_ package.
 
 There are two different types of Raptor page-load tests: warm page-load and cold page-load.
 
@@ -242,7 +242,7 @@ Warm Page-Load
 ==============
 For warm page-load tests, the browser is just started up once; so the browser is warm on each page-load.
 
-**Raptor warm page-load test process when running on Firefox/Chrome/Chromium desktop:**
+**Raptor warm page-load test process when running on Datalus/Chrome/Chromium desktop:**
 
 * A new browser profile is created
 * The desktop browser is started up
@@ -252,11 +252,11 @@ For warm page-load tests, the browser is just started up once; so the browser is
 * The tab is reloaded 24 more times; measurements taken each time
 * The measurements from the first page-load are not included in overall results metrics b/c of first load noise; however they are listed in the JSON artifacts
 
-**Raptor warm page-load test process when running on Firefox android browser apps:**
+**Raptor warm page-load test process when running on Datalus android browser apps:**
 
-* The android app data is cleared (via ``adb shell pm clear firefox.app.binary.name``)
+* The android app data is cleared (via ``adb shell pm clear datalus.app.binary.name``)
 * The new browser profile is copied onto the android device SD card
-* The Firefox android app is started up
+* The Datalus android app is started up
 * Post-startup browser settle pause of 30 seconds
 * The test URL is loaded; measurements taken
 * The tab is reloaded 14 more times; measurements taken each time
@@ -266,7 +266,7 @@ Cold Page-Load
 ==============
 For cold page-load tests, the browser is shut down and restarted between page load cycles, so the browser is cold on each page-load. This is what happens for Raptor cold page-load tests:
 
-**Raptor cold page-load test process when running on Firefox/Chrome/Chromium desktop:**
+**Raptor cold page-load test process when running on Datalus/Chrome/Chromium desktop:**
 
 * A new browser profile is created
 * The desktop browser is started up
@@ -278,12 +278,12 @@ For cold page-load tests, the browser is shut down and restarted between page lo
 * Entire process is repeated for the remaining browser cycles (25 cycles total)
 * The measurements from all browser cycles are used to calculate overall results
 
-**Raptor cold page-load test process when running on Firefox Android browser apps:**
+**Raptor cold page-load test process when running on Datalus Android browser apps:**
 
-* The Android app data is cleared (via ``adb shell pm clear firefox.app.binary.name``)
+* The Android app data is cleared (via ``adb shell pm clear datalus.app.binary.name``)
 * A new browser profile is created
 * The new browser profile is copied onto the Android device SD card
-* The Firefox Android app is started up
+* The Datalus Android app is started up
 * Post-startup browser settle pause of 30 seconds
 * The test URL is loaded; measurements taken
 * The Android app is shut down
@@ -368,16 +368,16 @@ Prerequisites
 
 
 #. rooted (i.e. superuser-capable), bootloader-unlocked Moto G5 or Google Pixel 2: internal (for now) `test-device setup doc. <https://docs.google.com/document/d/1XQLtvVM2U3h1jzzzpcGEDVOp4jMECsgLYJkhCfAwAnc/edit>`_
-#. set up to run Raptor from a Firefox source tree (see `Running Locally <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_Locally>`_)
+#. set up to run Raptor from a Datalus source tree (see `Running Locally <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_Locally>`_)
 #. `GeckoView-bootstrapped <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_on_the_Android_GeckoView_Example_App>`_ environment
 
-**Raptor power-use measurement test process when running on Firefox Android browser apps:**
+**Raptor power-use measurement test process when running on Datalus Android browser apps:**
 
 * The Android app data is cleared, via:
 
 ::
 
-  adb shell pm clear firefox.app.binary.name
+  adb shell pm clear datalus.app.binary.name
 
 
 * The new browser profile is copied onto the Android device's SD card
@@ -387,7 +387,7 @@ Prerequisites
 
 * We launch the {Fenix, GeckoView, Reference Browser} on-Android app
 * Post-startup browser settle pause of 30 seconds
-* On Fennec only, a new browser tab is created (other Firefox apps use the single/existing tab)
+* On Fennec only, a new browser tab is created (other Datalus apps use the single/existing tab)
 * Power-use/battery-level measurements (app-specific measurements) are taken, via:
 
 ::
@@ -455,8 +455,8 @@ Prerequisites
 
 In order to run Raptor on a local machine, you need:
 
-* A local mozilla repository clone with a `successful Firefox build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
-* Git needs to be in the path in the terminal/window in which you build Firefox / run Raptor, as Raptor uses Git to check-out a local copy for some of the performance benchmarks' sources.
+* A local mozilla repository clone with a `successful Datalus build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
+* Git needs to be in the path in the terminal/window in which you build Datalus / run Raptor, as Raptor uses Git to check-out a local copy for some of the performance benchmarks' sources.
 * If you plan on running Raptor tests on Google Chrome, you need a local install of Google Chrome and know the path to the chrome binary
 * If you plan on running Raptor on Android, your Android device must already be set up (see more below in the Android section)
 
@@ -471,10 +471,10 @@ To see which Raptor performance tests are currently available on all platforms, 
 
 That will output all available tests on each supported app, as well as each subtest available in each suite (i.e. all the pages in a specific page-load tp6* suite).
 
-Running on Firefox
+Running on Datalus
 ==================
 
-To run Raptor locally, just build Firefox and then run:
+To run Raptor locally, just build Datalus and then run:
 
 ::
 
@@ -486,11 +486,11 @@ For example, to run the raptor-tp6 pageload test locally, just use:
 
   $ ./mach raptor --test raptor-tp6-1
 
-You can run individual subtests too (i.e. a single page in one of the tp6* suites). For example, to run the amazon page-load test on Firefox:
+You can run individual subtests too (i.e. a single page in one of the tp6* suites). For example, to run the amazon page-load test on Datalus:
 
 ::
 
-  $ ./mach raptor --test raptor-tp6-amazon-firefox
+  $ ./mach raptor --test raptor-tp6-amazon-datalus
 
 Raptor test results will be found locally in <your-repo>/testing/mozharness/build/raptor.json.
 
@@ -511,7 +511,7 @@ If your device serial number is listed, then you're all set. If ADB is not found
 
   $ ./mach bootstrap
 
-Then, in bootstrap, select the option for "Firefox for Android Artifact Mode," which will install the required tools (no need to do an actual build).
+Then, in bootstrap, select the option for "Datalus for Android Artifact Mode," which will install the required tools (no need to do an actual build).
 
 Next, make sure your Android device is ready to go. Local Android-device prerequisites are:
 
@@ -559,7 +559,7 @@ A couple notes about debugging:
 
   $ adb logcat | grep GeckoConsole
 
-* You can also debug Raptor on Android using the Firefox WebIDE; click on the Android device listed under "USB Devices" and then "Main Process" or the 'localhost: Speedometer.." tab process
+* You can also debug Raptor on Android using the Datalus WebIDE; click on the Android device listed under "USB Devices" and then "Main Process" or the 'localhost: Speedometer.." tab process
 
 Raptor test results will be found locally in <your-repo>/testing/mozharness/build/raptor.json.
 
@@ -606,7 +606,7 @@ You can override the default page-cycles by using the --page-cycles command-line
 
 ::
 
-  ./mach raptor --test raptor-tp6-google-firefox --page-cycles 2
+  ./mach raptor --test raptor-tp6-google-datalus --page-cycles 2
 
 Running Page-Load Tests on Live Sites
 =====================================
@@ -619,7 +619,7 @@ With that setting, Raptor will not start the playback tool (i.e. Mitmproxy) and 
 Running Raptor on Try
 ---------------------
 
-Raptor tests can be run on `try <https://treeherder.mozilla.org/#/jobs?repo=try>`_ on both Firefox and Google Chrome. (Raptor pageload-type tests are not supported on Google Chrome yet, as mentioned above).
+Raptor tests can be run on `try <https://treeherder.mozilla.org/#/jobs?repo=try>`_ on both Datalus and Google Chrome. (Raptor pageload-type tests are not supported on Google Chrome yet, as mentioned above).
 
 **Note:** Raptor is currently 'tier 2' on `Treeherder <https://treeherder.mozilla.org/#/jobs?repo=try>`_, which means to see the Raptor test jobs you need to ensure 'tier 2' is selected / turned on in the Treeherder 'Tiers' menu.
 
@@ -645,11 +645,11 @@ The Raptor performance tests run on dedicated hardware (the same hardware that t
 Profiling Raptor Jobs
 ---------------------
 
-Raptor tests are able to create Gecko profiles which can be viewed in `profiler.firefox.com. <https://profiler.firefox.com/>`_ This is currently only supported when running Raptor on Firefox desktop.
+Raptor tests are able to create Gecko profiles which can be viewed in `profiler.datalus.com. <https://profiler.datalus.com/>`_ This is currently only supported when running Raptor on Datalus desktop.
 
 Nightly Profiling Jobs in Production
 ====================================
-We have Firefox desktop Raptor jobs with Gecko-profiling enabled running Nightly in production on Mozilla Central (on Linux64, Win10, and OSX). This provides a steady cache of Gecko profiles for the Raptor tests. Search for the `"Rap-Prof" treeherder group on Mozilla Central <https://treeherder.mozilla.org/#/jobs?repo=mozilla-central&searchStr=Rap-Prof>`_.
+We have Datalus desktop Raptor jobs with Gecko-profiling enabled running Nightly in production on Mozilla Central (on Linux64, Win10, and OSX). This provides a steady cache of Gecko profiles for the Raptor tests. Search for the `"Rap-Prof" treeherder group on Mozilla Central <https://treeherder.mozilla.org/#/jobs?repo=mozilla-central&searchStr=Rap-Prof>`_.
 
 Profiling Locally
 =================
@@ -666,11 +666,11 @@ When the Raptor test is finished, you will be able to find the resulting gecko p
 
 Note: While profiling is turned on, Raptor will automatically reduce the number of pagecycles to 3. If you wish to override this, add the --page-cycles argument to the raptor command line.
 
-Raptor will automatically launch Firefox and load the latest Gecko profile in `profiler.firefox.com <https://profiler.firefox.com>`_. To turn this feature off, just set the DISABLE_PROFILE_LAUNCH=1 env var.
+Raptor will automatically launch Datalus and load the latest Gecko profile in `profiler.datalus.com <https://profiler.datalus.com>`_. To turn this feature off, just set the DISABLE_PROFILE_LAUNCH=1 env var.
 
-If auto-launch doesn't work for some reason, just start Firefox manually and browse to `profiler.firefox.com <https://profiler.firefox.com>`_, click on "Browse" and select the Raptor profile ZIP file noted above.
+If auto-launch doesn't work for some reason, just start Datalus manually and browse to `profiler.datalus.com <https://profiler.datalus.com>`_, click on "Browse" and select the Raptor profile ZIP file noted above.
 
-If you're on Windows and want to profile a Firefox build that you compiled yourself, make sure it contains profiling information and you have a symbols zip for it, by following the `directions on MDN <https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows#Profiling_local_talos_runs>`_.
+If you're on Windows and want to profile a Datalus build that you compiled yourself, make sure it contains profiling information and you have a symbols zip for it, by following the `directions on MDN <https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows#Profiling_local_talos_runs>`_.
 
 Profiling on Try Server
 =======================
@@ -716,7 +716,7 @@ When the Raptor jobs are finished, to view the gecko profiles:
 #. In treeherder, select the symbol for the completed Raptor test job (i.e. 'ss' in 'Rap-e10s')
 #. Click on the 'Job Details' tab below
 #. The Raptor profile ZIP files will be listed as job artifacts;
-#. Select a Raptor profile ZIP artifact, and click the 'view in Firefox Profiler' link to the right
+#. Select a Raptor profile ZIP artifact, and click the 'view in Datalus Profiler' link to the right
 
 Recording Pages for Raptor Pageload Tests
 -----------------------------------------
@@ -748,12 +748,12 @@ For a detailed list of current tweaks, please refer to `this <https://searchfox.
 Raptor Test List
 ****************
 
-Currently the following Raptor tests are available. Note: Check the test details below to see which browser (i.e. Firefox, Google Chrome, Android) each test is supported on.
+Currently the following Raptor tests are available. Note: Check the test details below to see which browser (i.e. Datalus, Google Chrome, Android) each test is supported on.
 
 Page-Load Tests
 ---------------
 
-Raptor page-load test documentation is generated by `PerfDocs <https://firefox-source-docs.mozilla.org/code-quality/lint/linters/perfdocs.html>`_ and available in the `Firefox Source Docs <https://firefox-source-docs.mozilla.org/testing/perfdocs/raptor.html>`_.
+Raptor page-load test documentation is generated by `PerfDocs <https://datalus-source-docs.mozilla.org/code-quality/lint/linters/perfdocs.html>`_ and available in the `Datalus Source Docs <https://datalus-source-docs.mozilla.org/testing/perfdocs/raptor.html>`_.
 
 Benchmark Tests
 ---------------
@@ -763,7 +763,7 @@ assorted-dom
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 motionmark-animometer, motionmark-htmlsuite
@@ -771,7 +771,7 @@ motionmark-animometer, motionmark-htmlsuite
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: benchmark measuring the time to animate complex scenes
 * summarization:
 
@@ -783,7 +783,7 @@ speedometer
 
 * contact: :selena
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Chrome desktop, Datalus Android Geckoview
 * measuring: responsiveness of web applications
 * reporting: runs/minute score
 * data: there are 16 subtests in Speedometer; each of these are made up of 9 internal benchmarks.
@@ -799,7 +799,7 @@ stylebench
 
 * contact: :emilio
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: speed of dynamic style recalculation
 * reporting: runs/minute score
 
@@ -808,7 +808,7 @@ sunspider
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 unity-webgl
@@ -816,7 +816,7 @@ unity-webgl
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Chrome desktop, Datalus Android Geckoview
 * TODO
 
 youtube-playback
@@ -825,7 +825,7 @@ youtube-playback
 * contact: ?
 * type: benchmark
 * details: `YouTube playback performance <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Youtube_playback_performance>`_
-* browsers: Firefox desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Datalus Android Geckoview
 * measuring: media streaming playback performance (dropped video frames)
 * reporting: For each video the number of dropped and decoded frames, as well as its percentage value is getting recorded. The overall reported result is the mean value of dropped video frames across all tested video files.
 * data: Given the size of the used media files those tests are currently run as live site tests, and are kept up-to-date via the `perf-youtube-playback <https://github.com/mozilla/perf-youtube-playback/>`_ repository on Github.
@@ -838,7 +838,7 @@ wasm-misc, wasm-misc-baseline, wasm-misc-ion
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 wasm-godot, wasm-godot-baseline, wasm-godot-ion
@@ -846,7 +846,7 @@ wasm-godot, wasm-godot-baseline, wasm-godot-ion
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop only
+* browsers: Datalus desktop only
 * TODO
 
 webaudio
@@ -854,7 +854,7 @@ webaudio
 
 * contact: padenot
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: Rendering speed of various synthetic Web Audio API workloads
 * reporting: The time time it took to render the audio of each test case, and a
   geometric mean of the full test suite. Lower is better
@@ -916,11 +916,11 @@ When developing on Raptor and debugging, there's often a need to look at the out
 Raptor Debug Mode
 -----------------
 
-The easiest way to debug the Raptor web extension is to run the Raptor test locally and invoke debug mode, i.e. for Firefox:
+The easiest way to debug the Raptor web extension is to run the Raptor test locally and invoke debug mode, i.e. for Datalus:
 
 ::
 
-  ./mach raptor --test raptor-tp6-amazon-firefox --debug-mode
+  ./mach raptor --test raptor-tp6-amazon-datalus --debug-mode
 
 Or on Chrome, for example:
 
@@ -932,11 +932,11 @@ Running Raptor with debug mode will:
 
 * Automatically set the number of test page-cycles to 2 maximum
 * Reduce the 30 second post-browser startup delay from 30 seconds to 3 seconds
-* On Firefox, the devtools browser console will automatically open, where you can view all of the console log messages generated by the Raptor web extension
+* On Datalus, the devtools browser console will automatically open, where you can view all of the console log messages generated by the Raptor web extension
 * On Chrome, the devtools console will automatically open
 * The browser will remain open after the Raptor test has finished; you will be prompted in the terminal to manually shutdown the browser when you're finished debugging.
 
-Manual Debugging on Firefox Desktop
+Manual Debugging on Datalus Desktop
 -----------------------------------
 
 The main Raptor runner is '`runner.js <https://searchfox.org/mozilla-central/source/testing/raptor/webext/raptor/runner.js>`_' which is inside the web extension. The code that actually captures the performance measures is in the web extension content code '`measure.js <https://searchfox.org/mozilla-central/source/testing/raptor/webext/raptor/measure.js>`_'.
@@ -944,7 +944,7 @@ The main Raptor runner is '`runner.js <https://searchfox.org/mozilla-central/sou
 In order to retrieve the console.log() output from the Raptor runner, do the following:
 
 #. Invoke Raptor locally via ``./mach raptor``
-#. During the 30 second Raptor pause which happens right after Firefox has started up, in the ALREADY OPEN current tab, type "about:debugging" for the URL.
+#. During the 30 second Raptor pause which happens right after Datalus has started up, in the ALREADY OPEN current tab, type "about:debugging" for the URL.
 #. On the debugging page that appears, make sure "Add-ons" is selected on the left (default).
 #. Turn ON the "Enable add-on debugging" check-box
 #. Then scroll down the page until you see the Raptor web extension in the list of currently-loaded add-ons. Under "Raptor" click the blue "Debug" link.
@@ -952,7 +952,7 @@ In order to retrieve the console.log() output from the Raptor runner, do the fol
 
 To retrieve the console.log() output from the Raptor content 'measure.js' code:
 
-#. As soon as Raptor opens the new test tab (and the test starts running / or the page starts loading), in Firefox just choose "Tools => Web Developer => Web Console", and select the "console' tab.
+#. As soon as Raptor opens the new test tab (and the test starts running / or the page starts loading), in Datalus just choose "Tools => Web Developer => Web Console", and select the "console' tab.
 
 Raptor automatically closes the test tab and the entire browser after test completion; which will close any open debug consoles. In order to have more time to review the console logs, Raptor can be temporarily hacked locally in order to prevent the test tab and browser from being closed. Currently this must be done manually, as follows:
 
@@ -990,18 +990,18 @@ Then just kill the first mitm process in the list and that's sufficient:
 
 Now when you run Raptor again, the Mitmproxy server will be able to start.
 
-Manual Debugging on Firefox Android
+Manual Debugging on Datalus Android
 -----------------------------------
 
-Be sure to read the above section first on how to debug the Raptor web extension when running on Firefox Desktop.
+Be sure to read the above section first on how to debug the Raptor web extension when running on Datalus Desktop.
 
-When running Raptor tests on Firefox on Android (i.e. geckoview), to see the console.log() output from the Raptor web extension, do the following:
+When running Raptor tests on Datalus on Android (i.e. geckoview), to see the console.log() output from the Raptor web extension, do the following:
 
 #. With your android device (i.e. Google Pixel 2) all set up and connected to USB, invoke the Raptor test normally via ``./mach raptor``
-#. Start up a local copy of the Firefox Nightly Desktop browser
-#. In Firefox Desktop choose "Tools => Web Developer => WebIDE"
-#. In the Firefox WebIDE dialog that appears, look under "USB Devices" listed on the top right. If your device is not there, there may be a link to install remote device tools - if that link appears click it and let that install.
-#. Under "USB Devices" on the top right your android device should be listed (i.e. "Firefox Custom on Android Pixel 2" - click on your device.
+#. Start up a local copy of the Datalus Nightly Desktop browser
+#. In Datalus Desktop choose "Tools => Web Developer => WebIDE"
+#. In the Datalus WebIDE dialog that appears, look under "USB Devices" listed on the top right. If your device is not there, there may be a link to install remote device tools - if that link appears click it and let that install.
+#. Under "USB Devices" on the top right your android device should be listed (i.e. "Datalus Custom on Android Pixel 2" - click on your device.
 #. The debugger opens. On the left side click on "Main Process", and click the "console" tab below - and the Raptor runner output will be included there.
 #. On the left side under "Tabs" you'll also see an option for the active tab/page; select that and the Raptor content console.log() output should be included there.
 
@@ -1014,7 +1014,7 @@ Also note: When debugging Raptor on Android, the 'adb logcat' is very useful. Mo
 Manual Debugging on Google Chrome
 ---------------------------------
 
-Same as on Firefox desktop above, but use the Google Chrome console: View ==> Developer ==> Developer Tools.
+Same as on Datalus desktop above, but use the Google Chrome console: View ==> Developer ==> Developer Tools.
 
 Raptor on Mobile projects (Fenix, Reference-Browser)
 ****************************************************
@@ -1051,6 +1051,6 @@ Code formatting on Raptor
 *************************
 As Raptor is a Mozilla project we follow the general Python coding style:
 
-* https://firefox-source-docs.mozilla.org/tools/lint/coding-style/coding_style_python.html
+* https://datalus-source-docs.mozilla.org/tools/lint/coding-style/coding_style_python.html
 
 `black <https://github.com/psf/black/>`_ is the tool used to reformat the Python code.

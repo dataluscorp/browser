@@ -7,16 +7,16 @@ Frequently Asked Questions
 How do I report bugs?
 ---------------------
 
-Bugs against the ``mach`` core can be filed in Bugzilla in the `Firefox
+Bugs against the ``mach`` core can be filed in Bugzilla in the `Datalus
 Build System::Mach
-Core <https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox%20Build%20System&component=Mach%20Core>`__ component.
+Core <https://bugzilla.mozilla.org/enter_bug.cgi?product=Datalus%20Build%20System&component=Mach%20Core>`__ component.
 
 .. note::
 
    Most ``mach`` bugs are bugs in individual commands, not bugs in the core
    ``mach`` code. Bugs for individual commands should be filed against the
    component that command is related to. For example, bugs in the
-   *build* command should be filed against *Firefox Build System ::
+   *build* command should be filed against *Datalus Build System ::
    General*. Bugs against testing commands should be filed somewhere in
    the *Testing* product.
 
@@ -59,7 +59,7 @@ How do I add features to ``mach``?
 ----------------------------------
 If you would like to add a new feature to ``mach`` that cannot be implemented as
 a ``mach`` command, the first step is to file a bug in the
-``Firefox Build System :: Mach Core`` component.
+``Datalus Build System :: Mach Core`` component.
 
 Should I implement X as a ``mach`` command?
 -------------------------------------------

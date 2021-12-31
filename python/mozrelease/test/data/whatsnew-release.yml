@@ -10,7 +10,7 @@
   url: "https://www.mozilla.org/%LOCALE%/{product}/{version}/whatsnew/?oldversion=%OLD_VERSION%"
   conditions:
       release-types: [release]
-      products: [firefox]
+      products: [datalus]
       update-channel: release
       # e.g.: ["<61.0"]. {version.major_number} reflects the current version.
       # This is done by taskgraph.

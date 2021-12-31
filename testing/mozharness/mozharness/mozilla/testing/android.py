@@ -514,7 +514,7 @@ class AndroidMixin(object):
             # Find appname from package-name.txt - assumes download-and-extract
             # has completed successfully.
             # The app/package name will typically be org.mozilla.fennec,
-            # but org.mozilla.firefox for release builds, and there may be
+            # but org.mozilla.datalus for release builds, and there may be
             # other variations. 'aapt dump badging <apk>' could be used as an
             # alternative to package-name.txt, but introduces a dependency
             # on aapt, found currently in the Android SDK build-tools component.

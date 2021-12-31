@@ -144,7 +144,7 @@ TEST(MediaHardwareKeysEventSourceMacMediaCenter, TestSetMetadata)
 
   MediaMetadataBase metadata;
   metadata.mTitle = u"MediaPlayback";
-  metadata.mArtist = u"Firefox";
+  metadata.mArtist = u"Datalus";
   metadata.mAlbum = u"Mozilla";
   source->SetMediaMetadata(metadata);
 
@@ -153,7 +153,7 @@ TEST(MediaHardwareKeysEventSourceMacMediaCenter, TestSetMetadata)
   PR_Sleep(PR_SecondsToInterval(1));
   MPNowPlayingInfoCenter* center = [MPNowPlayingInfoCenter defaultCenter];
   ASSERT_TRUE([center.nowPlayingInfo[MPMediaItemPropertyTitle] isEqualToString:@"MediaPlayback"]);
-  ASSERT_TRUE([center.nowPlayingInfo[MPMediaItemPropertyArtist] isEqualToString:@"Firefox"]);
+  ASSERT_TRUE([center.nowPlayingInfo[MPMediaItemPropertyArtist] isEqualToString:@"Datalus"]);
   ASSERT_TRUE([center.nowPlayingInfo[MPMediaItemPropertyAlbumTitle] isEqualToString:@"Mozilla"]);
 
   source->Close();

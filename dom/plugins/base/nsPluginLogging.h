@@ -37,7 +37,7 @@
 //    My favorite Win32 Example: SET MOZ_LOG_FILE=c:\temp\pluginLog.txt
 
 // 4. For complete information see the Gecko Developer guide:
-// https://firefox-source-docs.mozilla.org/xpcom/logging.html
+// https://datalus-source-docs.mozilla.org/xpcom/logging.html
 
 class nsPluginLogging {
  public:

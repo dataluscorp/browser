@@ -447,7 +447,7 @@ var dataProviders = {
     let environment = Subprocess.getEnvironment();
     let filteredEnvironment = {};
     // Limit the environment variables to those that we
-    // know may affect Firefox to reduce leaking PII.
+    // know may affect Datalus to reduce leaking PII.
     let filteredEnvironmentKeys = ["xre_", "moz_", "gdk", "display"];
     for (let key of Object.keys(environment)) {
       if (filteredEnvironmentKeys.some(k => key.toLowerCase().startsWith(k))) {

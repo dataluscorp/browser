@@ -39,7 +39,7 @@ class TestParser(unittest.TestCase):
                 "bug_numbers": [1383793],
                 "expires_in_version": "never",
                 "kind": "boolean",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -65,7 +65,7 @@ class TestParser(unittest.TestCase):
                 "alert_emails": ["team@mozilla.xyz"],
                 "expires_in_version": "never",
                 "kind": "boolean",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -110,7 +110,7 @@ class TestParser(unittest.TestCase):
                 "bug_numbers": [1383793],
                 "expires_in_version": "never",
                 "kind": "boolean",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -159,7 +159,7 @@ class TestParser(unittest.TestCase):
                 "low": 1024,
                 "high": 2 ** 64,
                 "n_buckets": 100,
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -185,7 +185,7 @@ class TestParser(unittest.TestCase):
                 "low": 1024,
                 "high": 16777216,
                 "n_buckets": 200,
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -234,7 +234,7 @@ class TestParser(unittest.TestCase):
                 "alert_emails": ["team@mozilla.xyz"],
                 "bug_numbers": [1383793],
                 "kind": "boolean",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -281,7 +281,7 @@ class TestParser(unittest.TestCase):
                 "releaseChannelCollection": "opt-out",
                 "alert_emails": ["team@mozilla.xyz"],
                 "bug_numbers": [1383793],
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -327,7 +327,7 @@ class TestParser(unittest.TestCase):
                 "kind": "flag",
                 "alert_emails": ["team@mozilla.xyz"],
                 "bug_numbers": [1383793],
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }
@@ -374,7 +374,7 @@ class TestParser(unittest.TestCase):
                 "expires_in_version": "never",
                 "kind": "boolean",
                 "description": "Test histogram",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "record_into_store": ["main", "sync"],
             }
         }
@@ -401,7 +401,7 @@ class TestParser(unittest.TestCase):
                 "expires_in_version": "never",
                 "kind": "boolean",
                 "description": "Test histogram",
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "record_into_store": [],
             }
         }
@@ -540,7 +540,7 @@ class TestParser(unittest.TestCase):
                 "expires_in_version": "never",
                 "kind": "enumerated",
                 "n_values": 100,
-                "products": ["firefox"],
+                "products": ["datalus"],
                 "description": "Test histogram",
             }
         }

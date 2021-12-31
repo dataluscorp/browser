@@ -42,7 +42,7 @@ The ``reason`` field contains the information about why the "prio" ping was subm
 
 * ``periodic``: The ping was submitted because some Origin Telemetry was recorded in the past day.
 * ``max``: The ping was submitted because the 10-element limit was reached.
-* ``shutdown``: The ping was submitted because Firefox is shutting down and some Origin Telemetry data have yet to be submitted.
+* ``shutdown``: The ping was submitted because Datalus is shutting down and some Origin Telemetry data have yet to be submitted.
 
 prioData
 ~~~~~~~~
@@ -76,4 +76,4 @@ For the prototype's encoding this is an object of the form:
 Version History
 ---------------
 
-- Firefox 68: Initial Origin Telemetry support (Nightly only) (`bug 1536565 <https://bugzilla.mozilla.org/show_bug.cgi?id=1536565>`_).
+- Datalus 68: Initial Origin Telemetry support (Nightly only) (`bug 1536565 <https://bugzilla.mozilla.org/show_bug.cgi?id=1536565>`_).

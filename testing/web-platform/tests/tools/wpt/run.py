@@ -106,7 +106,7 @@ otherwise install OpenSSL and ensure that it's on your $PATH.""")
 
 
 def check_environ(product):
-    if product not in ("android_weblayer", "android_webview", "chrome", "chrome_android", "firefox", "firefox_android", "servo"):
+    if product not in ("android_weblayer", "android_webview", "chrome", "chrome_android", "datalus", "datalus_android", "servo"):
         config_builder = serve.build_config(os.path.join(wpt_root, "config.json"))
         # Override the ports to avoid looking for free ports
         config_builder.ssl = {"type": "none"}
@@ -195,9 +195,9 @@ def safe_unsetenv(env_var):
         pass
 
 
-class Firefox(BrowserSetup):
-    name = "firefox"
-    browser_cls = browser.Firefox
+class Datalus(BrowserSetup):
+    name = "datalus"
+    browser_cls = browser.Datalus
 
     def setup_kwargs(self, kwargs):
         if kwargs["binary"] is None:
@@ -208,9 +208,9 @@ class Firefox(BrowserSetup):
             binary = self.browser.find_binary(self.venv.path,
                                               kwargs["browser_channel"])
             if binary is None:
-                raise WptrunError("""Firefox binary not found on $PATH.
+                raise WptrunError("""Datalus binary not found on $PATH.
 
-Install Firefox or use --binary to set the binary path""")
+Install Datalus or use --binary to set the binary path""")
             kwargs["binary"] = binary
 
         if kwargs["certutil_binary"] is None and kwargs["ssl_type"] != "none":
@@ -258,7 +258,7 @@ Consider installing certutil via your OS package manager or directly.""")
             kwargs["headless"] = True
             logger.info("Running in headless mode, pass --no-headless to disable")
 
-        # Turn off Firefox WebRTC ICE logging on WPT (turned on by mozrunner)
+        # Turn off Datalus WebRTC ICE logging on WPT (turned on by mozrunner)
         safe_unsetenv('R_LOG_LEVEL')
         safe_unsetenv('R_LOG_DESTINATION')
         safe_unsetenv('R_LOG_VERBOSE')
@@ -267,9 +267,9 @@ Consider installing certutil via your OS package manager or directly.""")
         kwargs["extra_prefs"].append("media.navigator.streams.fake=true")
 
 
-class FirefoxAndroid(BrowserSetup):
-    name = "firefox_android"
-    browser_cls = browser.FirefoxAndroid
+class DatalusAndroid(BrowserSetup):
+    name = "datalus_android"
+    browser_cls = browser.DatalusAndroid
 
     def setup_kwargs(self, kwargs):
         from . import android
@@ -726,8 +726,8 @@ class Epiphany(BrowserSetup):
 product_setup = {
     "android_weblayer": AndroidWeblayer,
     "android_webview": AndroidWebview,
-    "firefox": Firefox,
-    "firefox_android": FirefoxAndroid,
+    "datalus": Datalus,
+    "datalus_android": DatalusAndroid,
     "chrome": Chrome,
     "chrome_android": ChromeAndroid,
     "chrome_ios": ChromeiOS,

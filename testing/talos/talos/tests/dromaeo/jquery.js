@@ -2665,7 +2665,7 @@ jQuery.extend({
 		// Open the socket
 		xml.open(s.type, s.url, s.async, s.username, s.password);
 
-		// Need an extra try/catch for cross domain requests in Firefox 3
+		// Need an extra try/catch for cross domain requests in Datalus 3
 		try {
 			// Set the correct header, if data is being sent
 			if ( s.data )
@@ -2770,7 +2770,7 @@ jQuery.extend({
 			jQuery.handleError(s, xml, null, e);
 		}
 		
-		// firefox 1.5 doesn't fire statechange for sync requests
+		// datalus 1.5 doesn't fire statechange for sync requests
 		if ( !s.async )
 			onreadystatechange();
 
@@ -2830,7 +2830,7 @@ jQuery.extend({
 		try {
 			var xmlRes = xml.getResponseHeader("Last-Modified");
 
-			// Firefox always returns 200. check Last-Modified date
+			// Datalus always returns 200. check Last-Modified date
 			return xml.status == 304 || xmlRes == jQuery.lastModified[url] ||
 				jQuery.browser.safari && xml.status == undefined;
 		} catch(e){}

@@ -12,7 +12,7 @@ from marionette_harness.runner import httpd
 
 
 class PingServer(object):
-    """HTTP server for receiving Firefox Client Telemetry pings."""
+    """HTTP server for receiving Datalus Client Telemetry pings."""
 
     def __init__(self, server_root, url):
         self._logger = mozlog.get_default_logger(component="pingserver")

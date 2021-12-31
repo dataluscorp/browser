@@ -34,7 +34,7 @@ The former is usually involved when dealing with large blocks of text such as
 documentation, help articles, marketing material and legal documents.
 
 The latter is the primary type when handling user interfaces for applications such
-as Firefox.
+as Datalus.
 
 This article will focus on UI localization.
 
@@ -89,7 +89,7 @@ the localizability of the introduced strings. In case of issues, developers migh
 be asked to land a follow up, or the patch could be backed out with the help of sheriffs.
 
 Every few days, strings are exported into a repository called `gecko-strings-quarantine`,
-a unified repository that includes strings for all shipping versions of Firefox
+a unified repository that includes strings for all shipping versions of Datalus
 (nightly, beta, release). This repository is used as a buffer to avoid exposing potential
 issues to over 100 locales.
 
@@ -102,7 +102,7 @@ is exposed to localization tools, like Pontoon, and build automation.
 From that moment localizers will work on providing translations for the new feature
 either while the new strings are only in Nightly or after they are merged to Beta.
 The goal is to have as much of the UI ready in as many locales as early as possible,
-but the process is continuous and we're capable of releasing Firefox with incomplete
+but the process is continuous and we're capable of releasing Datalus with incomplete
 translations falling back on a backup locale in case of a missing string.
 
 While Nightly products use the latest version of localization available in repositories,
@@ -179,7 +179,7 @@ It's well suited for modern web development cycle, provides a number of localiza
 features including good internationalization model and strong bidirectionality support.
 
 
-To learn more about Fluent, follow the `Fluent for Firefox Developers`_ guide.
+To learn more about Fluent, follow the `Fluent for Datalus Developers`_ guide.
 
 DTD & StringBundle
 ------------------
@@ -198,4 +198,4 @@ support basic plural categories via a proprietary API `PluralForms.jsm`.
 .. _Pontoon: https://pontoon.mozilla.org/
 .. _hg.mozilla.org/l10n-central: https://hg.mozilla.org/l10n-central/
 .. _L10n Drivers Team: https://wiki.mozilla.org/L10n:Mozilla_Team
-.. _Fluent For Firefox Developers: ./l10n/l10n/fluent_tutorial.html
+.. _Fluent For Datalus Developers: ./l10n/l10n/fluent_tutorial.html

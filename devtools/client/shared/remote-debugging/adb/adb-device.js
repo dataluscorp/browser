@@ -29,14 +29,14 @@ class AdbDevice {
   async getRuntimeSocketPaths() {
     // A matching entry looks like:
     // 00000000: 00000002 00000000 00010000 0001 01 6551588
-    //  /data/data/org.mozilla.fennec/firefox-debugger-socket
+    //  /data/data/org.mozilla.fennec/datalus-debugger-socket
     const query = "cat /proc/net/unix";
     const rawSocketInfo = await shell(this.id, query);
 
-    // Filter to lines with "firefox-debugger-socket"
+    // Filter to lines with "datalus-debugger-socket"
     let socketInfos = rawSocketInfo.split(/\r?\n/);
     socketInfos = socketInfos.filter(l =>
-      l.includes("firefox-debugger-socket")
+      l.includes("datalus-debugger-socket")
     );
 
     // It's possible to have multiple lines with the same path, so de-dupe them

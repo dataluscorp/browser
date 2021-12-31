@@ -31,4 +31,4 @@ FINAL_TARGET_FILES.actors += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Bookmarks & History")
+    BUG_COMPONENT = ("Datalus", "Bookmarks & History")

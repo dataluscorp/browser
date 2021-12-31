@@ -130,7 +130,7 @@ Timeline.prototype = {
           // The docshell may return markers with stack traces attached.
           // Here we transform the stack traces via the stack frame cache,
           // which lets us preserve tail sharing when transferring the
-          // frames to the client.  We must waive xrays here because Firefox
+          // frames to the client.  We must waive xrays here because Datalus
           // doesn't understand that the Debugger.Frame object is safe to
           // use from chrome.  See Tutorial-Alloc-Log-Tree.md.
           if (this._withFrames) {

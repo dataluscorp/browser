@@ -2,7 +2,7 @@
 Raptor
 ######
 
-Raptor is a performance-testing framework for running browser pageload and browser benchmark tests. Raptor is cross-browser compatible and is currently running in production on Firefox Desktop, Firefox Android GeckoView, Fenix, Reference Browser, Chromium, and Chrome.
+Raptor is a performance-testing framework for running browser pageload and browser benchmark tests. Raptor is cross-browser compatible and is currently running in production on Datalus Desktop, Datalus Android GeckoView, Fenix, Reference Browser, Chromium, and Chrome.
 
 - Contact: Dave Hunt [:davehunt]
 - Source code: https://searchfox.org/mozilla-central/source/testing/raptor
@@ -29,13 +29,13 @@ The following documents all testing we have for Raptor.
 
 Benchmarks
 ----------
-Standard benchmarks are third-party tests (i.e. Speedometer) that we have integrated into Raptor to run per-commit in our production CI. (FF: Firefox, CH: Chrome, CU: Chromium)
+Standard benchmarks are third-party tests (i.e. Speedometer) that we have integrated into Raptor to run per-commit in our production CI. (FF: Datalus, CH: Chrome, CU: Chromium)
 
 .. dropdown:: ares6 (FF, CH, CU)
    :container: + anchor-id-ares6-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -49,49 +49,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-fis-e10s: None
+            * browsertime-benchmark-datalus-ares6-e10s: None
+            * browsertime-benchmark-datalus-ares6-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-fis-e10s: None
+            * browsertime-benchmark-datalus-ares6-e10s: None
+            * browsertime-benchmark-datalus-ares6-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-ares6-e10s: None
             * browsertime-benchmark-chromium-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-ares6-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-ares6-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-ares6-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-ares6-e10s: None
             * browsertime-benchmark-chromium-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-e10s: trunk
-            * browsertime-benchmark-firefox-ares6-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-ares6-e10s: trunk
+            * browsertime-benchmark-datalus-ares6-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-ares6-e10s: None
             * browsertime-benchmark-chromium-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-ares6-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-ares6-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-ares6-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-fis-e10s: None
+            * browsertime-benchmark-datalus-ares6-e10s: None
+            * browsertime-benchmark-datalus-ares6-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-ares6-e10s: None
             * browsertime-benchmark-chromium-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-fis-e10s: None
+            * browsertime-benchmark-datalus-ares6-e10s: None
+            * browsertime-benchmark-datalus-ares6-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-fis-e10s: None
+            * browsertime-benchmark-datalus-ares6-e10s: None
+            * browsertime-benchmark-datalus-ares6-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-ares6-e10s: None
             * browsertime-benchmark-chromium-ares6-e10s: None
-            * browsertime-benchmark-firefox-ares6-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-ares6-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-ares6-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-ares6-fis-e10s: mozilla-central
 
 
 .. dropdown:: assorted-dom (FF, CH, CU)
    :container: + anchor-id-assorted-dom-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **fetch task**: assorted-dom
    * **gecko profile entries**: 2000000
@@ -105,49 +105,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-assorted-dom-e10s: None
             * browsertime-benchmark-chromium-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-assorted-dom-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-assorted-dom-e10s: None
             * browsertime-benchmark-chromium-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-e10s: trunk
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-assorted-dom-e10s: trunk
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-assorted-dom-e10s: None
             * browsertime-benchmark-chromium-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-assorted-dom-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-assorted-dom-e10s: None
             * browsertime-benchmark-chromium-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-e10s: None
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-assorted-dom-e10s: None
             * browsertime-benchmark-chromium-assorted-dom-e10s: None
-            * browsertime-benchmark-firefox-assorted-dom-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-assorted-dom-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-assorted-dom-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-assorted-dom-fis-e10s: mozilla-central
 
 
 .. dropdown:: jetstream2 (FF, CH, CU)
    :container: + anchor-id-jetstream2-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **fetch task**: jetstream2
    * **gecko profile entries**: 14000000
@@ -162,49 +162,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-jetstream2-e10s: None
             * browsertime-benchmark-chromium-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-e10s: mozilla-central
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-jetstream2-e10s: None
             * browsertime-benchmark-chromium-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-e10s: mozilla-central
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-jetstream2-e10s: None
             * browsertime-benchmark-chromium-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-e10s: mozilla-central
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-jetstream2-e10s: None
             * browsertime-benchmark-chromium-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-e10s: None
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-jetstream2-e10s: None
             * browsertime-benchmark-chromium-jetstream2-e10s: None
-            * browsertime-benchmark-firefox-jetstream2-e10s: mozilla-central
-            * browsertime-benchmark-firefox-jetstream2-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-e10s: mozilla-central
+            * browsertime-benchmark-datalus-jetstream2-fis-e10s: mozilla-central
 
 
 .. dropdown:: motionmark-animometer (FF, CH, CU)
    :container: + anchor-id-motionmark-animometer-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -216,49 +216,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-animometer-e10s: None
             * browsertime-benchmark-chromium-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-animometer-e10s: None
             * browsertime-benchmark-chromium-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: trunk
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: trunk
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-animometer-e10s: None
             * browsertime-benchmark-chromium-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-animometer-e10s: None
             * browsertime-benchmark-chromium-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: None
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-animometer-e10s: None
             * browsertime-benchmark-chromium-motionmark-animometer-e10s: None
-            * browsertime-benchmark-firefox-motionmark-animometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-animometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-animometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-animometer-fis-e10s: mozilla-central
 
 
 .. dropdown:: motionmark-htmlsuite (FF, CH, CU)
    :container: + anchor-id-motionmark-htmlsuite-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -270,42 +270,42 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-htmlsuite-e10s: None
             * browsertime-benchmark-chromium-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-htmlsuite-e10s: None
             * browsertime-benchmark-chromium-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: trunk
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: trunk
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-htmlsuite-e10s: None
             * browsertime-benchmark-chromium-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-htmlsuite-e10s: None
             * browsertime-benchmark-chromium-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: None
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-motionmark-htmlsuite-e10s: None
             * browsertime-benchmark-chromium-motionmark-htmlsuite-e10s: None
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-motionmark-htmlsuite-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-motionmark-htmlsuite-fis-e10s: mozilla-central
 
 
 .. dropdown:: raptor-speedometer-geckoview (GV)
@@ -326,11 +326,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
 
 
-.. dropdown:: raptor-youtube-playback-h264-1080p30-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-h264-1080p30-firefox-b
+.. dropdown:: raptor-youtube-playback-h264-1080p30-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-h264-1080p30-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -343,11 +343,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-h264-1080p60-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-h264-1080p60-firefox-b
+.. dropdown:: raptor-youtube-playback-h264-1080p60-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-h264-1080p60-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -360,11 +360,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-h264-full-1080p30-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-h264-full-1080p30-firefox-b
+.. dropdown:: raptor-youtube-playback-h264-full-1080p30-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-h264-full-1080p30-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -378,11 +378,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-h264-full-1080p60-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-h264-full-1080p60-firefox-b
+.. dropdown:: raptor-youtube-playback-h264-full-1080p60-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-h264-full-1080p60-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -396,11 +396,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-v9-1080p30-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-v9-1080p30-firefox-b
+.. dropdown:: raptor-youtube-playback-v9-1080p30-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-v9-1080p30-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -413,11 +413,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-v9-1080p60-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-v9-1080p60-firefox-b
+.. dropdown:: raptor-youtube-playback-v9-1080p60-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-v9-1080p60-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -430,11 +430,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-v9-full-1080p30-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-v9-full-1080p30-firefox-b
+.. dropdown:: raptor-youtube-playback-v9-full-1080p30-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-v9-full-1080p30-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -448,11 +448,11 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
 
 
-.. dropdown:: raptor-youtube-playback-v9-full-1080p60-firefox (FF)
-   :container: + anchor-id-raptor-youtube-playback-v9-full-1080p60-firefox-b
+.. dropdown:: raptor-youtube-playback-v9-full-1080p60-datalus (FF)
+   :container: + anchor-id-raptor-youtube-playback-v9-full-1080p60-datalus-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 20
@@ -470,7 +470,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-speedometer-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -484,42 +484,42 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
 
    * **alert threshold**: 2.0
    * **apps**: fenix, geckoview, refbrow, chrome-m
@@ -536,49 +536,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: None
+            * browsertime-benchmark-datalus-speedometer-e10s: None
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-speedometer-e10s: None
             * browsertime-benchmark-chromium-speedometer-e10s: None
-            * browsertime-benchmark-firefox-speedometer-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-speedometer-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-speedometer-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-speedometer-fis-e10s: mozilla-central
 
 
 .. dropdown:: stylebench (FF, CH, CU)
    :container: + anchor-id-stylebench-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -592,49 +592,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: None
+            * browsertime-benchmark-datalus-stylebench-e10s: None
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: None
+            * browsertime-benchmark-datalus-stylebench-e10s: None
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-stylebench-e10s: None
             * browsertime-benchmark-chromium-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-stylebench-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-stylebench-e10s: None
             * browsertime-benchmark-chromium-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-e10s: trunk
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-stylebench-e10s: trunk
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-stylebench-e10s: None
             * browsertime-benchmark-chromium-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-stylebench-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: None
+            * browsertime-benchmark-datalus-stylebench-e10s: None
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-stylebench-e10s: None
             * browsertime-benchmark-chromium-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: None
+            * browsertime-benchmark-datalus-stylebench-e10s: None
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: None
+            * browsertime-benchmark-datalus-stylebench-e10s: None
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-stylebench-e10s: None
             * browsertime-benchmark-chromium-stylebench-e10s: None
-            * browsertime-benchmark-firefox-stylebench-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-stylebench-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-stylebench-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-stylebench-fis-e10s: mozilla-central
 
 
 .. dropdown:: sunspider (FF, CH, CU)
    :container: + anchor-id-sunspider-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -646,42 +646,42 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: None
+            * browsertime-benchmark-datalus-sunspider-e10s: None
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: None
+            * browsertime-benchmark-datalus-sunspider-e10s: None
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-sunspider-e10s: None
             * browsertime-benchmark-chromium-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-sunspider-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-sunspider-e10s: None
             * browsertime-benchmark-chromium-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-e10s: trunk
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-sunspider-e10s: trunk
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-sunspider-e10s: None
             * browsertime-benchmark-chromium-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-sunspider-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: None
+            * browsertime-benchmark-datalus-sunspider-e10s: None
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-sunspider-e10s: None
             * browsertime-benchmark-chromium-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: None
+            * browsertime-benchmark-datalus-sunspider-e10s: None
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: None
+            * browsertime-benchmark-datalus-sunspider-e10s: None
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-sunspider-e10s: None
             * browsertime-benchmark-chromium-sunspider-e10s: None
-            * browsertime-benchmark-firefox-sunspider-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-sunspider-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-sunspider-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-sunspider-fis-e10s: mozilla-central
 
 
 .. dropdown:: unity-webgl (FF, CH, CU, FE, RB, FE, CH-M)
@@ -701,45 +701,45 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **fetch task**: unity-webgl
    * **gecko profile entries**: 8000000
@@ -752,49 +752,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-e10s: None
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-unity-webgl-e10s: None
             * browsertime-benchmark-chromium-unity-webgl-e10s: None
-            * browsertime-benchmark-firefox-unity-webgl-e10s: autoland
-            * browsertime-benchmark-firefox-unity-webgl-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-unity-webgl-e10s: autoland
+            * browsertime-benchmark-datalus-unity-webgl-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-godot (FF, CH, CU)
    :container: + anchor-id-wasm-godot-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -807,49 +807,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-godot-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-godot-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-godot-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-godot-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-godot-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-godot-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-godot-baseline (FF)
    :container: + anchor-id-wasm-godot-baseline-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -863,39 +863,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-baseline-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-godot-optimizing (FF)
    :container: + anchor-id-wasm-godot-optimizing-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 8000000
    * **gecko profile interval**: 1
@@ -909,39 +909,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-godot-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-godot-optimizing-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-misc (FF, CH, CU)
    :container: + anchor-id-wasm-misc-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **fetch task**: wasm-misc
    * **gecko profile entries**: 4000000
@@ -954,49 +954,49 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-misc-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-misc-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-misc-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-misc-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-wasm-chrome-wasm-misc-e10s: None
             * browsertime-benchmark-wasm-chromium-wasm-misc-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-misc-baseline (FF)
    :container: + anchor-id-wasm-misc-baseline-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **fetch task**: wasm-misc
    * **gecko profile entries**: 4000000
@@ -1010,39 +1010,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-baseline-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-baseline-fis-e10s: mozilla-central
 
 
 .. dropdown:: wasm-misc-optimizing (FF)
    :container: + anchor-id-wasm-misc-optimizing-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **fetch task**: wasm-misc
    * **gecko profile entries**: 4000000
@@ -1056,39 +1056,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: ms
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: None
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: None
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-wasm-firefox-wasm-misc-optimizing-fis-e10s: mozilla-central
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-wasm-datalus-wasm-misc-optimizing-fis-e10s: mozilla-central
 
 
 .. dropdown:: webaudio (FF, CH, CU)
    :container: + anchor-id-webaudio-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **expected**: pass
    * **gecko profile entries**: 4000000
    * **gecko profile interval**: 1
@@ -1100,42 +1100,42 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **unit**: score
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-benchmark-firefox-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: None
+            * browsertime-benchmark-datalus-webaudio-e10s: None
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-benchmark-firefox-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: None
+            * browsertime-benchmark-datalus-webaudio-e10s: None
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-benchmark-chrome-webaudio-e10s: None
             * browsertime-benchmark-chromium-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-webaudio-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-benchmark-chrome-webaudio-e10s: None
             * browsertime-benchmark-chromium-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-e10s: trunk
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-webaudio-e10s: trunk
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-benchmark-chrome-webaudio-e10s: None
             * browsertime-benchmark-chromium-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-webaudio-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-benchmark-firefox-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: None
+            * browsertime-benchmark-datalus-webaudio-e10s: None
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-benchmark-chrome-webaudio-e10s: None
             * browsertime-benchmark-chromium-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: None
+            * browsertime-benchmark-datalus-webaudio-e10s: None
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-benchmark-firefox-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: None
+            * browsertime-benchmark-datalus-webaudio-e10s: None
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-benchmark-chrome-webaudio-e10s: None
             * browsertime-benchmark-chromium-webaudio-e10s: None
-            * browsertime-benchmark-firefox-webaudio-e10s: mozilla-beta, trunk
-            * browsertime-benchmark-firefox-webaudio-fis-e10s: mozilla-central
+            * browsertime-benchmark-datalus-webaudio-e10s: mozilla-beta, trunk
+            * browsertime-benchmark-datalus-webaudio-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback (FF, GV, FE, RB, CH)
@@ -1143,7 +1143,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
 
    * **alert on**: H264.1080p30@1X_dropped_frames, H264.1080p60@1X_dropped_frames, H264.1440p30@1X_dropped_frames, H264.144p15@1X_dropped_frames, H264.2160p30@1X_dropped_frames, H264.240p30@1X_dropped_frames, H264.360p30@1X_dropped_frames, H264.480p30@1X_dropped_frames, H264.720p30@1X_dropped_frames, H264.720p60@1X_dropped_frames, VP9.1080p30@1X_dropped_frames, VP9.1080p60@1X_dropped_frames, VP9.1440p30@1X_dropped_frames, VP9.1440p60@1X_dropped_frames, VP9.144p30@1X_dropped_frames, VP9.2160p30@1X_dropped_frames, VP9.2160p60@1X_dropped_frames, VP9.240p30@1X_dropped_frames, VP9.360p30@1X_dropped_frames, VP9.480p30@1X_dropped_frames, VP9.720p30@1X_dropped_frames, VP9.720p60@1X_dropped_frames
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix,refbrow, chrome
+   * **apps**: datalus, geckoview, fenix,refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1163,7 +1163,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-av1-sfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1179,15 +1179,15 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-av1-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-av1-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-av1-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-av1-sfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-h264-1080p30 (FF)
    :container: + anchor-id-youtube-playback-h264-1080p30-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1207,7 +1207,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-h264-1080p60-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1227,7 +1227,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-h264-full-1080p30-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1248,7 +1248,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-h264-full-1080p60-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1269,7 +1269,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-h264-sfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1285,32 +1285,32 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-h264-sfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-hfr (FF , GV, FE, RB, CH)
@@ -1318,7 +1318,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
 
    * **alert on**: H2641080p60fps@1X_dropped_frames, H264720p60fps@1X_dropped_frames
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1334,39 +1334,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-hfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-v9-1080p30 (FF)
    :container: + anchor-id-youtube-playback-v9-1080p30-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1386,7 +1386,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-v9-1080p60-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1406,7 +1406,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-v9-full-1080p30-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1427,7 +1427,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-v9-full-1080p60-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1448,7 +1448,7 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    :container: + anchor-id-youtube-playback-vp9-sfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1464,39 +1464,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-vp9-sfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-widevine-h264-sfr (FF , GV, FE, RB, CH)
    :container: + anchor-id-youtube-playback-widevine-h264-sfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1513,39 +1513,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-h264-sfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-widevine-hfr (FF , GV, FE, RB, CH)
    :container: + anchor-id-youtube-playback-widevine-hfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1562,39 +1562,39 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-hfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-hfr-fis-e10s: mozilla-central
 
 
 .. dropdown:: youtube-playback-widevine-vp9-sfr (FF , GV, FE, RB, CH)
    :container: + anchor-id-youtube-playback-widevine-vp9-sfr-b
 
    * **alert threshold**: 2.0
-   * **apps**: firefox, geckoview, fenix, refbrow, chrome
+   * **apps**: datalus, geckoview, fenix, refbrow, chrome
    * **expected**: pass
    * **gecko profile entries**: 50000000
    * **gecko profile interval**: 1000
@@ -1611,32 +1611,32 @@ Standard benchmarks are third-party tests (i.e. Speedometer) that we have integr
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: None
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: None
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
-            * browsertime-firefox-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-e10s: mozilla-central
+            * browsertime-datalus-youtube-playback-widevine-vp9-sfr-fis-e10s: mozilla-central
 
 
 
@@ -1650,7 +1650,7 @@ Browsertime tests that use a custom pageload test script. These use the pageload
    * **accept zero vismet**: true
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **browsertime args**: --pageCompleteWaitTime=1000 --pageCompleteCheckInactivity=true
    * **expected**: pass
@@ -1661,7 +1661,7 @@ Browsertime tests that use a custom pageload test script. These use the pageload
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-proc-switch.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-proc-switch.manifest
    * **playback version**: 5.1.1
    * **test script**: process_switch.js
    * **test url**: `<https://mozilla.seanfeng.dev/files/red.html,https://mozilla.pettay.fi/moztests/blue.html>`__
@@ -1670,32 +1670,32 @@ Browsertime tests that use a custom pageload test script. These use the pageload
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: None
-            * browsertime-custom-firefox-process-switch-fis-e10s: None
+            * browsertime-custom-datalus-process-switch-e10s: None
+            * browsertime-custom-datalus-process-switch-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: None
-            * browsertime-custom-firefox-process-switch-fis-e10s: None
+            * browsertime-custom-datalus-process-switch-e10s: None
+            * browsertime-custom-datalus-process-switch-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: mozilla-central
-            * browsertime-custom-firefox-process-switch-fis-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: mozilla-central
-            * browsertime-custom-firefox-process-switch-fis-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: mozilla-central
-            * browsertime-custom-firefox-process-switch-fis-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: None
-            * browsertime-custom-firefox-process-switch-fis-e10s: None
+            * browsertime-custom-datalus-process-switch-e10s: None
+            * browsertime-custom-datalus-process-switch-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: None
-            * browsertime-custom-firefox-process-switch-fis-e10s: None
+            * browsertime-custom-datalus-process-switch-e10s: None
+            * browsertime-custom-datalus-process-switch-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: None
-            * browsertime-custom-firefox-process-switch-fis-e10s: None
+            * browsertime-custom-datalus-process-switch-e10s: None
+            * browsertime-custom-datalus-process-switch-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-custom-firefox-process-switch-e10s: mozilla-central
-            * browsertime-custom-firefox-process-switch-fis-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-e10s: mozilla-central
+            * browsertime-custom-datalus-process-switch-fis-e10s: mozilla-central
 
 
 .. dropdown:: welcome (Measures pageload metrics for the first-install about:welcome page)
@@ -1703,7 +1703,7 @@ Browsertime tests that use a custom pageload test script. These use the pageload
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -1713,7 +1713,7 @@ Browsertime tests that use a custom pageload test script. These use the pageload
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-welcome.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-welcome.manifest
    * **playback version**: 5.1.1
    * **test script**: welcome.js
    * **test url**: `<about:welcome>`__
@@ -1722,45 +1722,45 @@ Browsertime tests that use a custom pageload test script. These use the pageload
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: None
-            * browsertime-first-install-firefox-welcome-fis-e10s: None
+            * browsertime-first-install-datalus-welcome-e10s: None
+            * browsertime-first-install-datalus-welcome-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: None
-            * browsertime-first-install-firefox-welcome-fis-e10s: None
+            * browsertime-first-install-datalus-welcome-e10s: None
+            * browsertime-first-install-datalus-welcome-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: autoland, mozilla-central
-            * browsertime-first-install-firefox-welcome-fis-e10s: mozilla-central
+            * browsertime-first-install-datalus-welcome-e10s: autoland, mozilla-central
+            * browsertime-first-install-datalus-welcome-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: autoland, mozilla-central
-            * browsertime-first-install-firefox-welcome-fis-e10s: mozilla-central
+            * browsertime-first-install-datalus-welcome-e10s: autoland, mozilla-central
+            * browsertime-first-install-datalus-welcome-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: autoland, mozilla-central
-            * browsertime-first-install-firefox-welcome-fis-e10s: mozilla-central
+            * browsertime-first-install-datalus-welcome-e10s: autoland, mozilla-central
+            * browsertime-first-install-datalus-welcome-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: None
-            * browsertime-first-install-firefox-welcome-fis-e10s: None
+            * browsertime-first-install-datalus-welcome-e10s: None
+            * browsertime-first-install-datalus-welcome-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: None
-            * browsertime-first-install-firefox-welcome-fis-e10s: None
+            * browsertime-first-install-datalus-welcome-e10s: None
+            * browsertime-first-install-datalus-welcome-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: None
-            * browsertime-first-install-firefox-welcome-fis-e10s: None
+            * browsertime-first-install-datalus-welcome-e10s: None
+            * browsertime-first-install-datalus-welcome-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
-            * browsertime-first-install-firefox-welcome-e10s: autoland, mozilla-central
-            * browsertime-first-install-firefox-welcome-fis-e10s: mozilla-central
+            * browsertime-first-install-datalus-welcome-e10s: autoland, mozilla-central
+            * browsertime-first-install-datalus-welcome-fis-e10s: mozilla-central
 
 
 
 Desktop
 -------
-Tests for page-load performance. The links direct to the actual websites that are being tested. (WX: WebExtension, BT: Browsertime, FF: Firefox, CH: Chrome, CU: Chromium)
+Tests for page-load performance. The links direct to the actual websites that are being tested. (WX: WebExtension, BT: Browsertime, FF: Datalus, CH: Chrome, CU: Chromium)
 
 .. dropdown:: amazon (BT, FF, CH, CU)
    :container: + anchor-id-amazon-d
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -1770,7 +1770,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-amazon.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-amazon.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.amazon.com/s?k=laptop&ref=nb_sb_noss_1>`__
    * **type**: pageload
@@ -1778,74 +1778,74 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-amazon-e10s: None
             * browsertime-tp6-essential-chromium-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-amazon-e10s: None
             * browsertime-tp6-live-chromium-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-profiling-firefox-amazon-e10s: mozilla-central
-            * browsertime-tp6-profiling-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-profiling-datalus-amazon-e10s: mozilla-central
+            * browsertime-tp6-profiling-datalus-amazon-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-amazon-e10s: None
             * browsertime-tp6-essential-chromium-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-e10s: trunk
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-amazon-e10s: trunk
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: trunk
             * browsertime-tp6-live-chrome-amazon-e10s: None
             * browsertime-tp6-live-chromium-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-amazon-e10s: None
             * browsertime-tp6-essential-chromium-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-amazon-e10s: None
             * browsertime-tp6-live-chromium-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-profiling-firefox-amazon-e10s: mozilla-central
-            * browsertime-tp6-profiling-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-profiling-datalus-amazon-e10s: mozilla-central
+            * browsertime-tp6-profiling-datalus-amazon-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-amazon-e10s: None
             * browsertime-tp6-essential-chromium-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: None
             * browsertime-tp6-live-chrome-amazon-e10s: None
             * browsertime-tp6-live-chromium-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-e10s: None
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-amazon-e10s: None
             * browsertime-tp6-essential-chromium-amazon-e10s: None
-            * browsertime-tp6-essential-firefox-amazon-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-amazon-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-amazon-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-amazon-e10s: None
             * browsertime-tp6-live-chromium-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-e10s: None
-            * browsertime-tp6-live-firefox-amazon-fis-e10s: None
+            * browsertime-tp6-live-datalus-amazon-e10s: None
+            * browsertime-tp6-live-datalus-amazon-fis-e10s: None
 
 
 .. dropdown:: bing-search (BT, FF, CH, CU)
@@ -1853,7 +1853,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -1863,7 +1863,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-bing-search.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-bing-search.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.bing.com/search?q=barack+obama>`__
    * **type**: pageload
@@ -1871,70 +1871,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-bing-search-e10s: None
             * browsertime-tp6-essential-chromium-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-bing-search-e10s: None
             * browsertime-tp6-live-chromium-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-bing-search-e10s: None
             * browsertime-tp6-essential-chromium-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-e10s: trunk
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-bing-search-e10s: trunk
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: trunk
             * browsertime-tp6-live-chrome-bing-search-e10s: None
             * browsertime-tp6-live-chromium-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-bing-search-e10s: None
             * browsertime-tp6-essential-chromium-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-bing-search-e10s: None
             * browsertime-tp6-live-chromium-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-bing-search-e10s: None
             * browsertime-tp6-essential-chromium-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: None
             * browsertime-tp6-live-chrome-bing-search-e10s: None
             * browsertime-tp6-live-chromium-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-e10s: None
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-bing-search-e10s: None
             * browsertime-tp6-essential-chromium-bing-search-e10s: None
-            * browsertime-tp6-essential-firefox-bing-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-bing-search-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-bing-search-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-bing-search-e10s: None
             * browsertime-tp6-live-chromium-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-e10s: None
-            * browsertime-tp6-live-firefox-bing-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-e10s: None
+            * browsertime-tp6-live-datalus-bing-search-fis-e10s: None
 
 
 .. dropdown:: buzzfeed (BT, FF, CH, CU)
@@ -1942,7 +1942,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -1952,7 +1952,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-buzzfeed.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-buzzfeed.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.buzzfeed.com/quizzes>`__
    * **test url**: `<https://www.buzzfeed.com/>`__
@@ -1961,42 +1961,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-buzzfeed-e10s: None
             * browsertime-tp6-chromium-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-buzzfeed-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-buzzfeed-e10s: None
             * browsertime-tp6-chromium-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-e10s: trunk
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-buzzfeed-e10s: trunk
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-buzzfeed-e10s: None
             * browsertime-tp6-chromium-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-buzzfeed-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-buzzfeed-e10s: None
             * browsertime-tp6-chromium-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-e10s: None
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-buzzfeed-e10s: None
             * browsertime-tp6-chromium-buzzfeed-e10s: None
-            * browsertime-tp6-firefox-buzzfeed-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-buzzfeed-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-buzzfeed-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-buzzfeed-fis-e10s: mozilla-central
 
 
 .. dropdown:: cnn (BT, FF, CH, CU)
@@ -2004,7 +2004,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2014,7 +2014,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-cnn.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-cnn.manifest
    * **playback version**: 6.0.2
    * **preferences**: {"media.autoplay.default": 5, "media.autoplay.ask-permission": true, "media.autoplay.blocking_policy": 1, "media.autoplay.block-webaudio": true, "media.allowed-to-play.enabled": false, "media.block-autoplay-until-in-foreground": true}
    * **secondary url**: `<https://www.cnn.com/weather>`__
@@ -2024,60 +2024,60 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
 
 
 .. dropdown:: ebay (BT, FF, CH, CU)
@@ -2085,7 +2085,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2095,7 +2095,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-darwin-firefox-ebay.manifest
+   * **playback pageset manifest**: mitm6-darwin-datalus-ebay.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.ebay.com/deals>`__
    * **test url**: `<https://www.ebay.com/>`__
@@ -2104,70 +2104,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-fis-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-datalus-ebay-e10s: None
+            * browsertime-tp6-datalus-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-fis-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-datalus-ebay-e10s: None
+            * browsertime-tp6-datalus-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-ebay-e10s: None
             * browsertime-tp6-chromium-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-ebay-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-ebay-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-ebay-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-ebay-e10s: None
             * browsertime-tp6-live-chromium-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-ebay-e10s: None
             * browsertime-tp6-chromium-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-e10s: trunk
-            * browsertime-tp6-firefox-ebay-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-ebay-e10s: trunk
+            * browsertime-tp6-datalus-ebay-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-ebay-e10s: None
             * browsertime-tp6-live-chromium-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-ebay-e10s: None
             * browsertime-tp6-chromium-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-ebay-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-ebay-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-ebay-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-ebay-e10s: None
             * browsertime-tp6-live-chromium-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-fis-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-datalus-ebay-e10s: None
+            * browsertime-tp6-datalus-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-ebay-e10s: None
             * browsertime-tp6-chromium-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-datalus-ebay-e10s: None
+            * browsertime-tp6-datalus-ebay-fis-e10s: None
             * browsertime-tp6-live-chrome-ebay-e10s: None
             * browsertime-tp6-live-chromium-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-fis-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-datalus-ebay-e10s: None
+            * browsertime-tp6-datalus-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-ebay-e10s: None
             * browsertime-tp6-chromium-ebay-e10s: None
-            * browsertime-tp6-firefox-ebay-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-ebay-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-ebay-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-ebay-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-ebay-e10s: None
             * browsertime-tp6-live-chromium-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-e10s: None
-            * browsertime-tp6-live-firefox-ebay-fis-e10s: None
+            * browsertime-tp6-live-datalus-ebay-e10s: None
+            * browsertime-tp6-live-datalus-ebay-fis-e10s: None
 
 
 .. dropdown:: espn (BT, FF, CH, CU)
@@ -2175,7 +2175,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2185,7 +2185,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-espn.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-espn.manifest
    * **playback version**: 5.1.1
    * **test url**: `<http://www.espn.com/nba/story/_/page/allstarweekend25788027/the-comparison-lebron-james-michael-jordan-their-own-words>`__
    * **type**: pageload
@@ -2193,42 +2193,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-espn-e10s: None
-            * browsertime-tp6-firefox-espn-fis-e10s: None
+            * browsertime-tp6-datalus-espn-e10s: None
+            * browsertime-tp6-datalus-espn-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-espn-e10s: None
-            * browsertime-tp6-firefox-espn-fis-e10s: None
+            * browsertime-tp6-datalus-espn-e10s: None
+            * browsertime-tp6-datalus-espn-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-espn-e10s: None
             * browsertime-tp6-chromium-espn-e10s: None
-            * browsertime-tp6-firefox-espn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-espn-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-espn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-espn-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-espn-e10s: None
             * browsertime-tp6-chromium-espn-e10s: None
-            * browsertime-tp6-firefox-espn-e10s: trunk
-            * browsertime-tp6-firefox-espn-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-espn-e10s: trunk
+            * browsertime-tp6-datalus-espn-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-espn-e10s: None
             * browsertime-tp6-chromium-espn-e10s: None
-            * browsertime-tp6-firefox-espn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-espn-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-espn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-espn-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-espn-e10s: None
-            * browsertime-tp6-firefox-espn-fis-e10s: None
+            * browsertime-tp6-datalus-espn-e10s: None
+            * browsertime-tp6-datalus-espn-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-espn-e10s: None
             * browsertime-tp6-chromium-espn-e10s: None
-            * browsertime-tp6-firefox-espn-e10s: None
-            * browsertime-tp6-firefox-espn-fis-e10s: None
+            * browsertime-tp6-datalus-espn-e10s: None
+            * browsertime-tp6-datalus-espn-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-espn-e10s: None
-            * browsertime-tp6-firefox-espn-fis-e10s: None
+            * browsertime-tp6-datalus-espn-e10s: None
+            * browsertime-tp6-datalus-espn-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-espn-e10s: None
             * browsertime-tp6-chromium-espn-e10s: None
-            * browsertime-tp6-firefox-espn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-espn-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-espn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-espn-fis-e10s: mozilla-central
 
 
 .. dropdown:: expedia (BT, FF, CH, CU)
@@ -2236,7 +2236,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2246,7 +2246,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-expedia.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-expedia.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.expedia.com/Activities>`__
    * **test url**: `<https://expedia.com/Hotel-Search?destination=New+York%2C+New+York&latLong=40.756680%2C-73.986470&regionId=178293&startDate=&endDate=&rooms=1&_xpid=11905%7C1&adults=2>`__
@@ -2255,42 +2255,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
 
 
 .. dropdown:: facebook (BT, FF, CH, CU)
@@ -2298,7 +2298,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2308,7 +2308,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-facebook.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-facebook.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.facebook.com/marketplace/?ref=bookmark>`__
    * **test url**: `<https://www.facebook.com>`__
@@ -2317,70 +2317,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-fis-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-datalus-facebook-e10s: None
+            * browsertime-tp6-datalus-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-fis-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-datalus-facebook-e10s: None
+            * browsertime-tp6-datalus-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-facebook-e10s: None
             * browsertime-tp6-chromium-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-facebook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-facebook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-facebook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-facebook-e10s: None
             * browsertime-tp6-live-chromium-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-facebook-e10s: None
             * browsertime-tp6-chromium-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-e10s: trunk
-            * browsertime-tp6-firefox-facebook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-facebook-e10s: trunk
+            * browsertime-tp6-datalus-facebook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-facebook-e10s: None
             * browsertime-tp6-live-chromium-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-facebook-e10s: None
             * browsertime-tp6-chromium-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-facebook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-facebook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-facebook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-facebook-e10s: None
             * browsertime-tp6-live-chromium-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-fis-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-datalus-facebook-e10s: None
+            * browsertime-tp6-datalus-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-facebook-e10s: None
             * browsertime-tp6-chromium-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-datalus-facebook-e10s: None
+            * browsertime-tp6-datalus-facebook-fis-e10s: None
             * browsertime-tp6-live-chrome-facebook-e10s: None
             * browsertime-tp6-live-chromium-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-fis-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-datalus-facebook-e10s: None
+            * browsertime-tp6-datalus-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-facebook-e10s: None
             * browsertime-tp6-chromium-facebook-e10s: None
-            * browsertime-tp6-firefox-facebook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-facebook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-facebook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-facebook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-facebook-e10s: None
             * browsertime-tp6-live-chromium-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-e10s: None
-            * browsertime-tp6-live-firefox-facebook-fis-e10s: None
+            * browsertime-tp6-live-datalus-facebook-e10s: None
+            * browsertime-tp6-live-datalus-facebook-fis-e10s: None
 
 
 .. dropdown:: fandom (BT, FF, CH, CU)
@@ -2388,7 +2388,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2398,7 +2398,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-fandom.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-fandom.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.fandom.com/articles/fallout-76-will-live-and-die-on-the-creativity-of-its-playerbase>`__
    * **type**: pageload
@@ -2406,70 +2406,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-fandom-e10s: None
             * browsertime-tp6-essential-chromium-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-fandom-e10s: None
             * browsertime-tp6-live-chromium-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-fandom-e10s: None
             * browsertime-tp6-essential-chromium-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-e10s: trunk
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-fandom-e10s: trunk
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: trunk
             * browsertime-tp6-live-chrome-fandom-e10s: None
             * browsertime-tp6-live-chromium-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-fandom-e10s: None
             * browsertime-tp6-essential-chromium-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-fandom-e10s: None
             * browsertime-tp6-live-chromium-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-fandom-e10s: None
             * browsertime-tp6-essential-chromium-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: None
             * browsertime-tp6-live-chrome-fandom-e10s: None
             * browsertime-tp6-live-chromium-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-e10s: None
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-fandom-e10s: None
             * browsertime-tp6-essential-chromium-fandom-e10s: None
-            * browsertime-tp6-essential-firefox-fandom-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-fandom-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-fandom-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-fandom-e10s: None
             * browsertime-tp6-live-chromium-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-e10s: None
-            * browsertime-tp6-live-firefox-fandom-fis-e10s: None
+            * browsertime-tp6-live-datalus-fandom-e10s: None
+            * browsertime-tp6-live-datalus-fandom-fis-e10s: None
 
 
 .. dropdown:: google-docs (BT, FF, CH, CU)
@@ -2477,7 +2477,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2488,7 +2488,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-google-docs.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-google-docs.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://docs.google.com/document/d/1vUnn0ePU-ynArE1OdxyEHXR2G0sl74ja_st_4OOzlgE/preview>`__
    * **test url**: `<https://docs.google.com/document/d/1US-07msg12slQtI_xchzYxcKlTs6Fp7WqIc6W5GK5M8/edit?usp=sharing>`__
@@ -2497,70 +2497,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-e10s: None
+            * browsertime-tp6-datalus-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-e10s: None
+            * browsertime-tp6-datalus-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-e10s: None
             * browsertime-tp6-chromium-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-docs-e10s: None
             * browsertime-tp6-live-chromium-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-e10s: None
             * browsertime-tp6-chromium-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-e10s: trunk
-            * browsertime-tp6-firefox-google-docs-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-e10s: trunk
+            * browsertime-tp6-datalus-google-docs-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-docs-e10s: None
             * browsertime-tp6-live-chromium-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-e10s: None
             * browsertime-tp6-chromium-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-docs-e10s: None
             * browsertime-tp6-live-chromium-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-e10s: None
+            * browsertime-tp6-datalus-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-e10s: None
             * browsertime-tp6-chromium-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-e10s: None
+            * browsertime-tp6-datalus-google-docs-fis-e10s: None
             * browsertime-tp6-live-chrome-google-docs-e10s: None
             * browsertime-tp6-live-chromium-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-e10s: None
+            * browsertime-tp6-datalus-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-e10s: None
             * browsertime-tp6-chromium-google-docs-e10s: None
-            * browsertime-tp6-firefox-google-docs-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-docs-e10s: None
             * browsertime-tp6-live-chromium-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-e10s: None
-            * browsertime-tp6-live-firefox-google-docs-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-e10s: None
+            * browsertime-tp6-live-datalus-google-docs-fis-e10s: None
 
 
 .. dropdown:: google-docs-canvas (BT, FF, CH, CU)
@@ -2568,7 +2568,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2578,7 +2578,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-google-docs-canvas.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-google-docs-canvas.manifest
    * **playback version**: 6.0.2
    * **test url**: `<https://docs.google.com/document/d/1vUnn0ePU-ynArE1OdxyEHXR2G0sl74ja_st_4OOzlgE/preview>`__
    * **type**: pageload
@@ -2586,42 +2586,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-canvas-e10s: None
             * browsertime-tp6-chromium-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-canvas-e10s: None
             * browsertime-tp6-chromium-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: trunk
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: trunk
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-canvas-e10s: None
             * browsertime-tp6-chromium-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-canvas-e10s: None
             * browsertime-tp6-chromium-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: None
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-docs-canvas-e10s: None
             * browsertime-tp6-chromium-google-docs-canvas-e10s: None
-            * browsertime-tp6-firefox-google-docs-canvas-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-docs-canvas-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-docs-canvas-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-docs-canvas-fis-e10s: mozilla-central
 
 
 .. dropdown:: google-mail (BT, FF, CH, CU)
@@ -2629,7 +2629,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2639,7 +2639,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-google-mail.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-google-mail.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://mail.google.com/>`__
    * **type**: pageload
@@ -2647,70 +2647,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-datalus-google-mail-e10s: None
+            * browsertime-tp6-datalus-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-datalus-google-mail-e10s: None
+            * browsertime-tp6-datalus-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-mail-e10s: None
             * browsertime-tp6-chromium-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-mail-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-mail-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-mail-e10s: None
             * browsertime-tp6-live-chromium-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-mail-e10s: None
             * browsertime-tp6-chromium-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-e10s: trunk
-            * browsertime-tp6-firefox-google-mail-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-mail-e10s: trunk
+            * browsertime-tp6-datalus-google-mail-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-mail-e10s: None
             * browsertime-tp6-live-chromium-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-mail-e10s: None
             * browsertime-tp6-chromium-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-mail-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-mail-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-mail-e10s: None
             * browsertime-tp6-live-chromium-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-datalus-google-mail-e10s: None
+            * browsertime-tp6-datalus-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-google-mail-e10s: None
             * browsertime-tp6-chromium-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-datalus-google-mail-e10s: None
+            * browsertime-tp6-datalus-google-mail-fis-e10s: None
             * browsertime-tp6-live-chrome-google-mail-e10s: None
             * browsertime-tp6-live-chromium-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-datalus-google-mail-e10s: None
+            * browsertime-tp6-datalus-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-mail-e10s: None
             * browsertime-tp6-chromium-google-mail-e10s: None
-            * browsertime-tp6-firefox-google-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-mail-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-mail-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-mail-e10s: None
             * browsertime-tp6-live-chromium-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-e10s: None
-            * browsertime-tp6-live-firefox-google-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-e10s: None
+            * browsertime-tp6-live-datalus-google-mail-fis-e10s: None
 
 
 .. dropdown:: google-search (BT, FF, CH, CU)
@@ -2718,7 +2718,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2728,7 +2728,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-google-search.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-google-search.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.google.com/search?hl=en&q=barack+obama&cad=h>`__
    * **type**: pageload
@@ -2736,70 +2736,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-datalus-google-search-e10s: None
+            * browsertime-tp6-datalus-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-datalus-google-search-e10s: None
+            * browsertime-tp6-datalus-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-search-e10s: None
             * browsertime-tp6-chromium-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-search-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-search-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-search-e10s: None
             * browsertime-tp6-live-chromium-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-search-e10s: None
             * browsertime-tp6-chromium-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-e10s: trunk
-            * browsertime-tp6-firefox-google-search-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-search-e10s: trunk
+            * browsertime-tp6-datalus-google-search-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-search-e10s: None
             * browsertime-tp6-live-chromium-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-search-e10s: None
             * browsertime-tp6-chromium-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-search-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-search-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-search-e10s: None
             * browsertime-tp6-live-chromium-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-datalus-google-search-e10s: None
+            * browsertime-tp6-datalus-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-google-search-e10s: None
             * browsertime-tp6-chromium-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-datalus-google-search-e10s: None
+            * browsertime-tp6-datalus-google-search-fis-e10s: None
             * browsertime-tp6-live-chrome-google-search-e10s: None
             * browsertime-tp6-live-chromium-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-datalus-google-search-e10s: None
+            * browsertime-tp6-datalus-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-google-search-e10s: None
             * browsertime-tp6-chromium-google-search-e10s: None
-            * browsertime-tp6-firefox-google-search-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-google-search-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-google-search-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-google-search-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-google-search-e10s: None
             * browsertime-tp6-live-chromium-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-e10s: None
-            * browsertime-tp6-live-firefox-google-search-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-search-e10s: None
+            * browsertime-tp6-live-datalus-google-search-fis-e10s: None
 
 
 .. dropdown:: google-slides (BT, FF, CH, CU)
@@ -2807,7 +2807,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2817,7 +2817,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-google-slides.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-google-slides.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://docs.google.com/document/d/1vUnn0ePU-ynArE1OdxyEHXR2G0sl74ja_st_4OOzlgE/preview>`__
    * **test url**: `<https://docs.google.com/presentation/d/1Ici0ceWwpFvmIb3EmKeWSq_vAQdmmdFcWqaiLqUkJng/edit?usp=sharing>`__
@@ -2826,70 +2826,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-google-slides-e10s: None
             * browsertime-tp6-essential-chromium-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-google-slides-e10s: None
             * browsertime-tp6-live-chromium-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-google-slides-e10s: None
             * browsertime-tp6-essential-chromium-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-e10s: trunk
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-google-slides-e10s: trunk
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: trunk
             * browsertime-tp6-live-chrome-google-slides-e10s: None
             * browsertime-tp6-live-chromium-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-google-slides-e10s: None
             * browsertime-tp6-essential-chromium-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-google-slides-e10s: None
             * browsertime-tp6-live-chromium-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-google-slides-e10s: None
             * browsertime-tp6-essential-chromium-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: None
             * browsertime-tp6-live-chrome-google-slides-e10s: None
             * browsertime-tp6-live-chromium-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-e10s: None
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-google-slides-e10s: None
             * browsertime-tp6-essential-chromium-google-slides-e10s: None
-            * browsertime-tp6-essential-firefox-google-slides-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-google-slides-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-google-slides-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-google-slides-e10s: None
             * browsertime-tp6-live-chromium-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-e10s: None
-            * browsertime-tp6-live-firefox-google-slides-fis-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-e10s: None
+            * browsertime-tp6-live-datalus-google-slides-fis-e10s: None
 
 
 .. dropdown:: imdb (BT, FF, CH, CU)
@@ -2897,7 +2897,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2907,7 +2907,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-imdb.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-imdb.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.imdb.com/title/tt0084967/episodes/?ref_=tt_ov_epl>`__
    * **test url**: `<https://www.imdb.com/title/tt0084967/?ref_=nv_sr_2>`__
@@ -2916,70 +2916,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-fis-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-datalus-imdb-e10s: None
+            * browsertime-tp6-datalus-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-fis-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-datalus-imdb-e10s: None
+            * browsertime-tp6-datalus-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-imdb-e10s: None
             * browsertime-tp6-chromium-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imdb-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imdb-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imdb-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imdb-e10s: None
             * browsertime-tp6-live-chromium-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-imdb-e10s: None
             * browsertime-tp6-chromium-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-e10s: trunk
-            * browsertime-tp6-firefox-imdb-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imdb-e10s: trunk
+            * browsertime-tp6-datalus-imdb-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imdb-e10s: None
             * browsertime-tp6-live-chromium-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-imdb-e10s: None
             * browsertime-tp6-chromium-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imdb-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imdb-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imdb-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imdb-e10s: None
             * browsertime-tp6-live-chromium-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-fis-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-datalus-imdb-e10s: None
+            * browsertime-tp6-datalus-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-imdb-e10s: None
             * browsertime-tp6-chromium-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-datalus-imdb-e10s: None
+            * browsertime-tp6-datalus-imdb-fis-e10s: None
             * browsertime-tp6-live-chrome-imdb-e10s: None
             * browsertime-tp6-live-chromium-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-fis-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-datalus-imdb-e10s: None
+            * browsertime-tp6-datalus-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-imdb-e10s: None
             * browsertime-tp6-chromium-imdb-e10s: None
-            * browsertime-tp6-firefox-imdb-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imdb-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imdb-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imdb-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imdb-e10s: None
             * browsertime-tp6-live-chromium-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-e10s: None
-            * browsertime-tp6-live-firefox-imdb-fis-e10s: None
+            * browsertime-tp6-live-datalus-imdb-e10s: None
+            * browsertime-tp6-live-datalus-imdb-fis-e10s: None
 
 
 .. dropdown:: imgur (BT, FF, CH, CU)
@@ -2987,7 +2987,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -2997,7 +2997,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-imgur.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-imgur.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://imgur.com/gallery/m5tYJL6>`__
    * **type**: pageload
@@ -3005,70 +3005,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-fis-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-datalus-imgur-e10s: None
+            * browsertime-tp6-datalus-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-fis-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-datalus-imgur-e10s: None
+            * browsertime-tp6-datalus-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-imgur-e10s: None
             * browsertime-tp6-chromium-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imgur-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imgur-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imgur-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imgur-e10s: None
             * browsertime-tp6-live-chromium-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-imgur-e10s: None
             * browsertime-tp6-chromium-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-e10s: trunk
-            * browsertime-tp6-firefox-imgur-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imgur-e10s: trunk
+            * browsertime-tp6-datalus-imgur-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imgur-e10s: None
             * browsertime-tp6-live-chromium-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-imgur-e10s: None
             * browsertime-tp6-chromium-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imgur-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imgur-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imgur-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imgur-e10s: None
             * browsertime-tp6-live-chromium-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-fis-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-datalus-imgur-e10s: None
+            * browsertime-tp6-datalus-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-imgur-e10s: None
             * browsertime-tp6-chromium-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-datalus-imgur-e10s: None
+            * browsertime-tp6-datalus-imgur-fis-e10s: None
             * browsertime-tp6-live-chrome-imgur-e10s: None
             * browsertime-tp6-live-chromium-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-fis-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-datalus-imgur-e10s: None
+            * browsertime-tp6-datalus-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-imgur-e10s: None
             * browsertime-tp6-chromium-imgur-e10s: None
-            * browsertime-tp6-firefox-imgur-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-imgur-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-imgur-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-imgur-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-imgur-e10s: None
             * browsertime-tp6-live-chromium-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-e10s: None
-            * browsertime-tp6-live-firefox-imgur-fis-e10s: None
+            * browsertime-tp6-live-datalus-imgur-e10s: None
+            * browsertime-tp6-live-datalus-imgur-fis-e10s: None
 
 
 .. dropdown:: instagram (BT, FF, CH, CU)
@@ -3076,7 +3076,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3086,7 +3086,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-instagram.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-instagram.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.instagram.com/nobelprize_org/>`__
    * **test url**: `<https://www.instagram.com/>`__
@@ -3095,70 +3095,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-instagram-e10s: None
             * browsertime-tp6-essential-chromium-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-instagram-e10s: None
             * browsertime-tp6-live-chromium-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-instagram-e10s: None
             * browsertime-tp6-essential-chromium-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-e10s: trunk
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-instagram-e10s: trunk
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: trunk
             * browsertime-tp6-live-chrome-instagram-e10s: None
             * browsertime-tp6-live-chromium-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-instagram-e10s: None
             * browsertime-tp6-essential-chromium-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-instagram-e10s: None
             * browsertime-tp6-live-chromium-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-instagram-e10s: None
             * browsertime-tp6-essential-chromium-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: None
             * browsertime-tp6-live-chrome-instagram-e10s: None
             * browsertime-tp6-live-chromium-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-e10s: None
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-instagram-e10s: None
             * browsertime-tp6-essential-chromium-instagram-e10s: None
-            * browsertime-tp6-essential-firefox-instagram-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-instagram-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-instagram-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-instagram-e10s: None
             * browsertime-tp6-live-chromium-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-e10s: None
-            * browsertime-tp6-live-firefox-instagram-fis-e10s: None
+            * browsertime-tp6-live-datalus-instagram-e10s: None
+            * browsertime-tp6-live-datalus-instagram-fis-e10s: None
 
 
 .. dropdown:: linkedin (BT, FF, CH, CU)
@@ -3166,7 +3166,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3176,7 +3176,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-linkedin.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-linkedin.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.linkedin.com/in/thommy-harris-hk-385723106/>`__
    * **test url**: `<https://www.linkedin.com/feed/>`__
@@ -3185,70 +3185,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-fis-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-datalus-linkedin-e10s: None
+            * browsertime-tp6-datalus-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-fis-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-datalus-linkedin-e10s: None
+            * browsertime-tp6-datalus-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-linkedin-e10s: None
             * browsertime-tp6-chromium-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-linkedin-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-linkedin-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-linkedin-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-linkedin-e10s: None
             * browsertime-tp6-live-chromium-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-linkedin-e10s: None
             * browsertime-tp6-chromium-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-e10s: trunk
-            * browsertime-tp6-firefox-linkedin-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-linkedin-e10s: trunk
+            * browsertime-tp6-datalus-linkedin-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-linkedin-e10s: None
             * browsertime-tp6-live-chromium-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-linkedin-e10s: None
             * browsertime-tp6-chromium-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-linkedin-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-linkedin-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-linkedin-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-linkedin-e10s: None
             * browsertime-tp6-live-chromium-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-fis-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-datalus-linkedin-e10s: None
+            * browsertime-tp6-datalus-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-linkedin-e10s: None
             * browsertime-tp6-chromium-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-datalus-linkedin-e10s: None
+            * browsertime-tp6-datalus-linkedin-fis-e10s: None
             * browsertime-tp6-live-chrome-linkedin-e10s: None
             * browsertime-tp6-live-chromium-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-fis-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-datalus-linkedin-e10s: None
+            * browsertime-tp6-datalus-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-linkedin-e10s: None
             * browsertime-tp6-chromium-linkedin-e10s: None
-            * browsertime-tp6-firefox-linkedin-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-linkedin-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-linkedin-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-linkedin-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-linkedin-e10s: None
             * browsertime-tp6-live-chromium-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-e10s: None
-            * browsertime-tp6-live-firefox-linkedin-fis-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-e10s: None
+            * browsertime-tp6-live-datalus-linkedin-fis-e10s: None
 
 
 .. dropdown:: microsoft (BT, FF, CH, CU)
@@ -3256,7 +3256,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3266,7 +3266,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-microsoft.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-microsoft.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://support.microsoft.com/en-us>`__
    * **test url**: `<https://www.microsoft.com/en-us/>`__
@@ -3275,70 +3275,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-fis-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-datalus-microsoft-e10s: None
+            * browsertime-tp6-datalus-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-fis-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-datalus-microsoft-e10s: None
+            * browsertime-tp6-datalus-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-microsoft-e10s: None
             * browsertime-tp6-chromium-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-microsoft-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-microsoft-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-microsoft-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-microsoft-e10s: None
             * browsertime-tp6-live-chromium-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-microsoft-e10s: None
             * browsertime-tp6-chromium-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-e10s: trunk
-            * browsertime-tp6-firefox-microsoft-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-microsoft-e10s: trunk
+            * browsertime-tp6-datalus-microsoft-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-microsoft-e10s: None
             * browsertime-tp6-live-chromium-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-microsoft-e10s: None
             * browsertime-tp6-chromium-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-microsoft-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-microsoft-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-microsoft-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-microsoft-e10s: None
             * browsertime-tp6-live-chromium-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-fis-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-datalus-microsoft-e10s: None
+            * browsertime-tp6-datalus-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-microsoft-e10s: None
             * browsertime-tp6-chromium-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-datalus-microsoft-e10s: None
+            * browsertime-tp6-datalus-microsoft-fis-e10s: None
             * browsertime-tp6-live-chrome-microsoft-e10s: None
             * browsertime-tp6-live-chromium-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-fis-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-datalus-microsoft-e10s: None
+            * browsertime-tp6-datalus-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-microsoft-e10s: None
             * browsertime-tp6-chromium-microsoft-e10s: None
-            * browsertime-tp6-firefox-microsoft-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-microsoft-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-microsoft-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-microsoft-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-microsoft-e10s: None
             * browsertime-tp6-live-chromium-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-e10s: None
-            * browsertime-tp6-live-firefox-microsoft-fis-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-e10s: None
+            * browsertime-tp6-live-datalus-microsoft-fis-e10s: None
 
 
 .. dropdown:: netflix (BT, FF, CH, CU)
@@ -3346,7 +3346,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3356,7 +3356,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-netflix.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-netflix.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.netflix.com/title/699257>`__
    * **test url**: `<https://www.netflix.com/title/80117263>`__
@@ -3365,70 +3365,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-fis-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-datalus-netflix-e10s: None
+            * browsertime-tp6-datalus-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-fis-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-datalus-netflix-e10s: None
+            * browsertime-tp6-datalus-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-netflix-e10s: None
             * browsertime-tp6-chromium-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-netflix-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-netflix-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-netflix-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-netflix-e10s: None
             * browsertime-tp6-live-chromium-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-netflix-e10s: None
             * browsertime-tp6-chromium-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-e10s: trunk
-            * browsertime-tp6-firefox-netflix-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-netflix-e10s: trunk
+            * browsertime-tp6-datalus-netflix-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-netflix-e10s: None
             * browsertime-tp6-live-chromium-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-netflix-e10s: None
             * browsertime-tp6-chromium-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-netflix-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-netflix-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-netflix-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-netflix-e10s: None
             * browsertime-tp6-live-chromium-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-fis-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-datalus-netflix-e10s: None
+            * browsertime-tp6-datalus-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-netflix-e10s: None
             * browsertime-tp6-chromium-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-datalus-netflix-e10s: None
+            * browsertime-tp6-datalus-netflix-fis-e10s: None
             * browsertime-tp6-live-chrome-netflix-e10s: None
             * browsertime-tp6-live-chromium-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-fis-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-datalus-netflix-e10s: None
+            * browsertime-tp6-datalus-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-netflix-e10s: None
             * browsertime-tp6-chromium-netflix-e10s: None
-            * browsertime-tp6-firefox-netflix-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-netflix-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-netflix-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-netflix-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-netflix-e10s: None
             * browsertime-tp6-live-chromium-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-e10s: None
-            * browsertime-tp6-live-firefox-netflix-fis-e10s: None
+            * browsertime-tp6-live-datalus-netflix-e10s: None
+            * browsertime-tp6-live-datalus-netflix-fis-e10s: None
 
 
 .. dropdown:: nytimes (BT, FF, CH, CU)
@@ -3436,7 +3436,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3446,7 +3446,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-nytimes.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-nytimes.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.nytimes.com/section/opinion/columnists>`__
    * **test url**: `<https://www.nytimes.com/2020/02/19/opinion/surprise-medical-bill.html>`__
@@ -3455,42 +3455,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
 
 
 .. dropdown:: office (BT, FF, CH, CU)
@@ -3498,7 +3498,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3508,7 +3508,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-live-office.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-live-office.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.office.com/>`__
    * **test url**: `<https://www.office.com/launch/word>`__
@@ -3517,42 +3517,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-office-e10s: None
-            * browsertime-tp6-firefox-office-fis-e10s: None
+            * browsertime-tp6-datalus-office-e10s: None
+            * browsertime-tp6-datalus-office-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-office-e10s: None
-            * browsertime-tp6-firefox-office-fis-e10s: None
+            * browsertime-tp6-datalus-office-e10s: None
+            * browsertime-tp6-datalus-office-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-office-e10s: None
             * browsertime-tp6-chromium-office-e10s: None
-            * browsertime-tp6-firefox-office-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-office-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-office-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-office-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-office-e10s: None
             * browsertime-tp6-chromium-office-e10s: None
-            * browsertime-tp6-firefox-office-e10s: trunk
-            * browsertime-tp6-firefox-office-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-office-e10s: trunk
+            * browsertime-tp6-datalus-office-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-office-e10s: None
             * browsertime-tp6-chromium-office-e10s: None
-            * browsertime-tp6-firefox-office-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-office-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-office-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-office-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-office-e10s: None
-            * browsertime-tp6-firefox-office-fis-e10s: None
+            * browsertime-tp6-datalus-office-e10s: None
+            * browsertime-tp6-datalus-office-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-office-e10s: None
             * browsertime-tp6-chromium-office-e10s: None
-            * browsertime-tp6-firefox-office-e10s: None
-            * browsertime-tp6-firefox-office-fis-e10s: None
+            * browsertime-tp6-datalus-office-e10s: None
+            * browsertime-tp6-datalus-office-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-office-e10s: None
-            * browsertime-tp6-firefox-office-fis-e10s: None
+            * browsertime-tp6-datalus-office-e10s: None
+            * browsertime-tp6-datalus-office-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-office-e10s: None
             * browsertime-tp6-chromium-office-e10s: None
-            * browsertime-tp6-firefox-office-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-office-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-office-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-office-fis-e10s: mozilla-central
 
 
 .. dropdown:: outlook (BT, FF, CH, CU)
@@ -3560,7 +3560,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3570,7 +3570,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-live.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-live.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://outlook.live.com/mail/inbox>`__
    * **type**: pageload
@@ -3578,70 +3578,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-fis-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-datalus-outlook-e10s: None
+            * browsertime-tp6-datalus-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-fis-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-datalus-outlook-e10s: None
+            * browsertime-tp6-datalus-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-outlook-e10s: None
             * browsertime-tp6-chromium-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-outlook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-outlook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-outlook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-outlook-e10s: None
             * browsertime-tp6-live-chromium-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-outlook-e10s: None
             * browsertime-tp6-chromium-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-e10s: trunk
-            * browsertime-tp6-firefox-outlook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-outlook-e10s: trunk
+            * browsertime-tp6-datalus-outlook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-outlook-e10s: None
             * browsertime-tp6-live-chromium-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-outlook-e10s: None
             * browsertime-tp6-chromium-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-outlook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-outlook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-outlook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-outlook-e10s: None
             * browsertime-tp6-live-chromium-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-fis-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-datalus-outlook-e10s: None
+            * browsertime-tp6-datalus-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-outlook-e10s: None
             * browsertime-tp6-chromium-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-datalus-outlook-e10s: None
+            * browsertime-tp6-datalus-outlook-fis-e10s: None
             * browsertime-tp6-live-chrome-outlook-e10s: None
             * browsertime-tp6-live-chromium-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-fis-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-datalus-outlook-e10s: None
+            * browsertime-tp6-datalus-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-outlook-e10s: None
             * browsertime-tp6-chromium-outlook-e10s: None
-            * browsertime-tp6-firefox-outlook-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-outlook-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-outlook-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-outlook-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-outlook-e10s: None
             * browsertime-tp6-live-chromium-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-e10s: None
-            * browsertime-tp6-live-firefox-outlook-fis-e10s: None
+            * browsertime-tp6-live-datalus-outlook-e10s: None
+            * browsertime-tp6-live-datalus-outlook-fis-e10s: None
 
 
 .. dropdown:: paypal (BT, FF, CH, CU)
@@ -3649,7 +3649,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3659,7 +3659,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-paypal.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-paypal.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.paypal.com/myaccount/summary/>`__
    * **type**: pageload
@@ -3667,70 +3667,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-fis-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-datalus-paypal-e10s: None
+            * browsertime-tp6-datalus-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-fis-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-datalus-paypal-e10s: None
+            * browsertime-tp6-datalus-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-paypal-e10s: None
             * browsertime-tp6-chromium-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-paypal-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-paypal-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-paypal-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-paypal-e10s: None
             * browsertime-tp6-live-chromium-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-paypal-e10s: None
             * browsertime-tp6-chromium-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-e10s: trunk
-            * browsertime-tp6-firefox-paypal-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-paypal-e10s: trunk
+            * browsertime-tp6-datalus-paypal-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-paypal-e10s: None
             * browsertime-tp6-live-chromium-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-paypal-e10s: None
             * browsertime-tp6-chromium-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-paypal-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-paypal-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-paypal-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-paypal-e10s: None
             * browsertime-tp6-live-chromium-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-fis-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-datalus-paypal-e10s: None
+            * browsertime-tp6-datalus-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-paypal-e10s: None
             * browsertime-tp6-chromium-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-datalus-paypal-e10s: None
+            * browsertime-tp6-datalus-paypal-fis-e10s: None
             * browsertime-tp6-live-chrome-paypal-e10s: None
             * browsertime-tp6-live-chromium-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-fis-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-datalus-paypal-e10s: None
+            * browsertime-tp6-datalus-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-paypal-e10s: None
             * browsertime-tp6-chromium-paypal-e10s: None
-            * browsertime-tp6-firefox-paypal-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-paypal-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-paypal-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-paypal-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-paypal-e10s: None
             * browsertime-tp6-live-chromium-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-e10s: None
-            * browsertime-tp6-live-firefox-paypal-fis-e10s: None
+            * browsertime-tp6-live-datalus-paypal-e10s: None
+            * browsertime-tp6-live-datalus-paypal-fis-e10s: None
 
 
 .. dropdown:: pinterest (BT, FF, CH, CU)
@@ -3738,7 +3738,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3748,7 +3748,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-pinterest.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-pinterest.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.pinterest.com/today/best/halloween-costumes-for-your-furry-friends/75787/>`__
    * **test url**: `<https://pinterest.com/>`__
@@ -3757,70 +3757,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-fis-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-datalus-pinterest-e10s: None
+            * browsertime-tp6-datalus-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-fis-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-datalus-pinterest-e10s: None
+            * browsertime-tp6-datalus-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-pinterest-e10s: None
             * browsertime-tp6-chromium-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-pinterest-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-pinterest-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-pinterest-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-pinterest-e10s: None
             * browsertime-tp6-live-chromium-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-pinterest-e10s: None
             * browsertime-tp6-chromium-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-e10s: trunk
-            * browsertime-tp6-firefox-pinterest-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-pinterest-e10s: trunk
+            * browsertime-tp6-datalus-pinterest-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-pinterest-e10s: None
             * browsertime-tp6-live-chromium-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-pinterest-e10s: None
             * browsertime-tp6-chromium-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-pinterest-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-pinterest-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-pinterest-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-pinterest-e10s: None
             * browsertime-tp6-live-chromium-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-fis-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-datalus-pinterest-e10s: None
+            * browsertime-tp6-datalus-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-pinterest-e10s: None
             * browsertime-tp6-chromium-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-datalus-pinterest-e10s: None
+            * browsertime-tp6-datalus-pinterest-fis-e10s: None
             * browsertime-tp6-live-chrome-pinterest-e10s: None
             * browsertime-tp6-live-chromium-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-fis-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-datalus-pinterest-e10s: None
+            * browsertime-tp6-datalus-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-pinterest-e10s: None
             * browsertime-tp6-chromium-pinterest-e10s: None
-            * browsertime-tp6-firefox-pinterest-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-pinterest-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-pinterest-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-pinterest-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-pinterest-e10s: None
             * browsertime-tp6-live-chromium-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-e10s: None
-            * browsertime-tp6-live-firefox-pinterest-fis-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-e10s: None
+            * browsertime-tp6-live-datalus-pinterest-fis-e10s: None
 
 
 .. dropdown:: reddit (BT, FF, CH, CU)
@@ -3828,7 +3828,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3838,7 +3838,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-reddit.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-reddit.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.reddit.com/r/technology/>`__
    * **test url**: `<https://www.reddit.com/r/technology/comments/9sqwyh/we_posed_as_100_senators_to_run_ads_on_facebook/>`__
@@ -3847,70 +3847,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-fis-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-datalus-reddit-e10s: None
+            * browsertime-tp6-datalus-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-fis-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-datalus-reddit-e10s: None
+            * browsertime-tp6-datalus-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-reddit-e10s: None
             * browsertime-tp6-chromium-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-reddit-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-reddit-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-reddit-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-reddit-e10s: None
             * browsertime-tp6-live-chromium-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-reddit-e10s: None
             * browsertime-tp6-chromium-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-e10s: trunk
-            * browsertime-tp6-firefox-reddit-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-reddit-e10s: trunk
+            * browsertime-tp6-datalus-reddit-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-reddit-e10s: None
             * browsertime-tp6-live-chromium-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-reddit-e10s: None
             * browsertime-tp6-chromium-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-reddit-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-reddit-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-reddit-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-reddit-e10s: None
             * browsertime-tp6-live-chromium-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-fis-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-datalus-reddit-e10s: None
+            * browsertime-tp6-datalus-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-reddit-e10s: None
             * browsertime-tp6-chromium-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-datalus-reddit-e10s: None
+            * browsertime-tp6-datalus-reddit-fis-e10s: None
             * browsertime-tp6-live-chrome-reddit-e10s: None
             * browsertime-tp6-live-chromium-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-fis-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-datalus-reddit-e10s: None
+            * browsertime-tp6-datalus-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-reddit-e10s: None
             * browsertime-tp6-chromium-reddit-e10s: None
-            * browsertime-tp6-firefox-reddit-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-reddit-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-reddit-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-reddit-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-reddit-e10s: None
             * browsertime-tp6-live-chromium-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-e10s: None
-            * browsertime-tp6-live-firefox-reddit-fis-e10s: None
+            * browsertime-tp6-live-datalus-reddit-e10s: None
+            * browsertime-tp6-live-datalus-reddit-fis-e10s: None
 
 
 .. dropdown:: tumblr (BT, FF, CH, CU)
@@ -3918,7 +3918,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -3928,7 +3928,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-tumblr.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-tumblr.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.tumblr.com/tagged/funny+cats?sort=top>`__
    * **test url**: `<https://www.tumblr.com/dashboard>`__
@@ -3937,70 +3937,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-fis-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-datalus-tumblr-e10s: None
+            * browsertime-tp6-datalus-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-fis-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-datalus-tumblr-e10s: None
+            * browsertime-tp6-datalus-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-tumblr-e10s: None
             * browsertime-tp6-chromium-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-tumblr-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-tumblr-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-tumblr-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-tumblr-e10s: None
             * browsertime-tp6-live-chromium-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-tumblr-e10s: None
             * browsertime-tp6-chromium-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-e10s: trunk
-            * browsertime-tp6-firefox-tumblr-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-tumblr-e10s: trunk
+            * browsertime-tp6-datalus-tumblr-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-tumblr-e10s: None
             * browsertime-tp6-live-chromium-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-tumblr-e10s: None
             * browsertime-tp6-chromium-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-tumblr-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-tumblr-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-tumblr-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-tumblr-e10s: None
             * browsertime-tp6-live-chromium-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-fis-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-datalus-tumblr-e10s: None
+            * browsertime-tp6-datalus-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-tumblr-e10s: None
             * browsertime-tp6-chromium-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-datalus-tumblr-e10s: None
+            * browsertime-tp6-datalus-tumblr-fis-e10s: None
             * browsertime-tp6-live-chrome-tumblr-e10s: None
             * browsertime-tp6-live-chromium-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-fis-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-datalus-tumblr-e10s: None
+            * browsertime-tp6-datalus-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-tumblr-e10s: None
             * browsertime-tp6-chromium-tumblr-e10s: None
-            * browsertime-tp6-firefox-tumblr-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-tumblr-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-tumblr-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-tumblr-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-tumblr-e10s: None
             * browsertime-tp6-live-chromium-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-e10s: None
-            * browsertime-tp6-live-firefox-tumblr-fis-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-e10s: None
+            * browsertime-tp6-live-datalus-tumblr-fis-e10s: None
 
 
 .. dropdown:: twitch (BT, FF, CH, CU)
@@ -4008,7 +4008,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4018,7 +4018,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-twitch.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-twitch.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://www.twitch.tv/videos/326804629>`__
    * **type**: pageload
@@ -4026,70 +4026,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-datalus-twitch-e10s: None
+            * browsertime-tp6-datalus-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-datalus-twitch-e10s: None
+            * browsertime-tp6-datalus-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-twitch-e10s: None
             * browsertime-tp6-chromium-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-twitch-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-twitch-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-twitch-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-twitch-e10s: None
             * browsertime-tp6-live-chromium-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-twitch-e10s: None
             * browsertime-tp6-chromium-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-e10s: trunk
-            * browsertime-tp6-firefox-twitch-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-twitch-e10s: trunk
+            * browsertime-tp6-datalus-twitch-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-twitch-e10s: None
             * browsertime-tp6-live-chromium-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-twitch-e10s: None
             * browsertime-tp6-chromium-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-twitch-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-twitch-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-twitch-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-twitch-e10s: None
             * browsertime-tp6-live-chromium-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-datalus-twitch-e10s: None
+            * browsertime-tp6-datalus-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-twitch-e10s: None
             * browsertime-tp6-chromium-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-datalus-twitch-e10s: None
+            * browsertime-tp6-datalus-twitch-fis-e10s: None
             * browsertime-tp6-live-chrome-twitch-e10s: None
             * browsertime-tp6-live-chromium-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-datalus-twitch-e10s: None
+            * browsertime-tp6-datalus-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-twitch-e10s: None
             * browsertime-tp6-chromium-twitch-e10s: None
-            * browsertime-tp6-firefox-twitch-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-twitch-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-twitch-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-twitch-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-twitch-e10s: None
             * browsertime-tp6-live-chromium-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-e10s: None
-            * browsertime-tp6-live-firefox-twitch-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitch-e10s: None
+            * browsertime-tp6-live-datalus-twitch-fis-e10s: None
 
 
 .. dropdown:: twitter (BT, FF, CH, CU)
@@ -4097,7 +4097,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4107,7 +4107,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-twitter.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-twitter.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://twitter.com/BarackObama>`__
    * **type**: pageload
@@ -4115,70 +4115,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-twitter-e10s: None
             * browsertime-tp6-essential-chromium-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-twitter-e10s: None
             * browsertime-tp6-live-chromium-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-twitter-e10s: None
             * browsertime-tp6-essential-chromium-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-e10s: trunk
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-twitter-e10s: trunk
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: trunk
             * browsertime-tp6-live-chrome-twitter-e10s: None
             * browsertime-tp6-live-chromium-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-twitter-e10s: None
             * browsertime-tp6-essential-chromium-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-twitter-e10s: None
             * browsertime-tp6-live-chromium-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-twitter-e10s: None
             * browsertime-tp6-essential-chromium-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: None
             * browsertime-tp6-live-chrome-twitter-e10s: None
             * browsertime-tp6-live-chromium-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-e10s: None
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-twitter-e10s: None
             * browsertime-tp6-essential-chromium-twitter-e10s: None
-            * browsertime-tp6-essential-firefox-twitter-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-twitter-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-twitter-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-twitter-e10s: None
             * browsertime-tp6-live-chromium-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-e10s: None
-            * browsertime-tp6-live-firefox-twitter-fis-e10s: None
+            * browsertime-tp6-live-datalus-twitter-e10s: None
+            * browsertime-tp6-live-datalus-twitter-fis-e10s: None
 
 
 .. dropdown:: wikia (BT, FF, CH, CU)
@@ -4186,7 +4186,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4196,7 +4196,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-wikia.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-wikia.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://marvel.fandom.com/wiki/Black_Panther>`__
    * **type**: pageload
@@ -4204,42 +4204,42 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-fis-e10s: None
+            * browsertime-tp6-datalus-wikia-e10s: None
+            * browsertime-tp6-datalus-wikia-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-fis-e10s: None
+            * browsertime-tp6-datalus-wikia-e10s: None
+            * browsertime-tp6-datalus-wikia-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-wikia-e10s: None
             * browsertime-tp6-chromium-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-wikia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-wikia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-wikia-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-wikia-e10s: None
             * browsertime-tp6-chromium-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-e10s: trunk
-            * browsertime-tp6-firefox-wikia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-wikia-e10s: trunk
+            * browsertime-tp6-datalus-wikia-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-wikia-e10s: None
             * browsertime-tp6-chromium-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-wikia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-wikia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-wikia-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-fis-e10s: None
+            * browsertime-tp6-datalus-wikia-e10s: None
+            * browsertime-tp6-datalus-wikia-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-wikia-e10s: None
             * browsertime-tp6-chromium-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-fis-e10s: None
+            * browsertime-tp6-datalus-wikia-e10s: None
+            * browsertime-tp6-datalus-wikia-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-fis-e10s: None
+            * browsertime-tp6-datalus-wikia-e10s: None
+            * browsertime-tp6-datalus-wikia-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-wikia-e10s: None
             * browsertime-tp6-chromium-wikia-e10s: None
-            * browsertime-tp6-firefox-wikia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-wikia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-wikia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-wikia-fis-e10s: mozilla-central
 
 
 .. dropdown:: wikipedia (BT, FF, CH, CU)
@@ -4247,7 +4247,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4257,7 +4257,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-wikipedia.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-wikipedia.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://en.wikipedia.org/wiki/Joe_Biden>`__
    * **test url**: `<https://en.wikipedia.org/wiki/Barack_Obama>`__
@@ -4266,70 +4266,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-wikipedia-e10s: None
             * browsertime-tp6-essential-chromium-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-wikipedia-e10s: None
             * browsertime-tp6-live-chromium-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-wikipedia-e10s: None
             * browsertime-tp6-essential-chromium-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: trunk
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: trunk
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: trunk
             * browsertime-tp6-live-chrome-wikipedia-e10s: None
             * browsertime-tp6-live-chromium-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-wikipedia-e10s: None
             * browsertime-tp6-essential-chromium-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-wikipedia-e10s: None
             * browsertime-tp6-live-chromium-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-wikipedia-e10s: None
             * browsertime-tp6-essential-chromium-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: None
             * browsertime-tp6-live-chrome-wikipedia-e10s: None
             * browsertime-tp6-live-chromium-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: None
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-wikipedia-e10s: None
             * browsertime-tp6-essential-chromium-wikipedia-e10s: None
-            * browsertime-tp6-essential-firefox-wikipedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-wikipedia-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-wikipedia-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-wikipedia-e10s: None
             * browsertime-tp6-live-chromium-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-e10s: None
-            * browsertime-tp6-live-firefox-wikipedia-fis-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-e10s: None
+            * browsertime-tp6-live-datalus-wikipedia-fis-e10s: None
 
 
 .. dropdown:: yahoo-mail (BT, FF, CH, CU)
@@ -4337,7 +4337,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4347,7 +4347,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-yahoo-mail.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-yahoo-mail.manifest
    * **playback version**: 5.1.1
    * **test url**: `<https://mail.yahoo.com/>`__
    * **type**: pageload
@@ -4355,70 +4355,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-essential-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-live-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-essential-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: trunk
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: trunk
             * browsertime-tp6-live-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-live-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-essential-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-live-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-essential-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: None
             * browsertime-tp6-live-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-live-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-essential-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-essential-firefox-yahoo-mail-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-yahoo-mail-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-yahoo-mail-fis-e10s: mozilla-beta, trunk
             * browsertime-tp6-live-chrome-yahoo-mail-e10s: None
             * browsertime-tp6-live-chromium-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-e10s: None
-            * browsertime-tp6-live-firefox-yahoo-mail-fis-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-e10s: None
+            * browsertime-tp6-live-datalus-yahoo-mail-fis-e10s: None
 
 
 .. dropdown:: youtube (BT, FF, CH, CU)
@@ -4426,7 +4426,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4436,7 +4436,7 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-linux-firefox-youtube.manifest
+   * **playback pageset manifest**: mitm6-linux-datalus-youtube.manifest
    * **playback version**: 6.0.2
    * **secondary url**: `<https://www.youtube.com/watch?v=JrdEMERq8MA>`__
    * **test url**: `<https://www.youtube.com>`__
@@ -4445,70 +4445,70 @@ Tests for page-load performance. The links direct to the actual websites that ar
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-fis-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-datalus-youtube-e10s: None
+            * browsertime-tp6-datalus-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-fis-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-datalus-youtube-e10s: None
+            * browsertime-tp6-datalus-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-youtube-e10s: None
             * browsertime-tp6-chromium-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-youtube-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-youtube-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-youtube-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-youtube-e10s: None
             * browsertime-tp6-live-chromium-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-youtube-e10s: None
             * browsertime-tp6-chromium-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-e10s: trunk
-            * browsertime-tp6-firefox-youtube-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-youtube-e10s: trunk
+            * browsertime-tp6-datalus-youtube-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-youtube-e10s: None
             * browsertime-tp6-live-chromium-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-youtube-e10s: None
             * browsertime-tp6-chromium-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-youtube-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-youtube-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-youtube-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-youtube-e10s: None
             * browsertime-tp6-live-chromium-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-fis-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-datalus-youtube-e10s: None
+            * browsertime-tp6-datalus-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-youtube-e10s: None
             * browsertime-tp6-chromium-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-datalus-youtube-e10s: None
+            * browsertime-tp6-datalus-youtube-fis-e10s: None
             * browsertime-tp6-live-chrome-youtube-e10s: None
             * browsertime-tp6-live-chromium-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-fis-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-datalus-youtube-e10s: None
+            * browsertime-tp6-datalus-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-youtube-e10s: None
             * browsertime-tp6-chromium-youtube-e10s: None
-            * browsertime-tp6-firefox-youtube-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-youtube-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-youtube-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-youtube-fis-e10s: mozilla-central
             * browsertime-tp6-live-chrome-youtube-e10s: None
             * browsertime-tp6-live-chromium-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-e10s: None
-            * browsertime-tp6-live-firefox-youtube-fis-e10s: None
+            * browsertime-tp6-live-datalus-youtube-e10s: None
+            * browsertime-tp6-live-datalus-youtube-fis-e10s: None
 
 
 
@@ -4522,7 +4522,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **accept zero vismet**: true
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 10
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4533,7 +4533,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-windows-firefox-cnn-nav.manifest
+   * **playback pageset manifest**: mitm6-windows-datalus-cnn-nav.manifest
    * **playback version**: 6.0.2
    * **test cmds**:  ["measure.start", "landing"], ["navigate", "https://www.cnn.com"], ["wait.byTime", 4000], ["measure.stop", ""], ["measure.start", "world"], ["click.byXpathAndWait", "/html/body/div[5]/div/div/header/div/div[1]/div/div[2]/nav/ul/li[2]/a"], ["wait.byTime", 1000], ["measure.stop", ""],
    * **test url**: `<https://www.cnn.com/>`__
@@ -4542,42 +4542,42 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **use live sites**: false
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-responsiveness-chrome-cnn-nav-e10s: None
             * browsertime-responsiveness-chromium-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: mozilla-central
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-responsiveness-chrome-cnn-nav-e10s: None
             * browsertime-responsiveness-chromium-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-responsiveness-chrome-cnn-nav-e10s: None
             * browsertime-responsiveness-chromium-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: mozilla-central
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-responsiveness-chrome-cnn-nav-e10s: None
             * browsertime-responsiveness-chromium-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: None
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-responsiveness-chrome-cnn-nav-e10s: None
             * browsertime-responsiveness-chromium-cnn-nav-e10s: None
-            * browsertime-responsiveness-firefox-cnn-nav-e10s: mozilla-central
-            * browsertime-responsiveness-firefox-cnn-nav-fis-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-e10s: mozilla-central
+            * browsertime-responsiveness-datalus-cnn-nav-fis-e10s: mozilla-central
 
 
 .. dropdown:: facebook-nav (Navigates to facebook, then the sub-pages friends, marketplace, groups.)
@@ -4586,7 +4586,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **accept zero vismet**: true
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4597,7 +4597,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **page cycles**: 25
    * **page timeout**: 90000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-windows-firefox-facebook-nav.manifest
+   * **playback pageset manifest**: mitm6-windows-datalus-facebook-nav.manifest
    * **playback version**: 6.0.2
    * **test cmds**:  ["measure.start", "landing"], ["navigate", "https://www.facebook.com/"], ["wait.byTime", 5000], ["measure.stop", ""], ["measure.start", "friends"], ["navigate", "https://www.facebook.com/friends/"], ["wait.byTime", 5000], ["measure.stop", ""], ["measure.start", "marketplace"], ["navigate", "https://www.facebook.com/marketplace"], ["wait.byTime", 5000], ["measure.stop", ""], ["measure.start", "groups"], ["navigate", "https://www.facebook.com/groups/discover/"], ["wait.byTime", 5000], ["measure.stop", ""],
    * **test url**: `<https://www.facebook.com>`__
@@ -4612,7 +4612,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **accept zero vismet**: true
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4623,7 +4623,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-windows-firefox-reddit-billgates-ama.manifest
+   * **playback pageset manifest**: mitm6-windows-datalus-reddit-billgates-ama.manifest
    * **playback version**: 6.0.2
    * **test cmds**:  ["measure.start", "billg-ama"], ["navigate", "https://www.reddit.com/r/IAmA/comments/m8n4vt/im_bill_gates_cochair_of_the_bill_and_melinda/"], ["wait.byTime", 5000], ["measure.stop", ""], ["measure.start", "members"], ["click.byXpathAndWait", "/html/body/div[1]/div/div[2]/div[2]/div/div[3]/div[2]/div/div[1]/div/div[4]/div[1]/div"], ["wait.byTime", 1000], ["measure.stop", ""],
    * **test url**: `<https://www.reddit.com/>`__
@@ -4638,7 +4638,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **accept zero vismet**: true
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox, chrome, chromium
+   * **apps**: datalus, chrome, chromium
    * **browser cycles**: 25
    * **expected**: pass
    * **gecko profile entries**: 14000000
@@ -4649,7 +4649,7 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
    * **page cycles**: 25
    * **page timeout**: 90000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm6-windows-firefox-reddit-billgates-post.manifest
+   * **playback pageset manifest**: mitm6-windows-datalus-reddit-billgates-post.manifest
    * **playback version**: 6.0.2
    * **test cmds**:  ["measure.start", "billg"], ["navigate", "https://www.reddit.com/user/thisisbillgates/"], ["wait.byTime", 5000], ["measure.stop", ""], ["measure.start", "posts"], ["click.byXpathAndWait", "/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div/a[2]"], ["wait.byTime", 15000], ["measure.stop", ""], ["measure.start", "comments"], ["click.byXpathAndWait", "/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div/div/a[3]"], ["wait.byTime", 15000], ["measure.stop", ""], ["measure.start", "hot"], ["click.byXpathAndWait", "/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[2]/a[2]"], ["wait.byTime", 15000], ["measure.stop", ""], ["measure.start", "top"], ["click.byXpathAndWait", "/html/body/div[1]/div/div[2]/div[2]/div/div/div/div[2]/div[4]/div[1]/div[1]/div[2]/a[3]"], ["wait.byTime", 15000], ["measure.stop", ""],
    * **test url**: `<https://www.reddit.com/user/thisisbillgates/>`__
@@ -4661,14 +4661,14 @@ Browsertime tests that interact with the webpage. Includes responsiveness tests 
 
 Live
 ----
-A set of test pages that are run as live sites instead of recorded versions. These tests are available on all browsers, on all platforms. (WX: WebExtension, BT: Browsertime, FF: Firefox, CH: Chrome, CU: Chromium, GV: Geckoview, RB: Refbrow, FE: Fenix, CH-M: Chrome mobile)
+A set of test pages that are run as live sites instead of recorded versions. These tests are available on all browsers, on all platforms. (WX: WebExtension, BT: Browsertime, FF: Datalus, CH: Chrome, CU: Chromium, GV: Geckoview, RB: Refbrow, FE: Fenix, CH-M: Chrome mobile)
 
 .. dropdown:: booking-sf (GV, FE, RB, CH-M, FF, CH, CU)
    :container: + anchor-id-booking-sf-l
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4686,7 +4686,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4698,60 +4698,60 @@ A set of test pages that are run as live sites instead of recorded versions. The
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-32-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-essential-firefox-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-essential-chrome-cnn-e10s: None
             * browsertime-tp6-essential-chromium-cnn-e10s: None
-            * browsertime-tp6-essential-firefox-cnn-e10s: mozilla-beta, trunk
-            * browsertime-tp6-essential-firefox-cnn-fis-e10s: mozilla-beta, trunk
-            * browsertime-tp6-live-sheriffed-firefox-cnn-e10s: None
-            * browsertime-tp6-live-sheriffed-firefox-cnn-fis-e10s: None
+            * browsertime-tp6-essential-datalus-cnn-e10s: mozilla-beta, trunk
+            * browsertime-tp6-essential-datalus-cnn-fis-e10s: mozilla-beta, trunk
+            * browsertime-tp6-live-sheriffed-datalus-cnn-e10s: None
+            * browsertime-tp6-live-sheriffed-datalus-cnn-fis-e10s: None
 
 
 .. dropdown:: cnn-ampstories (GV, FE, RB, CH-M, FF, CH, CU)
@@ -4759,7 +4759,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4777,7 +4777,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4795,7 +4795,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4807,42 +4807,42 @@ A set of test pages that are run as live sites instead of recorded versions. The
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-fis-e10s: None
+            * browsertime-tp6-datalus-expedia-e10s: None
+            * browsertime-tp6-datalus-expedia-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-expedia-e10s: None
             * browsertime-tp6-chromium-expedia-e10s: None
-            * browsertime-tp6-firefox-expedia-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-expedia-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-expedia-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-expedia-fis-e10s: mozilla-central
 
 
 .. dropdown:: fashionbeans (GV, FE, RB, CH-M, FF, CH, CU)
@@ -4850,7 +4850,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4868,7 +4868,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4881,12 +4881,12 @@ A set of test pages that are run as live sites instead of recorded versions. The
    * **Test Task**:
 
 
-.. dropdown:: imdb-firefox (GV, FE, RB, CH-M, FF, CH, CU)
-   :container: + anchor-id-imdb-firefox-l
+.. dropdown:: imdb-datalus (GV, FE, RB, CH-M, FF, CH, CU)
+   :container: + anchor-id-imdb-datalus-l
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4904,7 +4904,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4922,7 +4922,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4934,42 +4934,42 @@ A set of test pages that are run as live sites instead of recorded versions. The
    * **use live sites**: true
    * **Test Task**:
       * test-linux1804-64-clang-trunk-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-linux1804-64-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-linux1804-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-macosx1014-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-macosx1015-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
       * test-windows10-32-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-32-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-64-qr/opt
-            * browsertime-tp6-firefox-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-fis-e10s: None
+            * browsertime-tp6-datalus-nytimes-e10s: None
+            * browsertime-tp6-datalus-nytimes-fis-e10s: None
       * test-windows10-64-shippable-qr/opt
             * browsertime-tp6-chrome-nytimes-e10s: None
             * browsertime-tp6-chromium-nytimes-e10s: None
-            * browsertime-tp6-firefox-nytimes-e10s: mozilla-beta, trunk
-            * browsertime-tp6-firefox-nytimes-fis-e10s: mozilla-central
+            * browsertime-tp6-datalus-nytimes-e10s: mozilla-beta, trunk
+            * browsertime-tp6-datalus-nytimes-fis-e10s: mozilla-central
 
 
 .. dropdown:: people-article (GV, FE, RB, CH-M, FF, CH, CU)
@@ -4977,7 +4977,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -4995,13 +4995,13 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
    * **page cycles**: 25
    * **page timeout**: 60000
-   * **test url**: `<https://www.reddit.com/r/firefox/comments/7dkq03/its_been_a_while/>`__
+   * **test url**: `<https://www.reddit.com/r/datalus/comments/7dkq03/its_been_a_while/>`__
    * **type**: pageload
    * **unit**: ms
    * **use live sites**: true
@@ -5013,7 +5013,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -5031,7 +5031,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -5049,7 +5049,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -5067,7 +5067,7 @@ A set of test pages that are run as live sites instead of recorded versions. The
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: geckoview, fenix, refbrow, chrome-m, firefox, chrome, chromium
+   * **apps**: geckoview, fenix, refbrow, chrome-m, datalus, chrome, chromium
    * **browser cycles**: 15
    * **expected**: pass
    * **lower is better**: true
@@ -7294,12 +7294,12 @@ Unittests
 ---------
 These tests aren't used in standard testing, they are only used in the Raptor unit tests (they are similar to raptor-tp6 tests though).
 
-.. dropdown:: raptor-tp6-unittest-amazon-firefox (FF)
-   :container: + anchor-id-raptor-tp6-unittest-amazon-firefox-u
+.. dropdown:: raptor-tp6-unittest-amazon-datalus (FF)
+   :container: + anchor-id-raptor-tp6-unittest-amazon-datalus-u
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -7308,18 +7308,18 @@ These tests aren't used in standard testing, they are only used in the Raptor un
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-amazon.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-amazon.manifest
    * **test url**: `<https://www.amazon.com/s?k=laptop&ref=nb_sb_noss_1>`__
    * **type**: pageload
    * **unit**: ms
 
 
-.. dropdown:: raptor-tp6-unittest-facebook-firefox (FF)
-   :container: + anchor-id-raptor-tp6-unittest-facebook-firefox-u
+.. dropdown:: raptor-tp6-unittest-facebook-datalus (FF)
+   :container: + anchor-id-raptor-tp6-unittest-facebook-datalus-u
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -7328,18 +7328,18 @@ These tests aren't used in standard testing, they are only used in the Raptor un
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-facebook.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-facebook.manifest
    * **test url**: `<https://www.facebook.com>`__
    * **type**: pageload
    * **unit**: ms
 
 
-.. dropdown:: raptor-tp6-unittest-google-firefox (FF)
-   :container: + anchor-id-raptor-tp6-unittest-google-firefox-u
+.. dropdown:: raptor-tp6-unittest-google-datalus (FF)
+   :container: + anchor-id-raptor-tp6-unittest-google-datalus-u
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -7348,18 +7348,18 @@ These tests aren't used in standard testing, they are only used in the Raptor un
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-google-search.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-google-search.manifest
    * **test url**: `<https://www.google.com/search?hl=en&q=barack+obama&cad=h>`__
    * **type**: pageload
    * **unit**: ms
 
 
-.. dropdown:: raptor-tp6-unittest-youtube-firefox (FF)
-   :container: + anchor-id-raptor-tp6-unittest-youtube-firefox-u
+.. dropdown:: raptor-tp6-unittest-youtube-datalus (FF)
+   :container: + anchor-id-raptor-tp6-unittest-youtube-datalus-u
 
    * **alert on**: fcp, loadtime
    * **alert threshold**: 2.0
-   * **apps**: firefox
+   * **apps**: datalus
    * **expected**: pass
    * **gecko profile entries**: 14000000
    * **gecko profile interval**: 1
@@ -7368,7 +7368,7 @@ These tests aren't used in standard testing, they are only used in the Raptor un
    * **page cycles**: 25
    * **page timeout**: 60000
    * **playback**: mitmproxy
-   * **playback pageset manifest**: mitm5-linux-firefox-youtube.manifest
+   * **playback pageset manifest**: mitm5-linux-datalus-youtube.manifest
    * **test url**: `<https://www.youtube.com>`__
    * **type**: pageload
    * **unit**: ms
@@ -7379,7 +7379,7 @@ These tests aren't used in standard testing, they are only used in the Raptor un
 Browsertime
 ***********
 
-Browsertime is a harness for running performance tests, similar to Mozilla's Raptor testing framework. Browsertime is written in Node.js and uses Selenium WebDriver to drive multiple browsers including Chrome, Chrome for Android, Firefox, and Firefox for Android and GeckoView-based vehicles.
+Browsertime is a harness for running performance tests, similar to Mozilla's Raptor testing framework. Browsertime is written in Node.js and uses Selenium WebDriver to drive multiple browsers including Chrome, Chrome for Android, Datalus, and Datalus for Android and GeckoView-based vehicles.
 
 Source code:
 
@@ -7391,7 +7391,7 @@ Running Locally
 
 **Prerequisites**
 
-- A local mozilla repository clone with a `successful Firefox build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
+- A local mozilla repository clone with a `successful Datalus build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
 
 Setup
 -----
@@ -7426,7 +7426,7 @@ If ``convert`` and ``compare`` are also ``FAIL`` bugs which might further help a
 
 * If you plan on running Browsertime on Android, your Android device must already be set up (see more below in the Android section)
 
-Running on Firefox Desktop
+Running on Datalus Desktop
 --------------------------
 
 Page-load tests
@@ -7443,7 +7443,7 @@ There are two ways to run performance tests through browsertime listed below. **
 
 ::
 
-    ./mach browsertime https://www.sitespeed.io --firefox.binaryPath '/Users/{userdir}/moz_src/mozilla-unified/obj-x86_64-apple-darwin18.7.0/dist/Nightly.app/Contents/MacOS/firefox'
+    ./mach browsertime https://www.sitespeed.io --datalus.binaryPath '/Users/{userdir}/moz_src/mozilla-unified/obj-x86_64-apple-darwin18.7.0/dist/Nightly.app/Contents/MacOS/datalus'
 
 Benchmark tests
 ---------------
@@ -7469,17 +7469,17 @@ Running on Raptor-Browsertime (recommended):
   ./mach raptor --browsertime -t amazon --app geckoview --binary org.mozilla.geckoview_example
 
 Running on vanilla Browsertime:
-* Running on Fenix/Firefox Preview
+* Running on Fenix/Datalus Preview
 
 ::
 
-    ./mach browsertime --android --browser firefox --firefox.android.package org.mozilla.fenix.debug --firefox.android.activity org.mozilla.fenix.IntentReceiverActivity https://www.sitespeed.io
+    ./mach browsertime --android --browser datalus --datalus.android.package org.mozilla.fenix.debug --datalus.android.activity org.mozilla.fenix.IntentReceiverActivity https://www.sitespeed.io
 
 * Running on the GeckoView Example app
 
 ::
 
-  ./mach browsertime --android --browser firefox https://www.sitespeed.io
+  ./mach browsertime --android --browser datalus https://www.sitespeed.io
 
 Running on Google Chrome
 ------------------------
@@ -7581,7 +7581,7 @@ WebExtension Page-Load Tests
 
 Page-load tests involve loading a specific web page and measuring the load performance (i.e. `time-to-first-non-blank-paint <https://wiki.mozilla.org/TestEngineering/Performance/Glossary#First_Non-Blank_Paint_.28fnbpaint.29>`_, first-contentful-paint, `dom-content-flushed <https://wiki.mozilla.org/TestEngineering/Performance/Glossary#DOM_Content_Flushed_.28dcf.29>`_).
 
-For page-load tests by default, instead of using live web pages for performance testing, Raptor uses a tool called `Mitmproxy <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Mitmproxy>`_. Mitmproxy allows us to record and playback test pages via a local Firefox proxy. The Mitmproxy recordings are stored on `tooltool <https://github.com/mozilla/build-tooltool>`_ and are automatically downloaded by Raptor when they are required for a test. Raptor uses mitmproxy via the `mozproxy <https://searchfox.org/mozilla-central/source/testing/mozbase/mozproxy>`_ package.
+For page-load tests by default, instead of using live web pages for performance testing, Raptor uses a tool called `Mitmproxy <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Mitmproxy>`_. Mitmproxy allows us to record and playback test pages via a local Datalus proxy. The Mitmproxy recordings are stored on `tooltool <https://github.com/mozilla/build-tooltool>`_ and are automatically downloaded by Raptor when they are required for a test. Raptor uses mitmproxy via the `mozproxy <https://searchfox.org/mozilla-central/source/testing/mozbase/mozproxy>`_ package.
 
 There are two different types of Raptor page-load tests: warm page-load and cold page-load.
 
@@ -7589,7 +7589,7 @@ Warm Page-Load
 ==============
 For warm page-load tests, the browser is just started up once; so the browser is warm on each page-load.
 
-**Raptor warm page-load test process when running on Firefox/Chrome/Chromium desktop:**
+**Raptor warm page-load test process when running on Datalus/Chrome/Chromium desktop:**
 
 * A new browser profile is created
 * The desktop browser is started up
@@ -7599,11 +7599,11 @@ For warm page-load tests, the browser is just started up once; so the browser is
 * The tab is reloaded 24 more times; measurements taken each time
 * The measurements from the first page-load are not included in overall results metrics b/c of first load noise; however they are listed in the JSON artifacts
 
-**Raptor warm page-load test process when running on Firefox android browser apps:**
+**Raptor warm page-load test process when running on Datalus android browser apps:**
 
-* The android app data is cleared (via ``adb shell pm clear firefox.app.binary.name``)
+* The android app data is cleared (via ``adb shell pm clear datalus.app.binary.name``)
 * The new browser profile is copied onto the android device SD card
-* The Firefox android app is started up
+* The Datalus android app is started up
 * Post-startup browser settle pause of 30 seconds
 * The test URL is loaded; measurements taken
 * The tab is reloaded 14 more times; measurements taken each time
@@ -7613,7 +7613,7 @@ Cold Page-Load
 ==============
 For cold page-load tests, the browser is shut down and restarted between page load cycles, so the browser is cold on each page-load. This is what happens for Raptor cold page-load tests:
 
-**Raptor cold page-load test process when running on Firefox/Chrome/Chromium desktop:**
+**Raptor cold page-load test process when running on Datalus/Chrome/Chromium desktop:**
 
 * A new browser profile is created
 * The desktop browser is started up
@@ -7625,12 +7625,12 @@ For cold page-load tests, the browser is shut down and restarted between page lo
 * Entire process is repeated for the remaining browser cycles (25 cycles total)
 * The measurements from all browser cycles are used to calculate overall results
 
-**Raptor cold page-load test process when running on Firefox Android browser apps:**
+**Raptor cold page-load test process when running on Datalus Android browser apps:**
 
-* The Android app data is cleared (via ``adb shell pm clear firefox.app.binary.name``)
+* The Android app data is cleared (via ``adb shell pm clear datalus.app.binary.name``)
 * A new browser profile is created
 * The new browser profile is copied onto the Android device SD card
-* The Firefox Android app is started up
+* The Datalus Android app is started up
 * Post-startup browser settle pause of 30 seconds
 * The test URL is loaded; measurements taken
 * The Android app is shut down
@@ -7715,16 +7715,16 @@ Prerequisites
 
 
 #. rooted (i.e. superuser-capable), bootloader-unlocked Moto G5 or Google Pixel 2: internal (for now) `test-device setup doc. <https://docs.google.com/document/d/1XQLtvVM2U3h1jzzzpcGEDVOp4jMECsgLYJkhCfAwAnc/edit>`_
-#. set up to run Raptor from a Firefox source tree (see `Running Locally <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_Locally>`_)
+#. set up to run Raptor from a Datalus source tree (see `Running Locally <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_Locally>`_)
 #. `GeckoView-bootstrapped <https://wiki.mozilla.org/Performance_sheriffing/Raptor#Running_on_the_Android_GeckoView_Example_App>`_ environment
 
-**Raptor power-use measurement test process when running on Firefox Android browser apps:**
+**Raptor power-use measurement test process when running on Datalus Android browser apps:**
 
 * The Android app data is cleared, via:
 
 ::
 
-  adb shell pm clear firefox.app.binary.name
+  adb shell pm clear datalus.app.binary.name
 
 
 * The new browser profile is copied onto the Android device's SD card
@@ -7734,7 +7734,7 @@ Prerequisites
 
 * We launch the {Fenix, GeckoView, Reference Browser} on-Android app
 * Post-startup browser settle pause of 30 seconds
-* On Fennec only, a new browser tab is created (other Firefox apps use the single/existing tab)
+* On Fennec only, a new browser tab is created (other Datalus apps use the single/existing tab)
 * Power-use/battery-level measurements (app-specific measurements) are taken, via:
 
 ::
@@ -7802,8 +7802,8 @@ Prerequisites
 
 In order to run Raptor on a local machine, you need:
 
-* A local mozilla repository clone with a `successful Firefox build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
-* Git needs to be in the path in the terminal/window in which you build Firefox / run Raptor, as Raptor uses Git to check-out a local copy for some of the performance benchmarks' sources.
+* A local mozilla repository clone with a `successful Datalus build <https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions>`_ completed
+* Git needs to be in the path in the terminal/window in which you build Datalus / run Raptor, as Raptor uses Git to check-out a local copy for some of the performance benchmarks' sources.
 * If you plan on running Raptor tests on Google Chrome, you need a local install of Google Chrome and know the path to the chrome binary
 * If you plan on running Raptor on Android, your Android device must already be set up (see more below in the Android section)
 
@@ -7818,10 +7818,10 @@ To see which Raptor performance tests are currently available on all platforms, 
 
 That will output all available tests on each supported app, as well as each subtest available in each suite (i.e. all the pages in a specific page-load tp6* suite).
 
-Running on Firefox
+Running on Datalus
 ==================
 
-To run Raptor locally, just build Firefox and then run:
+To run Raptor locally, just build Datalus and then run:
 
 ::
 
@@ -7833,11 +7833,11 @@ For example, to run the raptor-tp6 pageload test locally, just use:
 
   $ ./mach raptor --test raptor-tp6-1
 
-You can run individual subtests too (i.e. a single page in one of the tp6* suites). For example, to run the amazon page-load test on Firefox:
+You can run individual subtests too (i.e. a single page in one of the tp6* suites). For example, to run the amazon page-load test on Datalus:
 
 ::
 
-  $ ./mach raptor --test raptor-tp6-amazon-firefox
+  $ ./mach raptor --test raptor-tp6-amazon-datalus
 
 Raptor test results will be found locally in <your-repo>/testing/mozharness/build/raptor.json.
 
@@ -7858,7 +7858,7 @@ If your device serial number is listed, then you're all set. If ADB is not found
 
   $ ./mach bootstrap
 
-Then, in bootstrap, select the option for "Firefox for Android Artifact Mode," which will install the required tools (no need to do an actual build).
+Then, in bootstrap, select the option for "Datalus for Android Artifact Mode," which will install the required tools (no need to do an actual build).
 
 Next, make sure your Android device is ready to go. Local Android-device prerequisites are:
 
@@ -7906,7 +7906,7 @@ A couple notes about debugging:
 
   $ adb logcat | grep GeckoConsole
 
-* You can also debug Raptor on Android using the Firefox WebIDE; click on the Android device listed under "USB Devices" and then "Main Process" or the 'localhost: Speedometer.." tab process
+* You can also debug Raptor on Android using the Datalus WebIDE; click on the Android device listed under "USB Devices" and then "Main Process" or the 'localhost: Speedometer.." tab process
 
 Raptor test results will be found locally in <your-repo>/testing/mozharness/build/raptor.json.
 
@@ -7953,7 +7953,7 @@ You can override the default page-cycles by using the --page-cycles command-line
 
 ::
 
-  ./mach raptor --test raptor-tp6-google-firefox --page-cycles 2
+  ./mach raptor --test raptor-tp6-google-datalus --page-cycles 2
 
 Running Page-Load Tests on Live Sites
 =====================================
@@ -7966,7 +7966,7 @@ With that setting, Raptor will not start the playback tool (i.e. Mitmproxy) and 
 Running Raptor on Try
 ---------------------
 
-Raptor tests can be run on `try <https://treeherder.mozilla.org/#/jobs?repo=try>`_ on both Firefox and Google Chrome. (Raptor pageload-type tests are not supported on Google Chrome yet, as mentioned above).
+Raptor tests can be run on `try <https://treeherder.mozilla.org/#/jobs?repo=try>`_ on both Datalus and Google Chrome. (Raptor pageload-type tests are not supported on Google Chrome yet, as mentioned above).
 
 **Note:** Raptor is currently 'tier 2' on `Treeherder <https://treeherder.mozilla.org/#/jobs?repo=try>`_, which means to see the Raptor test jobs you need to ensure 'tier 2' is selected / turned on in the Treeherder 'Tiers' menu.
 
@@ -7992,11 +7992,11 @@ The Raptor performance tests run on dedicated hardware (the same hardware that t
 Profiling Raptor Jobs
 ---------------------
 
-Raptor tests are able to create Gecko profiles which can be viewed in `profiler.firefox.com. <https://profiler.firefox.com/>`_ This is currently only supported when running Raptor on Firefox desktop.
+Raptor tests are able to create Gecko profiles which can be viewed in `profiler.datalus.com. <https://profiler.datalus.com/>`_ This is currently only supported when running Raptor on Datalus desktop.
 
 Nightly Profiling Jobs in Production
 ====================================
-We have Firefox desktop Raptor jobs with Gecko-profiling enabled running Nightly in production on Mozilla Central (on Linux64, Win10, and OSX). This provides a steady cache of Gecko profiles for the Raptor tests. Search for the `"Rap-Prof" treeherder group on Mozilla Central <https://treeherder.mozilla.org/#/jobs?repo=mozilla-central&searchStr=Rap-Prof>`_.
+We have Datalus desktop Raptor jobs with Gecko-profiling enabled running Nightly in production on Mozilla Central (on Linux64, Win10, and OSX). This provides a steady cache of Gecko profiles for the Raptor tests. Search for the `"Rap-Prof" treeherder group on Mozilla Central <https://treeherder.mozilla.org/#/jobs?repo=mozilla-central&searchStr=Rap-Prof>`_.
 
 Profiling Locally
 =================
@@ -8013,11 +8013,11 @@ When the Raptor test is finished, you will be able to find the resulting gecko p
 
 Note: While profiling is turned on, Raptor will automatically reduce the number of pagecycles to 3. If you wish to override this, add the --page-cycles argument to the raptor command line.
 
-Raptor will automatically launch Firefox and load the latest Gecko profile in `profiler.firefox.com <https://profiler.firefox.com>`_. To turn this feature off, just set the DISABLE_PROFILE_LAUNCH=1 env var.
+Raptor will automatically launch Datalus and load the latest Gecko profile in `profiler.datalus.com <https://profiler.datalus.com>`_. To turn this feature off, just set the DISABLE_PROFILE_LAUNCH=1 env var.
 
-If auto-launch doesn't work for some reason, just start Firefox manually and browse to `profiler.firefox.com <https://profiler.firefox.com>`_, click on "Browse" and select the Raptor profile ZIP file noted above.
+If auto-launch doesn't work for some reason, just start Datalus manually and browse to `profiler.datalus.com <https://profiler.datalus.com>`_, click on "Browse" and select the Raptor profile ZIP file noted above.
 
-If you're on Windows and want to profile a Firefox build that you compiled yourself, make sure it contains profiling information and you have a symbols zip for it, by following the `directions on MDN <https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows#Profiling_local_talos_runs>`_.
+If you're on Windows and want to profile a Datalus build that you compiled yourself, make sure it contains profiling information and you have a symbols zip for it, by following the `directions on MDN <https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler_and_Local_Symbols_on_Windows#Profiling_local_talos_runs>`_.
 
 Profiling on Try Server
 =======================
@@ -8063,7 +8063,7 @@ When the Raptor jobs are finished, to view the gecko profiles:
 #. In treeherder, select the symbol for the completed Raptor test job (i.e. 'ss' in 'Rap-e10s')
 #. Click on the 'Job Details' tab below
 #. The Raptor profile ZIP files will be listed as job artifacts;
-#. Select a Raptor profile ZIP artifact, and click the 'view in Firefox Profiler' link to the right
+#. Select a Raptor profile ZIP artifact, and click the 'view in Datalus Profiler' link to the right
 
 Recording Pages for Raptor Pageload Tests
 -----------------------------------------
@@ -8095,12 +8095,12 @@ For a detailed list of current tweaks, please refer to `this <https://searchfox.
 Raptor Test List
 ****************
 
-Currently the following Raptor tests are available. Note: Check the test details below to see which browser (i.e. Firefox, Google Chrome, Android) each test is supported on.
+Currently the following Raptor tests are available. Note: Check the test details below to see which browser (i.e. Datalus, Google Chrome, Android) each test is supported on.
 
 Page-Load Tests
 ---------------
 
-Raptor page-load test documentation is generated by `PerfDocs <https://firefox-source-docs.mozilla.org/code-quality/lint/linters/perfdocs.html>`_ and available in the `Firefox Source Docs <https://firefox-source-docs.mozilla.org/testing/perfdocs/raptor.html>`_.
+Raptor page-load test documentation is generated by `PerfDocs <https://datalus-source-docs.mozilla.org/code-quality/lint/linters/perfdocs.html>`_ and available in the `Datalus Source Docs <https://datalus-source-docs.mozilla.org/testing/perfdocs/raptor.html>`_.
 
 Benchmark Tests
 ---------------
@@ -8110,7 +8110,7 @@ assorted-dom
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 motionmark-animometer, motionmark-htmlsuite
@@ -8118,7 +8118,7 @@ motionmark-animometer, motionmark-htmlsuite
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: benchmark measuring the time to animate complex scenes
 * summarization:
 
@@ -8130,7 +8130,7 @@ speedometer
 
 * contact: :selena
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Chrome desktop, Datalus Android Geckoview
 * measuring: responsiveness of web applications
 * reporting: runs/minute score
 * data: there are 16 subtests in Speedometer; each of these are made up of 9 internal benchmarks.
@@ -8146,7 +8146,7 @@ stylebench
 
 * contact: :emilio
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: speed of dynamic style recalculation
 * reporting: runs/minute score
 
@@ -8155,7 +8155,7 @@ sunspider
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 unity-webgl
@@ -8163,7 +8163,7 @@ unity-webgl
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Chrome desktop, Datalus Android Geckoview
 * TODO
 
 youtube-playback
@@ -8172,7 +8172,7 @@ youtube-playback
 * contact: ?
 * type: benchmark
 * details: `YouTube playback performance <https://wiki.mozilla.org/TestEngineering/Performance/Raptor/Youtube_playback_performance>`_
-* browsers: Firefox desktop, Firefox Android Geckoview
+* browsers: Datalus desktop, Datalus Android Geckoview
 * measuring: media streaming playback performance (dropped video frames)
 * reporting: For each video the number of dropped and decoded frames, as well as its percentage value is getting recorded. The overall reported result is the mean value of dropped video frames across all tested video files.
 * data: Given the size of the used media files those tests are currently run as live site tests, and are kept up-to-date via the `perf-youtube-playback <https://github.com/mozilla/perf-youtube-playback/>`_ repository on Github.
@@ -8185,7 +8185,7 @@ wasm-misc, wasm-misc-baseline, wasm-misc-ion
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * TODO
 
 wasm-godot, wasm-godot-baseline, wasm-godot-ion
@@ -8193,7 +8193,7 @@ wasm-godot, wasm-godot-baseline, wasm-godot-ion
 
 * contact: ?
 * type: benchmark
-* browsers: Firefox desktop only
+* browsers: Datalus desktop only
 * TODO
 
 webaudio
@@ -8201,7 +8201,7 @@ webaudio
 
 * contact: padenot
 * type: benchmark
-* browsers: Firefox desktop, Chrome desktop
+* browsers: Datalus desktop, Chrome desktop
 * measuring: Rendering speed of various synthetic Web Audio API workloads
 * reporting: The time time it took to render the audio of each test case, and a
   geometric mean of the full test suite. Lower is better
@@ -8263,11 +8263,11 @@ When developing on Raptor and debugging, there's often a need to look at the out
 Raptor Debug Mode
 -----------------
 
-The easiest way to debug the Raptor web extension is to run the Raptor test locally and invoke debug mode, i.e. for Firefox:
+The easiest way to debug the Raptor web extension is to run the Raptor test locally and invoke debug mode, i.e. for Datalus:
 
 ::
 
-  ./mach raptor --test raptor-tp6-amazon-firefox --debug-mode
+  ./mach raptor --test raptor-tp6-amazon-datalus --debug-mode
 
 Or on Chrome, for example:
 
@@ -8279,11 +8279,11 @@ Running Raptor with debug mode will:
 
 * Automatically set the number of test page-cycles to 2 maximum
 * Reduce the 30 second post-browser startup delay from 30 seconds to 3 seconds
-* On Firefox, the devtools browser console will automatically open, where you can view all of the console log messages generated by the Raptor web extension
+* On Datalus, the devtools browser console will automatically open, where you can view all of the console log messages generated by the Raptor web extension
 * On Chrome, the devtools console will automatically open
 * The browser will remain open after the Raptor test has finished; you will be prompted in the terminal to manually shutdown the browser when you're finished debugging.
 
-Manual Debugging on Firefox Desktop
+Manual Debugging on Datalus Desktop
 -----------------------------------
 
 The main Raptor runner is '`runner.js <https://searchfox.org/mozilla-central/source/testing/raptor/webext/raptor/runner.js>`_' which is inside the web extension. The code that actually captures the performance measures is in the web extension content code '`measure.js <https://searchfox.org/mozilla-central/source/testing/raptor/webext/raptor/measure.js>`_'.
@@ -8291,7 +8291,7 @@ The main Raptor runner is '`runner.js <https://searchfox.org/mozilla-central/sou
 In order to retrieve the console.log() output from the Raptor runner, do the following:
 
 #. Invoke Raptor locally via ``./mach raptor``
-#. During the 30 second Raptor pause which happens right after Firefox has started up, in the ALREADY OPEN current tab, type "about:debugging" for the URL.
+#. During the 30 second Raptor pause which happens right after Datalus has started up, in the ALREADY OPEN current tab, type "about:debugging" for the URL.
 #. On the debugging page that appears, make sure "Add-ons" is selected on the left (default).
 #. Turn ON the "Enable add-on debugging" check-box
 #. Then scroll down the page until you see the Raptor web extension in the list of currently-loaded add-ons. Under "Raptor" click the blue "Debug" link.
@@ -8299,7 +8299,7 @@ In order to retrieve the console.log() output from the Raptor runner, do the fol
 
 To retrieve the console.log() output from the Raptor content 'measure.js' code:
 
-#. As soon as Raptor opens the new test tab (and the test starts running / or the page starts loading), in Firefox just choose "Tools => Web Developer => Web Console", and select the "console' tab.
+#. As soon as Raptor opens the new test tab (and the test starts running / or the page starts loading), in Datalus just choose "Tools => Web Developer => Web Console", and select the "console' tab.
 
 Raptor automatically closes the test tab and the entire browser after test completion; which will close any open debug consoles. In order to have more time to review the console logs, Raptor can be temporarily hacked locally in order to prevent the test tab and browser from being closed. Currently this must be done manually, as follows:
 
@@ -8337,18 +8337,18 @@ Then just kill the first mitm process in the list and that's sufficient:
 
 Now when you run Raptor again, the Mitmproxy server will be able to start.
 
-Manual Debugging on Firefox Android
+Manual Debugging on Datalus Android
 -----------------------------------
 
-Be sure to read the above section first on how to debug the Raptor web extension when running on Firefox Desktop.
+Be sure to read the above section first on how to debug the Raptor web extension when running on Datalus Desktop.
 
-When running Raptor tests on Firefox on Android (i.e. geckoview), to see the console.log() output from the Raptor web extension, do the following:
+When running Raptor tests on Datalus on Android (i.e. geckoview), to see the console.log() output from the Raptor web extension, do the following:
 
 #. With your android device (i.e. Google Pixel 2) all set up and connected to USB, invoke the Raptor test normally via ``./mach raptor``
-#. Start up a local copy of the Firefox Nightly Desktop browser
-#. In Firefox Desktop choose "Tools => Web Developer => WebIDE"
-#. In the Firefox WebIDE dialog that appears, look under "USB Devices" listed on the top right. If your device is not there, there may be a link to install remote device tools - if that link appears click it and let that install.
-#. Under "USB Devices" on the top right your android device should be listed (i.e. "Firefox Custom on Android Pixel 2" - click on your device.
+#. Start up a local copy of the Datalus Nightly Desktop browser
+#. In Datalus Desktop choose "Tools => Web Developer => WebIDE"
+#. In the Datalus WebIDE dialog that appears, look under "USB Devices" listed on the top right. If your device is not there, there may be a link to install remote device tools - if that link appears click it and let that install.
+#. Under "USB Devices" on the top right your android device should be listed (i.e. "Datalus Custom on Android Pixel 2" - click on your device.
 #. The debugger opens. On the left side click on "Main Process", and click the "console" tab below - and the Raptor runner output will be included there.
 #. On the left side under "Tabs" you'll also see an option for the active tab/page; select that and the Raptor content console.log() output should be included there.
 
@@ -8361,7 +8361,7 @@ Also note: When debugging Raptor on Android, the 'adb logcat' is very useful. Mo
 Manual Debugging on Google Chrome
 ---------------------------------
 
-Same as on Firefox desktop above, but use the Google Chrome console: View ==> Developer ==> Developer Tools.
+Same as on Datalus desktop above, but use the Google Chrome console: View ==> Developer ==> Developer Tools.
 
 Raptor on Mobile projects (Fenix, Reference-Browser)
 ****************************************************
@@ -8398,6 +8398,6 @@ Code formatting on Raptor
 *************************
 As Raptor is a Mozilla project we follow the general Python coding style:
 
-* https://firefox-source-docs.mozilla.org/tools/lint/coding-style/coding_style_python.html
+* https://datalus-source-docs.mozilla.org/tools/lint/coding-style/coding_style_python.html
 
 `black <https://github.com/psf/black/>`_ is the tool used to reformat the Python code.

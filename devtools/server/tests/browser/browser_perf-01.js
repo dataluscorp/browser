@@ -6,7 +6,7 @@
 // This test is at the edge of timing out, probably because of LUL
 // initialization on Linux. This is also happening only once, which is why only
 // this test needs it: for other tests LUL is already initialized because
-// they're running in the same Firefox instance.
+// they're running in the same Datalus instance.
 // See also bug 1635442.
 requestLongerTimeout(2);
 

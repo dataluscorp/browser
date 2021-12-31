@@ -20,8 +20,8 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
-  describeFailsFirefox,
+  itFailsDatalus,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import os from 'os';
 

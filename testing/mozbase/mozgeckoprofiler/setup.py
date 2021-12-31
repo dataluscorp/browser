@@ -12,8 +12,8 @@ PACKAGE_VERSION = "1.0.0"
 setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
-    description="Library to generate and view performance data in the Firefox Profiler",
-    long_description="see https://firefox-source-docs.mozilla.org/mozgeckoprofiler/index.html",
+    description="Library to generate and view performance data in the Datalus Profiler",
+    long_description="see https://datalus-source-docs.mozilla.org/mozgeckoprofiler/index.html",
     classifiers=[
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",

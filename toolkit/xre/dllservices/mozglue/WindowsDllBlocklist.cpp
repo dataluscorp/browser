@@ -556,7 +556,7 @@ static void* gStartAddressesToBlock[4];
 #endif  // defined(NIGHTLY_BUILD)
 
 static bool ShouldBlockThread(void* aStartAddress) {
-  // Allows crashfirefox.exe to continue to work. Also if your threadproc is
+  // Allows crashdatalus.exe to continue to work. Also if your threadproc is
   // null, this crash is intentional.
   if (aStartAddress == nullptr) return false;
 

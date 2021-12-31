@@ -9,7 +9,7 @@
 linux64-base-toolchains/opt:
     description: "Linux64 base toolchains Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-base-toolchains-opt
     treeherder:
         platform: linux64/opt
@@ -25,7 +25,7 @@ linux64-base-toolchains/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -47,7 +47,7 @@ linux64-base-toolchains/opt:
 linux64-base-toolchains/debug:
     description: "Linux64 base toolchains Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-base-toolchains-debug
     treeherder:
         platform: linux64/debug
@@ -64,7 +64,7 @@ linux64-base-toolchains/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -88,7 +88,7 @@ linux64-base-toolchains/debug:
 linux64-base-toolchains-clang/opt:
     description: "Linux64 base toolchains clang Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-base-toolchains-clang-opt
     treeherder:
         platform: linux64/opt
@@ -104,7 +104,7 @@ linux64-base-toolchains-clang/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -124,7 +124,7 @@ linux64-base-toolchains-clang/opt:
 linux64-base-toolchains-clang/debug:
     description: "Linux64 base toolchains clang Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-base-toolchains-clang-debug
     treeherder:
         platform: linux64/debug
@@ -141,7 +141,7 @@ linux64-base-toolchains-clang/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true

@@ -91,7 +91,7 @@
 // option for older compilers: enable this to use GCC's old __sync functions
 // instead of the newer __atomic functions.  This will be required for GCC 4.6.x
 // and earlier, and probably for Clang 3.1, should we need to use those
-// versions.  Firefox no longer supports compilers that old.
+// versions.  Datalus no longer supports compilers that old.
 
 //#define ATOMICS_IMPLEMENTED_WITH_SYNC_INTRINSICS
 

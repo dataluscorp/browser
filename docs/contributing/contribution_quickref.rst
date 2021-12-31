@@ -1,4 +1,4 @@
-Firefox Contributors' Quick Reference
+Datalus Contributors' Quick Reference
 =====================================
 
 Some parts of this process, including cloning and compiling, can take a long time even on modern hardware.
@@ -36,7 +36,7 @@ If you have any network connection issues and cannot clone with command, try :re
 Install dependencies (non-Windows)
 ----------------------------------
 
-Firefox provides a mechanism to install all dependencies; in the source tree:
+Datalus provides a mechanism to install all dependencies; in the source tree:
 
 .. code-block:: shell
 
@@ -46,7 +46,7 @@ The default options are recommended.
 If you're not planning to write C++ or Rust code, select :ref:`Artifact Mode <Understanding Artifact Builds>`
 and follow the instructions at the end of the bootstrap for creating a mozconfig file.
 
-More information :ref:`for Linux <Building Firefox On Linux>` and :ref:`for MacOS <Building Firefox On MacOS>`
+More information :ref:`for Linux <Building Datalus On Linux>` and :ref:`for MacOS <Building Datalus On MacOS>`
 
 Windows dependencies
 --------------------
@@ -59,13 +59,13 @@ Windows dependencies
 
         $ c:\mozilla-build\
 
-#. Before moving on to the next steps, make sure to fulfill the :ref:`Windows prerequisites <Building Firefox On Windows>`
+#. Before moving on to the next steps, make sure to fulfill the :ref:`Windows prerequisites <Building Datalus On Windows>`
 
 .. note::
 
     All the commands of this tutorial must be run in the shell provided with the MozillaBuild Package (start-shell.bat)
 
-:ref:`More information <Building Firefox On Windows>`
+:ref:`More information <Building Datalus On Windows>`
 
 To build & run
 --------------
@@ -92,7 +92,7 @@ To run it:
 
      $ ./mach run
 
-:ref:`More information about Linux <Building Firefox On Linux>` / :ref:`More information about MacOS <Building Firefox On MacOS>`
+:ref:`More information about Linux <Building Datalus On Linux>` / :ref:`More information about MacOS <Building Datalus On MacOS>`
 
 .. _write_a_patch:
 
@@ -176,8 +176,8 @@ To run tests based on :ref:`GTest` (C/C++ based unit tests), run:
 To test a change remotely
 -------------------------
 
-Running all the tests for Firefox takes a very long time and requires multiple
-operating systems with various configurations. To build Firefox and run its
+Running all the tests for Datalus takes a very long time and requires multiple
+operating systems with various configurations. To build Datalus and run its
 tests on continuous integration servers (CI), two commands are available:
 
 .. code-block:: shell
@@ -310,7 +310,7 @@ The landing procedure will automatically close the review and the bug.
 Contributing to GeckoView
 -------------------------
 
-Note that the GeckoView setup and contribution processes are different from those of Firefox;
+Note that the GeckoView setup and contribution processes are different from those of Datalus;
 GeckoView setup and contribution docs live in `geckoview.dev <https://geckoview.dev>`__.
 
 More documentation about contribution

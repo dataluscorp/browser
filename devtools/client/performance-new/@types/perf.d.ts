@@ -198,7 +198,7 @@ export type GetEnvironmentVariable = (envName: string) => string;
 export type GetActiveBrowserID = () => number;
 
 /**
- * This interface is injected into profiler.firefox.com
+ * This interface is injected into profiler.datalus.com
  */
 interface GeckoProfilerFrameScriptInterface {
   getProfile: () => Promise<MinimallyTypedGeckoProfile>;
@@ -366,7 +366,7 @@ export interface PerformancePref {
    */
   Duration: "devtools.performance.recording.duration";
   /**
-   * Normally this defaults to https://profiler.firefox.com, but this can be overridden
+   * Normally this defaults to https://profiler.datalus.com, but this can be overridden
    * to point the profiler to a different URL, such as http://localhost:4242/ for
    * local development workflows.
    */
@@ -424,7 +424,7 @@ export interface ScaleFunctions {
 }
 
 /**
- * View mode for the Firefox Profiler front-end timeline.
+ * View mode for the Datalus Profiler front-end timeline.
  * `undefined` is defaulted to full automatically.
  */
 export type ProfilerViewMode = "full" | "active-tab" | "origins";

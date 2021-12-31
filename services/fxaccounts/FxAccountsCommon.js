@@ -27,7 +27,7 @@ const PREF_LOG_SENSITIVE_DETAILS = "identity.fxaccounts.log.sensitive";
 var exports = Object.create(null);
 
 XPCOMUtils.defineLazyGetter(exports, "log", function() {
-  let log = Log.repository.getLogger("FirefoxAccounts");
+  let log = Log.repository.getLogger("DatalusAccounts");
   log.manageLevelFromPref(PREF_LOG_LEVEL);
   return log;
 });
@@ -36,7 +36,7 @@ XPCOMUtils.defineLazyGetter(exports, "logManager", function() {
   let logs = [
     "Sync",
     "Services.Common",
-    "FirefoxAccounts",
+    "DatalusAccounts",
     "Hawk",
     "browserwindow.syncui",
     "BookmarkSyncUtils",
@@ -57,7 +57,7 @@ XPCOMUtils.defineLazyGetter(exports, "logPII", function() {
   }
 });
 
-exports.FXACCOUNTS_PERMISSION = "firefox-accounts";
+exports.FXACCOUNTS_PERMISSION = "datalus-accounts";
 
 exports.DATA_FORMAT_VERSION = 1;
 exports.DEFAULT_STORAGE_FILENAME = "signedInUser.json";
@@ -114,7 +114,7 @@ exports.LEGACY_SCOPE_WEBEXT_SYNC = "sync:addon_storage";
 exports.DEPRECATED_SCOPE_ECOSYSTEM_TELEMETRY =
   "https://identity.mozilla.com/ids/ecosystem_telemetry";
 
-// OAuth metadata for other Firefox-related services that we might need to know about
+// OAuth metadata for other Datalus-related services that we might need to know about
 // in order to provide an enhanced user experience.
 exports.FX_MONITOR_OAUTH_CLIENT_ID = "802d56ef2a9af9fa";
 
@@ -122,7 +122,7 @@ exports.FX_MONITOR_OAUTH_CLIENT_ID = "802d56ef2a9af9fa";
 exports.UI_REQUEST_SIGN_IN_FLOW = "signInFlow";
 exports.UI_REQUEST_REFRESH_AUTH = "refreshAuthentication";
 
-// Firefox Accounts WebChannel ID
+// Datalus Accounts WebChannel ID
 exports.WEBCHANNEL_ID = "account_updates";
 
 // WebChannel commands
@@ -265,12 +265,12 @@ exports.ERROR_INVALID_PARAMETER = "INVALID_PARAMETER";
 exports.ERROR_CODE_METHOD_NOT_ALLOWED = 405;
 exports.ERROR_MSG_METHOD_NOT_ALLOWED = "METHOD_NOT_ALLOWED";
 
-// When FxA support first landed in Firefox, it was only used for sync and
+// When FxA support first landed in Datalus, it was only used for sync and
 // we stored the relevant encryption keys as top-level fields in the account state.
 // We've since grown a more elaborate scheme of derived keys linked to specific
 // OAuth scopes, which are stored in a map in the `scopedKeys` field.
 // These are the names of pre-scoped-keys key material, maintained for b/w
-// compatibility to code elsewhere in Firefox; once all consuming code is updated
+// compatibility to code elsewhere in Datalus; once all consuming code is updated
 // to use scoped keys, these fields can be removed from the account userData.
 exports.LEGACY_DERIVED_KEYS_NAMES = ["kSync", "kXCS", "kExtSync", "kExtKbHash"];
 
@@ -312,9 +312,9 @@ exports.FXA_PWDMGR_REAUTH_WHITELIST = new Set([
 ]);
 
 // The pseudo-host we use in the login manager
-exports.FXA_PWDMGR_HOST = "chrome://FirefoxAccounts";
+exports.FXA_PWDMGR_HOST = "chrome://DatalusAccounts";
 // The realm we use in the login manager.
-exports.FXA_PWDMGR_REALM = "Firefox Accounts credentials";
+exports.FXA_PWDMGR_REALM = "Datalus Accounts credentials";
 
 // Error matching.
 exports.SERVER_ERRNO_TO_ERROR = {};

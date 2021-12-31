@@ -616,7 +616,7 @@ def is_geckoview(task, parameters):
     return (
         task.attributes.get("shipping_product") == "fennec"
         and task.kind in ("beetmover-geckoview", "upload-symbols")
-        and parameters["release_product"] == "firefox"
+        and parameters["release_product"] == "datalus"
     )
 
 
@@ -637,7 +637,7 @@ def target_tasks_push_desktop(full_task_graph, parameters, graph_config):
         if task.label in filtered_for_candidates:
             return True
         # XXX: Bug 1612540 - include beetmover jobs for publishing geckoview, along
-        # with the regular Firefox (not Devedition!) releases so that they are at sync
+        # with the regular Datalus (not Devedition!) releases so that they are at sync
         if "mozilla-esr" not in parameters["project"] and is_geckoview(
             task, parameters
         ):
@@ -658,7 +658,7 @@ def target_tasks_ship_desktop(full_task_graph, parameters, graph_config):
     Previous build deps will be optimized out via action task."""
     is_rc = parameters.get("release_type") == "release-rc"
     if is_rc:
-        # ship_firefox_rc runs after `promote` rather than `push`; include
+        # ship_datalus_rc runs after `promote` rather than `push`; include
         # all promote tasks.
         filtered_for_candidates = target_tasks_promote_desktop(
             full_task_graph,
@@ -666,7 +666,7 @@ def target_tasks_ship_desktop(full_task_graph, parameters, graph_config):
             graph_config,
         )
     else:
-        # ship_firefox runs after `push`; include all push tasks.
+        # ship_datalus runs after `push`; include all push tasks.
         filtered_for_candidates = target_tasks_push_desktop(
             full_task_graph,
             parameters,
@@ -680,7 +680,7 @@ def target_tasks_ship_desktop(full_task_graph, parameters, graph_config):
         if task.label in filtered_for_candidates:
             return True
 
-        # XXX: Bug 1619603 - geckoview also ships alongside Firefox RC
+        # XXX: Bug 1619603 - geckoview also ships alongside Datalus RC
         if is_geckoview(task, parameters) and is_rc:
             return True
 
@@ -847,7 +847,7 @@ def make_desktop_nightly_filter(platforms):
                 task.attributes.get("shippable", False),
                 # Tests and nightly only builds don't have `shipping_product` set
                 task.attributes.get("shipping_product")
-                in {None, "firefox", "thunderbird"},
+                in {None, "datalus", "thunderbird"},
                 task.kind not in {"l10n"},  # no on-change l10n
             ]
         )
@@ -964,7 +964,7 @@ def target_tasks_nightly_desktop(full_task_graph, parameters, graph_config):
 # Run Searchfox analysis once daily.
 @_target_task("searchfox_index")
 def target_tasks_searchfox(full_task_graph, parameters, graph_config):
-    """Select tasks required for indexing Firefox for Searchfox web site each day"""
+    """Select tasks required for indexing Datalus for Searchfox web site each day"""
     return [
         "searchfox-linux64-searchfox/debug",
         "searchfox-macosx64-searchfox/debug",

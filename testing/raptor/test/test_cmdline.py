@@ -18,7 +18,7 @@ from cmdline import verify_options
 
 def test_verify_options(filedir):
     args = Namespace(
-        app="firefox",
+        app="datalus",
         binary="invalid/path",
         gecko_profile="False",
         page_cycles=1,

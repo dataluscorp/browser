@@ -3,11 +3,11 @@
 
   "applications": {
     "gecko": {
-      "id": "firefox-alpenglow@mozilla.org"
+      "id": "datalus-alpenglow@mozilla.org"
     }
   },
 
-  "name": "Firefox Alpenglow",
+  "name": "Datalus Alpenglow",
   "description": "Use a colorful appearance for buttons, menus, and windows.",
   "version": "1.4",
   "icons": { "32": "icon.svg" },

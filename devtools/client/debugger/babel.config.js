@@ -24,7 +24,7 @@ module.exports = {
           "@babel/preset-env",
           {
             targets: {
-              browsers: ["last 1 Chrome version", "last 1 Firefox version"],
+              browsers: ["last 1 Chrome version", "last 1 Datalus version"],
             },
             modules: "commonjs",
           },

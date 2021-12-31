@@ -379,7 +379,7 @@ class BrowsertimeResultsHandler(PerftestResultsHandler):
               {
                 "browser": {
                   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:70.0)
-                                Gecko/20100101 Firefox/70.0",
+                                Gecko/20100101 Datalus/70.0",
                   "windowSize": "1366x694"
                 },
                 "timings": {
@@ -680,13 +680,13 @@ class BrowsertimeResultsHandler(PerftestResultsHandler):
         Raptor test name, i.e.:
 
         browsertime-results/
-            raptor-tp6-amazon-firefox
+            raptor-tp6-amazon-datalus
                 browsertime.json
-            raptor-tp6-facebook-firefox
+            raptor-tp6-facebook-datalus
                 browsertime.json
-            raptor-tp6-google-firefox
+            raptor-tp6-google-datalus
                 browsertime.json
-            raptor-tp6-youtube-firefox
+            raptor-tp6-youtube-datalus
                 browsertime.json
 
         For each test URL that was measured, find the resulting 'browsertime.json' file, and pull

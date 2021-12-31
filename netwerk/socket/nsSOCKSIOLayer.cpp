@@ -391,7 +391,7 @@ nsSOCKSSocketInfo::SetInternalProxyAddr(NetAddr* aInternalProxyAddr) {
 // There needs to be a means of distinguishing between connection errors
 // that the SOCKS server reports when it rejects a connection request, and
 // connection errors that happen while attempting to connect to the SOCKS
-// server. Otherwise, Firefox will report incorrectly that the proxy server
+// server. Otherwise, Datalus will report incorrectly that the proxy server
 // is refusing connections when a SOCKS request is rejected by the proxy.
 // When a SOCKS handshake failure occurs, the PR error is set to
 // PR_UNKNOWN_ERROR, and the real error code is returned via the OS error.

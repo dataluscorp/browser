@@ -18,7 +18,7 @@ add_task(async function() {
   setupTelemetryTest();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   const sessionId = getOpenEventSessionId();
   ok(!isNaN(sessionId), "Open event has a valid session id");
@@ -45,7 +45,7 @@ add_task(async function() {
   );
   is(
     evts[0].extras.runtime_type,
-    "this-firefox",
+    "this-datalus",
     "Inspect event has the expected runtime type"
   );
   is(

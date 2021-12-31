@@ -61,7 +61,7 @@
 # Equals Contents/Resources/ on Mac OS X and is an empty string on other
 # platforms.
 
-# An update watershed was required to update to Firefox 56 for LZMA and SHA384
+# An update watershed was required to update to Datalus 56 for LZMA and SHA384
 # support. This made it possible to delete all of the removal instructions in
 # this file.
 

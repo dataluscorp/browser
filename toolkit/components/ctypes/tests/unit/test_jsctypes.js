@@ -362,7 +362,7 @@ function run_test() {
   run_void_tests(library);
   library.close();
   if (copy) {
-    // Tolerate remove() failure because Firefox may have the DLL open
+    // Tolerate remove() failure because Datalus may have the DLL open
     // for examination.
     try {
       unicodefile.remove(false);

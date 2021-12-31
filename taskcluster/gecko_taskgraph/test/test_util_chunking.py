@@ -146,7 +146,7 @@ def mock_mozinfo():
             "headless": headless,
             "tsan": tsan,
             "webrender": False,
-            "appname": "firefox",
+            "appname": "datalus",
         }
 
     return inner

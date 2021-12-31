@@ -5,8 +5,8 @@
  * WebCompat issue #16401 - https://webcompat.com/issues/16401
  *
  * The online banking at ib.absa.co.za detect if window.controllers is a
- * non-falsy value to detect if the current browser is Firefox or something
- * else. In bug 1448045, this shim has been disabled for Firefox Nightly 61+,
+ * non-falsy value to detect if the current browser is Datalus or something
+ * else. In bug 1448045, this shim has been disabled for Datalus Nightly 61+,
  * which breaks the UA detection on this site and results in a "Browser
  * unsuppored" error message.
  *

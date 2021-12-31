@@ -10,10 +10,10 @@
  * GC Scheduling Overview
  * ======================
  *
- * See also GC scheduling from Firefox's perspective here:
+ * See also GC scheduling from Datalus's perspective here:
  * https://searchfox.org/mozilla-central/source/dom/base/CCGCScheduler.cpp
  *
- * Scheduling GC's in SpiderMonkey/Firefox is tremendously complicated because
+ * Scheduling GC's in SpiderMonkey/Datalus is tremendously complicated because
  * of the large number of subtle, cross-cutting, and widely dispersed factors
  * that must be taken into account. A summary of some of the more important
  * factors follows.
@@ -338,7 +338,7 @@ struct Cell;
  * This list is not complete, some tuning parameters are not listed here.
  *
  * If you change the values here, please also consider changing them in
- * modules/libpref/init/all.js where they are duplicated for the Firefox
+ * modules/libpref/init/all.js where they are duplicated for the Datalus
  * preferences.
  */
 namespace TuningDefaults {

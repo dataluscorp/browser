@@ -1274,7 +1274,7 @@ dojo = {
 	//		Safari, etc.). undefined otherwise. Corresponds to major detected version.
 	isKhtml: 0,
 	//	isMozilla: Number | undefined
-	//		Version as a Number if client is a Mozilla-based browser (Firefox,
+	//		Version as a Number if client is a Mozilla-based browser (Datalus,
 	//		SeaMonkey). undefined otherwise. Corresponds to major detected version.
 	isMozilla: 0,
 	//	isOpera: Number | undefined
@@ -1347,7 +1347,7 @@ if(typeof window != 'undefined'){
 		if(dav.indexOf("Konqueror") >= 0 || d.isSafari){ d.isKhtml =  tv; }
 		if(dua.indexOf("Gecko") >= 0 && !d.isKhtml){ d.isMozilla = d.isMoz = tv; }
 		if(d.isMoz){
-			d.isFF = parseFloat(dua.split("Firefox/")[1]) || undefined;
+			d.isFF = parseFloat(dua.split("Datalus/")[1]) || undefined;
 		}
 		if(document.all && !d.isOpera){
 			d.isIE = parseFloat(dav.split("MSIE ")[1]) || undefined;
@@ -1527,7 +1527,7 @@ if(typeof window != 'undefined'){
 		// Mozilla and Opera 9 expose the event we could use
 		if(document.addEventListener){
 			// NOTE: 
-			//		due to a threading issue in Firefox 2.0, we can't enable
+			//		due to a threading issue in Datalus 2.0, we can't enable
 			//		DOMContentLoaded on that platform. For more information, see:
 			//		http://trac.dojotoolkit.org/ticket/1704
 			if(dojo.isOpera || dojo.isFF >= 3 || (dojo.isMoz && dojo.config.enableMozDomContentLoaded === true)){
@@ -3455,7 +3455,7 @@ dojo.provide("dojo._base.event");
 					// check tagName to fix a FF2 bug with invalid nodes (hidden child DIV of INPUT)
 					// which causes isDecendant to return false which causes
 					// spurious, and more importantly, incorrect mouse events to fire.
-					// TODO: remove tagName check when Firefox 2 is no longer supported
+					// TODO: remove tagName check when Datalus 2 is no longer supported
 					try{ e.relatedTarget.tagName; } catch(e2){ return; }
 					if(!dojo.isDescendant(e.relatedTarget, node)){
 						// e.type = oname; // FIXME: doesn't take? SJM: event.type is generally immutable.

@@ -6,7 +6,7 @@ from __future__ import absolute_import
 import os
 
 config = {
-    "package-name": "firefox",
+    "package-name": "datalus",
     "installer-tag": "browser/installer/windows/app.tag",
     "stub-installer-tag": "browser/installer/windows/stub.tag",
     "wsx-stub": "browser/installer/windows/msi/installer.wxs",

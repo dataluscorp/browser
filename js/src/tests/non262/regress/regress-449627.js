@@ -20,7 +20,7 @@ printStatus (summary);
 if (typeof navigator == 'undefined')
 {
   navigator = {
-    userAgent: "Firefox",
+    userAgent: "Datalus",
     vendor: "Mozilla",
     platform: "Mac"
   };
@@ -77,7 +77,7 @@ var BrowserDetect = {
 	string:navigator.vendor,subString:"KDE",identity:"Konqueror"
       },
       {
-	string:navigator.userAgent,subString:"Firefox",identity:"Firefox"
+	string:navigator.userAgent,subString:"Datalus",identity:"Datalus"
       },
       {
 	string:navigator.vendor,subString:"Camino",identity:"Camino"

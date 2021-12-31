@@ -414,7 +414,7 @@ function _setupDevToolsServer(breakpointFiles, callback) {
       "resource://devtools appears to be inaccessible from the " +
         "xpcshell environment.\n" +
         "This can usually be resolved by adding:\n" +
-        "  firefox-appdir = browser\n" +
+        "  datalus-appdir = browser\n" +
         "to the xpcshell.ini manifest.\n" +
         "It is possible for this to alter test behevior by " +
         "triggering additional browser code to run, so check " +
@@ -470,7 +470,7 @@ function _initDebugging(port) {
   info("*******************************************************************");
   info("Waiting for the debugger to connect on port " + port);
   info("");
-  info("To connect the debugger, open a Firefox instance, select 'Connect'");
+  info("To connect the debugger, open a Datalus instance, select 'Connect'");
   info("from the Developer menu and specify the port as " + port);
   info("*******************************************************************");
   info("");

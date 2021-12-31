@@ -23,19 +23,19 @@ add_task(async function test_remove_unsupported() {
       ]) {
         await browser.test.assertRejects(
           browser.browsingData.remove(
-            { cookieStoreId: "firefox-default" },
+            { cookieStoreId: "datalus-default" },
             {
               [dataType]: true,
             }
           ),
-          `Firefox does not support clearing ${dataType} with 'cookieStoreId'.`,
+          `Datalus does not support clearing ${dataType} with 'cookieStoreId'.`,
           `Should reject for unsupported dataType: ${dataType}`
         );
       }
 
       // Smoke test that doesn't delete anything.
       await browser.browsingData.remove(
-        { cookieStoreId: "firefox-container-1" },
+        { cookieStoreId: "datalus-container-1" },
         {}
       );
 
@@ -61,11 +61,11 @@ add_task(async function test_invalid_id() {
     },
     async background() {
       for (let cookieStoreId of [
-        "firefox-DEFAULT", // should be "firefox-default"
-        "firefox-private222",
-        "firefox",
-        "firefox-container-",
-        "firefox-container-100000",
+        "datalus-DEFAULT", // should be "datalus-default"
+        "datalus-private222",
+        "datalus",
+        "datalus-container-",
+        "datalus-container-100000",
       ]) {
         await browser.test.assertRejects(
           browser.browsingData.remove({ cookieStoreId }, { cookies: true }),

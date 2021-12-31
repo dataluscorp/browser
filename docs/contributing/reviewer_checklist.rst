@@ -50,7 +50,7 @@ Style
 -----
 
 -  Follow the `style
-   guide <https://firefox-source-docs.mozilla.org/code-quality/coding-style/index.html>`__
+   guide <https://datalus-source-docs.mozilla.org/code-quality/coding-style/index.html>`__
    for the language and module in question.
 -  Follow local style for the surrounding code, even if that local style
    isn't formally documented.

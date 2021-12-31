@@ -332,7 +332,7 @@ function addPopupEventHandlers(state, elements, view) {
   });
 
   addHandler(elements.learnMore, "click", () => {
-    elements.window.openWebLinkIn("https://profiler.firefox.com/docs/", "tab");
+    elements.window.openWebLinkIn("https://profiler.datalus.com/docs/", "tab");
     view.hidePopup();
   });
 

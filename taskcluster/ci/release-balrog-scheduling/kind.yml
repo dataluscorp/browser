@@ -23,12 +23,12 @@ job-defaults:
         balrog-action: schedule
 
 jobs:
-    firefox:
-        description: Schedule Firefox publishing in balrog
-        name: release-firefox_schedule_publishing_in_balrog
-        shipping-product: firefox
+    datalus:
+        description: Schedule Datalus publishing in balrog
+        name: release-datalus_schedule_publishing_in_balrog
+        shipping-product: datalus
         worker:
-            product: firefox
+            product: datalus
             publish-rules:
                 by-release-level:
                     production:
@@ -62,7 +62,7 @@ jobs:
                             default: false
                     default: false
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             symbol: Rel(BSFx)
             tier: 1
             kind: build

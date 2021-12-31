@@ -239,7 +239,7 @@ let eseDBWritingHelpers = {
       this._instanceId = new ESE.JET_INSTANCE();
       ESE.CreateInstanceW(
         this._instanceId.address(),
-        "firefox-dbwriter-" + gESEInstanceCounter++
+        "datalus-dbwriter-" + gESEInstanceCounter++
       );
       this._instanceCreated = true;
 

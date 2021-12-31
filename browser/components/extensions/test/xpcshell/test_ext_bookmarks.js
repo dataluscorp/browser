@@ -595,8 +595,8 @@ add_task(async function test_bookmarks() {
             parentId: createdFolderId,
           }),
           browser.bookmarks.create({
-            title: "Firefox",
-            url: "http://allizom.org/firefox/",
+            title: "Datalus",
+            url: "http://allizom.org/datalus/",
             parentId: createdFolderId,
           }),
         ])
@@ -610,8 +610,8 @@ add_task(async function test_bookmarks() {
               newBookmarks[3].id,
               createdFolderId,
               0,
-              "Firefox",
-              "http://allizom.org/firefox/",
+              "Datalus",
+              "http://allizom.org/datalus/",
               newBookmarks[3].dateAdded
             );
             checkOnCreated(
@@ -707,7 +707,7 @@ add_task(async function test_bookmarks() {
           "Expected number of bookmarks returned by getSubTree"
         );
         browser.test.assertEq(
-          "Firefox",
+          "Datalus",
           children[0].title,
           "Bookmark has the expected title"
         );
@@ -942,7 +942,7 @@ add_task(async function test_bookmarks() {
           "Bookmark has the expected title"
         );
         browser.test.assertEq(
-          "Firefox",
+          "Datalus",
           results[2].title,
           "Bookmark has the expected title"
         );
@@ -1220,7 +1220,7 @@ add_task(async function test_bookmarks() {
           "Bookmark has the expected title"
         );
         browser.test.assertEq(
-          "Firefox",
+          "Datalus",
           bookmarksByTitle[1].title,
           "Bookmark has the expected title"
         );

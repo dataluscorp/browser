@@ -63,23 +63,23 @@ Afterwards, you can run
 
 ::
 
-   $ python -m fuzzfetch -a --fuzzing --gtest -n firefox-fuzzing
+   $ python -m fuzzfetch -a --fuzzing --gtest -n datalus-fuzzing
 
 to fetch the latest optimized build. Alternatively, we offer non-ASan debug builds
 which you can download using
 
 ::
 
-   $ python -m fuzzfetch -d --fuzzing --gtest -n firefox-fuzzing
+   $ python -m fuzzfetch -d --fuzzing --gtest -n datalus-fuzzing
 
-In both commands, ``firefox-fuzzing`` indicates the name of the directory that
+In both commands, ``datalus-fuzzing`` indicates the name of the directory that
 will be created for the download.
 
 Afterwards, you can reproduce the bug using 
 
 ::
 
-   $ FUZZER=TargetName firefox-fuzzing/firefox test.bin
+   $ FUZZER=TargetName datalus-fuzzing/datalus test.bin
 
 assuming that ``TargetName`` is the name of the fuzzing target specified in the
 bug you are working on and ``test.bin`` is the attached testcase.
@@ -319,7 +319,7 @@ Running your code and building a corpus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You need to set the following environment variable to enable running the
-fuzzing code inside Firefox instead of the regular browser.
+fuzzing code inside Datalus instead of the regular browser.
 
 -  ``FUZZER=name``
 
@@ -327,13 +327,13 @@ Where ``name`` is the name of your fuzzing module that you specified
 when calling the ``MOZ_FUZZING_INTERFACE_RAW`` macro. For the example
 above, this would be ``MyTarget`` or ``StunParser`` for the live example.
 
-Now when you invoke the firefox binary in your build directory with the
+Now when you invoke the datalus binary in your build directory with the
 ``-help=1`` parameter, you should see the regular libFuzzer help. On
 Linux for example:
 
 ::
 
-   $ FUZZER=StunParser obj-asan/dist/bin/firefox -help=1
+   $ FUZZER=StunParser obj-asan/dist/bin/datalus -help=1
 
 You should see an output similar to this:
 
@@ -343,10 +343,10 @@ You should see an output similar to this:
    Usage:
 
    To run fuzzing pass 0 or more directories.
-   obj-asan/dist/bin/firefox [-flag1=val1 [-flag2=val2 ...] ] [dir1 [dir2 ...] ]
+   obj-asan/dist/bin/datalus [-flag1=val1 [-flag2=val2 ...] ] [dir1 [dir2 ...] ]
 
    To run individual tests without fuzzing pass 1 or more files:
-   obj-asan/dist/bin/firefox [-flag1=val1 [-flag2=val2 ...] ] file1 [file2 ...]
+   obj-asan/dist/bin/datalus [-flag1=val1 [-flag2=val2 ...] ] file1 [file2 ...]
 
    Flags: (strictly in form -flag=value)
     verbosity                      1       Verbosity level.
@@ -364,7 +364,7 @@ file as the only argument on the command line, e.g.
 
 ::
 
-   $ FUZZER=StunParser obj-asan/dist/bin/firefox test.bin
+   $ FUZZER=StunParser obj-asan/dist/bin/datalus test.bin
 
 This should reproduce the given problem.
 
@@ -387,7 +387,7 @@ like this:
 
    FUZZER=StunParser python /path/to/afl-libfuzzer-daemon.py --fuzzmanager \
        --stats libfuzzer-stunparser.stats --libfuzzer-auto-reduce-min 500 --libfuzzer-auto-reduce 30 \
-       --tool libfuzzer-stunparser --libfuzzer --libfuzzer-instances 6 obj-asan/dist/bin/firefox \
+       --tool libfuzzer-stunparser --libfuzzer --libfuzzer-instances 6 obj-asan/dist/bin/datalus \
        -max_len=256 -use_value_profile=1 -rss_limit_mb=3000 corpus-stunparser
 
 What this does is
@@ -399,7 +399,7 @@ What this does is
 -  automatically reduce the corpus and restart if it grew by 30% (and
    has at least 500 files)
 -  use FuzzManager (need a local ``.fuzzmanagerconf`` and a
-   ``firefox.fuzzmanagerconf`` binary configuration as described in the
+   ``datalus.fuzzmanagerconf`` binary configuration as described in the
    FuzzManager manual) and submit crashes as ``libfuzzer-stunparser``
    tool
 -  write statistics to the ``libfuzzer-stunparser.stats`` file
@@ -415,7 +415,7 @@ are two separate options to implement and run fuzzing targets:
 Implementing in C++
 ^^^^^^^^^^^^^^^^^^^
 
-Similar to the fuzzing interface in Firefox, you can implement your target in
+Similar to the fuzzing interface in Datalus, you can implement your target in
 entirely C++ with very similar interfaces compared to what was described before.
 
 There are a few minor differences though:

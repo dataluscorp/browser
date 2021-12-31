@@ -42,24 +42,24 @@ Note on Artifact Mode:
 Artifact builds download prebuilt C++ components rather than building
 them locally. Artifact builds are faster!
 
-Artifact builds are recommended for people working on Firefox or
-Firefox for Android frontends, or the GeckoView Java API. They are unsuitable
+Artifact builds are recommended for people working on Datalus or
+Datalus for Android frontends, or the GeckoView Java API. They are unsuitable
 for those working on C++ code. For more information see:
-https://firefox-source-docs.mozilla.org/contributing/build/artifact_builds.html.
+https://datalus-source-docs.mozilla.org/contributing/build/artifact_builds.html.
 """.lstrip()
 
 APPLICATION_CHOICE = """
-Please choose the version of Firefox you want to build:
+Please choose the version of Datalus you want to build:
 %s
 Your choice:
 """.strip()
 
 APPLICATIONS = OrderedDict(
     [
-        ("Firefox for Desktop Artifact Mode", "browser_artifact_mode"),
-        ("Firefox for Desktop", "browser"),
-        ("GeckoView/Firefox for Android Artifact Mode", "mobile_android_artifact_mode"),
-        ("GeckoView/Firefox for Android", "mobile_android"),
+        ("Datalus for Desktop Artifact Mode", "browser_artifact_mode"),
+        ("Datalus for Desktop", "browser"),
+        ("GeckoView/Datalus for Android Artifact Mode", "mobile_android_artifact_mode"),
+        ("GeckoView/Datalus for Android", "mobile_android"),
         ("SpiderMonkey JavaScript engine", "js"),
     ]
 )
@@ -265,7 +265,7 @@ class Bootstrapper(object):
             else:
                 print(ARTIFACT_MODE_NOTE)
 
-            # Like ['1. Firefox for Desktop', '2. Firefox for Android Artifact Mode', ...].
+            # Like ['1. Datalus for Desktop', '2. Datalus for Android Artifact Mode', ...].
             labels = [
                 "%s. %s" % (i, name) for i, name in enumerate(applications.keys(), 1)
             ]
@@ -321,7 +321,7 @@ class Bootstrapper(object):
 
         # We need to enable the loading of hgrc in case extensions are
         # required to open the repo.
-        (checkout_type, checkout_root) = current_firefox_checkout(
+        (checkout_type, checkout_root) = current_datalus_checkout(
             env=self.instance._hg_cleanenv(load_hgrc=True), hg=which("hg")
         )
         self.instance.validate_environment(checkout_root)
@@ -508,8 +508,8 @@ def update_mercurial_repo(hg, url, dest, revision):
         print("=" * 80)
 
 
-def current_firefox_checkout(env, hg=None):
-    """Determine whether we're in a Firefox checkout.
+def current_datalus_checkout(env, hg=None):
+    """Determine whether we're in a Datalus checkout.
 
     Returns one of None, ``git``, or ``hg``.
     """
@@ -525,7 +525,7 @@ def current_firefox_checkout(env, hg=None):
         hg_dir = os.path.join(path, ".hg")
         git_dir = os.path.join(path, ".git")
         if hg and os.path.exists(hg_dir):
-            # Verify the hg repo is a Firefox repo by looking at rev 0.
+            # Verify the hg repo is a Datalus repo by looking at rev 0.
             try:
                 node = subprocess.check_output(
                     [hg, "log", "-r", "0", "--template", "{node}"],

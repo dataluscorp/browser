@@ -1,2 +1,2 @@
 Please see our contributor documentation at
-https://firefox-source-docs.mozilla.org/testing/geckodriver/#for-developers.
+https://datalus-source-docs.mozilla.org/testing/geckodriver/#for-developers.

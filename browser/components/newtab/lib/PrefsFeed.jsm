@@ -122,19 +122,19 @@ this.PrefsFeed = class PrefsFeed {
       this.geo = "";
     }
 
-    // Get the firefox accounts url for links and to send firstrun metrics to.
+    // Get the datalus accounts url for links and to send firstrun metrics to.
     values.fxa_endpoint = Services.prefs.getStringPref(
       "browser.newtabpage.activity-stream.fxaccounts.endpoint",
-      "https://accounts.firefox.com"
+      "https://accounts.datalus.com"
     );
 
-    // Get the firefox update channel with values as default, nightly, beta or release
+    // Get the datalus update channel with values as default, nightly, beta or release
     values.appUpdateChannel = Services.prefs.getStringPref(
       "app.update.channel",
       ""
     );
 
-    // Read the pref for search shortcuts top sites experiment from firefox.js and store it
+    // Read the pref for search shortcuts top sites experiment from datalus.js and store it
     // in our internal list of prefs to watch
     let searchTopSiteExperimentPrefValue = Services.prefs.getBoolPref(
       "browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts"
@@ -150,7 +150,7 @@ this.PrefsFeed = class PrefsFeed {
       "browser.topsites.useRemoteSetting"
     );
 
-    // Read the pref for search hand-off from firefox.js and store it
+    // Read the pref for search hand-off from datalus.js and store it
     // in our internal list of prefs to watch
     let handoffToAwesomebarPrefValue = Services.prefs.getBoolPref(
       "browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar"
@@ -160,7 +160,7 @@ this.PrefsFeed = class PrefsFeed {
       value: handoffToAwesomebarPrefValue,
     });
 
-    // Read the pref for the cached default engine name from firefox.js and
+    // Read the pref for the cached default engine name from datalus.js and
     // store it in our internal list of prefs to watch
     let placeholderPrefValue = Services.prefs.getStringPref(
       "browser.urlbar.placeholderName",

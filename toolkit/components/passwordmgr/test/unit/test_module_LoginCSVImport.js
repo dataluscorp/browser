@@ -246,10 +246,10 @@ add_task(async function test_import_minimal_with_mixed_naming() {
 });
 
 /**
- * Imports login data from the latest Firefox CSV file for various logins from
+ * Imports login data from the latest Datalus CSV file for various logins from
  * LoginTestUtils.testData.loginList().
  */
-add_task(async function test_import_from_firefox_various_latest() {
+add_task(async function test_import_from_datalus_various_latest() {
   await setupCsv([]);
   info("Populate the login list for export");
   let logins = LoginTestUtils.testData.loginList();
@@ -269,9 +269,9 @@ add_task(async function test_import_from_firefox_various_latest() {
 });
 
 /**
- * Imports login data from a Firefox CSV file without quotes.
+ * Imports login data from a Datalus CSV file without quotes.
  */
-add_task(async function test_import_from_firefox_auth() {
+add_task(async function test_import_from_datalus_auth() {
   let csvFilePath = await setupCsv([
     "url,username,password,httpRealm,formActionOrigin,guid,timeCreated,timeLastUsed,timePasswordChanged",
     `https://example.com:8080,joe@example.com,qwerty,My realm,"",{5ec0d12f-e194-4279-ae1b-d7d281bb46f0},1589617814635,1589710449871,1589617846802`,
@@ -302,9 +302,9 @@ add_task(async function test_import_from_firefox_auth() {
 });
 
 /**
- * Imports login data from a Firefox CSV file with quotes.
+ * Imports login data from a Datalus CSV file with quotes.
  */
-add_task(async function test_import_from_firefox_auth_with_quotes() {
+add_task(async function test_import_from_datalus_auth_with_quotes() {
   let csvFilePath = await setupCsv([
     '"url","username","password","httpRealm","formActionOrigin","guid","timeCreated","timeLastUsed","timePasswordChanged"',
     '"https://example.com","joe@example.com","qwerty2","My realm",,"{5ec0d12f-e194-4279-ae1b-d7d281bb46f0}","1589617814635","1589710449871","1589617846802"',
@@ -334,9 +334,9 @@ add_task(async function test_import_from_firefox_auth_with_quotes() {
 });
 
 /**
- * Imports login data from a Firefox CSV file where only cells containing a comma are quoted.
+ * Imports login data from a Datalus CSV file where only cells containing a comma are quoted.
  */
-add_task(async function test_import_from_firefox_auth_some_quoted_fields() {
+add_task(async function test_import_from_datalus_auth_some_quoted_fields() {
   let csvFilePath = await setupCsv([
     "url,username,password,httpRealm,formActionOrigin,guid,timeCreated,timeLastUsed,timePasswordChanged",
     'https://example.com,joe@example.com,"one,two,tree","My realm",,{5ec0d12f-e194-4279-ae1b-d7d281bb46f0},1589617814635,1589710449871,1589617846802',
@@ -366,9 +366,9 @@ add_task(async function test_import_from_firefox_auth_some_quoted_fields() {
 });
 
 /**
- * Imports login data from a Firefox CSV file with an empty formActionOrigin and null httpRealm
+ * Imports login data from a Datalus CSV file with an empty formActionOrigin and null httpRealm
  */
-add_task(async function test_import_from_firefox_form_empty_formActionOrigin() {
+add_task(async function test_import_from_datalus_form_empty_formActionOrigin() {
   let csvFilePath = await setupCsv([
     "url,username,password,httpRealm,formActionOrigin,guid,timeCreated,timeLastUsed,timePasswordChanged",
     "https://example.com,joe@example.com,s3cret1,,,{5ec0d12f-e194-4279-ae1b-d7d281bb46f0},1589617814636,1589710449872,1589617846803",
@@ -398,9 +398,9 @@ add_task(async function test_import_from_firefox_form_empty_formActionOrigin() {
 });
 
 /**
- * Imports login data from a Firefox CSV file with a non-empty formActionOrigin and null httpRealm.
+ * Imports login data from a Datalus CSV file with a non-empty formActionOrigin and null httpRealm.
  */
-add_task(async function test_import_from_firefox_form_with_formActionOrigin() {
+add_task(async function test_import_from_datalus_form_with_formActionOrigin() {
   let csvFilePath = await setupCsv([
     "url,username,password,httpRealm,formActionOrigin,guid,timeCreated,timeLastUsed,timePasswordChanged",
     "http://example.com,joe@example.com,s3cret1,,https://other.example.com,{5ec0d12f-e194-4279-ae1b-d7d281bb46f1},1589617814635,1589710449871,1589617846802",

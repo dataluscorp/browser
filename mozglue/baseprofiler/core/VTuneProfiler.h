@@ -11,7 +11,7 @@
 // the VTune profiler code at all --enable-vtune-instrumentation needs to be
 // set as a build option. Even then, when none of the environment variables
 // is specified that allow us to find the ittnotify DLL, these functions
-// should be minimal overhead. When starting Firefox under VTune, these
+// should be minimal overhead. When starting Datalus under VTune, these
 // env vars will be automatically defined, otherwise INTEL_LIBITTNOTIFY32/64
 // should be set to point at the ittnotify DLL.
 #ifndef MOZ_VTUNE_INSTRUMENTATION

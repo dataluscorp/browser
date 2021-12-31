@@ -102,7 +102,7 @@ function clearHistory(state) {
 
 /**
  * Handling HISTORY_LOADED action that is fired when history
- * entries created in previous Firefox session are loaded
+ * entries created in previous Datalus session are loaded
  * from async-storage.
  *
  * Loaded entries are appended before the ones that were

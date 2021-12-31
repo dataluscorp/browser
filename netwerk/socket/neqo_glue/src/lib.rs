@@ -156,8 +156,8 @@ impl NeqoHttp3Conn {
                 Ok(f) => {
                     let streamer = QlogStreamer::new(
                         qlog::QLOG_VERSION.to_string(),
-                        Some("Firefox Client qlog".to_string()),
-                        Some("Firefox Client qlog".to_string()),
+                        Some("Datalus Client qlog".to_string()),
+                        Some("Datalus Client qlog".to_string()),
                         None,
                         std::time::Instant::now(),
                         common::qlog::new_trace(Role::Client),
@@ -332,8 +332,8 @@ pub extern "C" fn neqo_http3conn_fetch(
     incremental: bool,
 ) -> nsresult {
     let mut hdrs = Vec::new();
-    // this is only used for headers built by Firefox.
-    // Firefox supplies all headers already prepared for sending over http1.
+    // this is only used for headers built by Datalus.
+    // Datalus supplies all headers already prepared for sending over http1.
     // They need to be split into (String, String) pairs.
     match str::from_utf8(headers) {
         Err(_) => {

@@ -6,8 +6,8 @@
 
 const BROWSERS = [
   {
-    name: "Firefox",
-    mustContain: new RegExp(`(?:Firefox|FxiOS)\/(${getVersionRegex(1)})`),
+    name: "Datalus",
+    mustContain: new RegExp(`(?:Datalus|FxiOS)\/(${getVersionRegex(1)})`),
   },
   {
     name: "Opera",

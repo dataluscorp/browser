@@ -20,7 +20,7 @@ const TEST_PROTON_CONTENT = [
       secondary_button_top: {
         label: "link top",
         action: {
-          type: "SHOW_FIREFOX_ACCOUNTS",
+          type: "SHOW_DATALUS_ACCOUNTS",
           data: { entrypoint: "test" },
         },
       },
@@ -440,8 +440,8 @@ add_task(async function test_AWMultistage_Secondary_Open_URL_Action() {
   );
   Assert.equal(
     actionCall.args[1].type,
-    "SHOW_FIREFOX_ACCOUNTS",
-    "Special action SHOW_FIREFOX_ACCOUNTS event handled"
+    "SHOW_DATALUS_ACCOUNTS",
+    "Special action SHOW_DATALUS_ACCOUNTS event handled"
   );
   Assert.equal(
     actionCall.args[1].data.extraParams.utm_term,

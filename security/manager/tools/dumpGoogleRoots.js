@@ -7,8 +7,8 @@
 // make up the preloaded pinset for Google properties.
 //
 // How to run this file:
-// 1. [obtain firefox source code]
-// 2. [build/obtain firefox binaries]
+// 1. [obtain datalus source code]
+// 2. [build/obtain datalus binaries]
 // 3. run `[path to]/run-mozilla.sh [path to]/xpcshell dumpGoogleRoots.js'
 // 4. [paste the output into the appropriate section in
 //     security/manager/tools/PreloadedHPKPins.json]

@@ -216,7 +216,7 @@ class ChromeLauncher implements ProductLauncher {
 /**
  * @internal
  */
-class FirefoxLauncher implements ProductLauncher {
+class DatalusLauncher implements ProductLauncher {
   _projectRoot: string;
   _preferredRevision: string;
   _isPuppeteerCore: boolean;
@@ -246,50 +246,50 @@ class FirefoxLauncher implements ProductLauncher {
       defaultViewport = { width: 800, height: 600 },
       slowMo = 0,
       timeout = 30000,
-      extraPrefsFirefox = {},
+      extraPrefsDatalus = {},
       waitForInitialPage = true,
     } = options;
 
-    const firefoxArguments = [];
-    if (!ignoreDefaultArgs) firefoxArguments.push(...this.defaultArgs(options));
+    const datalusArguments = [];
+    if (!ignoreDefaultArgs) datalusArguments.push(...this.defaultArgs(options));
     else if (Array.isArray(ignoreDefaultArgs))
-      firefoxArguments.push(
+      datalusArguments.push(
         ...this.defaultArgs(options).filter(
           (arg) => !ignoreDefaultArgs.includes(arg)
         )
       );
-    else firefoxArguments.push(...args);
+    else datalusArguments.push(...args);
 
     if (
-      !firefoxArguments.some((argument) =>
+      !datalusArguments.some((argument) =>
         argument.startsWith('--remote-debugging-')
       )
     )
-      firefoxArguments.push('--remote-debugging-port=0');
+      datalusArguments.push('--remote-debugging-port=0');
 
     let temporaryUserDataDir = null;
 
     if (
-      !firefoxArguments.includes('-profile') &&
-      !firefoxArguments.includes('--profile')
+      !datalusArguments.includes('-profile') &&
+      !datalusArguments.includes('--profile')
     ) {
-      temporaryUserDataDir = await this._createProfile(extraPrefsFirefox);
-      firefoxArguments.push('--profile');
-      firefoxArguments.push(temporaryUserDataDir);
+      temporaryUserDataDir = await this._createProfile(extraPrefsDatalus);
+      datalusArguments.push('--profile');
+      datalusArguments.push(temporaryUserDataDir);
     }
 
     await this._updateRevision();
-    let firefoxExecutable = executablePath;
+    let datalusExecutable = executablePath;
     if (!executablePath) {
       const { missingText, executablePath } = resolveExecutablePath(this);
       if (missingText) throw new Error(missingText);
-      firefoxExecutable = executablePath;
+      datalusExecutable = executablePath;
     }
 
     const runner = new BrowserRunner(
       this.product,
-      firefoxExecutable,
-      firefoxArguments,
+      datalusExecutable,
+      datalusArguments,
       temporaryUserDataDir
     );
     runner.start({
@@ -341,13 +341,13 @@ class FirefoxLauncher implements ProductLauncher {
   }
 
   get product(): Product {
-    return 'firefox';
+    return 'datalus';
   }
 
   defaultArgs(options: BrowserLaunchArgumentOptions = {}): string[] {
-    const firefoxArguments = ['--no-remote', '--foreground'];
+    const datalusArguments = ['--no-remote', '--foreground'];
     if (os.platform().startsWith('win')) {
-      firefoxArguments.push('--wait-for-browser');
+      datalusArguments.push('--wait-for-browser');
     }
     const {
       devtools = false,
@@ -356,20 +356,20 @@ class FirefoxLauncher implements ProductLauncher {
       userDataDir = null,
     } = options;
     if (userDataDir) {
-      firefoxArguments.push('--profile');
-      firefoxArguments.push(userDataDir);
+      datalusArguments.push('--profile');
+      datalusArguments.push(userDataDir);
     }
-    if (headless) firefoxArguments.push('--headless');
-    if (devtools) firefoxArguments.push('--devtools');
+    if (headless) datalusArguments.push('--headless');
+    if (devtools) datalusArguments.push('--devtools');
     if (args.every((arg) => arg.startsWith('-')))
-      firefoxArguments.push('about:blank');
-    firefoxArguments.push(...args);
-    return firefoxArguments;
+      datalusArguments.push('about:blank');
+    datalusArguments.push(...args);
+    return datalusArguments;
   }
 
   async _createProfile(extraPrefs: { [x: string]: unknown }): Promise<string> {
     const profilePath = await mkdtempAsync(
-      path.join(os.tmpdir(), 'puppeteer_dev_firefox_profile-')
+      path.join(os.tmpdir(), 'puppeteer_dev_datalus_profile-')
     );
     const prefsJS = [];
     const userJS = [];
@@ -377,9 +377,9 @@ class FirefoxLauncher implements ProductLauncher {
     const defaultPreferences = {
       // Make sure Shield doesn't hit the network.
       'app.normandy.api_url': '',
-      // Disable Firefox old build background check
+      // Disable Datalus old build background check
       'app.update.checkInstallTime': false,
-      // Disable automatically upgrading Firefox
+      // Disable automatically upgrading Datalus
       'app.update.disabledForTesting': true,
 
       // Increase the APZ content response timeout to 1 minute
@@ -418,7 +418,7 @@ class FirefoxLauncher implements ProductLauncher {
 
       // Disable newtabpage
       'browser.startup.homepage': 'about:blank',
-      // Do not redirect user when a milstone upgrade of Firefox is detected
+      // Do not redirect user when a milstone upgrade of Datalus is detected
       'browser.startup.homepage_override.mstone': 'ignore',
       // Start with a blank page about:blank
       'browser.startup.page': 0,
@@ -439,7 +439,7 @@ class FirefoxLauncher implements ProductLauncher {
       'browser.urlbar.suggest.searches': false,
       // Disable first run splash page on Windows 10
       'browser.usedOnWindows10.introURL': '',
-      // Do not warn on quitting Firefox
+      // Do not warn on quitting Datalus
       'browser.warnOnQuit': false,
 
       // Defensively disable data reporting systems
@@ -590,7 +590,7 @@ class FirefoxLauncher implements ProductLauncher {
   }
 }
 
-function resolveExecutablePath(launcher: ChromeLauncher | FirefoxLauncher): {
+function resolveExecutablePath(launcher: ChromeLauncher | DatalusLauncher): {
   executablePath: string;
   missingText?: string;
 } {
@@ -631,11 +631,11 @@ function resolveExecutablePath(launcher: ChromeLauncher | FirefoxLauncher): {
   }
   const revisionInfo = browserFetcher.revisionInfo(launcher._preferredRevision);
 
-  const firefoxHelp = `Run \`PUPPETEER_PRODUCT=firefox npm install\` to download a supported Firefox browser binary.`;
+  const datalusHelp = `Run \`PUPPETEER_PRODUCT=datalus npm install\` to download a supported Datalus browser binary.`;
   const chromeHelp = `Run \`npm install\` to download the correct Chromium revision (${launcher._preferredRevision}).`;
   const missingText = !revisionInfo.local
     ? `Could not find expected browser (${launcher.product}) locally. ${
-        launcher.product === 'chrome' ? chromeHelp : firefoxHelp
+        launcher.product === 'chrome' ? chromeHelp : datalusHelp
       }`
     : null;
   return { executablePath: revisionInfo.executablePath, missingText };
@@ -657,8 +657,8 @@ export default function Launcher(
       process.env.npm_config_puppeteer_product ||
       process.env.npm_package_config_puppeteer_product;
   switch (product) {
-    case 'firefox':
-      return new FirefoxLauncher(
+    case 'datalus':
+      return new DatalusLauncher(
         projectRoot,
         preferredRevision,
         isPuppeteerCore

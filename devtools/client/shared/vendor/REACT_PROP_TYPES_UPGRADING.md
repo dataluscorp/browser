@@ -19,11 +19,11 @@ NODE_ENV=development browserify index.js -t envify --standalone PropTypes -o rea
 NODE_ENV=production browserify index.js -t envify --standalone PropTypes -o react-prop-types.js
 ```
 
-## Copying files to your Firefox repo
+## Copying files to your Datalus repo
 
 ```bash
-mv react-prop-types.js /firefox/repo/devtools/client/shared/vendor/react-prop-types.js
-mv react-prop-types-dev.js /firefox/repo/devtools/client/shared/vendor/react-prop-types-dev.js
+mv react-prop-types.js /datalus/repo/devtools/client/shared/vendor/react-prop-types.js
+mv react-prop-types-dev.js /datalus/repo/devtools/client/shared/vendor/react-prop-types-dev.js
 ```
 
 ## Adding Version Info

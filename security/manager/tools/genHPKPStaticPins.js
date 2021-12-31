@@ -3,8 +3,8 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 // How to run this file:
-// 1. [obtain firefox source code]
-// 2. [build/obtain firefox binaries]
+// 1. [obtain datalus source code]
+// 2. [build/obtain datalus binaries]
 // 3. run `[path to]/run-mozilla.sh [path to]/xpcshell \
 //                                  [path to]/genHPKPStaticpins.js \
 //                                  [absolute path to]/PreloadedHPKPins.json \

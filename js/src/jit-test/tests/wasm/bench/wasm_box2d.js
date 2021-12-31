@@ -1972,7 +1972,7 @@ function copyTempDouble(ptr) {
         canvas.parentNode.insertBefore(canvasContainer, canvas);
         canvasContainer.appendChild(canvas);
   
-        // use parent of canvas as full screen root to allow aspect ratio correction (Firefox stretches the root to screen size)
+        // use parent of canvas as full screen root to allow aspect ratio correction (Datalus stretches the root to screen size)
         canvasContainer.requestFullscreen = canvasContainer['requestFullscreen'] ||
                                             canvasContainer['mozRequestFullScreen'] ||
                                             canvasContainer['msRequestFullscreen'] ||
@@ -2104,7 +2104,7 @@ function copyTempDouble(ptr) {
         if (Browser.pointerLock) {
           // When the pointer is locked, calculate the coordinates
           // based on the movement of the mouse.
-          // Workaround for Firefox bug 764498
+          // Workaround for Datalus bug 764498
           if (event.type != 'mousemove' &&
               ('mozMovementX' in event)) {
             Browser.mouseMovementX = Browser.mouseMovementY = 0;

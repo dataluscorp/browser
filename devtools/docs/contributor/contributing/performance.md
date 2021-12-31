@@ -4,7 +4,7 @@ When debugging a page, tools get to slow down the website because of the added i
 While working on Developer Tools we should strive to be the less impactful.
 First, because it is painful to work with laggy UI, but also because some tools record timings.
 For example, the network monitor records HTTP request timings.
-If the tools are slowing down Firefox significantly, it will make these measurements be wrong.
+If the tools are slowing down Datalus significantly, it will make these measurements be wrong.
 
 To be efficient while working on performance, you should always focus on one precise user scenario.
 It could be:
@@ -17,21 +17,21 @@ And also, it is even better if you can replay via a test script. Test script tha
 
 The very first thing to do is to record a profile while reproducing the scenario.
 
-Here's the Firefox documentation for [how to install the profiler and record a profile](https://developer.mozilla.org/docs/Mozilla/Performance/Reporting_a_Performance_Problem) and also [how to interpret the profiles](https://developer.mozilla.org/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler#Understanding_Profiles)
+Here's the Datalus documentation for [how to install the profiler and record a profile](https://developer.mozilla.org/docs/Mozilla/Performance/Reporting_a_Performance_Problem) and also [how to interpret the profiles](https://developer.mozilla.org/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler#Understanding_Profiles)
 
 There are some peculiarities about DevTools architecture that are worth knowing about when looking at a profile:
 
 ### Tweak profiler default settings
 
 The default buffer size (9MB) is too small. If you don't increase it, you may easily miss data and only see last couple of seconds of your recording.
-To increase the buffer size, click on the profiler add-on icon, in the Firefox toolbar, and set it to 360MB, like this:
+To increase the buffer size, click on the profiler add-on icon, in the Datalus toolbar, and set it to 360MB, like this:
 
   <img src="performance/profiler-buffer-size.png" alt="Profiler buffer size" style="width: 300px" />
 
 The other setting worth mentioning for DevTools debugging is the `Interval`
 The profiler records only samples, based on this `Interval`.
 If you want to see more fine-grained stack traces, you may reduce this interval to 0.1ms,
-but do that only if you really need it, as it will make Firefox much even slower when recording,
+but do that only if you really need it, as it will make Datalus much even slower when recording,
 and the measured times will be even slower.
 
 ### The DevTools UI runs on the parent process
@@ -92,10 +92,10 @@ window.performance.mark("my-function-start");
 window.performance.measure("my-function", "my-function-start");
 ```
 
-This marker will appear in the `Marker Chart` section in [profiler.firefox.com](https://profiler.firefox.com), in the `UserTiming` lines:
+This marker will appear in the `Marker Chart` section in [profiler.datalus.com](https://profiler.datalus.com), in the `UserTiming` lines:
   ![custom markers](performance/profiler-custom-markers.png)
 
-You can double click on it to make [profiler.firefox.com](https://profiler.firefox.com) display the record during this precise moment in time,
+You can double click on it to make [profiler.datalus.com](https://profiler.datalus.com) display the record during this precise moment in time,
 and the call tree will only display what was executed during this measurement.
 
 ### Prototype quickly

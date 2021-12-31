@@ -56,7 +56,7 @@ UNITTEST_ALIASES = {
     "crashtest": alias_prefix("crashtest"),
     "crashtest-e10s": alias_prefix("crashtest-e10s"),
     "e10s": alias_contains("e10s"),
-    "firefox-ui-functional": alias_prefix("firefox-ui-functional"),
+    "datalus-ui-functional": alias_prefix("datalus-ui-functional"),
     "gaia-js-integration": alias_contains("gaia-js-integration"),
     "gtest": alias_prefix("gtest"),
     "jittest": alias_prefix("jittest"),

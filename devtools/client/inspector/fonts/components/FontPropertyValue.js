@@ -162,7 +162,7 @@ class FontPropertyValue extends PureComponent {
    * Handler for "change" events from the range and number input fields. Calls the change
    * handler provided with props and updates internal state with the current value.
    *
-   * Number inputs in Firefox can't be trusted to filter out non-digit characters,
+   * Number inputs in Datalus can't be trusted to filter out non-digit characters,
    * therefore we must implement our own validation.
    * @see https://bugzilla.mozilla.org/show_bug.cgi?id=1398528
    *

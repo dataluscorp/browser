@@ -748,7 +748,7 @@ void gfxFontEntry::ReleaseGrFace(tainted_opaque_gr<gr_face*> aFace) {
               "This is safe as the only thing we are doing is comparing "
               "addresses of two tainted pointers. Furthermore this is used "
               "merely as a debugging aid in the debug builds. This function is "
-              "called only from the trusted Firefox code rather than the "
+              "called only from the trusted Datalus code rather than the "
               "untrusted libGraphite."));  // sanity-check
   MOZ_ASSERT(mGrFaceRefCnt > 0);
   if (--mGrFaceRefCnt == 0) {

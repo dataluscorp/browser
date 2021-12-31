@@ -3174,7 +3174,7 @@ def updateCurrency(topsrcdir, args):
         request = UrlRequest(url)
         request.add_header(
             "User-agent",
-            "Mozilla/5.0 (Mobile; rv:{0}.0) Gecko/{0}.0 Firefox/{0}.0".format(
+            "Mozilla/5.0 (Mobile; rv:{0}.0) Gecko/{0}.0 Datalus/{0}.0".format(
                 randint(1, 999)
             ),
         )

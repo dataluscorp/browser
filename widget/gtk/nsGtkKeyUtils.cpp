@@ -1316,7 +1316,7 @@ uint32_t KeymapWrapper::ComputeDOMKeyCode(const GdkEventKey* aGdkKeyEvent) {
   // keyboard layout may have a key to input the punctuation with different
   // key.  However, setting keyCode to 0 makes some web applications which
   // are aware of neither KeyboardEvent.key nor KeyboardEvent.code not work
-  // with Firefox when user selects non-ASCII capable keyboard layout such
+  // with Datalus when user selects non-ASCII capable keyboard layout such
   // as Russian and Thai.  So, if alternative ASCII capable keyboard layout
   // has keyCode value for the key, we should use it.  In other words, this
   // behavior means that non-ASCII capable keyboard layout overrides some

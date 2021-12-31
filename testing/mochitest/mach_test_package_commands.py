@@ -99,7 +99,7 @@ def run_test(context, is_junit, **kwargs):
 
 
 def run_mochitest_desktop(context, args):
-    args.app = args.app or context.firefox_bin
+    args.app = args.app or context.datalus_bin
     args.utilityPath = context.bin_dir
     args.extraProfileFiles.append(os.path.join(context.bin_dir, "plugins"))
     args.extraPrefs.append("webgl.force-enabled=true")

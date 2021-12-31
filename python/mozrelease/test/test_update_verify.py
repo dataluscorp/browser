@@ -36,7 +36,7 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         self.uvc.aus_server = "aus"
         self.uvc.ftp_server_from = "ftp"
         self.uvc.ftp_server_to = "ftp"
-        self.uvc.to = "/firefox/4.0rc2.tar.bz2"
+        self.uvc.to = "/datalus/4.0rc2.tar.bz2"
         self.uvc.mar_channel_IDs = "baz"
         self.uvc.to_build_id = "999"
         self.uvc.to_display_version = "99.0 Zeta 9"
@@ -47,7 +47,7 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         uvc2.aus_server = "aus"
         uvc2.ftp_server_form = "ftp"
         uvc2.ftp_server_to = "ftp"
-        uvc2.to = "/firefox/4.0rc2.tar.bz2"
+        uvc2.to = "/datalus/4.0rc2.tar.bz2"
         uvc2.mar_channel_IDs = "baz"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
@@ -68,10 +68,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
                 "build_id": 555,
                 "locales": ["af", "de"],
                 "patch_types": ["partial", "complete"],
-                "from": "/pub/firefox/foo.bz2",
+                "from": "/pub/datalus/foo.bz2",
                 "ftp_server_from": "from",
                 "ftp_server_to": "to",
-                "mar_channel_IDs": "firefox-mozilla-booyah",
+                "mar_channel_IDs": "datalus-mozilla-booyah",
                 "updater_package": None,
             }
         ]
@@ -80,10 +80,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             build_id=555,
             locales=["af", "de"],
             patch_types=["partial", "complete"],
-            from_path="/pub/firefox/foo.bz2",
+            from_path="/pub/datalus/foo.bz2",
             ftp_server_from="from",
             ftp_server_to="to",
-            mar_channel_IDs="firefox-mozilla-booyah",
+            mar_channel_IDs="datalus-mozilla-booyah",
             platform="bar",
         )
         self.assertEquals(self.uvc.releases, releases)
@@ -96,10 +96,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
                 "build_id": 555,
                 "locales": ["af", "de"],
                 "patch_types": ["partial", "complete"],
-                "from": "/pub/firefox/foo.bz2",
+                "from": "/pub/datalus/foo.bz2",
                 "ftp_server_from": "from",
                 "ftp_server_to": "to",
-                "mar_channel_IDs": "firefox-mozilla-booyah",
+                "mar_channel_IDs": "datalus-mozilla-booyah",
                 "updater_package": None,
             },
             {
@@ -108,10 +108,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
                 "build_id": 666,
                 "locales": ["af", "de"],
                 "patch_types": ["partial", "complete"],
-                "from": "/pub/firefox/foo2.bz2",
+                "from": "/pub/datalus/foo2.bz2",
                 "ftp_server_from": "from",
                 "ftp_server_to": "to",
-                "mar_channel_IDs": "firefox-mozilla-booyah",
+                "mar_channel_IDs": "datalus-mozilla-booyah",
                 "updater_package": None,
             },
         ]
@@ -120,10 +120,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             build_id=555,
             locales=["af", "de"],
             patch_types=["partial", "complete"],
-            from_path="/pub/firefox/foo.bz2",
+            from_path="/pub/datalus/foo.bz2",
             ftp_server_from="from",
             ftp_server_to="to",
-            mar_channel_IDs="firefox-mozilla-booyah",
+            mar_channel_IDs="datalus-mozilla-booyah",
             platform="WINNT_x86-msvc",
         )
         self.uvc.addRelease(
@@ -131,22 +131,22 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             build_id=666,
             locales=["af", "de"],
             patch_types=["partial", "complete"],
-            from_path="/pub/firefox/foo2.bz2",
+            from_path="/pub/datalus/foo2.bz2",
             ftp_server_from="from",
             ftp_server_to="to",
-            mar_channel_IDs="firefox-mozilla-booyah",
+            mar_channel_IDs="datalus-mozilla-booyah",
             platform="WINNT_x86-msvc-x86",
         )
         self.assertEquals(self.uvc.releases, releases)
 
     def testRead(self):
-        ftp_server_from = "stage.mozilla.org/firefox"
-        ftp_server_to = "stage.mozilla.org/firefox"
+        ftp_server_from = "stage.mozilla.org/datalus"
+        ftp_server_to = "stage.mozilla.org/datalus"
         uvc2 = UpdateVerifyConfig()
-        uvc2.product = "Firefox"
+        uvc2.product = "Datalus"
         uvc2.channel = "betatest"
         uvc2.aus_server = "https://aus4.mozilla.org"
-        uvc2.to = "/firefox/4.0rc2.tar.bz2"
+        uvc2.to = "/datalus/4.0rc2.tar.bz2"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
         uvc2.to_app_version = "99.0"
@@ -156,17 +156,17 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["af", "de", "en-US", "ja", "zh-TW"],
             patch_types=["partial", "complete"],
-            from_path="/firefox/4.0rc1.tar.bz2",
+            from_path="/datalus/4.0rc1.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
-            mar_channel_IDs="firefox-mozilla-beta",
+            mar_channel_IDs="datalus-mozilla-beta",
         )
         uvc2.addRelease(
             "4.0b12",
             build_id="777",
             platform="Linux_x86-gcc3",
             locales=["af", "en-US"],
-            from_path="/firefox/4.0b12.tar.bz2",
+            from_path="/datalus/4.0b12.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
         )
@@ -191,12 +191,12 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         self.assertEquals(self.uvc, uvc2)
 
     def testWrite(self):
-        ftp_server_from = "stage.mozilla.org/firefox"
-        ftp_server_to = "stage.mozilla.org/firefox"
-        self.uvc.product = "Firefox"
+        ftp_server_from = "stage.mozilla.org/datalus"
+        ftp_server_to = "stage.mozilla.org/datalus"
+        self.uvc.product = "Datalus"
         self.uvc.channel = "betatest"
         self.uvc.aus_server = "https://aus4.mozilla.org"
-        self.uvc.to = "/firefox/4.0rc2.tar.bz2"
+        self.uvc.to = "/datalus/4.0rc2.tar.bz2"
         self.uvc.to_build_id = "999"
         self.uvc.to_display_version = "99.0 Zeta 9"
         self.uvc.to_app_version = "99.0"
@@ -206,17 +206,17 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=("af", "de", "en-US", "ja", "zh-TW"),
             patch_types=("partial", "complete"),
-            from_path="/firefox/4.0rc1.tar.bz2",
+            from_path="/datalus/4.0rc1.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
-            mar_channel_IDs="firefox-mozilla-beta",
+            mar_channel_IDs="datalus-mozilla-beta",
         )
         self.uvc.addRelease(
             "4.0b12",
             build_id="777",
             platform="Linux_x86-gcc3",
             locales=["af", "en-US"],
-            from_path="/firefox/4.0b12.tar.bz2",
+            from_path="/datalus/4.0b12.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
         )
@@ -254,14 +254,14 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         self.assertRaises(UpdateVerifyError, self.uvc._parseLine, invalidLine)
 
     def testGetChunk(self):
-        ftp_server_from = "stage.mozilla.org/firefox"
-        ftp_server_to = "stage.mozilla.org/firefox"
+        ftp_server_from = "stage.mozilla.org/datalus"
+        ftp_server_to = "stage.mozilla.org/datalus"
         self.uvc.read(self.config)
         uvc2 = UpdateVerifyConfig()
-        uvc2.product = "Firefox"
+        uvc2.product = "Datalus"
         uvc2.channel = "betatest"
         uvc2.aus_server = "https://aus4.mozilla.org"
-        uvc2.to = "/firefox/4.0rc2.tar.bz2"
+        uvc2.to = "/datalus/4.0rc2.tar.bz2"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
         uvc2.to_app_version = "99.0"
@@ -271,10 +271,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["af", "de", "en-US"],
             patch_types=["partial", "complete"],
-            from_path="/firefox/4.0rc1.tar.bz2",
+            from_path="/datalus/4.0rc1.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
-            mar_channel_IDs="firefox-mozilla-beta",
+            mar_channel_IDs="datalus-mozilla-beta",
         )
         uvc2.addRelease(
             "4.0b12",
@@ -290,12 +290,12 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         self.assertEquals(chunkedConfig, uvc2)
 
     def testGetChunkWithPathWithSpaces(self):
-        self.uvc.product = "Firefox"
+        self.uvc.product = "Datalus"
         self.uvc.channel = "betatest"
         self.uvc.aus_server = "https://aus4.mozilla.org"
-        self.uvc.ftp_server_from = "stage.mozilla.org/firefox"
-        self.uvc.ftp_server_to = "stage.mozilla.org/firefox"
-        self.uvc.to = "/firefox/Firefox 4.0 Beta 2.exe"
+        self.uvc.ftp_server_from = "stage.mozilla.org/datalus"
+        self.uvc.ftp_server_to = "stage.mozilla.org/datalus"
+        self.uvc.to = "/datalus/Datalus 4.0 Beta 2.exe"
         self.uvc.to_build_id = "999"
         self.uvc.to_display_version = "99.0 Zeta 9"
         self.uvc.to_app_version = "99.0"
@@ -305,15 +305,15 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["en-US", "ja", "zh-TW"],
             patch_types=["complete"],
-            from_path="/firefox/Firefox 4.0 Beta 1.exe",
+            from_path="/datalus/Datalus 4.0 Beta 1.exe",
         )
         uvc2 = UpdateVerifyConfig()
-        uvc2.product = "Firefox"
+        uvc2.product = "Datalus"
         uvc2.channel = "betatest"
         uvc2.aus_server = "https://aus4.mozilla.org"
-        uvc2.ftp_server_from = "stage.mozilla.org/firefox"
-        uvc2.ftp_server_to = "stage.mozilla.org/firefox"
-        uvc2.to = "/firefox/Firefox 4.0 Beta 2.exe"
+        uvc2.ftp_server_from = "stage.mozilla.org/datalus"
+        uvc2.ftp_server_to = "stage.mozilla.org/datalus"
+        uvc2.to = "/datalus/Datalus 4.0 Beta 2.exe"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
         uvc2.to_app_version = "99.0"
@@ -323,13 +323,13 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["en-US", "ja"],
             patch_types=["complete"],
-            from_path="/firefox/Firefox 4.0 Beta 1.exe",
+            from_path="/datalus/Datalus 4.0 Beta 1.exe",
         )
         chunkedConfig = self.uvc.getChunk(chunks=2, thisChunk=1)
         self.assertEquals(chunkedConfig, uvc2)
 
     def testAddLocaleToRelease(self):
-        from_path = "/firefox/4.0rc1.tar.bz2"
+        from_path = "/datalus/4.0rc1.tar.bz2"
         self.uvc.read(self.config)
         self.uvc.addLocaleToRelease("888", "he", from_path)
         self.assertEquals(
@@ -355,14 +355,14 @@ class TestUpdateVerifyConfig(unittest.TestCase):
         self.assertEquals(self.uvc.getRelease("123", None), {})
 
     def testGetFullReleaseTests(self):
-        ftp_server_from = "stage.mozilla.org/firefox"
-        ftp_server_to = "stage.mozilla.org/firefox"
+        ftp_server_from = "stage.mozilla.org/datalus"
+        ftp_server_to = "stage.mozilla.org/datalus"
         self.uvc.read(self.config)
         uvc2 = UpdateVerifyConfig()
-        uvc2.product = "Firefox"
+        uvc2.product = "Datalus"
         uvc2.channel = "betatest"
         uvc2.aus_server = "https://aus4.mozilla.org"
-        uvc2.to = "/firefox/4.0rc2.tar.bz2"
+        uvc2.to = "/datalus/4.0rc2.tar.bz2"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
         uvc2.to_app_version = "99.0"
@@ -372,10 +372,10 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["af", "de", "en-US", "ja", "zh-TW"],
             patch_types=["partial", "complete"],
-            from_path="/firefox/4.0rc1.tar.bz2",
+            from_path="/datalus/4.0rc1.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
-            mar_channel_IDs="firefox-mozilla-beta",
+            mar_channel_IDs="datalus-mozilla-beta",
         )
         uvc2.addRelease(
             "4.0b12",
@@ -383,21 +383,21 @@ class TestUpdateVerifyConfig(unittest.TestCase):
             platform="Linux_x86-gcc3",
             locales=["af", "en-US"],
             patch_types=["complete"],
-            from_path="/firefox/4.0b12.tar.bz2",
+            from_path="/datalus/4.0b12.tar.bz2",
             ftp_server_from=ftp_server_from,
             ftp_server_to=ftp_server_to,
         )
         self.assertEquals(self.uvc.getFullReleaseTests(), uvc2.releases)
 
     def testGetQuickReleaseTests(self):
-        ftp_server_from = "stage.mozilla.org/firefox"
-        ftp_server_to = "stage.mozilla.org/firefox"
+        ftp_server_from = "stage.mozilla.org/datalus"
+        ftp_server_to = "stage.mozilla.org/datalus"
         self.uvc.read(self.config)
         uvc2 = UpdateVerifyConfig()
-        uvc2.product = "Firefox"
+        uvc2.product = "Datalus"
         uvc2.channel = "betatest"
         uvc2.aus_server = "https://aus4.mozilla.org"
-        uvc2.to = "/firefox/4.0rc2.tar.bz2"
+        uvc2.to = "/datalus/4.0rc2.tar.bz2"
         uvc2.to_build_id = "999"
         uvc2.to_display_version = "99.0 Zeta 9"
         uvc2.to_app_version = "99.0"

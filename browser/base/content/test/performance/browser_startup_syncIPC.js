@@ -416,7 +416,7 @@ add_task(async function() {
     ok(
       false,
       `Unexpected sync IPC behavior during startup; open the ${filename} ` +
-        "artifact in the Firefox Profiler to see what happened"
+        "artifact in the Datalus Profiler to see what happened"
     );
   }
 });

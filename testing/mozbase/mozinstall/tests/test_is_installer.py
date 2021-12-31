@@ -8,7 +8,7 @@ import pytest
 
 @pytest.mark.skipif(
     mozinfo.isWin,
-    reason="Bug 1157352 - New firefox.exe needed for mozinstall 1.12 and higher.",
+    reason="Bug 1157352 - New datalus.exe needed for mozinstall 1.12 and higher.",
 )
 def test_is_installer(request, get_installer):
     """Test that we can identify a correct installer."""
@@ -28,7 +28,7 @@ def test_is_installer(request, get_installer):
             import pefile  # noqa
 
             stub_exe = (
-                request.node.fspath.dirpath("build_stub").join("firefox.exe").strpath
+                request.node.fspath.dirpath("build_stub").join("datalus.exe").strpath
             )
             assert not mozinstall.is_installer(stub_exe)
         except ImportError:

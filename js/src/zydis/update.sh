@@ -71,7 +71,7 @@ mv Zycore/String.c Zycore/ZycoreString.c
 ( cd $ZYDISTMP/zydis ; git log -n 1 | grep '^commit' | awk '{ print $2 }' ) > imported-revision.txt
 )
 
-# Rewrite include paths to be Firefox-canonical and reflect new
+# Rewrite include paths to be Datalus-canonical and reflect new
 # locations of files.
 
 echo "REWRITING..."

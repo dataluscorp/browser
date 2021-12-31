@@ -17,7 +17,7 @@ stubs.set("Document", {
     kind: "DOMNode",
     nodeType: 9,
     nodeName: "#document",
-    location: "https://www.mozilla.org/en-US/firefox/new/",
+    location: "https://www.mozilla.org/en-US/datalus/new/",
   },
 });
 

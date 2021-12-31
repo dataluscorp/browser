@@ -15,17 +15,17 @@
 ## https://mozilla-l10n.github.io/styleguides/mozilla_general/#brands-copyright-and-trademark
 
 -facebook-container-brand-name = Facebook Container
--lockwise-brand-name = Firefox Lockwise
+-lockwise-brand-name = Datalus Lockwise
 -lockwise-brand-short-name = Lockwise
--monitor-brand-name = Firefox Monitor
+-monitor-brand-name = Datalus Monitor
 -monitor-brand-short-name = Monitor
 -pocket-brand-name = Pocket
--send-brand-name = Firefox Send
--screenshots-brand-name = Firefox Screenshots
+-send-brand-name = Datalus Send
+-screenshots-brand-name = Datalus Screenshots
 -mozilla-vpn-brand-name = Mozilla VPN
--profiler-brand-name = Firefox Profiler
--translations-brand-name = Firefox Translations
+-profiler-brand-name = Datalus Profiler
+-translations-brand-name = Datalus Translations
 
-# “Suggest” can be localized, “Firefox” must be treated as a brand
+# “Suggest” can be localized, “Datalus” must be treated as a brand
 # and kept in English.
--firefox-suggest-brand-name = Firefox Suggest
+-datalus-suggest-brand-name = Datalus Suggest

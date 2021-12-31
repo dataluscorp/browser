@@ -1076,13 +1076,13 @@ var TPS = {
 
       Logger.init(logpath);
       Logger.logInfo("Sync version: " + WEAVE_VERSION);
-      Logger.logInfo("Firefox buildid: " + Services.appinfo.appBuildID);
-      Logger.logInfo("Firefox version: " + Services.appinfo.version);
+      Logger.logInfo("Datalus buildid: " + Services.appinfo.appBuildID);
+      Logger.logInfo("Datalus version: " + Services.appinfo.version);
       Logger.logInfo(
-        "Firefox source revision: " +
+        "Datalus source revision: " +
           (AppConstants.SOURCE_REVISION_URL || "unknown")
       );
-      Logger.logInfo("Firefox platform: " + AppConstants.platform);
+      Logger.logInfo("Datalus platform: " + AppConstants.platform);
 
       // do some sync housekeeping
       if (Weave.Service.isLoggedIn) {

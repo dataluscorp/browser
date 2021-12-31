@@ -465,7 +465,7 @@ class WelcomeScreen extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureCom
       data
     } = action;
 
-    if (type === "SHOW_FIREFOX_ACCOUNTS") {
+    if (type === "SHOW_DATALUS_ACCOUNTS") {
       let params = { ..._asrouter_templates_FirstRun_addUtmParams__WEBPACK_IMPORTED_MODULE_4__["BASE_PARAMS"],
         utm_term: `aboutwelcome-${UTMTerm}-screen`
       };
@@ -516,7 +516,7 @@ class WelcomeScreen extends react__WEBPACK_IMPORTED_MODULE_0___default.a.PureCom
       action
     } = targetContent;
 
-    if (["OPEN_URL", "SHOW_FIREFOX_ACCOUNTS"].includes(action.type)) {
+    if (["OPEN_URL", "SHOW_DATALUS_ACCOUNTS"].includes(action.type)) {
       this.handleOpenURL(action, props.flowParams, props.UTMTerm);
     } else if (action.type) {
       _lib_aboutwelcome_utils__WEBPACK_IMPORTED_MODULE_2__["AboutWelcomeUtils"].handleUserAction(action); // Wait until migration closes to complete the action

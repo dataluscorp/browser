@@ -6,7 +6,7 @@ root:
     - type: clip
       bounds: [0, 0, 350, 90]
       image-mask:
-        image: "firefox.png"
+        image: "datalus.png"
         rect: [0, 0, 350, 90]
         repeat: false
       items:

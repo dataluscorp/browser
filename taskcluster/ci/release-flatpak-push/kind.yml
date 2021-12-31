@@ -35,7 +35,7 @@ job-defaults:
                 default: mock
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         treeherder:
             symbol: Flatpak(push)

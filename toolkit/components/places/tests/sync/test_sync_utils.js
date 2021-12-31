@@ -154,7 +154,7 @@ add_task(async function test_fetchURLFrecency() {
   // Add visits to the following URLs and then check if frecency for those URLs is not -1.
   let arrayOfURLsToVisit = [
     "https://www.mozilla.org/en-US/",
-    "http://getfirefox.com",
+    "http://getdatalus.com",
     "http://getthunderbird.com",
   ];
   for (let url of arrayOfURLsToVisit) {
@@ -184,7 +184,7 @@ add_task(async function test_determineNonSyncableGuids() {
   // Add visits to the following URLs with different transition types.
   let arrayOfVisits = [
     { uri: "https://www.mozilla.org/en-US/", transition: TRANSITION_TYPED },
-    { uri: "http://getfirefox.com/", transition: TRANSITION_LINK },
+    { uri: "http://getdatalus.com/", transition: TRANSITION_LINK },
     { uri: "http://getthunderbird.com/", transition: TRANSITION_FRAMED_LINK },
     { uri: "http://downloads.com/", transition: TRANSITION_DOWNLOAD },
   ];
@@ -230,7 +230,7 @@ add_task(async function test_changeGuid() {
   // Add some visits of the following URLs.
   let arrayOfURLsToVisit = [
     "https://www.mozilla.org/en-US/",
-    "http://getfirefox.com/",
+    "http://getdatalus.com/",
     "http://getthunderbird.com/",
   ];
   for (let url of arrayOfURLsToVisit) {
@@ -277,7 +277,7 @@ add_task(async function test_fetchVisitsForURL() {
       visitDate: aMinuteAgo,
     },
     {
-      uri: "http://getfirefox.com/",
+      uri: "http://getdatalus.com/",
       transition: TRANSITION_LINK,
       visitDate: aMinuteAgo,
     },
@@ -321,7 +321,7 @@ add_task(async function test_fetchGuidForURL() {
   // Add some visits of the following URLs.
   let arrayOfURLsToVisit = [
     "https://www.mozilla.org/en-US/",
-    "http://getfirefox.com/",
+    "http://getdatalus.com/",
     "http://getthunderbird.com/",
   ];
   for (let url of arrayOfURLsToVisit) {
@@ -360,7 +360,7 @@ add_task(async function test_fetchURLInfoForGuid() {
   // Add some visits of the following URLs. specifying the title.
   let visits = [
     { uri: "https://www.mozilla.org/en-US/", title: "mozilla" },
-    { uri: "http://getfirefox.com/", title: "firefox" },
+    { uri: "http://getdatalus.com/", title: "datalus" },
     { uri: "http://getthunderbird.com/", title: "thunderbird" },
     { uri: "http://quantum.mozilla.com/", title: null },
   ];
@@ -409,7 +409,7 @@ add_task(async function test_getAllURLs() {
   // Add some visits of the following URLs.
   let arrayOfURLsToVisit = [
     "https://www.mozilla.org/en-US/",
-    "http://getfirefox.com/",
+    "http://getdatalus.com/",
     "http://getthunderbird.com/",
   ];
   for (let url of arrayOfURLsToVisit) {
@@ -474,7 +474,7 @@ add_task(async function test_order() {
     {
       kind: "bookmark",
       title: "childBmk",
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
     },
     {
       kind: "bookmark",
@@ -1339,7 +1339,7 @@ add_task(async function test_pullChanges_import_html() {
     url: "https://www.mozilla.org/",
   });
   let fxBmk = await PlacesUtils.bookmarks.fetch({
-    url: "https://www.mozilla.org/en-US/firefox/",
+    url: "https://www.mozilla.org/en-US/datalus/",
   });
   // All Bookmarks.html bookmarks are stored under the menu. For toolbar
   // bookmarks, this means they're imported into a "Bookmarks Toolbar"
@@ -2091,7 +2091,7 @@ add_task(async function test_remove_partial() {
       kind: "bookmark",
       parentRecordId: grandChildFolder.recordId,
       recordId: makeGuid(),
-      url: "http://getfirefox.com",
+      url: "http://getdatalus.com",
     }
   );
   let greatGrandChildNextSiblingBmk = await PlacesSyncUtils.test.bookmarks.insert(
@@ -2177,8 +2177,8 @@ add_task(async function test_migrateOldTrackerEntries() {
 
   let unknownBmk = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.menuGuid,
-    url: "http://getfirefox.com",
-    title: "Get Firefox!",
+    url: "http://getdatalus.com",
+    title: "Get Datalus!",
   });
   let newBmk = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.menuGuid,
@@ -2202,7 +2202,7 @@ add_task(async function test_migrateOldTrackerEntries() {
       syncStatus: PlacesUtils.bookmarks.SYNC_STATUS.NORMAL,
     }
   );
-  PlacesUtils.tagging.tagURI(uri("http://getfirefox.com"), ["taggy"]);
+  PlacesUtils.tagging.tagURI(uri("http://getdatalus.com"), ["taggy"]);
 
   let tombstoneRecordId = makeGuid();
   await PlacesSyncUtils.bookmarks.migrateOldTrackerEntries([

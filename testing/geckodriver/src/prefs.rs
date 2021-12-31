@@ -7,12 +7,12 @@ use mozprofile::preferences::Pref;
 // ALL CHANGES TO THIS FILE MUST HAVE REVIEW FROM A GECKODRIVER PEER!
 //
 // All preferences in this file are not immediately effective, and
-// require a restart of Firefox, or have to be set in the profile before
-// Firefox gets started the first time. If a preference has to be added,
+// require a restart of Datalus, or have to be set in the profile before
+// Datalus gets started the first time. If a preference has to be added,
 // which is immediately effective, it needs to be done in Marionette
 // (marionette.js).
 //
-// Note: geckodriver is used out-of-tree with various builds of Firefox.
+// Note: geckodriver is used out-of-tree with various builds of Datalus.
 // Removing a preference from this file will cause regressions,
 // so please be careful and get review from a Testing :: geckodriver peer
 // before you make any changes to this file.
@@ -21,16 +21,16 @@ lazy_static! {
         // Make sure Shield doesn't hit the network.
         ("app.normandy.api_url", Pref::new("")),
 
-        // Disable Firefox old build background check
+        // Disable Datalus old build background check
         ("app.update.checkInstallTime", Pref::new(false)),
 
-        // Disable automatically upgrading Firefox
+        // Disable automatically upgrading Datalus
         //
         // Note: Possible update tests could reset or flip the value to allow
         // updates to be downloaded and applied.
         ("app.update.disabledForTesting", Pref::new(true)),
-        // !!! For backward compatibility up to Firefox 64. Only remove
-        // when this Firefox version is no longer supported by geckodriver !!!
+        // !!! For backward compatibility up to Datalus 64. Only remove
+        // when this Datalus version is no longer supported by geckodriver !!!
         ("app.update.auto", Pref::new(false)),
 
         // Enable the dump function, which sends messages to the system
@@ -51,7 +51,7 @@ lazy_static! {
         // Skip check for default browser on startup
         ("browser.shell.checkDefaultBrowser", Pref::new(false)),
 
-        // Do not redirect user when a milestone upgrade of Firefox
+        // Do not redirect user when a milestone upgrade of Datalus
         // is detected
         ("browser.startup.homepage_override.mstone", Pref::new("ignore")),
 
@@ -59,17 +59,17 @@ lazy_static! {
         ("browser.startup.page", Pref::new(0)),
 
         // Do not close the window when the last tab gets closed
-        // TODO: Remove once minimum supported Firefox release is 61.
+        // TODO: Remove once minimum supported Datalus release is 61.
         ("browser.tabs.closeWindowWithLastTab", Pref::new(false)),
 
         // Do not warn when closing all open tabs
-        // TODO: Remove once minimum supported Firefox release is 61.
+        // TODO: Remove once minimum supported Datalus release is 61.
         ("browser.tabs.warnOnClose", Pref::new(false)),
 
         // Disable the UI tour
         ("browser.uitour.enabled", Pref::new(false)),
 
-        // Do not warn on quitting Firefox
+        // Do not warn on quitting Datalus
         ("browser.warnOnQuit", Pref::new(false)),
 
         // Defensively disable data reporting systems
@@ -127,7 +127,7 @@ lazy_static! {
         ("media.sanity-test.disabled", Pref::new(true)),
 
         // Do not prompt with long usernames or passwords in URLs
-        // TODO: Remove once minimum supported Firefox release is 61.
+        // TODO: Remove once minimum supported Datalus release is 61.
         ("network.http.phishy-userpass-length", Pref::new(255)),
 
         // Do not automatically switch between offline and online
@@ -137,7 +137,7 @@ lazy_static! {
         ("network.sntp.pools", Pref::new("%(server)s")),
 
         // Disable Flash.  The plugin container it is run in is
-        // causing problems when quitting Firefox from geckodriver,
+        // causing problems when quitting Datalus from geckodriver,
         // c.f. https://github.com/mozilla/geckodriver/issues/225.
         ("plugin.state.flash", Pref::new(0)),
 
@@ -153,7 +153,7 @@ lazy_static! {
 
         // asrouter expects a plain object or null
         ("browser.newtabpage.activity-stream.asrouter.providers.cfr", Pref::new("null")),
-        // TODO: Remove once minimum supported Firefox release is 93.
+        // TODO: Remove once minimum supported Datalus release is 93.
         ("browser.newtabpage.activity-stream.asrouter.providers.cfr-fxa", Pref::new("null")),
         ("browser.newtabpage.activity-stream.asrouter.providers.snippets", Pref::new("null")),
         ("browser.newtabpage.activity-stream.asrouter.providers.message-groups", Pref::new("null")),

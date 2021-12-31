@@ -22,11 +22,11 @@
 //  div.style.opacity = '0';
 //  alert(getComputedStyle(div).opacity);
 //
-// We'd get '0' in Firefox and Edge, but an empty string in Chrome.
+// We'd get '0' in Datalus and Edge, but an empty string in Chrome.
 //
 // However, if instead of using the style attribute, we set style in a <style>
 // element in *either* the document we're calling from *or* the XHR doc and
-// do the same we get '1' in Firefox and Edge, but an empty string in Chrome.
+// do the same we get '1' in Datalus and Edge, but an empty string in Chrome.
 //
 // That is, no browser appears to apply styles to elements in a document without
 // a browsing context unless the styles are defined using the style attribute,

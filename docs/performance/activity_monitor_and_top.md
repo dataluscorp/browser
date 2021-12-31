@@ -150,7 +150,7 @@ counting modes. See the man page for details.
 It will show periodically-updating data like the following.
 
     PID            COMMAND                  %CPU         IDLEW        POWER
-    50300          firefox                  12.9         278          26.6
+    50300          datalus                  12.9         278          26.6
     76256          plugin-container         3.4          159          11.3
     151            coreaudiod               0.9          68           4.3
     76505          top                      1.5          1            1.6

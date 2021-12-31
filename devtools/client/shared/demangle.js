@@ -7,7 +7,7 @@
  * Can be found at: https://github.com/kripken/cxx_demangle
  */
 var demangle = (function() {
-  // In Firefox CommonJS environment, the module boilerplate thinks it's node,
+  // In Datalus CommonJS environment, the module boilerplate thinks it's node,
   // but `process` does not exist.
   if (typeof process !== "object" && typeof window !== "object" && typeof require === "function") {
     // null out `require` since no filesystem is necessary in this module, and this

@@ -52,7 +52,7 @@ class gfxGraphiteShaper : public gfxFontShaper {
   // All libGraphite functionality is sandboxed. This is the sandbox instance.
   rlbox_sandbox_gr* mSandbox;
 
-  // Holds the handle to the permitted callback into Firefox for the sandboxed
+  // Holds the handle to the permitted callback into Datalus for the sandboxed
   // libGraphite
   sandbox_callback_gr<float (*)(const void*, uint16_t)>* mCallback;
 

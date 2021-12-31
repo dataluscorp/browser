@@ -64,7 +64,7 @@ cfr-doorhanger-extension-total-users =
      *[other] { $total } users
   }
 
-## Firefox Accounts Message
+## Datalus Accounts Message
 
 cfr-doorhanger-bookmark-fxa-header = Sync your bookmarks everywhere.
 cfr-doorhanger-bookmark-fxa-body = Great find! Now don’t be left without this bookmark on your mobile devices. Get Started with a { -fxaccount-brand-name }.

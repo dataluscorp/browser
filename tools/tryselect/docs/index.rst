@@ -6,7 +6,7 @@ without requiring their code to be reviewed and landed.
 
 First, :doc:`ensure that you can push to Try <configuration>`.
 Try knows how to run tasks that are defined in-tree,
-such as ``build-linux64/opt`` (build Firefox for Linux). To manually select some tasks for
+such as ``build-linux64/opt`` (build Datalus for Linux). To manually select some tasks for
 Try to process, run the following command:
 
 .. code-block:: shell

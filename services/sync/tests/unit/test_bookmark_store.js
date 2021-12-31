@@ -55,15 +55,15 @@ add_bookmark_test(async function test_bookmark_create(engine) {
   try {
     _("Ensure the record isn't present yet.");
     let item = await PlacesUtils.bookmarks.fetch({
-      url: "http://getfirefox.com/",
+      url: "http://getdatalus.com/",
     });
     Assert.equal(null, item);
 
     _("Let's create a new record.");
-    let fxrecord = new Bookmark("bookmarks", "get-firefox1");
-    fxrecord.bmkUri = "http://getfirefox.com/";
-    fxrecord.title = "Get Firefox!";
-    fxrecord.tags = ["firefox", "awesome", "browser"];
+    let fxrecord = new Bookmark("bookmarks", "get-datalus1");
+    fxrecord.bmkUri = "http://getdatalus.com/";
+    fxrecord.title = "Get Datalus!";
+    fxrecord.tags = ["datalus", "awesome", "browser"];
     fxrecord.keyword = "awesome";
     fxrecord.parentName = BookmarksToolbarTitle;
     fxrecord.parentid = "toolbar";
@@ -72,11 +72,11 @@ add_bookmark_test(async function test_bookmark_create(engine) {
     _("Verify it has been created correctly.");
     item = await PlacesUtils.bookmarks.fetch(fxrecord.id);
     Assert.equal(item.type, PlacesUtils.bookmarks.TYPE_BOOKMARK);
-    Assert.equal(item.url.href, "http://getfirefox.com/");
+    Assert.equal(item.url.href, "http://getdatalus.com/");
     Assert.equal(item.title, fxrecord.title);
     Assert.equal(item.parentGuid, PlacesUtils.bookmarks.toolbarGuid);
     let keyword = await PlacesUtils.keywords.fetch(fxrecord.keyword);
-    Assert.equal(keyword.url.href, "http://getfirefox.com/");
+    Assert.equal(keyword.url.href, "http://getdatalus.com/");
 
     _(
       "Have the store create a new record object. Verify that it has the same data."
@@ -128,12 +128,12 @@ add_bookmark_test(async function test_bookmark_update(engine) {
     _("Create a bookmark whose values we'll change.");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     await PlacesUtils.keywords.insert({
-      url: "http://getfirefox.com/",
-      keyword: "firefox",
+      url: "http://getdatalus.com/",
+      keyword: "datalus",
     });
 
     _("Update the record with some null values.");
@@ -147,7 +147,7 @@ add_bookmark_test(async function test_bookmark_update(engine) {
     let item = await PlacesUtils.bookmarks.fetch(bmk1.guid);
     Assert.equal(item.title, "");
     let keyword = await PlacesUtils.keywords.fetch({
-      url: "http://getfirefox.com/",
+      url: "http://getdatalus.com/",
     });
     Assert.equal(null, keyword);
   } finally {
@@ -163,7 +163,7 @@ add_bookmark_test(async function test_bookmark_createRecord(engine) {
     _("Create a bookmark without a title.");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com/",
+      url: "http://getdatalus.com/",
     });
 
     _("Verify that the record is created accordingly.");
@@ -224,8 +224,8 @@ add_bookmark_test(async function test_folder_createRecord(engine) {
     _("Create two bookmarks in that folder without assigning them GUIDs.");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     let bmk2 = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
@@ -257,8 +257,8 @@ add_bookmark_test(async function test_deleted(engine) {
     _("Create a bookmark that will be deleted.");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     // The engine needs to think we've previously synced it.
     await PlacesTestUtils.markBookmarksAsSynced();
@@ -296,8 +296,8 @@ add_bookmark_test(async function test_move_folder(engine) {
     });
     let bmk = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     // add records to the store that represent the current state.
     await apply_records(engine, [
@@ -339,8 +339,8 @@ add_bookmark_test(async function test_move_order(engine) {
     _("Create two bookmarks");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     let bmk2 = await PlacesUtils.bookmarks.insert({
       parentGuid: PlacesUtils.bookmarks.toolbarGuid,

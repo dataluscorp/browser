@@ -284,8 +284,8 @@ describe("MultiStageAboutWelcome module", () => {
 
         assert.calledWith(SCREEN_PROPS.setActiveTheme, "test");
       });
-      it("should handle SHOW_FIREFOX_ACCOUNTS", () => {
-        TEST_ACTION.type = "SHOW_FIREFOX_ACCOUNTS";
+      it("should handle SHOW_DATALUS_ACCOUNTS", () => {
+        TEST_ACTION.type = "SHOW_DATALUS_ACCOUNTS";
         const wrapper = mount(<WelcomeScreen {...SCREEN_PROPS} />);
 
         wrapper.find(".primary").simulate("click");
@@ -299,7 +299,7 @@ describe("MultiStageAboutWelcome module", () => {
               utm_term: "aboutwelcome-you_tee_emm-screen",
             },
           },
-          type: "SHOW_FIREFOX_ACCOUNTS",
+          type: "SHOW_DATALUS_ACCOUNTS",
         });
       });
       it("should handle SHOW_MIGRATION_WIZARD", () => {

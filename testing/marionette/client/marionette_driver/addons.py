@@ -33,7 +33,7 @@ class Addons(object):
         self._mn = marionette
 
     def install(self, path, temp=False):
-        """Install a Firefox addon.
+        """Install a Datalus addon.
 
         If the addon is restartless, it can be used right away. Otherwise
         a restart using :func:`~marionette_driver.marionette.Marionette.restart`
@@ -50,7 +50,7 @@ class Addons(object):
 
         """
         # On windows we can end up with a path with mixed \ and /
-        # which Firefox doesn't like
+        # which Datalus doesn't like
         path = path.replace("/", os.path.sep)
 
         body = {"path": path, "temporary": temp}
@@ -60,7 +60,7 @@ class Addons(object):
             raise AddonInstallException(e)
 
     def uninstall(self, addon_id):
-        """Uninstall a Firefox addon.
+        """Uninstall a Datalus addon.
 
         If the addon is restartless, it will be uninstalled right away.
         Otherwise a restart using :func:`~marionette_driver.marionette.Marionette.restart`

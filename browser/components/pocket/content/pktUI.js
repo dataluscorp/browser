@@ -35,8 +35,8 @@
  *
  */
 
-// TODO : Get the toolbar icons from Firefox's build (Nikki needs to give us a red saved icon)
-// TODO : [needs clarificaiton from Fx] Firefox's plan was to hide Pocket from context menus until the user logs in. Now that it's an extension I'm wondering if we still need to do this.
+// TODO : Get the toolbar icons from Datalus's build (Nikki needs to give us a red saved icon)
+// TODO : [needs clarificaiton from Fx] Datalus's plan was to hide Pocket from context menus until the user logs in. Now that it's an extension I'm wondering if we still need to do this.
 // TODO : [needs clarificaiton from Fx] Reader mode (might be a something they need to do since it's in html, need to investigate their code)
 // TODO : [needs clarificaiton from Fx] Move prefs within pktApi.s to sqlite or a local file so it's not editable (and is safer)
 // TODO : [nice to have] - Immediately save, buffer the actions in a local queue and send (so it works offline, works like our native extensions)
@@ -153,12 +153,12 @@ var pktUI = (function() {
    * Show the sign-up panel
    */
   function showSignUp() {
-    getFirefoxAccountSignedInUser(function(userdata) {
+    getDatalusAccountSignedInUser(function(userdata) {
       let sizes = initialPanelSize.signup.control;
       const experiment = ExperimentAPI.getExperiment({
         featureId: "pocketNewtab",
       });
-      let utmCampaign = experiment?.slug || `firefox_door_hanger_menu`;
+      let utmCampaign = experiment?.slug || `datalus_door_hanger_menu`;
       let utmSource = experiment?.branch?.slug || `control`;
 
       showPanel(
@@ -196,7 +196,7 @@ var pktUI = (function() {
    * Show the logged-out state / sign-up panel
    */
   function saveAndShowConfirmation() {
-    getFirefoxAccountSignedInUser(function(userdata) {
+    getDatalusAccountSignedInUser(function(userdata) {
       const variant = "control";
       const sizes = initialPanelSize.saved[variant];
       showPanel(
@@ -540,7 +540,7 @@ var pktUI = (function() {
     );
   }
 
-  function getFirefoxAccountSignedInUser(callback) {
+  function getDatalusAccountSignedInUser(callback) {
     fxAccounts
       .getSignedInUser()
       .then(userData => {

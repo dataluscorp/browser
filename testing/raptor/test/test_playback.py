@@ -29,7 +29,7 @@ def test_get_playback(get_binary):
         # this test is not yet supported on windows
         assert True
         return
-    config["obj_path"] = os.path.dirname(get_binary("firefox"))
+    config["obj_path"] = os.path.dirname(get_binary("datalus"))
     config["playback_tool"] = "mitmproxy"
     config["playback_version"] = "5.1.1"
     config["playback_files"] = [
@@ -38,12 +38,12 @@ def test_get_playback(get_binary):
             "raptor",
             "tooltool-manifests",
             "playback",
-            "mitm5-linux-firefox-amazon.manifest",
+            "mitm5-linux-datalus-amazon.manifest",
         )
     ]
-    config["binary"] = get_binary("firefox")
+    config["binary"] = get_binary("datalus")
     config["run_local"] = run_local
-    config["app"] = "firefox"
+    config["app"] = "datalus"
     config["host"] = "127.0.0.1"
 
     playback = get_playback(config)

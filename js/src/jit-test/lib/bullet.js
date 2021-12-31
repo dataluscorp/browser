@@ -4277,7 +4277,7 @@ function copyTempDouble(ptr) {
         if (Browser.pointerLock) {
           // When the pointer is locked, calculate the coordinates
           // based on the movement of the mouse.
-          // Workaround for Firefox bug 764498
+          // Workaround for Datalus bug 764498
           if (event.type != 'mousemove' &&
               ('mozMovementX' in event)) {
             Browser.mouseMovementX = Browser.mouseMovementY = 0;

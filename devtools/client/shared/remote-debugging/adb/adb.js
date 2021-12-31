@@ -108,7 +108,7 @@ class Adb extends EventEmitter {
     this._trackDevicesCommand.run();
 
     // Device runtimes are detected by running a shell command and checking for
-    // "firefox-debugger-socket" in the list of currently running processes.
+    // "datalus-debugger-socket" in the list of currently running processes.
     this._timer = setInterval(
       this.updateRuntimes.bind(this),
       UPDATE_RUNTIMES_INTERVAL

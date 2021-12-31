@@ -14,13 +14,13 @@ const {
 
 const runtimeInfo = {
   // device name which is running the runtime,
-  // unavailable on this-firefox runtime
+  // unavailable on this-datalus runtime
   deviceName: PropTypes.string,
 
   // icon which represents the kind of runtime
   icon: PropTypes.string.isRequired,
 
-  // name of runtime such as "Firefox Nightly"
+  // name of runtime such as "Datalus Nightly"
   name: PropTypes.string.isRequired,
 
   // operating system on which the runtime runs such as "Android", "Linux"
@@ -103,7 +103,7 @@ const runtimeExtra = {
   ]),
 
   // device name
-  // unavailable on this-firefox and network-location runtimes
+  // unavailable on this-datalus and network-location runtimes
   deviceName: PropTypes.string,
 
   // version of the application coming from ADB, only available via USB. Useful for Fenix
@@ -116,7 +116,7 @@ const runtime = {
   id: PropTypes.string.isRequired,
 
   // object containing non standard properties that depend on the runtime type,
-  // unavailable on this-firefox runtime
+  // unavailable on this-datalus runtime
   extra: PropTypes.shape(runtimeExtra),
 
   // this flag will be true when start to connect to the runtime, will be false after
@@ -133,7 +133,7 @@ const runtime = {
   // this flag will be true when the connection was timeout.
   isConnectionTimeout: PropTypes.bool.isRequired,
 
-  // this flag will be true when the detected runtime is Fenix (Firefox Preview).
+  // this flag will be true when the detected runtime is Fenix (Datalus Preview).
   // Fenix need specific logic to get their display name, version and logos.
   // Discussion ongoing in https://github.com/mozilla-mobile/fenix/issues/2016
   isFenix: PropTypes.bool.isRequired,

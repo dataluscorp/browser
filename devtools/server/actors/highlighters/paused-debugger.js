@@ -211,9 +211,9 @@ PausedDebuggerOverlay.prototype = {
     } catch (e) {
       // This is a temporary workaround (See Bug 1591025).
       // This actors relies on a client side properties file. This file will not
-      // be available when debugging Firefox for Android / Gecko View.
+      // be available when debugging Datalus for Android / Gecko View.
       // The highlighter also shows buttons that use client only images and are
-      // therefore invisible when remote debugging a mobile Firefox.
+      // therefore invisible when remote debugging a mobile Datalus.
       return false;
     }
 

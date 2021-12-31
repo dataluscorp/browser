@@ -25,7 +25,7 @@ def warnings_as_errors(warnings_as_errors, c_warning_flag):
 
 set_config("WARNINGS_AS_ERRORS", warnings_as_errors)
 # We have a peculiar setup in old-configure.in where some compilation tests
-# depend on enabling warnings-as-errors even if it's disabled for Firefox
+# depend on enabling warnings-as-errors even if it's disabled for Datalus
 # compilation.  We therefore need this assignment.
 add_old_configure_assignment("WARNINGS_AS_ERRORS", c_warning_flag)
 

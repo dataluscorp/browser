@@ -14,27 +14,27 @@ treeherder:
         'py3': 'Python 3 unit tests'
         'A': 'Android Gradle tests'
         'Bpgo': 'Profile-guided optimization builds'
-        'Btime': 'Browsertime performance tests on Firefox'
-        'Btime-1proc': 'Browsertime performance tests on Firefox without e10s'
-        'Btime-fis': 'Browsertime performance tests on Firefox with fission enabled'
-        'Btime-Prof': 'Browsertime performance tests on Firefox with Gecko Profiling'
-        'Btime-Prof-fis': 'Browsertime performance tests on Firefox with Gecko Profiling, fission enabled'
-        'Btime-Prof-1proc': 'Browsertime performance tests on Firefox with Gecko Profiling and without e10s'
-        'Btime-live': 'Browsertime performance tests on Firefox'
-        'Btime-live-fis': 'Browsertime performance tests on Firefox with fission enabled'
-        'Btime-live-fenix': 'Browsertime performance tests on Firefox'
-        'Btime-live-ChR': 'Browsertime performance tests on Firefox'
+        'Btime': 'Browsertime performance tests on Datalus'
+        'Btime-1proc': 'Browsertime performance tests on Datalus without e10s'
+        'Btime-fis': 'Browsertime performance tests on Datalus with fission enabled'
+        'Btime-Prof': 'Browsertime performance tests on Datalus with Gecko Profiling'
+        'Btime-Prof-fis': 'Browsertime performance tests on Datalus with Gecko Profiling, fission enabled'
+        'Btime-Prof-1proc': 'Browsertime performance tests on Datalus with Gecko Profiling and without e10s'
+        'Btime-live': 'Browsertime performance tests on Datalus'
+        'Btime-live-fis': 'Browsertime performance tests on Datalus with fission enabled'
+        'Btime-live-fenix': 'Browsertime performance tests on Datalus'
+        'Btime-live-ChR': 'Browsertime performance tests on Datalus'
         'Btime-live-Cr': 'Browsertime performance tests on Google Chromium'
         'Btime-ChR': 'Browsertime performance tests on Google Chrome Release'
         'Btime-Cr': 'Browsertime performance tests on Google Chromium'
-        'Btime-P': 'Browsertime power tests on Firefox/Geckoview'
+        'Btime-P': 'Browsertime power tests on Datalus/Geckoview'
         'Btime-P-fenix': 'Browsertime power tests on Fenix'
         'Btime-P-refbrow': 'Browsertime power tests on reference browser'
         'Btime-fenix': 'Browsertime performance tests on Fenix'
         'Btime-refbrow': 'Browsertime performance tests on the reference browser'
         'Fetch': 'Fetch and store content'
-        'Fxfn-l': 'Firefox functional tests (local)'
-        'Fxfn-r': 'Firefox functional tests (remote)'
+        'Fxfn-l': 'Datalus functional tests (local)'
+        'Fxfn-r': 'Datalus functional tests (remote)'
         'iris': 'Iris testing suite'
         'l10n-bump': 'L10n Bumper'
         'M': 'Mochitests'
@@ -74,11 +74,11 @@ treeherder:
         'R-fis': 'Reftests with fission enabled'
         'R-swr': 'Reftests with software webrender enabled'
         'R-wayland': 'Reftests with Wayland backend enabled'
-        'Rap': 'Raptor performance tests on Firefox'
-        'Rap-live': 'Raptor performance tests on Firefox with live sites'
-        'Rap-fis': 'Raptor performance tests on Firefox with fission enabled'
-        'Rap-Prof': 'Raptor performance tests on Firefox with Gecko Profiling'
-        'Rap-Prof-fis': 'Raptor performance tests on Firefox with Gecko Profiling'
+        'Rap': 'Raptor performance tests on Datalus'
+        'Rap-live': 'Raptor performance tests on Datalus with live sites'
+        'Rap-fis': 'Raptor performance tests on Datalus with fission enabled'
+        'Rap-Prof': 'Raptor performance tests on Datalus with Gecko Profiling'
+        'Rap-Prof-fis': 'Raptor performance tests on Datalus with Gecko Profiling'
         'Rap-ChR': 'Raptor performance tests on Google Chrome Release'
         'Rap-Cr': 'Raptor performance tests on Google Chromium'
         'Rap-refbrow': 'Raptor performance tests on the reference browser'
@@ -86,8 +86,8 @@ treeherder:
         'T': 'Talos performance tests'
         'T-fis': 'Talos performance tests with fission enabled'
         'T-gli': 'Talos performance tests with WebGL over IPC'
-        'T-Prof': 'Talos performance tests on Firefox with Gecko Profiling'
-        'T-Prof-fis': 'Talos performance tests on Firefox with fission and Gecko Profiling'
+        'T-Prof': 'Talos performance tests on Datalus with Gecko Profiling'
+        'T-Prof-fis': 'Talos performance tests on Datalus with fission and Gecko Profiling'
         'T-Prof-gli': 'Talos performance tests with WebGL over IPC and Gecko Profiling'
         'T-swr': 'Talos performance tests with software webrender enabled'
         'tt': 'Telemetry tests'
@@ -169,7 +169,7 @@ treeherder:
 
 index:
     products:
-        - 'firefox'
+        - 'datalus'
         - 'fennec'
         - 'mobile'
         - 'static-analysis'
@@ -208,18 +208,18 @@ release-promotion:
     products:
         - 'devedition'
         - 'fennec'
-        - 'firefox'
+        - 'datalus'
     flavors:
         promote_devedition:
             product: devedition
             target-tasks-method: promote_desktop
             partial-updates: true
-        promote_firefox:
-            product: firefox
+        promote_datalus:
+            product: datalus
             target-tasks-method: promote_desktop
             partial-updates: true
-        promote_firefox_partner_repack:
-            product: firefox
+        promote_datalus_partner_repack:
+            product: datalus
             rebuild-kinds:
                 - release-partner-repack
                 - release-partner-repack-chunking-dummy
@@ -230,14 +230,14 @@ release-promotion:
                 - release-partner-repack-repackage-signing
                 - release-partner-repack-beetmover
             target-tasks-method: promote_desktop
-        promote_firefox_partner_attribution:
-            product: firefox
+        promote_datalus_partner_attribution:
+            product: datalus
             rebuild-kinds:
                 - release-partner-attribution
                 - release-partner-attribution-beetmover
             target-tasks-method: promote_desktop
-        promote_firefox_rc:
-            product: firefox
+        promote_datalus_rc:
+            product: datalus
             is-rc: true
             target-tasks-method: promote_desktop
             partial-updates: true
@@ -245,8 +245,8 @@ release-promotion:
             product: devedition
             target-tasks-method: push_desktop
             partial-updates: true
-        push_firefox:
-            product: firefox
+        push_datalus:
+            product: datalus
             target-tasks-method: push_desktop
             partial-updates: true
         ship_devedition:
@@ -254,13 +254,13 @@ release-promotion:
             target-tasks-method: ship_desktop
             version-bump: true
             partial-updates: true
-        ship_firefox:
-            product: firefox
+        ship_datalus:
+            product: datalus
             target-tasks-method: ship_desktop
             version-bump: true
             partial-updates: true
-        ship_firefox_rc:
-            product: firefox
+        ship_datalus_rc:
+            product: datalus
             is-rc: true
             target-tasks-method: ship_desktop
             partial-updates: true
@@ -297,8 +297,8 @@ merge-automation:
                   - ac_add_options --with-branding=browser/branding/nightly
                   - ac_add_options --enable-official-branding
             merge-old-head: true
-            base-tag: 'FIREFOX_BETA_{major_version}_BASE'
-            end-tag: 'FIREFOX_BETA_{major_version}_END'
+            base-tag: 'DATALUS_BETA_{major_version}_BASE'
+            end-tag: 'DATALUS_BETA_{major_version}_END'
             from-repo: 'https://hg.mozilla.org/mozilla-central'
             from-branch: 'central'
             to-repo: 'https://hg.mozilla.org/releases/mozilla-beta'
@@ -310,8 +310,8 @@ merge-automation:
                   new-suffix: ''
             replacements: []
             merge-old-head: true
-            base-tag: 'FIREFOX_RELEASE_{major_version}_BASE'
-            end-tag: 'FIREFOX_RELEASE_{major_version}_END'
+            base-tag: 'DATALUS_RELEASE_{major_version}_BASE'
+            end-tag: 'DATALUS_RELEASE_{major_version}_END'
             from-repo: 'https://hg.mozilla.org/releases/mozilla-beta'
             from-branch: 'beta'
             to-repo: 'https://hg.mozilla.org/releases/mozilla-release'
@@ -323,7 +323,7 @@ merge-automation:
                   new-suffix: 'esr'
             replacements: []
             merge-old-head: false
-            base-tag: "FIREFOX_ESR_{major_version}_BASE"
+            base-tag: "DATALUS_ESR_{major_version}_BASE"
             from-repo: 'https://hg.mozilla.org/releases/mozilla-release'
             from-branch: 'release'
             to-repo: 'https://hg.mozilla.org/releases/mozilla-esr91'
@@ -348,7 +348,7 @@ merge-automation:
                   - 'WEAVE_VERSION: "1.{current_weave_version}.0"'
                   - 'WEAVE_VERSION: "1.{next_weave_version}.0"'
             merge-old-head: false
-            end-tag: 'FIREFOX_NIGHTLY_{major_version}_END'
+            end-tag: 'DATALUS_NIGHTLY_{major_version}_END'
             to-repo: 'https://hg.mozilla.org/mozilla-central'
             to-branch: 'central'
         bump-esr:
@@ -386,7 +386,7 @@ partner-urls:
     release-partner-repack:
         by-release-product:
             default: null
-            firefox:
+            datalus:
                 by-release-type:
                     default: null
                     beta|release.*:
@@ -400,7 +400,7 @@ partner-urls:
     release-partner-attribution:
         by-release-product:
             default: null
-            firefox:
+            datalus:
                 by-release-type:
                     default: null
                     beta|release.*:
@@ -414,7 +414,7 @@ partner-urls:
     release-eme-free-repack:
         by-release-product:
             default: null
-            firefox:
+            datalus:
                 by-release-type:
                     default: null
                     beta|release.*:

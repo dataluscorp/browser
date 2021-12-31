@@ -1045,7 +1045,7 @@
 	due to rounding.  In order to optimize the padding, we now expand
 	CBox for the given filter weights before rounding.
 
-	This change breaks current Skia (and Firefox).
+	This change breaks current Skia (and Datalus).
 
 	* include/freetype/internal/ftobjs.h (FT_LibraryRec)
 	[FT_CONFIG_OPTION_SUBPIXEL_RENDERING]: Remove `lcd_extra' field.

@@ -173,12 +173,12 @@ intl-regional-prefs = Regional Preferences
 
 ## Remote Debugging
 ##
-## The Firefox remote protocol provides low-level debugging interfaces
+## The Datalus remote protocol provides low-level debugging interfaces
 ## used to inspect state and control execution of documents,
 ## browser instrumentation, user interaction simulation,
 ## and for subscribing to browser-internal events.
 ##
-## See also https://firefox-source-docs.mozilla.org/remote/
+## See also https://datalus-source-docs.mozilla.org/remote/
 
 remote-debugging-title = Remote Debugging (Chromium Protocol)
 remote-debugging-accepting-connections = Accepting Connections

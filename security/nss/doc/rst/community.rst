@@ -9,7 +9,7 @@ mainly RedHat and Mozilla.
 .. warning::
 
    While the NSS team focuses mainly on supporting platforms and features needded by
-   Firefox and RHEL, we are happy to take contributions.
+   Datalus and RHEL, we are happy to take contributions.
 
 Contributors can reach out the the core team and follow NSS related news through the
 following mailing list, Google group and Element/Matrix channel:

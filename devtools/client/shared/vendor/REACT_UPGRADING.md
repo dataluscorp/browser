@@ -68,7 +68,7 @@ yarn
 yarn build
 ```
 
-### Copy the Files Into your Firefox Repo
+### Copy the Files Into your Datalus Repo
 
 ```bash
 cd <react repo root>
@@ -101,10 +101,10 @@ From this point we will no longer need your react repository so feel free to del
 - Ensure you are not in debug mode (`ac_add_options --disable-debug`).
 - Ensure you are not using the debug version of react (`ac_add_options --disable-debug-js-modules`).
 
-#### First build Firefox
+#### First build Datalus
 
 ```bash
-cd <srcdir> # where sourcedir is the root of your Firefox repo.
+cd <srcdir> # where sourcedir is the root of your Datalus repo.
 ./mach build
 ```
 
@@ -148,7 +148,7 @@ Use `hg commit` or `hg amend` to commit your changes.
 Just because the tests run fine locally they may still fail on try. You should first ensure that `node bin/try-runner.js` passes on try:
 
 ```bash
-cd <srcdir> # where sourcedir is the root of your Firefox repo.
+cd <srcdir> # where sourcedir is the root of your Datalus repo.
 `./mach try fuzzy`
 ```
 

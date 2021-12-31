@@ -49,7 +49,7 @@ class Description extends PureComponent {
           a: button({
             className: "perf-external-link",
             onClick: this.handleLinkClick,
-            value: "https://profiler.firefox.com",
+            value: "https://profiler.datalus.com",
           }),
         },
         p({})

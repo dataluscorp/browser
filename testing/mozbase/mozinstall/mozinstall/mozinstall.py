@@ -363,7 +363,7 @@ def install_cli(argv=sys.argv[1:]):
     parser.add_option(
         "--app",
         dest="app",
-        default="firefox",
+        default="datalus",
         help="Application being installed. [default: %default]",
     )
 

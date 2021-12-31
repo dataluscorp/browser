@@ -47,7 +47,7 @@
   },
   {
     "namespace": "sidebarAction",
-    "description": "Use sidebar actions to add a sidebar to Firefox.",
+    "description": "Use sidebar actions to add a sidebar to Datalus.",
     "permissions": ["manifest:sidebar_action"],
     "types": [
       {

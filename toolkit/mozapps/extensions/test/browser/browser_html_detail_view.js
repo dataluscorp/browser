@@ -15,7 +15,7 @@ const SUPPORT_URL = Services.urlFormatter.formatURL(
 );
 const PB_SUMO_URL = SUPPORT_URL + "extensions-pb";
 const DEFAULT_THEME_ID = "default-theme@mozilla.org";
-const DARK_THEME_ID = "firefox-compact-dark@mozilla.org";
+const DARK_THEME_ID = "datalus-compact-dark@mozilla.org";
 
 let gProvider;
 let promptService;
@@ -45,8 +45,8 @@ function checkLabel(row, name) {
 
 function formatUrl(contentAttribute, url) {
   let parsedUrl = new URL(url);
-  parsedUrl.searchParams.set("utm_source", "firefox-browser");
-  parsedUrl.searchParams.set("utm_medium", "firefox-browser");
+  parsedUrl.searchParams.set("utm_source", "datalus-browser");
+  parsedUrl.searchParams.set("utm_medium", "datalus-browser");
   parsedUrl.searchParams.set("utm_content", contentAttribute);
   return parsedUrl.href;
 }

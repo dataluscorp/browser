@@ -29,14 +29,14 @@ job-defaults:
         taskcluster-proxy: true
         max-run-time: 10800
 jobs:
-    windows2012-64-firefox:
+    windows2012-64-datalus:
         worker-type: b-win2012
         description: Creates or updates conditioned profiles on Win64
         treeherder:
-            symbol: condprof(firefox)
+            symbol: condprof(datalus)
             platform: windows2012-64/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-win64
         dependencies:
             build: build-win64-shippable/opt
@@ -51,7 +51,7 @@ jobs:
                 python3.exe condprof/main.py
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver.exe
-                --firefox ${MOZ_FETCHES_DIR}/firefox/firefox.exe
+                --datalus ${MOZ_FETCHES_DIR}/datalus/datalus.exe
                 --scenario settled
                 ../../archive
         worker:
@@ -59,14 +59,14 @@ jobs:
                 - name: public/condprof
                   path: archive
                   type: directory
-    linux64-firefox:
+    linux64-datalus:
         worker-type: b-linux
         description: Creates or updates conditioned profiles on Linux
         treeherder:
-            symbol: condprof(firefox)
+            symbol: condprof(datalus)
             platform: linux64/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-linux64
         dependencies:
             build: build-linux64-shippable/opt
@@ -82,7 +82,7 @@ jobs:
                 bin/python3.7 condprof/main.py
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
-                --firefox ${MOZ_FETCHES_DIR}/firefox/firefox-bin
+                --datalus ${MOZ_FETCHES_DIR}/datalus/datalus-bin
                 --scenario settled
                 ../../archive
         worker:
@@ -91,14 +91,14 @@ jobs:
                 - name: public/condprof
                   path: /builds/worker/archive
                   type: directory
-    macosx64-firefox:
+    macosx64-datalus:
         worker-type: t-osx-1014
         description: Creates or updates conditioned profiles on macOS
         treeherder:
-            symbol: condprof(firefox)
+            symbol: condprof(datalus)
             platform: macosx1014-64/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-macosx64
         dependencies:
             build: build-macosx64-shippable/opt
@@ -115,7 +115,7 @@ jobs:
                 bin/python3 condprof/main.py
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
-                --firefox ${MOZ_FETCHES_DIR}/target.dmg
+                --datalus ${MOZ_FETCHES_DIR}/target.dmg
                 --scenario settled
                 ../../archive
         worker:
@@ -130,7 +130,7 @@ jobs:
             symbol: condprof(geckoview)
             platform: android-hw-g5-7-0-arm7/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-g5-geckoview_example
         dependencies:
             build: build-android-arm-shippable/opt
@@ -150,7 +150,7 @@ jobs:
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
                 --device-name g5
-                --firefox org.mozilla.geckoview_example
+                --datalus org.mozilla.geckoview_example
                 --scenario settled
                 ../../archive
         worker:
@@ -165,7 +165,7 @@ jobs:
             symbol: condprof(fenix)
             platform: android-hw-g5-7-0-arm7/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-g5-fenix
         dependencies:
             build: build-linux64-shippable/opt
@@ -177,7 +177,7 @@ jobs:
         run:
             run-as-root: true
             command: >-
-                curl -L -o target.apk https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.nightly.latest.armeabi-v7a/artifacts/public/build/armeabi-v7a/target.apk &&
+                curl -L -o target.apk https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.nightly.latest.armeabi-v7a/artifacts/public/build/armeabi-v7a/target.apk &&
                 adb install -r target.apk &&
                 rm -rf target.apk &&
                 python3 virtualenv/virtualenv.py . &&
@@ -185,7 +185,7 @@ jobs:
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
                 --device-name g5
-                --firefox org.mozilla.fenix
+                --datalus org.mozilla.fenix
                 --scenario settled
                 ../../archive
         worker:
@@ -200,7 +200,7 @@ jobs:
             symbol: condprof(fenix)
             platform: android-hw-p2-8-0-android-aarch64/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-p2_aarch64-fenix
         dependencies:
             build: build-android-arm-shippable/opt
@@ -212,7 +212,7 @@ jobs:
         run:
             run-as-root: true
             command: >-
-                curl -L -o target.apk https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.nightly.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk &&
+                curl -L -o target.apk https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/mobile.v2.fenix.nightly.latest.arm64-v8a/artifacts/public/build/arm64-v8a/target.apk &&
                 adb install -r target.apk &&
                 rm -rf target.apk &&
                 python3 virtualenv/virtualenv.py . &&
@@ -220,7 +220,7 @@ jobs:
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
                 --device-name p2_aarch64
-                --firefox org.mozilla.fenix
+                --datalus org.mozilla.fenix
                 --scenario settled
                 ../../archive
         worker:
@@ -235,7 +235,7 @@ jobs:
             symbol: condprof(geckoview)
             platform: android-hw-p2-8-0-android-aarch64/opt
         index:
-            product: firefox
+            product: datalus
             job-name: condprof-p2_aarch64-geckoview_example
         dependencies:
             build: build-android-arm-shippable/opt
@@ -255,7 +255,7 @@ jobs:
                 --force-new
                 --geckodriver ${MOZ_FETCHES_DIR}/geckodriver
                 --device-name p2_aarch64
-                --firefox org.mozilla.geckoview_example
+                --datalus org.mozilla.geckoview_example
                 --scenario settled
                 ../../archive
         worker:

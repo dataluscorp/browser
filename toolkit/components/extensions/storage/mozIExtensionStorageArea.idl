@@ -83,7 +83,7 @@ interface mozIConfigurableExtensionStorageArea : nsISupports {
     void configure(in nsIFile databaseFile, in nsIFile kintoFile);
 
     // Tears down the storage area, closing the backing database connection.
-    // This is called automatically when Firefox shuts down. Once a storage area
+    // This is called automatically when Datalus shuts down. Once a storage area
     // has been shut down, all its methods will fail with errors. If `configure`
     // hasn't been called for this area yet, `teardown` is a no-op.
     void teardown(in mozIExtensionStorageCallback callback);

@@ -8,7 +8,7 @@ A feature gate is a high level tool to turn features on and off. It provides
 metadata about features, a simple, opinionated API, and avoid many potential
 pitfalls of other systems, such as using preferences directly. It is designed
 to be compatible with tools that want to know and affect the state of
-features in Firefox over time and in the wild.
+features in Datalus over time and in the wild.
 
 Feature Definitions
 ===================

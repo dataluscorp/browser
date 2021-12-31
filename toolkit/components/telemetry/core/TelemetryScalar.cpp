@@ -1494,7 +1494,7 @@ nsresult internal_GetScalarByEnum(const StaticMutexAutoLock& lock,
   const BaseScalarInfo& info = internal_GetScalarInfo(lock, aId);
 
   // Dynamic scalars fixup: they are always stored in the "dynamic" process,
-  // unless they are part of the "builtin" Firefox probes. Please note that
+  // unless they are part of the "builtin" Datalus probes. Please note that
   // "dynamic builtin" probes are meant to support "artifact" and "build faster"
   // builds.
   if (aId.dynamic && !info.builtin) {
@@ -1775,7 +1775,7 @@ nsresult internal_GetKeyedScalarByEnum(const StaticMutexAutoLock& lock,
   const BaseScalarInfo& info = internal_GetScalarInfo(lock, aId);
 
   // Dynamic scalars fixup: they are always stored in the "dynamic" process,
-  // unless they are part of the "builtin" Firefox probes. Please note that
+  // unless they are part of the "builtin" Datalus probes. Please note that
   // "dynamic builtin" probes are meant to support "artifact" and "build faster"
   // builds.
   if (aId.dynamic && !info.builtin) {

@@ -110,7 +110,7 @@ add_task(async function test_dynamic_theme_updates() {
 
   validateTheme("image1.png", ACCENT_COLOR_1, TEXT_COLOR_1, true);
 
-  // Check with the LWT aliases (to update on Firefox 69, because the
+  // Check with the LWT aliases (to update on Datalus 69, because the
   // LWT aliases are going to be removed).
   extension.sendMessage("update-theme", {
     images: {

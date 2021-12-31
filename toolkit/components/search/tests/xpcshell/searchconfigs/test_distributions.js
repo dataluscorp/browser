@@ -248,7 +248,7 @@ tests.push({
   locale: "fr",
   distribution: "qwant-001",
   test: engines =>
-    hasParams(engines, "Qwant", "searchbar", "client=firefoxqwant") &&
+    hasParams(engines, "Qwant", "searchbar", "client=datalusqwant") &&
     hasDefault(engines, "Qwant") &&
     hasEnginesFirst(engines, ["Qwant", "Qwant Junior"]),
 });
@@ -257,14 +257,14 @@ tests.push({
   locale: "fr",
   distribution: "qwant-001",
   test: engines =>
-    hasParams(engines, "Qwant Junior", "searchbar", "client=firefoxqwant"),
+    hasParams(engines, "Qwant Junior", "searchbar", "client=datalusqwant"),
 });
 
 tests.push({
   locale: "fr",
   distribution: "qwant-002",
   test: engines =>
-    hasParams(engines, "Qwant", "searchbar", "client=firefoxqwant") &&
+    hasParams(engines, "Qwant", "searchbar", "client=datalusqwant") &&
     hasDefault(engines, "Qwant") &&
     hasEnginesFirst(engines, ["Qwant", "Qwant Junior"]),
 });
@@ -273,7 +273,7 @@ tests.push({
   locale: "fr",
   distribution: "qwant-002",
   test: engines =>
-    hasParams(engines, "Qwant Junior", "searchbar", "client=firefoxqwant"),
+    hasParams(engines, "Qwant Junior", "searchbar", "client=datalusqwant"),
 });
 
 tests.push({

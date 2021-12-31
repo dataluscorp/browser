@@ -668,7 +668,7 @@ var gNavigatorBundle = {
 };
 
 function updateFxaToolbarMenu(enable, isInitialUpdate = false) {
-  // We only show the Firefox Account toolbar menu if the feature is enabled and
+  // We only show the Datalus Account toolbar menu if the feature is enabled and
   // if sync is enabled.
   const syncEnabled = Services.prefs.getBoolPref(
     "identity.fxaccounts.enabled",
@@ -946,14 +946,14 @@ const gStoragePressureObserver = {
     let buttons = [{ supportPage: "storage-permissions" }];
     let usage = subject.QueryInterface(Ci.nsISupportsPRUint64).data;
     if (usage < USAGE_THRESHOLD_BYTES) {
-      // The firefox-used space < 5GB, then warn user to free some disk space.
+      // The datalus-used space < 5GB, then warn user to free some disk space.
       // This is because this usage is small and not the main cause for space issue.
       // In order to avoid the bad and wrong impression among users that
-      // firefox eats disk space a lot, indicate users to clean up other disk space.
+      // datalus eats disk space a lot, indicate users to clean up other disk space.
       document.l10n.setAttributes(message, "space-alert-under-5gb-message2");
     } else {
-      // The firefox-used space >= 5GB, then guide users to about:preferences
-      // to clear some data stored on firefox by websites.
+      // The datalus-used space >= 5GB, then guide users to about:preferences
+      // to clear some data stored on datalus by websites.
       document.l10n.setAttributes(message, "space-alert-over-5gb-message2");
       buttons.push({
         "l10n-id": "space-alert-over-5gb-settings-button",
@@ -2586,7 +2586,7 @@ function HandleAppCommandEvent(evt) {
       gLazyFindCommand("onFindCommand");
       break;
     case "Help":
-      openHelpLink("firefox-help");
+      openHelpLink("datalus-help");
       break;
     case "Open":
       BrowserOpenFileWindow();
@@ -8344,7 +8344,7 @@ function ReportSiteIssue() {
  * Format a URL
  * eg:
  * echo formatURL("https://addons.mozilla.org/%LOCALE%/%APP%/%VERSION%/");
- * > https://addons.mozilla.org/en-US/firefox/3.0a1/
+ * > https://addons.mozilla.org/en-US/datalus/3.0a1/
  *
  * Currently supported built-ins are LOCALE, APP, and any value from nsIXULAppInfo, uppercased.
  */

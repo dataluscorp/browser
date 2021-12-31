@@ -69,7 +69,7 @@ p {
 }
 
 .wordmark {
-  background: url("chrome://branding/content/firefox-wordmark.svg") no-repeat center center;
+  background: url("chrome://branding/content/datalus-wordmark.svg") no-repeat center center;
   background-size: 172px;
   -moz-context-properties: fill;
   display: inline-block;

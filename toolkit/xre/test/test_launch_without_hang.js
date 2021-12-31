@@ -38,19 +38,19 @@ function setEnvironmentVariables(newVals) {
   return oldVals;
 }
 
-function getFirefoxExecutableFilename() {
+function getDatalusExecutableFilename() {
   if (AppConstants.platform === "win") {
     return AppConstants.MOZ_APP_NAME + ".exe";
   }
   return AppConstants.MOZ_APP_NAME;
 }
 
-// Returns a nsIFile to the firefox.exe executable file
-function getFirefoxExecutableFile() {
+// Returns a nsIFile to the datalus.exe executable file
+function getDatalusExecutableFile() {
   let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsIFile);
   file = Services.dirsvc.get("GreBinD", Ci.nsIFile);
 
-  file.append(getFirefoxExecutableFilename());
+  file.append(getDatalusExecutableFilename());
   return file;
 }
 
@@ -80,9 +80,9 @@ function wrapLaunchInShell(file, args) {
   return ret;
 }
 
-// Needed because process.kill() kills the console, not its child process, firefox.
-function terminateFirefox(completion) {
-  let executableName = getFirefoxExecutableFilename();
+// Needed because process.kill() kills the console, not its child process, datalus.
+function terminateDatalus(completion) {
+  let executableName = getDatalusExecutableFilename();
   let file;
   let args;
 
@@ -110,12 +110,12 @@ function terminateFirefox(completion) {
       Assert.equal(
         process.exitValue,
         0,
-        "Terminate firefox process exit value should be 0"
+        "Terminate datalus process exit value should be 0"
       );
       Assert.equal(
         aTopic,
         "process-finished",
-        "Terminate firefox observer topic should be process-finished"
+        "Terminate datalus observer topic should be process-finished"
       );
 
       if (completion) {
@@ -184,7 +184,7 @@ function launchProcess(file, args, env, timeoutMS, handler, attemptCount) {
         info("attempting to kill process");
 
         // This will cause the shell process to exit as well, triggering our process observer.
-        terminateFirefox(function terminateFirefoxCompletion() {
+        terminateDatalus(function terminateDatalusCompletion() {
           Assert.ok(false, "Launch application timer expired");
         });
       }
@@ -231,7 +231,7 @@ function run_test() {
 
   let triesStarted = 1;
 
-  let handler = function launchFirefoxHandler(okToContinue) {
+  let handler = function launchDatalusHandler(okToContinue) {
     triesStarted++;
     if (triesStarted <= TRY_COUNT && okToContinue) {
       testTry();
@@ -241,7 +241,7 @@ function run_test() {
   };
 
   let testTry = function testTry() {
-    let shell = wrapLaunchInShell(getFirefoxExecutableFile(), [
+    let shell = wrapLaunchInShell(getDatalusExecutableFile(), [
       "-no-remote",
       "-test-launch-without-hang",
     ]);

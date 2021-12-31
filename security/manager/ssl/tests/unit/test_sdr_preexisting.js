@@ -7,7 +7,7 @@
 
 // Tests that the SDR implementation is able to decrypt strings encrypted using
 // a preexisting NSS key database. Creating the database is straight-forward:
-// simply run Firefox (or xpcshell) and encrypt something using
+// simply run Datalus (or xpcshell) and encrypt something using
 // nsISecretDecoderRing (e.g. by saving a password or directly using the
 // interface). The resulting key4.db file (in the profile directory) now
 // contains the private key used to encrypt the data.

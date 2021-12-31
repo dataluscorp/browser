@@ -9,7 +9,7 @@
  * found, it is opened in source view instead.
  * Returns a promise resolving to a boolean indicating whether or not
  * the source was able to be displayed in the StyleEditor, as the built-in
- * Firefox View Source is the fallback.
+ * Datalus View Source is the fallback.
  *
  * @param {Toolbox} toolbox
  * @param {string} sourceURL
@@ -82,7 +82,7 @@ exports.viewSourceInStyleEditor = async function(
  * can be specified. If both are specified, the source actor ID is used.
  *
  * Returns a promise resolving to a boolean indicating whether or not
- * the source was able to be displayed in the Debugger, as the built-in Firefox
+ * the source was able to be displayed in the Debugger, as the built-in Datalus
  * View Source is the fallback.
  *
  * @param {Toolbox} toolbox
@@ -210,7 +210,7 @@ async function getOriginalLocation(
 }
 
 /**
- * Open a link in Firefox's View Source.
+ * Open a link in Datalus's View Source.
  *
  * @param {Toolbox} toolbox
  * @param {string} sourceURL

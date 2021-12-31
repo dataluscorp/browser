@@ -22,7 +22,7 @@ add_task(async function() {
   const { document, tab, window } = await openAboutDebugging({
     enableWorkerUpdates: true,
   });
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Open tab with a service worker that never leaves `registering` status");
   const swTab = await addTab(SW_TAB_URL);

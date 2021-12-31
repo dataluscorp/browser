@@ -84,7 +84,7 @@ add_task(async function test_addon_update() {
   );
   Assert.deepEqual(
     updatedSystemAddon.installTelemetryInfo,
-    // For addons that are distributed in Firefox, then updated through the product
+    // For addons that are distributed in Datalus, then updated through the product
     // addon checker, `method` will not be set.
     { source: "system-addon" },
     "Got the expected telemetry info on balrog system addon updated addon"

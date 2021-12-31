@@ -9,11 +9,11 @@ Services.scriptloader.loadSubScript(
   this
 );
 
-// Test for main process against This Firefox.
+// Test for main process against This Datalus.
 //
 // The main added value for this test is to check that listing processes
 // and opening a toolbox targeting a process works, even though debugging
-// the main process of This Firefox is not really supported.
+// the main process of This Datalus is not really supported.
 add_task(async function() {
   await pushPref("devtools.aboutdebugging.process-debugging", true);
   await pushPref("devtools.aboutdebugging.test-local-process-debugging", true);
@@ -21,7 +21,7 @@ add_task(async function() {
   await pushPref("devtools.browsertoolbox.fission", false);
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Check debug target item of the main process");
   const mainProcessItem = findDebugTargetByText("Main Process", document);

@@ -46,7 +46,7 @@ class DebianBootstrapper(LinuxBootstrapper, BaseBootstrapper):
         # 'npm'
     ]
 
-    # These are common packages for building Firefox for Desktop
+    # These are common packages for building Datalus for Desktop
     # (browser) for all Debian-derived distros (such as Ubuntu).
     BROWSER_COMMON_PACKAGES = [
         "libasound2-dev",
@@ -61,7 +61,7 @@ class DebianBootstrapper(LinuxBootstrapper, BaseBootstrapper):
         "xvfb",
     ]
 
-    # These are common packages for building Firefox for Android
+    # These are common packages for building Datalus for Android
     # (mobile/android) for all Debian-derived distros (such as Ubuntu).
     MOBILE_ANDROID_COMMON_PACKAGES = [
         "openjdk-8-jdk-headless",  # Android's `sdkmanager` requires Java 1.8 exactly.

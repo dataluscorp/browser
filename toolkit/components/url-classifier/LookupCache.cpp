@@ -1038,16 +1038,16 @@ nsresult LookupCacheV2::LoadMozEntries() {
 
   if (mTableName.EqualsLiteral("moztest-phish-simple")) {
     // Entries for phishing table
-    entries.AppendElement("itisatrap.org/firefox/its-a-trap.html"_ns);
+    entries.AppendElement("itisatrap.org/datalus/its-a-trap.html"_ns);
   } else if (mTableName.EqualsLiteral("moztest-malware-simple")) {
     // Entries for malware table
-    entries.AppendElement("itisatrap.org/firefox/its-an-attack.html"_ns);
+    entries.AppendElement("itisatrap.org/datalus/its-an-attack.html"_ns);
   } else if (mTableName.EqualsLiteral("moztest-unwanted-simple")) {
     // Entries for unwanted table
-    entries.AppendElement("itisatrap.org/firefox/unwanted.html"_ns);
+    entries.AppendElement("itisatrap.org/datalus/unwanted.html"_ns);
   } else if (mTableName.EqualsLiteral("moztest-harmful-simple")) {
     // Entries for harmfule tables
-    entries.AppendElement("itisatrap.org/firefox/harmful.html"_ns);
+    entries.AppendElement("itisatrap.org/datalus/harmful.html"_ns);
   } else if (mTableName.EqualsLiteral("moztest-track-simple")) {
     // Entries for tracking table
     entries.AppendElement("trackertest.org/"_ns);
@@ -1057,7 +1057,7 @@ nsresult LookupCacheV2::LoadMozEntries() {
     entries.AppendElement("itisatrap.org/?resource=itisatracker.org"_ns);
   } else if (mTableName.EqualsLiteral("moztest-block-simple")) {
     // Entries for flash block table
-    entries.AppendElement("itisatrap.org/firefox/blocked.html"_ns);
+    entries.AppendElement("itisatrap.org/datalus/blocked.html"_ns);
   } else {
     MOZ_ASSERT_UNREACHABLE();
   }

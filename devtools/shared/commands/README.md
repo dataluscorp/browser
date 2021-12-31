@@ -19,7 +19,7 @@ Without such layer, we would have to put such code here and there in the fronten
 This will be harder to remove later, once we get rid of old pre-fission-refactoring codepaths.
 
 This layer already exists in some panels, but we are using slightly different names and practices:
-* Debugger uses "client" (devtools/client/debugger/src/client/) and "commands" (devtools/client/debugger/src/client/firefox/commands.js)
+* Debugger uses "client" (devtools/client/debugger/src/client/) and "commands" (devtools/client/debugger/src/client/datalus/commands.js)
   Debugger's commands already bundle the code to dispatch an action to many target's actor.
   They also contain some backward compat code.
   Today, we pass around a `client` object via thunkArgs, which is mapped to commands.js,

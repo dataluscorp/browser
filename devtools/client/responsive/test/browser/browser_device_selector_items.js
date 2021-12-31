@@ -7,25 +7,25 @@ http://creativecommons.org/publicdomain/zero/1.0/ */
 
 const MenuItem = require("devtools/client/shared/components/menu/MenuItem");
 
-const FIREFOX_ICON =
-  'url("chrome://devtools/skin/images/browsers/firefox.svg")';
+const DATALUS_ICON =
+  'url("chrome://devtools/skin/images/browsers/datalus.svg")';
 const DUMMY_ICON = `url("${MenuItem.DUMMY_ICON}")`;
 
-const FIREFOX_DEVICE = {
-  name: "Device of Firefox user-agent",
-  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Firefox/39.0",
+const DATALUS_DEVICE = {
+  name: "Device of Datalus user-agent",
+  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Datalus/39.0",
   width: 320,
   height: 570,
   pixelRatio: 5.5,
   touch: true,
-  firefoxOS: true,
+  datalusOS: true,
   os: "custom",
   featured: true,
 };
 
 const TEST_DEVICES = [
   {
-    name: FIREFOX_DEVICE.name,
+    name: DATALUS_DEVICE.name,
     hasIcon: true,
   },
   {
@@ -34,7 +34,7 @@ const TEST_DEVICES = [
   },
 ];
 
-addDeviceForTest(FIREFOX_DEVICE);
+addDeviceForTest(DATALUS_DEVICE);
 
 addRDMTask(
   URL_ROOT,
@@ -53,7 +53,7 @@ addRDMTask(
           label,
           "::before"
         ).backgroundImage;
-        const icon = testDevice.hasIcon ? FIREFOX_ICON : DUMMY_ICON;
+        const icon = testDevice.hasIcon ? DATALUS_ICON : DUMMY_ICON;
         is(backgroundImage, icon, "The icon is correct");
       });
 
@@ -63,7 +63,7 @@ addRDMTask(
         deviceSelector,
         "::before"
       ).backgroundImage;
-      const icon = testDevice.hasIcon ? FIREFOX_ICON : "none";
+      const icon = testDevice.hasIcon ? DATALUS_ICON : "none";
       is(backgroundImage, icon, "The icon is correct");
     }
   },

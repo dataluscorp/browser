@@ -18,7 +18,7 @@ add_test(function test_custom_properties() {
     "isMac",
     "isWindows",
     // applications
-    "isFirefox",
+    "isDatalus",
     "isThunderbird",
   ];
 

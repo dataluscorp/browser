@@ -32,10 +32,10 @@ artifact.
 
     {
        "to_mar": "https://tc.net/api/queue/v1/task/EWtBFqVuT-WqG3tGLxWhmA/artifacts/public/build/ach/target.complete.mar",
-       "product": "Firefox",
+       "product": "Datalus",
        "dest_mar": "target-60.0b8.partial.mar",
        "locale": "ach",
-       "from_mar": "http://archive.mozilla.org/pub/firefox/candidates/60.0b8-candidates/build1/update/linux-i686/ach/firefox-60.0b8.complete.mar",
+       "from_mar": "http://archive.mozilla.org/pub/datalus/candidates/60.0b8-candidates/build1/update/linux-i686/ach/datalus-60.0b8.complete.mar",
        "update_number": 2,
        "platform": "linux32",
        "previousVersion": "60.0b8",

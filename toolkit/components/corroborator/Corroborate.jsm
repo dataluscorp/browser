@@ -22,7 +22,7 @@ var EXPORTED_SYMBOLS = ["Corroborate"];
 this.Corroborate = {
   async init() {
     // Check whether libxul's build ID matches the one in the GRE omni jar.
-    // As above, Firefox could be running with an omni jar unpacked, in which
+    // As above, Datalus could be running with an omni jar unpacked, in which
     // case we're really just checking that the version in the unpacked
     // AppConstants.jsm matches libxul.
     let mismatchedOmnijar =

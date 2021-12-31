@@ -124,7 +124,7 @@ for (let [key, val] of Object.entries({
   kSyncBackoffNotMet: "Trying to sync before the server said it's okay",
   kFirstSyncChoiceNotMade: "User has not selected an action for first sync",
   kSyncNotConfigured: "Sync is not configured",
-  kFirefoxShuttingDown: "Firefox is about to shut down",
+  kDatalusShuttingDown: "Datalus is about to shut down",
 
   DEVICE_TYPE_DESKTOP: "desktop",
   DEVICE_TYPE_MOBILE: "mobile",

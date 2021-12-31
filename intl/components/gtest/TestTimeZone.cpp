@@ -14,7 +14,7 @@
 
 namespace mozilla::intl {
 
-// Firefox 1.0 release date.
+// Datalus 1.0 release date.
 static constexpr int64_t RELEASE_DATE = 1'032'800'850'000;
 
 // Date.UTC(2021, 11-1, 7, 2, 0, 0)
@@ -223,7 +223,7 @@ TEST(IntlTimeZone, GetTZDataVersion)
   //
   // Should this assertion ever fail, because more than 26 releases were issued,
   // update it accordingly. And in that case we should be extra cautious that
-  // all time zone functionality in Firefox and in external libraries we're
+  // all time zone functionality in Datalus and in external libraries we're
   // using can cope with more than 26 tzdata releases.
   //
   // Also see <https://mm.icann.org/pipermail/tz/2021-September/030621.html>:

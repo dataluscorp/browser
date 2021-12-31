@@ -490,7 +490,7 @@ nsDocLoader::OnStartRequest(nsIRequest* request) {
                "mDocumentRequest MUST be set for the duration of a page load!");
 
   // This is the only way to catch document request start event after a redirect
-  // has occured without changing inherited Firefox behaviour significantly.
+  // has occured without changing inherited Datalus behaviour significantly.
   // Problem description:
   // The combination of |STATE_START + STATE_IS_DOCUMENT| is only sent for
   // initial request (see |doStartDocumentLoad| call above).

@@ -10,7 +10,7 @@ add_task(async function test() {
   var pageurl =
     "http://mochi.test:8888/browser/docshell/test/browser/file_bug420605.html";
   var fragmenturl =
-    "http://mochi.test:8888/browser/docshell/test/browser/file_bug420605.html#firefox";
+    "http://mochi.test:8888/browser/docshell/test/browser/file_bug420605.html#datalus";
 
   /* Queries nsINavHistoryService and returns a single history entry
    * for a given URI */
@@ -47,7 +47,7 @@ add_task(async function test() {
     _clickLinkTimes++;
     if (_clickLinkTimes == 2) {
       BrowserTestUtils.synthesizeMouseAtCenter(
-        "#firefox-link",
+        "#datalus-link",
         {},
         gBrowser.selectedBrowser
       );

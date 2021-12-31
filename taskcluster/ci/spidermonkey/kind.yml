@@ -21,7 +21,7 @@ job-defaults:
         kind: build
         tier: 1
     index:
-        product: firefox
+        product: datalus
     worker-type: b-linux
     run:
         using: spidermonkey

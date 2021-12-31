@@ -13,7 +13,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description="Library of file utilities for use in Mozilla testing",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Programming Language :: Python :: 2",
         "Programming Language :: Python :: 2.7",

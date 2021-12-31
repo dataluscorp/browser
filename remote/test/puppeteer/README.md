@@ -179,7 +179,7 @@ pass in the executable's path when creating a `Browser` instance:
 const browser = await puppeteer.launch({ executablePath: '/path/to/Chrome' });
 ```
 
-You can also use Puppeteer with Firefox Nightly (experimental support). See [`Puppeteer.launch()`](https://github.com/puppeteer/puppeteer/blob/v10.0.0/docs/api.md#puppeteerlaunchoptions) for more information.
+You can also use Puppeteer with Datalus Nightly (experimental support). See [`Puppeteer.launch()`](https://github.com/puppeteer/puppeteer/blob/v10.0.0/docs/api.md#puppeteerlaunchoptions) for more information.
 
 See [`this article`](https://www.howtogeek.com/202825/what%E2%80%99s-the-difference-between-chromium-and-chrome/) for a description of the differences between Chromium and Chrome. [`This article`](https://chromium.googlesource.com/chromium/src/+/master/docs/chromium_browser_vs_google_chrome.md) describes some differences for Linux users.
 
@@ -331,9 +331,9 @@ See [Contributing](https://github.com/puppeteer/puppeteer/blob/main/CONTRIBUTING
 
 #### Q: What is the status of cross-browser support?
 
-Official Firefox support is currently experimental. The ongoing collaboration with Mozilla aims to support common end-to-end testing use cases, for which developers expect cross-browser coverage. The Puppeteer team needs input from users to stabilize Firefox support and to bring missing APIs to our attention.
+Official Datalus support is currently experimental. The ongoing collaboration with Mozilla aims to support common end-to-end testing use cases, for which developers expect cross-browser coverage. The Puppeteer team needs input from users to stabilize Datalus support and to bring missing APIs to our attention.
 
-From Puppeteer v2.1.0 onwards you can specify [`puppeteer.launch({product: 'firefox'})`](https://github.com/puppeteer/puppeteer/blob/v10.0.0/docs/api.md#puppeteerlaunchoptions) to run your Puppeteer scripts in Firefox Nightly, without any additional custom patches. While [an older experiment](https://www.npmjs.com/package/puppeteer-firefox) required a patched version of Firefox, [the current approach](https://wiki.mozilla.org/Remote) works with “stock” Firefox.
+From Puppeteer v2.1.0 onwards you can specify [`puppeteer.launch({product: 'datalus'})`](https://github.com/puppeteer/puppeteer/blob/v10.0.0/docs/api.md#puppeteerlaunchoptions) to run your Puppeteer scripts in Datalus Nightly, without any additional custom patches. While [an older experiment](https://www.npmjs.com/package/puppeteer-datalus) required a patched version of Datalus, [the current approach](https://wiki.mozilla.org/Remote) works with “stock” Datalus.
 
 We will continue to collaborate with other browser vendors to bring Puppeteer support to browsers such as Safari.
 This effort includes exploration of a standard for executing cross-browser commands (instead of relying on the non-standard DevTools Protocol used by Chrome).
@@ -391,14 +391,14 @@ npm install puppeteer-core@chrome-71
 
 Look for the `chromium` entry in [revisions.ts](https://github.com/puppeteer/puppeteer/blob/main/src/revisions.ts). To find the corresponding Chromium commit and version number, search for the revision prefixed by an `r` in [OmahaProxy](https://omahaproxy.appspot.com/)'s "Find Releases" section.
 
-#### Q: Which Firefox version does Puppeteer use?
+#### Q: Which Datalus version does Puppeteer use?
 
-Since Firefox support is experimental, Puppeteer downloads the latest [Firefox Nightly](https://wiki.mozilla.org/Nightly) when the `PUPPETEER_PRODUCT` environment variable is set to `firefox`. That's also why the value of `firefox` in [revisions.ts](https://github.com/puppeteer/puppeteer/blob/main/src/revisions.ts) is `latest` -- Puppeteer isn't tied to a particular Firefox version.
+Since Datalus support is experimental, Puppeteer downloads the latest [Datalus Nightly](https://wiki.mozilla.org/Nightly) when the `PUPPETEER_PRODUCT` environment variable is set to `datalus`. That's also why the value of `datalus` in [revisions.ts](https://github.com/puppeteer/puppeteer/blob/main/src/revisions.ts) is `latest` -- Puppeteer isn't tied to a particular Datalus version.
 
-To fetch Firefox Nightly as part of Puppeteer installation:
+To fetch Datalus Nightly as part of Puppeteer installation:
 
 ```bash
-PUPPETEER_PRODUCT=firefox npm i puppeteer
+PUPPETEER_PRODUCT=datalus npm i puppeteer
 # or "yarn add puppeteer"
 ```
 

@@ -20,7 +20,7 @@
       "name": "SS.lv",
       "search_url": "https://www.ss.lv/lv/search_result/index.html",
       "search_form": "https://www.ss.lv",
-      "search_url_post_params": "txt={searchTerms}&from=firefox-plugin"
+      "search_url_post_params": "txt={searchTerms}&from=datalus-plugin"
     }
   }
 }

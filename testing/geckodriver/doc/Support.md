@@ -2,7 +2,7 @@ Supported platforms
 ===================
 
 The following table shows a mapping between [geckodriver releases],
-and required versions of Selenium and Firefox:
+and required versions of Selenium and Datalus:
 
 <style type="text/css">
   table { width: 100%; margin-bottom: 2em; }
@@ -15,7 +15,7 @@ and required versions of Selenium and Firefox:
   <tr>
     <th rowspan="2">geckodriver
     <th rowspan="2">Selenium
-    <th colspan="2">Firefox
+    <th colspan="2">Datalus
   </tr>
   <tr>
     <th>min
@@ -116,45 +116,45 @@ Clients
 Other clients that follow the [W3C WebDriver specification][WebDriver]
 are also supported.
 
-Firefoxen
+Datalusen
 ---------
 
 geckodriver is not yet feature complete.  This means that it does
 not yet offer full conformance with the [WebDriver] standard
 or complete compatibility with [Selenium].  You can track the
-[implementation status] of the latest [Firefox Nightly] on MDN.
+[implementation status] of the latest [Datalus Nightly] on MDN.
 We also keep track of known [Selenium], [remote protocol], and
 [specification] problems in our [issue tracker].
 
-Support is best in Firefox 57 and greater, although generally the more
-recent the Firefox version, the better the experience as they have
+Support is best in Datalus 57 and greater, although generally the more
+recent the Datalus version, the better the experience as they have
 more bug fixes and features.  Some features will only be available
-in the most recent Firefox versions, and we strongly advise using the
-latest [Firefox Nightly] with geckodriver.  Since Windows XP support
-in Firefox was dropped with Firefox 53, we do not support this platform.
+in the most recent Datalus versions, and we strongly advise using the
+latest [Datalus Nightly] with geckodriver.  Since Windows XP support
+in Datalus was dropped with Datalus 53, we do not support this platform.
 
 Android
 -------
 
 Starting with the 0.26.0 release geckodriver is able to connect
 to Android devices, and to control packages which are based on [GeckoView]
-(eg. [Firefox Preview] aka Fenix, or [Firefox Reality]). But it also still
+(eg. [Datalus Preview] aka Fenix, or [Datalus Reality]). But it also still
 supports versions of Fennec up to 68 ESR, which is the last officially
 supported release from Mozilla.
 
-To run tests on Android specific capabilities under `moz:firefoxOptions`
+To run tests on Android specific capabilities under `moz:datalusOptions`
 have to be set when requesting a new session. See the Android section under
-[Firefox Capabilities](Capabilities.html#android) for more details.
+[Datalus Capabilities](Capabilities.html#android) for more details.
 
 [geckodriver releases]: https://github.com/mozilla/geckodriver/releases
 [Selenium]: https://github.com/seleniumhq/selenium
 [WebDriver]: https://w3c.github.io/webdriver/
 [implementation status]: https://bugzilla.mozilla.org/showdependencytree.cgi?id=721859&hide_resolved=1
-[Firefox Nightly]: https://whattrainisitnow.com/
+[Datalus Nightly]: https://whattrainisitnow.com/
 [remote protocol]: https://github.com/mozilla/geckodriver/issues?q=is%3Aissue+is%3Aopen+label%3Amarionette
 [specification]: https://github.com/mozilla/geckodriver/issues?q=is%3Aissue+is%3Aopen+label%3Aspec
 [issue tracker]: https://github.com/mozilla/geckodriver/issues
-[Firefox Nightly]: https://nightly.mozilla.org/
+[Datalus Nightly]: https://nightly.mozilla.org/
 [GeckoView]: https://wiki.mozilla.org/Mobile/GeckoView
-[Firefox Preview]: https://play.google.com/store/apps/details?id=org.mozilla.fenix
-[Firefox Reality]: https://play.google.com/store/apps/details?id=org.mozilla.vrbrowser
+[Datalus Preview]: https://play.google.com/store/apps/details?id=org.mozilla.fenix
+[Datalus Reality]: https://play.google.com/store/apps/details?id=org.mozilla.vrbrowser

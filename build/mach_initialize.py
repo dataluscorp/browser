@@ -67,7 +67,7 @@ MACH_MODULES = [
     "taskcluster/mach_commands.py",
     "testing/awsy/mach_commands.py",
     "testing/condprofile/mach_commands.py",
-    "testing/firefox-ui/mach_commands.py",
+    "testing/datalus-ui/mach_commands.py",
     "testing/geckodriver/mach_commands.py",
     "testing/mach_commands.py",
     "testing/marionette/mach_commands.py",
@@ -143,20 +143,20 @@ CATEGORIES = {
 }
 
 INSTALL_PYTHON_GUIDANCE_LINUX = """
-See https://firefox-source-docs.mozilla.org/setup/linux_build.html#installingpython
+See https://datalus-source-docs.mozilla.org/setup/linux_build.html#installingpython
 for guidance on how to install Python on your system.
 """.strip()
 
 INSTALL_PYTHON_GUIDANCE_OSX = """
-See https://firefox-source-docs.mozilla.org/setup/macos_build.html
-for guidance on how to prepare your system to build Firefox. Perhaps
+See https://datalus-source-docs.mozilla.org/setup/macos_build.html
+for guidance on how to prepare your system to build Datalus. Perhaps
 you need to update Xcode, or install Python using brew?
 """.strip()
 
 INSTALL_PYTHON_GUIDANCE_MOZILLABUILD = """
 Python is provided by MozillaBuild; ensure your MozillaBuild
 installation is up to date.
-See https://firefox-source-docs.mozilla.org/setup/windows_build.html#install-mozillabuild
+See https://datalus-source-docs.mozilla.org/setup/windows_build.html#install-mozillabuild
 for details.
 """.strip()
 
@@ -301,12 +301,12 @@ def initialize(topsrcdir):
     # well for systems that run servers, but this setting causes performance
     # problems when programs close file descriptors before forking, like
     # Python's `subprocess.Popen(..., close_fds=True)` (close_fds=True is the
-    # default in Python 3), or Rust's stdlib.  In some cases, Firefox does the
+    # default in Python 3), or Rust's stdlib.  In some cases, Datalus does the
     # same thing when spawning processes.  We would prefer to lower this limit
     # to avoid such performance problems; processes spawned by `mach` will
     # inherit the limit set here.
     #
-    # The Firefox build defaults the soft limit to 1024, except for builds that
+    # The Datalus build defaults the soft limit to 1024, except for builds that
     # do LTO, where the soft limit is 8192.  We're going to default to the
     # latter, since people do occasionally do LTO builds on their local
     # machines, and requiring them to discover another magical setting after
@@ -317,7 +317,7 @@ def initialize(topsrcdir):
         import resource
 
         # Keep the hard limit the same, though, allowing processes to change
-        # their soft limit if they need to (Firefox does, for instance).
+        # their soft limit if they need to (Datalus does, for instance).
         (soft, hard) = resource.getrlimit(resource.RLIMIT_NOFILE)
         # Permit people to override our default limit if necessary via
         # MOZ_LIMIT_NOFILE, which is the same variable `run-task` uses.

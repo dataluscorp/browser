@@ -45,8 +45,8 @@ nsMacShellService::IsDefaultBrowser(bool aForAllTypes,
                                     bool* aIsDefaultBrowser) {
   *aIsDefaultBrowser = false;
 
-  CFStringRef firefoxID = ::CFBundleGetIdentifier(::CFBundleGetMainBundle());
-  if (!firefoxID) {
+  CFStringRef datalusID = ::CFBundleGetIdentifier(::CFBundleGetMainBundle());
+  if (!datalusID) {
     // CFBundleGetIdentifier is expected to return nullptr only if the specified
     // bundle doesn't have a bundle identifier in its plist. In this case, that
     // means a failure, since our bundle does have an identifier.
@@ -59,7 +59,7 @@ nsMacShellService::IsDefaultBrowser(bool aForAllTypes,
       ::LSCopyDefaultHandlerForURLScheme(CFSTR("http"));
   if (defaultBrowserID) {
     *aIsDefaultBrowser =
-        ::CFStringCompare(firefoxID, defaultBrowserID, 0) == kCFCompareEqualTo;
+        ::CFStringCompare(datalusID, defaultBrowserID, 0) == kCFCompareEqualTo;
     ::CFRelease(defaultBrowserID);
   }
 
@@ -70,21 +70,21 @@ NS_IMETHODIMP
 nsMacShellService::SetDefaultBrowser(bool aClaimAllTypes, bool aForAllUsers) {
   // Note: We don't support aForAllUsers on Mac OS X.
 
-  CFStringRef firefoxID = ::CFBundleGetIdentifier(::CFBundleGetMainBundle());
-  if (!firefoxID) {
+  CFStringRef datalusID = ::CFBundleGetIdentifier(::CFBundleGetMainBundle());
+  if (!datalusID) {
     return NS_ERROR_FAILURE;
   }
 
-  if (::LSSetDefaultHandlerForURLScheme(CFSTR("http"), firefoxID) != noErr) {
+  if (::LSSetDefaultHandlerForURLScheme(CFSTR("http"), datalusID) != noErr) {
     return NS_ERROR_FAILURE;
   }
-  if (::LSSetDefaultHandlerForURLScheme(CFSTR("https"), firefoxID) != noErr) {
+  if (::LSSetDefaultHandlerForURLScheme(CFSTR("https"), datalusID) != noErr) {
     return NS_ERROR_FAILURE;
   }
 
   if (aClaimAllTypes) {
     if (::LSSetDefaultRoleHandlerForContentType(kUTTypeHTML, kLSRolesAll,
-                                                firefoxID) != noErr) {
+                                                datalusID) != noErr) {
       return NS_ERROR_FAILURE;
     }
   }

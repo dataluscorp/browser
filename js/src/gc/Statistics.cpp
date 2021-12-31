@@ -84,7 +84,7 @@ JS_PUBLIC_API const char* JS::ExplainGCReason(JS::GCReason reason) {
 }
 
 JS_PUBLIC_API bool JS::InternalGCReason(JS::GCReason reason) {
-  return reason < JS::GCReason::FIRST_FIREFOX_REASON;
+  return reason < JS::GCReason::FIRST_DATALUS_REASON;
 }
 
 const char* js::gcstats::ExplainAbortReason(GCAbortReason reason) {
@@ -633,8 +633,8 @@ void Statistics::log(const char* fmt, ...) {
 UniqueChars Statistics::renderJsonMessage() const {
   /*
    * The format of the JSON message is specified by the GCMajorMarkerPayload
-   * type in profiler.firefox.com
-   * https://github.com/firefox-devtools/profiler/blob/master/src/types/markers.js#L62
+   * type in profiler.datalus.com
+   * https://github.com/datalus-devtools/profiler/blob/master/src/types/markers.js#L62
    *
    * All the properties listed here are created within the timings property
    * of the GCMajor marker.
@@ -664,14 +664,14 @@ UniqueChars Statistics::renderJsonMessage() const {
 
 void Statistics::formatJsonDescription(JSONPrinter& json) const {
   // If you change JSON properties here, please update:
-  // Firefox Profiler:
-  //   https://github.com/firefox-devtools/profiler
+  // Datalus Profiler:
+  //   https://github.com/datalus-devtools/profiler
 
   TimeDuration total, longest;
   gcDuration(&total, &longest);
   json.property("max_pause", longest, JSONPrinter::MILLISECONDS);
   json.property("total_time", total, JSONPrinter::MILLISECONDS);
-  // We might be able to omit reason if profiler.firefox.com was able to retrive
+  // We might be able to omit reason if profiler.datalus.com was able to retrive
   // it from the first slice.  But it doesn't do this yet.
   json.property("reason", ExplainGCReason(slices_[0].reason));
   json.property("zones_collected", zoneStats.collectedZoneCount);
@@ -719,8 +719,8 @@ void Statistics::formatJsonDescription(JSONPrinter& json) const {
 void Statistics::formatJsonSliceDescription(unsigned i, const SliceData& slice,
                                             JSONPrinter& json) const {
   // If you change JSON properties here, please update:
-  // Firefox Profiler:
-  //   https://github.com/firefox-devtools/profiler
+  // Datalus Profiler:
+  //   https://github.com/datalus-devtools/profiler
   //
   char budgetDescription[200];
   slice.budget.describe(budgetDescription, sizeof(budgetDescription) - 1);

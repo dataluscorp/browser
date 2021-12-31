@@ -21,7 +21,7 @@ work?
 -  The result of each task is sent to
    `TreeHerder <https://treeherder.mozilla.org>`__ where developers and
    sheriffs can track the status of the push.
--  The outputs from each task, log files, Firefox installers, and so on,
+-  The outputs from each task, log files, Datalus installers, and so on,
    appear attached to each task when it completes. These are viewable in
    the `Task
    Inspector <https://tools.taskcluster.net/task-inspector/>`__.

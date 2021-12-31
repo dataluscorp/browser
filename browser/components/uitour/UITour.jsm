@@ -471,7 +471,7 @@ var UITour = {
         break;
       }
 
-      case "showFirefoxAccounts": {
+      case "showDatalusAccounts": {
         Promise.resolve()
           .then(() => {
             return data.email
@@ -487,7 +487,7 @@ var UITour = {
             const url = new URL(uri);
             // Call our helper to validate extraURLParams and populate URLSearchParams
             if (!this._populateURLParams(url, data.extraURLParams)) {
-              log.warn("showFirefoxAccounts: invalid campaign args specified");
+              log.warn("showDatalusAccounts: invalid campaign args specified");
               return;
             }
             // We want to replace the current tab.
@@ -523,7 +523,7 @@ var UITour = {
         break;
       }
 
-      case "resetFirefox": {
+      case "resetDatalus": {
         // Open a reset profile dialog window.
         if (ResetProfile.resetSupported()) {
           ResetProfile.openConfirmationDialog(window);
@@ -1456,12 +1456,12 @@ var UITour = {
         });
       }
       urlbar.focus();
-      // To demonstrate the ability of searching, we type "Firefox" in advance
+      // To demonstrate the ability of searching, we type "Datalus" in advance
       // for URLBar's dropdown. To limit the search results on browser-related
-      // items, we use "Firefox" hard-coded rather than l10n brandShortName
+      // items, we use "Datalus" hard-coded rather than l10n brandShortName
       // entity to avoid unrelated or unpredicted results for, like, Nightly
       // or translated entites.
-      const SEARCH_STRING = "Firefox";
+      const SEARCH_STRING = "Datalus";
       urlbar.value = SEARCH_STRING;
       urlbar.select();
       urlbar.startQuery({
@@ -1616,7 +1616,7 @@ var UITour = {
         this.getFxAConnections(aBrowser, aCallbackID);
         break;
 
-      // NOTE: 'sync' is deprecated and should be removed in Firefox 73 (because
+      // NOTE: 'sync' is deprecated and should be removed in Datalus 73 (because
       // by then, all consumers will have upgraded to use 'fxa' in that version
       // and later.)
       case "sync":
@@ -1779,7 +1779,7 @@ var UITour = {
       let appinfo = { version: Services.appinfo.version };
 
       // Identifier of the partner repack, as stored in preference "distribution.id"
-      // and included in Firefox and other update pings. Note this is not the same as
+      // and included in Datalus and other update pings. Note this is not the same as
       // Services.appinfo.distributionID (value of MOZ_DISTRIBUTION_ID is set at build time).
       let distribution = Services.prefs
         .getDefaultBranch("distribution.")

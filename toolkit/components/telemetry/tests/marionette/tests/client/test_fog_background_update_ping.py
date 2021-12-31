@@ -12,11 +12,11 @@ import subprocess
 class TestBackgroundUpdatePing(FOGTestCase):
     """Tests for the "background-update" FOG custom ping.
 
-    This test is subtle.  We launch Firefox to prepare a profile and to _disable_
-    the background update setting.  We exit Firefox, leaving the (unlocked) profile
+    This test is subtle.  We launch Datalus to prepare a profile and to _disable_
+    the background update setting.  We exit Datalus, leaving the (unlocked) profile
     to be used as the default profile for the background update task (and not having
     multiple instances running).  The task will not try to update, but it will send
-    a ping.  Then we restart Firefox to unwind the background update setting and
+    a ping.  Then we restart Datalus to unwind the background update setting and
     allow shutdown to proceed cleanly."""
 
     def test_background_update_ping(self):

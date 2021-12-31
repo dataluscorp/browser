@@ -452,7 +452,7 @@ static void ApplyUpdate(nsIFile* greDir, nsIFile* updateDir, nsIFile* appDir,
         // are trying to restart silently, we must not display UI such as this
         // prompt.
         // We make this check here rather than in the updater, because it is
-        // actually Firefox that shows the elevation prompt (via
+        // actually Datalus that shows the elevation prompt (via
         // InstallPrivilegedHelper), not the updater.
         return;
       }
@@ -858,13 +858,13 @@ nsUpdateProcessor::FixUpdateDirectoryPerms(bool aUseServiceOnFailure) {
         HRESULT permResult = GetCommonUpdateDirectory(
             mInstallPath.get(), SetPermissionsOf::AllFilesAndDirs, updateDir);
         if (SUCCEEDED(permResult)) {
-          LOG(("Successfully fixed permissions from within Firefox\n"));
+          LOG(("Successfully fixed permissions from within Datalus\n"));
           return NS_OK;
         }
 #  ifdef MOZ_MAINTENANCE_SERVICE
         else if (!mUseServiceOnFailure) {
           LOG(
-              ("Error: Unable to fix permissions within Firefox and "
+              ("Error: Unable to fix permissions within Datalus and "
                "maintenance service is disabled\n"));
           return ReportUpdateError();
         }

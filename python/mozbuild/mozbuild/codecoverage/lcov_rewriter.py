@@ -591,10 +591,10 @@ class UrlFinder(object):
 
             if app_name in url:
                 if omnijar_name in url:
-                    # e.g. file:///home/worker/workspace/build/application/firefox/omni.ja!/components/MainProcessSingleton.js  # noqa
+                    # e.g. file:///home/worker/workspace/build/application/datalus/omni.ja!/components/MainProcessSingleton.js  # noqa
                     parts = url_obj.path.split(omnijar_name + "!", 1)
                 elif ".xpi!" in url:
-                    # e.g. file:///home/worker/workspace/build/application/firefox/browser/features/e10srollout@mozilla.org.xpi!/bootstrap.js  # noqa
+                    # e.g. file:///home/worker/workspace/build/application/datalus/browser/features/e10srollout@mozilla.org.xpi!/bootstrap.js  # noqa
                     parts = url_obj.path.split(".xpi!", 1)
                 else:
                     # We don't know how to handle this jar: path, so return it to the
@@ -728,14 +728,14 @@ def main():
         default="dist/bin/browser/",
         help="Prefix of the appdir in use. This is used to map "
         "urls starting with resource:///. It may differ by "
-        "app, but defaults to the valid value for firefox.",
+        "app, but defaults to the valid value for datalus.",
     )
     parser.add_argument(
         "--gre-dir",
         default="dist/bin/",
         help="Prefix of the gre dir in use. This is used to map "
         "urls starting with resource://gre. It may differ by "
-        "app, but defaults to the valid value for firefox.",
+        "app, but defaults to the valid value for datalus.",
     )
     parser.add_argument(
         "--output-suffix", default=".out", help="The suffix to append to output files."

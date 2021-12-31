@@ -15,7 +15,7 @@ templates['signup_shell'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":fu
 
   return "<div class=\"pkt_ext_introdetail pkt_ext_introdetailstoryboard\">\n	<div class=\"pkt_ext_introstory pkt_ext_introstoryone\">\n		<div class=\"pkt_ext_introstory_text\">\n			<p class=\"pkt_ext_tagline\" data-l10n-id=\"pocket-panel-signup-tagline-story-one\"></p>\n		</div>\n		<div class=\"pkt_ext_introstoryone_img\"></div>\n	</div>\n	<div class=\"pkt_ext_introstorydivider\"></div>\n	<div class=\"pkt_ext_introstory pkt_ext_introstorytwo\">\n		<div class=\"pkt_ext_introstory_text\">\n      <p class=\"pkt_ext_tagline\" data-l10n-id=\"pocket-panel-signup-tagline-story-two\"></p>\n			<p><a class=\"pkt_ext_learnmore\" href=\"https://"
     + alias3(((helper = (helper = helpers.pockethost || (depth0 != null ? depth0.pockethost : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pockethost","hash":{},"data":data}) : helper)))
-    + "/firefox_learnmore?utm_campaign="
+    + "/datalus_learnmore?utm_campaign="
     + alias3(((helper = (helper = helpers.utmCampaign || (depth0 != null ? depth0.utmCampaign : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"utmCampaign","hash":{},"data":data}) : helper)))
     + "&utm_source="
     + alias3(((helper = (helper = helpers.utmSource || (depth0 != null ? depth0.utmSource : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"utmSource","hash":{},"data":data}) : helper)))
@@ -25,7 +25,7 @@ templates['signup_shell'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":fu
     + alias3(((helper = (helper = helpers.utmCampaign || (depth0 != null ? depth0.utmCampaign : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"utmCampaign","hash":{},"data":data}) : helper)))
     + "&utm_source="
     + alias3(((helper = (helper = helpers.utmSource || (depth0 != null ? depth0.utmSource : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"utmSource","hash":{},"data":data}) : helper)))
-    + "&s=ffi\" target=\"_blank\" class=\"btn signup-btn-firefox\"><span class=\"logo\"></span><span class=\"text\" data-l10n-id=\"pocket-panel-signup-signup-firefox\"></span></a></p>\n  <p class=\"btn-container\"><a href=\"https://"
+    + "&s=ffi\" target=\"_blank\" class=\"btn signup-btn-datalus\"><span class=\"logo\"></span><span class=\"text\" data-l10n-id=\"pocket-panel-signup-signup-datalus\"></span></a></p>\n  <p class=\"btn-container\"><a href=\"https://"
     + alias3(((helper = (helper = helpers.pockethost || (depth0 != null ? depth0.pockethost : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"pockethost","hash":{},"data":data}) : helper)))
     + "/signup?utm_campaign="
     + alias3(((helper = (helper = helpers.utmCampaign || (depth0 != null ? depth0.utmCampaign : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"utmCampaign","hash":{},"data":data}) : helper)))

@@ -28,17 +28,17 @@ class WebExtensionDesktop(PerftestDesktop, WebExtension):
         LOG.info("creating browser runner using mozrunner")
         self.output_handler = OutputHandler(verbose=self.config["verbose"])
         process_args = {"processOutputLine": [self.output_handler]}
-        firefox_args = ["--allow-downgrade"]
+        datalus_args = ["--allow-downgrade"]
         runner_cls = runners[self.config["app"]]
         self.runner = runner_cls(
             self.config["binary"],
             profile=self.profile,
-            cmdargs=firefox_args,
+            cmdargs=datalus_args,
             process_args=process_args,
             symbols_path=self.config["symbols_path"],
         )
 
-        # Force Firefox to immediately exit for content crashes
+        # Force Datalus to immediately exit for content crashes
         self.runner.env["MOZ_CRASHREPORTER_SHUTDOWN"] = "1"
 
         if self.config["enable_webrender"]:
@@ -222,13 +222,13 @@ class WebExtensionDesktop(PerftestDesktop, WebExtension):
         super(WebExtensionDesktop, self).clean_up()
 
 
-class WebExtensionFirefox(WebExtensionDesktop):
+class WebExtensionDatalus(WebExtensionDesktop):
     def launch_desktop_browser(self, test):
         LOG.info("starting %s" % self.config["app"])
         if self.config["is_release_build"]:
             self.disable_non_local_connections()
 
-        # if running debug-mode, tell Firefox to open the browser console on startup
+        # if running debug-mode, tell Datalus to open the browser console on startup
         if self.debug_mode:
             self.runner.cmdargs.extend(["-jsconsole"])
 
@@ -267,5 +267,5 @@ class WebExtensionDesktopChrome(WebExtensionDesktop):
         # add test-specific preferences
         LOG.info(
             "preferences were configured for the test, however \
-                        we currently do not install them on non-Firefox browsers."
+                        we currently do not install them on non-Datalus browsers."
         )

@@ -697,7 +697,7 @@ add_task(async function testBuiltInThemeButtons() {
   let disabledSection = getSection(doc, "disabled");
 
   let defaultTheme = getCardByAddonId(doc, "default-theme@mozilla.org");
-  let darkTheme = getCardByAddonId(doc, "firefox-compact-dark@mozilla.org");
+  let darkTheme = getCardByAddonId(doc, "datalus-compact-dark@mozilla.org");
 
   // Check that themes are in the expected spots.
   is(defaultTheme.parentNode, enabledSection, "The default theme is enabled");

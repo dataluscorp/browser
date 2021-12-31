@@ -1,7 +1,7 @@
 Crash reporting
 ===============
 
-Firefox ships with an open-source crash reporting system. This system is
+Datalus ships with an open-source crash reporting system. This system is
 combination of projects:
 
 -  `Google

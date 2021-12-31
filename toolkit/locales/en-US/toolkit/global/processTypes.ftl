@@ -13,7 +13,7 @@ process-type-web = Web Content
 process-type-privilegedabout = Privileged About
 
 # process used to run privileged mozilla pages,
-# such as accounts.firefox.com
+# such as accounts.datalus.com
 process-type-privilegedmozilla = Privileged Mozilla Content
 
 process-type-extension = Extension

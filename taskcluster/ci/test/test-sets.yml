@@ -101,9 +101,9 @@ browsertime-high-priority:
 
 # Raptor desktop power tests
 # (requires Intel Power Gadget to be pre-installed)
-raptor-firefox-power:
-    - raptor-youtube-playback-v9-power-firefox
-    - raptor-youtube-playback-h264-power-firefox
+raptor-datalus-power:
+    - raptor-youtube-playback-v9-power-datalus
+    - raptor-youtube-playback-h264-power-datalus
 
 awsy:
     - awsy
@@ -140,8 +140,8 @@ linux32-tests:
 linux1804-tests:
     - cppunit
     - crashtest
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - gtest
     # - jittest  # See comment in linux1804-ccov-tests set.
     - jsreftest
@@ -189,8 +189,8 @@ windows32-2004-tests:
     - cppunit
     - crashtest
     - gtest
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - jsreftest
     - marionette
     - mochitest-a11y
@@ -214,8 +214,8 @@ windows-ccov-tests:
 windows10-2004-tests:
     - cppunit
     - crashtest
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - gtest
     - jsreftest
     - marionette
@@ -269,8 +269,8 @@ windows10-32-2004-failure-tests:
 
 mingwclang-tests-debug:
     - cppunit
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - mochitest-a11y
     - mochitest-chrome-gpu
     - mochitest-plain-gpu
@@ -287,8 +287,8 @@ mingwclang-tests-debug:
 # for re-enabling.
 mingwclang-win32-tests-debug:
     - cppunit
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - mochitest-a11y
     - mochitest-chrome-gpu
     - mochitest-plain-gpu
@@ -351,8 +351,8 @@ macosx1100-64-qr-tests:
 macosx1015-64-qr-tests:
     - cppunit
     - crashtest
-    - firefox-ui-functional-local
-    - firefox-ui-functional-remote
+    - datalus-ui-functional-local
+    - datalus-ui-functional-remote
     - gtest
     - jittest
     - jsreftest

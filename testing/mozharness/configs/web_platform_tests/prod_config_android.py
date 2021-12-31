@@ -14,7 +14,7 @@ config = {
         "--host-key-path=%(test_path)s/tests/tools/certs/web-platform.test.key",
         "--host-cert-path=%(test_path)s/tests/tools/certs/web-platform.test.pem",
         "--certutil-binary=%(xre_path)s/certutil",
-        "--product=firefox_android",
+        "--product=datalus_android",
     ],
     "binary_path": "/tmp",
     "geckodriver": "%(abs_fetches_dir)s/geckodriver",

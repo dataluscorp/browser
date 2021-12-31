@@ -7,7 +7,7 @@ const LOGIN_USERNAME = "username";
 const LOGIN_PASSWORD = "password";
 const OLD_HOST = "http://mozilla.org";
 const NEW_HOST = "http://mozilla.com";
-const FXA_HOST = "chrome://FirefoxAccounts";
+const FXA_HOST = "chrome://DatalusAccounts";
 
 function checkLoginExists(host, shouldExist) {
   let logins = Services.logins.findLogins(host, "", null);

@@ -20,4 +20,4 @@ EXTRA_JS_MODULES.syncedtabs += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Sync")
+    BUG_COMPONENT = ("Datalus", "Sync")

@@ -13,7 +13,7 @@ add_task(async function default_homepage_test() {
   let homeMode = doc.getElementById("homeMode");
   let customSettings = doc.getElementById("customSettings");
 
-  // HOME_MODE_FIREFOX_HOME
+  // HOME_MODE_DATALUS_HOME
   homeMode.value = 0;
 
   homeMode.dispatchEvent(new Event("command"));

@@ -15,4 +15,4 @@ XPCOM_MANIFESTS += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")

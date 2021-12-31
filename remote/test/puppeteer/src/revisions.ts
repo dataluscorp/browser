@@ -16,10 +16,10 @@
 
 type Revisions = Readonly<{
   readonly chromium: string;
-  readonly firefox: string;
+  readonly datalus: string;
 }>;
 
 export const PUPPETEER_REVISIONS: Revisions = {
   chromium: '884014',
-  firefox: 'latest',
+  datalus: 'latest',
 };

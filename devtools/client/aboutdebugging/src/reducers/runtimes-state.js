@@ -15,7 +15,7 @@ const {
   UPDATE_CONNECTION_PROMPT_SETTING_SUCCESS,
   REMOTE_RUNTIMES_UPDATED,
   SELECTED_RUNTIME_ID_UPDATED,
-  THIS_FIREFOX_RUNTIME_CREATED,
+  THIS_DATALUS_RUNTIME_CREATED,
 } = require("devtools/client/aboutdebugging/src/constants");
 
 const {
@@ -28,7 +28,7 @@ const {
 
 // Map between known runtime types and nodes in the runtimes state.
 const TYPE_TO_RUNTIMES_KEY = {
-  [RUNTIMES.THIS_FIREFOX]: "thisFirefoxRuntimes",
+  [RUNTIMES.THIS_DATALUS]: "thisDatalusRuntimes",
   [RUNTIMES.NETWORK]: "networkRuntimes",
   [RUNTIMES.USB]: "usbRuntimes",
 };
@@ -37,10 +37,10 @@ function RuntimesState() {
   return {
     networkRuntimes: [],
     selectedRuntimeId: null,
-    // "This Firefox" runtimes is an array for consistency, but it should only contain one
+    // "This Datalus" runtimes is an array for consistency, but it should only contain one
     // runtime. This runtime will be added after initializing the application via
-    // THIS_FIREFOX_RUNTIME_CREATED.
-    thisFirefoxRuntimes: [],
+    // THIS_DATALUS_RUNTIME_CREATED.
+    thisDatalusRuntimes: [],
     usbRuntimes: [],
   };
 }
@@ -160,10 +160,10 @@ function runtimesReducer(state = RuntimesState(), action) {
       });
     }
 
-    case THIS_FIREFOX_RUNTIME_CREATED: {
+    case THIS_DATALUS_RUNTIME_CREATED: {
       const { runtime } = action;
       return Object.assign({}, state, {
-        thisFirefoxRuntimes: [runtime],
+        thisDatalusRuntimes: [runtime],
       });
     }
 

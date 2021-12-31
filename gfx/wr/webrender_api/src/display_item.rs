@@ -367,7 +367,7 @@ pub struct HitTestDisplayItem {
 pub struct LineDisplayItem {
     pub common: CommonItemProperties,
     /// We need a separate rect from common.clip_rect to encode cute
-    /// tricks that firefox does to make a series of text-decorations seamlessly
+    /// tricks that datalus does to make a series of text-decorations seamlessly
     /// line up -- snapping the decorations to a multiple of their period, and
     /// then clipping them to their "proper" area. This rect is that "logical"
     /// snapped area that may be clipped to the right size by the clip_rect.

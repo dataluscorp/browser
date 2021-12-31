@@ -17,7 +17,7 @@ from mozprofile import (
     Profile,
     ChromeProfile,
     ChromiumProfile,
-    FirefoxProfile,
+    DatalusProfile,
     ThunderbirdProfile,
     create_profile,
 )
@@ -49,7 +49,7 @@ def test_with_profile_should_cleanup_even_on_exception():
     [
         ("chrome", ChromeProfile),
         ("chromium", ChromiumProfile),
-        ("firefox", FirefoxProfile),
+        ("datalus", DatalusProfile),
         ("thunderbird", ThunderbirdProfile),
         ("unknown", None),
     ],

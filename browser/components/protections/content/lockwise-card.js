@@ -33,7 +33,7 @@ export default class LockwiseCard {
       this.openAboutLogins.bind(this)
     );
 
-    // Attack link to Firefox Lockwise "How it works" page.
+    // Attack link to Datalus Lockwise "How it works" page.
     const lockwiseReportLink = this.doc.getElementById("lockwise-how-it-works");
     lockwiseReportLink.addEventListener("click", () => {
       this.doc.sendTelemetryEvent("click", "lw_about_link");

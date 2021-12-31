@@ -38,8 +38,8 @@ class RuntimeActions extends PureComponent {
   renderConnectionPromptSetting() {
     const { dispatch, runtimeDetails, runtimeId } = this.props;
     const { connectionPromptEnabled } = runtimeDetails;
-    // do not show the connection prompt setting in 'This Firefox'
-    return runtimeId !== RUNTIMES.THIS_FIREFOX
+    // do not show the connection prompt setting in 'This Datalus'
+    return runtimeId !== RUNTIMES.THIS_DATALUS
       ? ConnectionPromptSetting({
           connectionPromptEnabled,
           dispatch,
@@ -50,7 +50,7 @@ class RuntimeActions extends PureComponent {
   renderProfileButton() {
     const { runtimeId } = this.props;
 
-    return runtimeId !== RUNTIMES.THIS_FIREFOX
+    return runtimeId !== RUNTIMES.THIS_DATALUS
       ? Localized(
           {
             id: "about-debugging-runtime-profile-button2",

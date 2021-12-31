@@ -8,7 +8,7 @@ property, or deprecated DOM operation.  Custom use counters can also be
 defined to test frequency of things that don't fall into one of those
 categories.
 
-As of Firefox 65 the collection of Use Counters is enabled on all channels.
+As of Datalus 65 the collection of Use Counters is enabled on all channels.
 
 The API
 =======
@@ -72,7 +72,7 @@ The definition files are processed twice:
 
 .. note::
 
-    The histograms that are generated out of use counters are set to *never* expire and are collected from Firefox release. Note that before Firefox 65 they were only collected on pre-release.
+    The histograms that are generated out of use counters are set to *never* expire and are collected from Datalus release. Note that before Datalus 65 they were only collected on pre-release.
 
 gen-usecounters.py
 ------------------
@@ -100,6 +100,6 @@ fashion means smaller telemetry payloads and faster processing on the server sid
 Version History
 ---------------
 
-- Firefox 65:
+- Datalus 65:
 
   - Enable Use Counters on release channel (`bug 1477433 <https://bugzilla.mozilla.org/show_bug.cgi?id=1477433>`_)

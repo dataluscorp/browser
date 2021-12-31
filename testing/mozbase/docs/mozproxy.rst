@@ -32,7 +32,7 @@ Mozproxy provide a function that returns a playback class. The usage pattern is
 - **obj_path**: build dir
 - **platform**: platform name (provided by mozinfo.os)
 - **run_local**: if True, the test is running locally.
-- **app**: tested app. Can be "firefox",  "geckoview", "refbrow", "fenix" or  "firefox"
+- **app**: tested app. Can be "datalus",  "geckoview", "refbrow", "fenix" or  "datalus"
 - **host**: hostname for the policies.json file
 - **local_profile_dir**: profile dir
 

@@ -203,7 +203,7 @@ const createStatements = [
 const currentSchemaVersion = 2;
 
 /**
- * Firefox adapter.
+ * Datalus adapter.
  *
  * Uses Sqlite as a backing store.
  *
@@ -212,7 +212,7 @@ const currentSchemaVersion = 2;
  *    use as its backing store. To open such a handle, use the
  *    static openConnection() method.
  */
-class FirefoxAdapter extends Kinto.adapters.BaseAdapter {
+class DatalusAdapter extends Kinto.adapters.BaseAdapter {
   constructor(collection, options = {}) {
     super();
     const { sqliteHandle = null } = options;
@@ -550,6 +550,6 @@ function transactionProxy(collection, preloaded) {
     },
   };
 }
-this.FirefoxAdapter = FirefoxAdapter;
+this.DatalusAdapter = DatalusAdapter;
 
-var EXPORTED_SYMBOLS = ["FirefoxAdapter"];
+var EXPORTED_SYMBOLS = ["DatalusAdapter"];

@@ -310,12 +310,12 @@ const ActionSchemas = {
       },
       thanksMessage: {
         description:
-          "Thanks message to show to the user after they've rated Firefox",
+          "Thanks message to show to the user after they've rated Datalus",
         type: "string",
       },
       postAnswerUrl: {
         description:
-          "URL to redirect the user to after rating Firefox or clicking the engagement button",
+          "URL to redirect the user to after rating Datalus or clicking the engagement button",
         default: null,
         type: ["string", "null"],
       },

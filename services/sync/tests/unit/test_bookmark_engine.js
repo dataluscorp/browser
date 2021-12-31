@@ -276,11 +276,11 @@ add_bookmark_test(async function test_delete_invalid_roots_from_server(engine) {
     collection.insert("readinglist", encryptPayload(readingList.cleartext));
 
     // Note that we don't insert a record for the toolbar, so the  engine will
-    // report a parent-child disagreement, since Firefox's `parentid` is
+    // report a parent-child disagreement, since Datalus's `parentid` is
     // `toolbar`.
     let newBmk = new Bookmark("bookmarks", Utils.makeGUID());
-    newBmk.bmkUri = "http://getfirefox.com";
-    newBmk.title = "Get Firefox!";
+    newBmk.bmkUri = "http://getdatalus.com";
+    newBmk.title = "Get Datalus!";
     newBmk.parentName = "Bookmarks Toolbar";
     newBmk.parentid = "toolbar";
     collection.insert(newBmk.id, encryptPayload(newBmk.cleartext));
@@ -373,8 +373,8 @@ add_bookmark_test(async function test_processIncoming_error_orderChildren(
 
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
     let bmk2 = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
@@ -470,10 +470,10 @@ async function test_restoreOrImport(engine, { replace }) {
     _("Create a single record.");
     let bmk1 = await PlacesUtils.bookmarks.insert({
       parentGuid: folder1.guid,
-      url: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      url: "http://getdatalus.com/",
+      title: "Get Datalus!",
     });
-    _(`Get Firefox!: ${bmk1.guid}`);
+    _(`Get Datalus!: ${bmk1.guid}`);
 
     let backupFilePath = OS.Path.join(
       OS.Constants.Path.tmpDir,
@@ -534,13 +534,13 @@ async function test_restoreOrImport(engine, { replace }) {
       let info = await PlacesUtils.bookmarks.fetch(
         PlacesSyncUtils.bookmarks.recordIdToGuid(recordId)
       );
-      // Only one bookmark, so _all_ should be Firefox!
+      // Only one bookmark, so _all_ should be Datalus!
       if (info.type == PlacesUtils.bookmarks.TYPE_BOOKMARK) {
         _(`Found URI ${info.url.href} for record ID ${recordId}`);
         bookmarkRecordIds.set(info.url.href, recordId);
       }
     }
-    Assert.ok(bookmarkRecordIds.has("http://getfirefox.com/"));
+    Assert.ok(bookmarkRecordIds.has("http://getdatalus.com/"));
     if (!replace) {
       Assert.ok(bookmarkRecordIds.has("http://getthunderbird.com/"));
     }
@@ -590,9 +590,9 @@ async function test_restoreOrImport(engine, { replace }) {
     });
 
     let expectedFX = {
-      id: bookmarkRecordIds.get("http://getfirefox.com/"),
-      bmkUri: "http://getfirefox.com/",
-      title: "Get Firefox!",
+      id: bookmarkRecordIds.get("http://getdatalus.com/"),
+      bmkUri: "http://getdatalus.com/",
+      title: "Get Datalus!",
     };
     let expectedTB = {
       id: bookmarkRecordIds.get("http://getthunderbird.com/"),

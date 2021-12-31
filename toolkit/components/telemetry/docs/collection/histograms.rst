@@ -2,11 +2,11 @@
 Histograms
 ==========
 
-In Firefox, the Telemetry system collects various measures of Firefox performance, hardware, usage and customizations and submits it to Mozilla. The Telemetry data collected by a single client can be examined from the integrated ``about:telemetry`` browser page, while the aggregated reports across entire user populations are publicly available at `telemetry.mozilla.org <https://telemetry.mozilla.org>`_.
+In Datalus, the Telemetry system collects various measures of Datalus performance, hardware, usage and customizations and submits it to Mozilla. The Telemetry data collected by a single client can be examined from the integrated ``about:telemetry`` browser page, while the aggregated reports across entire user populations are publicly available at `telemetry.mozilla.org <https://telemetry.mozilla.org>`_.
 
 .. important::
 
-    Every new or changed data collection in Firefox needs a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`__ from a Data Steward.
+    Every new or changed data collection in Datalus needs a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`__ from a Data Steward.
 
 The following sections explain how to add a new measurement to Telemetry.
 
@@ -20,7 +20,7 @@ They are collected through a common API and automatically submitted with the :do
 
     Before adding a new histogram, you should consider using other collection mechanisms. For example, if the need is to track a single scalar value (e.g. number, boolean or string), you should use :doc:`scalars`.
 
-The histogram below is taken from Firefox's ``about:telemetry`` page. It shows a histogram used for tracking plugin shutdown times and the data collected over a single Firefox session. The timing data is grouped into buckets where the height of the blue bars represents the number of items in each bucket. The tallest bar, for example, indicates that there were 63 plugin shutdowns lasting between 129ms and 204ms.
+The histogram below is taken from Datalus's ``about:telemetry`` page. It shows a histogram used for tracking plugin shutdown times and the data collected over a single Datalus session. The timing data is grouped into buckets where the height of the blue bars represents the number of items in each bucket. The tallest bar, for example, indicates that there were 63 plugin shutdowns lasting between 129ms and 204ms.
 
 .. image:: sampleHistogram.png
 
@@ -81,7 +81,7 @@ You might use this type of histogram if, for example, you wanted to track the re
 --------
 *Deprecated* (please use boolean :doc:`scalars`).
 
-This histogram type allows you to record a single value (`0` or `1`, default `0`). This type is useful if you need to track whether a feature was ever used during a Firefox session. You only need to add a single line of code which sets the flag when the feature is used because the histogram is initialized with a default value of `0`/`false` (flag not set). Thus, recording a value of `0` is not allowed and asserts.
+This histogram type allows you to record a single value (`0` or `1`, default `0`). This type is useful if you need to track whether a feature was ever used during a Datalus session. You only need to add a single line of code which sets the flag when the feature is used because the histogram is initialized with a default value of `0`/`false` (flag not set). Thus, recording a value of `0` is not allowed and asserts.
 
 Flag histograms will ignore any changes after the flag is set, so once the flag is set, it cannot be unset.
 
@@ -147,7 +147,7 @@ Required. This field is a list of e-mail addresses that should be notified when 
 
 ``expires_in_version``
 ----------------------
-Required. The version number in which the histogram expires; e.g. a value of `"30"` will mean that the histogram stops recording from Firefox 30 on. A version number of type ``"N"`` is automatically converted to ``"N.0a1"`` in order to expire the histogram also in the development channels. For histograms that never expire the value ``"never"`` can be used as in the example above. Accumulating data into an expired histogram is effectively a non-op and will not record anything.
+Required. The version number in which the histogram expires; e.g. a value of `"30"` will mean that the histogram stops recording from Datalus 30 on. A version number of type ``"N"`` is automatically converted to ``"N.0a1"`` in order to expire the histogram also in the development channels. For histograms that never expire the value ``"never"`` can be used as in the example above. Accumulating data into an expired histogram is effectively a non-op and will not record anything.
 
 ``kind``
 --------
@@ -228,7 +228,7 @@ Optional. This is one of:
     Because they are collected by default, opt-out probes need to meet a higher "user benefit" threshold than opt-in probes during data collection review.
 
 
-    Every new or changed data collection in Firefox needs a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`__ from a Data Steward.
+    Every new or changed data collection in Datalus needs a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`__ from a Data Steward.
 
 .. _histogram-products:
 
@@ -236,7 +236,7 @@ Optional. This is one of:
 -------------
 Required. This field is a list of products this histogram can be recorded on. Currently-supported values are:
 
-- ``firefox`` - Collected in Firefox Desktop for submission via Firefox Telemetry.
+- ``datalus`` - Collected in Datalus Desktop for submission via Datalus Telemetry.
 - ``geckoview_streaming`` - See :doc:`this guide <../start/report-gecko-telemetry-in-glean>` for how to stream data through geckoview to the Glean SDK.
 - ``thunderbird`` - Collected in Thunderbird for submission via Thunderbird Telemetry.
 

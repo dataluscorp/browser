@@ -103,7 +103,7 @@ class TsBase(Test):
         "profile_path",  # The path containing the template profile. This
         # directory is copied to the temporary profile during
         # initialization of the test. If some of the files may
-        # be overwritten by Firefox and need to be reinstalled
+        # be overwritten by Datalus and need to be reinstalled
         # before each pass, use key |reinstall|
         "gecko_profile",
         "gecko_profile_interval",
@@ -251,8 +251,8 @@ class sessionrestore(TsBase):
     """
     A start up test measuring the time it takes to load a sessionstore.js file.
 
-    1. Set up Firefox to restore from a given sessionstore.js file.
-    2. Launch Firefox.
+    1. Set up Datalus to restore from a given sessionstore.js file.
+    2. Launch Datalus.
     3. Measure the delta between firstPaint and sessionRestored.
     """
 
@@ -275,8 +275,8 @@ class sessionrestore_no_auto_restore(sessionrestore):
     """
     A start up test measuring the time it takes to load a sessionstore.js file.
 
-    1. Set up Firefox to *not* restore automatically from sessionstore.js file.
-    2. Launch Firefox.
+    1. Set up Datalus to *not* restore automatically from sessionstore.js file.
+    2. Launch Datalus.
     3. Measure the delta between firstPaint and sessionRestored.
     """
 
@@ -292,8 +292,8 @@ class sessionrestore_many_windows(sessionrestore):
     """
     A start up test measuring the time it takes to load a sessionstore.js file.
 
-    1. Set up Firefox to restore automatically from sessionstore.js file.
-    2. Launch Firefox.
+    1. Set up Datalus to restore automatically from sessionstore.js file.
+    2. Launch Datalus.
     3. Measure the delta between firstPaint and sessionRestored.
     """
 
@@ -553,7 +553,7 @@ class tart(PageloaderTest):
     ASAP mode
     The recording API is broken with OMTC before ~2013-11-27
     After ~2013-11-27, disabling OMTC will also implicitly disable
-    OGL HW composition to disable OMTC with older firefox builds, also
+    OGL HW composition to disable OMTC with older datalus builds, also
     set 'layers.offmainthreadcomposition.enabled': False
     """
     preferences = {
@@ -651,7 +651,7 @@ class glvideo(PageloaderTest):
 @register_test()
 class tp5n(PageloaderTest):
     """
-    Tests the time it takes Firefox to load the tp5 web page test set.
+    Tests the time it takes Datalus to load the tp5 web page test set.
 
     The tp5 is an updated web page test set to 100 pages from April 8th, 2011.
     Effort was made for the pages to no longer be splash screens/login

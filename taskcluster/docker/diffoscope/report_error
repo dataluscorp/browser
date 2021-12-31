@@ -4,8 +4,8 @@ import sys
 stem = sys.argv[1]
 
 # We "parse" the diff output, so we look at the lines that contain a "tee", like:
-# ├── +++ b/firefox
-# │ ├── +++ b/firefox/libxul.so
+# ├── +++ b/datalus
+# │ ├── +++ b/datalus/libxul.so
 # │ │ ├── readelf --wide --notes {}
 # We ignore lines like the last one, to only report file names. And we ignore
 # lines for directories such as the first one.

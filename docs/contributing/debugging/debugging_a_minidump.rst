@@ -38,11 +38,11 @@ Using the MS Visual Studio debugger
 #. When it loads, click the green icon in the visual studio debugger
    toolbar that looks like a play button.
 
-For Firefox releases older than Firefox 41, you will also need to
-install the relevant release of Firefox (for example from
-`here <https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/>`__),
+For Datalus releases older than Datalus 41, you will also need to
+install the relevant release of Datalus (for example from
+`here <https://ftp.mozilla.org/pub/mozilla.org/datalus/releases/>`__),
 and add the directory it is in (e.g., "C:\Program Files\Mozilla
-Firefox 3.6 Beta 1\") to the same dialog in which you set up the
+Datalus 3.6 Beta 1\") to the same dialog in which you set up the
 symbol server (in case the binary location in the minidump is not the
 same as the one on your machine). Note that you can install the
 relevant release anywhere. Just make sure to configure the symbol
@@ -114,7 +114,7 @@ build Breakpad, the binary will be at
 ``src/tools/linux/md2core/minidump-2-core``. Running the binary with the
 path to a Linux minidump will generate a core file on stdout which can
 then be loaded in gdb as usual. You will need to manually download the
-matching Firefox binaries, but then you can use the :ref:`GDB Python
+matching Datalus binaries, but then you can use the :ref:`GDB Python
 script <Downloading symbols on Linux / Mac OS X>` to download symbols.
 
 The ``minidump-2-core`` source does not currently handle processing

@@ -70,7 +70,7 @@ appmenuitem-zoom-reduce =
 appmenuitem-fullscreen =
   .label = Full screen
 
-## Firefox Account toolbar button and Sync panel in App menu.
+## Datalus Account toolbar button and Sync panel in App menu.
 
 appmenu-remote-tabs-sign-into-sync =
   .label = Sign in to sync…
@@ -92,7 +92,7 @@ appmenu-remote-tabs-opensettings =
   .label = Settings
 
 # This is shown when Sync is configured but this appears to be the only device attached to
-# the account. We also show links to download Firefox for android/ios.
+# the account. We also show links to download Datalus for android/ios.
 appmenu-remote-tabs-noclients = Want to see your tabs from other devices here?
 
 appmenu-remote-tabs-connectdevice =
@@ -127,8 +127,8 @@ whatsnew-panel-footer-checkbox =
   .label = Notify about new features
   .accesskey = f
 
-## The Firefox Profiler – The popup is the UI to turn on the profiler, and record
-## performance profiles. To enable it go to profiler.firefox.com and click
+## The Datalus Profiler – The popup is the UI to turn on the profiler, and record
+## performance profiles. To enable it go to profiler.datalus.com and click
 ## "Enable Profiler Menu Button".
 
 profiler-popup-button-idle =
@@ -203,17 +203,17 @@ profiler-popup-presets-web-developer-description = Recommended preset for most w
 profiler-popup-presets-web-developer-label =
   .label = Web Developer
 
-profiler-popup-presets-firefox-platform-description = Recommended preset for internal Firefox platform debugging.
-profiler-popup-presets-firefox-platform-label =
-  .label = Firefox Platform
+profiler-popup-presets-datalus-platform-description = Recommended preset for internal Datalus platform debugging.
+profiler-popup-presets-datalus-platform-label =
+  .label = Datalus Platform
 
-profiler-popup-presets-firefox-front-end-description = Recommended preset for internal Firefox front-end debugging.
-profiler-popup-presets-firefox-front-end-label =
-  .label = Firefox Front-End
+profiler-popup-presets-datalus-front-end-description = Recommended preset for internal Datalus front-end debugging.
+profiler-popup-presets-datalus-front-end-label =
+  .label = Datalus Front-End
 
-profiler-popup-presets-firefox-graphics-description = Recommended preset for Firefox graphics performance investigation.
-profiler-popup-presets-firefox-graphics-label =
-  .label = Firefox Graphics
+profiler-popup-presets-datalus-graphics-description = Recommended preset for Datalus graphics performance investigation.
+profiler-popup-presets-datalus-graphics-label =
+  .label = Datalus Graphics
 
 profiler-popup-presets-media-description = Recommended preset for diagnosing audio and video problems.
 profiler-popup-presets-media-label =

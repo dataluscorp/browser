@@ -14,10 +14,10 @@ from mozperftest.system.macos import MacosDevice
 def run_proc(*args, **kw):
     if args[0][1] == "attach":
         where = args[0][4]
-        bindir = Path(where, "firefox.app", "Contents", "MacOS")
+        bindir = Path(where, "datalus.app", "Contents", "MacOS")
         os.makedirs(str(bindir))
-        firefox_bin = bindir / "firefox"
-        with firefox_bin.open("w") as f:
+        datalus_bin = bindir / "datalus"
+        with datalus_bin.open("w") as f:
             f.write("OK")
 
 
@@ -42,7 +42,7 @@ def test_mount_dmg():
     finally:
         device.teardown()
 
-    target = Path(DMG.parent, "firefox", "Contents", "MacOS", "firefox")
+    target = Path(DMG.parent, "datalus", "Contents", "MacOS", "datalus")
     assert env.get_arg("browsertime-binary") == str(target)
 
 
@@ -79,7 +79,7 @@ def test_detach_fails():
     finally:
         device.teardown()
 
-    target = Path(DMG.parent, "firefox", "Contents", "MacOS", "firefox")
+    target = Path(DMG.parent, "datalus", "Contents", "MacOS", "datalus")
     assert env.get_arg("browsertime-binary") == str(target)
 
 

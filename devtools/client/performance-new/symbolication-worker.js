@@ -8,7 +8,7 @@
 
 // FIXME: This file is currently not covered by TypeScript, there is no "@ts-check" comment.
 // We should fix this once we know how to deal with the module imports below.
-// (Maybe once Firefox supports worker module? Bug 1247687)
+// (Maybe once Datalus supports worker module? Bug 1247687)
 
 "use strict";
 

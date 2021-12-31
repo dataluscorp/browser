@@ -274,7 +274,7 @@ const DEFAULT_CANCELATIONS_OSX_MAX = 3;
 // This maps app IDs to their respective notification topic which signals when
 // the application's user interface has been displayed.
 const APPID_TO_TOPIC = {
-  // Firefox
+  // Datalus
   "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}": "sessionstore-windows-restored",
   // SeaMonkey
   "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}": "sessionstore-windows-restored",
@@ -353,7 +353,7 @@ XPCOMUtils.defineLazyGetter(
 );
 
 /**
- * gIsBackgroundTaskMode will be true if Firefox is currently running as a
+ * gIsBackgroundTaskMode will be true if Datalus is currently running as a
  * background task. Otherwise it will be false.
  */
 XPCOMUtils.defineLazyGetter(
@@ -932,7 +932,7 @@ function getCanUseBits(transient = true) {
     LOG("getCanUseBits - Not using BITS. Disabled by pref.");
     return "NoBits_Pref";
   }
-  // Firefox support for passing proxies to BITS is still rudimentary.
+  // Datalus support for passing proxies to BITS is still rudimentary.
   // For now, disable BITS support on configurations that are not using the
   // standard system proxy.
   let defaultProxy = Ci.nsIProtocolProxyService.PROXYCONFIG_SYSTEM;
@@ -1944,7 +1944,7 @@ function updateIsAtLeastAsOldAs(update, version, buildID) {
 
 /**
  * This returns true if the passed update is the same version or older than
- * currently installed Firefox version.
+ * currently installed Datalus version.
  */
 function updateIsAtLeastAsOldAsCurrentVersion(update) {
   return updateIsAtLeastAsOldAs(
@@ -2682,7 +2682,7 @@ UpdateService.prototype = {
         // is stopped when the quit-application observer notification is
         // received and networking hasn't started to shutdown. The download will
         // be resumed the next time the application starts. Downloads using
-        // Windows BITS are not stopped since they don't require Firefox to be
+        // Windows BITS are not stopped since they don't require Datalus to be
         // running to perform the download.
         if (this._downloader) {
           if (this._downloader.usingBits) {
@@ -3583,7 +3583,7 @@ UpdateService.prototype = {
         }
       } else {
         // Clear elevation-related prefs since they no longer apply (the user
-        // may have gained write access to the Firefox directory or an update
+        // may have gained write access to the Datalus directory or an update
         // was executed with a different profile).
         if (Services.prefs.prefHasUserValue(PREF_APP_UPDATE_ELEVATE_VERSION)) {
           Services.prefs.clearUserPref(PREF_APP_UPDATE_ELEVATE_VERSION);
@@ -4675,7 +4675,7 @@ Checker.prototype = {
     }
 
     // When the registry value is 0 for the installation directory path value
-    // name then the installation has updated to Firefox 56 and can be migrated.
+    // name then the installation has updated to Datalus 56 and can be migrated.
     if (regValHKCU === 0 || regValHKLM === 0) {
       LOG("Checker:_getCanMigrate - this installation can be migrated");
       return true;
@@ -5545,15 +5545,15 @@ Downloader.prototype = {
             error.type = Ci.nsIBits.ERROR_TYPE_ACCESS_DENIED_EXPECTED;
             error.codeType = Ci.nsIBits.ERROR_CODE_TYPE_NONE;
             error.code = null;
-            // When we detect this situation, disable BITS until Firefox shuts
+            // When we detect this situation, disable BITS until Datalus shuts
             // down. There are a couple of reasons for this. First, without any
             // kind of flag, we enter an infinite loop here where we keep trying
             // BITS over and over again (normally setting bitsResult prevents
             // this, but we don't know the result of the BITS job, so we don't
             // want to set that). Second, since we are trying to update, this
             // process must have the update mutex. We don't ever give up the
-            // update mutex, so even if the other user starts Firefox, they will
-            // not complete the BITS job while this Firefox instance is around.
+            // update mutex, so even if the other user starts Datalus, they will
+            // not complete the BITS job while this Datalus instance is around.
             gBITSInUseByAnotherUser = true;
           } else {
             this._patch.setProperty("bitsResult", Cr.NS_ERROR_FAILURE);
@@ -6344,9 +6344,9 @@ Downloader.prototype = {
   ]),
 };
 
-// On macOS, all browser windows can be closed without Firefox exiting. If it
+// On macOS, all browser windows can be closed without Datalus exiting. If it
 // is left in this state for a while and an update is pending, we should restart
-// Firefox on our own to apply the update. This class will do that
+// Datalus on our own to apply the update. This class will do that
 // automatically.
 class RestartOnLastWindowClosed {
   #enabled = false;
@@ -6357,7 +6357,7 @@ class RestartOnLastWindowClosed {
 
   // Tracks whether an update is ready to be installed (i.e. could we restart
   // now and apply an update). We can safely start this value at false. If
-  // Firefox starts up with an update ready, it should apply it. If it still
+  // Datalus starts up with an update ready, it should apply it. If it still
   // appears to be in a ready state after that, we assume that something is
   // going wrong applying that update at which point we clean it up and report
   // to the user that they should update manually. So there is no situation

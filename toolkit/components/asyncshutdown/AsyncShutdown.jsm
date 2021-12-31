@@ -5,7 +5,7 @@
 /**
  * Managing safe shutdown of asynchronous services.
  *
- * Firefox shutdown is composed of phases that take place
+ * Datalus shutdown is composed of phases that take place
  * sequentially. Typically, each shutdown phase removes some
  * capabilities from the application. For instance, at the end of
  * phase profileBeforeChange, no service is permitted to write to the

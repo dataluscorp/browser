@@ -206,8 +206,8 @@ var DownloadIntegration = {
    * @return boolean True if data should be kept.
    */
   shouldKeepBlockedData() {
-    const FIREFOX_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
-    return Services.appinfo.ID == FIREFOX_ID;
+    const DATALUS_ID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
+    return Services.appinfo.ID == DATALUS_ID;
   },
 
   /**
@@ -784,7 +784,7 @@ var DownloadIntegration = {
       this.launchFile(file, mimeInfo);
       // After an attempt has been made to launch the download, clear the
       // launchWhenSucceeded bit so future attempts to open the download can go
-      // through Firefox when possible.
+      // through Datalus when possible.
       aDownload.launchWhenSucceeded = false;
       return;
     }
@@ -814,7 +814,7 @@ var DownloadIntegration = {
 
     // An attempt will now be made to launch the download, clear the
     // launchWhenSucceeded bit so future attempts to open the download can go
-    // through Firefox when possible.
+    // through Datalus when possible.
     aDownload.launchWhenSucceeded = false;
 
     // When a file has no extension, and there's an executable file with the

@@ -6,7 +6,7 @@
 from __future__ import absolute_import
 from condprof.util import logger
 
-_SUPPORTED_MOBILE_BROWSERS = "fenix", "gecko", "firefox"
+_SUPPORTED_MOBILE_BROWSERS = "fenix", "gecko", "datalus"
 
 
 def is_mobile(platform):

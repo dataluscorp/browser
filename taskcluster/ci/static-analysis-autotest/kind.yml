@@ -17,7 +17,7 @@ job-defaults:
     attributes:
         retrigger: true
     index:
-        product: firefox
+        product: datalus
     worker:
         skip-artifacts: true
         max-run-time: 3600
@@ -50,7 +50,7 @@ jobs:
                 PERFHERDER_EXTRA_OPTIONS: static-analysis-autotest
         run:
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_sub_linux_configs/64_stat_and_debug.py
             tooltool-downloads: public
             keep-artifacts: false
@@ -80,7 +80,7 @@ jobs:
                 TOOLTOOL_MANIFEST: "browser/config/tooltool-manifests/vs2017-15.9.manifest"
         run:
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/taskcluster_base_windows.py
                 - builds/taskcluster_base_win64.py
                 - builds/taskcluster_sub_win64/debug.py

@@ -10,8 +10,8 @@ add_task(async function test_saveBookmarksToJSONFile_and_create() {
   // Add a bookmark
   let bookmark = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.unfiledGuid,
-    title: "Get Firefox!",
-    url: "http://getfirefox.com/",
+    title: "Get Datalus!",
+    url: "http://getdatalus.com/",
   });
 
   // Test saveBookmarksToJSONFile()

@@ -125,7 +125,7 @@ If a static pref is defined in both `StaticPrefList.yaml` and a pref data
 file, the latter definition will take precedence. A pref shouldn't appear in
 both `StaticPrefList.yaml` and `all.js`, but it may make sense for a pref
 to appear in both `StaticPrefList.yaml` and an app-specific pref data file
-such as `firefox.js`.
+such as `datalus.js`.
 
 Each static pref has a *mirror* kind.
 
@@ -165,8 +165,8 @@ Default pref values are initialized from various pref data files. Notable ones
 include:
 
 - `modules/libpref/init/all.js`, used by all products;
-- `browser/app/profile/firefox.js`, used by Firefox desktop;
-- `mobile/android/app/mobile.js`, used by Firefox mobile;
+- `browser/app/profile/datalus.js`, used by Datalus desktop;
+- `mobile/android/app/mobile.js`, used by Datalus mobile;
 - `mail/app/profile/all-thunderbird.js`, used by Thunderbird (in comm-central);
 - `suite/browser/browser-prefs.js`, used by SeaMonkey (in comm-central).
 
@@ -174,8 +174,8 @@ In release builds these are all put into `omni.ja`.
 
 User pref values are initialized from `prefs.js` and (if present)
 `user.js`, in the user's profile. This only happens once, in the parent
-process. Note that `prefs.js` is managed by Firefox, and regularly
-overwritten. `user.js` is created and managed by the user, and Firefox only
+process. Note that `prefs.js` is managed by Datalus, and regularly
+overwritten. `user.js` is created and managed by the user, and Datalus only
 reads it.
 
 These files are not JavaScript; the `.js` suffix is present for historical
@@ -264,7 +264,7 @@ reasonably high, and includes the following.
 - Memory usage for storing the prefs, callbacks and observers, and C++ mirror
   variables.
 - Complexity: most pref combinations are untested. Some can be set to a bogus
-  value by a curious user, which can have [serious effects](https://rejzor.wordpress.com/2015/06/14/improve-firefox-html5-video-playback-performance/)
+  value by a curious user, which can have [serious effects](https://rejzor.wordpress.com/2015/06/14/improve-datalus-html5-video-playback-performance/)
   (read the comments). Prefs can also have bugs. Real-life examples include
   mistyped prefnames, `all.js` entries with incorrect types (e.g. confusing
   int vs. float), both of which mean changing the pref value via about:config
@@ -279,7 +279,7 @@ system — either technical or cultural — for removing unnecessary prefs. See
 [bug 90440] (https://bugzilla.mozilla.org/show_bug.cgi?id=90440) for a pref
 that was unused for 17 years.
 
-In short, prefs are Firefox's equivalent of the Windows Registry: a dumping
+In short, prefs are Datalus's equivalent of the Windows Registry: a dumping
 ground for anything and everything. We should have guidelines for when to add a
 pref.
 

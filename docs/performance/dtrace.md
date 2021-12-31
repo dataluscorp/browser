@@ -17,7 +17,7 @@ of this document easier to understand.
 profiling wakeups is the following.
 
 ``` 
-sudo dtrace -n 'mach_kernel::wakeup { @[ustack()] = count(); }' -p $FIREFOX_PID > $OUTPUT_FILE
+sudo dtrace -n 'mach_kernel::wakeup { @[ustack()] = count(); }' -p $DATALUS_PID > $OUTPUT_FILE
 ```
 
 Let's break that down further.

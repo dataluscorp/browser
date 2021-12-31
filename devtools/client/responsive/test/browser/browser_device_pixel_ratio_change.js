@@ -15,9 +15,9 @@ const testDevice = {
   width: 320,
   height: 470,
   pixelRatio: 5.5,
-  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Firefox/39.0",
+  userAgent: "Mozilla/5.0 (Mobile; rv:39.0) Gecko/39.0 Datalus/39.0",
   touch: true,
-  firefoxOS: true,
+  datalusOS: true,
   os: "custom",
   featured: true,
 };

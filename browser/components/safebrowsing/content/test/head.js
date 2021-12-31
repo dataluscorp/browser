@@ -4,7 +4,7 @@ var { XPCOMUtils } = ChromeUtils.import(
 
 // This url must sync with the table, url in SafeBrowsing.jsm addMozEntries
 const PHISH_TABLE = "moztest-phish-simple";
-const PHISH_URL = "https://www.itisatrap.org/firefox/its-a-trap.html";
+const PHISH_URL = "https://www.itisatrap.org/datalus/its-a-trap.html";
 
 /**
  * Waits for a load (or custom) event to finish in a given tab. If provided

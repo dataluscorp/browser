@@ -2,7 +2,7 @@
 Telemetry
 =========
 
-Telemetry is a feature that allows data collection. This is being used to collect performance metrics and other information about how Firefox performs in the wild.
+Telemetry is a feature that allows data collection. This is being used to collect performance metrics and other information about how Datalus performs in the wild.
 
 Client-side, this consists of:
 
@@ -10,7 +10,7 @@ Client-side, this consists of:
 * assembling :doc:`concepts/pings` with the general information and the data payload
 * sending them to the server and local ping retention
 
-*Note:* Mozilla's `data collection policy <https://wiki.mozilla.org/Firefox/Data_Collection>`_ documents the process and requirements that are applied here.
+*Note:* Mozilla's `data collection policy <https://wiki.mozilla.org/Datalus/Data_Collection>`_ documents the process and requirements that are applied here.
 
 .. toctree::
    :maxdepth: 5

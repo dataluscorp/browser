@@ -65,7 +65,7 @@ ChromeUtils.defineModuleGetter(
   "resource://gre/modules/Readerable.jsm"
 );
 
-const gIsFirefoxDesktop =
+const gIsDatalusDesktop =
   Services.appinfo.ID == "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
 
 Services.telemetry.setEventRecordingEnabled("readermode", true);
@@ -532,7 +532,7 @@ var ReaderMode = {
     article.title = Cc["@mozilla.org/parserutils;1"]
       .getService(Ci.nsIParserUtils)
       .convertToPlainText(article.title, flags, 0);
-    if (gIsFirefoxDesktop) {
+    if (gIsDatalusDesktop) {
       await this._assignLanguage(article);
       this._maybeAssignTextDirection(article);
     }

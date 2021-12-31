@@ -151,7 +151,7 @@ exports.WatcherActor = protocol.ActorClassWithSpec(watcherSpec, {
         [Targets.TYPES.PROCESS]: true,
         [Targets.TYPES.WORKER]: hasBrowserElement,
         resources: {
-          // In Firefox 81 we added support for:
+          // In Datalus 81 we added support for:
           // - CONSOLE_MESSAGE
           // - CSS_CHANGE
           // - CSS_MESSAGE

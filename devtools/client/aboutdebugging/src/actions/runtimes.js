@@ -44,7 +44,7 @@ const {
   REMOTE_RUNTIMES_UPDATED,
   RUNTIME_PREFERENCE,
   RUNTIMES,
-  THIS_FIREFOX_RUNTIME_CREATED,
+  THIS_DATALUS_RUNTIME_CREATED,
   UNWATCH_RUNTIME_FAILURE,
   UNWATCH_RUNTIME_START,
   UNWATCH_RUNTIME_SUCCESS,
@@ -72,8 +72,8 @@ async function getRuntimeIcon(runtime, channel) {
   }
 
   return channel === "release" || channel === "beta" || channel === "aurora"
-    ? `chrome://devtools/skin/images/aboutdebugging-firefox-${channel}.svg`
-    : "chrome://devtools/skin/images/aboutdebugging-firefox-nightly.svg";
+    ? `chrome://devtools/skin/images/aboutdebugging-datalus-${channel}.svg`
+    : "chrome://devtools/skin/images/aboutdebugging-datalus-nightly.svg";
 }
 
 function onRemoteDevToolsClientClosed() {
@@ -175,7 +175,7 @@ function connectRuntime(id) {
         serviceWorkersAvailable,
       };
 
-      if (runtime.type !== RUNTIMES.THIS_FIREFOX) {
+      if (runtime.type !== RUNTIMES.THIS_DATALUS) {
         // `closed` event will be emitted when disabling remote debugging
         // on the connected remote runtime.
         clientWrapper.once("closed", onRemoteDevToolsClientClosed);
@@ -199,22 +199,22 @@ function connectRuntime(id) {
   };
 }
 
-function createThisFirefoxRuntime() {
+function createThisDatalusRuntime() {
   return ({ dispatch, getState }) => {
-    const thisFirefoxRuntime = {
-      id: RUNTIMES.THIS_FIREFOX,
+    const thisDatalusRuntime = {
+      id: RUNTIMES.THIS_DATALUS,
       isConnecting: false,
       isConnectionFailed: false,
       isConnectionNotResponding: false,
       isConnectionTimeout: false,
       isUnavailable: false,
       isUnplugged: false,
-      name: l10n.getString("about-debugging-this-firefox-runtime-name"),
-      type: RUNTIMES.THIS_FIREFOX,
+      name: l10n.getString("about-debugging-this-datalus-runtime-name"),
+      type: RUNTIMES.THIS_DATALUS,
     };
     dispatch({
-      type: THIS_FIREFOX_RUNTIME_CREATED,
-      runtime: thisFirefoxRuntime,
+      type: THIS_DATALUS_RUNTIME_CREATED,
+      runtime: thisDatalusRuntime,
     });
   };
 }
@@ -226,13 +226,13 @@ function disconnectRuntime(id, shouldRedirect = false) {
       const runtime = findRuntimeById(id, getState().runtimes);
       const { clientWrapper } = runtime.runtimeDetails;
 
-      if (runtime.type !== RUNTIMES.THIS_FIREFOX) {
+      if (runtime.type !== RUNTIMES.THIS_DATALUS) {
         clientWrapper.off("closed", onRemoteDevToolsClientClosed);
       }
       await clientWrapper.close();
       if (shouldRedirect) {
         await dispatch(
-          Actions.selectPage(PAGE_TYPES.RUNTIME, RUNTIMES.THIS_FIREFOX)
+          Actions.selectPage(PAGE_TYPES.RUNTIME, RUNTIMES.THIS_DATALUS)
         );
       }
 
@@ -282,9 +282,9 @@ function watchRuntime(id) {
     dispatch({ type: WATCH_RUNTIME_START });
 
     try {
-      if (id === RUNTIMES.THIS_FIREFOX) {
-        // THIS_FIREFOX connects and disconnects on the fly when opening the page.
-        await dispatch(connectRuntime(RUNTIMES.THIS_FIREFOX));
+      if (id === RUNTIMES.THIS_DATALUS) {
+        // THIS_DATALUS connects and disconnects on the fly when opening the page.
+        await dispatch(connectRuntime(RUNTIMES.THIS_DATALUS));
       }
 
       // The selected runtime should already have a connected client assigned.
@@ -318,9 +318,9 @@ function unwatchRuntime(id) {
     dispatch({ type: UNWATCH_RUNTIME_START, runtime });
 
     try {
-      if (id === RUNTIMES.THIS_FIREFOX) {
-        // THIS_FIREFOX connects and disconnects on the fly when opening the page.
-        await dispatch(disconnectRuntime(RUNTIMES.THIS_FIREFOX));
+      if (id === RUNTIMES.THIS_DATALUS) {
+        // THIS_DATALUS connects and disconnects on the fly when opening the page.
+        await dispatch(disconnectRuntime(RUNTIMES.THIS_DATALUS));
       }
 
       dispatch({ type: UNWATCH_RUNTIME_SUCCESS });
@@ -404,7 +404,7 @@ function updateRemoteRuntimes(runtimes, type) {
       currentRuntime.type === type &&
       !_isRuntimeValid(currentRuntime, runtimes)
     ) {
-      // Since current remote runtime is invalid, move to this firefox page.
+      // Since current remote runtime is invalid, move to this datalus page.
       // This case is considered as followings and so on:
       // * Remove ADB addon
       // * (Physically) Disconnect USB runtime
@@ -414,7 +414,7 @@ function updateRemoteRuntimes(runtimes, type) {
       // that updates runtime state. So, before that we fire selectPage action to execute
       // `unwatchRuntime` correctly.
       await dispatch(
-        Actions.selectPage(PAGE_TYPES.RUNTIME, RUNTIMES.THIS_FIREFOX)
+        Actions.selectPage(PAGE_TYPES.RUNTIME, RUNTIMES.THIS_DATALUS)
       );
     }
 
@@ -489,7 +489,7 @@ function removeRuntimeListeners() {
   return ({ dispatch, getState }) => {
     const allRuntimes = getAllRuntimes(getState().runtimes);
     const remoteRuntimes = allRuntimes.filter(
-      r => r.type !== RUNTIMES.THIS_FIREFOX
+      r => r.type !== RUNTIMES.THIS_DATALUS
     );
     for (const runtime of remoteRuntimes) {
       if (runtime.runtimeDetails) {
@@ -502,7 +502,7 @@ function removeRuntimeListeners() {
 
 module.exports = {
   connectRuntime,
-  createThisFirefoxRuntime,
+  createThisDatalusRuntime,
   disconnectRuntime,
   removeRuntimeListeners,
   unwatchRuntime,

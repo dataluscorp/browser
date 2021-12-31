@@ -78,7 +78,7 @@ if [ $# = 0 ]; then
   exit 1
 fi
 
-requested_forced_updates='Contents/MacOS/firefox'
+requested_forced_updates='Contents/MacOS/datalus'
 
 while getopts "hqf:" flag
 do

@@ -17,10 +17,10 @@ with Files("github-sync/**"):
     BUG_COMPONENT = ("Core", "Graphics")
 
 with Files("lint/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Lint and Formatting")
+    BUG_COMPONENT = ("Datalus Build System", "Lint and Formatting")
 
 with Files("moztreedocs/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Generated Documentation")
+    BUG_COMPONENT = ("Datalus Build System", "Generated Documentation")
     SCHEDULES.exclusive = ["docs"]
 
 with Files("profiler/**"):
@@ -36,10 +36,10 @@ with Files("rb/**"):
     BUG_COMPONENT = ("Core", "XPCOM")
 
 with Files("rewriting/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Source Code Analysis")
+    BUG_COMPONENT = ("Datalus Build System", "Source Code Analysis")
 
 with Files("tryselect/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Try")
+    BUG_COMPONENT = ("Datalus Build System", "Try")
 
 with Files("tryselect/selectors/release.py"):
     BUG_COMPONENT = ("Release Engineering", "General")
@@ -51,7 +51,7 @@ with Files("update-verify/**"):
     BUG_COMPONENT = ("Release Engineering", "Release Automation: Updates")
 
 with Files("vcs/**"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 SPHINX_TREES["moztreedocs"] = "moztreedocs/docs"
 

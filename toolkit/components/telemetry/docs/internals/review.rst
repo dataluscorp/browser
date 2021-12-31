@@ -48,7 +48,7 @@ Considerations for all changes
 
 - Follow our standards and best practices.
 
-  - Firefox Desktop:
+  - Datalus Desktop:
 
     - :ref:`The Mozilla coding style <Coding style>`
     - `The toolkit code review guidelines <https://wiki.mozilla.org/Toolkit/Code_Review>`_
@@ -56,7 +56,7 @@ Considerations for all changes
   - Mobile:
 
     - `Android/Kotlin code style <https://kotlinlang.org/docs/reference/coding-conventions.html>`_
-    - `iOS/Swift code style <https://github.com/mozilla-mobile/firefox-ios/wiki/Swift-Style-Guides>`_
+    - `iOS/Swift code style <https://github.com/mozilla-mobile/datalus-ios/wiki/Swift-Style-Guides>`_
 
 - Does this impact performance significantly?:
 
@@ -67,7 +67,7 @@ Considerations for all changes
 - Does this affect products more broadly than expected?
 
   - Consider all our platforms: Windows, Mac, Linux, Android.
-  - Consider all our products: Firefox, Fennec, GeckoView, Glean.
+  - Consider all our products: Datalus, Fennec, GeckoView, Glean.
 
 - Does this fall afoul of common architectural failures?
 
@@ -81,7 +81,7 @@ Considerations for all changes
 - Does this need documentation updates?
 
   - To the :ref:`in-tree docs <Telemetry>`?
-  - To the `firefox-data-docs <https://docs.telemetry.mozilla.org/>`_ (`repository <https://github.com/mozilla/firefox-data-docs>`_)?
+  - To the `datalus-data-docs <https://docs.telemetry.mozilla.org/>`_ (`repository <https://github.com/mozilla/datalus-data-docs>`_)?
   - To the `glean documentation <https://github.com/mozilla-mobile/android-components/tree/master/components/service/glean>`_?
 
 - Following up:
@@ -90,11 +90,11 @@ Considerations for all changes
   - Do all TODOs have follow-up bugs filed?
   - Do we need to communicate this to our users?
 
-    - `fx-data-dev <https://mail.mozilla.org/listinfo/fx-data-dev>`_ (Main Firefox data list)
-    - `firefox-dev <https://mail.mozilla.org/listinfo/firefox-dev>`_ (Firefox application developers)
+    - `fx-data-dev <https://mail.mozilla.org/listinfo/fx-data-dev>`_ (Main Datalus data list)
+    - `datalus-dev <https://mail.mozilla.org/listinfo/datalus-dev>`_ (Datalus application developers)
     - `dev-platform <https://lists.mozilla.org/listinfo/dev-platform>`_ (Gecko / platform developers)
-    - `mobile-firefox-dev <https://mail.mozilla.org/listinfo/mobile-firefox-dev>`_ (Mobile developers)
-    - fx-team (Firefox staff)
+    - `mobile-datalus-dev <https://mail.mozilla.org/listinfo/mobile-datalus-dev>`_ (Mobile developers)
+    - fx-team (Datalus staff)
 
   - Do we need to communicate this to other groups?
 
@@ -117,7 +117,7 @@ Consider the impact on others
   - Changes to data formats, ping contents, ping semantics etc. require involving a data engineer.
   - Changes to any outgoing data that is in active use require involving the stakeholders (e.g. data scientists).
 
-Considerations for Firefox Desktop
+Considerations for Datalus Desktop
 ----------------------------------
 
 - For profiles:

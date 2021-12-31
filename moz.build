@@ -11,39 +11,39 @@ with Files("LICENSE"):
     BUG_COMPONENT = ("mozilla.org", "Licensing")
 
 with Files("aclocal.m4"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("Cargo.*"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("client.*"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("CLOBBER"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("*configure*"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("docs/**"):
-    BUG_COMPONENT = ("Firefox Build System", "Generated Documentation")
+    BUG_COMPONENT = ("Datalus Build System", "Generated Documentation")
     SCHEDULES.exclusive = ["docs"]
 
 with Files("mach*"):
-    BUG_COMPONENT = ("Firefox Build System", "Mach Core")
+    BUG_COMPONENT = ("Datalus Build System", "Mach Core")
 
 with Files("*moz*"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("GNUmakefile"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("*gradle*"):
     BUG_COMPONENT = ("GeckoView", "General")
     SCHEDULES.exclusive = ["android"]
 
 with Files("*.json"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("**/l10n.toml"):
     BUG_COMPONENT = ("Core", "Localization")
@@ -56,7 +56,7 @@ with Files("nsprpub/**"):
     BUG_COMPONENT = ("NSPR", "NSPR")
 
 with Files("**/Makefile.in"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
     FINAL = True
 
 with Files("**/*.rst"):

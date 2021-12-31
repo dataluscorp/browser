@@ -58,7 +58,7 @@ def before_runs(env):
             app_name = env.get_arg("android-app-name").split(".")[-1]
         else:
             platform_name = platform.system().lower()
-            app_name = "firefox"
+            app_name = "datalus"
 
         name = [
             "mitm6",

@@ -66,7 +66,7 @@ add_task(async function setup() {
 });
 
 // A test utility class used in the test case to watch for a given extension
-// service worker being spawned and terminated (using the same kind of Firefox DevTools
+// service worker being spawned and terminated (using the same kind of Datalus DevTools
 // internals that about:debugging is using to watch the workers activity).
 class TestWorkerWatcher extends EventEmitter {
   JS_ACTOR_NAME = "TestWorkerWatcher";

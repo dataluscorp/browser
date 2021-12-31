@@ -12,7 +12,7 @@
  * folder.
  *
  * Active preference experiments are stopped if they aren't active on the recipe
- * server. They also expire if Firefox isn't able to contact the recipe server
+ * server. They also expire if Datalus isn't able to contact the recipe server
  * after a period of time, as well as if the user modifies the preference during
  * an active experiment.
  */
@@ -266,7 +266,7 @@ var PreferenceExperiments = {
    * the normandy preferences. On startup, we read these to set the
    * experimental values.
    *
-   * This is needed because the default branch does not persist between Firefox
+   * This is needed because the default branch does not persist between Datalus
    * restarts. To compensate for that, Normandy sets the default branch to the
    * experiment values again every startup. The values to set the preferences
    * to are stored in user-branch preferences because preferences have minimal

@@ -222,7 +222,7 @@ add_task(async function paste_from_different_instance() {
   xferable.init(null);
 
   // Fake data on the clipboard to pretend this is from a different instance
-  // of Firefox.
+  // of Datalus.
   let data = {
     title: "test",
     id: 32,
@@ -272,7 +272,7 @@ add_task(async function paste_separator_from_different_instance() {
   xferable.init(null);
 
   // Fake data on the clipboard to pretend this is from a different instance
-  // of Firefox.
+  // of Datalus.
   let data = {
     title: "test",
     id: 32,

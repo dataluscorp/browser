@@ -47,17 +47,17 @@ class HistoryDelegateTest : BaseSessionTest() {
                                     urls: Array<String>) : GeckoResult<BooleanArray>? {
                 val expected = arrayOf(
                     "https://mozilla.org/",
-                    "https://getfirefox.com/",
+                    "https://getdatalus.com/",
                     "https://bugzilla.mozilla.org/",
-                    "https://testpilot.firefox.com/",
-                    "https://accounts.firefox.com/"
+                    "https://testpilot.datalus.com/",
+                    "https://accounts.datalus.com/"
                 )
                 assertThat("Should pass URLs to check", urls.sorted(),
                     equalTo(expected.sorted()))
 
                 val visits = BooleanArray(urls.size, {
                     when (urls[it]) {
-                        "https://mozilla.org/", "https://testpilot.firefox.com/" -> true
+                        "https://mozilla.org/", "https://testpilot.datalus.com/" -> true
                         else -> false
                     }
                 })

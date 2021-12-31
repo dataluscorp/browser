@@ -197,7 +197,7 @@ source-upload:
 
 ALL_LOCALES = $(if $(filter en-US,$(LOCALES)),$(LOCALES),$(LOCALES) en-US)
 
-# Firefox uses @RESPATH@.
+# Datalus uses @RESPATH@.
 # Fennec uses @BINPATH@ and doesn't have the @RESPATH@ variable defined.
 ifeq ($(MOZ_BUILD_APP),mobile/android)
 BASE_PATH:=@BINPATH@

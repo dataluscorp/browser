@@ -9,13 +9,13 @@
     "message": "https://www.google.com/search"
   },
   "searchForm": {
-    "message": "https://www.google.com/search?client=firefox-b-1-e&q={searchTerms}"
+    "message": "https://www.google.com/search?client=datalus-b-1-e&q={searchTerms}"
   },
   "suggestUrl": {
-    "message": "https://www.google.com/complete/search?client=firefox&q={searchTerms}"
+    "message": "https://www.google.com/complete/search?client=datalus&q={searchTerms}"
   },
   "searchUrlGetParams": {
-    "message": "client=firefox-b-1-e&q={searchTerms}"
+    "message": "client=datalus-b-1-e&q={searchTerms}"
   },
   "channelPref": {
     "message": "google_channel_us"

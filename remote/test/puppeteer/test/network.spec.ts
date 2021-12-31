@@ -22,8 +22,8 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
-  describeFailsFirefox,
+  itFailsDatalus,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 
 describe('network', function () {
@@ -120,7 +120,7 @@ describe('network', function () {
       if (isChrome)
         expect(response.request().headers()['user-agent']).toContain('Chrome');
       else
-        expect(response.request().headers()['user-agent']).toContain('Firefox');
+        expect(response.request().headers()['user-agent']).toContain('Datalus');
     });
   });
 
@@ -262,7 +262,7 @@ describe('network', function () {
       let serverResponse = null;
       server.setRoute('/get', (req, res) => {
         serverResponse = res;
-        // In Firefox, |fetch| will be hanging until it receives |Content-Type| header
+        // In Datalus, |fetch| will be hanging until it receives |Content-Type| header
         // from server.
         res.setHeader('Content-Type', 'text/plain; charset=utf-8');
         res.write('hello ');

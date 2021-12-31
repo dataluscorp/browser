@@ -239,7 +239,7 @@ static bool PreXULSkeletonUIDisallowed() {
 
 // Note: this is specifically *not* a robust, multi-locale lowercasing
 // operation. It is not intended to be such. It is simply intended to match the
-// way in which we look for other instances of firefox to remote into.
+// way in which we look for other instances of datalus to remote into.
 // See
 // https://searchfox.org/mozilla-central/rev/71621bfa47a371f2b1ccfd33c704913124afb933/toolkit/components/remote/nsRemoteService.cpp#56
 static void MutateStringToLowercase(wchar_t* ptr) {
@@ -689,7 +689,7 @@ Result<Ok, PreXULSkeletonUIError> DrawSkeletonUI(
   // for a startup which otherwise takes 30 seconds.
   //
   // The readability and maintainability are a greater concern. When the
-  // silhouette of Firefox's core UI changes, this code will likely need to
+  // silhouette of Datalus's core UI changes, this code will likely need to
   // change. However, for the foreseeable future, our skeleton UI will be mostly
   // axis-aligned geometric shapes, and the thought is that any code which is
   // manipulating raw pixels should not be *too* hard to maintain and
@@ -1517,7 +1517,7 @@ static bool EnvHasValue(const char* name) {
 
 // Ensures that we only see arguments in the command line which are acceptable.
 // This is based on manual inspection of the list of arguments listed in the MDN
-// page for Gecko/Firefox commandline options:
+// page for Gecko/Datalus commandline options:
 // https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options
 // Broadly speaking, we want to reject any argument which causes us to show
 // something other than the default window at its normal size. Here is a non-
@@ -1526,11 +1526,11 @@ static bool EnvHasValue(const char* name) {
 //   -ProfileManager : This will display the profile manager window, which does
 //                     not match the skeleton UI at all.
 //
-//   -CreateProfile  : This will display a firefox window with the default
+//   -CreateProfile  : This will display a datalus window with the default
 //                     screen position and size, and not the position and size
 //                     which we have recorded in the registry.
 //
-//   -P <profile>    : This could cause us to display firefox with a position
+//   -P <profile>    : This could cause us to display datalus with a position
 //                     and size of a different profile than that in which we
 //                     were previously running.
 //
@@ -1578,7 +1578,7 @@ static Result<Ok, PreXULSkeletonUIError> ValidateCmdlineArguments(
 #ifndef MOZILLA_OFFICIAL
       // On local builds, we want to allow -profile, because it's how `mach run`
       // operates, and excluding that would create an unnecessary blind spot for
-      // Firefox devs.
+      // Datalus devs.
       "profile"
 #endif
 
@@ -1645,7 +1645,7 @@ static Result<Ok, PreXULSkeletonUIError> ValidateCmdlineArguments(
       // distinction, because we don't need to parse the arguments - we just
       // rely on the assumption that none of the listed flags in our
       // approvedArguments are overloaded in such a way that a different
-      // casing would visually alter the firefox window.
+      // casing would visually alter the datalus window.
       if (!_stricmp(flag, approvedArg)) {
         approved = true;
 
@@ -2156,7 +2156,7 @@ MFBT_API Result<Ok, PreXULSkeletonUIError> SetPreXULSkeletonUIEnabledIfAllowed(
     bool value) {
   // If the pre-XUL skeleton UI was disallowed for some reason, we just want to
   // ignore changes to the registry. An example of how things could be bad if
-  // we didn't: someone running firefox with the -profile argument could
+  // we didn't: someone running datalus with the -profile argument could
   // turn the skeleton UI on or off for the default profile. Turning it off
   // maybe isn't so bad (though it's likely still incorrect), but turning it
   // on could be bad if the user had specifically disabled it for a profile for

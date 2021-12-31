@@ -11,7 +11,7 @@ add_task(async function testMalware() {
 
   await BrowserTestUtils.openNewForegroundTab(gBrowser, "about:blank");
 
-  const url = "http://www.itisatrap.org/firefox/its-an-attack.html";
+  const url = "http://www.itisatrap.org/datalus/its-an-attack.html";
   BrowserTestUtils.loadURI(gBrowser.selectedBrowser, url);
   await BrowserTestUtils.browserLoaded(
     gBrowser.selectedBrowser,
@@ -28,7 +28,7 @@ add_task(async function testUnwanted() {
   Services.prefs.setBoolPref("browser.safebrowsing.allowOverride", false);
 
   // Now launch the unwanted software test
-  const url = "http://www.itisatrap.org/firefox/unwanted.html";
+  const url = "http://www.itisatrap.org/datalus/unwanted.html";
   BrowserTestUtils.loadURI(gBrowser.selectedBrowser, url);
   await BrowserTestUtils.browserLoaded(
     gBrowser.selectedBrowser,
@@ -49,7 +49,7 @@ add_task(async function testPhishing() {
   Services.prefs.setBoolPref("browser.safebrowsing.allowOverride", true);
 
   // Now launch the phishing test
-  const url = "http://www.itisatrap.org/firefox/its-a-trap.html";
+  const url = "http://www.itisatrap.org/datalus/its-a-trap.html";
   BrowserTestUtils.loadURI(gBrowser.selectedBrowser, url);
   await BrowserTestUtils.browserLoaded(
     gBrowser.selectedBrowser,

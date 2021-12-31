@@ -8,7 +8,7 @@ from __future__ import absolute_import
 def test(mod, path, entity=None):
     import re
 
-    # ignore anything but Firefox
+    # ignore anything but Datalus
     if mod not in (
         "netwerk",
         "dom",
@@ -21,7 +21,7 @@ def test(mod, path, entity=None):
         "browser/extensions/formautofill",
         "browser/extensions/report-site-issue",
         "extensions/spellcheck",
-        "other-licenses/branding/firefox",
+        "other-licenses/branding/datalus",
         "browser/branding/official",
         "services/sync",
     ):

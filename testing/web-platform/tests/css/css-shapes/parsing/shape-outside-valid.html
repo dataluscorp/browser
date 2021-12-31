@@ -61,7 +61,7 @@ test_valid_value("shape-outside", "content-box polygon(1% 2%)", "polygon(1% 2%) 
 
 // <image>
 // Spec is silent about url serialization.
-// Blink, Edge, Firefox add quotes. WebKit removes quotes.
+// Blink, Edge, Datalus add quotes. WebKit removes quotes.
 test_valid_value("shape-outside", "url(https://example.com/)", ["url(https://example.com/)", "url(\"https://example.com/\")"]);
 test_valid_value("shape-outside", "url(\"https://example.com/\")", ["url(https://example.com/)", "url(\"https://example.com/\")"]);
 test_valid_value("shape-outside", "cross-fade(url(\"https://example.com/\"), green)");

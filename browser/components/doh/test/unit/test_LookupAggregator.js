@@ -58,12 +58,12 @@ async function helper_SuccessfulLookupAggregator(
   for (let trr of [trrServer1, trrServer2]) {
     // There should be two results for random subdomains.
     let results = aggregator.results.filter(r => {
-      return r.trr == trr && r.domain.endsWith(".firefox-dns-perf-test.net.");
+      return r.trr == trr && r.domain.endsWith(".datalus-dns-perf-test.net.");
     });
     Assert.equal(results.length, 2);
 
     for (let result of results) {
-      Assert.ok(result.domain.endsWith(".firefox-dns-perf-test.net."));
+      Assert.ok(result.domain.endsWith(".datalus-dns-perf-test.net."));
       Assert.equal(result.trr, trr);
       Assert.ok(Components.isSuccessCode(result.status));
       Assert.greater(result.time, 0);
@@ -83,7 +83,7 @@ async function helper_SuccessfulLookupAggregator(
 
     // There should be two results for the popular domains.
     results = aggregator.results.filter(r => {
-      return r.trr == trr && !r.domain.endsWith(".firefox-dns-perf-test.net.");
+      return r.trr == trr && !r.domain.endsWith(".datalus-dns-perf-test.net.");
     });
     Assert.equal(results.length, 2);
 

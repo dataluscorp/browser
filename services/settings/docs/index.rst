@@ -150,7 +150,7 @@ The provided helper will:
 .. note::
 
     The ``download()`` method does not return a file path but instead a ``file://`` URL which points to the locally-downloaded file.
-    This will allow us to package attachments as part of a Firefox release (see `Bug 1542177 <https://bugzilla.mozilla.org/show_bug.cgi?id=1542177>`_)
+    This will allow us to package attachments as part of a Datalus release (see `Bug 1542177 <https://bugzilla.mozilla.org/show_bug.cgi?id=1542177>`_)
     and return them to calling code as ``resource://`` from within a package archive.
 
 .. note::
@@ -203,7 +203,7 @@ Packaging attachments
 Attachments are not included in the JSON dumps by default. You may choose to package the attachment
 with the client, for example if it is important to have the data available at the first startup
 without requiring network activity. Or if most users would download the attachment anyway.
-Only package attachments if needed, since they increase the file size of the Firefox installer.
+Only package attachments if needed, since they increase the file size of the Datalus installer.
 
 To package an attachment for consumers of the `download()` method:
 
@@ -314,7 +314,7 @@ It basically consists in:
 And once done:
 
 #. Create, modify or delete entries and let reviewers approve the changes
-#. Wait for Firefox to pick-up the changes for your settings key
+#. Wait for Datalus to pick-up the changes for your settings key
 
 
 Global Notifications

@@ -44,7 +44,7 @@ ALWAYS_ALLOWED_KEYS = [
 ]
 
 BASE_DOC_URL = (
-    "https://firefox-source-docs.mozilla.org/toolkit/components/" "telemetry/telemetry/"
+    "https://datalus-source-docs.mozilla.org/toolkit/components/" "telemetry/telemetry/"
 )
 HISTOGRAMS_DOC_URL = BASE_DOC_URL + "collection/histograms.html"
 SCALARS_DOC_URL = BASE_DOC_URL + "collection/scalars.html"
@@ -149,7 +149,7 @@ class Histogram:
         if self._is_use_counter:
             definition.setdefault("record_in_processes", ["main", "content"])
             definition.setdefault("releaseChannelCollection", "opt-out")
-            definition.setdefault("products", ["firefox", "fennec"])
+            definition.setdefault("products", ["datalus", "fennec"])
         self.verify_attributes(name, definition)
         self._name = name
         self._description = definition["description"]

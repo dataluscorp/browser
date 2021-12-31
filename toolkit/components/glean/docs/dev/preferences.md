@@ -20,7 +20,7 @@ If set to a value which is less than 0,
 FOG will take all pings scheduled for upload and drop them on the floor,
 telling the Glean SDK that it was sent successfully.
 This is how you emulate "recording enabled but upload disabled"
-like developer builds have in Firefox Telemetry.
+like developer builds have in Datalus Telemetry.
 Defaults to 0.
 
 `telemetry.fog.test.activity_limit`

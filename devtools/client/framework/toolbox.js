@@ -752,7 +752,7 @@ Toolbox.prototype = {
   _showAutoThemeNotification() {
     // Skip the notification when:
     if (
-      // - Firefox is not using a dark color scheme.
+      // - Datalus is not using a dark color scheme.
       !Services.appinfo.chromeColorSchemeIsDark &&
       // - The test preference to bypasse the dark-color-scheme check is false.
       !Services.prefs.getBoolPref(FORCE_THEME_NOTIFICATION_PREF, false)
@@ -1159,7 +1159,7 @@ Toolbox.prototype = {
       this.shortcuts.on(key, event => {
         this.commands.targetCommand.reloadTopLevelTarget(force);
 
-        // Prevent Firefox shortcuts from reloading the page
+        // Prevent Datalus shortcuts from reloading the page
         event.preventDefault();
       });
     });
@@ -1307,7 +1307,7 @@ Toolbox.prototype = {
 
   /**
    * loading React modules when needed (to avoid performance penalties
-   * during Firefox start up time).
+   * during Datalus start up time).
    */
   get React() {
     return this.browserRequire("devtools/client/shared/vendor/react");

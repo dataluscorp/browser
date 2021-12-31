@@ -5,7 +5,7 @@
 
 // The prefs in this file are shipped with the GRE and should apply to all
 // embedding situations. Application-specific preferences belong somewhere
-// else, such as browser/app/profile/firefox.js or
+// else, such as browser/app/profile/datalus.js or
 // mobile/android/app/mobile.js.
 //
 // NOTE: Not all prefs should be defined in this (or any other) data file.
@@ -74,7 +74,7 @@ pref("security.family_safety.mode", 2);
 pref("security.enterprise_roots.enabled", false);
 
 // If true, attempt to load the osclientcerts PKCS#11 module at startup on a
-// background thread. This module allows Firefox to use client certificates
+// background thread. This module allows Datalus to use client certificates
 // stored in OS certificate storage. Currently only available for Windows and
 // macOS.
 pref("security.osclientcerts.autoload", true);
@@ -166,14 +166,14 @@ pref("security.pki.crlite_mode", 1);
 pref("security.pki.crlite_ct_merge_delay_seconds", 100800);
 
 // Issuer we use to detect MitM proxies. Set to the issuer of the cert of the
-// Firefox update service. The string format is whatever NSS uses to print a DN.
+// Datalus update service. The string format is whatever NSS uses to print a DN.
 // This value is set and cleared automatically.
 pref("security.pki.mitm_canary_issuer", "");
 // Pref to disable the MitM proxy checks.
 pref("security.pki.mitm_canary_issuer.enabled", true);
 
 // It is set to true when a non-built-in root certificate is detected on a
-// Firefox update service's connection.
+// Datalus update service's connection.
 // This value is set automatically.
 // The difference between security.pki.mitm_canary_issuer and this pref is that
 // here the root is trusted but not a built-in, whereas for
@@ -216,7 +216,7 @@ pref("security.osreauthenticator.password_last_changed_hi", 0);
 pref("security.crash_tracking.js_load_1.prevCrashes", 0);
 pref("security.crash_tracking.js_load_1.maxCrashes", 0);
 
-pref("general.useragent.compatMode.firefox", false);
+pref("general.useragent.compatMode.datalus", false);
 
 pref("general.config.obscure_value", 13); // for MCD .cfg files
 
@@ -297,7 +297,7 @@ pref("dom.keyboardevent.keypress.hack.dispatch_non_printable_keys", "www.icloud.
 pref("dom.keyboardevent.keypress.hack.dispatch_non_printable_keys.addl", "");
 
 // Blacklist of domains of web apps which handle keyCode and charCode of
-// keypress events with a path only for Firefox (i.e., broken if we set
+// keypress events with a path only for Datalus (i.e., broken if we set
 // non-zero keyCode or charCode value to the other).  The format is exactly
 // same as "dom.keyboardevent.keypress.hack.dispatch_non_printable_keys". So,
 // check its explanation for the detail.
@@ -842,15 +842,15 @@ pref("toolkit.dump.emit", false);
 // with a ".remote" postfix. This is because we have one set of preference for local
 // profiling, and a second set for remote profiling.
 
-// This pref configures the base URL for the profiler.firefox.com instance to
+// This pref configures the base URL for the profiler.datalus.com instance to
 // use. This is useful so that a developer can change it while working on
-// profiler.firefox.com, or in tests. This isn't exposed directly to the user.
-pref("devtools.performance.recording.ui-base-url", "https://profiler.firefox.com");
+// profiler.datalus.com, or in tests. This isn't exposed directly to the user.
+pref("devtools.performance.recording.ui-base-url", "https://profiler.datalus.com");
 // When gathering profiles from child processes, this is the longest time (in
 // seconds) allowed between two responses. 0 = Use internal default.
 pref("devtools.performance.recording.child.timeout_s", 0);
 // The popup is only enabled by default on Nightly, Dev Edition, and debug buildsd since
-// it's a developer focused item. It can still be enabled by going to profiler.firefox.com,
+// it's a developer focused item. It can still be enabled by going to profiler.datalus.com,
 // but by default it is off on Release and Beta. Note that this only adds it to the
 // the customization palette, not to the navbar.
 #if defined(NIGHTLY_BUILD) || defined(MOZ_DEV_EDITION) || defined(DEBUG)
@@ -862,8 +862,8 @@ pref("devtools.performance.recording.child.timeout_s", 0);
 // values below will be used.
 #if defined(NIGHTLY_BUILD) || !defined(MOZILLA_OFFICIAL)
   // Use a more advanced preset on Nightly and local builds.
-  pref("devtools.performance.recording.preset", "firefox-platform");
-  pref("devtools.performance.recording.preset.remote", "firefox-platform");
+  pref("devtools.performance.recording.preset", "datalus-platform");
+  pref("devtools.performance.recording.preset.remote", "datalus-platform");
 #else
   pref("devtools.performance.recording.preset", "web-developer");
   pref("devtools.performance.recording.preset.remote", "web-developer");
@@ -1806,7 +1806,7 @@ pref("network.negotiate-auth.using-native-gsslib", true);
 // with native NTLM. (See bug 520607 for details.) Using generic NTLM authentication
 // can expose the user to reflection attack vulnerabilities. Do not change this
 // unless you know what you're doing!
-// This pref should be removed 6 months after the release of firefox 3.6.
+// This pref should be removed 6 months after the release of datalus 3.6.
 pref("network.auth.force-generic-ntlm", false);
 
 // The following prefs are used to enable automatic use of the operating
@@ -1902,7 +1902,7 @@ pref("network.online",                      true); //online/offline
 pref("network.cookie.move.interval_sec",    0);
 
 // This pref contains the list of hostnames (such as
-// "mozilla.org,example.net"). For these hosts, firefox will treat
+// "mozilla.org,example.net"). For these hosts, datalus will treat
 // SameSite=None if nothing else is specified, even if
 // network.cookie.sameSite.laxByDefault if set to true.
 // To know the correct syntax, see nsContentUtils::IsURIInList()
@@ -1952,7 +1952,7 @@ pref("font.cjk_pref_fallback_order",        "zh-cn,zh-hk,zh-tw,ja,ko");
 pref("intl.uidirection", -1); // -1 to set from locale; 0 for LTR; 1 for RTL
 
 // This pref controls pseudolocales for testing localization.
-// See https://firefox-source-docs.mozilla.org/l10n/fluent/tutorial.html#pseudolocalization.
+// See https://datalus-source-docs.mozilla.org/l10n/fluent/tutorial.html#pseudolocalization.
 pref("intl.l10n.pseudo", "");
 
 // use en-US hyphenation by default for content tagged with plain lang="en"
@@ -2194,7 +2194,7 @@ pref("security.insecure_field_warning.ignore_local_ip_address", true);
 // Remote settings preferences
 // Note: if you change this, make sure to also review security.onecrl.maximum_staleness_in_seconds
 pref("services.settings.poll_interval", 86400); // 24H
-pref("services.settings.server", "https://firefox.settings.services.mozilla.com/v1");
+pref("services.settings.server", "https://datalus.settings.services.mozilla.com/v1");
 pref("services.settings.default_bucket", "main");
 
 // The percentage of clients who will report uptake telemetry as
@@ -2209,7 +2209,7 @@ pref("services.settings.security.onecrl.signer", "onecrl.content-signature.mozil
 pref("services.settings.security.onecrl.checked", 0);
 
 pref("extensions.abuseReport.enabled", true);
-// Allow AMO to handoff reports to the Firefox integrated dialog.
+// Allow AMO to handoff reports to the Datalus integrated dialog.
 pref("extensions.abuseReport.amWebAPI.enabled", true);
 pref("extensions.abuseReport.url", "https://services.addons.mozilla.org/api/v4/abuse/report/addon/");
 pref("extensions.abuseReport.amoDetailsURL", "https://services.addons.mozilla.org/api/v4/addons/addon/");
@@ -2497,7 +2497,7 @@ pref("svg.disabled", false);
 // Override default dom.ipc.processCount for some remote content process types.
 pref("dom.ipc.processCount.webLargeAllocation", 10);
 
-// Disable e10s for Gecko by default. This is overridden in firefox.js.
+// Disable e10s for Gecko by default. This is overridden in datalus.js.
 pref("browser.tabs.remote.autostart", false);
 
 // This pref will cause assertions when a remoteType triggers a process switch
@@ -2511,7 +2511,7 @@ pref("browser.tabs.remote.separatePrivilegedContentProcess", false);
 
 // The domains we will isolate into the Mozilla Content Process. Comma-separated
 // full domains: any subdomains of the domains listed will also be allowed.
-pref("browser.tabs.remote.separatedMozillaDomains", "addons.mozilla.org,accounts.firefox.com");
+pref("browser.tabs.remote.separatedMozillaDomains", "addons.mozilla.org,accounts.datalus.com");
 
 // Default font types and sizes by locale
 pref("font.default.ar", "sans-serif");
@@ -3500,7 +3500,7 @@ pref("font.size.monospace.x-math", 13);
 #endif // ANDROID
 
 #if defined(ANDROID)
-  // We use the bundled Charis SIL Compact as serif font for Firefox for Android
+  // We use the bundled Charis SIL Compact as serif font for Datalus for Android
 
   pref("font.name-list.emoji", "Noto Color Emoji");
 
@@ -3707,7 +3707,7 @@ pref("network.tcp.keepalive.idle_time", 600); // seconds; 10 mins
 
 // This pref controls if we send the "public-suffix-list-updated" notification
 // from PublicSuffixList.onUpdate() - Doing so would cause the PSL graph to
-// be updated while Firefox is running which may cause principals to have an
+// be updated while Datalus is running which may cause principals to have an
 // inconsistent state. See bug 1582647 comment 30
 pref("network.psl.onUpdate_notify", false);
 
@@ -3766,7 +3766,7 @@ pref("browser.meta_refresh_when_inactive.disabled", false);
 
 // XPInstall prefs
 pref("xpinstall.whitelist.required", true);
-// Only Firefox requires add-on signatures
+// Only Datalus requires add-on signatures
 pref("xpinstall.signatures.required", false);
 pref("extensions.langpacks.signatures.required", false);
 pref("extensions.webExtensionsMinPlatformVersion", "42.0a1");
@@ -3777,7 +3777,7 @@ pref("extensions.webextensions.keepStorageOnUninstall", false);
 pref("extensions.webextensions.keepUuidOnUninstall", false);
 // Redirect basedomain used by identity api
 pref("extensions.webextensions.identity.redirectDomain", "extensions.allizom.org");
-pref("extensions.webextensions.restrictedDomains", "accounts-static.cdn.mozilla.net,accounts.firefox.com,addons.cdn.mozilla.net,addons.mozilla.org,api.accounts.firefox.com,content.cdn.mozilla.net,discovery.addons.mozilla.org,install.mozilla.org,oauth.accounts.firefox.com,profile.accounts.firefox.com,support.mozilla.org,sync.services.mozilla.com");
+pref("extensions.webextensions.restrictedDomains", "accounts-static.cdn.mozilla.net,accounts.datalus.com,addons.cdn.mozilla.net,addons.mozilla.org,api.accounts.datalus.com,content.cdn.mozilla.net,discovery.addons.mozilla.org,install.mozilla.org,oauth.accounts.datalus.com,profile.accounts.datalus.com,support.mozilla.org,sync.services.mozilla.com");
 
 // Whether or not the moz-extension resource loads are remoted. For debugging
 // purposes only. Setting this to false will break moz-extension URI loading
@@ -3940,8 +3940,8 @@ pref("network.captive-portal-service.enabled", false);
 pref("network.connectivity-service.enabled", true);
 pref("network.connectivity-service.DNSv4.domain", "example.org");
 pref("network.connectivity-service.DNSv6.domain", "example.org");
-pref("network.connectivity-service.IPv4.url", "http://detectportal.firefox.com/success.txt?ipv4");
-pref("network.connectivity-service.IPv6.url", "http://detectportal.firefox.com/success.txt?ipv6");
+pref("network.connectivity-service.IPv4.url", "http://detectportal.datalus.com/success.txt?ipv4");
+pref("network.connectivity-service.IPv6.url", "http://detectportal.datalus.com/success.txt?ipv6");
 
 // DNS Trusted Recursive Resolver
 // 0 - default off, 1 - reserved/off, 2 - TRR first, 3 - TRR only, 4 - reserved/off, 5 off by choice
@@ -3960,7 +3960,7 @@ pref("network.trr.blacklist-duration", 60);
 pref("network.trr.excluded-domains", "");
 pref("network.trr.builtin-excluded-domains", "localhost,local");
 
-pref("captivedetect.canonicalURL", "http://detectportal.firefox.com/canonical.html");
+pref("captivedetect.canonicalURL", "http://detectportal.datalus.com/canonical.html");
 pref("captivedetect.canonicalContent", "<meta http-equiv=\"refresh\" content=\"0;url=https://support.mozilla.org/kb/captive-portal\"/>");
 pref("captivedetect.maxWaitingTime", 5000);
 pref("captivedetect.pollingTime", 3000);
@@ -4029,7 +4029,7 @@ pref("browser.safebrowsing.allowOverride", true);
 #ifdef MOZILLA_OFFICIAL
   pref("browser.safebrowsing.id", "navclient-auto-ffox");
 #else
-  pref("browser.safebrowsing.id", "Firefox");
+  pref("browser.safebrowsing.id", "Datalus");
 #endif
 
 // Download protection
@@ -4346,12 +4346,12 @@ pref("toolkit.legacyUserProfileCustomizations.stylesheets", false);
   pref("datareporting.policy.currentPolicyVersion", 2);
   pref("datareporting.policy.minimumPolicyVersion", 1);
   pref("datareporting.policy.minimumPolicyVersion.channel-beta", 2);
-  pref("datareporting.policy.firstRunURL", "https://www.mozilla.org/privacy/firefox/");
+  pref("datareporting.policy.firstRunURL", "https://www.mozilla.org/privacy/datalus/");
 #endif
 
 #ifdef MOZ_SERVICES_HEALTHREPORT
   #if !defined(ANDROID)
-    pref("datareporting.healthreport.infoURL", "https://www.mozilla.org/legal/privacy/firefox.html#health-report");
+    pref("datareporting.healthreport.infoURL", "https://www.mozilla.org/legal/privacy/datalus.html#health-report");
 
     // Health Report is enabled by default on all channels.
     pref("datareporting.healthreport.uploadEnabled", true);
@@ -4374,7 +4374,7 @@ pref("services.common.log.logger.tokenserverclient", "Debug");
   pref("services.sync.scheduler.fxa.singleDeviceInterval", 3600); // 1 hour
 
   // Note that new engines are typically added with a default of disabled, so
-  // when an existing sync user gets the Firefox upgrade that supports the engine
+  // when an existing sync user gets the Datalus upgrade that supports the engine
   // it starts as disabled until the user has explicitly opted in.
   // The sync "create account" process typically *will* offer these engines, so
   // they may be flipped to enabled at that time.
@@ -4452,8 +4452,8 @@ pref("services.common.log.logger.tokenserverclient", "Debug");
   // a sync.
   pref("services.sync.maxResyncs", 1);
 
-  // The URL of the Firefox Accounts auth server backend
-  pref("identity.fxaccounts.auth.uri", "https://api.accounts.firefox.com/v1");
+  // The URL of the Datalus Accounts auth server backend
+  pref("identity.fxaccounts.auth.uri", "https://api.accounts.datalus.com/v1");
 
   // Percentage chance we skip an extension storage sync (kinto life support).
   pref("services.sync.extension-storage.skipPercentageChance", 50);

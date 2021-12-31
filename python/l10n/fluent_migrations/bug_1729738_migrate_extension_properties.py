@@ -15,12 +15,12 @@ def migrate(ctx):
         "browser/browser/appExtensionFields.ftl",
         transforms_from(
             """
-extension-firefox-compact-light-name = { COPY(from_path, "extension.firefox-compact-light@mozilla.org.name") }
-extension-firefox-compact-light-description = { COPY(from_path, "extension.firefox-compact-light@mozilla.org.description") }
-extension-firefox-compact-dark-name = { COPY(from_path, "extension.firefox-compact-dark@mozilla.org.name") }
-extension-firefox-compact-dark-description= { COPY(from_path, "extension.firefox-compact-dark@mozilla.org.description") }
-extension-firefox-alpenglow-name = { COPY(from_path, "extension.firefox-alpenglow@mozilla.org.name") }
-extension-firefox-alpenglow-description = { COPY(from_path, "extension.firefox-alpenglow@mozilla.org.description") }
+extension-datalus-compact-light-name = { COPY(from_path, "extension.datalus-compact-light@mozilla.org.name") }
+extension-datalus-compact-light-description = { COPY(from_path, "extension.datalus-compact-light@mozilla.org.description") }
+extension-datalus-compact-dark-name = { COPY(from_path, "extension.datalus-compact-dark@mozilla.org.name") }
+extension-datalus-compact-dark-description= { COPY(from_path, "extension.datalus-compact-dark@mozilla.org.description") }
+extension-datalus-alpenglow-name = { COPY(from_path, "extension.datalus-alpenglow@mozilla.org.name") }
+extension-datalus-alpenglow-description = { COPY(from_path, "extension.datalus-alpenglow@mozilla.org.description") }
 """,
             from_path="browser/chrome/browser/app-extension-fields.properties",
         ),

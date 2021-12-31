@@ -57,7 +57,7 @@ const actionTypes = {
   TEMPORARY_EXTENSION_RELOAD_FAILURE: "TEMPORARY_EXTENSION_RELOAD_FAILURE",
   TEMPORARY_EXTENSION_RELOAD_START: "TEMPORARY_EXTENSION_RELOAD_START",
   TEMPORARY_EXTENSION_RELOAD_SUCCESS: "TEMPORARY_EXTENSION_RELOAD_SUCCESS",
-  THIS_FIREFOX_RUNTIME_CREATED: "THIS_FIREFOX_RUNTIME_CREATED",
+  THIS_DATALUS_RUNTIME_CREATED: "THIS_DATALUS_RUNTIME_CREATED",
   UNWATCH_RUNTIME_FAILURE: "UNWATCH_RUNTIME_FAILURE",
   UNWATCH_RUNTIME_START: "UNWATCH_RUNTIME_START",
   UNWATCH_RUNTIME_SUCCESS: "UNWATCH_RUNTIME_SUCCESS",
@@ -107,7 +107,7 @@ const PREFERENCES = {
   // enable inspecting Content processes when opening a "Main Process" toolbox
   // on a remote target.
   FISSION_BROWSER_TOOLBOX: "devtools.browsertoolbox.fission",
-  // Preference that drives the display of the "Tabs" category on This Firefox.
+  // Preference that drives the display of the "Tabs" category on This Datalus.
   LOCAL_TAB_DEBUGGING_ENABLED: "devtools.aboutdebugging.local-tab-debugging",
   // Preference that drives the display of the "Processes" debug target category.
   PROCESS_DEBUGGING_ENABLED: "devtools.aboutdebugging.process-debugging",
@@ -127,7 +127,7 @@ const RUNTIME_PREFERENCE = {
 
 const RUNTIMES = {
   NETWORK: CONNECTION_TYPES.NETWORK,
-  THIS_FIREFOX: CONNECTION_TYPES.THIS_FIREFOX,
+  THIS_DATALUS: CONNECTION_TYPES.THIS_DATALUS,
   USB: CONNECTION_TYPES.USB,
 };
 

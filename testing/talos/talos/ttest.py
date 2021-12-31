@@ -114,7 +114,7 @@ class TTest(object):
             test_config["url"] = utils.interpolate(
                 test_config["url"],
                 profile=setup.profile_dir,
-                firefox=browser_config["browser_path"],
+                datalus=browser_config["browser_path"],
             )
         else:
             setup.env["MOZ_USE_PAGELOADER"] = "1"

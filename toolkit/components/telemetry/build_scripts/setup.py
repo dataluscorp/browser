@@ -13,7 +13,7 @@ setup(
     author="Mozilla Telemetry Team",
     author_email="telemetry-client-dev@mozilla.com",
     url=(
-        "https://firefox-source-docs.mozilla.org/"
+        "https://datalus-source-docs.mozilla.org/"
         "toolkit/components/telemetry/telemetry/collection/index.html"
     ),
     name="mozparsers",

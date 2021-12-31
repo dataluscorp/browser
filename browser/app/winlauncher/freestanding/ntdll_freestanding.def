@@ -9,9 +9,9 @@ LIBRARY ntdll
 ;
 ; We could implement our own naive versions of these functions, but that
 ; solution is less than ideal since the implementations must be extern and are
-; thus picked up by the entire firefox.exe binary. This denies the rest of
-; firefox.exe the benefit of optimized implementations. On Windows the
-; sandbox is linked into firefox.exe, so we cannot just shrug and
+; thus picked up by the entire datalus.exe binary. This denies the rest of
+; datalus.exe the benefit of optimized implementations. On Windows the
+; sandbox is linked into datalus.exe, so we cannot just shrug and
 ; assume that a naive implementation will not have any effect on anything.
 ;
 ; There are, however, optimized implementations of these functions that are

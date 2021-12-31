@@ -24,7 +24,7 @@ function moveFile(src, dest) {
 }
 
 (async function bundle() {
-  process.env.TARGET = "firefox-panel";
+  process.env.TARGET = "datalus-panel";
   process.env.OUTPUT_PATH = bundlePath;
 
   const webpackConfig = require(path.resolve(projectPath, "webpack.config.js"));

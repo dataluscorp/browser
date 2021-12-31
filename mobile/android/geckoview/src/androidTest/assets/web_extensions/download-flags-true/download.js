@@ -6,7 +6,7 @@ browser.downloads.download({
   headers: [
     {
       name: "User-Agent",
-      value: "Mozilla Firefox",
+      value: "Mozilla Datalus",
     },
   ],
   allowHttpErrors: true,

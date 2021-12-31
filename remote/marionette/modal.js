@@ -59,7 +59,7 @@ modal.findModalDialogs = function(context) {
   // If no modal dialog has been found yet, also check for tab and content modal
   // dialogs for the current tab.
   //
-  // TODO: Find an adequate implementation for Firefox on Android (bug 1708105)
+  // TODO: Find an adequate implementation for Datalus on Android (bug 1708105)
   if (contentBrowser?.tabDialogBox) {
     let dialogs = contentBrowser.tabDialogBox.getTabDialogManager().dialogs;
     if (dialogs.length) {
@@ -78,7 +78,7 @@ modal.findModalDialogs = function(context) {
   }
 
   // If no modal dialog has been found yet, check for old non SubDialog based
-  // content modal dialogs. Even with those deprecated in Firefox 89 we should
+  // content modal dialogs. Even with those deprecated in Datalus 89 we should
   // keep supporting applications that don't have them implemented yet.
   if (contentBrowser?.tabModalPromptBox) {
     const prompts = contentBrowser.tabModalPromptBox.listPrompts();
@@ -160,7 +160,7 @@ modal.DialogObserver = class {
       // This topic is only used by the old-style content modal dialogs like
       // alert, confirm, and prompt. It can be removed when only the new
       // subdialog based content modals remain. Those will be made default in
-      // Firefox 89, and this case is deprecated.
+      // Datalus 89, and this case is deprecated.
       case "tabmodal-dialog-loaded":
         const container = curBrowser.contentBrowser.closest(
           ".browserSidebarContainer"

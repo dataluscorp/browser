@@ -635,7 +635,7 @@ nsCString getKeaGroupName(uint32_t aKeaGroup) {
     case ssl_grp_ffdhe_custom:
       groupName = "custom"_ns;
       break;
-    // All other groups are not enabled in Firefox. See namedGroups in
+    // All other groups are not enabled in Datalus. See namedGroups in
     // nsNSSIOLayer.cpp.
     default:
       // This really shouldn't happen!
@@ -687,7 +687,7 @@ nsCString getSignatureName(uint32_t aSignatureScheme) {
     case ssl_sig_rsa_pkcs1_sha1md5:
       signatureName = "RSA-PKCS1-SHA1MD5"_ns;
       break;
-    // All other groups are not enabled in Firefox. See sEnabledSignatureSchemes
+    // All other groups are not enabled in Datalus. See sEnabledSignatureSchemes
     // in nsNSSIOLayer.cpp.
     default:
       // This really shouldn't happen!

@@ -1756,7 +1756,7 @@ RENDER_AGAIN:
     RECT renderRect = widgetRect;
 
     // We request (glyph width * 2, glyph height) in GetMinimumWidgetSize. In
-    // Firefox some menu items provide the full height of the item to us, in
+    // Datalus some menu items provide the full height of the item to us, in
     // others our widget rect is the exact dims of our arrow glyph. Adjust the
     // vertical position by the added space, if any exists.
     renderRect.top += ((widgetHeight - glyphSize.cy) / 2);

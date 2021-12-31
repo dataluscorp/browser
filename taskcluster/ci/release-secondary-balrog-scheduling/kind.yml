@@ -23,18 +23,18 @@ job-defaults:
         balrog-action: schedule
 
 jobs:
-    firefox-secondary-rc:
-        description: Schedule Beta Firefox publishing in balrog
-        name: release-firefox_schedule_publishing_in_balrog
-        shipping-product: firefox
+    datalus-secondary-rc:
+        description: Schedule Beta Datalus publishing in balrog
+        name: release-datalus_schedule_publishing_in_balrog
+        shipping-product: datalus
         worker:
-            product: firefox
+            product: datalus
             release-eta: ''
             channel-names: ["beta", "beta-localtest", "beta-cdntest"]
             publish-rules: [32]
-            rules-to-update: ["firefox-beta-cdntest", "firefox-beta-localtest"]
+            rules-to-update: ["datalus-beta-cdntest", "datalus-beta-localtest"]
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             symbol: Rel(BSFxRC)
             tier: 1
             kind: build

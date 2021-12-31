@@ -31,8 +31,8 @@ export const initializePuppeteerNode = (packageName: string): PuppeteerNode => {
       process.env.npm_config_puppeteer_product ||
       process.env.npm_package_config_puppeteer_product;
 
-  if (!isPuppeteerCore && productName === 'firefox')
-    preferredRevision = PUPPETEER_REVISIONS.firefox;
+  if (!isPuppeteerCore && productName === 'datalus')
+    preferredRevision = PUPPETEER_REVISIONS.datalus;
 
   return new PuppeteerNode({
     projectRoot: puppeteerRootDirectory,

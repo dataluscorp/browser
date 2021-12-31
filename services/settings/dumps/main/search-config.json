@@ -420,7 +420,7 @@
         "searchUrlGetParams": [
           {
             "name": "client",
-            "value": "firefox-b-d"
+            "value": "datalus-b-d"
           },
           {
             "name": "q",
@@ -450,7 +450,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-e"
+                "value": "datalus-b-e"
               },
               {
                 "name": "q",
@@ -496,7 +496,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-e"
+                "value": "datalus-b-e"
               },
               {
                 "name": "q",
@@ -549,7 +549,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-e"
+                "value": "datalus-b-e"
               },
               {
                 "name": "q",
@@ -579,7 +579,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-1-d"
+                "value": "datalus-b-1-d"
               },
               {
                 "name": "q",
@@ -606,7 +606,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-1-e"
+                "value": "datalus-b-1-e"
               },
               {
                 "name": "q",
@@ -667,7 +667,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-lm"
+                "value": "datalus-b-lm"
               },
               {
                 "name": "q",
@@ -688,7 +688,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefox-b-1-lm"
+                "value": "datalus-b-1-lm"
               },
               {
                 "name": "q",
@@ -2888,7 +2888,7 @@
             "searchUrlGetParams": [
               {
                 "name": "client",
-                "value": "firefoxqwant"
+                "value": "datalusqwant"
               },
               {
                 "name": "q",

@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-// Load general firefox configuration of RLBox
+// Load general datalus configuration of RLBox
 #include "mozilla/rlbox/rlbox_config.h"
 
 #define RLBOX_USE_STATIC_CALLS() rlbox_noop_sandbox_lookup_symbol

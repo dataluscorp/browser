@@ -70,7 +70,7 @@ def setup():
     """Run the mozharness script without the 'run-tests' action.
 
     This will do all the necessary setup steps like creating a virtualenv and
-    downloading the tests and firefox binary. But it stops before running the
+    downloading the tests and datalus binary. But it stops before running the
     tests.
     """
     status = run_mozharness('--no-run-tests')

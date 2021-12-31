@@ -169,7 +169,7 @@ describe("SiteClassifier", () => {
 
     assert.equal(
       "params-prefix-match",
-      await classifySite("https://search.com?client=firefox", RemoteSettings)
+      await classifySite("https://search.com?client=datalus", RemoteSettings)
     );
     assert.equal(
       "params-prefix-match",
@@ -178,7 +178,7 @@ describe("SiteClassifier", () => {
     assert.equal(
       "other",
       await classifySite(
-        "https://search.com?client=mozillafirefox",
+        "https://search.com?client=mozilladatalus",
         RemoteSettings
       )
     );
@@ -223,7 +223,7 @@ describe("SiteClassifier", () => {
     );
     assert.equal(
       "search-engine",
-      await classifySite("http://bing.com/?q=firefox", RemoteSettings)
+      await classifySite("http://bing.com/?q=datalus", RemoteSettings)
     );
 
     assert.equal(
@@ -233,7 +233,7 @@ describe("SiteClassifier", () => {
 
     assert.equal(
       "social-media",
-      await classifySite("http://twitter.com/firefox", RemoteSettings)
+      await classifySite("http://twitter.com/datalus", RemoteSettings)
     );
 
     assert.equal(

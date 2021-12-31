@@ -9,7 +9,7 @@ def create_parser_wpt():
     from wptrunner import wptcommandline
 
     result = wptcommandline.create_parser(
-        ["firefox", "firefox_android", "chrome", "edge", "servo"]
+        ["datalus", "datalus_android", "chrome", "edge", "servo"]
     )
     result.add_argument(
         "--no-install",
@@ -43,14 +43,14 @@ class WebPlatformTestsRunner(object):
             self.update_manifest(logger)
         kwargs["manifest_update"] = False
 
-        if kwargs["product"] == "firefox":
+        if kwargs["product"] == "datalus":
             try:
-                kwargs = self.setup.kwargs_firefox(kwargs)
+                kwargs = self.setup.kwargs_datalus(kwargs)
             except BinaryNotFoundException as e:
                 logger.error(e)
                 logger.info(e.help())
                 return 1
-        elif kwargs["product"] == "firefox_android":
+        elif kwargs["product"] == "datalus_android":
             from wptrunner import wptcommandline
 
             kwargs = wptcommandline.check_args(self.setup.kwargs_common(kwargs))

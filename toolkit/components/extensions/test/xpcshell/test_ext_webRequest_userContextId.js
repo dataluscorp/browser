@@ -18,7 +18,7 @@ add_task(async function test_userContextId_webrequest() {
         async details => {
           browser.test.assertEq(
             details.cookieStoreId,
-            "firefox-container-2",
+            "datalus-container-2",
             "cookieStoreId is set"
           );
           browser.test.notifyPass("webRequest");

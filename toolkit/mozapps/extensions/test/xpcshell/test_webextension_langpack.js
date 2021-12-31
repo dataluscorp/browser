@@ -547,7 +547,7 @@ add_task(async function test_staged_langpack_for_app_update_not_found() {
 
 /**
  * This test verifies that a compat update with an invalid max_version
- * will be disabled, at least allowing Firefox to startup without failures.
+ * will be disabled, at least allowing Datalus to startup without failures.
  */
 add_task(async function test_staged_langpack_compat_startup() {
   let originalLocales = Services.locale.requestedLocales;

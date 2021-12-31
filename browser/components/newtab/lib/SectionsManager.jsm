@@ -51,7 +51,7 @@ const BUILT_IN_SECTIONS = () => ({
         : [],
       learnMore: {
         link: {
-          href: "https://getpocket.com/firefox/new_tab_learn_more",
+          href: "https://getpocket.com/datalus/new_tab_learn_more",
           id: "home-prefs-recommended-by-learn-more",
         },
       },
@@ -65,7 +65,7 @@ const BUILT_IN_SECTIONS = () => ({
     },
     learnMore: {
       link: {
-        href: "https://getpocket.com/firefox/new_tab_learn_more",
+        href: "https://getpocket.com/datalus/new_tab_learn_more",
         message: { id: "newtab-pocket-learn-more" },
       },
     },

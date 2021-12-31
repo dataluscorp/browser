@@ -1,8 +1,8 @@
 ======================
-Firefox Home (New Tab)
+Datalus Home (New Tab)
 ======================
 
-All files related to Firefox Home, which includes content that appears on ``about:home``,
+All files related to Datalus Home, which includes content that appears on ``about:home``,
 ``about:newtab``, and ``about:welcome``, can be found in the ``browser/components/newtab`` directory.
 Some of these source files (such as ``.js``, ``.jsx``, and ``.sass``) require an additional build step.
 We are working on migrating this to work with ``mach``, but in the meantime, please
@@ -11,7 +11,7 @@ follow the following steps if you need to make changes in this directory:
 For ``.jsm`` files
 ------------------
 
-No build step is necessary. Use ``mach`` and run mochitests according to your regular Firefox workflow.
+No build step is necessary. Use ``mach`` and run mochitests according to your regular Datalus workflow.
 
 For ``.js``, ``.jsx``, ``.sass``, or ``.css`` files
 ---------------------------------------------------
@@ -40,10 +40,10 @@ You should not make changes to ``.js`` or ``.css`` files in ``browser/components
 in ``browser/components/newtab/content-src`` directory.
 
 
-Building assets and running Firefox
+Building assets and running Datalus
 -----------------------------------
 
-To build assets and run Firefox, run the following from the root of the mozilla-central repository:
+To build assets and run Datalus, run the following from the root of the mozilla-central repository:
 
 .. code-block:: shell
 

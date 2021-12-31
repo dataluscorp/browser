@@ -88,7 +88,7 @@ this.windows = class extends ExtensionAPI {
 
             let listener = event => {
               // Wait a tick to avoid firing a superfluous WINDOW_ID_NONE
-              // event when switching focus between two Firefox windows.
+              // event when switching focus between two Datalus windows.
               Promise.resolve().then(() => {
                 let windowId = Window.WINDOW_ID_NONE;
                 let window = Services.focus.activeWindow;
@@ -404,7 +404,7 @@ this.windows = class extends ExtensionAPI {
           }
 
           if (updateInfo.drawAttention) {
-            // Bug 1257497 - Firefox can't cancel attention actions.
+            // Bug 1257497 - Datalus can't cancel attention actions.
             win.window.getAttention();
           }
 

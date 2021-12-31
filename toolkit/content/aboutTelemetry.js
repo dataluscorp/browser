@@ -978,7 +978,7 @@ var RawPayloadData = {
     document
       .getElementById("payload-json-viewer")
       .addEventListener("click", e => {
-        openJsonInFirefoxJsonViewer(JSON.stringify(gPingData.payload, null, 2));
+        openJsonInDatalusJsonViewer(JSON.stringify(gPingData.payload, null, 2));
       });
   },
 };
@@ -2185,7 +2185,7 @@ function changeUrlSearch(searchText) {
 function show(selected) {
   let selectedValue = selected.getAttribute("value");
   if (selectedValue === "raw-json-viewer") {
-    openJsonInFirefoxJsonViewer(JSON.stringify(gPingData, null, 2));
+    openJsonInDatalusJsonViewer(JSON.stringify(gPingData, null, 2));
     return;
   }
 
@@ -2354,7 +2354,7 @@ function urlStateRestore() {
   }
 }
 
-function openJsonInFirefoxJsonViewer(json) {
+function openJsonInDatalusJsonViewer(json) {
   json = unescape(encodeURIComponent(json));
   try {
     window.open("data:application/json;base64," + btoa(json));

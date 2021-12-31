@@ -159,9 +159,9 @@ var SearchUtils = {
 
   ENGINES_URLS: {
     "prod-main":
-      "https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/search-config/records",
+      "https://datalus.settings.services.mozilla.com/v1/buckets/main/collections/search-config/records",
     "prod-preview":
-      "https://firefox.settings.services.mozilla.com/v1/buckets/main-preview/collections/search-config/records",
+      "https://datalus.settings.services.mozilla.com/v1/buckets/main-preview/collections/search-config/records",
     "stage-main":
       "https://settings.stage.mozaws.net/v1/buckets/main/collections/search-config/records",
     "stage-preview":

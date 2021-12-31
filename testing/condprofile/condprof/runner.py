@@ -24,7 +24,7 @@ class Runner:
     def __init__(
         self,
         profile,
-        firefox,
+        datalus,
         geckodriver,
         archive,
         device_name,
@@ -47,12 +47,12 @@ class Runner:
         # XXX we want to do
         #   adb install -r target.apk
         #   and get the installed app name
-        if firefox is not None and firefox.endswith("dmg"):
-            target = os.path.join(os.path.dirname(firefox), "firefox.app")
-            extract_from_dmg(firefox, target)
-            firefox = os.path.join(target, "Contents", "MacOS", "firefox")
-        self.firefox = firefox
-        self.android = self.firefox is not None and self.firefox.startswith(
+        if datalus is not None and datalus.endswith("dmg"):
+            target = os.path.join(os.path.dirname(datalus), "datalus.app")
+            extract_from_dmg(datalus, target)
+            datalus = os.path.join(target, "Contents", "MacOS", "datalus")
+        self.datalus = datalus
+        self.android = self.datalus is not None and self.datalus.startswith(
             "org.mozilla"
         )
 
@@ -68,20 +68,20 @@ class Runner:
         if self.scenario != "all" and self.scenario not in scenarii:
             raise IOError("Cannot find scenario %r" % self.scenario)
 
-        if not self.android and self.firefox is not None:
-            logger.info("Verifying Desktop Firefox binary")
-            # we want to verify we do have a firefox binary
+        if not self.android and self.datalus is not None:
+            logger.info("Verifying Desktop Datalus binary")
+            # we want to verify we do have a datalus binary
             # XXX so lame
-            if not os.path.exists(self.firefox):
+            if not os.path.exists(self.datalus):
                 if "MOZ_FETCHES_DIR" in os.environ:
-                    target = os.path.join(os.environ["MOZ_FETCHES_DIR"], self.firefox)
+                    target = os.path.join(os.environ["MOZ_FETCHES_DIR"], self.datalus)
                     if os.path.exists(target):
-                        self.firefox = target
+                        self.datalus = target
 
-            if not os.path.exists(self.firefox):
-                raise IOError("Cannot find %s" % self.firefox)
+            if not os.path.exists(self.datalus):
+                raise IOError("Cannot find %s" % self.datalus)
 
-            mozversion.get_version(self.firefox)
+            mozversion.get_version(self.datalus)
 
         logger.info(os.environ)
         if self.archive:
@@ -101,7 +101,7 @@ class Runner:
                 if self.android:
                     plat = "%s-%s" % (
                         self.device_name,
-                        self.firefox.split("org.mozilla.")[-1],
+                        self.datalus.split("org.mozilla.")[-1],
                     )
                 else:
                     plat = get_current_platform()
@@ -120,7 +120,7 @@ class Runner:
             klass = DesktopEnv
 
         return klass(
-            self.profile, self.firefox, self.geckodriver, self.archive, self.device_name
+            self.profile, self.datalus, self.geckodriver, self.archive, self.device_name
         )
 
     def display_error(self, scenario, customization):
@@ -179,7 +179,7 @@ class Runner:
 
 def run(
     archive,
-    firefox=None,
+    datalus=None,
     scenario="all",
     profile=None,
     customization="all",
@@ -191,7 +191,7 @@ def run(
     device_name=None,
 ):
     runner = Runner(
-        profile, firefox, geckodriver, archive, device_name, strict, force_new, visible
+        profile, datalus, geckodriver, archive, device_name, strict, force_new, visible
     )
 
     runner.prepare(scenario, customization)

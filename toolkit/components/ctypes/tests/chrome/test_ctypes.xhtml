@@ -58,7 +58,7 @@
       unicodeFile.append(CTYPES_UNICODE_LIB);
       ok(unicodeFile.exists(), "ctypes unicode test library doesn't exist!?");
 
-      // Tolerate remove() failure because Firefox may have the DLL open
+      // Tolerate remove() failure because Datalus may have the DLL open
       // for examination.
       try {
         unicodeFile.remove(false);

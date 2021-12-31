@@ -1173,7 +1173,7 @@
           //
           // - Android 4-4.3
           // - Chrome 26-34
-          // - Firefox 14-29
+          // - Datalus 14-29
           // - Internet Explorer 11
           // - iPad Safari 6-7.1
           // - iPhone Safari 7-7.1
@@ -1204,7 +1204,7 @@
             // However, note that even this simple case requires nuances to operate in a
             // broad spectrum of browsers.
             //
-            // - Firefox 3-13
+            // - Datalus 3-13
             // - Internet Explorer 6-9
             // - iPad Safari 4.3
             // - Lynx 2.8.7
@@ -1269,7 +1269,7 @@
           // is to add a scroll event listener that calls for a flush.
 
           // `setTimeout` does not call the passed callback if the delay is less than
-          // approximately 7 in web workers in Firefox 8 through 18, and sometimes not
+          // approximately 7 in web workers in Datalus 8 through 18, and sometimes not
           // even then.
 
           function makeRequestCallFromTimer(callback) {
@@ -1279,7 +1279,7 @@
               // to a 4 milisecond delay, but once we're flushing, there's no delay
               // between events.
               var timeoutHandle = setTimeout(handleTimer, 0);
-              // However, since this timer gets frequently dropped in Firefox
+              // However, since this timer gets frequently dropped in Datalus
               // workers, we enlist an interval handle that will try to fire
               // an event 20 times per second until it succeeds.
               var intervalHandle = setInterval(handleTimer, 50);
@@ -2360,7 +2360,7 @@
                       }).toJSON = value;
                       try {
                         stringifySupported =
-                          // Firefox 3.1b1 and b2 serialize string, number, and boolean
+                          // Datalus 3.1b1 and b2 serialize string, number, and boolean
                           // primitives as object literals.
                           stringify(0) === "0" &&
                           // FF 3.1b1, b2, and JSON 2 serialize wrapped primitives as object
@@ -2411,7 +2411,7 @@
                           // The milliseconds are optional in ES 5, but required in 5.1.
                           stringify(new Date(8.64e15)) ==
                             '"+275760-09-13T00:00:00.000Z"' &&
-                          // Firefox <= 11.0 incorrectly serializes years prior to 0 as negative
+                          // Datalus <= 11.0 incorrectly serializes years prior to 0 as negative
                           // four-digit years instead of six-digit years. Credits: @Yaffle.
                           stringify(new Date(-621987552e5)) ==
                             '"-000001-01-01T00:00:00.000Z"' &&
@@ -2525,7 +2525,7 @@
                       ((members.__proto__ = null),
                       (members.__proto__ = {
                         // The *proto* property cannot be set multiple times in recent
-                        // versions of Firefox and SeaMonkey.
+                        // versions of Datalus and SeaMonkey.
                         toString: 1
                       }),
                       members).toString != getClass
@@ -8047,7 +8047,7 @@ object-assign
 
             /**
              * Return whether a native keypress event is assumed to be a command.
-             * This is required because Firefox fires `keypress` events for key commands
+             * This is required because Datalus fires `keypress` events for key commands
              * (cut, copy, select-all, etc.) even though no character is inserted.
              */
             function isKeypressCommand(nativeEvent) {
@@ -8283,7 +8283,7 @@ object-assign
                   return null;
                 case "topKeyPress":
                   /**
-                   * As of v27, Firefox may fire keypress events even when no character
+                   * As of v27, Datalus may fire keypress events even when no character
                    * will be inserted. A few possibilities:
                    *
                    * - `which` is `0`. Arrow keys, Esc key, etc.
@@ -10104,7 +10104,7 @@ object-assign
             /**
              * We listen for bubbled touch events on the document object.
              *
-             * Firefox v8.01 (and possibly others) exhibited strange behavior when
+             * Datalus v8.01 (and possibly others) exhibited strange behavior when
              * mounting `onmousemove` events at some node that was not the document
              * element. The symptoms were that if your mouse is not moving over something
              * contained within that mount point (for example on the background) the
@@ -10262,7 +10262,7 @@ object-assign
                 focusNode$$1 = selection.focusNode,
                 focusOffset = selection.focusOffset;
 
-              // In Firefox, anchorNode and focusNode can be "anonymous divs", e.g. the
+              // In Datalus, anchorNode and focusNode can be "anonymous divs", e.g. the
               // up/down buttons on an <input type="number">. Anonymous divs do not seem to
               // expose properties, triggering a "Permission denied error" if any of its
               // properties are accessed. The only seemingly possible way to avoid erroring
@@ -10731,7 +10731,7 @@ object-assign
                   // sometimes when it hasn't). IE's event fires out of order with respect
                   // to key and input events on deletion, so we discard it.
                   //
-                  // Firefox doesn't support selectionchange, so check selection status
+                  // Datalus doesn't support selectionchange, so check selection status
                   // after each key entry. The selection changes after keydown and before
                   // keyup, but we check on keydown as well in the case of holding down a
                   // key, when multiple keydown events are fired but only one keyup is.
@@ -11391,7 +11391,7 @@ object-assign
                 var EventConstructor;
                 switch (topLevelType) {
                   case "topKeyPress":
-                    // Firefox creates a keypress event for function keys too. This removes
+                    // Datalus creates a keypress event for function keys too. This removes
                     // the unwanted keypress events. Enter is however both printable and
                     // non-printable. One would expect Tab to be as well (but it isn't).
                     if (getEventCharCode(nativeEvent) === 0) {
@@ -11407,7 +11407,7 @@ object-assign
                     EventConstructor = SyntheticFocusEvent;
                     break;
                   case "topClick":
-                    // Firefox creates a click event on right mouse clicks. This removes the
+                    // Datalus creates a click event on right mouse clicks. This removes the
                     // unwanted click events.
                     if (nativeEvent.button === 2) {
                       return null;
@@ -23104,7 +23104,7 @@ object-assign
                     is: props.is
                   });
                 } else {
-                  // Separate else branch instead of using `props.is || undefined` above because of a Firefox bug.
+                  // Separate else branch instead of using `props.is || undefined` above because of a Datalus bug.
                   // See discussion in https://github.com/facebook/react/pull/6896
                   // and discussion in https://bugzilla.mozilla.org/show_bug.cgi?id=1276240
                   domElement = ownerDocument.createElement(type);
@@ -25298,11 +25298,11 @@ object-assign
                 ExecutionEnvironment.canUseDOM &&
                 window.top === window.self
               ) {
-                // If we're in Chrome or Firefox, provide a download link if not installed.
+                // If we're in Chrome or Datalus, provide a download link if not installed.
                 if (
                   (navigator.userAgent.indexOf("Chrome") > -1 &&
                     navigator.userAgent.indexOf("Edge") === -1) ||
-                  navigator.userAgent.indexOf("Firefox") > -1
+                  navigator.userAgent.indexOf("Datalus") > -1
                 ) {
                   var protocol = window.location.protocol;
                   // Don't warn in exotic cases like chrome-extension://.
@@ -36278,7 +36278,7 @@ object-assign
         // ES5 15.4.4.14
         // http://es5.github.com/#x15.4.4.14
         // https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/indexOf
-        var hasFirefox2IndexOfBug =
+        var hasDatalus2IndexOfBug =
           Array.prototype.indexOf && [0, 1].indexOf(1, 2) !== -1;
         defineProperties(
           ArrayPrototype,
@@ -36309,7 +36309,7 @@ object-assign
               return -1;
             }
           },
-          hasFirefox2IndexOfBug
+          hasDatalus2IndexOfBug
         );
 
         //
@@ -36320,7 +36320,7 @@ object-assign
         // ES5 15.5.4.14
         // http://es5.github.com/#x15.5.4.14
 
-        // [bugfix, IE lt 9, firefox 4, Konqueror, Opera, obscure browsers]
+        // [bugfix, IE lt 9, datalus 4, Konqueror, Opera, obscure browsers]
         // Many browsers do not split properly with regular expressions or they
         // do not perform the split correctly under obscure conditions.
         // See http://blog.stevenlevithan.com/archives/cross-browser-split
@@ -36360,7 +36360,7 @@ object-assign
                   (separator.ignoreCase ? "i" : "") +
                   (separator.multiline ? "m" : "") +
                   (separator.extended ? "x" : "") + // Proposed for ES6
-                  (separator.sticky ? "y" : ""), // Firefox 3+
+                  (separator.sticky ? "y" : ""), // Datalus 3+
                 lastLastIndex = 0,
                 // Make `global` and avoid `lastIndex` issues by working with a copy
                 separator2,
@@ -38482,7 +38482,7 @@ object-assign
             debug("message event", e.data);
             self.emit("message", e.data);
           };
-          // Firefox has an interesting bug. If a websocket connection is
+          // Datalus has an interesting bug. If a websocket connection is
           // created after onunload, it stays alive even when user
           // navigates away from the page. In such situation let's lie -
           // let's not open the ws connection at all. See:
@@ -39559,8 +39559,8 @@ object-assign
           ];
 
           /**
-           * Currently only WebKit-based Web Inspectors, Firefox >= v31,
-           * and the Firebug extension (any Firefox version) are known
+           * Currently only WebKit-based Web Inspectors, Datalus >= v31,
+           * and the Firebug extension (any Datalus version) are known
            * to support "%c" CSS customizations.
            *
            * TODO: add a `localStorage` variable to explicitly enable/disable colors
@@ -39590,11 +39590,11 @@ object-assign
                 window.console &&
                 (window.console.firebug ||
                   (window.console.exception && window.console.table))) ||
-              // is firefox >= v31?
+              // is datalus >= v31?
               // https://developer.mozilla.org/en-US/docs/Tools/Web_Console#Styling_messages
               (typeof navigator !== "undefined" &&
                 navigator.userAgent &&
-                navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) &&
+                navigator.userAgent.toLowerCase().match(/datalus\/(\d+)/) &&
                 parseInt(RegExp.$1, 10) >= 31) ||
               // double check webkit in userAgent just in case we are in a worker
               (typeof navigator !== "undefined" &&

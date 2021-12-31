@@ -1,9 +1,9 @@
 Using the Mozilla symbol server
 ===============================
 
-The Mozilla project runs a symbol server for trunk Firefox nightly and
+The Mozilla project runs a symbol server for trunk Datalus nightly and
 release builds on Windows. Symbols are available for at least 30
-previous days worth of nightly builds, and Firefox releases from
+previous days worth of nightly builds, and Datalus releases from
 2.0.0.4. This allows debugging of those builds without forcing all users
 to download large debugging files. The server functions like
 `Microsoft's symbol server <https://docs.microsoft.com/windows/win32/dxtecharts/debugging-with-symbols>`__
@@ -15,7 +15,7 @@ the content of all variables and the execution path can seem strange
 because of inlining, tail calls, and other compiler optimizations. The
 only workaround is to build an unoptimized local build.
 
-The official symbol server URL for Firefox is ``https://symbols.mozilla.org/``.
+The official symbol server URL for Datalus is ``https://symbols.mozilla.org/``.
 You cannot visit this URL directly: you must add it to the symbol path of your
 debugging tool. In the examples below, a local cache directory is used to avoid
 repeatedly fetching the PDB from the server. Replace
@@ -67,7 +67,7 @@ symbols):
 
 ::
 
-    "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\symchk.exe" /r "C:\Program Files\Mozilla Firefox/*" /s SRV*C:\symcache\*https://symbols.mozilla.org/
+    "C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\symchk.exe" /r "C:\Program Files\Mozilla Datalus/*" /s SRV*C:\symcache\*https://symbols.mozilla.org/
 
 Note the ``\*`` after the Mozilla directory. The output of this command should
 be similar to:
@@ -124,7 +124,7 @@ when you attach gdb). If you want to reload symbols, you can try:
 On older GDB and Mac OS X there is a `Python script to download symbols
 from the Mozilla symbol
 server <http://hg.mozilla.org/users/jwatt_jwatt.org/fetch-symbols>`__
-for :ref:`gdb <Debugging Firefox with GDB>`, Shark and other software
+for :ref:`gdb <Debugging Datalus with GDB>`, Shark and other software
 that uses symbols. Note that the symbol file for the XUL library is very
 large and takes some time to download. This may make it appear as if the
 script has gotten stuck, but it will continue.

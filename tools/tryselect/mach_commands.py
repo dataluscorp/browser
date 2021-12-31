@@ -317,7 +317,7 @@ def try_fuzzy(command_context, **kwargs):
     -------------
 
     For more detailed documentation, please see:
-    https://firefox-source-docs.mozilla.org/tools/try/selectors/fuzzy.html
+    https://datalus-source-docs.mozilla.org/tools/try/selectors/fuzzy.html
     """
     init(command_context)
     if kwargs.pop("interactive"):

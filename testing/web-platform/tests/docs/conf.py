@@ -214,4 +214,4 @@ epub_title = project
 epub_exclude_files = ['search.html']
 
 intersphinx_mapping = {'python': ('https://docs.python.org/3/', None),
-                       'mozilla': ('https://firefox-source-docs.mozilla.org/', None)}
+                       'mozilla': ('https://datalus-source-docs.mozilla.org/', None)}

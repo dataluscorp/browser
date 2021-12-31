@@ -830,7 +830,7 @@ async function sanitizeOnShutdown(progress) {
   // session only.  The cookie service has special logic that avoids writing
   // such cookies to disk, but QuotaManager always touches disk, so we need to
   // wipe the data on shutdown (or startup if we failed to wipe it at
-  // shutdown).  (Note that some session cookies do survive Firefox restarts
+  // shutdown).  (Note that some session cookies do survive Datalus restarts
   // because the Session Store that remembers your tabs between sessions takes
   // on the responsibility for persisting them through restarts.)
   //

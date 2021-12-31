@@ -153,7 +153,7 @@ ShowUnInstDetails nevershow
 !define URLUninstallSurvey "https://qsurvey.mozilla.com/s3/FF-Desktop-Post-Uninstall?channel=${UpdateChannel}&version=${AppVersion}&osversion="
 
 ; Support for the profile refresh feature
-!define URLProfileRefreshHelp "https://support.mozilla.org/kb/refresh-firefox-reset-add-ons-and-settings"
+!define URLProfileRefreshHelp "https://support.mozilla.org/kb/refresh-datalus-reset-add-ons-and-settings"
 
 ; Arguments to add to the command line when launching FileMainEXE for profile refresh
 !define ArgsProfileRefresh "-reset-profile -migration -uninstaller-profile-refresh"
@@ -379,7 +379,7 @@ Function un.SendUninstallPing
     StrCpy $5 $1 -5 $4
 
     ; Build the full submission URL from the ID
-    ; https://docs.telemetry.mozilla.org/concepts/pipeline/http_edge_spec.html#special-handling-for-firefox-desktop-telemetry
+    ; https://docs.telemetry.mozilla.org/concepts/pipeline/http_edge_spec.html#special-handling-for-datalus-desktop-telemetry
     ; It's possible for the path components to disagree with the contents of the ping,
     ; but this should be rare, and shouldn't affect the collection.
     StrCpy $5 "${TELEMETRY_BASE_URL}/${TELEMETRY_UNINSTALL_PING_NAMESPACE}/$5/${TELEMETRY_UNINSTALL_PING_DOCTYPE}/${AppName}/$InstalledVersion/${UpdateChannel}/$InstalledBuildID?v=4"
@@ -459,7 +459,7 @@ Section "Uninstall"
   ${EndIf}
 
   ; Remove the updates directory
-  ${un.CleanUpdateDirectories} "Mozilla\Firefox" "Mozilla\updates"
+  ${un.CleanUpdateDirectories} "Mozilla\Datalus" "Mozilla\updates"
 
   ; Remove any app model id's stored in the registry for this install path
   DeleteRegValue HKCU "Software\Mozilla\${AppName}\TaskBarIDs" "$INSTDIR"
@@ -479,24 +479,24 @@ Section "Uninstall"
     ${un.SetAppLSPCategories}
   ${EndIf}
 
-  ${un.RegCleanAppHandler} "FirefoxURL-$AppUserModelID"
-  ${un.RegCleanAppHandler} "FirefoxHTML-$AppUserModelID"
+  ${un.RegCleanAppHandler} "DatalusURL-$AppUserModelID"
+  ${un.RegCleanAppHandler} "DatalusHTML-$AppUserModelID"
   ${un.RegCleanProtocolHandler} "http"
   ${un.RegCleanProtocolHandler} "https"
   ${un.RegCleanProtocolHandler} "mailto"
-  ${un.RegCleanFileHandler}  ".htm"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".html"  "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".shtml" "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".xht"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".xhtml" "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".oga"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".ogg"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".ogv"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".pdf"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".webm"  "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".svg"   "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".webp"  "FirefoxHTML-$AppUserModelID"
-  ${un.RegCleanFileHandler}  ".avif"  "FirefoxHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".htm"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".html"  "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".shtml" "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".xht"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".xhtml" "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".oga"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".ogg"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".ogv"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".pdf"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".webm"  "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".svg"   "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".webp"  "DatalusHTML-$AppUserModelID"
+  ${un.RegCleanFileHandler}  ".avif"  "DatalusHTML-$AppUserModelID"
 
   SetShellVarContext all  ; Set SHCTX to HKLM
   ${un.GetSecondInstallPath} "Software\Mozilla" $R9
@@ -513,21 +513,21 @@ Section "Uninstall"
 
   ; Remove old protocol handler and StartMenuInternet keys without install path
   ; hashes, but only if they're for this installation.
-  ReadRegStr $0 HKLM "Software\Classes\FirefoxHTML\DefaultIcon" ""
+  ReadRegStr $0 HKLM "Software\Classes\DatalusHTML\DefaultIcon" ""
   StrCpy $0 $0 -2
   ${If} $0 == "$INSTDIR\${FileMainEXE}"
-    DeleteRegKey HKLM "Software\Classes\FirefoxHTML"
-    DeleteRegKey HKLM "Software\Classes\FirefoxURL"
+    DeleteRegKey HKLM "Software\Classes\DatalusHTML"
+    DeleteRegKey HKLM "Software\Classes\DatalusURL"
     ${StrFilter} "${FileMainEXE}" "+" "" "" $R9
     DeleteRegKey HKLM "Software\Clients\StartMenuInternet\$R9"
     DeleteRegValue HKLM "Software\RegisteredApplications" "$R9"
     DeleteRegValue HKLM "Software\RegisteredApplications" "${AppRegName}"
   ${EndIf}
-  ReadRegStr $0 HKCU "Software\Classes\FirefoxHTML\DefaultIcon" ""
+  ReadRegStr $0 HKCU "Software\Classes\DatalusHTML\DefaultIcon" ""
   StrCpy $0 $0 -2
   ${If} $0 == "$INSTDIR\${FileMainEXE}"
-    DeleteRegKey HKCU "Software\Classes\FirefoxHTML"
-    DeleteRegKey HKCU "Software\Classes\FirefoxURL"
+    DeleteRegKey HKCU "Software\Classes\DatalusHTML"
+    DeleteRegKey HKCU "Software\Classes\DatalusURL"
     ${StrFilter} "${FileMainEXE}" "+" "" "" $R9
     DeleteRegKey HKCU "Software\Clients\StartMenuInternet\$R9"
     DeleteRegValue HKCU "Software\RegisteredApplications" "$R9"
@@ -544,7 +544,7 @@ Section "Uninstall"
     StrCpy $0 "Software\Microsoft\MediaPlayer\ShimInclusionList\plugin-container.exe"
     DeleteRegKey HKLM "$0"
     DeleteRegKey HKCU "$0"
-    StrCpy $0 "Software\Classes\MIME\Database\Content Type\application/x-xpinstall;app=firefox"
+    StrCpy $0 "Software\Classes\MIME\Database\Content Type\application/x-xpinstall;app=datalus"
     DeleteRegKey HKLM "$0"
     DeleteRegKey HKCU "$0"
   ${Else}
@@ -612,7 +612,7 @@ Section "Uninstall"
 !endif
 
   ; Uninstall the default browser agent scheduled task and all other scheduled
-  ; tasks registered by Firefox.
+  ; tasks registered by Datalus.
   ; This also removes the registry entries that the WDBA creates.
   ; One of the scheduled tasks that this will remove is the Background Update
   ; Task. Ideally, this will eventually be changed so that it doesn't rely on
@@ -648,8 +648,8 @@ Section "Uninstall"
   ; Remove the installation directory if it is empty
   RmDir "$INSTDIR"
 
-  ; If firefox.exe was successfully deleted yet we still need to restart to
-  ; remove other files create a dummy firefox.exe.moz-delete to prevent the
+  ; If datalus.exe was successfully deleted yet we still need to restart to
+  ; remove other files create a dummy datalus.exe.moz-delete to prevent the
   ; installer from allowing an install without restart when it is required
   ; to complete an uninstall.
   ${If} ${RebootFlag}
@@ -672,12 +672,12 @@ Section "Uninstall"
   ; clients registry key by the OS under some conditions.
   ${RefreshShellIcons}
 
-  ; Users who uninstall then reinstall expecting Firefox to use a clean profile
-  ; may be surprised during first-run. This key is checked during startup of Firefox and
+  ; Users who uninstall then reinstall expecting Datalus to use a clean profile
+  ; may be surprised during first-run. This key is checked during startup of Datalus and
   ; subsequently deleted after checking. If the value is found during startup
-  ; the browser will offer to Reset Firefox. We use the UpdateChannel to match
-  ; uninstalls of Firefox-release with reinstalls of Firefox-release, for example.
-  WriteRegStr HKCU "Software\Mozilla\Firefox" "Uninstalled-${UpdateChannel}" "True"
+  ; the browser will offer to Reset Datalus. We use the UpdateChannel to match
+  ; uninstalls of Datalus-release with reinstalls of Datalus-release, for example.
+  WriteRegStr HKCU "Software\Mozilla\Datalus" "Uninstalled-${UpdateChannel}" "True"
 
 !ifdef MOZ_MAINTENANCE_SERVICE
   ; Get the path the allowed cert is at and remove it

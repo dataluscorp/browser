@@ -123,7 +123,7 @@ add_task(async function testIsActive() {
   const testData = [
     {
       description: "Test for search string that activates the intervention",
-      searchString: "firefox slow",
+      searchString: "datalus slow",
       expectedActive: true,
       expectedScoreCalculated: true,
     },
@@ -142,19 +142,19 @@ add_task(async function testIsActive() {
     },
     {
       description: "Test for an URL",
-      searchString: "https://firefox/slow",
+      searchString: "https://datalus/slow",
       expectedActive: false,
       expectedScoreCalculated: false,
     },
     {
       description: "Test for a data URL",
-      searchString: "data:text/html,<div>firefox slow</div>",
+      searchString: "data:text/html,<div>datalus slow</div>",
       expectedActive: false,
       expectedScoreCalculated: false,
     },
     {
       description: "Test for string like URL",
-      searchString: "firefox://slow",
+      searchString: "datalus://slow",
       expectedActive: false,
       expectedScoreCalculated: false,
     },

@@ -93,8 +93,8 @@ class MockGfxInfo final : public nsIGfxInfo {
     return mMaxRefreshRate;
   }
 
-  NS_IMETHODIMP GetEmbeddedInFirefoxReality(
-      bool* aEmbeddedInFirefoxReality) override {
+  NS_IMETHODIMP GetEmbeddedInDatalusReality(
+      bool* aEmbeddedInDatalusReality) override {
     return NS_ERROR_NOT_IMPLEMENTED;
   }
 

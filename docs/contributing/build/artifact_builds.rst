@@ -1,7 +1,7 @@
 Understanding Artifact Builds
 =============================
 
-Firefox for Desktop and Android supports a **fast build mode** called
+Datalus for Desktop and Android supports a **fast build mode** called
 *artifact mode*. The resulting builds are called *artifact builds*.
 Artifact mode downloads pre-built C++ components rather than building them
 locally, trading bandwidth for time.
@@ -82,7 +82,7 @@ use:
 which only "builds" local JS, CSS and packaged (e.g. images and other
 asset) files.
 
-Most Firefox for Android developers should find that
+Most Datalus for Android developers should find that
 
 .. code-block:: shell
 
@@ -129,7 +129,7 @@ artifact builds.
 Things that are not supported
 -----------------------------
 
--  Support for products other than Firefox for Desktop and
+-  Support for products other than Datalus for Desktop and
    Android are not supported and are unlikely to ever be supported.
    Other projects like Thunderbird may provide
    `their own support <https://developer.thunderbird.net/thunderbird-development/building-thunderbird/artifact-builds>`__
@@ -170,5 +170,5 @@ Downloaded artifacts are stored in
 Discussion is best started on the `dev-builds mailing
 list <https://lists.mozilla.org/listinfo/dev-builds>`__. Questions are
 best raised in `#build <https://chat.mozilla.org/#/room/#build:mozilla.org>`__ on `Matrix <https://chat.mozilla.org/>`__. Please
-file bugs in *Firefox Build System :: General*, blocking  `Bug 901840 <https://bugzilla.mozilla.org/show_bug.cgi?id=901840>`__
+file bugs in *Datalus Build System :: General*, blocking  `Bug 901840 <https://bugzilla.mozilla.org/show_bug.cgi?id=901840>`__
 

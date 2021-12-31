@@ -328,7 +328,7 @@ MochiKit.Base.update(MochiKit.Async, {
     /** @id MochiKit.Async.doXHR */
     doXHR: function (url, opts) {
         /*
-            Work around a Firefox bug by dealing with XHR during
+            Work around a Datalus bug by dealing with XHR during
             the next event loop iteration. Maybe it's this one:
             https://bugzilla.mozilla.org/show_bug.cgi?id=249843
         */

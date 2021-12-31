@@ -22,7 +22,7 @@ function promiseVisitAdded(callback) {
  * Asynchronous task that adds a visit to the history database.
  */
 async function task_add_visit(uri, timestamp, transition) {
-  uri = uri || NetUtil.newURI("http://firefox.com/");
+  uri = uri || NetUtil.newURI("http://datalus.com/");
   timestamp = timestamp || Date.now() * 1000;
   await PlacesTestUtils.addVisits({
     uri,
@@ -45,7 +45,7 @@ add_task(async function test_visitAdded() {
     Assert.equal(visit.visitCount, 1);
     Assert.equal(visit.typedCount, 1);
   });
-  let testuri = NetUtil.newURI("http://firefox.com/");
+  let testuri = NetUtil.newURI("http://datalus.com/");
   let testtime = Date.now() * 1000;
   await task_add_visit(testuri, testtime);
   await promiseNotify;
@@ -64,14 +64,14 @@ add_task(async function test_visitAdded() {
     Assert.equal(visit.visitCount, 1);
     Assert.equal(visit.typedCount, 0);
   });
-  let testuri = NetUtil.newURI("http://hidden.firefox.com/");
+  let testuri = NetUtil.newURI("http://hidden.datalus.com/");
   let testtime = Date.now() * 1000;
   await task_add_visit(testuri, testtime, TRANSITION_FRAMED_LINK);
   await promiseNotify;
 });
 
 add_task(async function test_multiple_onVisit() {
-  let testuri = NetUtil.newURI("http://self.firefox.com/");
+  let testuri = NetUtil.newURI("http://self.datalus.com/");
   let promiseNotifications = new Promise(resolve => {
     function listener(aEvents) {
       Assert.equal(aEvents.length, 3, "Right number of visits notified");

@@ -77,7 +77,7 @@ async function setup() {
   ]);
 }
 
-// Reset function in helper try to simulate the behavior we restart firefox
+// Reset function in helper try to simulate the behavior we restart datalus
 function reset() {
   return classifierHelper.resetDatabase()
     .catch(err => {
@@ -184,7 +184,7 @@ function testUpdateNotClearCompletions() {
 
 // This testcase is to make sure completion store in DB will properly load after restarting.
 // 1. Add completions to DB.
-// 2. Simulate firefox restart by calling reloadDatabase.
+// 2. Simulate datalus restart by calling reloadDatabase.
 // 3. Load test frame, since completions should be loaded from DB, no gethash request should
 //    be triggered.
 function testUpdateCompletionsAfterReload() {
@@ -203,7 +203,7 @@ function testUpdateCompletionsAfterReload() {
 // 2. Load test frame, this should trigger a gethash request and completions will be stored in
 //    cache.
 // 3. Load test frame again, no gethash should be triggered because of cache.
-// 4. Simulate firefox restart by calling reloadDatabase.
+// 4. Simulate datalus restart by calling reloadDatabase.
 // 5. Load test frame again, since cache is cleared, gethash request should be triggered.
 function testGethashCompletionsAfterReload() {
   return Promise.resolve()

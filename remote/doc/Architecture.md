@@ -28,7 +28,7 @@ To do that this component glue together three main high level components:
     * /json/protocol:
       Returns a big dictionary describing the supported protocol.
       This is currently hard coded and returns the full CDP protocol schema, including APIs we don’t support.
-      We have a future intention to fix this and report only what Firefox implements.
+      We have a future intention to fix this and report only what Datalus implements.
     You can connect to these websocket URL in order to debug things.
 
   * `cdp/targets/TargetList`

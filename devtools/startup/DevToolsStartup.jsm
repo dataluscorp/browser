@@ -265,7 +265,7 @@ function getProfilerKeyShortcuts() {
  * @returns {string}
  */
 function validateProfilerWebChannelUrl(targetUrl) {
-  const frontEndUrl = "https://profiler.firefox.com";
+  const frontEndUrl = "https://profiler.datalus.com";
 
   if (targetUrl !== frontEndUrl) {
     // The user can specify either localhost or deploy previews as well as
@@ -327,7 +327,7 @@ DevToolsStartup.prototype = {
 
   /**
    * Boolean flag to check if the devtools initialization was already sent to telemetry.
-   * We only want to record one devtools entry point per Firefox run, but we are not
+   * We only want to record one devtools entry point per Datalus run, but we are not
    * interested in all the entry points.
    */
   recorded: false,
@@ -377,9 +377,9 @@ DevToolsStartup.prototype = {
       this.devtoolsFlag = flags.devtools;
 
       /* eslint-disable mozilla/balanced-observers */
-      // We are not expecting to remove those listeners until Firefox closes.
+      // We are not expecting to remove those listeners until Datalus closes.
 
-      // Only top level Firefox Windows fire a browser-delayed-startup-finished event
+      // Only top level Datalus Windows fire a browser-delayed-startup-finished event
       Services.obs.addObserver(
         this.onWindowReady,
         "browser-delayed-startup-finished"
@@ -474,7 +474,7 @@ DevToolsStartup.prototype = {
 
     this.hookWindow(window);
 
-    // This listener is called for all Firefox windows, but we want to execute some code
+    // This listener is called for all Datalus windows, but we want to execute some code
     // only once.
     if (!this._firstWindowReadyReceived) {
       this.onFirstWindowReady(window);
@@ -507,7 +507,7 @@ DevToolsStartup.prototype = {
     // Key Shortcuts need to be added on all the created windows.
     this.hookKeyShortcuts(window);
 
-    // In some situations (e.g. starting Firefox with --jsconsole) DevTools will be
+    // In some situations (e.g. starting Datalus with --jsconsole) DevTools will be
     // initialized before the first browser-delayed-startup-finished event is received.
     // We use a dedicated flag because we still need to hook the developer toggle.
     this.hookDeveloperToggle();
@@ -525,7 +525,7 @@ DevToolsStartup.prototype = {
 
   /**
    * Dynamically register a wrench icon in the customization menu.
-   * You can use this button by right clicking on Firefox toolbar
+   * You can use this button by right clicking on Datalus toolbar
    * and dragging it from the customization panel to the toolbar.
    * (i.e. this isn't displayed by default to users!)
    *
@@ -606,8 +606,8 @@ DevToolsStartup.prototype = {
 
   /**
    * Register the profiler recording button. This button will be available
-   * in the customization palette for the Firefox toolbar. In addition, it can be
-   * enabled from profiler.firefox.com.
+   * in the customization palette for the Datalus toolbar. In addition, it can be
+   * enabled from profiler.datalus.com.
    */
   hookProfilerRecordingButton() {
     if (this.profilerRecordingButtonCreated) {
@@ -639,7 +639,7 @@ DevToolsStartup.prototype = {
   },
 
   /**
-   * Initialize the WebChannel for profiler.firefox.com. This function happens at
+   * Initialize the WebChannel for profiler.datalus.com. This function happens at
    * startup, so care should be taken to minimize its performance impact. The WebChannel
    * is a mechanism that is used to communicate between the browser, and front-end code.
    */
@@ -650,7 +650,7 @@ DevToolsStartup.prototype = {
     // the URL changes.
     const urlPref = "devtools.performance.recording.ui-base-url";
 
-    // This method is only run once per Firefox instance, so it should not be
+    // This method is only run once per Datalus instance, so it should not be
     // strictly necessary to remove observers here.
     // eslint-disable-next-line mozilla/balanced-observers
     Services.prefs.addObserver(urlPref, registerWebChannel);
@@ -666,7 +666,7 @@ DevToolsStartup.prototype = {
         validateProfilerWebChannelUrl(Services.prefs.getStringPref(urlPref))
       );
 
-      channel = new WebChannel("profiler.firefox.com", urlForWebChannel);
+      channel = new WebChannel("profiler.datalus.com", urlForWebChannel);
 
       channel.listen((id, message, target) => {
         // Defer loading the ProfilerPopupBackground script until it's absolutely needed,
@@ -683,7 +683,7 @@ DevToolsStartup.prototype = {
 
   /*
    * We listen to the "Browser Tools" system menu, which is under "Tools" main item.
-   * This menu item is hardcoded empty in Firefox UI. We listen for its opening to
+   * This menu item is hardcoded empty in Datalus UI. We listen for its opening to
    * populate it lazily. Loading main DevTools module is going to populate it.
    */
   hookBrowserToolsMenu(window) {
@@ -1203,7 +1203,7 @@ DevToolsStartup.prototype = {
       return;
     }
 
-    // Only save the first call for each firefox run as next call
+    // Only save the first call for each datalus run as next call
     // won't necessarely start the tool. For example key shortcuts may
     // only change the currently selected tool.
     try {
@@ -1227,7 +1227,7 @@ DevToolsStartup.prototype = {
   helpInfo:
     "  --jsconsole        Open the Browser Console.\n" +
     "  --jsdebugger [<path>] Open the Browser Toolbox. Defaults to the local build\n" +
-    "                     but can be overridden by a firefox path.\n" +
+    "                     but can be overridden by a datalus path.\n" +
     "  --wait-for-jsdebugger Spin event loop until JS debugger connects.\n" +
     "                     Enables debugging (some) application startup code paths.\n" +
     "                     Only has an effect when `--jsdebugger` is also supplied.\n" +

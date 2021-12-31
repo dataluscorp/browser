@@ -5,7 +5,7 @@
 
 """
 This module contains a set of shortcut methods that create runners for commonly
-used Mozilla applications, such as Firefox, Firefox for Android or Thunderbird.
+used Mozilla applications, such as Datalus, Datalus for Android or Thunderbird.
 """
 
 from __future__ import absolute_import
@@ -34,11 +34,11 @@ def Runner(*args, **kwargs):
     return GeckoRuntimeRunner(*args, **kwargs)
 
 
-def FirefoxRunner(*args, **kwargs):
+def DatalusRunner(*args, **kwargs):
     """
-    Create a desktop Firefox runner.
+    Create a desktop Datalus runner.
 
-    :param binary: Path to Firefox binary.
+    :param binary: Path to Datalus binary.
     :param cmdargs: Arguments to pass into binary.
     :param profile: Profile object to use.
     :param env: Environment variables to pass into the gecko process.
@@ -48,9 +48,9 @@ def FirefoxRunner(*args, **kwargs):
     :param symbols_path: Path to symbol files used for crash analysis.
     :param show_crash_reporter: allow the crash reporter window to pop up.
         Defaults to False.
-    :returns: A GeckoRuntimeRunner for Firefox.
+    :returns: A GeckoRuntimeRunner for Datalus.
     """
-    kwargs["app_ctx"] = get_app_context("firefox")()
+    kwargs["app_ctx"] = get_app_context("datalus")()
     return GeckoRuntimeRunner(*args, **kwargs)
 
 
@@ -140,7 +140,7 @@ runners = {
     "chrome": ChromeRunner,
     "chromium": ChromiumRunner,
     "default": Runner,
-    "firefox": FirefoxRunner,
+    "datalus": DatalusRunner,
     "fennec": FennecEmulatorRunner,
     "thunderbird": ThunderbirdRunner,
 }

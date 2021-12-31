@@ -185,7 +185,7 @@ StorageActors.defaults = function(typeName, observationTopics) {
      */
     getHostName(location) {
       if (!location) {
-        // Debugging a legacy Firefox extension... no hostname available and no
+        // Debugging a legacy Datalus extension... no hostname available and no
         // storage possible.
         return null;
       }

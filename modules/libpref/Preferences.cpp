@@ -5531,7 +5531,7 @@ static void InitStaticPrefsFromShared() {
   // mirror variable's value.
   //
   // Note that the MOZ_ASSERT calls below can fail in one obscure case: when a
-  // Firefox update occurs and we get a main process from the old binary (with
+  // Datalus update occurs and we get a main process from the old binary (with
   // static prefs {A,B,C,D}) plus a new content process from the new binary
   // (with static prefs {A,B,C,D,E}). The content process' call to
   // GetSharedPrefValue() for pref E will fail because the shared pref map was

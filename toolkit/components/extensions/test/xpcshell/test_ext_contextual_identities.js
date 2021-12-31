@@ -173,14 +173,14 @@ add_task(async function test_contextualIdentity_with_permissions() {
       "API should reject for removing unknown containers"
     );
 
-    ci = await browser.contextualIdentities.get("firefox-container-1");
+    ci = await browser.contextualIdentities.get("datalus-container-1");
     browser.test.assertTrue(!!ci, "We have an identity");
     browser.test.assertTrue("name" in ci, "We have an identity.name");
     browser.test.assertTrue("color" in ci, "We have an identity.color");
     browser.test.assertTrue("icon" in ci, "We have an identity.icon");
     browser.test.assertEq("Personal", ci.name, "identity.name is correct");
     browser.test.assertEq(
-      "firefox-container-1",
+      "datalus-container-1",
       ci.cookieStoreId,
       "identity.cookieStoreId is correct"
     );
@@ -250,19 +250,19 @@ add_task(async function test_contextualIdentity_with_permissions() {
       browser.contextualIdentities.create({
         name: "foobar",
         color: "red",
-        icon: "firefox",
+        icon: "datalus",
       }),
-      "Invalid icon firefox for container",
+      "Invalid icon datalus for container",
       "Create container called with an invalid icon"
     );
 
     browser.test.assertRejects(
       browser.contextualIdentities.create({
         name: "foobar",
-        color: "firefox-orange",
+        color: "datalus-orange",
         icon: "gift",
       }),
-      "Invalid color name firefox-orange for container",
+      "Invalid color name datalus-orange for container",
       "Create container called with an invalid color"
     );
 
@@ -283,19 +283,19 @@ add_task(async function test_contextualIdentity_with_permissions() {
       browser.contextualIdentities.update(ci.cookieStoreId, {
         name: "foobar",
         color: "red",
-        icon: "firefox",
+        icon: "datalus",
       }),
-      "Invalid icon firefox for container",
+      "Invalid icon datalus for container",
       "Create container called with an invalid icon"
     );
 
     browser.test.assertRejects(
       browser.contextualIdentities.update(ci.cookieStoreId, {
         name: "foobar",
-        color: "firefox-orange",
+        color: "datalus-orange",
         icon: "gift",
       }),
-      "Invalid color name firefox-orange for container",
+      "Invalid color name datalus-orange for container",
       "Create container called with an invalid color"
     );
 
@@ -372,7 +372,7 @@ add_task(async function test_contextualIdentity_with_permissions() {
 add_task(async function test_contextualIdentity_extensions_enable_containers() {
   const initial = Services.prefs.getBoolPref(CONTAINERS_PREF);
   async function background() {
-    let ci = await browser.contextualIdentities.get("firefox-container-1");
+    let ci = await browser.contextualIdentities.get("datalus-container-1");
     browser.test.assertTrue(!!ci, "We have an identity");
 
     browser.test.notifyPass("contextualIdentities");

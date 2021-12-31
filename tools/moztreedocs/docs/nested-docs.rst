@@ -7,7 +7,7 @@ common "landing pages". This will allow us to refactor the docs into a structure
 
 To clarify a few things:
 
-#. The path specified in `SPHINX_TREES` does not need to correspond to a path in `mozilla-central`. For example, I could register my docs using `SPHINX_TREES["/foo"] = "docs"`, which would make that doc tree accessible at `firefox-source-docs.mozilla.org/foo`.
+#. The path specified in `SPHINX_TREES` does not need to correspond to a path in `mozilla-central`. For example, I could register my docs using `SPHINX_TREES["/foo"] = "docs"`, which would make that doc tree accessible at `datalus-source-docs.mozilla.org/foo`.
 
 #. Any subtrees that are nested under another index will automatically be hidden from the main index. This means you should make sure to link to any subtrees from somewhere in the landing page. So given my earlier doc tree at `/foo`, if I now created a subtree and registered it using `SPHINX_TREES["/foo/bar"] = "docs"`, those docs would not show up in the main index.
 

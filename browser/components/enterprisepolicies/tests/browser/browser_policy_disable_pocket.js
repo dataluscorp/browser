@@ -13,7 +13,7 @@ async function checkPocket(shouldBeEnabled) {
   }, "Expecting Pocket to be " + shouldBeEnabled);
 }
 
-add_task(async function test_disable_firefox_screenshots() {
+add_task(async function test_disable_datalus_screenshots() {
   await BrowserTestUtils.withNewTab("data:text/html,Test", async function() {
     // Sanity check to make sure Pocket is enabled on tests
     await checkPocket(true);

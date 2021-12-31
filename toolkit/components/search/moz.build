@@ -42,4 +42,4 @@ TESTING_JS_MODULES += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Search")
+    BUG_COMPONENT = ("Datalus", "Search")

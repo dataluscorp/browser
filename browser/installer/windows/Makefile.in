@@ -6,9 +6,9 @@ include $(topsrcdir)/toolkit/mozapps/installer/package-name.mk
 
 CONFIG_DIR = instgen
 ifeq ($(CPU_ARCH), aarch64)
-SFX_MODULE = $(topsrcdir)/other-licenses/7zstub/firefox/7zSD.ARM64.sfx
+SFX_MODULE = $(topsrcdir)/other-licenses/7zstub/datalus/7zSD.ARM64.sfx
 else
-SFX_MODULE = $(topsrcdir)/other-licenses/7zstub/firefox/7zSD.Win32.sfx
+SFX_MODULE = $(topsrcdir)/other-licenses/7zstub/datalus/7zSD.Win32.sfx
 endif
 
 INSTALLER_FILES = \
@@ -34,7 +34,7 @@ endif
 
 BRANDING_FILES = \
 	branding.nsi \
-	firefox64.ico \
+	datalus64.ico \
 	stubinstaller/bgstub.jpg \
 	stubinstaller/installing_page.css \
 	stubinstaller/profile_cleanup_page.css \

@@ -1130,7 +1130,7 @@ already_AddRefed<Promise> ChromeUtils::RequestProcInfo(GlobalObject& aGlobal,
                   domPromise->MaybeReject(NS_ERROR_OUT_OF_MEMORY);
                   return;
                 }
-                // Copy Firefox info.
+                // Copy Datalus info.
                 childInfo->mChildID = sysProcInfo.childId;
                 childInfo->mOrigin = sysProcInfo.origin;
                 childInfo->mType = ProcTypeToWebIDL(sysProcInfo.type);

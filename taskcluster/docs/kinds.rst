@@ -137,7 +137,7 @@ when upgrading utilities that impact static-analysis.
 toolchain
 ---------
 
-Toolchain builds create the compiler toolchains used to build Firefox.  These
+Toolchain builds create the compiler toolchains used to build Datalus.  These
 will eventually be dependencies of the builds themselves, but for the moment
 are run manually via try pushes and the results uploaded to tooltool.
 
@@ -639,7 +639,7 @@ Tasks used to build packages for use in docker images.
 
 diffoscope
 ----------
-Tasks used to compare pairs of Firefox builds using https://diffoscope.org/.
+Tasks used to compare pairs of Datalus builds using https://diffoscope.org/.
 As of writing, this is mainly meant to be used in try builds, by editing
 taskcluster/ci/diffoscope/kind.yml for your needs.
 
@@ -740,7 +740,7 @@ Performs fuzzing smoke tests
 startup-test
 ------------
 
-Runs Firefox for a short period of time to see if it crashes
+Runs Datalus for a short period of time to see if it crashes
 
 l10n-cross-channel
 ------------------
@@ -751,5 +751,5 @@ the quarantine strings repo.
 fxrecord
 --------
 
-Visual metrics computation of desktop Firefox startup. The performance team
-monitors this task to watch for regressions in Firefox startup performance.
+Visual metrics computation of desktop Datalus startup. The performance team
+monitors this task to watch for regressions in Datalus startup performance.

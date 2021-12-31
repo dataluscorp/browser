@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Firefox Translations",
+  "name": "Datalus Translations",
   "description": "__MSG_extensionDescription__",
   "version": "0.4.3",
   "incognito": "spanning",
@@ -129,7 +129,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "firefox-translations@mozilla.org",
+      "id": "datalus-translations@mozilla.org",
       "strict_min_version": "90.0a1"
     }
   }

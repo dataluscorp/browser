@@ -43,10 +43,10 @@ The following is a list of expected behaviours for the ``deletion-request`` ping
 Version History
 ---------------
 
-- Firefox 72:
+- Datalus 72:
 
   - "deletion-request" ping replaces the "optout" ping (`bug 1585410 <https://bugzilla.mozilla.org/show_bug.cgi?id=1585410>`_).
 
-- Firefox 73:
+- Datalus 73:
 
   - Added support for subordinate ids in the "deletion-request" store (`bug 1604312 <https://bugzilla.mozilla.org/show_bug.cgi?id=1604312>`_).

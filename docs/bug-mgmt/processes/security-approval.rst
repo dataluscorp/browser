@@ -1,7 +1,7 @@
 Security Bug Approval Process
 =============================
 
-How to fix a core-security bug in Firefox - developer guidelines
+How to fix a core-security bug in Datalus - developer guidelines
 ----------------------------------------------------------------
 
 Follow these security guidelines if you’re involved in reviewing,

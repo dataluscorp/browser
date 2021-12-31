@@ -8,7 +8,7 @@
 
 #include "OggRLBoxTypes.h"
 
-// Load general firefox configuration of RLBox
+// Load general datalus configuration of RLBox
 #include "mozilla/rlbox/rlbox_config.h"
 
 #ifdef MOZ_WASM_SANDBOXING_OGG

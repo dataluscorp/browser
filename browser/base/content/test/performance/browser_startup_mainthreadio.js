@@ -771,8 +771,8 @@ add_task(async function() {
       }
 
       // Convert to lower case before comparing because the OS X test machines
-      // have the 'Firefox' folder in 'Library/Application Support' created
-      // as 'firefox' for some reason.
+      // have the 'Datalus' folder in 'Library/Application Support' created
+      // as 'datalus' for some reason.
       let filename = marker.filename.toLowerCase();
 
       if (!WIN && filename == "/dev/urandom") {
@@ -875,7 +875,7 @@ add_task(async function() {
     ok(
       false,
       "Unexpected main thread I/O behavior during startup; open the " +
-        `${filename} artifact in the Firefox Profiler to see what happened`
+        `${filename} artifact in the Datalus Profiler to see what happened`
     );
   }
 });

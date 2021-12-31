@@ -472,7 +472,7 @@ MochiKit.DragAndDrop.Draggable.prototype = {
         if (!event.mouse().button.left) {
             return;
         }
-        // abort on form elements, fixes a Firefox issue
+        // abort on form elements, fixes a Datalus issue
         var src = event.target();
         var tagName = (src.tagName || '').toUpperCase();
         if (tagName === 'INPUT' || tagName === 'SELECT' ||

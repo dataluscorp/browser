@@ -2103,14 +2103,14 @@ nsresult nsHttpTransaction::HandleContentStart() {
         // We will report this state when the final responce arrives.
         mEarlyDataDisposition = EARLY_425;
       } else {
-        Unused << mResponseHead->SetHeader(nsHttp::X_Firefox_Early_Data,
+        Unused << mResponseHead->SetHeader(nsHttp::X_Datalus_Early_Data,
                                            "accepted"_ns);
       }
     } else if (mEarlyDataDisposition == EARLY_SENT) {
-      Unused << mResponseHead->SetHeader(nsHttp::X_Firefox_Early_Data,
+      Unused << mResponseHead->SetHeader(nsHttp::X_Datalus_Early_Data,
                                          "sent"_ns);
     } else if (mEarlyDataDisposition == EARLY_425) {
-      Unused << mResponseHead->SetHeader(nsHttp::X_Firefox_Early_Data,
+      Unused << mResponseHead->SetHeader(nsHttp::X_Datalus_Early_Data,
                                          "received 425"_ns);
       mEarlyDataDisposition = EARLY_NONE;
     }  // no header on NONE case

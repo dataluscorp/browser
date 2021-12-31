@@ -48,7 +48,7 @@ ${helpers.single_keyword(
     gecko_ffi_name="mWindowDragging",
     gecko_enum_prefix="StyleWindowDragging",
     animation_value_type="discrete",
-    spec="None (Nonstandard Firefox-only property)",
+    spec="None (Nonstandard Datalus-only property)",
 )}
 
 ${helpers.single_keyword(
@@ -102,5 +102,5 @@ ${helpers.predefined_type(
     "computed::MozForceBrokenImageIcon::false_value()",
     engines="gecko",
     animation_value_type="discrete",
-    spec="None (Nonstandard Firefox-only property)",
+    spec="None (Nonstandard Datalus-only property)",
 )}

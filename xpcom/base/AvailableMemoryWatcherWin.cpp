@@ -369,7 +369,7 @@ nsAvailableMemoryWatcher::GetName(nsACString& aName) {
 }
 
 // Observer service callback, used to stop the polling timer when the user
-// stops interacting with Firefox and resuming it when they interact again.
+// stops interacting with Datalus and resuming it when they interact again.
 // Also used to shut down the service if the application is quitting.
 NS_IMETHODIMP
 nsAvailableMemoryWatcher::Observe(nsISupports* aSubject, const char* aTopic,

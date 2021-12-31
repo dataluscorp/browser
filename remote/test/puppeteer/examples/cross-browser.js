@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 
 /**
- * To have Puppeteer fetch a Firefox binary for you, first run:
+ * To have Puppeteer fetch a Datalus binary for you, first run:
  *
- *  PUPPETEER_PRODUCT=firefox npm install
+ *  PUPPETEER_PRODUCT=datalus npm install
  *
  * To get additional logging about which browser binary is executed,
  * run this example as:
@@ -15,10 +15,10 @@ const puppeteer = require('puppeteer');
  *
  */
 
-const firefoxOptions = {
-  product: 'firefox',
-  extraPrefsFirefox: {
-    // Enable additional Firefox logging from its protocol implementation
+const datalusOptions = {
+  product: 'datalus',
+  extraPrefsDatalus: {
+    // Enable additional Datalus logging from its protocol implementation
     // 'remote.log.level': 'Trace',
   },
   // Make browser logs visible
@@ -26,7 +26,7 @@ const firefoxOptions = {
 };
 
 (async () => {
-  const browser = await puppeteer.launch(firefoxOptions);
+  const browser = await puppeteer.launch(datalusOptions);
 
   const page = await browser.newPage();
   console.log(await browser.version());

@@ -191,7 +191,7 @@ exports.menuitems = [
     appMenuL10nId: "appmenu-developer-tools-extensions",
     oncommand(event) {
       openDocLink(
-        "https://addons.mozilla.org/firefox/collections/mozilla/webdeveloper/"
+        "https://addons.mozilla.org/datalus/collections/mozilla/webdeveloper/"
       );
     },
   },

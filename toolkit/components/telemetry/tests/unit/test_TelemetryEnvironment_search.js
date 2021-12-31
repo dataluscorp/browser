@@ -75,7 +75,7 @@ add_task(async function setup() {
   registerCleanupFunction(() => gHttpServer.stop(() => {}));
 
   // Create the attribution data file, so that settings.attribution will exist.
-  // The attribution functionality only exists in Firefox.
+  // The attribution functionality only exists in Datalus.
   if (AppConstants.MOZ_BUILD_APP == "browser") {
     TelemetryEnvironmentTesting.spoofAttributionData();
     registerCleanupFunction(TelemetryEnvironmentTesting.cleanupAttributionData);

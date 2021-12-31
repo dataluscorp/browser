@@ -93,7 +93,7 @@ TEST(FilenameEvalParser, MozExtension)
 {
   {  // Test shield.mozilla.org replacing
     constexpr auto str =
-        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/firefox/profiles/"
+        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/datalus/profiles/"
         u"foo/"
         "extensions/federated-learning@shield.mozilla.org.xpi!/experiments/"
         "study/api.js"_ns;
@@ -105,7 +105,7 @@ TEST(FilenameEvalParser, MozExtension)
   }
   {  // Test mozilla.org replacing
     constexpr auto str =
-        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/firefox/profiles/"
+        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/datalus/profiles/"
         u"foo/"
         "extensions/federated-learning@shigeld.mozilla.org.xpi!/experiments/"
         "study/api.js"_ns;
@@ -119,7 +119,7 @@ TEST(FilenameEvalParser, MozExtension)
   }
   {  // Test truncating
     constexpr auto str =
-        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/firefox/profiles/"
+        u"jar:file:///c:/users/bob/appdata/roaming/mozilla/datalus/profiles/"
         u"foo/"
         "extensions/federated-learning@shigeld.mozilla.org.xpi!/experiments/"
         "study/apiiiiiiiiiiiiiiiiiiiiiiiiiiiiii.js"_ns;

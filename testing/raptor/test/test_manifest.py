@@ -27,7 +27,7 @@ VALID_MANIFESTS = [
         # page load test with local playback
         "alert_on": "fcp",
         "alert_threshold": 2.0,
-        "apps": "firefox",
+        "apps": "datalus",
         "lower_is_better": True,
         "manifest": "valid_details_0",
         "measure": ["fnbpaint", "fcp"],
@@ -41,7 +41,7 @@ VALID_MANIFESTS = [
     {
         # test optional settings with None
         "alert_threshold": 2.0,
-        "apps": "firefox",
+        "apps": "datalus",
         "lower_is_better": True,
         "manifest": "valid_details_1",
         "measure": "fnbpaint, fcb",
@@ -95,7 +95,7 @@ VALID_MANIFESTS = [
 INVALID_MANIFESTS = [
     {
         "alert_threshold": 2.0,
-        "apps": "firefox",
+        "apps": "datalus",
         "lower_is_better": True,
         "manifest": "invalid_details_0",
         "page_cycles": 25,
@@ -132,7 +132,7 @@ INVALID_MANIFESTS = [
     {
         "alert_on": "nope",
         "alert_threshold": 2.0,
-        "apps": "firefox",
+        "apps": "datalus",
         "lower_is_better": True,
         "manifest": "invalid_details_2",
         "measure": "fnbpaint, fcp",
@@ -147,7 +147,7 @@ INVALID_MANIFESTS = [
 
 
 @pytest.mark.parametrize(
-    "app", ["firefox", "chrome", "chromium", "geckoview", "refbrow", "fenix"]
+    "app", ["datalus", "chrome", "chromium", "geckoview", "refbrow", "fenix"]
 )
 def test_get_browser_test_list(app):
     test_list = get_browser_test_list(app, run_local=True)
@@ -164,17 +164,17 @@ def test_validate_test_ini_invalid(test_details):
     assert not (validate_test_ini(test_details))
 
 
-def test_get_raptor_test_list_firefox(create_args):
+def test_get_raptor_test_list_datalus(create_args):
     args = create_args(browser_cycles=1)
 
     test_list = get_raptor_test_list(args, mozinfo.os)
     assert len(test_list) == 4
 
     subtests = [
-        "raptor-tp6-unittest-google-firefox",
-        "raptor-tp6-unittest-amazon-firefox",
-        "raptor-tp6-unittest-facebook-firefox",
-        "raptor-tp6-unittest-youtube-firefox",
+        "raptor-tp6-unittest-google-datalus",
+        "raptor-tp6-unittest-amazon-datalus",
+        "raptor-tp6-unittest-facebook-datalus",
+        "raptor-tp6-unittest-youtube-datalus",
     ]
 
     for next_subtest in test_list:

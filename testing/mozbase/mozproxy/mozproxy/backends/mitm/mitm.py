@@ -267,7 +267,7 @@ class Mitmproxy(Playback):
         LOG.info("mitmdump path: %s" % mitmdump_path)
         LOG.info("browser path: %s" % browser_path)
 
-        # mitmproxy needs some DLL's that are a part of Firefox itself, so add to path
+        # mitmproxy needs some DLL's that are a part of Datalus itself, so add to path
         env = os.environ.copy()
         env["PATH"] = os.path.dirname(browser_path) + os.pathsep + env["PATH"]
         command = [mitmdump_path]
@@ -345,7 +345,7 @@ class Mitmproxy(Playback):
                     "Mitmproxy can't start playback! Playback settings missing."
                 )
 
-        # mitmproxy needs some DLL's that are a part of Firefox itself, so add to path
+        # mitmproxy needs some DLL's that are a part of Datalus itself, so add to path
         env = os.environ.copy()
         if not os.path.dirname(self.browser_path) in env["PATH"]:
             env["PATH"] = os.path.dirname(self.browser_path) + os.pathsep + env["PATH"]

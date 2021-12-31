@@ -156,7 +156,7 @@ LocalDevice.prototype = {
    */
   _generate: function() {
     if (Services.appinfo.widgetToolkit == "android") {
-      // For Firefox for Android, use the device's model name.
+      // For Datalus for Android, use the device's model name.
       // TODO: Bug 1180997: Find the right way to expose an editable name
       this.name = Services.sysinfo.get("device");
     } else {

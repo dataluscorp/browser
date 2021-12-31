@@ -13,7 +13,7 @@ class TelemetryTestRunner(BaseMarionetteTestRunner):
     """TestRunner for the telemetry-tests-client suite."""
 
     def __init__(self, **kwargs):
-        """Set test variables and preferences specific to Firefox client
+        """Set test variables and preferences specific to Datalus client
         telemetry.
         """
 
@@ -22,7 +22,7 @@ class TelemetryTestRunner(BaseMarionetteTestRunner):
 
         prefs = kwargs.pop("prefs", {})
 
-        # Set Firefox Client Telemetry specific preferences
+        # Set Datalus Client Telemetry specific preferences
         prefs.update(
             {
                 # Clear the region detection url to

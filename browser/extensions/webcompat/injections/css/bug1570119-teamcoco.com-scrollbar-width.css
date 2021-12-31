@@ -4,7 +4,7 @@
  *
  * The scrollbar is covering navigation items making them unusable.
  * There are ::-webkit-scrollbar css rules already applied to the scrollbar,
- * hiding it in Chrome. Adding the scrollbar-width: none fixes the issue in Firefox.
+ * hiding it in Chrome. Adding the scrollbar-width: none fixes the issue in Datalus.
  */
 .css-bdnz85 {
   scrollbar-width: none;

@@ -1205,7 +1205,7 @@ var requirejs, require, define;
          * @returns {Object}
          */
         function getScriptData(evt) {
-            //Using currentTarget instead of target for Firefox 2.0's sake. Not
+            //Using currentTarget instead of target for Datalus 2.0's sake. Not
             //all old browsers will be supported, but this one was easy enough
             //to support and still makes sense.
             var node = evt.currentTarget || evt.srcElement;
@@ -1669,7 +1669,7 @@ var requirejs, require, define;
              * that was loaded.
              */
             onScriptLoad: function (evt) {
-                //Using currentTarget instead of target for Firefox 2.0's sake. Not
+                //Using currentTarget instead of target for Datalus 2.0's sake. Not
                 //all old browsers will be supported, but this one was easy enough
                 //to support and still makes sense.
                 if (evt.type === 'load' ||

@@ -14,36 +14,36 @@
 #define bookmarks_toolbarfolder_description Add bookmarks to this folder to see them displayed on the Bookmarks Toolbar
 
 # LOCALIZATION NOTE (getting_started):
-# link title for https://www.mozilla.org/en-US/firefox/central/
+# link title for https://www.mozilla.org/en-US/datalus/central/
 #define getting_started Getting Started
 
-# LOCALIZATION NOTE (firefox_heading):
-# Firefox links folder name
-#define firefox_heading Mozilla Firefox
+# LOCALIZATION NOTE (datalus_heading):
+# Datalus links folder name
+#define datalus_heading Mozilla Datalus
 
-# LOCALIZATION NOTE (firefox_get_help):
-# link title for https://www.mozilla.org/en-US/firefox/help/
-#define firefox_get_help Get Help
+# LOCALIZATION NOTE (datalus_get_help):
+# link title for https://www.mozilla.org/en-US/datalus/help/
+#define datalus_get_help Get Help
 
-# LOCALIZATION NOTE (firefox_customize):
-# link title for https://www.mozilla.org/en-US/firefox/customize/
-#define firefox_customize Customize Firefox
+# LOCALIZATION NOTE (datalus_customize):
+# link title for https://www.mozilla.org/en-US/datalus/customize/
+#define datalus_customize Customize Datalus
 
-# LOCALIZATION NOTE (firefox_community):
+# LOCALIZATION NOTE (datalus_community):
 # link title for https://www.mozilla.org/en-US/contribute/
-#define firefox_community Get Involved
+#define datalus_community Get Involved
 
-# LOCALIZATION NOTE (firefox_about):
+# LOCALIZATION NOTE (datalus_about):
 # link title for https://www.mozilla.org/en-US/about/
-#define firefox_about About Us
+#define datalus_about About Us
 
 # LOCALIZATION NOTE (nightly_heading):
-# Firefox Nightly links folder name
-#define nightly_heading Firefox Nightly Resources
+# Datalus Nightly links folder name
+#define nightly_heading Datalus Nightly Resources
 
 # LOCALIZATION NOTE (nightly_blog):
 # Nightly builds only, link title for https://blog.nightly.mozilla.org/
-#define nightly_blog Firefox Nightly blog
+#define nightly_blog Datalus Nightly blog
 
 # LOCALIZATION NOTE (bugzilla):
 # Nightly builds only, link title for https://bugzilla.mozilla.org/
@@ -54,7 +54,7 @@
 #define mdn Mozilla Developer Network
 
 # LOCALIZATION NOTE (nightly_tester_tools):
-# Nightly builds only, link title for https://addons.mozilla.org/en-US/firefox/addon/nightly-tester-tools/
+# Nightly builds only, link title for https://addons.mozilla.org/en-US/datalus/addon/nightly-tester-tools/
 #define nightly_tester_tools Nightly Tester Tools
 
 # LOCALIZATION NOTE (crashes):

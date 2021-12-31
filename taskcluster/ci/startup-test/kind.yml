@@ -45,11 +45,11 @@ jobs:
         extra-config:
             upstream_kind: build-signing
             upstream_artifact: target.tar.bz2
-            binary: firefox
+            binary: datalus
         worker-type: b-linux
         worker:
             docker-image: {in-tree: ubuntu1804-test}
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: linux-shippable
         treeherder:
@@ -64,11 +64,11 @@ jobs:
         extra-config:
             upstream_kind: build-signing
             upstream_artifact: target.tar.bz2
-            binary: firefox
+            binary: datalus
         worker-type: b-linux
         worker:
             docker-image: {in-tree: ubuntu1804-test}
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: linux64-shippable
         treeherder:
@@ -83,9 +83,9 @@ jobs:
         extra-config:
             upstream_kind: repackage
             upstream_artifact: target.dmg
-            binary: Contents/MacOS/firefox
+            binary: Contents/MacOS/datalus
         worker-type: t-osx-1015-r8
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: macosx64-shippable
         treeherder:
@@ -100,9 +100,9 @@ jobs:
         extra-config:
             upstream_kind: repackage-signing
             upstream_artifact: target.installer.exe
-            binary: core/firefox.exe
+            binary: core/datalus.exe
         worker-type: win10-64-2004-source
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: win32-shippable
         treeherder:
@@ -117,9 +117,9 @@ jobs:
         extra-config:
             upstream_kind: repackage-signing
             upstream_artifact: target.installer.exe
-            binary: core/firefox.exe
+            binary: core/datalus.exe
         worker-type: win10-64-2004-source
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: win64-shippable
         treeherder:

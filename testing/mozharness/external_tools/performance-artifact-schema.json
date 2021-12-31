@@ -5,7 +5,7 @@
                 "name": {
                     "title": "Application under performance test",
                     "enum": [
-                        "firefox",
+                        "datalus",
                         "chrome",
                         "chrome-m",
                         "chromium",

@@ -214,7 +214,7 @@ class SpliceableJSONWriter : public JSONWriter {
     const double dTime_ns = aTime_ms * 1'000'000.0;
     // Make sure it's well within int64_t range.
     // 2^63 nanoseconds is almost 300 years; these times are relative to
-    // firefox startup, this should be enough for most uses.
+    // datalus startup, this should be enough for most uses.
     if (dTime_ns >= 0.0) {
       MOZ_RELEASE_ASSERT(dTime_ns < double(INT64_MAX - 1));
     } else {

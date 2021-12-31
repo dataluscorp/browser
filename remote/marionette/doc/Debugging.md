@@ -5,14 +5,14 @@ Redirecting the Gecko output
 ----------------------------
 
 The most common way to debug Marionette, as well as chrome code in
-general, is to use `dump()` to print a string to stdout.  In Firefox,
+general, is to use `dump()` to print a string to stdout.  In Datalus,
 this log output normally ends up in the gecko.log file in your current
 working directory.  With Fennec it can be inspected using `adb logcat`.
 
 `mach marionette-test` takes a `--gecko-log` option which lets
 you redirect this output stream.  This is convenient if you want to
 “merge” the test harness output with the stdout from the browser.
-Per Unix conventions you can use `-` (dash) to have Firefox write
+Per Unix conventions you can use `-` (dash) to have Datalus write
 its log to stdout instead of file:
 
 	% ./mach marionette-test --gecko-log -
@@ -80,7 +80,7 @@ remote connections.
   * `devtools.debugger.prompt-connection` → false
 
     Controls the remote connection prompt.  Note that this will
-    automatically expose your Firefox instance to localhost.
+    automatically expose your Datalus instance to localhost.
 
   * `devtools.debugger.remote-enabled` → true
 

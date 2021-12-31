@@ -22,7 +22,7 @@ const { Service } = ChromeUtils.import("resource://services-sync/service.js");
 const PREFS_GUID = CommonUtils.encodeBase64URL(Services.appinfo.ID);
 
 const DEFAULT_THEME_ID = "default-theme@mozilla.org";
-const COMPACT_THEME_ID = "firefox-compact-light@mozilla.org";
+const COMPACT_THEME_ID = "datalus-compact-light@mozilla.org";
 
 AddonTestUtils.init(this);
 AddonTestUtils.createAppInfo(
@@ -135,7 +135,7 @@ add_task(async function run_test() {
 
     _("Unsyncable prefs are treated correctly.");
     // Prefs we consider unsyncable (since they are URLs that won't be stable on
-    // another firefox) shouldn't be included - neither the value nor the
+    // another datalus) shouldn't be included - neither the value nor the
     // control pref should appear.
     Assert.strictEqual(record.value["testing.unsynced.url"], undefined);
     Assert.strictEqual(

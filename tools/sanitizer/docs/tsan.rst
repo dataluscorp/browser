@@ -15,18 +15,18 @@ TSan works can be found on `the Thread Sanitizer wiki <https://github.com/google
 A `meta bug called tsan <https://bugzilla.mozilla.org/show_bug.cgi?id=tsan>`__
 is maintained to keep track of all the bugs found with TSan.
 
-A `blog post on hacks.mozilla.org <https://hacks.mozilla.org/2021/04/eliminating-data-races-in-firefox-a-technical-report/>`__ describes this project.
+A `blog post on hacks.mozilla.org <https://hacks.mozilla.org/2021/04/eliminating-data-races-in-datalus-a-technical-report/>`__ describes this project.
 
 Note that unlike other sanitizers, TSan is currently **only supported on Linux**.
 
 Downloading artifact builds
 ---------------------------
 
-The easiest way to get Firefox builds with Thread Sanitizer is to download a
+The easiest way to get Datalus builds with Thread Sanitizer is to download a
 continuous integration TSan build of mozilla-central (updated at least daily):
 
 -  mozilla-central optimized builds:
-   `linux <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.firefox.linux64-tsan-opt/artifacts/public/build/target.tar.bz2>`__
+   `linux <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.datalus.linux64-tsan-opt/artifacts/public/build/target.tar.bz2>`__
 
 The fuzzing team also offers a tool called ``fuzzfetch`` to download this and many
 other CI builds. It makes downloading and unpacking these builds much easier and
@@ -40,16 +40,16 @@ Afterwards, you can run
 
 ::
 
-   $ python -m fuzzfetch --tsan -n firefox-tsan
+   $ python -m fuzzfetch --tsan -n datalus-tsan
 
-to get the build mentioned above unpacked into a directory called ``firefox-tsan``.
+to get the build mentioned above unpacked into a directory called ``datalus-tsan``.
 
 Creating Try builds
 -------------------
 
 If for some reason you can't use the pre-built binaries mentioned in the
 previous section (e.g. you need to test a patch), you can either build
-Firefox yourself (see the following section) or use the :ref:`try server <Pushing to Try>`
+Datalus yourself (see the following section) or use the :ref:`try server <Pushing to Try>`
 to create the customized build for you. Pushing to try requires L1 commit
 access. If you don't have this access yet you can request access (see
 `Becoming A Mozilla
@@ -73,7 +73,7 @@ LLVM/Clang/Rust
 The TSan instrumentation is implemented as an LLVM pass and integrated
 into Clang. We strongly recommend that you use the Clang version supplied
 as part of the ``mach bootstrap`` process, as we backported several required
-fixes for TSan on Firefox.
+fixes for TSan on Datalus.
 
 Sanitizer support in Rust is genuinely experimental,
 so our build system only works with a specially patched version of Rust
@@ -95,7 +95,7 @@ other than building gecko, just in case. Also note that
 ``~/.mozbuild/rustc-sanitizers`` is just a reasonable default location -- feel
 free to "install" the toolchain wherever you please.
 
-Building Firefox
+Building Datalus
 ~~~~~~~~~~~~~~~~
 
 Getting the source
@@ -160,7 +160,7 @@ Starting the build process
 Now you start the build process using the regular ``./mach build``
 command.
 
-Starting Firefox
+Starting Datalus
 ^^^^^^^^^^^^^^^^
 
 After the build has completed, ``./mach run`` with the usual options for
@@ -171,7 +171,7 @@ Building only the JavaScript shell
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to build only the JavaScript shell instead of doing a full
-Firefox build, the build script below will probably help you to do so.
+Datalus build, the build script below will probably help you to do so.
 Execute this script in the ``js/src/`` subdirectory and pass a directory
 name as the first parameter. The build will then be created in a new
 subdirectory with that name.
@@ -218,7 +218,7 @@ silence a race while a fix is developed as well as to permanently silence a
        the :ref:`FAQ section <Frequently Asked Questions about TSan>` carefully
        and think twice before attempting to suppress a race.
 
-The runtime Suppression list is directly baked into Firefox at compile-time and
+The runtime Suppression list is directly baked into Datalus at compile-time and
 located at `mozglue/build/TsanOptions.cpp <https://searchfox.org/mozilla-central/source/mozglue/build/TsanOptions.cpp>`__.
 
 .. warning::

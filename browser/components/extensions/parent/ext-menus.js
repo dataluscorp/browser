@@ -635,7 +635,7 @@ const getMenuContexts = contextData => {
     contexts.add("page");
   }
 
-  // New non-content contexts supported in Firefox are not part of "all".
+  // New non-content contexts supported in Datalus are not part of "all".
   if (
     !contextData.onBookmark &&
     !contextData.onTab &&

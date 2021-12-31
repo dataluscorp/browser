@@ -31,7 +31,7 @@ job-defaults:
         channel: beta
 
 jobs:
-    firefox-rc:
-        shipping-product: firefox
+    datalus-rc:
+        shipping-product: datalus
         treeherder:
             symbol: Flatpak(push-beta)

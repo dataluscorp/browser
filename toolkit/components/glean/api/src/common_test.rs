@@ -6,7 +6,7 @@ use std::sync::{Mutex, MutexGuard};
 
 use once_cell::sync::Lazy;
 
-const GLOBAL_APPLICATION_ID: &str = "org.mozilla.firefox.test";
+const GLOBAL_APPLICATION_ID: &str = "org.mozilla.datalus.test";
 
 /// UGLY HACK.
 /// We use a global lock to force synchronization of all tests, even if run multi-threaded.

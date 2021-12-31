@@ -77,7 +77,7 @@ class Metadata(MutableMapping):
         days = self._delta(self._data["created"], self._data["updated"])
         self._data["days"] = days
         self._data["age"] = self._days2age(days)
-        # adding info about the firefox version
+        # adding info about the datalus version
         # XXX build ID ??
         # XXX android ??
         logger.info("Saving metadata file in %s" % self.metadata_file)

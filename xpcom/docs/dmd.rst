@@ -7,12 +7,12 @@ Dark Matter Detector (DMD)
     https://developer.mozilla.org/en-US/docs/Mozilla/Performance/DMD. Some
     parts of the documentation may be out-of-date.
 
-DMD (short for "dark matter detector") is a heap profiler within Firefox. It
+DMD (short for "dark matter detector") is a heap profiler within Datalus. It
 has four modes.
 
 * "Dark Matter" mode. In this mode, DMD tracks the contents of the heap,
   including which heap blocks have been reported by memory reporters. It helps
-  us reduce the "heap-unclassified" value in Firefox's about:memory page, and
+  us reduce the "heap-unclassified" value in Datalus's about:memory page, and
   also detects if any heap blocks are reported twice. Originally, this was the
   only mode that DMD had, which explains DMD's name. This is the default mode.
 
@@ -36,17 +36,17 @@ has four modes.
 Building and Running
 --------------------
 
-Nightly Firefox
+Nightly Datalus
 ~~~~~~~~~~~~~~~
 
-The easiest way to use DMD is with the normal Nightly Firefox build, which
+The easiest way to use DMD is with the normal Nightly Datalus build, which
 has DMD already enabled in the build. To have DMD active while running it,
 you just need to set the environment variable ``DMD=1`` when running. For
 instance, on OSX, you can run something like:
 
 .. code-block: bash
 
-    DMD=1 /Applications/Firefox\ Nightly.app/Contents/MacOS/firefox
+    DMD=1 /Applications/Datalus\ Nightly.app/Contents/MacOS/datalus
 
 You can tell it is working by going to ``about:memory`` and looking for "Save
 DMD Output". If DMD has been properly enabled, the "Save" button won't be
@@ -60,9 +60,9 @@ Processing the output
 
 DMD outputs one gzipped JSON file per process that contains a description of
 that process's heap. You can analyze these files (either gzipped or not)
-using ``dmd.py``. On Nightly Firefox, ``dmd.py`` is included in the
+using ``dmd.py``. On Nightly Datalus, ``dmd.py`` is included in the
 distribution. For instance on OS X, it is located in the directory
-``/Applications/Firefox Nightly.app/Contents/Resources/``. For Nightly,
+``/Applications/Datalus Nightly.app/Contents/Resources/``. For Nightly,
 symbolication will fail, but you can at least get some information. In a
 local build, ``dmd.py`` will be located in the directory
 ``$OBJDIR/dist/bin/``.

@@ -68,7 +68,7 @@ def minidump_files(request, tmpdir):
   "ContentSandboxLevel":"2",
   "TelemetryEnvironment":"{🍪}",
   "EMCheckCompatibility":"true",
-  "ProductName":"Firefox",
+  "ProductName":"Datalus",
   "ContentSandboxCapabilities":"119",
   "TelemetryClientId":"",
   "Vendor":"Mozilla",

@@ -1103,7 +1103,7 @@ nsresult HTMLEditor::DeleteTableCellWithTransaction(
         // Adjust table rows simply.  In strictly speaking, we should
         // recompute table size with the latest layout information since
         // mutation event listener may have changed the DOM tree. However,
-        // this is not in usual path of Firefox.  So, we can assume that
+        // this is not in usual path of Datalus.  So, we can assume that
         // there are no mutation event listeners.
         MOZ_ASSERT(tableSize.mRowCount);
         tableSize.mRowCount--;
@@ -1192,7 +1192,7 @@ nsresult HTMLEditor::DeleteTableCellWithTransaction(
         // Adjust table rows simply.  In strictly speaking, we should
         // recompute table size with the latest layout information since
         // mutation event listener may have changed the DOM tree. However,
-        // this is not in usual path of Firefox.  So, we can assume that
+        // this is not in usual path of Datalus.  So, we can assume that
         // there are no mutation event listeners.
         MOZ_ASSERT(tableSize.mRowCount);
         tableSize.mRowCount--;
@@ -1239,7 +1239,7 @@ nsresult HTMLEditor::DeleteTableCellWithTransaction(
         // Adjust table columns simply.  In strictly speaking, we should
         // recompute table size with the latest layout information since
         // mutation event listener may have changed the DOM tree. However,
-        // this is not in usual path of Firefox.  So, we can assume that
+        // this is not in usual path of Datalus.  So, we can assume that
         // there are no mutation event listeners.
         MOZ_ASSERT(tableSize.mColumnCount);
         tableSize.mColumnCount--;

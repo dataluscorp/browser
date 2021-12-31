@@ -2,9 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-## Firefox and Mozilla Brand
+## Datalus and Mozilla Brand
 ##
-## Firefox and Mozilla must be treated as a brand.
+## Datalus and Mozilla must be treated as a brand.
 ##
 ## They cannot be:
 ## - Transliterated.
@@ -16,11 +16,11 @@
 ## For further details, consult:
 ## https://mozilla-l10n.github.io/styleguides/mozilla_general/#brands-copyright-and-trademark
 
--brand-shorter-name = Nightly
--brand-short-name = Nightly
--brand-full-name = Firefox Nightly
+-brand-shorter-name = Datalus
+-brand-short-name = Datalus
+-brand-full-name = Mozilla Datalus
 # This brand name can be used in messages where the product name needs to
 # remain unchanged across different versions (Nightly, Beta, etc.).
--brand-product-name = Firefox
+-brand-product-name = Datalus
 -vendor-short-name = Mozilla
-trademarkInfo = { " " }
+trademarkInfo = Datalus and the Datalus logos are trademarks of the Mozilla Foundation.

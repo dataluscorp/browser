@@ -9,7 +9,7 @@ Table of contents
 
 .. contents:: :local:
 
-Firefox Developer Git Quick Start Guide
+Datalus Developer Git Quick Start Guide
 =======================================
 
 Getting setup to as a first time Mozilla contributor is hard. There are
@@ -20,7 +20,7 @@ guides, you can find several linked to from `Contributing to the Mozilla code ba
 on `MDN <https://developer.mozilla.org/>`_.
 
 This guide will take you through setting up as a contributor to
-``mozilla-central``, the Firefox main repository, as a git user.
+``mozilla-central``, the Datalus main repository, as a git user.
 
 Setup
 -----
@@ -118,7 +118,7 @@ Manual installation
    git cinnabar download
 
 ``git-cinnabar``\ ’s creator, `glandium <https://glandium.org/>`_, has
-written a number of posts about setting up for Firefox Development with
+written a number of posts about setting up for Datalus Development with
 git. This `post <https://glandium.org/blog/?page_id=3438>`_ is the one
 that has formed the basis for this walkthrough.
 
@@ -139,10 +139,10 @@ In synopsis:
 
 -  Add remotes for your repositories. There are several to choose from,
    ``central``, ``inbound``, ``beta``, ``release`` etc. but in reality,
-   if you plan on using Phabricator, which is Firefox’s preferred patch
+   if you plan on using Phabricator, which is Datalus’s preferred patch
    submission system, you only need to set up ``central``. It might be
    advisable to have access to ``inbound`` however, if you want to work
-   on a version of Firefox that is queued for release. This guide will
+   on a version of Datalus that is queued for release. This guide will
    be focused on Phabricator.
 
 .. code:: bash

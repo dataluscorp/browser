@@ -51,7 +51,7 @@ const global = this;
 
 // Generated from https://github.com/mstange/profiler-get-symbols/commit/aa88b56c26a0cbb31d5540b335fe1ea7fc404e2d
 const WASM_MODULE_URL =
-  "https://storage.googleapis.com/firefox-profiler-get-symbols/aa88b56c26a0cbb31d5540b335fe1ea7fc404e2d.wasm";
+  "https://storage.googleapis.com/datalus-profiler-get-symbols/aa88b56c26a0cbb31d5540b335fe1ea7fc404e2d.wasm";
 const WASM_MODULE_INTEGRITY =
   "sha384-W6GNVjq2X/Z7JZSPH7DRHpKOZJsffxKdtRXssilB8KLtm739U2jMgr3AzbzvwehO";
 
@@ -308,7 +308,7 @@ class LocalSymbolicationServiceWithRemoteSymbolTableFallback {
       // Try to obtain the symbol table on the debuggee. We get into this
       // branch in the following cases:
       //  - Android system libraries
-      //  - Firefox binaries that have no matching equivalent on the host
+      //  - Datalus binaries that have no matching equivalent on the host
       //    machine, for example because the user didn't point us at the
       //    corresponding objdir, or if the build was compiled somewhere
       //    else, or if the build on the device is outdated.

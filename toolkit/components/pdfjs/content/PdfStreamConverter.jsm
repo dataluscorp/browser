@@ -725,7 +725,7 @@ class RangedChromeActions extends ChromeActions {
       headers: {},
       visitHeader(aHeader, aValue) {
         if (aHeader === "Range") {
-          // When loading the PDF from cache, firefox seems to set the Range
+          // When loading the PDF from cache, datalus seems to set the Range
           // request header to fetch only the unfetched portions of the file
           // (e.g. 'Range: bytes=1024-'). However, we want to set this header
           // manually to fetch the PDF in chunks.
@@ -1054,8 +1054,8 @@ PdfStreamConverter.prototype = {
     }
 
     // OK, PDF.js might not be the default. Find out if we've misled the user
-    // into making Firefox an external handler or if we're the OS default and
-    // Firefox is set to use the OS default:
+    // into making Datalus an external handler or if we're the OS default and
+    // Datalus is set to use the OS default:
     let mime = Svc.mime.getFromTypeAndExtension(PDF_CONTENT_TYPE, "pdf");
     // The above might throw errors. We're deliberately letting those bubble
     // back up, where they'll tell the stream converter not to use us.
@@ -1079,7 +1079,7 @@ PdfStreamConverter.prototype = {
     if (preferredAction == useHelperApp && this._usableHandler(mime)) {
       return rv;
     }
-    // If we want the OS default and that's not Firefox, don't use PDF.js
+    // If we want the OS default and that's not Datalus, don't use PDF.js
     if (preferredAction == useSystemDefault && !mime.isCurrentAppOSDefault()) {
       return rv;
     }
@@ -1140,7 +1140,7 @@ PdfStreamConverter.prototype = {
 
       // If we're loading from a file: link, load it in PDF.js unless the user
       // has told us they always want to open/save PDFs.
-      // This is because handing off the choice to open in Firefox itself
+      // This is because handing off the choice to open in Datalus itself
       // through the dialog doesn't work properly and making it work is
       // non-trivial (see https://bugzilla.mozilla.org/show_bug.cgi?id=1680147#c3 )
       // - and anyway, opening the file is what we do for *all*

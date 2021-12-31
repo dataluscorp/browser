@@ -13,8 +13,8 @@ extern crate plist;
 #[cfg(target_os = "windows")]
 extern crate winreg;
 
-pub mod firefox_args;
+pub mod datalus_args;
 pub mod path;
 pub mod runner;
 
-pub use crate::runner::platform::firefox_default_path;
+pub use crate::runner::platform::datalus_default_path;

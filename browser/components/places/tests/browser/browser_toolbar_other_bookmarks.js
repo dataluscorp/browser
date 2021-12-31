@@ -7,7 +7,7 @@
 
 const bookmarksInfo = [
   {
-    title: "firefox",
+    title: "datalus",
     url: "http://example.com",
   },
   {
@@ -238,7 +238,7 @@ add_task(async function testShowingOtherBookmarksContextMenuItem() {
   info("Add bookmark to Other Bookmarks.");
   let bookmark = await PlacesUtils.bookmarks.insertTree({
     guid: PlacesUtils.bookmarks.unfiledGuid,
-    children: [{ title: "firefox", url: "http://example.com" }],
+    children: [{ title: "datalus", url: "http://example.com" }],
   });
 
   info("'Show Other Bookmarks' menu item should be checked by default.");
@@ -263,7 +263,7 @@ add_task(async function testShowingOtherBookmarksContextMenuItem() {
   info("Add a bookmark to the empty Other Bookmarks folder.");
   await PlacesUtils.bookmarks.insertTree({
     guid: PlacesUtils.bookmarks.unfiledGuid,
-    children: [{ title: "firefox", url: "http://example.com" }],
+    children: [{ title: "datalus", url: "http://example.com" }],
   });
   await testIsOtherBookmarksMenuItemShown(true);
 
@@ -315,7 +315,7 @@ add_task(async function testOtherBookmarksToolbarOverFlow() {
   // Add bookmarks to other bookmarks
   await PlacesUtils.bookmarks.insertTree({
     guid: PlacesUtils.bookmarks.unfiledGuid,
-    children: [{ title: "firefox", url: "http://example.com" }],
+    children: [{ title: "datalus", url: "http://example.com" }],
   });
 
   let newWin = await BrowserTestUtils.openNewBrowserWindow();

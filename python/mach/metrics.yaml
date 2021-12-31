@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 # If this file is changed, update the generated docs:
-# https://firefox-source-docs.mozilla.org/mach/telemetry.html#updating-generated-metrics-docs
+# https://datalus-source-docs.mozilla.org/mach/telemetry.html#updating-generated-metrics-docs
 ---
 $schema: moz://mozilla.org/schemas/glean/metrics/1-0-0
 
@@ -29,7 +29,7 @@ mach:
     description: >
       Parameters provided to mach. Absolute paths are sanitized to be relative
       to one of a few key base paths, such as the "$topsrcdir", "$topobjdir",
-      or "$HOME". For example: "/home/mozilla/dev/firefox/python/mozbuild"
+      or "$HOME". For example: "/home/mozilla/dev/datalus/python/mozbuild"
       would be replaced with "$topsrcdir/python/mozbuild".
       If a valid replacement base path cannot be found, the path is replaced
       with "<path omitted>".

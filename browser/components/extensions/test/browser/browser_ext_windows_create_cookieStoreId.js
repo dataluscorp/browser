@@ -10,7 +10,7 @@ add_task(async function no_cookies_permission() {
   let extension = ExtensionTestUtils.loadExtension({
     async background() {
       await browser.test.assertRejects(
-        browser.windows.create({ cookieStoreId: "firefox-container-1" }),
+        browser.windows.create({ cookieStoreId: "datalus-container-1" }),
         /No permission for cookieStoreId/,
         "cookieStoreId requires cookies permission"
       );
@@ -35,19 +35,19 @@ add_task(async function invalid_cookieStoreId() {
     },
     async background() {
       await browser.test.assertRejects(
-        browser.windows.create({ cookieStoreId: "not-firefox-container-1" }),
+        browser.windows.create({ cookieStoreId: "not-datalus-container-1" }),
         /Illegal cookieStoreId/,
         "cookieStoreId must be valid"
       );
 
       await browser.test.assertRejects(
-        browser.windows.create({ cookieStoreId: "firefox-private" }),
+        browser.windows.create({ cookieStoreId: "datalus-private" }),
         /Illegal to set private cookieStoreId in a non-private window/,
         "cookieStoreId cannot be private in a non-private window"
       );
       await browser.test.assertRejects(
         browser.windows.create({
-          cookieStoreId: "firefox-default",
+          cookieStoreId: "datalus-default",
           incognito: true,
         }),
         /Illegal to set non-private cookieStoreId in a private window/,
@@ -56,7 +56,7 @@ add_task(async function invalid_cookieStoreId() {
 
       await browser.test.assertRejects(
         browser.windows.create({
-          cookieStoreId: "firefox-container-1",
+          cookieStoreId: "datalus-container-1",
           incognito: true,
         }),
         /Illegal to set non-private cookieStoreId in a private window/,
@@ -84,7 +84,7 @@ add_task(async function perma_private_browsing_mode() {
     },
     async background() {
       await browser.test.assertRejects(
-        browser.windows.create({ cookieStoreId: "firefox-container-1" }),
+        browser.windows.create({ cookieStoreId: "datalus-container-1" }),
         /Contextual identities are unavailable in permanent private browsing mode/,
         "cookieStoreId cannot be a container tab ID in perma-private browsing mode"
       );
@@ -108,7 +108,7 @@ add_task(async function userContext_disabled() {
     },
     async background() {
       await browser.test.assertRejects(
-        browser.windows.create({ cookieStoreId: "firefox-container-1" }),
+        browser.windows.create({ cookieStoreId: "datalus-container-1" }),
         /Contextual identities are currently disabled/,
         "cookieStoreId cannot be a container tab ID when contextual identities are disabled"
       );
@@ -130,9 +130,9 @@ add_task(async function valid_cookieStoreId() {
     {
       description: "no explicit URL",
       createParams: {
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       },
-      expectedCookieStoreIds: ["firefox-container-1"],
+      expectedCookieStoreIds: ["datalus-container-1"],
       expectedExecuteScriptResult: [
         // Default URL is about:home, and extensions cannot run scripts in it.
         "Missing host permission for the tab",
@@ -142,27 +142,27 @@ add_task(async function valid_cookieStoreId() {
       description: "one URL",
       createParams: {
         url: "about:blank",
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       },
-      expectedCookieStoreIds: ["firefox-container-1"],
+      expectedCookieStoreIds: ["datalus-container-1"],
       expectedExecuteScriptResult: ["about:blank - null"],
     },
     {
       description: "one URL in an array",
       createParams: {
         url: ["about:blank"],
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       },
-      expectedCookieStoreIds: ["firefox-container-1"],
+      expectedCookieStoreIds: ["datalus-container-1"],
       expectedExecuteScriptResult: ["about:blank - null"],
     },
     {
       description: "two URLs in an array",
       createParams: {
         url: ["about:blank", "about:blank"],
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       },
-      expectedCookieStoreIds: ["firefox-container-1", "firefox-container-1"],
+      expectedCookieStoreIds: ["datalus-container-1", "datalus-container-1"],
       expectedExecuteScriptResult: ["about:blank - null", "about:blank - null"],
     },
   ];
@@ -280,12 +280,12 @@ add_task(async function cookieStoreId_and_tabId() {
       permissions: ["cookies"],
     },
     async background() {
-      for (let cookieStoreId of ["firefox-default", "firefox-container-1"]) {
+      for (let cookieStoreId of ["datalus-default", "datalus-container-1"]) {
         let { id: normalTabId } = await browser.tabs.create({ cookieStoreId });
 
         await browser.test.assertRejects(
           browser.windows.create({
-            cookieStoreId: "firefox-private",
+            cookieStoreId: "datalus-private",
             tabId: normalTabId,
           }),
           /`cookieStoreId` must match the tab's cookieStoreId/,
@@ -310,18 +310,18 @@ add_task(async function cookieStoreId_and_tabId() {
 
         await browser.test.assertRejects(
           browser.windows.create({
-            cookieStoreId: "firefox-default",
+            cookieStoreId: "datalus-default",
             tabId: privateTabId,
           }),
           /`cookieStoreId` must match the tab's cookieStoreId/,
           "Cannot use cookieStoreId for pre-existing tab in a private window"
         );
         let win = await browser.windows.create({
-          cookieStoreId: "firefox-private",
+          cookieStoreId: "datalus-private",
           tabId: privateTabId,
         });
         browser.test.assertEq(
-          "firefox-private",
+          "datalus-private",
           win.tabs[0].cookieStoreId,
           "Adopted private tab"
         );

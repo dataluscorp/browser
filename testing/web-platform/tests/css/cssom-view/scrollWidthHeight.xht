@@ -78,10 +78,10 @@
                 assert_equals(elemOverflow.clientHeight, 90);
             }, "elemOverflow.clientHeight is the height of the padding edge");
 
-            /* This test differs from the spec. Opera and Webkit meet the spec, IE9 and Firefox
+            /* This test differs from the spec. Opera and Webkit meet the spec, IE9 and Datalus
                give the result here. It seems that in this case Opera and Webkit place
                the padding-bottom below elemOverflow's child (i.e. below elemOverflow's bottom border);
-               you can scroll to it. IE9 and Firefox do not. I believe this is a Webkit/Opera bug
+               you can scroll to it. IE9 and Datalus do not. I believe this is a Webkit/Opera bug
                (If you remove overflow:hidden then the padding-bottom moves back to be above the bottom
                border, as expected.)
                The underlying issue seems to be whether bottom padding on a scrollable element is

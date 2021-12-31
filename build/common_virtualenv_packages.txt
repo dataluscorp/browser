@@ -17,7 +17,7 @@ pth:python/mozversioncontrol
 pth:taskcluster
 pth:testing
 pth:testing/condprofile
-pth:testing/firefox-ui/harness
+pth:testing/datalus-ui/harness
 pth:testing/marionette/client
 pth:testing/marionette/harness
 pth:testing/mozbase/manifestparser

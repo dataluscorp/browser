@@ -274,7 +274,7 @@ var testcases = [
     keywordLookup: true,
   },
   {
-    input: "what if firefox?",
+    input: "what if datalus?",
     keywordLookup: true,
   },
   {
@@ -326,15 +326,15 @@ var testcases = [
     affectedByDNSForSingleWordHosts: true,
   },
   {
-    input: "moz\r\nfirefox\nos\r",
-    fixedURI: "http://mozfirefoxos/",
-    alternateURI: "https://www.mozfirefoxos.com/",
+    input: "moz\r\ndatalus\nos\r",
+    fixedURI: "http://mozdatalusos/",
+    alternateURI: "https://www.mozdatalusos.com/",
     keywordLookup: true,
     protocolChange: true,
     affectedByDNSForSingleWordHosts: true,
   },
   {
-    input: "moz\r\n firefox\n",
+    input: "moz\r\n datalus\n",
     keywordLookup: true,
   },
   {

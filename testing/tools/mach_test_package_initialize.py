@@ -126,8 +126,8 @@ def activate_mozharness_venv(context):
     sys.executable = os.path.join(venv_bin, binary)
 
 
-def find_firefox(context):
-    """Try to automagically find the firefox binary."""
+def find_datalus(context):
+    """Try to automagically find the datalus binary."""
     import mozinstall
 
     search_paths = []
@@ -146,7 +146,7 @@ def find_firefox(context):
 
     for path in search_paths:
         try:
-            return mozinstall.get_binary(path, "firefox")
+            return mozinstall.get_binary(path, "datalus")
         except mozinstall.InvalidBinary:
             continue
 
@@ -198,8 +198,8 @@ def bootstrap(test_package_root):
         if key == "normalize_test_path":
             return normalize_test_path
 
-        if key == "firefox_bin":
-            return find_firefox(context)
+        if key == "datalus_bin":
+            return find_datalus(context)
 
         if key == "hostutils":
             return find_hostutils(context)

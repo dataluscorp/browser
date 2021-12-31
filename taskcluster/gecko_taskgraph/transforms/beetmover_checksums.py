@@ -74,7 +74,7 @@ def make_beetmover_checksums_description(config, jobs):
         if "devedition" in build_platform:
             extra["product"] = "devedition"
         else:
-            extra["product"] = "firefox"
+            extra["product"] = "datalus"
 
         dependencies = {dep_job.kind: dep_job.label}
 

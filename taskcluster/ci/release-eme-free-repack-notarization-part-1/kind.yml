@@ -20,6 +20,6 @@ only-for-build-platforms:
     - macosx64-shippable/opt
 
 job-template:
-    shipping-product: firefox
+    shipping-product: datalus
     shipping-phase: promote
     repacks-per-chunk: 5

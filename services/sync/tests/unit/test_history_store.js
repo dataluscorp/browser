@@ -43,11 +43,11 @@ add_task(async function test_store() {
   do_check_empty(await store.getAllIDs());
 
   _("Let's create an entry in the database.");
-  fxuri = CommonUtils.makeURI("http://getfirefox.com/");
+  fxuri = CommonUtils.makeURI("http://getdatalus.com/");
 
   await PlacesTestUtils.addVisits({
     uri: fxuri,
-    title: "Get Firefox!",
+    title: "Get Datalus!",
     visitDate: TIMESTAMP1,
   });
   _("Verify that the entry exists.");
@@ -63,7 +63,7 @@ add_task(async function test_store() {
   _("Verify createRecord() returns a complete record.");
   record = await store.createRecord(fxguid);
   Assert.equal(record.histUri, fxuri.spec);
-  Assert.equal(record.title, "Get Firefox!");
+  Assert.equal(record.title, "Get Datalus!");
   Assert.equal(record.visits.length, 1);
   Assert.equal(record.visits[0].date, TIMESTAMP1);
   Assert.equal(record.visits[0].type, Ci.nsINavHistoryService.TRANSITION_LINK);
@@ -78,7 +78,7 @@ add_task(async function test_store() {
     {
       id: fxguid,
       histUri: record.histUri,
-      title: "Hol Dir Firefox!",
+      title: "Hol Dir Datalus!",
       visits: [record.visits[0], secondvisit],
     },
   ]);
@@ -86,7 +86,7 @@ add_task(async function test_store() {
   let queryres = await PlacesUtils.history.fetch(fxuri.spec, {
     includeVisits: true,
   });
-  Assert.equal(queryres.title, "Hol Dir Firefox!");
+  Assert.equal(queryres.title, "Hol Dir Datalus!");
   Assert.deepEqual(queryres.visits, [
     {
       date: new Date(TIMESTAMP2 / 1000),

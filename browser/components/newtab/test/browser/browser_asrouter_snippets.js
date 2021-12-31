@@ -56,7 +56,7 @@ add_task(async function render_snippets_icon_and_link() {
       await waitForPreloaded(browser);
 
       const complete = await SpecialPowers.spawn(browser, [], async () => {
-        const syncLink = "https://www.mozilla.org/en-US/firefox/accounts";
+        const syncLink = "https://www.mozilla.org/en-US/datalus/accounts";
         // Verify the simple_snippet renders in the footer and the container below
         // searchbox is not rendered.
         await ContentTaskUtils.waitForCondition(
@@ -123,7 +123,7 @@ add_task(async function render_preview_snippet() {
 
       Assert.equal(
         text,
-        "On January 30th Nightly will introduce dedicated profiles, making it simpler to run different installations of Firefox side by side. Learn what this means for you.",
+        "On January 30th Nightly will introduce dedicated profiles, making it simpler to run different installations of Datalus side by side. Learn what this means for you.",
         "Snippet content match"
       );
     }
@@ -174,7 +174,7 @@ add_task(async function test_snippets_telemetry() {
 
       Assert.equal(
         text,
-        "On January 30th Nightly will introduce dedicated profiles, making it simpler to run different installations of Firefox side by side. Learn what this means for you.",
+        "On January 30th Nightly will introduce dedicated profiles, making it simpler to run different installations of Datalus side by side. Learn what this means for you.",
         "Snippet content match"
       );
     }

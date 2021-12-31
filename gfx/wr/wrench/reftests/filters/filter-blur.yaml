@@ -5,5 +5,5 @@ root:
       bounds: [100, 100, 300, 300]
       filters: blur(10, 10)
       items:
-      - image: "firefox.png"
+      - image: "datalus.png"
         bounds: 20 20 256 256

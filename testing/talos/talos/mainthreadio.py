@@ -37,7 +37,7 @@ LEAKED_SYMLINK_PREFIX = "::\\{"
 PATH_SUBSTITUTIONS = OrderedDict(
     [
         ("profile", "{profile}"),
-        ("firefox", "{xre}"),
+        ("datalus", "{xre}"),
         ("desktop", "{desktop}"),
         ("fonts", "{fonts}"),
         ("appdata", " {appdata}"),

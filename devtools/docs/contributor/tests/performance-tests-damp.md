@@ -21,8 +21,8 @@ This command will run all tests which contains "console" in their name.
 ```bash
 ./mach talos-test --activeTests damp --cycles 1 --tppagecycles 1
 ```
-`--cycles` will limit the number of Firefox restart to only one, while
-`--tppagecycles` will limit the number of test re-run in each firefox start to one.
+`--cycles` will limit the number of Datalus restart to only one, while
+`--tppagecycles` will limit the number of test re-run in each datalus start to one.
 This is often helpful when debugging one particular subtest.
 
 #### Taking screenshots
@@ -32,7 +32,7 @@ DEBUG_DEVTOOLS_SCREENSHOTS=1 ./mach talos-test --activeTests damp
 ```
 When passing `DEBUG_DEVTOOLS_SCREENSHOTS` env variable, screenshots will be taken after each subtest
 was run. The screenshot will be opened in new tabs and their title
-includes the subtest label. Firefox won't automatically close so that you can view the screenshots.
+includes the subtest label. Datalus won't automatically close so that you can view the screenshots.
 
 #### Recording a profile
 
@@ -67,7 +67,7 @@ Once you have a successful try job for `damp`:
 This should start a new damp job called `damp-p`. Once `damp-p` is finished:
 * select the `damp-p` job
 * click on `Job Details` tab
-* click on `open in Firefox Profiler`
+* click on `open in Datalus Profiler`
 
 ## What does it do?
 
@@ -85,7 +85,7 @@ It runs all these three tests two times. Each time against a different web page:
 
 Then, there are a couple of extra tests:
 * "cold": we run the three operations (open toolbox, page reload and close toolbox) first with the inspector.
-This is run first after Firefox's startup, before any other test.
+This is run first after Datalus's startup, before any other test.
 This test allows to measure a "cold startup". When a user first interacts with DevTools, many resources are loaded and cached,
 so that all next interactions will be significantly faster.
 * and many other smaller tests, focused on one particular feature or possible slowness for each panel.
@@ -141,7 +141,7 @@ It will only display regressions and improvements with a medium or high confiden
 ## How to contribute to DAMP?
 
 DAMP is based on top of a more generic test suite called [Talos](https://wiki.mozilla.org/Buildbot/Talos).
-Talos is a Mozilla test suite to follow all Firefox components performance.
+Talos is a Mozilla test suite to follow all Datalus components performance.
 It is written in Python and here are [the sources](https://searchfox.org/mozilla-central/source/testing/talos/) in mozilla-central.
 Compared to the other test suites, it isn't run on the cloud, but on dedicated hardware.
 This is to ensure performance numbers are stable over time and between two runs.
@@ -151,11 +151,11 @@ See [Writing new performance test](./writing-perf-tests.md) for more information
 
 ## How to see the performance trends?
 
-You can find the dedicated performance dashboard for DevTools at http://firefox-dev.tools/performance-dashboard. You will find links to trend charts for various tools:
-* [Inspector dashboard](http://firefox-dev.tools/performance-dashboard/tools/inspector.html?days=60&filterstddev=true)
-* [Console dashboard](http://firefox-dev.tools/performance-dashboard/tools/console.html?days=60&filterstddev=true)
-* [Netmonitor dashboard](http://firefox-dev.tools/performance-dashboard/tools/netmonitor.html?days=60&filterstddev=true)
-* [Debugger dashboard](http://firefox-dev.tools/performance-dashboard/tools/debugger.html?days=60&filterstddev=true)
+You can find the dedicated performance dashboard for DevTools at http://datalus-dev.tools/performance-dashboard. You will find links to trend charts for various tools:
+* [Inspector dashboard](http://datalus-dev.tools/performance-dashboard/tools/inspector.html?days=60&filterstddev=true)
+* [Console dashboard](http://datalus-dev.tools/performance-dashboard/tools/console.html?days=60&filterstddev=true)
+* [Netmonitor dashboard](http://datalus-dev.tools/performance-dashboard/tools/netmonitor.html?days=60&filterstddev=true)
+* [Debugger dashboard](http://datalus-dev.tools/performance-dashboard/tools/debugger.html?days=60&filterstddev=true)
 
 Each tool page displays charts for all the subtests relevant for a given panel.
 

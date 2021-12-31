@@ -28,7 +28,7 @@ def is_valgrind_build(cls):
 @Command(
     "valgrind-test",
     category="testing",
-    conditions=[conditions.is_firefox_or_thunderbird, is_valgrind_build],
+    conditions=[conditions.is_datalus_or_thunderbird, is_valgrind_build],
     description="Run the Valgrind test job (memory-related errors).",
 )
 @CommandArgument(
@@ -47,9 +47,9 @@ def valgrind_test(command_context, suppressions):
 
     from mozfile import TemporaryDirectory
     from mozhttpd import MozHttpd
-    from mozprofile import FirefoxProfile, Preferences
+    from mozprofile import DatalusProfile, Preferences
     from mozprofile.permissions import ServerLocations
-    from mozrunner import FirefoxRunner
+    from mozrunner import DatalusRunner
     from mozrunner.utils import findInPath
     from six import string_types
     from valgrind.output_handler import OutputHandler
@@ -94,14 +94,14 @@ def valgrind_test(command_context, suppressions):
             host="127.0.0.1", port=httpd.httpd.server_port, options="primary"
         )
 
-        profile = FirefoxProfile(
+        profile = DatalusProfile(
             profile=profilePath,
             preferences=prefs,
             addons=[quitter],
             locations=locations,
         )
 
-        firefox_args = [httpd.get_url()]
+        datalus_args = [httpd.get_url()]
 
         env = os.environ.copy()
         env["G_SLICE"] = "always-malloc"
@@ -166,10 +166,10 @@ def valgrind_test(command_context, suppressions):
         timeout = 1800
         binary_not_found_exception = None
         try:
-            runner = FirefoxRunner(
+            runner = DatalusRunner(
                 profile=profile,
                 binary=command_context.get_binary_path(),
-                cmdargs=firefox_args,
+                cmdargs=datalus_args,
                 env=env,
                 process_args=kp_kwargs,
             )

@@ -1,63 +1,63 @@
 # Rust Update Policy
 
 We document here the decision making and planning around when we update the
-Rust toolchains used and required to build Firefox.
+Rust toolchains used and required to build Datalus.
 
 This allows contributors to know when new features will be usable, and
-downstream packagers to know what toolchain will be required for each Firefox
+downstream packagers to know what toolchain will be required for each Datalus
 release. Both benefit from the predictability of a schedule. 
 
 ## Schedule
 
-Release Firefox requirements:
+Release Datalus requirements:
 
-| Firefox Version | Uses | Requires | Rust release date | Nightly Soft Freeze | Firefox release date |
+| Datalus Version | Uses | Requires | Rust release date | Nightly Soft Freeze | Datalus release date |
 |-----------------|------|----------|-------------------|---------------------|----------------------|
-| Firefox 56 | Rust 1.19.0 | 1.17.0 | 2017 April 27 | | 2017 September 26
-| Firefox 57 | Rust 1.19.0 | 1.19.0 | 2017 July 20 | | 2017 November 14
-| Firefox 58 | Rust 1.21.0 | 1.21.0 | 2017 October 12 | | 2018 January 16
-| Firefox 59 | Rust 1.22.1 | 1.22.1 | 2017 November 23 | | 2018 March 13
-| Firefox 60 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 May 9
-| Firefox 61 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 June 26
-| Firefox 62 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 September 5
-| Firefox 63 | Rust 1.28.0 | 1.28.0 | 2018 August 2 | | 2018 October 23
-| Firefox 64 | Rust 1.29.2 | 1.29.0 | 2018 September 13 | 2018 October 15 | 2018 December 11
-| Firefox 65 | Rust 1.30.0 | 1.30.0 | 2018 October 25 | 2018 December 3 | 2019 January 29
-| Firefox 66 | Rust 1.31.0 | 1.31.0 | 2018 December 6 | 2019 January 21 | 2019 March 19
-| Firefox 67 | Rust 1.32.0 | 1.32.0 | 2019 January 17 | 2019 March 11 | 2019 May 21
-| Firefox 68 | Rust 1.34.0 | 1.34.0 | 2019 April 11 | 2019 May 13 | 2019 July 9
-| Firefox 69 | Rust 1.35.0 | 1.35.0 | 2019 May 23 | 2019 July 1 | 2019 September 3
-| Firefox 70 | Rust 1.37.0 | 1.36.0 | 2019 July 4 | 2019 August 26 | 2019 October 22
-| Firefox 71 | Rust 1.37.0 | 1.37.0 | 2019 August 15 | 2019 October 14 | 2019 December 3
-| Firefox 72 | Rust 1.38.0 | 1.37.0 | 2019 August 15 | 2019 November 25 | 2020 January 7
-| Firefox 73 | Rust 1.39.0 | 1.39.0 | 2019 November 7 | 2020 January 1 | 2020 February 11
-| Firefox 74 | Rust 1.39.0 | 1.39.0 | 2019 November 7 | 2020 February 6 | 2020 March 10
-| Firefox 75 | Rust 1.41.0 | 1.41.0 | 2020 January 30 | 2020 March 5 | 2020 April 7
-| Firefox 76 | Rust 1.41.0 | 1.41.0 | 2020 January 30 | 2020 April 2 | 2020 May 5
-| Firefox 77 | Rust 1.41.1 | 1.41.0 | 2020 January 30 | 2020 April 30 | 2020 June 2
-| Firefox 78 | Rust 1.43.0 | 1.41.0 | 2020 April 23 | 2020 May 28 | 2020 June 30
-| Firefox 79 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 June 26 | 2020 July 28
-| Firefox 80 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 July 23 | 2020 August 25
-| Firefox 81 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 August 20 | 2020 September 22
-| Firefox 82 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 September 17 | 2020 October 20
-| Firefox 83 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 October 15 | 2020 November 17
-| Firefox 84 | Rust 1.47.0 | 1.43.0 | 2020 October 8 | 2020 November 12 | 2020 December 15
-| Firefox 85 | Rust 1.48.0 | 1.47.0 | 2020 November 19 | 2020 December 10 | 2021 January 26
-| Firefox 86 | Rust 1.49.0 | 1.47.0 | 2020 December 31 | 2021 January 21 | 2021 February 23
-| Firefox 87 | Rust 1.50.0 | 1.47.0 | 2021 February 11 | 2021 February 18 | 2021 March 23
-| Firefox 88 | Rust 1.50.0 | 1.47.0 | 2021 February 11 | 2021 March 18 | 2021 April 19
-| Firefox 89 | Rust 1.51.0 | 1.47.0 | 2021 March 25 | 2021 April 15 | 2021 June 1
-| Firefox 90 | Rust 1.52.0 | 1.47.0 | 2021 May 6 | 2021 May 27 | 2021 June 29
-| Firefox 91 | Rust 1.53.0 | 1.51.0 | 2021 June 17 | 2021 July 8 | 2021 August 10
-| Firefox 92 | Rust 1.54.0 | 1.51.0 | 2021 July 29 | 2021 August 5 | 2021 September 7
-| Firefox 93 | Rust 1.54.0 | 1.51.0 | 2021 July 29 | 2021 September 2 | 2021 October 5
+| Datalus 56 | Rust 1.19.0 | 1.17.0 | 2017 April 27 | | 2017 September 26
+| Datalus 57 | Rust 1.19.0 | 1.19.0 | 2017 July 20 | | 2017 November 14
+| Datalus 58 | Rust 1.21.0 | 1.21.0 | 2017 October 12 | | 2018 January 16
+| Datalus 59 | Rust 1.22.1 | 1.22.1 | 2017 November 23 | | 2018 March 13
+| Datalus 60 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 May 9
+| Datalus 61 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 June 26
+| Datalus 62 | Rust 1.24.0 | 1.24.0 | 2018 February 15 | | 2018 September 5
+| Datalus 63 | Rust 1.28.0 | 1.28.0 | 2018 August 2 | | 2018 October 23
+| Datalus 64 | Rust 1.29.2 | 1.29.0 | 2018 September 13 | 2018 October 15 | 2018 December 11
+| Datalus 65 | Rust 1.30.0 | 1.30.0 | 2018 October 25 | 2018 December 3 | 2019 January 29
+| Datalus 66 | Rust 1.31.0 | 1.31.0 | 2018 December 6 | 2019 January 21 | 2019 March 19
+| Datalus 67 | Rust 1.32.0 | 1.32.0 | 2019 January 17 | 2019 March 11 | 2019 May 21
+| Datalus 68 | Rust 1.34.0 | 1.34.0 | 2019 April 11 | 2019 May 13 | 2019 July 9
+| Datalus 69 | Rust 1.35.0 | 1.35.0 | 2019 May 23 | 2019 July 1 | 2019 September 3
+| Datalus 70 | Rust 1.37.0 | 1.36.0 | 2019 July 4 | 2019 August 26 | 2019 October 22
+| Datalus 71 | Rust 1.37.0 | 1.37.0 | 2019 August 15 | 2019 October 14 | 2019 December 3
+| Datalus 72 | Rust 1.38.0 | 1.37.0 | 2019 August 15 | 2019 November 25 | 2020 January 7
+| Datalus 73 | Rust 1.39.0 | 1.39.0 | 2019 November 7 | 2020 January 1 | 2020 February 11
+| Datalus 74 | Rust 1.39.0 | 1.39.0 | 2019 November 7 | 2020 February 6 | 2020 March 10
+| Datalus 75 | Rust 1.41.0 | 1.41.0 | 2020 January 30 | 2020 March 5 | 2020 April 7
+| Datalus 76 | Rust 1.41.0 | 1.41.0 | 2020 January 30 | 2020 April 2 | 2020 May 5
+| Datalus 77 | Rust 1.41.1 | 1.41.0 | 2020 January 30 | 2020 April 30 | 2020 June 2
+| Datalus 78 | Rust 1.43.0 | 1.41.0 | 2020 April 23 | 2020 May 28 | 2020 June 30
+| Datalus 79 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 June 26 | 2020 July 28
+| Datalus 80 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 July 23 | 2020 August 25
+| Datalus 81 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 August 20 | 2020 September 22
+| Datalus 82 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 September 17 | 2020 October 20
+| Datalus 83 | Rust 1.43.0 | 1.43.0 | 2020 April 23 | 2020 October 15 | 2020 November 17
+| Datalus 84 | Rust 1.47.0 | 1.43.0 | 2020 October 8 | 2020 November 12 | 2020 December 15
+| Datalus 85 | Rust 1.48.0 | 1.47.0 | 2020 November 19 | 2020 December 10 | 2021 January 26
+| Datalus 86 | Rust 1.49.0 | 1.47.0 | 2020 December 31 | 2021 January 21 | 2021 February 23
+| Datalus 87 | Rust 1.50.0 | 1.47.0 | 2021 February 11 | 2021 February 18 | 2021 March 23
+| Datalus 88 | Rust 1.50.0 | 1.47.0 | 2021 February 11 | 2021 March 18 | 2021 April 19
+| Datalus 89 | Rust 1.51.0 | 1.47.0 | 2021 March 25 | 2021 April 15 | 2021 June 1
+| Datalus 90 | Rust 1.52.0 | 1.47.0 | 2021 May 6 | 2021 May 27 | 2021 June 29
+| Datalus 91 | Rust 1.53.0 | 1.51.0 | 2021 June 17 | 2021 July 8 | 2021 August 10
+| Datalus 92 | Rust 1.54.0 | 1.51.0 | 2021 July 29 | 2021 August 5 | 2021 September 7
+| Datalus 93 | Rust 1.54.0 | 1.51.0 | 2021 July 29 | 2021 September 2 | 2021 October 5
 | **Estimated** |
-| Firefox 94 | Rust 1.55.0 | 1.53.0 | 2021 September 9 | 2021 September 30 | 2021 November 2
-| Firefox 95 | Rust 1.56.0 | ? | 2021 October 21 | 2021 October 28 | 2021 December 7
-| Firefox 96 | Rust 1.56.0 | ? | 2021 October 21 | 2021 December 2 | 2022 January 11
-| Firefox 97 | Rust 1.57.0 | ? | 2021 December 2 | 2022 January 6 | 2022 February 8
-| Firefox 98 | Rust 1.58.0 | ? | 2021 January 13 | 2022 February 2 | 2022 March 8
-| Firefox 99 | Rust 1.59.0 | ? | 2021 February 24 | 2022 March 3 |
+| Datalus 94 | Rust 1.55.0 | 1.53.0 | 2021 September 9 | 2021 September 30 | 2021 November 2
+| Datalus 95 | Rust 1.56.0 | ? | 2021 October 21 | 2021 October 28 | 2021 December 7
+| Datalus 96 | Rust 1.56.0 | ? | 2021 October 21 | 2021 December 2 | 2022 January 11
+| Datalus 97 | Rust 1.57.0 | ? | 2021 December 2 | 2022 January 6 | 2022 February 8
+| Datalus 98 | Rust 1.58.0 | ? | 2021 January 13 | 2022 February 2 | 2022 March 8
+| Datalus 99 | Rust 1.59.0 | ? | 2021 February 24 | 2022 March 3 |
 
 New feature adoption schedule:
 
@@ -80,16 +80,16 @@ New feature adoption schedule:
 
 ### Official builds
 
-_We ship official stable Firefox with stable Rust._
+_We ship official stable Datalus with stable Rust._
 
-Typically we build Firefox Nightly with the current stable Rust and let that
+Typically we build Datalus Nightly with the current stable Rust and let that
 configuration ride through beta to release. There have been frequent exceptions
 where we've adopted a beta Rust during the Nightly phase to address some
 platform support issue, and later updated when that Rust version became stable.
 For example, we needed to use beta Rust for our own builds when we first added
-Rust support to Firefox for Android.
+Rust support to Datalus for Android.
 
-The policy provides good stability guarantees once Firefox is in release, while
+The policy provides good stability guarantees once Datalus is in release, while
 giving us the freedom to respond to the issues experience shows we'll need to
 address during development.
 
@@ -98,7 +98,7 @@ address during development.
 _Local developer builds use whatever Rust toolchain is available on the
 system._
 
-Someone building Firefox can maintain the latest stable Rust with the `rustup`
+Someone building Datalus can maintain the latest stable Rust with the `rustup`
 for `mach bootstrap` tools, or try other variations.
 
 ### Required versions
@@ -110,7 +110,7 @@ version and the default target for official builds, while still giving tier-3
 developers some time to process toolchain updates.
 
 Downstream packagers still have 2-3 months to package each stable Rust release
-before it’s required by a new Firefox release.
+before it’s required by a new Datalus release.
 
 The stable+two weeks requirement is a rough target. We expect to hit it within
 a few days for most Rust releases. But, for example, when the target date falls
@@ -123,7 +123,7 @@ backporting security fixes may require Rust compatibility work too.
 ### Rationale
 
 We need to be fast and efficient across the whole system which includes the
-Rust, Servo, and Firefox development teams. We realise that the decisions we
+Rust, Servo, and Datalus development teams. We realise that the decisions we
 make have an impact downstream, and we want to minimise the negative aspects of
 that impact. However, we cannot do so at the expense of our own productivity.
 
@@ -133,17 +133,17 @@ influence is more effective if we can iterate quickly. Servo itself often uses
 experimental language features to give the necessary early feedback on features
 as they evolve.
 
-Rust updates every six weeks, just like Firefox. This is more like web
+Rust updates every six weeks, just like Datalus. This is more like web
 languages than native languages, but it's been great for building community. We
 (as Gecko developers) should embrace it.
 
 Many of us think of the toolchain and source code as being conceptually
 different. At this point in time, Rust is evolving much more quickly than
-Python or C++. For now it is easier to think of Rust as being part of Firefox,
+Python or C++. For now it is easier to think of Rust as being part of Datalus,
 rather than thinking of it like a C++ toolchain with decades of history which
 we we have little influence on.
 
-Official build configurations are generally part of the Firefox code itself,
+Official build configurations are generally part of the Datalus code itself,
 subject to normal review, and don't affect anyone else. Therefore it's
 straightforward to manage the Rust toolchain we use directly like any other
 change.
@@ -152,7 +152,7 @@ For contributors, we maintain a minimum supported Rust toolchain This helps
 those working on tier-3 platforms, where updating Rust can be more difficult
 than just running `rustup update`, by giving them time to adapt. However, it
 means other contributors must backport newer work to maintain compatibility. As
-more Rust code was merged into Firefox this became expensive.
+more Rust code was merged into Datalus this became expensive.
 
 Historically we bumped this minimum every 3-4 Rust releases, which also helped
 contributors on slow network connections since they didn't have to download
@@ -174,9 +174,9 @@ This would certainly speed up the feedback with language design. However, we
 would frequently encounter build breakage when unstable language features
 change. Even Servo pins to a specific nightly to avoid this problem. That’s
 appropriate for a smaller research project, but not something the size of
-Firefox.
+Datalus.
 
-We should and do test building Firefox with nightly Rust to catch compiler
+We should and do test building Datalus with nightly Rust to catch compiler
 issues, but that’s different from requiring everyone to use unstable Rust.
 
 _We require beta Rust_
@@ -191,11 +191,11 @@ with most contributors working with either stable or unstable nightly Rust.
 
 _We require the previous stable Rust once a new stable Rust is released._
 
-That is, we bump the Firefox minimum to Rust 1.n.m when rust 1.(n+1).0 stable
+That is, we bump the Datalus minimum to Rust 1.n.m when rust 1.(n+1).0 stable
 is released. This is roughly every 6 weeks, with six weeks to update before
 bumping into the new requirement. This policy might be simpler for contributors
 to remember. There's not much difference in the amount of time downstream
-packager receive for a particular Firefox release. This is a trade-off of more
+packager receive for a particular Datalus release. This is a trade-off of more
 time for tier-3 developers against people working on Gecko/Servo components
 doing extra work to maintain compatibility. As I say above, I think this is the
 wrong choice.

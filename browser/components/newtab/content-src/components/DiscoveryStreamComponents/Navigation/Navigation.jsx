@@ -97,12 +97,12 @@ export class Navigation extends React.PureComponent {
 
         {newFooterSection ? (
           <div className="ds-navigation-family">
-            <span className="icon firefox-logo" />
+            <span className="icon datalus-logo" />
             <span>|</span>
             <span className="icon pocket-logo" />
             <span
               className="ds-navigation-family-message"
-              data-l10n-id="newtab-pocket-pocket-firefox-family"
+              data-l10n-id="newtab-pocket-pocket-datalus-family"
             />
           </div>
         ) : null}

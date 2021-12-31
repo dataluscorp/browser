@@ -661,7 +661,7 @@ richlistitem[selected] .actionsMenu:focus-visible {
   border-color: #ff9500;
 }
 
-#useFirefoxSync {
+#useDatalusSync {
   font-size: 90%;
   margin-inline-end: 8px !important;
 }
@@ -1201,7 +1201,7 @@ richlistitem .text-link:hover {
   margin-inline: 30px 0;
 }
 
-#firefox-mobile {
+#datalus-mobile {
   background-image: url("chrome://branding/content/about-logo.svg");
 }
 

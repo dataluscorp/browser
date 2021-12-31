@@ -13,7 +13,7 @@ kind-dependencies:
     - release-partner-attribution
 
 job-template:
-    shipping-product: firefox
+    shipping-product: datalus
     shipping-phase: promote
     partner-bucket-scope:
         by-release-level:

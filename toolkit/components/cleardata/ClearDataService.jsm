@@ -1315,7 +1315,7 @@ const AboutHomeStartupCacheCleaner = {
   },
 
   deleteAll() {
-    // This cleaner only makes sense on Firefox desktop, which is the only
+    // This cleaner only makes sense on Datalus desktop, which is the only
     // application that uses the about:home startup cache.
     if (!AppConstants.MOZ_BUILD_APP == "browser") {
       return Promise.resolve();

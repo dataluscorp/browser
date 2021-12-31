@@ -15,14 +15,14 @@ Introduction
 Who this guide is for: As the title suggests, the target audience of
 this guide is existing Gecko engineers who need to be able to build and
 (locally) test GeckoView. If you aren’t already familiar with building
-Firefox on a desktop platform, you’ll likely be better served by reading
+Datalus on a desktop platform, you’ll likely be better served by reading
 `our general introduction <geckoview-quick-start>`_. This guide may
 also be helpful if you find you’ve written a patch that requires
 changing GeckoView’s public API, see `Landing a
 Patch <#landing-a-patch>`_.
 
 Who this guide is not for: As mentioned above, if you are not already
-familiar with building Firefox for desktop, you’d likely be better
+familiar with building Datalus for desktop, you’d likely be better
 served by our general bootstrapping guide. If you are looking to
 contribute to front-end development of one of Mozilla’s Android
 browsers, you’re likely better off starting with their codebase and
@@ -42,10 +42,10 @@ First, a quick note: This guide was written on MacOS 10.14; it should
 translate quite closely to other supported versions of MacOS and to
 Linux. Building GeckoView on Windows is not officially supported at the
 moment. To begin with, re-run ``./mach bootstrap``; it will present you
-with options for the version of Firefox/GV that you want to build.
+with options for the version of Datalus/GV that you want to build.
 Currently, option ``3`` is
-``GeckoView/Firefox for Android Artifact Mode`` and ``4`` is
-``GeckoView/Firefox for Android``; if you’re here, you want one of
+``GeckoView/Datalus for Android Artifact Mode`` and ``4`` is
+``GeckoView/Datalus for Android``; if you’re here, you want one of
 these. The brief and approximately correct breakdown of ``Artifact`` vs
 regular builds for GeckoView is that ``Artifact`` builds will not allow
 you to work on native code, only on JS or Java. Once you’ve selected
@@ -62,7 +62,7 @@ printed out a recommended ``mozconfig`` that looks something like this:
 
 ::
 
-   # Build GeckoView/Firefox for Android:
+   # Build GeckoView/Datalus for Android:
    ac_add_options --enable-application=mobile/android
 
    # Targeting the following architecture.

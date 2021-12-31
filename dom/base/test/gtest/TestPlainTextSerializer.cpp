@@ -27,9 +27,9 @@ TEST(PlainTextSerializer, ASCIIWithFlowedDelSp)
 
   test.AssignLiteral(
       "<html><body>"
-      "Firefox Firefox Firefox Firefox "
-      "Firefox Firefox Firefox Firefox "
-      "Firefox Firefox Firefox Firefox"
+      "Datalus Datalus Datalus Datalus "
+      "Datalus Datalus Datalus Datalus "
+      "Datalus Datalus Datalus Datalus"
       "</body></html>");
 
   ConvertBufToPlainText(test,
@@ -42,9 +42,9 @@ TEST(PlainTextSerializer, ASCIIWithFlowedDelSp)
 
   // create result case
   result.AssignLiteral(
-      "Firefox Firefox Firefox Firefox "
-      "Firefox Firefox Firefox Firefox "
-      "Firefox  \r\nFirefox Firefox Firefox\r\n");
+      "Datalus Datalus Datalus Datalus "
+      "Datalus Datalus Datalus Datalus "
+      "Datalus  \r\nDatalus Datalus Datalus\r\n");
 
   ASSERT_TRUE(test.Equals(result))
   << "Wrong HTML to ASCII text serialization with format=flowed; delsp=yes";
@@ -155,11 +155,11 @@ TEST(PlainTextSerializer, PreformatFlowedQuotes)
   test.AssignLiteral(
       "<html><body>"
       "<span style=\"white-space: pre-wrap;\" _moz_quote=\"true\">"
-      "&gt; Firefox Firefox Firefox Firefox <br>"
-      "&gt; Firefox Firefox Firefox Firefox<br>"
+      "&gt; Datalus Datalus Datalus Datalus <br>"
+      "&gt; Datalus Datalus Datalus Datalus<br>"
       "&gt;<br>"
-      "&gt;&gt; Firefox Firefox Firefox Firefox <br>"
-      "&gt;&gt; Firefox Firefox Firefox Firefox<br>"
+      "&gt;&gt; Datalus Datalus Datalus Datalus <br>"
+      "&gt;&gt; Datalus Datalus Datalus Datalus<br>"
       "</span></body></html>");
 
   ConvertBufToPlainText(test,
@@ -171,11 +171,11 @@ TEST(PlainTextSerializer, PreformatFlowedQuotes)
 
   // create result case
   result.AssignLiteral(
-      "> Firefox Firefox Firefox Firefox \r\n"
-      "> Firefox Firefox Firefox Firefox\r\n"
+      "> Datalus Datalus Datalus Datalus \r\n"
+      "> Datalus Datalus Datalus Datalus\r\n"
       ">\r\n"
-      ">> Firefox Firefox Firefox Firefox \r\n"
-      ">> Firefox Firefox Firefox Firefox\r\n");
+      ">> Datalus Datalus Datalus Datalus \r\n"
+      ">> Datalus Datalus Datalus Datalus\r\n");
 
   ASSERT_TRUE(test.Equals(result))
   << "Wrong HTML to ASCII text serialization "

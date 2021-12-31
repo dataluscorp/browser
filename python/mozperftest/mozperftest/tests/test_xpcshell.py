@@ -152,7 +152,7 @@ def _test_xpcshell_perfherder(*mocked):
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     assert output["framework"]["name"] == "mozperftest"
 
     # Check some numbers in our data

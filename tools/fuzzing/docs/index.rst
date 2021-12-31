@@ -141,10 +141,10 @@ find a reliable shell test long before the bug makes it into a release.
 Fuzzing is invaluable to us and I cannot imagine working on this project
 without it.”*
 
-Levels of Fuzzing in Firefox/Gecko
+Levels of Fuzzing in Datalus/Gecko
 ----------------------------------
 
-Applying fuzzing to e.g. Firefox happens at different "levels", similar
+Applying fuzzing to e.g. Datalus happens at different "levels", similar
 to the different types of automated tests we have:
 
 Full Browser Fuzzing
@@ -318,7 +318,7 @@ first place due to concurrency, some other bugs would be perfectly
 reproducible without threads, but are intermittent and hard to with
 threading enabled. If the bug is indeed caused by a data race, then
 tools like ThreadSanitizer will help and we are currently working on
-making ThreadSanitizer usable on Firefox. For bugs that are not caused
+making ThreadSanitizer usable on Datalus. For bugs that are not caused
 by threading, it sometimes makes sense to be able to disable threading
 or limit the amount of worker threads involved.
 
@@ -336,7 +336,7 @@ turned on under very specific conditions (that are not a requirement for
 the optimization), then it makes sense to add a functionality to force
 it on. Then, a fuzzer can hit the optimization code much more
 frequently, increasing the chance to find issues. Some examples from
-Firefox and SpiderMonkey:
+Datalus and SpiderMonkey:
 
 - The `FuzzingFunctions <https://searchfox.org/mozilla-central/rev/efdf9bb55789ea782ae3a431bda6be74a87b041e/dom/webidl/FuzzingFunctions.webidl#15>`__
   interface in the browser allows fuzzing tools to perform GC/CC, tune various

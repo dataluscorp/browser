@@ -6,12 +6,12 @@ const { AboutWelcomeParent } = ChromeUtils.import(
 
 const TEST_PROTON_CONTENT = [
   {
-    id: "AW_PIN_FIREFOX_STEP1",
+    id: "AW_PIN_DATALUS_STEP1",
     order: 0,
     content: {
       title: "Step 1",
       primary_button: {
-        label: "Pin Firefox",
+        label: "Pin Datalus",
         action: {
           navigate: true,
         },
@@ -60,12 +60,12 @@ add_task(async function test_AWMultistage_RemovePinScreen() {
   await pushPrefs(["browser.shell.checkDefaultBrowser", true]);
 
   const sandbox = sinon.createSandbox();
-  // Simulate Firefox as not pinned by stubbing doesAppNeedPin
+  // Simulate Datalus as not pinned by stubbing doesAppNeedPin
   const pinStub = sandbox
     .stub(AboutWelcomeParent, "doesAppNeedPin")
     .returns(true);
 
-  // Simulate Firefox as not default by stubbing isDefaultBrowser
+  // Simulate Datalus as not default by stubbing isDefaultBrowser
   sandbox.stub(AboutWelcomeParent, "isDefaultBrowser").returns(false);
 
   let browser = await openAboutWelcome();
@@ -81,7 +81,7 @@ add_task(async function test_AWMultistage_RemovePinScreen() {
   // Click primary button on first screen
   await onButtonClick(browser, "button.primary");
 
-  // Simulate Firefox app as pinned by stubbing doesAppNeedPin as false
+  // Simulate Datalus app as pinned by stubbing doesAppNeedPin as false
   pinStub.returns(false);
 
   // Test second screen content
@@ -91,7 +91,7 @@ add_task(async function test_AWMultistage_RemovePinScreen() {
     // Expected selectors:
     ["main.AW_SET_DEFAULT_STEP2"],
     // Unexpected selectors:
-    ["main.AW_PIN_FIREFOX_STEP1"]
+    ["main.AW_PIN_DATALUS_STEP1"]
   );
 
   await onButtonClick(browser, "button.secondary");
@@ -120,7 +120,7 @@ add_task(async function test_AWMultistage_RemovePinScreen() {
   await TestUtils.waitForCondition(() => browser.canGoBack);
   browser.goBack();
 
-  // Onboarding flow should have pin firefox screen removed
+  // Onboarding flow should have pin datalus screen removed
   // and have only one screen with screen id AW_ONLY_DEFAULT
   await test_screen_content(
     browser,
@@ -128,6 +128,6 @@ add_task(async function test_AWMultistage_RemovePinScreen() {
     // Expected selectors:
     ["main.AW_ONLY_DEFAULT"],
     // Unexpected selectors:
-    ["main.AW_PIN_FIREFOX_STEP1", "nav.steps"]
+    ["main.AW_PIN_DATALUS_STEP1", "nav.steps"]
   );
 });

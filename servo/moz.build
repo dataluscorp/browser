@@ -5,7 +5,7 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("components/style/**"):
     BUG_COMPONENT = ("Core", "CSS Parsing and Computation")

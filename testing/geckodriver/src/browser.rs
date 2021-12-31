@@ -3,12 +3,12 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 use crate::android::AndroidHandler;
-use crate::capabilities::FirefoxOptions;
+use crate::capabilities::DatalusOptions;
 use crate::logging;
 use crate::prefs;
 use mozprofile::preferences::Pref;
 use mozprofile::profile::{PrefFile, Profile};
-use mozrunner::runner::{FirefoxProcess, FirefoxRunner, Runner, RunnerProcess};
+use mozrunner::runner::{DatalusProcess, DatalusRunner, Runner, RunnerProcess};
 use std::fs;
 use std::path::PathBuf;
 use std::time;
@@ -36,15 +36,15 @@ impl Browser {
 }
 
 #[derive(Debug)]
-/// A local Firefox process, running on this (host) device.
+/// A local Datalus process, running on this (host) device.
 pub(crate) struct LocalBrowser {
-    process: FirefoxProcess,
+    process: DatalusProcess,
     prefs_backup: Option<PrefsBackup>,
 }
 
 impl LocalBrowser {
     pub(crate) fn new(
-        options: FirefoxOptions,
+        options: DatalusOptions,
         marionette_port: u16,
         jsdebugger: bool,
     ) -> WebDriverResult<LocalBrowser> {
@@ -53,7 +53,7 @@ impl LocalBrowser {
                 ErrorStatus::SessionNotCreated,
                 "Expected browser binary location, but unable to find \
              binary in default location, no \
-             'moz:firefoxOptions.binary' capability provided, and \
+             'moz:datalusOptions.binary' capability provided, and \
              no binary flag set on the command line",
             )
         })?;
@@ -79,7 +79,7 @@ impl LocalBrowser {
             )
         })?;
 
-        let mut runner = FirefoxRunner::new(&binary, profile);
+        let mut runner = DatalusRunner::new(&binary, profile);
 
         runner.arg("--marionette");
         if jsdebugger {
@@ -154,7 +154,7 @@ pub(crate) struct RemoteBrowser {
 
 impl RemoteBrowser {
     pub(crate) fn new(
-        options: FirefoxOptions,
+        options: DatalusOptions,
         marionette_port: u16,
         websocket_port: Option<u16>,
     ) -> WebDriverResult<RemoteBrowser> {
@@ -232,13 +232,13 @@ fn set_prefs(
     prefs.insert("marionette.port", Pref::new(port));
     prefs.insert("remote.log.level", logging::max_level().into());
 
-    // Deprecated since Firefox 91.
+    // Deprecated since Datalus 91.
     prefs.insert("marionette.log.level", logging::max_level().into());
 
     prefs.write().map_err(|e| {
         WebDriverError::new(
             ErrorStatus::UnknownError,
-            format!("Unable to write Firefox profile: {}", e),
+            format!("Unable to write Datalus profile: {}", e),
         )
     })?;
     Ok(backup_prefs)
@@ -284,7 +284,7 @@ impl PrefsBackup {
 #[cfg(test)]
 mod tests {
     use super::set_prefs;
-    use crate::capabilities::FirefoxOptions;
+    use crate::capabilities::DatalusOptions;
     use mozprofile::preferences::{Pref, PrefValue};
     use mozprofile::profile::Profile;
     use serde_json::{Map, Value};
@@ -332,17 +332,17 @@ mod tests {
             Value::String("#00ff00".into()),
         );
 
-        let mut firefox_opts = Map::new();
-        firefox_opts.insert("profile".into(), encoded_profile);
-        firefox_opts.insert("prefs".into(), Value::Object(prefs));
+        let mut datalus_opts = Map::new();
+        datalus_opts.insert("profile".into(), encoded_profile);
+        datalus_opts.insert("prefs".into(), Value::Object(prefs));
 
         let mut caps = Map::new();
-        caps.insert("moz:firefoxOptions".into(), Value::Object(firefox_opts));
+        caps.insert("moz:datalusOptions".into(), Value::Object(datalus_opts));
 
-        let opts = FirefoxOptions::from_capabilities(None, &marionette_settings, &mut caps)
+        let opts = DatalusOptions::from_capabilities(None, &marionette_settings, &mut caps)
             .expect("Valid profile and prefs");
 
-        let mut profile = opts.profile.expect("valid firefox profile");
+        let mut profile = opts.profile.expect("valid datalus profile");
 
         set_prefs(2828, &mut profile, true, opts.prefs, false).expect("set preferences");
 

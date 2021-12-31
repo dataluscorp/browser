@@ -44,7 +44,7 @@ OptimizationSchema = voluptuous.Any(*default_optimizations)
 
 def set_optimization_schema(schema_tuple):
     """Sets OptimizationSchema so it can be imported by the task transform.
-    This function is called by projects that extend Firefox's taskgraph.
+    This function is called by projects that extend Datalus's taskgraph.
     It should be called by the project's taskgraph:register function before
     any transport or job runner code is imported.
 

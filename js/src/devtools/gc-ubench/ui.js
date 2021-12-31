@@ -25,7 +25,7 @@ var enabled = { trackingSizes: false };
 
 var gMemory = performance.mozMemory?.gc || performance.mozMemory || {};
 
-var Firefox = class extends Host {
+var Datalus = class extends Host {
   start_turn() {
     // Handled by Gecko.
   }
@@ -61,7 +61,7 @@ var Firefox = class extends Host {
   };
 };
 
-var gHost = new Firefox();
+var gHost = new Datalus();
 
 function parse_units(v) {
   if (!v.length) {

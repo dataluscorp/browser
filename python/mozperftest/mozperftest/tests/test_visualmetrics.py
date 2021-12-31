@@ -68,7 +68,7 @@ def test_visual_metrics(device):
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     visual_metrics = [i["name"] for i in output["suites"][1]["subtests"]]
     assert "VisualProgress96" in visual_metrics
 

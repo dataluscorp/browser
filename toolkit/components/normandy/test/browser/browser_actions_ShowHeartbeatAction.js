@@ -319,12 +319,12 @@ add_task(async function postAnswerUrl() {
   is(
     url.searchParams.get("fxVersion"),
     Services.appinfo.version,
-    "Firefox version should be included"
+    "Datalus version should be included"
   );
   is(
     url.searchParams.get("surveyversion"),
     Services.appinfo.version,
-    "Survey version should also be the Firefox version"
+    "Survey version should also be the Datalus version"
   );
   ok(
     ["0", "1"].includes(url.searchParams.get("syncSetup")),
@@ -348,8 +348,8 @@ add_task(async function postAnswerUrl() {
   );
   is(
     url.searchParams.get("utm_source"),
-    "firefox",
-    "utm_source should be firefox"
+    "datalus",
+    "utm_source should be datalus"
   );
 });
 

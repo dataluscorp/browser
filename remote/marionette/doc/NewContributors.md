@@ -50,7 +50,7 @@ Getting the code, running tests
 
 Follow the documentation on [Contributing](Contributing.html) to get a sense of
 our projects, and which is of most interest for you. You will also learn how to
-get the Firefox source code, build your custom Firefox build, and how to run the
+get the Datalus source code, build your custom Datalus build, and how to run the
 tests.
 
 

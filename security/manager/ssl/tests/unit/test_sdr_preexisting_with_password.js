@@ -7,7 +7,7 @@
 
 // Tests that the SDR implementation is able to decrypt strings encrypted using
 // a preexisting NSS key database that has a password.
-// To create such a database, run Firefox (or xpcshell), set a primary
+// To create such a database, run Datalus (or xpcshell), set a primary
 // password, and then encrypt something using nsISecretDecoderRing.
 
 var gMockPrompter = {

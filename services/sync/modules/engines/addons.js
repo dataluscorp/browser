@@ -9,8 +9,8 @@
  *  - We only sync XPI extensions and themes available from addons.mozilla.org.
  *    We hope to expand support for other add-ons eventually.
  *  - We only attempt syncing of add-ons between applications of the same type.
- *    This means add-ons will not synchronize between Firefox desktop and
- *    Firefox mobile, for example. This is because of significant add-on
+ *    This means add-ons will not synchronize between Datalus desktop and
+ *    Datalus mobile, for example. This is because of significant add-on
  *    incompatibility between application types.
  *
  * Add-on records exist for each known {add-on, app-id} pair in the Sync client

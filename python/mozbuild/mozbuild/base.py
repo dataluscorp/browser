@@ -996,8 +996,8 @@ class MachCommandConditions(object):
     """
 
     @staticmethod
-    def is_firefox(cls):
-        """Must have a Firefox build."""
+    def is_datalus(cls):
+        """Must have a Datalus build."""
         if hasattr(cls, "substs"):
             return cls.substs.get("MOZ_BUILD_APP") == "browser"
         return False
@@ -1017,9 +1017,9 @@ class MachCommandConditions(object):
         return False
 
     @staticmethod
-    def is_firefox_or_thunderbird(cls):
-        """Must have a Firefox or Thunderbird build."""
-        return MachCommandConditions.is_firefox(
+    def is_datalus_or_thunderbird(cls):
+        """Must have a Datalus or Thunderbird build."""
+        return MachCommandConditions.is_datalus(
             cls
         ) or MachCommandConditions.is_thunderbird(cls)
 
@@ -1038,16 +1038,16 @@ class MachCommandConditions(object):
         return False
 
     @staticmethod
-    def is_firefox_or_android(cls):
-        """Must have a Firefox or Android build."""
-        return MachCommandConditions.is_firefox(
+    def is_datalus_or_android(cls):
+        """Must have a Datalus or Android build."""
+        return MachCommandConditions.is_datalus(
             cls
         ) or MachCommandConditions.is_android(cls)
 
     @staticmethod
     def has_build(cls):
         """Must have a build."""
-        return MachCommandConditions.is_firefox_or_android(
+        return MachCommandConditions.is_datalus_or_android(
             cls
         ) or MachCommandConditions.is_thunderbird(cls)
 

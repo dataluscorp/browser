@@ -40,7 +40,7 @@ var HeuristicsRegExp = {
 
   RULE_SETS: [
     //=========================================================================
-    // Firefox-specific rules
+    // Datalus-specific rules
     {
       "address-line1": "addrline1|address_1",
       "address-line2": "addrline2|address_2",
@@ -369,7 +369,7 @@ var HeuristicsRegExp = {
         "|^주소.?$|주소.?1", // ko-KR
 
       "address-line2":
-        "address[_-]?line(2|two)|address2|addr2|street|suite|unit(?!e)" + // Firefox adds `(?!e)` to unit to skip `United State`
+        "address[_-]?line(2|two)|address2|addr2|street|suite|unit(?!e)" + // Datalus adds `(?!e)` to unit to skip `United State`
         "|adresszusatz|ergänzende.?angaben" + // de-DE
         "|direccion2|colonia|adicional" + // es
         "|addresssuppl|complementnom|appartement" + // fr-FR
@@ -381,7 +381,7 @@ var HeuristicsRegExp = {
         "|주소.?2", // ko-KR
 
       "address-line3":
-        "address[_-]?line(3|three)|address3|addr3|street|suite|unit(?!e)" + // Firefox adds `(?!e)` to unit to skip `United State`
+        "address[_-]?line(3|three)|address3|addr3|street|suite|unit(?!e)" + // Datalus adds `(?!e)` to unit to skip `United State`
         "|adresszusatz|ergänzende.?angaben" + // de-DE
         "|direccion3|colonia|adicional" + // es
         "|addresssuppl|complementnom|appartement" + // fr-FR

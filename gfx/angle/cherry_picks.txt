@@ -7,7 +7,7 @@ Date:   Tue Sep 14 18:11:05 2021 -0700
     S_FALSE is success, so `SUCCEEDED(result) || result == S_FALSE` == `SUCCEEDED(result)`.
     RPC_E_CHANGED_MODE is an Error, so we should not call RoUninitialize in that case.
     
-    Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1717151
+    Datalus bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1717151
     
     Change-Id: Ia42fe38967425522964a4f27034e38e9292ab249
 
@@ -18,7 +18,7 @@ Date:   Mon Jul 19 16:46:50 2021 -0700
     Define ANGLE_IS_64_BIT_CPU in common/platform.h.
     
     This is more reliable and reduces reliance on build flags.
-    Vendoring into Firefox, it's not trivial to replicate build flags,
+    Vendoring into Datalus, it's not trivial to replicate build flags,
     but C++-native checks always work.
     
     Bug: angleproject:6186
@@ -46,10 +46,10 @@ Date:   Thu Feb 11 17:34:00 2021 -0800
 
     Don't assert for non-sampleable non-ms sources in blitRenderbufferRect if we can CopySubResource.
     
-    In Firefox, we can have a source from DirectComposition without
+    In Datalus, we can have a source from DirectComposition without
     D3D11_BIND_SHADER_RESOURCE. This is fine so long as our formats etc
     match enough to hit the CopySubResource path.
-    Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1692355
+    Datalus bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1692355
 
 commit 400476a0b2e1ba6dfa8413375e20c15c2ec9188a
 Author: Jeff Gilbert <jdashg@gmail.com>
@@ -57,7 +57,7 @@ Date:   Wed Feb 3 18:50:38 2021 -0800
 
     Add ANGLE_TRANSLATOR_ESSL_ONLY instead of using build system logic to choose.
     
-    Build system logic is really hard to handle when vendoring into Gecko for Firefox.
+    Build system logic is really hard to handle when vendoring into Gecko for Datalus.
 
 commit 406e1ed92a6fc4180257e65ec88398342a7015e7
 Author: Jeff Gilbert <jdashg@gmail.com>

@@ -158,7 +158,7 @@ class TestCrash(BaseCrashTestCase):
                 message="Expected IOError exception for content crash not raised.",
             )
 
-        # In the case of a content crash Firefox will be closed and its
+        # In the case of a content crash Datalus will be closed and its
         # returncode will report 0 (this will change with 1370520).
         self.assertEqual(self.marionette.instance.runner.returncode, 0)
 

@@ -1,4 +1,4 @@
-(self["webpackChunkfirefox_infobar_ui"] = self["webpackChunkfirefox_infobar_ui"] || []).push([[351],{
+(self["webpackChunkdatalus_infobar_ui"] = self["webpackChunkdatalus_infobar_ui"] || []).push([[351],{
 
 /***/ 1346:
 /*!********************************************************************!*\
@@ -3615,7 +3615,7 @@ function computeStackTraceFromStackProp(ex) {
             }
             else if (i === 0 && !parts[5] && ex.columnNumber !== void 0) {
                 // FireFox uses this awesome columnNumber property for its top frame
-                // Also note, Firefox's column number is 0-based and everything else expects 1-based,
+                // Also note, Datalus's column number is 0-based and everything else expects 1-based,
                 // so adding 1
                 // NOTE: this hack doesn't work if top-most frame is eval
                 stack[0].column = ex.columnNumber + 1;
@@ -24324,10 +24324,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
   if (typeof browser === "undefined" || Object.getPrototypeOf(browser) !== Object.prototype) {
     const CHROME_SEND_MESSAGE_CALLBACK_NO_RESPONSE_MESSAGE = "The message port closed before a response was received.";
     const SEND_RESPONSE_DEPRECATION_WARNING = "Returning a Promise is the preferred way to send a reply from an onMessage/onMessageExternal listener, as the sendResponse will be removed from the specs (See https://developer.mozilla.org/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)"; // Wrapping the bulk of this polyfill in a one-time-use function is a minor
-    // optimization for Firefox. Since Spidermonkey does not fully parse the
+    // optimization for Datalus. Since Spidermonkey does not fully parse the
     // contents of a function until the first time it's called, and since it will
     // never actually need to be called, this allows the polyfill to be included
-    // in Firefox nearly for free.
+    // in Datalus nearly for free.
 
     const wrapAPIs = extensionAPIs => {
       // NOTE: apiMetadata is associated to the content of the api-metadata.json file
@@ -25112,7 +25112,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
           return new Promise((resolve, reject) => {
             if (metadata.fallbackToNoCallback) {
-              // This API method has currently no callback on Chrome, but it return a promise on Firefox,
+              // This API method has currently no callback on Chrome, but it return a promise on Datalus,
               // and so the polyfill will try to call it with a callback first, and it will fallback
               // to not passing the callback if the first call fails.
               try {
@@ -25430,7 +25430,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
       }, reply) => {
         if (extensionAPIs.runtime.lastError) {
           // Detect when none of the listeners replied to the sendMessage call and resolve
-          // the promise to undefined as in Firefox.
+          // the promise to undefined as in Datalus.
           // See https://github.com/mozilla/webextension-polyfill/issues/130
           if (extensionAPIs.runtime.lastError.message === CHROME_SEND_MESSAGE_CALLBACK_NO_RESPONSE_MESSAGE) {
             resolve();

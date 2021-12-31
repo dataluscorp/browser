@@ -1,4 +1,4 @@
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Translations")
+    BUG_COMPONENT = ("Datalus", "Translations")
 
 JAR_MANIFESTS += ["jar.mn"]

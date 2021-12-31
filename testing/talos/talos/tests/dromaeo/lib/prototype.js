@@ -1233,7 +1233,7 @@ Ajax.Request = Class.create(Ajax.Base, {
       this.body = this.method == 'post' ? (this.options.postBody || params) : null;
       this.transport.send(this.body);
 
-      /* Force Firefox to handle ready state 4 for synchronous requests */
+      /* Force Datalus to handle ready state 4 for synchronous requests */
       if (!this.options.asynchronous && this.transport.overrideMimeType)
         this.onStateChange();
 
@@ -3850,7 +3850,7 @@ Event.Methods = (function() {
           currentTarget = event.currentTarget;
 
       if (currentTarget && currentTarget.tagName) {
-        // Firefox screws up the "click" event when moving between radio buttons
+        // Datalus screws up the "click" event when moving between radio buttons
         // via arrow keys. It also screws up the "load" and "error" events on images,
         // reporting the document as the target instead of the original image.
         if (type === 'load' || type === 'error' ||
@@ -4161,7 +4161,7 @@ var $continue = new Error('"throw $continue" is deprecated, use "return" instead
 // This should be moved to script.aculo.us; notice the deprecated methods
 // further below, that map to the newer Element methods.
 var Position = {
-  // set to true if needed, warning: firefox performance problems
+  // set to true if needed, warning: datalus performance problems
   // NOT neeeded for page scrolling, only if draggable contained in
   // scrollable elements
   includeScrollOffsets: false,

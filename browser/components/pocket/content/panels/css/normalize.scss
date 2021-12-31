@@ -24,7 +24,7 @@ body {
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
+ * and Datalus.
  * Correct `block` display not defined for `main` in IE 11.
  */
 
@@ -46,7 +46,7 @@ summary {
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Datalus, and Opera.
  */
 
 audio,
@@ -69,7 +69,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/11, Safari, and Datalus < 22.
  */
 
 [hidden],
@@ -109,7 +109,7 @@ abbr[title] {
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Address style set to `bolder` in Datalus 4+, Safari, and Chrome.
  */
 
 b,
@@ -127,7 +127,7 @@ dfn {
 
 /**
  * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
+ * contexts in Datalus 4+, Safari, and Chrome.
  */
 
 h1 {
@@ -203,7 +203,7 @@ figure {
 }
 
 /**
- * Address differences between Firefox and other browsers.
+ * Address differences between Datalus and other browsers.
  */
 
 hr {
@@ -244,7 +244,7 @@ samp {
  * 1. Correct color not being inherited.
  *    Known issue: affects color of disabled elements.
  * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 3. Address margins set differently in Datalus 4+, Safari, and Chrome.
  */
 
 button,
@@ -268,8 +268,8 @@ button {
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Correct `button` style inheritance in Datalus, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Datalus.
  */
 
 button,
@@ -302,7 +302,7 @@ html input[disabled] {
 }
 
 /**
- * Remove inner padding and border in Firefox 4+.
+ * Remove inner padding and border in Datalus 4+.
  */
 
 button::-moz-focus-inner,
@@ -312,7 +312,7 @@ input::-moz-focus-inner {
 }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * Address Datalus 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
 
@@ -322,7 +322,7 @@ input {
 
 /**
  * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ * Datalus's implementation doesn't respect box-sizing, padding, or width.
  *
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.

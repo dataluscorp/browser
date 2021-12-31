@@ -427,7 +427,7 @@ interface nsIApplicationUpdateService : nsISupports
   /**
    * Indicates whether or not the enterprise policy that allows only manual
    * updating is active. One of the features of this policy is not being
-   * notified of updates; you are intended to need to manually tell Firefox
+   * notified of updates; you are intended to need to manually tell Datalus
    * that you want to update each time that you want to do so.
    *
    * This policy has some implications for the way that update checks work. We
@@ -464,7 +464,7 @@ interface nsIUpdateProcessor : nsISupports
 
   /**
    * Attempts to fix the permissions of the update directory. This can be done
-   * in two ways. Firefox can attempt to fix the permissions itself, or it can
+   * in two ways. Datalus can attempt to fix the permissions itself, or it can
    * call into the maintenance service to request that it attempt to fix the
    * permissions.
    *
@@ -478,9 +478,9 @@ interface nsIUpdateProcessor : nsISupports
    * block, it will only throw if it was unable to dispatch to another thread.
    *
    * @param useServiceOnFailure
-   *        If set to false, Firefox will attempt to fix the permissions itself,
+   *        If set to false, Datalus will attempt to fix the permissions itself,
    *        but the maintenance service will not be used. If set to true and
-   *        Firefox is unable to fix the permissions itself, it will attempt to
+   *        Datalus is unable to fix the permissions itself, it will attempt to
    *        call into the maintenance service to request that it attempt to fix
    *        the permissions.
    */

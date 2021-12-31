@@ -7,8 +7,8 @@ Terminology
 **DNS-over-HTTPS (DoH)** allows DNS to be resolved with enhanced privacy, secure transfers and comparable performance. The protocol is described in `RFC 8484 <https://tools.ietf.org/html/rfc8484>`_ .
 
 
-**Trusted Recursive Resolver (TRR)** is the name of Firefox's implementation
-of the protocol and the `policy <https://wiki.mozilla.org/Security/DOH-resolver-policy>`_ that ensures only privacy-respecting DoH providers are recommended by Firefox.
+**Trusted Recursive Resolver (TRR)** is the name of Datalus's implementation
+of the protocol and the `policy <https://wiki.mozilla.org/Security/DOH-resolver-policy>`_ that ensures only privacy-respecting DoH providers are recommended by Datalus.
 
 On this page we will use DoH when referring to the protocol, and TRR when referring to the implementation.
 
@@ -19,7 +19,7 @@ DoH Rollout
 -----------
 
 **DoH Rollout** refers to the webextension code that decides whether TRR will
-be enabled automatically for users in the `rollout population <https://support.mozilla.org/kb/firefox-dns-over-https#w_about-the-us-rollout-of-dns-over-https>`_.
+be enabled automatically for users in the `rollout population <https://support.mozilla.org/kb/datalus-dns-over-https#w_about-the-us-rollout-of-dns-over-https>`_.
 
 The functioning of this module is described `here <https://wiki.mozilla.org/Security/DNS_Over_HTTPS>`_.
 
@@ -43,7 +43,7 @@ try Do53 in TRR-first mode.
 **TRRService** controls the global state and settings of the feature.
 Each individual request is performed by the **TRR** class.
 
-Since HTTP channels in Firefox normally work on the main thread, TRR uses a
+Since HTTP channels in Datalus normally work on the main thread, TRR uses a
 special implementation called **TRRServiceChannel** to avoid congestion on the
 main thread.
 
@@ -79,15 +79,15 @@ Some domains will never be resolved via TRR. This includes:
   - domains listed in the **network.trr.builtin-excluded-domains** pref (normally domains that are equal or end in *localhost* or *local*)
   - domains listed in the **network.trr.excluded-domains** pref (chosen by the user)
   - domains that are subdomains of the network's DNS suffix (for example if the network has the **lan** suffix, domains such as **computer.lan** will not use TRR)
-  - requests made by Firefox to check for the existence of a captive-portal
-  - requests made by Firefox to check the network's IPv6 capabilities
+  - requests made by Datalus to check for the existence of a captive-portal
+  - requests made by Datalus to check the network's IPv6 capabilities
   - domains listed in `/etc/hosts`
 
 Steering
 --------
 
 A small set of TRR providers are only available on certain networks. Detection is performed in DoHHeuristics.jsm followed by a call to `TRRService::SetDetectedURI`.
-This causes Firefox to use the network specific TRR provider until a network change occurs.
+This causes Datalus to use the network specific TRR provider until a network change occurs.
 
 User choice
 -----------

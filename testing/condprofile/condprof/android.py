@@ -225,12 +225,12 @@ class AndroidGeckodriver(Geckodriver):
 class AndroidEnv(BaseEnv):
     @contextlib.contextmanager
     def get_device(self, *args, **kw):
-        with device(self.firefox, *args, **kw) as d:
+        with device(self.datalus, *args, **kw) as d:
             self.device = d
             yield self.device
 
     def get_target_platform(self):
-        app = self.firefox.split("org.mozilla.")[-1]
+        app = self.datalus.split("org.mozilla.")[-1]
         if self.device_name is None:
             return app
         return "%s-%s" % (self.device_name, app)
@@ -262,7 +262,7 @@ class AndroidEnv(BaseEnv):
             options.append("-headless")
         if prefs is None:
             prefs = {}
-        return {"moz:firefoxOptions": {"args": options, "prefs": prefs}}
+        return {"moz:datalusOptions": {"args": options, "prefs": prefs}}
 
     def prepare(self, logfile):
         self.device.prepare(self.profile, logfile)

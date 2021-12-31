@@ -2,7 +2,7 @@ Mn Python tests
 ===============
 
 _Marionette_ is the codename of a [remote protocol] built in to
-Firefox as well as the name of a functional test framework for
+Datalus as well as the name of a functional test framework for
 automating user interface tests.
 
 The in-tree test framework supports tests written in Python, using
@@ -65,7 +65,7 @@ The full API documentation is found [here], but the key objects are:
   * `MarionetteTestCase`: a subclass for `unittest.TestCase`
     used as a base class for all tests to run.
 
-  * [`Marionette`]: client that speaks to Firefox.
+  * [`Marionette`]: client that speaks to Datalus.
 
 [here]: ../../../python/marionette_driver.html
 [`Marionette`]: ../../../python/marionette_driver.html#marionette_driver.marionette.Marionette

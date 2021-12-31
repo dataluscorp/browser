@@ -4,7 +4,7 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-// Non-static prefs that are specific to Firefox on Android belong in this file
+// Non-static prefs that are specific to Datalus on Android belong in this file
 // (unless there is a compelling and documented reason for them to belong in
 // another file).
 //
@@ -306,7 +306,7 @@ pref("dom.max_script_run_time", 20);
 
 // Absolute path to the devtools unix domain socket file used
 // to communicate with a usb cable via adb forward.
-pref("devtools.debugger.unix-domain-socket", "@ANDROID_PACKAGE_NAME@/firefox-debugger-socket");
+pref("devtools.debugger.unix-domain-socket", "@ANDROID_PACKAGE_NAME@/datalus-debugger-socket");
 
 pref("devtools.remote.usb.enabled", false);
 pref("devtools.remote.wifi.enabled", false);
@@ -331,9 +331,9 @@ pref("app.faqURL", "https://support.mozilla.org/1/mobile/%VERSION%/%OS%/%LOCALE%
 // This should be kept in sync with the "feedback_link" string defined in strings.xml.in
 pref("app.feedbackURL", "https://input.mozilla.org/feedback/android/%VERSION%/%CHANNEL%/?utm_source=feedback-prompt");
 
-pref("app.privacyURL", "https://www.mozilla.org/privacy/firefox/");
+pref("app.privacyURL", "https://www.mozilla.org/privacy/datalus/");
 pref("app.creditsURL", "https://www.mozilla.org/credits/");
-pref("app.channelURL", "https://www.mozilla.org/%LOCALE%/firefox/channel/");
+pref("app.channelURL", "https://www.mozilla.org/%LOCALE%/datalus/channel/");
 #if MOZ_UPDATE_CHANNEL == aurora
   pref("app.releaseNotesURL", "https://www.mozilla.com/%LOCALE%/mobile/%VERSION%/auroranotes/");
 #elif MOZ_UPDATE_CHANNEL == beta

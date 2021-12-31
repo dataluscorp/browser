@@ -44,7 +44,7 @@ inline constexpr char RLBOX_OGG_STATE_ASSERT_REASON[] =
 
 inline constexpr char RLBOX_OGG_PAGE_SERIAL_REASON[] =
     "We are checking the serial of the page. If libogg is operating correctly, "
-    "we check serial numbers to make sure the Firefox renderer is correctly "
+    "we check serial numbers to make sure the Datalus renderer is correctly "
     "passing streams to the correct source. If libogg has been corrupted, it "
     "could return an incorrect serial, however this would mean that an OGG "
     "file has intentionally corrupted data across multiple logical streams. "

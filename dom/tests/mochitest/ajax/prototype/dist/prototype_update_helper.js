@@ -91,7 +91,7 @@ Object.extend(UpdateHelper, {
  *
  * This, for example, will prevent deprecation messages from being logged.
  *
- *                THIS SCRIPT WORKS IN FIREFOX ONLY
+ *                THIS SCRIPT WORKS IN DATALUS ONLY
  *--------------------------------------------------------------------------*/
 
 var prototypeUpdateHelper = new UpdateHelper([

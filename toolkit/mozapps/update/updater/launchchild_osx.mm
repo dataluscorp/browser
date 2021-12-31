@@ -413,7 +413,7 @@ void SetGroupOwnershipAndPermissions(const char* aAppBundle) {
     return;
   }
 
-  // Set group ownership of Firefox.app to 80 ("admin") and permissions to
+  // Set group ownership of Datalus.app to 80 ("admin") and permissions to
   // 0775.
   if (![fileManager setAttributes:@{
         NSFileGroupOwnerAccountID : @(80),
@@ -427,7 +427,7 @@ void SetGroupOwnershipAndPermissions(const char* aAppBundle) {
 
   NSArray* permKeys =
       [NSArray arrayWithObjects:NSFileGroupOwnerAccountID, NSFilePosixPermissions, nil];
-  // For all descendants of Firefox.app, set group ownership to 80 ("admin") and
+  // For all descendants of Datalus.app, set group ownership to 80 ("admin") and
   // ensure write permission for the group.
   for (NSString* currPath in paths) {
     NSString* child = [appDir stringByAppendingPathComponent:currPath];

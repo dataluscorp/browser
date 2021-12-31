@@ -76,12 +76,12 @@ add_task(async function test_network_markers_service_worker_use() {
     await SpecialPowers.spawn(contentBrowser, [], async () => {
       // This request is served directly by the service worker as a synthetized response.
       await content
-        .fetch("firefox-generated.svg")
+        .fetch("datalus-generated.svg")
         .then(res => res.arrayBuffer());
 
       // This request is served by a fetch done inside the service worker.
       await content
-        .fetch("firefox-logo-nightly.svg")
+        .fetch("datalus-logo-nightly.svg")
         .then(res => res.arrayBuffer());
     });
 
@@ -113,7 +113,7 @@ add_task(async function test_network_markers_service_worker_use() {
     );
 
     const parentNetworkMarkers = getInflatedNetworkMarkers(parentThread)
-      // When we load a page, Firefox will check the service worker freshness
+      // When we load a page, Datalus will check the service worker freshness
       // after a few seconds. So when the test lasts a long time (with some test
       // environments) we might see spurious markers about that that we're not
       // interesting in in this part of the test. They're only present in the
@@ -192,7 +192,7 @@ add_task(async function test_network_markers_service_worker_use() {
       // - twice the html file -- because it's not cached by the SW, we get the
       //   marker both for the initial request and for the request initied from the
       //   SW.
-      // - twice the firefox svg file -- similar situation
+      // - twice the datalus svg file -- similar situation
       // - once the generated svg file -- this one isn't fetched by the SW but
       //   rather forged directly, so there's no "second fetch", and thus we have
       //   only one marker.
@@ -200,7 +200,7 @@ add_task(async function test_network_markers_service_worker_use() {
       //   main channel to the service worker. => 3 redirect markers more.
       Assert.equal(
         parentStopMarkers.length,
-        8, // 3 html files, 3 firefox svg files, 2 generated svg file
+        8, // 3 html files, 3 datalus svg files, 2 generated svg file
         "There should be 8 stop markers in the parent process."
       );
 
@@ -216,9 +216,9 @@ add_task(async function test_network_markers_service_worker_use() {
         htmlFetch2,
         generatedSvgIntercept,
         generatedSvgFetch,
-        firefoxSvgIntercept,
-        firefoxSvgFetch1,
-        firefoxSvgFetch2,
+        datalusSvgIntercept,
+        datalusSvgFetch1,
+        datalusSvgFetch2,
       ] = parentStopMarkers;
 
       /* ----- /HTML FILE ---- */
@@ -287,11 +287,11 @@ add_task(async function test_network_markers_service_worker_use() {
 
       /* ----- GENERATED SVG FILE ---- */
       Assert.objectContains(generatedSvgIntercept, {
-        name: Expect.stringMatches(/Load \d+:.*firefox-generated.svg/),
+        name: Expect.stringMatches(/Load \d+:.*datalus-generated.svg/),
         data: Expect.objectContainsOnly({
           type: "Network",
           status: "STATUS_REDIRECT",
-          URI: fullUrl("firefox-generated.svg"),
+          URI: fullUrl("datalus-generated.svg"),
           requestMethod: "GET",
           contentType: null,
           startTime: Expect.number(),
@@ -301,17 +301,17 @@ add_task(async function test_network_markers_service_worker_use() {
           redirectId: generatedSvgFetch.data.id,
           redirectType: "Internal",
           isHttpToHttpsRedirect: false,
-          RedirectURI: fullUrl("firefox-generated.svg"),
+          RedirectURI: fullUrl("datalus-generated.svg"),
           cache: "Unresolved",
           innerWindowID: Expect.number(),
         }),
       });
       Assert.objectContains(generatedSvgFetch, {
-        name: Expect.stringMatches(/Load \d+:.*firefox-generated.svg/),
+        name: Expect.stringMatches(/Load \d+:.*datalus-generated.svg/),
         data: Expect.objectContainsOnly({
           type: "Network",
           status: "STATUS_STOP",
-          URI: fullUrl("firefox-generated.svg"),
+          URI: fullUrl("datalus-generated.svg"),
           requestMethod: "GET",
           contentType: "image/svg+xml",
           startTime: Expect.number(),
@@ -323,32 +323,32 @@ add_task(async function test_network_markers_service_worker_use() {
       });
       /* ----- ∕GENERATED SVG FILE ---- */
       /* ----- REQUESTED SVG FILE ---- */
-      Assert.objectContains(firefoxSvgIntercept, {
-        name: Expect.stringMatches(/Load \d+:.*firefox-logo-nightly.svg/),
+      Assert.objectContains(datalusSvgIntercept, {
+        name: Expect.stringMatches(/Load \d+:.*datalus-logo-nightly.svg/),
         data: Expect.objectContainsOnly({
           type: "Network",
           status: "STATUS_REDIRECT",
-          URI: fullUrl("firefox-logo-nightly.svg"),
+          URI: fullUrl("datalus-logo-nightly.svg"),
           requestMethod: "GET",
           contentType: null,
           startTime: Expect.number(),
           endTime: Expect.number(),
           id: Expect.number(),
           pri: Expect.number(),
-          redirectId: firefoxSvgFetch1.data.id,
+          redirectId: datalusSvgFetch1.data.id,
           redirectType: "Internal",
           isHttpToHttpsRedirect: false,
-          RedirectURI: fullUrl("firefox-logo-nightly.svg"),
+          RedirectURI: fullUrl("datalus-logo-nightly.svg"),
           cache: "Unresolved",
           innerWindowID: Expect.number(),
         }),
       });
-      Assert.objectContains(firefoxSvgFetch1, {
-        name: Expect.stringMatches(/Load \d+:.*firefox-logo-nightly.svg/),
+      Assert.objectContains(datalusSvgFetch1, {
+        name: Expect.stringMatches(/Load \d+:.*datalus-logo-nightly.svg/),
         data: Expect.objectContainsOnly({
           type: "Network",
           status: "STATUS_STOP",
-          URI: fullUrl("firefox-logo-nightly.svg"),
+          URI: fullUrl("datalus-logo-nightly.svg"),
           requestMethod: "GET",
           contentType: "image/svg+xml",
           startTime: Expect.number(),
@@ -358,12 +358,12 @@ add_task(async function test_network_markers_service_worker_use() {
           innerWindowID: Expect.number(),
         }),
       });
-      Assert.objectContains(firefoxSvgFetch2, {
-        name: Expect.stringMatches(/Load \d+:.*firefox-logo-nightly.svg/),
+      Assert.objectContains(datalusSvgFetch2, {
+        name: Expect.stringMatches(/Load \d+:.*datalus-logo-nightly.svg/),
         data: Expect.objectContainsOnly({
           type: "Network",
           status: "STATUS_STOP",
-          URI: fullUrl("firefox-logo-nightly.svg"),
+          URI: fullUrl("datalus-logo-nightly.svg"),
           requestMethod: "GET",
           contentType: "image/svg+xml",
           // Because the request races with the cache, these 2 values are valid:
@@ -397,8 +397,8 @@ add_task(async function test_network_markers_service_worker_use() {
     let htmlFetch1,
       htmlFetch2,
       generatedSvgFetch1,
-      firefoxSvgFetch1,
-      firefoxSvgFetch2;
+      datalusSvgFetch1,
+      datalusSvgFetch2;
 
     // First, let's handle the case where the threads are different:
     if (serviceWorkerParentThread !== contentThread) {
@@ -406,7 +406,7 @@ add_task(async function test_network_markers_service_worker_use() {
       // 3 network markers:
       // - 1 for the HTML page
       // - 1 for the generated svg file
-      // - 1 for the firefox svg file
+      // - 1 for the datalus svg file
       // Indeed, the service worker interception is invisible from the context
       // of the web page, so we just get 3 "normal" requests. However these
       // requests will miss all timing information, because they're hidden by
@@ -417,11 +417,11 @@ add_task(async function test_network_markers_service_worker_use() {
         "There should be 3 stop markers in the content process."
       );
 
-      [htmlFetch1, generatedSvgFetch1, firefoxSvgFetch1] = contentStopMarkers;
+      [htmlFetch1, generatedSvgFetch1, datalusSvgFetch1] = contentStopMarkers;
 
       // In the service worker parent thread, we have 2 network markers:
       // - the HTML file
-      // - the firefox SVG file.
+      // - the datalus SVG file.
       // Remember that the generated SVG file is returned directly by the SW.
       Assert.equal(
         serviceWorkerStopMarkers.length,
@@ -429,7 +429,7 @@ add_task(async function test_network_markers_service_worker_use() {
         "There should be 2 stop markers in the service worker thread."
       );
 
-      [htmlFetch2, firefoxSvgFetch2] = serviceWorkerStopMarkers;
+      [htmlFetch2, datalusSvgFetch2] = serviceWorkerStopMarkers;
     } else {
       // Else case: the service worker parent thread IS the content thread
       // (note: this is always the case with fission). In that case all network
@@ -451,8 +451,8 @@ add_task(async function test_network_markers_service_worker_use() {
         htmlFetch2,
         htmlFetch1,
         generatedSvgFetch1,
-        firefoxSvgFetch1,
-        firefoxSvgFetch2,
+        datalusSvgFetch1,
+        datalusSvgFetch2,
       ] = contentStopMarkers;
     }
 
@@ -472,11 +472,11 @@ add_task(async function test_network_markers_service_worker_use() {
       }),
     });
     Assert.objectContains(generatedSvgFetch1, {
-      name: Expect.stringMatches(/Load \d+:.*firefox-generated.svg/),
+      name: Expect.stringMatches(/Load \d+:.*datalus-generated.svg/),
       data: Expect.objectContainsOnly({
         type: "Network",
         status: "STATUS_STOP",
-        URI: fullUrl("firefox-generated.svg"),
+        URI: fullUrl("datalus-generated.svg"),
         requestMethod: "GET",
         contentType: "image/svg+xml",
         startTime: Expect.number(),
@@ -486,12 +486,12 @@ add_task(async function test_network_markers_service_worker_use() {
         innerWindowID: Expect.number(),
       }),
     });
-    Assert.objectContains(firefoxSvgFetch1, {
-      name: Expect.stringMatches(/Load \d+:.*firefox-logo-nightly.svg/),
+    Assert.objectContains(datalusSvgFetch1, {
+      name: Expect.stringMatches(/Load \d+:.*datalus-logo-nightly.svg/),
       data: Expect.objectContainsOnly({
         type: "Network",
         status: "STATUS_STOP",
-        URI: fullUrl("firefox-logo-nightly.svg"),
+        URI: fullUrl("datalus-logo-nightly.svg"),
         requestMethod: "GET",
         contentType: "image/svg+xml",
         startTime: Expect.number(),
@@ -529,12 +529,12 @@ add_task(async function test_network_markers_service_worker_use() {
       }),
     });
 
-    Assert.objectContains(firefoxSvgFetch2, {
-      name: Expect.stringMatches(/Load \d+:.*firefox-logo-nightly.svg/),
+    Assert.objectContains(datalusSvgFetch2, {
+      name: Expect.stringMatches(/Load \d+:.*datalus-logo-nightly.svg/),
       data: Expect.objectContainsOnly({
         type: "Network",
         status: "STATUS_STOP",
-        URI: fullUrl("firefox-logo-nightly.svg"),
+        URI: fullUrl("datalus-logo-nightly.svg"),
         requestMethod: "GET",
         contentType: "image/svg+xml",
         startTime: Expect.number(),

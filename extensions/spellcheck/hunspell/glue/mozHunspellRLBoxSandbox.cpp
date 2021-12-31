@@ -8,7 +8,7 @@
 #include "mozHunspellRLBoxGlue.h"
 
 FileMgr::FileMgr(const char* aFilename, const char* aKey) : mFd(0) {
-  // The key is not used in firefox
+  // The key is not used in datalus
   mFd = moz_glue_hunspell_create_filemgr(aFilename);
 }
 

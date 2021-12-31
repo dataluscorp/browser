@@ -21,7 +21,7 @@ from mozbuild.base import (
     BinaryNotFoundException,
 )
 
-SUPPORTED_APPS = ["firefox", "android", "thunderbird"]
+SUPPORTED_APPS = ["datalus", "android", "thunderbird"]
 
 
 def create_parser_tests():
@@ -92,7 +92,7 @@ def marionette_test(command_context, tests, **kwargs):
             ]
 
     if not kwargs.get("binary") and (
-        conditions.is_firefox(command_context)
+        conditions.is_datalus(command_context)
         or conditions.is_thunderbird(command_context)
     ):
         try:

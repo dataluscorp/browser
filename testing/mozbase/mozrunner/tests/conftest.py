@@ -19,10 +19,10 @@ def get_binary():
         os.environ["GECKO_BINARY_PATH"] = os.environ["BROWSER_PATH"]
 
     def inner(app):
-        if app not in ("chrome", "chromium", "firefox"):
+        if app not in ("chrome", "chromium", "datalus"):
             pytest.xfail(reason="{} support not implemented".format(app))
 
-        if app == "firefox":
+        if app == "datalus":
             binary = fixtures.binary()
         elif app == "chrome":
             binary = os.environ.get("CHROME_BINARY_PATH")
@@ -36,7 +36,7 @@ def get_binary():
     return inner
 
 
-@pytest.fixture(params=["firefox", "chrome", "chromium"])
+@pytest.fixture(params=["datalus", "chrome", "chromium"])
 def runner(request, get_binary):
     app = request.param
     binary = get_binary(app)

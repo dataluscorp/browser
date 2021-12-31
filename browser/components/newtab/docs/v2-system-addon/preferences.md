@@ -116,7 +116,7 @@ Not intended for user configuration, but is programmatically updated. Used for t
   - `collapsible` (boolean): Controls whether the sections in new tab can be collapsed.
   - `enabled` (boolean): Controls whether DS is turned on and is programmatically set based on a user's locale. DS enablement is a logical `AND` of this and the value of `browser.newtabpage.activity-stream.discoverystream.enabled`.
   - `show_spocs` (boolean): Show sponsored content in new tab.
-  - `hardcoded_layout` (boolean): When this is true, a hardcoded layout shipped with Firefox will be used instead of a remotely fetched layout definition.
+  - `hardcoded_layout` (boolean): When this is true, a hardcoded layout shipped with Datalus will be used instead of a remotely fetched layout definition.
   - `personalized` (boolean): When this is `true` personalized content based on browsing history will be displayed.
   - `layout_endpoint` (string): The URL for a remote layout definition that will be used if `hardcoded_layout` is `false`.
   - `unused_key` (string): This is not set by default and is unused by this codebase. It's a standardized way to differentiate configurations to prevent experiment participants from being unenrolled.
@@ -125,7 +125,7 @@ Not intended for user configuration, but is programmatically updated. Used for t
 
 - Type: `boolean`
 - Default: `true`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 When this is set to `true` the Discovery Stream experience will show up if `enabled` is also `true` on `browser.newtabpage.activity-stream.discoverystream.config`. Otherwise the old Activity Stream experience will be shown.
 
@@ -157,7 +157,7 @@ A flag controlling the visibility of engagement labels on cards (eg: "Trending" 
 
 - Type: `boolean`
 - Default: `false`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 If this is `false` the default hardcoded layout is used, and if it's `true` then an alternate hardcoded layout (that currently simulates the older AS experience) is used.
 
@@ -181,7 +181,7 @@ Programmatically generated hash table where the keys are sponsored content IDs a
 
 - Type: `string (CSV, locales)`
 - Default: `null`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 A comma separated list of locales that by default have stories enabled in newtab. It overrides what might be in region-stories-config. So if I set this to "en-US,en-CA,en-GB", all users with a English browser would see newtab stories, even if their region was not in region-stories-config list.
 
@@ -189,7 +189,7 @@ A comma separated list of locales that by default have stories enabled in newtab
 
 - Type: `string (CSV, regions)`
 - Default: `US,DE,CA,GB,IE,CH,AT,BE`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 A comma separated list of geos that by default have stories enabled in newtab. It matches the client's geo with that list, then looks for a matching locale.
 
@@ -197,7 +197,7 @@ A comma separated list of geos that by default have stories enabled in newtab. I
 
 - Type: `string (CSV, regions)`
 - Default: `US,CA,DE`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 A comma separated list of geos that by default have spocs enabled in newtab. It matches the client's geo with that list.
 
@@ -205,7 +205,7 @@ A comma separated list of geos that by default have spocs enabled in newtab. It 
 
 - Type: `string (CSV, regions)`
 - Default: `US,CA,GB,DE,IE,CH,AT,BE`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 A comma separated list of geos that have 7 rows of stories enabled in newtab. It matches the client's geo with that list.
 
@@ -221,7 +221,7 @@ If this is `true` newtabs with stories enabled see 1 row. It is set programmatic
 
 - Type: `string (URL)`
 - Default: `null`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 Override to specify endpoint for SPOCs. Will take precedence over remote and hardcoded layout SPOC endpoints.
 
@@ -229,7 +229,7 @@ Override to specify endpoint for SPOCs. Will take precedence over remote and har
 
 - Type: `integer`
 - Default: `1`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This controls what version of personalization we should use to score newtab stories.
 
@@ -237,7 +237,7 @@ This controls what version of personalization we should use to score newtab stor
 
 - Type: `string (CSV)`
 - Default: `nb_model_arts_and_entertainment, nb_model_autos_and_vehicles, nb_model_beauty_and_fitness, nb_model_blogging_resources_and_services, nb_model_books_and_literature, nb_model_business_and_industrial, nb_model_computers_and_electronics, nb_model_finance, nb_model_food_and_drink, nb_model_games, nb_model_health, nb_model_hobbies_and_leisure, nb_model_home_and_garden, nb_model_internet_and_telecom, nb_model_jobs_and_education, nb_model_law_and_government, nb_model_online_communities, nb_model_people_and_society, nb_model_pets_and_animals, nb_model_real_estate, nb_model_reference, nb_model_science, nb_model_shopping, nb_model_sports, nb_model_travel`
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This is a configuration for personalization version 2. It is a list of topics the algorithm uses to score stories by.
 
@@ -245,7 +245,7 @@ This is a configuration for personalization version 2. It is a list of topics th
 
 - Type: `boolean`
 - Default: false
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This controls if newtab story personalization includes regular stories or not. See spocs.personalized for sponsored content.
 
@@ -253,7 +253,7 @@ This controls if newtab story personalization includes regular stories or not. S
 
 - Type: `boolean`
 - Default: true
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This controls if newtab story personalization includes sponsored content or not. See recs.personalized for regular stories.
 
@@ -261,7 +261,7 @@ This controls if newtab story personalization includes sponsored content or not.
 
 - Type: `boolean`
 - Default: true
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This controls if newtab story collections are dismissible or not.
 
@@ -269,7 +269,7 @@ This controls if newtab story collections are dismissible or not.
 
 - Type: `boolean`
 - Default: true
-- Pref Type: Firefox
+- Pref Type: Datalus
 
 This controls if the user should see newtab stories or not. It is set by the user via about:preferences#home
 

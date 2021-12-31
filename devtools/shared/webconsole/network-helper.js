@@ -108,7 +108,7 @@ const COOKIE_SAMESITE = {
  * Helper object for networking stuff.
  *
  * Most of the following functions have been taken from the Firebug source. They
- * have been modified to match the Firefox coding rules.
+ * have been modified to match the Datalus coding rules.
  */
 var NetworkHelper = {
   /**

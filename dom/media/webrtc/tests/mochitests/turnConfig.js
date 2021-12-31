@@ -9,7 +9,7 @@
  *
  * var turnServers = {
  *   local: { iceServers: [{"username":"mozilla","credential":"mozilla","url":"turn:10.0.0.1"}] },
- *   remote: { iceServers: [{"username":"firefox","credential":"firefox","url":"turn:10.0.0.2"}] }
+ *   remote: { iceServers: [{"username":"datalus","credential":"datalus","url":"turn:10.0.0.2"}] }
  * };
  */
 

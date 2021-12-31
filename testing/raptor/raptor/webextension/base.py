@@ -148,7 +148,7 @@ class WebExtension(Perftest):
 
     def set_browser_test_prefs(self, raw_prefs):
         # add test specific preferences
-        LOG.info("setting test-specific Firefox preferences")
+        LOG.info("setting test-specific Datalus preferences")
         self.profile.set_preferences(json.loads(raw_prefs))
 
     def build_browser_profile(self):
@@ -180,7 +180,7 @@ class WebExtension(Perftest):
         LOG.info("installing webext %s" % self.raptor_webext)
         self.profile.addons.install(self.raptor_webext)
 
-        # on firefox we can get an addon id; chrome addon actually is just cmd line arg
+        # on datalus we can get an addon id; chrome addon actually is just cmd line arg
         try:
             self.webext_id = self.profile.addons.addon_details(self.raptor_webext)["id"]
         except AttributeError:
@@ -195,7 +195,7 @@ class WebExtension(Perftest):
             return
 
         LOG.info("removing webext %s" % self.raptor_webext)
-        if self.config["app"] in ["firefox", "geckoview", "refbrow", "fenix"]:
+        if self.config["app"] in ["datalus", "geckoview", "refbrow", "fenix"]:
             self.profile.addons.remove_addon(self.webext_id)
 
         # for chrome the addon is just a list (appended to cmd line)

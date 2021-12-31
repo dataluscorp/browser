@@ -639,7 +639,7 @@ bool VRDisplayClient::IsReferenceSpaceTypeSupported(
    *
    * We do not yet support local or local-floor for inline sessions.
    * This could be expanded if we later support WebXR for inline-ar
-   * sessions on Firefox Fenix.
+   * sessions on Datalus Fenix.
    *
    * We do not yet support unbounded reference spaces.
    */

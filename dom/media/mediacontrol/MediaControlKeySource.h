@@ -91,7 +91,7 @@ class MediaControlKeySource {
   /**
    * All following `SetXXX()` functions are used to update the playback related
    * properties change from a specific tab, which can represent the playback
-   * status for Firefox instance. Even if we have multiple tabs playing media at
+   * status for Datalus instance. Even if we have multiple tabs playing media at
    * the same time, we would only update information from one of that tabs that
    * would be done by `MediaControlService`.
    */

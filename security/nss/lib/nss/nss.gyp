@@ -20,7 +20,7 @@
       ]
     },
     {
-      # This is here so Firefox can link this without having to
+      # This is here so Datalus can link this without having to
       # repeat the list of dependencies.
       'target_name': 'nss3_deps',
       'type': 'none',

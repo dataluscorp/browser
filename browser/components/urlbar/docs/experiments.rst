@@ -8,7 +8,7 @@ The primary purpose right now for writing address bar extensions is to run
 address bar experiments. But extensions are useful outside of experiments, and
 not all experiments use extensions.
 
-Like all Firefox extensions, address bar extensions use the WebExtensions_
+Like all Datalus extensions, address bar extensions use the WebExtensions_
 framework.
 
 .. _WebExtensions: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions
@@ -21,8 +21,8 @@ framework.
 WebExtensions
 -------------
 
-**WebExtensions** is the name of Firefox's extension architecture. The "web"
-part of the name hints at the fact that Firefox extensions are built using Web
+**WebExtensions** is the name of Datalus's extension architecture. The "web"
+part of the name hints at the fact that Datalus extensions are built using Web
 technologies: JavaScript, HTML, CSS, and to a certain extent the DOM.
 
 Individual extensions themselves often are referred to as *WebExtensions*. For
@@ -30,7 +30,7 @@ clarity and conciseness, this document will refer to WebExtensions as
 *extensions*.
 
 Why are we interested in extensions? Mainly because they're a powerful way to
-run experiments in Firefox. See Experiments_ for more on that. In addition, we'd
+run experiments in Datalus. See Experiments_ for more on that. In addition, we'd
 also like to build up a robust set of APIs useful to extension authors, although
 right now the API can only be used by Mozilla extensions.
 
@@ -58,7 +58,7 @@ to know:
 * However, there is a big difference between the two when it comes to setting up
   your extension to use them. This is discussed next.
 
-The ``browser.urlbar`` API namespace is built into Firefox. It's a
+The ``browser.urlbar`` API namespace is built into Datalus. It's a
 **privileged API**, which means that only Mozilla-signed and temporarily
 installed extensions can use it. The only thing your Mozilla extension needs to
 do in order to use it is to request the ``urlbar`` permission in its
@@ -100,7 +100,7 @@ these two API namespaces. For information on running the extensions you develop
 that use these namespaces, see `Running Address Bar Extensions`_.
 
 .. _urlbarPermissionExample: https://github.com/0c0w3/urlbar-top-sites-experiment/blob/ac1517118bb7ee165fb9989834514b1082575c10/src/manifest.json#L24
-.. _webextAPIImplBasicsDoc: https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html
+.. _webextAPIImplBasicsDoc: https://datalus-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html
 .. _api.js: https://searchfox.org/mozilla-central/source/browser/components/urlbar/tests/ext/api.js
 .. _schema.json: https://searchfox.org/mozilla-central/source/browser/components/urlbar/tests/ext/schema.json
 __ https://github.com/0c0w3/dynamic-result-type-extension/tree/master/src/experiments/urlbar
@@ -132,17 +132,17 @@ Workflow
 
 The web-ext_ command-line tool makes the extension-development workflow very
 simple. Simply start it with the *run* command, passing it the location of the
-Firefox binary you want to use. web-ext will launch your Firefox and remain
+Datalus binary you want to use. web-ext will launch your Datalus and remain
 running until you stop it, watching for changes you make to your extension's
 files. When it sees a change, it automatically reloads your extension — in
-Firefox, in the background — without your having to do anything. It's really
+Datalus, in the background — without your having to do anything. It's really
 nice.
 
 The `web-ext documentation <web-ext commands_>`__ lists all its options, but
 here are some worth calling out for the *run* command:
 
 ``--browser-console``
-  Automatically open the browser console when Firefox starts. Very useful for
+  Automatically open the browser console when Datalus starts. Very useful for
   watching your extension's console logging. (Make sure "Show Content Messages"
   is checked in the console.)
 
@@ -154,8 +154,8 @@ here are some worth calling out for the *run* command:
   option along with ``-p`` to reuse the same profile again and again.
 
 ``--verbose``
-  web-ext suppresses Firefox messages in the terminal unless you pass this
-  option. If you've added some ``dump`` calls in Firefox because you're working
+  web-ext suppresses Datalus messages in the terminal unless you pass this
+  option. If you've added some ``dump`` calls in Datalus because you're working
   on a new ``browser.urlbar`` API, for example, you won't see them without this.
 
 web-ext also has a *build* command that packages your extension's files into a
@@ -179,7 +179,7 @@ Automated Tests
 ~~~~~~~~~~~~~~~
 
 It's possible to write `browser chrome mochitests`_ for your extension the same
-way we write tests for Firefox. One of the example extensions linked throughout
+way we write tests for Datalus. One of the example extensions linked throughout
 this document includes a test_, for instance.
 
 See the readme in the example-addon-experiment_ repo for a workflow.
@@ -192,7 +192,7 @@ Cookbook
 
 *To be written.* For now, you can find example uses of ``browser.experiments.urlbar`` and ``browser.urlbar`` in the following repos:
 
-* https://github.com/mozilla-extensions/firefox-quick-suggest-weather
+* https://github.com/mozilla-extensions/datalus-quick-suggest-weather
 * https://github.com/0c0w3/urlbar-tips-experiment
 * https://github.com/0c0w3/urlbar-top-sites-experiment
 * https://github.com/0c0w3/urlbar-search-interventions-experiment
@@ -216,23 +216,23 @@ Built-In APIs vs. Experimental APIs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Originally we developed the address bar extension API in the ``browser.urlbar``
-namespace, which is built into Firefox as discussed above. By "built into
-Firefox," we mean that the API is developed in `mozilla-central
-<urlbar.json_>`__ and shipped inside Firefox just like any other Firefox
+namespace, which is built into Datalus as discussed above. By "built into
+Datalus," we mean that the API is developed in `mozilla-central
+<urlbar.json_>`__ and shipped inside Datalus just like any other Datalus
 feature. At the time, that seemed like the right thing to do because we wanted
 to build an API that ultimately could be used by all extension authors, not only
 Mozilla.
 
 However, there were a number of disadvantages to this development model. The
 biggest was that it tightly coupled our experiments to specific versions of
-Firefox. For example, if we were working on an experiment that targeted Firefox
+Datalus. For example, if we were working on an experiment that targeted Datalus
 72, then any APIs used by that experiment needed to land and ship in 72. If we
 weren't able to finish an API by the time 72 shipped, then the experiment would
 have to be postponed until 73. Our experiment development timeframes were always
 very short because we always wanted to ship our experiments ASAP. Often we
-targeted the Firefox version that was then in Nightly; sometimes we even
+targeted the Datalus version that was then in Nightly; sometimes we even
 targeted the version in Beta. Either way, it meant that we were always uplifting
-patch after patch to Beta. This tight coupling between Firefox versions and
+patch after patch to Beta. This tight coupling between Datalus versions and
 experiments erased what should have been a big advantage of implementing
 experiments as extensions in the first place: the ability to ship experiments
 outside the usual cyclical release process.
@@ -247,18 +247,18 @@ For these reasons, we stopped developing ``browser.urlbar`` and created the
 ``browser.experiments.urlbar`` experimental API. As discussed earlier,
 experimental APIs are APIs that are bundled inside extensions. Experimental APIs
 can do anything that built-in APIs can do with the added flexibility of not
-being tied to specific versions of Firefox.
+being tied to specific versions of Datalus.
 
 Adding New APIs
 ~~~~~~~~~~~~~~~
 
 All new address bar APIs should be added to ``browser.experiments.urlbar``.
-Although this API does not ship in Firefox, it's currently developed in
+Although this API does not ship in Datalus, it's currently developed in
 mozilla-central, in `browser/components/urlbar/tests/ext/ <extDirectory_>`__ --
 note the "tests" subdirectory. Developing it in mozilla-central lets us take
 advantage of our usual build and testing infrastructure. This way we have API
 tests running against each mozilla-central checkin, against all versions of
-Firefox that are tested on Mozilla's infrastructure, and we're alerted to any
+Datalus that are tested on Mozilla's infrastructure, and we're alerted to any
 breaking changes we accidentally make. When we start a new extension repo, we
 copy schema.json and api.js to it as described earlier (or clone an example repo
 with up-to-date copies of these files).
@@ -290,7 +290,7 @@ Schema
   .. _toolkit/components/extensions/schemas: https://searchfox.org/mozilla-central/source/toolkit/components/extensions/schemas/
 
 Internals
-  Every API hooks into some internal part of Firefox. For the address bar API,
+  Every API hooks into some internal part of Datalus. For the address bar API,
   that's the Urlbar implementation in `browser/components/urlbar`_.
 
   .. _browser/components/urlbar: https://searchfox.org/mozilla-central/source/browser/components/urlbar/
@@ -300,7 +300,7 @@ Glue
   schema. Essentially, this code mediates between the previous two pieces. It
   translates the function calls, property accesses, and event listener
   registrations made by extensions using the public-facing API into terms that
-  the Firefox internals understand, and vice versa.
+  the Datalus internals understand, and vice versa.
 
   For ``browser.experiments.urlbar``, this is api.js_, and for
   ``browser.urlbar``, it's ext-urlbar.js_.
@@ -326,7 +326,7 @@ Further Reading
 `WebExtensions API implementation documentation <webextAPIImplDoc_>`__
   Detailed info on implementing a WebExtensions API.
 
-.. _webextAPIImplDoc: https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/
+.. _webextAPIImplDoc: https://datalus-source-docs.mozilla.org/toolkit/components/extensions/webextensions/
 
 Running Address Bar Extensions
 ------------------------------
@@ -336,7 +336,7 @@ privileged APIs. There are two different points to consider when it comes to
 running an extension that uses privileged APIs: loading the extension in the
 first place, and granting it access to privileged APIs. There's a certain bar
 for loading any extension regardless of its API usage that depends on its signed
-state and the Firefox build you want to run it in. There's yet a higher bar for
+state and the Datalus build you want to run it in. There's yet a higher bar for
 granting it access to privileged APIs. This section discusses how to load
 extensions so that they can access privileged APIs.
 
@@ -346,11 +346,11 @@ are three particular signed states relevant to us:
 Unsigned
   There are two ways to run unsigned extensions that use privileged APIs.
 
-  They can be loaded temporarily using a Firefox Nightly build or
+  They can be loaded temporarily using a Datalus Nightly build or
   Developer Edition but not Beta or Release [source__], and the
   ``extensions.experiments.enabled`` preference must be set to true [source__].
   You can load extensions temporarily by visiting
-  about:debugging#/runtime/this-firefox and clicking "Load Temporary Add-on."
+  about:debugging#/runtime/this-datalus and clicking "Load Temporary Add-on."
   `web-ext <Workflow_>`__ also loads extensions temporarily.
 
   __ https://searchfox.org/mozilla-central/rev/053826b10f838f77c27507e5efecc96e34718541/toolkit/components/extensions/Extension.jsm#1884
@@ -376,7 +376,7 @@ Signed for testing (Signed for QA)
   Signed-for-testing extensions that use privileged APIs can be run using the
   same techniques for running unsigned extensions.
 
-  They can also be loaded normally (not temporarily) if you use a Firefox build
+  They can also be loaded normally (not temporarily) if you use a Datalus build
   where the build-time setting ``AppConstants.MOZ_REQUIRE_SIGNING`` is false and
   you set the ``xpinstall.signatures.dev-root`` pref to true
   [source__]. ``xpinstall.signatures.dev-root`` does not exist by default and
@@ -391,7 +391,7 @@ Signed for testing (Signed for QA)
 
 Signed for release
   Signed-for-release extensions that use privileged APIs can be run in any
-  Firefox build with no special requirements.
+  Datalus build with no special requirements.
 
   You encounter extensions that are signed for release when you are writing
   extensions for experiments. See the Experiments_ section for details.
@@ -404,7 +404,7 @@ Signed for release
 Experiments
 -----------
 
-**Experiments** let us try out ideas in Firefox outside the usual release cycle
+**Experiments** let us try out ideas in Datalus outside the usual release cycle
 and on particular populations of users.
 
 For example, say we have a hunch that the top sites shown on the new-tab page
@@ -415,7 +415,7 @@ an extension that does just that, make sure it collects telemetry that will help
 us answer our question, ship it outside the usual release cycle to a small
 percentage of Beta users, collect and analyze the telemetry, and determine
 whether the experiment was successful. If it was, then we might want to ship the
-feature to all Firefox users.
+feature to all Datalus users.
 
 Experiments sometimes are also called **studies** (not to be confused with *user
 studies*, which are face-to-face interviews with users conducted by user
@@ -467,9 +467,9 @@ can implement all branches in the same extension or each branch in its own
 extension.
 
 Experiments are delivered to users by a system called **Normandy**. Normandy
-comprises a client side that lives in Firefox and a server side. In Normandy,
+comprises a client side that lives in Datalus and a server side. In Normandy,
 experiments are defined server-side in files called **recipes**. Recipes include
-information about the experiment like the Firefox release channel and version
+information about the experiment like the Datalus release channel and version
 that the experiment targets, the number of users to be included in the
 experiment, the branches in the experiment, the percentage of users on each
 branch, and so on.
@@ -486,7 +486,7 @@ could be be shipped as extensions too.
 Further Reading
 ~~~~~~~~~~~~~~~
 
-`Pref-Flip and Add-On Experiments <https://mana.mozilla.org/wiki/pages/viewpage.action?spaceKey=FIREFOX&title=Pref-Flip+and+Add-On+Experiments>`__
+`Pref-Flip and Add-On Experiments <https://mana.mozilla.org/wiki/pages/viewpage.action?spaceKey=DATALUS&title=Pref-Flip+and+Add-On+Experiments>`__
   A comprehensive document on experiments from the Experimenter team. See the
   child pages in the sidebar, too.
 
@@ -526,7 +526,7 @@ This section describes an experiment's life cycle.
    * A bug in `Data Science :: Experiment Collaboration`__ so that data science
      can track the work and discuss telemetry (engineering might file this one)
 
-   __ https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&bug_ignored=0&bug_severity=normal&bug_status=NEW&bug_type=task&cf_firefox_messaging_system=---&cf_fx_iteration=---&cf_fx_points=---&comment=%23%23%20Brief%20Description%20of%20the%20request%20%28required%29%3A%0D%0A%0D%0A%23%23%20Business%20purpose%20for%20this%20request%20%28required%29%3A%0D%0A%0D%0A%23%23%20Requested%20timelines%20for%20the%20request%20or%20how%20this%20fits%20into%20roadmaps%20or%20critical%20decisions%20%28required%29%3A%0D%0A%0D%0A%23%23%20Links%20to%20any%20assets%20%28e.g%20Start%20of%20a%20PHD%2C%20BRD%3B%20any%20document%20that%20helps%20describe%20the%20project%29%3A%0D%0A%0D%0A%23%23%20Name%20of%20Data%20Scientist%20%28If%20Applicable%29%3A%0D%0A%0D%0A%2APlease%20note%20if%20it%20is%20found%20that%20not%20enough%20information%20has%20been%20given%20this%20will%20delay%20the%20triage%20of%20this%20request.%2A&component=Experiment%20Collaboration&contenttypemethod=list&contenttypeselection=text%2Fplain&filed_via=standard_form&flag_type-4=X&flag_type-607=X&flag_type-800=X&flag_type-803=X&flag_type-936=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Data%20Science&rep_platform=Unspecified&target_milestone=---&version=unspecified
+   __ https://bugzilla.mozilla.org/enter_bug.cgi?assigned_to=nobody%40mozilla.org&bug_ignored=0&bug_severity=normal&bug_status=NEW&bug_type=task&cf_datalus_messaging_system=---&cf_fx_iteration=---&cf_fx_points=---&comment=%23%23%20Brief%20Description%20of%20the%20request%20%28required%29%3A%0D%0A%0D%0A%23%23%20Business%20purpose%20for%20this%20request%20%28required%29%3A%0D%0A%0D%0A%23%23%20Requested%20timelines%20for%20the%20request%20or%20how%20this%20fits%20into%20roadmaps%20or%20critical%20decisions%20%28required%29%3A%0D%0A%0D%0A%23%23%20Links%20to%20any%20assets%20%28e.g%20Start%20of%20a%20PHD%2C%20BRD%3B%20any%20document%20that%20helps%20describe%20the%20project%29%3A%0D%0A%0D%0A%23%23%20Name%20of%20Data%20Scientist%20%28If%20Applicable%29%3A%0D%0A%0D%0A%2APlease%20note%20if%20it%20is%20found%20that%20not%20enough%20information%20has%20been%20given%20this%20will%20delay%20the%20triage%20of%20this%20request.%2A&component=Experiment%20Collaboration&contenttypemethod=list&contenttypeselection=text%2Fplain&filed_via=standard_form&flag_type-4=X&flag_type-607=X&flag_type-800=X&flag_type-803=X&flag_type-936=X&form_name=enter_bug&maketemplate=Remember%20values%20as%20bookmarkable%20template&op_sys=Unspecified&priority=--&product=Data%20Science&rep_platform=Unspecified&target_milestone=---&version=unspecified
 
 5. Engineering breaks down the work and files bugs. There's another engineering
    meeting to discuss the breakdown, or it's discussed asynchronously.
@@ -618,7 +618,7 @@ study the user is currently enrolled in or null if there isn't one. (Recall that
 *study* is a synonym for *experiment*.) One of the first things an experiment
 extension typically does is to call this function.
 
-The Normandy client in Firefox will keep an experiment extension installed only
+The Normandy client in Datalus will keep an experiment extension installed only
 while the experiment is active. Therefore, ``getStudy`` should always return a
 non-null study object. Nevertheless, the study object has an ``active`` boolean
 property that's trivial to sanity check. (The example extension does.)
@@ -683,7 +683,7 @@ so they can test it.
 
 Taking the previous point even further, if your experiment will require a
 substantial new API(s), you might think about prototyping the experiment
-entirely in a custom Firefox build before designing the API at all. Give it to
+entirely in a custom Datalus build before designing the API at all. Give it to
 your UX person. Let them disect it and tell you all the problems with it. Fill
 in all the gaps in your understanding, and then design the API. We've never
 actually done this, though.

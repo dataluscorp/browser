@@ -40,7 +40,7 @@ use std::ops::Add;
 use std::time::{Duration, Instant};
 
 
-/// At the time of this writing, Firefox uses about 15 GPU cache rows on
+/// At the time of this writing, Datalus uses about 15 GPU cache rows on
 /// startup, and then gradually works its way up to the mid-30s with normal
 /// browsing.
 pub const GPU_CACHE_INITIAL_HEIGHT: i32 = 20;

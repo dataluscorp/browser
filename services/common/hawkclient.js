@@ -15,7 +15,7 @@
  * timestamps to reduce the possibility of replay attacks.  However, it is
  * likely that some clients' clocks will be more than a little off, especially
  * in mobile devices, which would break HAWK-based services (like sync and
- * firefox accounts) for those clients.
+ * datalus accounts) for those clients.
  *
  * This library provides a stateful HAWK client that calculates (roughly) the
  * clock delta on the client vs the server.  The library provides an interface

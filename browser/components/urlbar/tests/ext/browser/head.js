@@ -8,13 +8,13 @@
  * central, which have continuous test coverage [1], our WebExtension Experiment
  * APIs would not have continuous test coverage were it not for the fact that we
  * copy and test them here.  This is especially useful for APIs that are used in
- * experiments that target multiple versions of Firefox, and for APIs that are
+ * experiments that target multiple versions of Datalus, and for APIs that are
  * reused in multiple experiments.  See [2] and [3] for more info on
  * experiments.
  *
  * [1] See browser/components/extensions/test
  * [2] browser/components/urlbar/docs/experiments.rst
- * [3] https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html#webextensions-experiments
+ * [3] https://datalus-source-docs.mozilla.org/toolkit/components/extensions/webextensions/basics.html#webextensions-experiments
  */
 
 "use strict";

@@ -129,7 +129,7 @@ __attribute__((weak)) thread::_State::~_State() = default;
 // but we wouldn't be able to change its visibility because of the existing
 // definition in C++ headers. We do need to change its visibility because we
 // don't want it to be shadowing the one provided by libstdc++ itself, because
-// it doesn't support RTTI. Not supporting RTTI doesn't matter for Firefox
+// it doesn't support RTTI. Not supporting RTTI doesn't matter for Datalus
 // itself because it's built with RTTI disabled.
 // So we define via the mangled symbol.
 // This avoids the GLIBCXX_3.4.26 symbol version.

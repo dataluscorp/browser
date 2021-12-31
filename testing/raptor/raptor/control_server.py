@@ -387,7 +387,7 @@ class RaptorControlServer:
         self.kill_thread.start()
 
     def handle_gecko_profile(self, filename):
-        # Move the stored profile to a location outside the Firefox profile
+        # Move the stored profile to a location outside the Datalus profile
         source_path = os.path.join(self.user_profile.profile, "profiler", filename)
         target_path = os.path.join(self.gecko_profile_dir, filename)
         shutil.move(source_path, target_path)

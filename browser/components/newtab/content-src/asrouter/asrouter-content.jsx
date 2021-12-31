@@ -259,7 +259,7 @@ export class ASRouterUISurface extends React.PureComponent {
   async onUserAction(action) {
     switch (action.type) {
       // This needs to be handled locally because its
-      case "ENABLE_FIREFOX_MONITOR":
+      case "ENABLE_DATALUS_MONITOR":
         const url = await this.getMonitorUrl(action.data.args);
         ASRouterUtils.executeAction({ type: "OPEN_URL", data: { args: url } });
         break;

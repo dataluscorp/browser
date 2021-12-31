@@ -18,19 +18,19 @@ is maintained to keep track of all the bugs found with ASan.
 Downloading artifact builds
 ---------------------------
 
-For Linux and Windows users, the easiest way to get Firefox builds with
+For Linux and Windows users, the easiest way to get Datalus builds with
 Address Sanitizer is to download a continuous integration asan build of
 mozilla-central (updated at least daily):
 
 -  mozilla-central optimized builds:
-   `linux <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.firefox.linux64-asan-opt/artifacts/public/build/target.tar.bz2>`__
+   `linux <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.datalus.linux64-asan-opt/artifacts/public/build/target.tar.bz2>`__
    \|
-   `windows <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.firefox.win64-asan-opt/artifacts/public/build/target.zip>`__
+   `windows <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.datalus.win64-asan-opt/artifacts/public/build/target.zip>`__
    (recommended for testing)
 -  mozilla-central debug builds:
-   `linux <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.firefox.linux64-asan-debug/artifacts/public/build/target.tar.bz2>`__
+   `linux <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.datalus.linux64-asan-debug/artifacts/public/build/target.tar.bz2>`__
    \|
-   `windows <https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.firefox.win64-asan-debug/artifacts/public/build/target.zip>`__
+   `windows <https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/gecko.v2.mozilla-central.latest.datalus.win64-asan-debug/artifacts/public/build/target.zip>`__
    (recommended for debugging if the optimized builds don't do the job)
 
 The fuzzing team also offers a tool called ``fuzzfetch`` to download these and many
@@ -45,9 +45,9 @@ Afterwards, you can run e.g.
 
 ::
 
-   $ python -m fuzzfetch --asan -n firefox-asan
+   $ python -m fuzzfetch --asan -n datalus-asan
 
-to get the optimized Linux ASan build mentioned above unpacked into a directory called ``firefox-asan``.
+to get the optimized Linux ASan build mentioned above unpacked into a directory called ``datalus-asan``.
 The ``--debug`` and ``--os`` switches can be used to get the other variants listed above.
 
 Creating Try builds
@@ -55,7 +55,7 @@ Creating Try builds
 
 If for some reason you can't use the pre-built binaries mentioned in the
 previous section (e.g. you want a non-Linux build or you need to test a
-patch), you can either build Firefox yourself (see the following
+patch), you can either build Datalus yourself (see the following
 section) or use the :ref:`try server <Pushing to Try>` to
 create the customized build for you. Pushing to try requires L1 commit
 access. If you don't have this access yet you can request access (see
@@ -120,10 +120,10 @@ LLVM/Clang
 ^^^^^^^^^^
 
 The ASan instrumentation is implemented as an LLVM pass and integrated
-into Clang. Any clang version that is capable of compiling Firefox has
+into Clang. Any clang version that is capable of compiling Datalus has
 everything needed to do an ASAN build.
 
-Building Firefox
+Building Datalus
 ~~~~~~~~~~~~~~~~
 
 Getting the source
@@ -185,7 +185,7 @@ Starting the build process
 Now you start the build process using the regular ``./mach build``
 command.
 
-Starting Firefox
+Starting Datalus
 ^^^^^^^^^^^^^^^^
 
 After the build has completed, ``./mach run`` with the usual options for
@@ -196,7 +196,7 @@ Building only the JavaScript shell
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you want to build only the JavaScript shell instead of doing a full
-Firefox build, the build script below will probably help you to do so.
+Datalus build, the build script below will probably help you to do so.
 Execute this script in the ``js/src/`` subdirectory and pass a directory
 name as the first parameter. The build will then be created in a new
 subdirectory with that name.
@@ -291,7 +291,7 @@ Optimized build
 
 Since `an issue with -O2/-Os and
 ASan <https://github.com/google/sanitizers/issues/20>`__
-has been resolved, the regular optimizations used by Firefox should work
+has been resolved, the regular optimizations used by Datalus should work
 without any problems. The optimized build has only a barely noticeable
 speed penalty and seems to be even faster than regular debug builds.
 

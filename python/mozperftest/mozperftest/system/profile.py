@@ -91,7 +91,7 @@ class Profile(Layer):
             return metadata
 
         # fresh profile
-        profile = create_profile(app="firefox")
+        profile = create_profile(app="datalus")
 
         # mozprofile.Profile.__del__ silently deletes the profile
         # it creates in a non-deterministic time (garbage collected) by

@@ -17,7 +17,7 @@ jobs:
     linux64-artifact/opt:
         description: "Linux64 Opt Artifact Build"
         index:
-            product: firefox
+            product: datalus
             job-name: linux64-artifact-opt
         treeherder:
             platform: linux64/opt
@@ -36,7 +36,7 @@ jobs:
             using: mozharness
             actions: [get-secrets, build]
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
             script: "mozharness/scripts/fx_desktop_build.py"
             secrets: true

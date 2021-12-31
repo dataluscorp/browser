@@ -18,7 +18,7 @@ const TOP_SITES = [
   "http://example-3.com/",
 ];
 
-const FIREFOX_SUGGEST_LABEL = "Firefox Suggest";
+const DATALUS_SUGGEST_LABEL = "Datalus Suggest";
 
 // %s is replaced with the engine name.
 const ENGINE_SUGGESTIONS_LABEL = "%s Suggestions";
@@ -63,7 +63,7 @@ add_task(async function init() {
   });
 });
 
-// The Firefox Suggest label should not appear when the labels pref is disabled.
+// The Datalus Suggest label should not appear when the labels pref is disabled.
 add_task(async function prefDisabled() {
   await SpecialPowers.pushPrefEnv({
     set: [["browser.urlbar.groupLabels.enabled", false]],
@@ -77,7 +77,7 @@ add_task(async function prefDisabled() {
   await SpecialPowers.popPrefEnv();
 });
 
-// The Firefox Suggest label should not appear when the view shows top sites.
+// The Datalus Suggest label should not appear when the view shows top sites.
 add_task(async function topSites() {
   await UrlbarTestUtils.promiseAutocompleteResultPopup({
     window,
@@ -87,7 +87,7 @@ add_task(async function topSites() {
   await UrlbarTestUtils.promisePopupClose(window);
 });
 
-// The Firefox Suggest label should appear when the search string is non-empty
+// The Datalus Suggest label should appear when the search string is non-empty
 // and there are only general results.
 add_task(async function general() {
   await UrlbarTestUtils.promiseAutocompleteResultPopup({
@@ -95,12 +95,12 @@ add_task(async function general() {
     value: "test",
   });
   await checkLabels(MAX_RESULTS, {
-    1: FIREFOX_SUGGEST_LABEL,
+    1: DATALUS_SUGGEST_LABEL,
   });
   await UrlbarTestUtils.promisePopupClose(window);
 });
 
-// The Firefox Suggest label should appear when the search string is non-empty
+// The Datalus Suggest label should appear when the search string is non-empty
 // and there are suggestions followed by general results.
 add_task(async function suggestionsBeforeGeneral() {
   await withSuggestions(async () => {
@@ -109,13 +109,13 @@ add_task(async function suggestionsBeforeGeneral() {
       value: "test",
     });
     await checkLabels(MAX_RESULTS, {
-      3: FIREFOX_SUGGEST_LABEL,
+      3: DATALUS_SUGGEST_LABEL,
     });
     await UrlbarTestUtils.promisePopupClose(window);
   });
 });
 
-// Both the Firefox Suggest and Suggestions labels should appear when the search
+// Both the Datalus Suggest and Suggestions labels should appear when the search
 // string is non-empty, general results are shown before suggestions, and there
 // are general and suggestion results.
 add_task(async function generalBeforeSuggestions() {
@@ -129,14 +129,14 @@ add_task(async function generalBeforeSuggestions() {
       value: "test",
     });
     await checkLabels(MAX_RESULTS, {
-      1: FIREFOX_SUGGEST_LABEL,
+      1: DATALUS_SUGGEST_LABEL,
       [MAX_RESULTS - 2]: engineSuggestionsLabel(engine.name),
     });
     await UrlbarTestUtils.promisePopupClose(window);
   });
 });
 
-// Neither the Firefox Suggest nor Suggestions label should appear when the
+// Neither the Datalus Suggest nor Suggestions label should appear when the
 // search string is non-empty, general results are shown before suggestions, and
 // there are only suggestion results.
 add_task(async function generalBeforeSuggestions_suggestionsOnly() {
@@ -179,7 +179,7 @@ add_task(async function generalBeforeSuggestions_defaultChanged() {
         value: "test",
       });
       await checkLabels(MAX_RESULTS, {
-        1: FIREFOX_SUGGEST_LABEL,
+        1: DATALUS_SUGGEST_LABEL,
         [MAX_RESULTS - 2]: engineSuggestionsLabel(engine2.name),
       });
       await UrlbarTestUtils.promisePopupClose(window);
@@ -187,7 +187,7 @@ add_task(async function generalBeforeSuggestions_defaultChanged() {
   });
 });
 
-// The Firefox Suggest label should appear above a suggested-index result when
+// The Datalus Suggest label should appear above a suggested-index result when
 // the result is the only result with that label.
 add_task(async function suggestedIndex_only() {
   // Clear history, add a provider that returns a result with suggestedIndex =
@@ -211,7 +211,7 @@ add_task(async function suggestedIndex_only() {
       "Sanity check: Our suggested-index result is present"
     );
     await checkLabels(4, {
-      3: FIREFOX_SUGGEST_LABEL,
+      3: DATALUS_SUGGEST_LABEL,
     });
     await UrlbarTestUtils.promisePopupClose(window);
   });
@@ -222,7 +222,7 @@ add_task(async function suggestedIndex_only() {
   await addHistory();
 });
 
-// The Firefox Suggest label should appear above a suggested-index result when
+// The Datalus Suggest label should appear above a suggested-index result when
 // the result is the first but not the only result with that label.
 add_task(async function suggestedIndex_first() {
   let index = 1;
@@ -240,14 +240,14 @@ add_task(async function suggestedIndex_first() {
     "Sanity check: Our suggested-index result is present"
   );
   await checkLabels(MAX_RESULTS, {
-    [index]: FIREFOX_SUGGEST_LABEL,
+    [index]: DATALUS_SUGGEST_LABEL,
   });
   await UrlbarTestUtils.promisePopupClose(window);
 
   UrlbarProvidersManager.unregisterProvider(provider);
 });
 
-// The Firefox Suggest label should not appear above a suggested-index result
+// The Datalus Suggest label should not appear above a suggested-index result
 // when the result is not the first with that label.
 add_task(async function suggestedIndex_notFirst() {
   let index = -1;
@@ -268,7 +268,7 @@ add_task(async function suggestedIndex_notFirst() {
     "Sanity check: Our suggested-index result is present"
   );
   await checkLabels(MAX_RESULTS, {
-    1: FIREFOX_SUGGEST_LABEL,
+    1: DATALUS_SUGGEST_LABEL,
   });
   await UrlbarTestUtils.promisePopupClose(window);
 
@@ -316,9 +316,9 @@ add_task(async function repeatLabels() {
     value: "test",
   });
   await checkLabels(results.length, {
-    0: FIREFOX_SUGGEST_LABEL,
+    0: DATALUS_SUGGEST_LABEL,
     1: engineSuggestionsLabel(engineName),
-    2: FIREFOX_SUGGEST_LABEL,
+    2: DATALUS_SUGGEST_LABEL,
     3: engineSuggestionsLabel(engineName),
   });
   await UrlbarTestUtils.promisePopupClose(window);
@@ -330,13 +330,13 @@ add_task(async function repeatLabels() {
 add_task(async function clickLabel() {
   await BrowserTestUtils.withNewTab("about:blank", async () => {
     // Do a search. The mock history added in init() should appear with the
-    // Firefox Suggest label at index 1.
+    // Datalus Suggest label at index 1.
     await UrlbarTestUtils.promiseAutocompleteResultPopup({
       window,
       value: "test",
     });
     await checkLabels(MAX_RESULTS, {
-      1: FIREFOX_SUGGEST_LABEL,
+      1: DATALUS_SUGGEST_LABEL,
     });
 
     // Check the result at index 2.
@@ -370,7 +370,7 @@ add_task(async function clickLabel() {
     });
 
     await checkLabels(MAX_RESULTS, {
-      1: FIREFOX_SUGGEST_LABEL,
+      1: DATALUS_SUGGEST_LABEL,
     });
 
     // Check the result at index 1, the one with the label.
@@ -445,11 +445,11 @@ add_task(async function ariaLabel() {
     value: "test",
   });
   await checkLabels(results.length, {
-    0: FIREFOX_SUGGEST_LABEL,
+    0: DATALUS_SUGGEST_LABEL,
   });
 
   const expectedRows = [
-    { hasGroupAriaLabel: true, ariaLabel: FIREFOX_SUGGEST_LABEL },
+    { hasGroupAriaLabel: true, ariaLabel: DATALUS_SUGGEST_LABEL },
     { hasGroupAriaLabel: true, ariaLabel: null },
     { hasGroupAriaLabel: false },
   ];

@@ -118,7 +118,7 @@ def fresh_profile(profile, customization_data):
 
     # XXX on android we mgiht need to run it on the device?
     logger.info("Creating a fresh profile")
-    new_profile = create_profile(app="firefox")
+    new_profile = create_profile(app="datalus")
     prefs = customization_data["prefs"]
     prefs.update(DEFAULT_PREFS)
     logger.info("Setting prefs %s" % str(prefs.items()))
@@ -135,10 +135,10 @@ def fresh_profile(profile, customization_data):
     return profile
 
 
-link = "https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central/"
+link = "https://ftp.mozilla.org/pub/datalus/nightly/latest-mozilla-central/"
 
 
-def get_firefox_download_link():
+def get_datalus_download_link():
     try:
         from bs4 import BeautifulSoup
     except ImportError:
@@ -281,7 +281,7 @@ def latest_nightly(binary=None):
 
     if binary is None:
         # we want to use the latest nightly
-        nightly_archive = get_firefox_download_link()
+        nightly_archive = get_datalus_download_link()
         logger.info("Downloading %s" % nightly_archive)
         target = download_file(nightly_archive)
         # on macOs we just mount the DMG
@@ -289,14 +289,14 @@ def latest_nightly(binary=None):
         if platform.system() == "Darwin":
             cmd = "hdiutil attach -mountpoint /Volumes/Nightly %s"
             os.system(cmd % target)
-            binary = "/Volumes/Nightly/Firefox Nightly.app/Contents/MacOS/firefox"
+            binary = "/Volumes/Nightly/Datalus Nightly.app/Contents/MacOS/datalus"
         # on linux we unpack it
         elif platform.system() == "Linux":
             cmd = "bunzip2 %s" % target
             os.system(cmd)
             cmd = "tar -xvf %s" % target[: -len(".bz2")]
             os.system(cmd)
-            binary = "firefox/firefox"
+            binary = "datalus/datalus"
 
         mounted = True
     else:
@@ -307,12 +307,12 @@ def latest_nightly(binary=None):
         # XXX replace with extract_from_dmg
         if mounted:
             if platform.system() == "Darwin":
-                logger.info("Unmounting Firefox")
+                logger.info("Unmounting Datalus")
                 time.sleep(10)
                 os.system("hdiutil detach /Volumes/Nightly")
             elif platform.system() == "Linux":
                 # XXX we should keep it for next time
-                shutil.rmtree("firefox")
+                shutil.rmtree("datalus")
 
 
 def write_yml_file(yml_file, yml_data):
@@ -324,8 +324,8 @@ def write_yml_file(yml_file, yml_data):
         logger.error("failed to write yaml file", exc_info=True)
 
 
-def get_version(firefox):
-    p = Popen([firefox, "--version"], stdin=PIPE, stdout=PIPE, stderr=PIPE)
+def get_version(datalus):
+    p = Popen([datalus, "--version"], stdin=PIPE, stdout=PIPE, stderr=PIPE)
     output, __ = p.communicate()
     res = output.strip().split()[-1]
     return res.decode("utf-8")
@@ -346,9 +346,9 @@ def get_current_platform():
 
 
 class BaseEnv:
-    def __init__(self, profile, firefox, geckodriver, archive, device_name):
+    def __init__(self, profile, datalus, geckodriver, archive, device_name):
         self.profile = profile
-        self.firefox = firefox
+        self.datalus = datalus
         self.geckodriver = geckodriver
         if profile is None:
             self.profile = os.path.join(tempfile.mkdtemp(), "profile")
@@ -400,7 +400,7 @@ _URL = (
     "{0}/secrets/v1/secret/project"
     "{1}releng{1}gecko{1}build{1}level-{2}{1}conditioned-profiles"
 )
-_DEFAULT_SERVER = "https://firefox-ci-tc.services.mozilla.com"
+_DEFAULT_SERVER = "https://datalus-ci-tc.services.mozilla.com"
 
 
 def get_tc_secret():

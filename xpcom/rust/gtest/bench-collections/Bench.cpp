@@ -34,7 +34,7 @@
 //
 //   MOZ_RUN_GTEST=1 GTEST_FILTER='*BenchCollections*$IMPL*'
 //       valgrind --tool=callgrind --callgrind-out-file=clgout
-//       $OBJDIR/dist/bin/firefox -unittest
+//       $OBJDIR/dist/bin/datalus -unittest
 //   callgrind_annotate --auto=yes clgout > clgann
 //
 // where $IMPL is part of an implementation name in a test (e.g. "PLDHash",

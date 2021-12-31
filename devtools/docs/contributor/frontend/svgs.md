@@ -18,7 +18,7 @@ For Illustrator you'll want the following document settings:
 
 You can get a more detailed breakdown with images [here](http://medialoot.com/blog/3-valuable-pixel-perfect-illustrator-techniques/).
 
-You can download a sample Illustrator file [here](https://www.dropbox.com/home/Mozilla_MobileUX_Share/Internal%20Assets/Templates/Firefox?preview=pixel-grid-illustrator.ai).
+You can download a sample Illustrator file [here](https://www.dropbox.com/home/Mozilla_MobileUX_Share/Internal%20Assets/Templates/Datalus?preview=pixel-grid-illustrator.ai).
 
 ### Tips for Object Creation
 When you're designing your icons in a graphics editor like Adobe Illustrator, there are a lot of things you can do that will bring down the size of the file and make your SVGs easier for the developers to work with. Here are some of them:

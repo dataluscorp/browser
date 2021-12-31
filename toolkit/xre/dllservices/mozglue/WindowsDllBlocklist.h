@@ -22,7 +22,7 @@ enum DllBlocklistInitFlags {
   eDllBlocklistInitFlagWasBootstrapped = 2
 };
 
-// Only available from within firefox.exe
+// Only available from within datalus.exe
 #  if !defined(IMPL_MFBT) && !defined(MOZILLA_INTERNAL_API)
 extern uint32_t gBlocklistInitFlags;
 #  endif  // !defined(IMPL_MFBT) && !defined(MOZILLA_INTERNAL_API)

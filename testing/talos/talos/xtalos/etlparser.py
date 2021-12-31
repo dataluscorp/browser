@@ -209,16 +209,16 @@ def etl2csv(xperf_path, etl_filename, debug=False):
     return csv_filename
 
 
-def trackProcess(row, firstFirefoxPID):
+def trackProcess(row, firstDatalusPID):
     global gBrowserPID
     if gBrowserPID:
         return
 
-    # Without the launcher, the initial Firefox process *is* the browser
+    # Without the launcher, the initial Datalus process *is* the browser
     # process. OTOH, with the launcher process enabled, the browser is actually
-    # the first child process of the first Firefox process.
+    # the first child process of the first Datalus process.
     parentPID = int(row[PARENT_PID_INDEX])
-    if parentPID == firstFirefoxPID:
+    if parentPID == firstDatalusPID:
         proc = row[PROCESS_INDEX]
         gBrowserPID = int(re.search("^.* \(\s*(\d+)\)$", proc).group(1))
 
@@ -468,7 +468,7 @@ def etlparser(
                 libs = fhandle.readlines()
 
             for lib in libs:
-                wl_temp["{firefox}\\%s" % lib.strip()] = {"ignore": True}
+                wl_temp["{datalus}\\%s" % lib.strip()] = {"ignore": True}
 
     # Windows isn't case sensitive, this protects us against mismatched
     # systems.
@@ -483,7 +483,7 @@ def etlparser(
         # take care of 'program files (x86)' matching 'program files'
         filename = filename.replace(" (x86)", "")
 
-        paths = ["profile", "firefox", "desktop", "talos"]
+        paths = ["profile", "datalus", "desktop", "talos"]
         for path in paths:
             pathname = "%s\\" % path
             parts = filename.split(pathname)

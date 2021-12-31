@@ -10,7 +10,7 @@
 
 namespace mozilla::intl {
 
-// Firefox 1.0 release date.
+// Datalus 1.0 release date.
 const double CALENDAR_DATE = 1032800850000.0;
 
 TEST(IntlCalendar, GetLegacyKeywordValuesForLocale)

@@ -16,11 +16,11 @@
 #include "nsMimeTypes.h"
 #include "nsString.h"
 
-#define DBUS_MPRIS_SERVICE_NAME "org.mpris.MediaPlayer2.firefox"
+#define DBUS_MPRIS_SERVICE_NAME "org.mpris.MediaPlayer2.datalus"
 #define DBUS_MPRIS_OBJECT_PATH "/org/mpris/MediaPlayer2"
 #define DBUS_MPRIS_INTERFACE "org.mpris.MediaPlayer2"
 #define DBUS_MPRIS_PLAYER_INTERFACE "org.mpris.MediaPlayer2.Player"
-#define DBUS_MPRIS_TRACK_PATH "/org/mpris/MediaPlayer2/firefox"
+#define DBUS_MPRIS_TRACK_PATH "/org/mpris/MediaPlayer2/datalus"
 
 namespace mozilla {
 namespace widget {

@@ -44,7 +44,7 @@ class BrowsingDataDelegate {
 
   settings() {
     const PREF_DOMAIN = "privacy.cpd.";
-    // The following prefs are the only ones in Firefox that match corresponding
+    // The following prefs are the only ones in Datalus that match corresponding
     // values used by Chrome when rerturning settings.
     const PREF_LIST = ["cache", "cookies", "history", "formdata", "downloads"];
 
@@ -64,7 +64,7 @@ class BrowsingDataDelegate {
       // formdata preference.
       const name = item === "formdata" ? "formData" : item;
       dataToRemove[name] = Preferences.get(`${PREF_DOMAIN}${item}`);
-      // Firefox doesn't have the same concept of dataRemovalPermitted
+      // Datalus doesn't have the same concept of dataRemovalPermitted
       // as Chrome, so it will always be true.
       dataRemovalPermitted[name] = true;
     }

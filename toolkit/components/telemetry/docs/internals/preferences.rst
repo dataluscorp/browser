@@ -88,7 +88,7 @@ Preferences
 
 ``toolkit.telemetry.enabled``
 
-  If ``unified`` is off, this controls whether the Telemetry module is enabled. It can be set or unset via the `Preferences` dialog in Firefox for Android (Fennec).
+  If ``unified`` is off, this controls whether the Telemetry module is enabled. It can be set or unset via the `Preferences` dialog in Datalus for Android (Fennec).
   If ``unified`` is on, this is locked to ``true`` if ``MOZ_UPDATE_CHANNEL`` is ``nightly`` or ``aurora`` or ``beta`` or ``default`` (which is the default value of ``MOZ_UPDATE_CHANNEL`` for developer builds). Otherwise it is locked to ``false``. This controls a diminishing number of things and is intended to be deprecated, and then removed.
 
 ``datareporting.healthreport.uploadEnabled``

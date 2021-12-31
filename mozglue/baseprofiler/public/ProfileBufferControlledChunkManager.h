@@ -180,7 +180,7 @@ class ProfileBufferControlledChunkManager {
 
   // This *may* be set (or reset) by an object that needs to know about all
   // chunk updates that happen in this manager. The main use will be to
-  // coordinate the global memory usage of Firefox.
+  // coordinate the global memory usage of Datalus.
   // If a non-empty callback is given, it will be immediately invoked with the
   // current state.
   // When the callback is about to be destroyed (by overwriting it here, or in

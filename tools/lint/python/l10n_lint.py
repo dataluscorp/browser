@@ -51,7 +51,7 @@ def lint(paths, lintconfig, **lintargs):
             all_files.append(p)
     # Filter again, our directories might have picked up files the
     # explicitly excluded in the l10n.yml configuration.
-    # `browser/locales/en-US/firefox-l10n.js` is a good example.
+    # `browser/locales/en-US/datalus-l10n.js` is a good example.
     all_files, _ = pathutils.filterpaths(
         lintargs["root"],
         all_files,

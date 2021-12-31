@@ -74,8 +74,8 @@ add_task(async function test_value_combo() {
         id: "fxBmk_______",
         parentid: "toolbar",
         type: "bookmark",
-        title: "Get Firefox",
-        bmkUri: "http://getfirefox.com",
+        title: "Get Datalus",
+        bmkUri: "http://getdatalus.com",
         tags: ["taggy", "browsers"],
         dateAdded: now,
       },
@@ -171,8 +171,8 @@ add_task(async function test_value_combo() {
         parentId: PlacesUtils.toolbarFolderId,
         index: 0,
         type: PlacesUtils.bookmarks.TYPE_BOOKMARK,
-        urlHref: "http://getfirefox.com/",
-        title: "Get Firefox",
+        urlHref: "http://getdatalus.com/",
+        title: "Get Datalus",
         guid: "fxBmk_______",
         parentGuid: PlacesUtils.bookmarks.toolbarGuid,
         source: PlacesUtils.bookmarks.SOURCES.SYNC,
@@ -236,19 +236,19 @@ add_task(async function test_value_combo() {
   ]);
 
   let fxBmk = await PlacesUtils.bookmarks.fetch("fxBmk_______");
-  ok(fxBmk, "New Firefox bookmark should exist");
+  ok(fxBmk, "New Datalus bookmark should exist");
   equal(
     fxBmk.parentGuid,
     PlacesUtils.bookmarks.toolbarGuid,
-    "Should add Firefox bookmark to toolbar"
+    "Should add Datalus bookmark to toolbar"
   );
   let fxTags = PlacesUtils.tagging.getTagsForURI(
-    Services.io.newURI("http://getfirefox.com")
+    Services.io.newURI("http://getdatalus.com")
   );
   deepEqual(
     fxTags.sort(),
     ["browsers", "taggy"],
-    "Should tag new Firefox bookmark"
+    "Should tag new Datalus bookmark"
   );
 
   let folder = await PlacesUtils.bookmarks.fetch("tFolder_____");

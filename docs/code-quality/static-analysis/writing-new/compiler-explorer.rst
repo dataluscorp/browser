@@ -15,7 +15,7 @@ When first started, Compiler Explorer will provide you with a default set of com
 Quick-Start
 -----------------------
 
-Let's first ensure this matches our default toolchain for Firefox:
+Let's first ensure this matches our default toolchain for Datalus:
 
 #. Ensure the compiler chosen says 'clang XX (mozilla-central)'
 #. Find the tool button below and enable clang-query.

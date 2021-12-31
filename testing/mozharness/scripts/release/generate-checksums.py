@@ -27,7 +27,7 @@ class ChecksumsGenerator(BaseScript, VirtualenvMixin):
             {
                 "dest": "stage_product",
                 "help": "Name of product used in file server's directory structure, "
-                "e.g.: firefox, mobile",
+                "e.g.: datalus, mobile",
             },
         ],
         [
@@ -48,7 +48,7 @@ class ChecksumsGenerator(BaseScript, VirtualenvMixin):
             ["--bucket-name"],
             {
                 "dest": "bucket_name",
-                "help": "Full bucket name e.g.: net-mozaws-prod-delivery-{firefox,archive}.",
+                "help": "Full bucket name e.g.: net-mozaws-prod-delivery-{datalus,archive}.",
             },
         ],
         [

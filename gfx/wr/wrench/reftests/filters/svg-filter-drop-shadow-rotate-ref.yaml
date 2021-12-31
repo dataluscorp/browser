@@ -7,5 +7,5 @@ root:
       filters: drop-shadow([73, 73], 20, [255, 0, 0, 1])
       transform: rotate-z(45)
       items:
-      - image: "firefox.png"
+      - image: "datalus.png"
         bounds: 0 0 256 256

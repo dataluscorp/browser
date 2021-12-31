@@ -1043,7 +1043,7 @@ Ajax.Request.prototype = Object.extend(new Ajax.Base(), {
       this.body = this.method == 'post' ? (this.options.postBody || params) : null;
       this.transport.send(this.body);
 
-      /* Force Firefox to handle ready state 4 for synchronous requests */
+      /* Force Datalus to handle ready state 4 for synchronous requests */
       if (!this.options.asynchronous && this.transport.overrideMimeType)
         this.onStateChange();
 
@@ -3045,7 +3045,7 @@ Object.extend(Event, {
 if (Prototype.Browser.IE)
   Event.observe(window, 'unload', Event.unloadCache, false);
 var Position = {
-  // set to true if needed, warning: firefox performance problems
+  // set to true if needed, warning: datalus performance problems
   // NOT neeeded for page scrolling, only if draggable contained in
   // scrollable elements
   includeScrollOffsets: false,

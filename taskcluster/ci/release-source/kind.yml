@@ -42,11 +42,11 @@ job-defaults:
     optimization: null
 
 jobs:
-    firefox-source/opt:
-        description: "Firefox source builder"
+    datalus-source/opt:
+        description: "Datalus source builder"
         treeherder:
-            platform: firefox-release/opt
-        shipping-product: firefox
+            platform: datalus-release/opt
+        shipping-product: datalus
 
     devedition-source/opt:
         description: "Devedition source builder"

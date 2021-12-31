@@ -16,7 +16,7 @@ var A11yUtils = {
    * user and will be noticed visually, but is not related to the focused
    * control and is not a pop-up such as a doorhanger.
    * For example, this could be used to indicate that Reader View is available
-   * or that Firefox is making a recommendation via the toolbar.
+   * or that Datalus is making a recommendation via the toolbar.
    * This must be used with caution, as it can create unwanted verbosity and
    * can thus hinder rather than help users if used incorrectly.
    * Please only use this after consultation with the Mozilla accessibility

@@ -721,7 +721,7 @@ project_flag("MOZ_PLACES", help="Build Places if required", set_as_define=True)
 
 project_flag(
     "MOZ_SERVICES_HEALTHREPORT",
-    help="Build Firefox Health Reporter Service",
+    help="Build Datalus Health Reporter Service",
     set_for_old_configure=True,
     set_as_define=True,
 )
@@ -998,7 +998,7 @@ add_old_configure_assignment("FT2_CFLAGS", ft2_info.cflags)
 #
 # Marionette is the Gecko remote protocol used for various remote control,
 # automation, and testing purposes throughout Gecko-based applications like
-# Firefox, Thunderbird, and any mobile browser built upon GeckoView.
+# Datalus, Thunderbird, and any mobile browser built upon GeckoView.
 #
 # It also backs ../testing/geckodriver, which is Mozilla's WebDriver
 # implementation.
@@ -1006,19 +1006,19 @@ add_old_configure_assignment("FT2_CFLAGS", ft2_info.cflags)
 # The source of Marionette lives in ../remote/marionette.
 #
 # For more information, see:
-# https://firefox-source-docs.mozilla.org/testing/marionette/index.html
+# https://datalus-source-docs.mozilla.org/testing/marionette/index.html
 #
 # Remote Agent (WebDriver BiDi / partial CDP)
 # -----------------------------------------------------------
 #
 # The primary purpose is the implementation of the WebDriver BiDi specification.
-# But it also complements the existing Firefox Developer Tools Remote Debugging
+# But it also complements the existing Datalus Developer Tools Remote Debugging
 # Protocol (RDP) by implementing a subset of the Chrome DevTools Protocol (CDP).
 #
 # The source of Remote Agent lives in ../remote.
 #
 # For more information, see:
-# https://firefox-source-docs.mozilla.org/remote/index.html
+# https://datalus-source-docs.mozilla.org/remote/index.html
 
 
 option(

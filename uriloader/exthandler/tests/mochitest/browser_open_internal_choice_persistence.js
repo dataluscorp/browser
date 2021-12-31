@@ -209,7 +209,7 @@ add_task(async function test_check_saving_handler_choices() {
     ok(!internalHandlerRadio.hidden, "The option should be visible for PDF");
     ok(
       internalHandlerRadio.selected,
-      "The Firefox option should be selected by default"
+      "The Datalus option should be selected by default"
     );
 
     const { expectTab, expectLaunch, description } = testCase;

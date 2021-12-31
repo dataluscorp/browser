@@ -25,4 +25,4 @@ JAR_MANIFESTS += ["jar.mn"]
 SPHINX_TREES["/browser/search"] = "docs"
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Search")
+    BUG_COMPONENT = ("Datalus", "Search")

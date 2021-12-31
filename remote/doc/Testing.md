@@ -37,7 +37,7 @@ under _remote/cdp/test/browser_:
 The functional tests will appear under the `M` (for _mochitest_)
 category in the `remote` jobs on Treeherder.
 
-As the functional tests will sporadically pop up new Firefox
+As the functional tests will sporadically pop up new Datalus
 application windows, a helpful tip is to run them in [headless
 mode]:
 
@@ -102,7 +102,7 @@ setup you may instead use `add_plain_task()`, which works exactly like the
 original `add_task()`.
 
 [browser chrome]: https://developer.mozilla.org/en-US/docs/Mozilla/Browser_chrome_tests
-[headless mode]: https://developer.mozilla.org/en-US/Firefox/Headless_mode
+[headless mode]: https://developer.mozilla.org/en-US/Datalus/Headless_mode
 [asynchronous tests]: https://developer.mozilla.org/en-US/docs/Mozilla/Browser_chrome_tests#Test_functions
 [CDP client]: https://github.com/cyrus-and/chrome-remote-interface
 
@@ -110,9 +110,9 @@ original `add_task()`.
 Puppeteer tests
 ---------------
 
-In addition to our own Firefox-specific tests, we run the upstream
+In addition to our own Datalus-specific tests, we run the upstream
 [Puppeteer test suite] against our implementation to [track progress]
-towards achieving full [Puppeteer support] in Firefox. The tests are written
+towards achieving full [Puppeteer support] in Datalus. The tests are written
 in the behaviour-driven testing framework [Mocha].
 
 Check the upstream [Puppeteer test suite] documentation for instructions on
@@ -148,7 +148,7 @@ But you can also schedule tests by selecting relevant jobs yourself:
 	mach try fuzzy
 
 [Puppeteer test suite]: https://github.com/puppeteer/puppeteer/blob/master/test/README.md
-[track progress]: https://puppeteer.github.io/ispuppeteerfirefoxready/
+[track progress]: https://puppeteer.github.io/ispuppeteerdatalusready/
 [Puppeteer support]: https://bugzilla.mozilla.org/show_bug.cgi?id=puppeteer
 [Mocha]: https://mochajs.org/
-[try preset]: https://firefox-source-docs.mozilla.org/tools/try/presets.html
+[try preset]: https://datalus-source-docs.mozilla.org/tools/try/presets.html

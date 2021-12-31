@@ -45,7 +45,7 @@ class InclusionProof:
       * 1 + N octets of NodeHash
     """
 
-    # Pre-generated 'log ID'.  Not used by Firefox; it is only needed because
+    # Pre-generated 'log ID'.  Not used by Datalus; it is only needed because
     # there's a slot in the RFC 6962-bis format that requires a value at least
     # two bytes long (plus a length byte).
     LOG_ID = b"\x02\x00\x00"

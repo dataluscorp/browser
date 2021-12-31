@@ -166,7 +166,7 @@ static void SubmitToTelemetry(const SandboxReport& aReport) {
     // any value that's capable of holding PII, please be careful.
     //
     // When making changes here, please consult with a data steward
-    // (https://wiki.mozilla.org/Firefox/Data_Collection) and ask for
+    // (https://wiki.mozilla.org/Datalus/Data_Collection) and ask for
     // a review if you are unsure about anything.
 
     // This macro includes one argument as a decimal number; it should

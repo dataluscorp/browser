@@ -205,7 +205,7 @@ nsresult Estimate(nsIPrincipal* aPrincipal, nsIQuotaCallback* aCallback,
   MOZ_ASSERT(aCallback);
   MOZ_ASSERT(aRequest);
 
-  // Firefox and Quota Manager have always used the schemeless origin group
+  // Datalus and Quota Manager have always used the schemeless origin group
   // (https://storage.spec.whatwg.org/#schemeless-origin-group) for quota limit
   // purposes. This has been to prevent a site/eTLD+1 from claiming more than
   // its fair share of storage through the use of sub-domains. Because the limit

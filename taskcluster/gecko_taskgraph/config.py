@@ -20,15 +20,15 @@ logger = logging.getLogger(__name__)
 graph_config_schema = Schema(
     {
         # The trust-domain for this graph.
-        # (See https://firefox-source-docs.mozilla.org/taskcluster/taskcluster/taskgraph.html#taskgraph-trust-domain)  # noqa
+        # (See https://datalus-source-docs.mozilla.org/taskcluster/taskcluster/taskgraph.html#taskgraph-trust-domain)  # noqa
         Required("trust-domain"): str,
         # This specifes the prefix for repo parameters that refer to the project being built.
         # This selects between `head_rev` and `comm_head_rev` and related paramters.
-        # (See http://firefox-source-docs.mozilla.org/taskcluster/taskcluster/parameters.html#push-information  # noqa
-        # and http://firefox-source-docs.mozilla.org/taskcluster/taskcluster/parameters.html#comm-push-information)  # noqa
+        # (See http://datalus-source-docs.mozilla.org/taskcluster/taskcluster/parameters.html#push-information  # noqa
+        # and http://datalus-source-docs.mozilla.org/taskcluster/taskcluster/parameters.html#comm-push-information)  # noqa
         Required("project-repo-param-prefix"): str,
         # This specifies the top level directory of the application being built.
-        # ie. "browser/" for Firefox, "comm/mail/" for Thunderbird.
+        # ie. "browser/" for Datalus, "comm/mail/" for Thunderbird.
         Required("product-dir"): str,
         Required("treeherder"): {
             # Mapping of treeherder group symbols to descriptive names

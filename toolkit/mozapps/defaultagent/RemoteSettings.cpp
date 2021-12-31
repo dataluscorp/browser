@@ -23,7 +23,7 @@ extern "C" {
 HRESULT IsAgentRemoteDisabledRust(const char* szUrl, DWORD* lpdwDisabled);
 }
 
-#define PROD_ENDPOINT "https://firefox.settings.services.mozilla.com/v1"
+#define PROD_ENDPOINT "https://datalus.settings.services.mozilla.com/v1"
 #define PROD_BID "main"
 #define PROD_CID "windows-default-browser-agent"
 #define PROD_ID "state"

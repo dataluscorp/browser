@@ -98,7 +98,7 @@ add_task(async function test_no_update_intervention() {
   await BrowserTestUtils.withNewTab("about:blank", async () => {
     let context = await UrlbarTestUtils.promiseAutocompleteResultPopup({
       window,
-      value: "update firefox",
+      value: "update datalus",
       waitForFocus,
       fireInputEvent: true,
     });

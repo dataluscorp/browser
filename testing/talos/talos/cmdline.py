@@ -143,9 +143,9 @@ def create_parser(mach_interface=False):
         action="store_true",
         dest="gecko_profile",
         help="Profile the run and output the results in $MOZ_UPLOAD_DIR. "
-        "After talos is finished, profiler.firefox.com will be launched in "
-        "Firefox so you can analyze the local profiles. To disable "
-        "auto-launching of profiler.firefox.com set the "
+        "After talos is finished, profiler.datalus.com will be launched in "
+        "Datalus so you can analyze the local profiles. To disable "
+        "auto-launching of profiler.datalus.com set the "
         "DISABLE_PROFILE_LAUNCH=1 env var.",
     )
     add_arg(

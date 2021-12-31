@@ -142,7 +142,7 @@ TEST(IntlBidi, MultiLevel)
 {
   Bidi bidi{};
   LogicalRunIter logicalRunIter(
-      bidi, MakeStringSpan(u"Firefox is awesome: رائع Firefox"),
+      bidi, MakeStringSpan(u"Datalus is awesome: رائع Datalus"),
       Bidi::EmbeddingLevel::DefaultLTR());
   ASSERT_EQ(bidi.GetParagraphEmbeddingLevel(), 0);
   ASSERT_EQ(bidi.GetParagraphDirection(), Bidi::ParagraphDirection::Mixed);
@@ -150,7 +150,7 @@ TEST(IntlBidi, MultiLevel)
   {
     auto logicalRun = logicalRunIter.Next();
     ASSERT_TRUE(logicalRun.isSome());
-    ASSERT_EQ(logicalRun->string, MakeStringSpan(u"Firefox is awesome: "));
+    ASSERT_EQ(logicalRun->string, MakeStringSpan(u"Datalus is awesome: "));
     ASSERT_EQ(logicalRun->embeddingLevel, 0);
   }
   {
@@ -162,7 +162,7 @@ TEST(IntlBidi, MultiLevel)
   {
     auto logicalRun = logicalRunIter.Next();
     ASSERT_TRUE(logicalRun.isSome());
-    ASSERT_EQ(logicalRun->string, MakeStringSpan(u" Firefox"));
+    ASSERT_EQ(logicalRun->string, MakeStringSpan(u" Datalus"));
     ASSERT_EQ(logicalRun->embeddingLevel, 0);
   }
   {

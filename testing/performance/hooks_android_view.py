@@ -28,11 +28,11 @@ URL = "'https://mozilla-mobile.github.io/perf-tools/mozperftest-test-page.html'"
 
 COMMON_OPTIONS = [
     ("processStartTime", "true"),
-    ("firefox.disableBrowsertimeExtension", "true"),
-    ("firefox.android.intentArgument", "'-a'"),
-    ("firefox.android.intentArgument", "'android.intent.action.VIEW'"),
-    ("firefox.android.intentArgument", "'-d'"),
-    ("firefox.android.intentArgument", URL),
+    ("datalus.disableBrowsertimeExtension", "true"),
+    ("datalus.android.intentArgument", "'-a'"),
+    ("datalus.android.intentArgument", "'android.intent.action.VIEW'"),
+    ("datalus.android.intentArgument", "'-d'"),
+    ("datalus.android.intentArgument", URL),
 ]
 
 NIGHTLY_SIM_ROUTE = "mobile.v2.fenix.nightly-simulation"

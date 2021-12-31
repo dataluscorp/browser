@@ -84,7 +84,7 @@
                                                                              \
   MACRO(19, "notimerresolutionchange", NoTimerResolutionChange,              \
         "Do not adjust the timer resolution for sampling, so that other "    \
-        "Firefox timers do not get affected")
+        "Datalus timers do not get affected")
 
 struct ProfilerFeature {
 #define DECLARE(n_, str_, Name_, desc_)                                \

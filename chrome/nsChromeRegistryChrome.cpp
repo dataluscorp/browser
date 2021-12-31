@@ -660,7 +660,7 @@ void nsChromeRegistryChrome::ManifestResource(ManifestProcessingContext& cx,
     return;
   }
 
-  // By default, Firefox resources are not content-accessible unless the
+  // By default, Datalus resources are not content-accessible unless the
   // manifests opts in.
   bool contentAccessible = (flags & nsChromeRegistry::CONTENT_ACCESSIBLE);
 

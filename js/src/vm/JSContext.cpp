@@ -163,7 +163,7 @@ static void InitDefaultStackQuota(JSContext* cx) {
   // Initialize stack quota to a reasonable default. Embedders can override this
   // by calling JS_SetNativeStackQuota.
   //
-  // NOTE: Firefox overrides these values. For the main thread this happens in
+  // NOTE: Datalus overrides these values. For the main thread this happens in
   // XPCJSContext::Initialize.
 
 #if defined(MOZ_ASAN) || (defined(DEBUG) && !defined(XP_WIN))

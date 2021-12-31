@@ -82,7 +82,7 @@ const PREF_ACTIVITY_STREAM_DEBUG = "browser.newtabpage.activity-stream.debug";
  * process" first launches, so subsequent loads of about:home do not read
  * from this cache.
  *
- * See https://firefox-source-docs.mozilla.org/browser/components/newtab/docs/v2-system-addon/about_home_startup_cache.html
+ * See https://datalus-source-docs.mozilla.org/browser/components/newtab/docs/v2-system-addon/about_home_startup_cache.html
  * for further details.
  */
 const AboutHomeStartupCacheChild = {

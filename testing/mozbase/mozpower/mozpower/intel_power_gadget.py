@@ -735,21 +735,21 @@ class IPGResultsHandler(object):
             "unit": "mWh"
             "suites": [
                 {
-                    "name": "raptor-tp6-amazon-firefox-power",
+                    "name": "raptor-tp6-amazon-datalus-power",
                     "lowerIsBetter": true,
                     "alertThreshold": 2.0,
                     "subtests": [
                         {
                             "lowerIsBetter": true,
                             "unit": "%",
-                            "name": "raptor-tp6-youtube-firefox-power-cpu",
+                            "name": "raptor-tp6-youtube-datalus-power-cpu",
                             "value": 14.409090909090908,
                             "alertThreshold": 2.0
                         },
                         {
                             "lowerIsBetter": true,
                             "unit": "%",
-                            "name": "raptor-tp6-youtube-firefox-power-gpu",
+                            "name": "raptor-tp6-youtube-datalus-power-gpu",
                             "value": 20.1,
                             "alertThreshold": 2.0
                         },

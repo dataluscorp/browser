@@ -35,7 +35,7 @@ job-defaults:
         email:
             by-project:
                 mozilla-central:
-                    subject: 'Iris Firefox {chunk} tests failed (mozilla-central)'
+                    subject: 'Iris Datalus {chunk} tests failed (mozilla-central)'
                     message: This calls for an action from the QA Automation team. Use the link to view it on Treeherder.
                     link:
                         text: Treeherder Job

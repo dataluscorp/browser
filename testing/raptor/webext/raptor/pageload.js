@@ -11,40 +11,40 @@ var perfData = window.performance;
 var gRetryCounter = 0;
 
 // measure hero element; must exist inside test page;
-// supported on: Firefox, Chromium, Geckoview
+// supported on: Datalus, Chromium, Geckoview
 // default only; this is set via control server settings json
 var getHero = false;
 var heroesToCapture = [];
 
 // measure time-to-first-non-blank-paint
-// supported on: Firefox, Geckoview
+// supported on: Datalus, Geckoview
 // note: this browser pref must be enabled:
 // dom.performance.time_to_non_blank_paint.enabled = True
 // default only; this is set via control server settings json
 var getFNBPaint = false;
 
 // measure time-to-first-contentful-paint
-// supported on: Firefox, Chromium, Geckoview
+// supported on: Datalus, Chromium, Geckoview
 // note: this browser pref must be enabled:
 // dom.performance.time_to_contentful_paint.enabled = True
 // default only; this is set via control server settings json
 var getFCP = false;
 
 // measure domContentFlushed
-// supported on: Firefox, Geckoview
+// supported on: Datalus, Geckoview
 // note: this browser pref must be enabled:
 // dom.performance.time_to_dom_content_flushed.enabled = True
 // default only; this is set via control server settings json
 var getDCF = false;
 
 // measure TTFI
-// supported on: Firefox, Geckoview
+// supported on: Datalus, Geckoview
 // note: this browser pref must be enabled:
 // dom.performance.time_to_first_interactive.enabled = True
 // default only; this is set via control server settings json
 var getTTFI = false;
 
-// supported on: Firefox, Chromium, Geckoview
+// supported on: Datalus, Chromium, Geckoview
 // default only; this is set via control server settings json
 var getLoadTime = false;
 
@@ -272,7 +272,7 @@ async function measureFCP() {
   // see https://developer.mozilla.org/en-US/docs/Web/API/PerformancePaintTiming
   let result = window.performance.timing.timeToContentfulPaint;
 
-  // Firefox implementation of FCP is not yet spec-compliant (see Bug 1519410)
+  // Datalus implementation of FCP is not yet spec-compliant (see Bug 1519410)
   if (typeof result == "undefined") {
     // we're on chromium
     result = 0;
@@ -292,7 +292,7 @@ async function measureFCP() {
   if (result > 0) {
     raptorLog("got time to first-contentful-paint");
     if (typeof browser !== "undefined") {
-      // Firefox returns a timestamp, not the actual measurement in MS; need to calculate result
+      // Datalus returns a timestamp, not the actual measurement in MS; need to calculate result
       const startTime = perfData.timing.fetchStart;
       result = result - startTime;
     }

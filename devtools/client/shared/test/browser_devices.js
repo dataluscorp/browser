@@ -36,7 +36,7 @@ add_task(async function() {
     pixelRatio: 2,
     userAgent: "Mozilla/5.0 (Mobile; rv:42.0)",
     touch: true,
-    firefoxOS: true,
+    datalusOS: true,
   };
   addDevice(device1, type1);
   devices = await getDevices();
@@ -55,7 +55,7 @@ add_task(async function() {
     pixelRatio: 5,
     userAgent: "Mozilla/5.0 (Appliance; rv:42.0)",
     touch: true,
-    firefoxOS: true,
+    datalusOS: true,
   };
   addDevice(device2, type2);
   devices = await getDevices();

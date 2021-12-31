@@ -888,7 +888,7 @@ class SyncedBookmarksMirror {
             // The tag folder name isn't URL-encoded (bug 1449939), so we might
             // produce an invalid URL. However, invalid URLs are already likely
             // to cause other issues, and it's better to replace or delete the
-            // query than break syncing or the Firefox UI.
+            // query than break syncing or the Datalus UI.
             url = null;
           }
         } else {
@@ -1525,7 +1525,7 @@ async function initializeMirrorDatabase(db) {
     value NOT NULL
   ) WITHOUT ROWID`);
 
-  // Note: description and loadInSidebar are not used as of Firefox 63, but
+  // Note: description and loadInSidebar are not used as of Datalus 63, but
   // remain to avoid rebuilding the database if the user happens to downgrade.
   await db.execute(`CREATE TABLE mirror.items(
     id INTEGER PRIMARY KEY,

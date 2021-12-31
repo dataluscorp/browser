@@ -650,68 +650,68 @@
             preference="browser.urlbar.suggest.topsites"/>
   <checkbox id="enginesSuggestion" data-l10n-id="addressbar-locbar-engines-option"
             preference="browser.urlbar.suggest.engines"/>
-  <vbox id="firefoxSuggestContainer" hidden="true">
-    <vbox class="firefoxSuggestOptionBox">
+  <vbox id="datalusSuggestContainer" hidden="true">
+    <vbox class="datalusSuggestOptionBox">
       <hbox align="center">
-        <label id="firefoxSuggestNonsponsoredLabel"
+        <label id="datalusSuggestNonsponsoredLabel"
                flex="1"
-               data-l10n-id="addressbar-firefox-suggest-nonsponsored"/>
-        <html:input id="firefoxSuggestNonsponsoredToggle"
+               data-l10n-id="addressbar-datalus-suggest-nonsponsored"/>
+        <html:input id="datalusSuggestNonsponsoredToggle"
                     type="checkbox"
-                    class="toggle-button firefoxSuggestToggle"
+                    class="toggle-button datalusSuggestToggle"
                     preference="browser.urlbar.suggest.quicksuggest.nonsponsored"
-                    aria-labelledby="firefoxSuggestNonsponsoredLabel"
-                    aria-describedby="firefoxSuggestNonsponsoredDescription"/>
+                    aria-labelledby="datalusSuggestNonsponsoredLabel"
+                    aria-describedby="datalusSuggestNonsponsoredDescription"/>
       </hbox>
-      <description id="firefoxSuggestNonsponsoredDescription"
-                   class="tip-caption firefoxSuggestOptionDescription"
-                   data-l10n-id="addressbar-firefox-suggest-nonsponsored-description"/>
+      <description id="datalusSuggestNonsponsoredDescription"
+                   class="tip-caption datalusSuggestOptionDescription"
+                   data-l10n-id="addressbar-datalus-suggest-nonsponsored-description"/>
     </vbox>
-    <vbox class="firefoxSuggestOptionBox">
+    <vbox class="datalusSuggestOptionBox">
       <hbox align="center">
-        <label id="firefoxSuggestSponsoredLabel"
+        <label id="datalusSuggestSponsoredLabel"
                flex="1"
-               data-l10n-id="addressbar-firefox-suggest-sponsored"/>
-        <html:input id="firefoxSuggestSponsoredToggle"
+               data-l10n-id="addressbar-datalus-suggest-sponsored"/>
+        <html:input id="datalusSuggestSponsoredToggle"
                     type="checkbox"
-                    class="toggle-button firefoxSuggestToggle"
+                    class="toggle-button datalusSuggestToggle"
                     preference="browser.urlbar.suggest.quicksuggest.sponsored"
-                    aria-labelledby="firefoxSuggestSponsoredLabel"
-                    aria-describedby="firefoxSuggestSponsoredDescription"/>
+                    aria-labelledby="datalusSuggestSponsoredLabel"
+                    aria-describedby="datalusSuggestSponsoredDescription"/>
       </hbox>
-      <description id="firefoxSuggestSponsoredDescription"
-                   class="tip-caption firefoxSuggestOptionDescription"
-                   data-l10n-id="addressbar-firefox-suggest-sponsored-description"/>
+      <description id="datalusSuggestSponsoredDescription"
+                   class="tip-caption datalusSuggestOptionDescription"
+                   data-l10n-id="addressbar-datalus-suggest-sponsored-description"/>
     </vbox>
-    <vbox class="firefoxSuggestOptionBox">
+    <vbox class="datalusSuggestOptionBox">
       <hbox align="center">
-        <label id="firefoxSuggestDataCollectionLabel"
+        <label id="datalusSuggestDataCollectionLabel"
                flex="1"
-               data-l10n-id="addressbar-firefox-suggest-data-collection"/>
-        <html:input id="firefoxSuggestDataCollectionToggle"
+               data-l10n-id="addressbar-datalus-suggest-data-collection"/>
+        <html:input id="datalusSuggestDataCollectionToggle"
                     type="checkbox"
-                    class="toggle-button firefoxSuggestToggle"
+                    class="toggle-button datalusSuggestToggle"
                     preference="browser.urlbar.quicksuggest.dataCollection.enabled"
-                    aria-labelledby="firefoxSuggestDataCollectionLabel"
-                    aria-describedby="firefoxSuggestDataCollectionDescription"/>
+                    aria-labelledby="datalusSuggestDataCollectionLabel"
+                    aria-describedby="datalusSuggestDataCollectionDescription"/>
       </hbox>
-      <description class="tip-caption firefoxSuggestOptionDescription">
-        <html:span id="firefoxSuggestDataCollectionDescription"
+      <description class="tip-caption datalusSuggestOptionDescription">
+        <html:span id="datalusSuggestDataCollectionDescription"
                    class="tail-with-learn-more"
-                   data-l10n-id="addressbar-firefox-suggest-data-collection-description"/>
-      <label id="firefoxSuggestDataCollectionLearnMore"
-             class="learnMore firefoxSuggestLearnMore" is="text-link"
-             data-l10n-id="addressbar-locbar-firefox-suggest-learn-more"/>
+                   data-l10n-id="addressbar-datalus-suggest-data-collection-description"/>
+      <label id="datalusSuggestDataCollectionLearnMore"
+             class="learnMore datalusSuggestLearnMore" is="text-link"
+             data-l10n-id="addressbar-locbar-datalus-suggest-learn-more"/>
       </description>
     </vbox>
-    <hbox id="firefoxSuggestInfoBox" class="info-box-container" align="start"
+    <hbox id="datalusSuggestInfoBox" class="info-box-container" align="start"
           hidden="true">
       <image class="info-icon"/>
       <description class="tip-caption" flex="1">
-        <html:span id="firefoxSuggestInfoText" class="tail-with-learn-more"/>
-        <label id="firefoxSuggestInfoBoxLearnMore"
-               class="learnMore firefoxSuggestLearnMore" is="text-link"
-               data-l10n-id="addressbar-locbar-firefox-suggest-learn-more"/>
+        <html:span id="datalusSuggestInfoText" class="tail-with-learn-more"/>
+        <label id="datalusSuggestInfoBoxLearnMore"
+               class="learnMore datalusSuggestLearnMore" is="text-link"
+               data-l10n-id="addressbar-locbar-datalus-suggest-learn-more"/>
       </description>
     </hbox>
   </vbox>
@@ -913,7 +913,7 @@
 
 </groupbox>
 
-<!-- Firefox Data Collection and Use -->
+<!-- Datalus Data Collection and Use -->
 #ifdef MOZ_DATA_REPORTING
 <hbox id="dataCollectionCategory"
       class="subcategory"

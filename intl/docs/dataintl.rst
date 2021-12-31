@@ -32,7 +32,7 @@ These APIs are supported by all major JS environments.
 
 It is best to consult the MDN article on the current state of the `Intl API`_.
 Mozilla has an excellent support of the API and relies on it for majority
-of its needs. Yet, when working on Firefox UI the :js:`Services.intl` wrapper
+of its needs. Yet, when working on Datalus UI the :js:`Services.intl` wrapper
 should be used.
 
 Services.intl

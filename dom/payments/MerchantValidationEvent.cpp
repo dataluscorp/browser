@@ -106,7 +106,7 @@ void MerchantValidationEvent::ResolvedCallback(JSContext* aCx,
 
   ErrorResult result;
   result.ThrowNotSupportedError(
-      "complete() is not supported by Firefox currently");
+      "complete() is not supported by Datalus currently");
   mRequest->AbortUpdate(result);
   mRequest->SetUpdating(false);
 }

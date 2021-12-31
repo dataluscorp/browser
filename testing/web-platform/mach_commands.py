@@ -41,20 +41,20 @@ class WebPlatformTestsRunnerSetup(MozbuildObject):
         tests_src_path = os.path.join(self._here, "tests")
 
         if (
-            kwargs["product"] in {"firefox", "firefox_android"}
+            kwargs["product"] in {"datalus", "datalus_android"}
             and kwargs["specialpowers_path"] is None
         ):
             kwargs["specialpowers_path"] = os.path.join(
                 self.distdir, "xpi-stage", "specialpowers@mozilla.org.xpi"
             )
 
-        if kwargs["product"] == "firefox_android":
+        if kwargs["product"] == "datalus_android":
             # package_name may be different in the future
             package_name = kwargs["package_name"]
             if not package_name:
                 kwargs["package_name"] = package_name = "org.mozilla.geckoview.test"
 
-            # Note that this import may fail in non-firefox-for-android trees
+            # Note that this import may fail in non-datalus-for-android trees
             from mozrunner.devices.android_device import (
                 get_adb_path,
                 verify_android_device,
@@ -111,8 +111,8 @@ class WebPlatformTestsRunnerSetup(MozbuildObject):
 
         return kwargs
 
-    def kwargs_firefox(self, kwargs):
-        """Setup kwargs specific to running Firefox and other gecko browsers"""
+    def kwargs_datalus(self, kwargs):
+        """Setup kwargs specific to running Datalus and other gecko browsers"""
         import mozinfo
         from wptrunner import wptcommandline
 
@@ -137,8 +137,8 @@ class WebPlatformTestsRunnerSetup(MozbuildObject):
             and mozinfo.info["os"] == "win"
             and mozinfo.info["os_version"] == "6.1"
         ):
-            # On Windows 7 --install-fonts fails, so fall back to a Firefox-specific codepath
-            self.setup_fonts_firefox()
+            # On Windows 7 --install-fonts fails, so fall back to a Datalus-specific codepath
+            self.setup_fonts_datalus()
             kwargs["install_fonts"] = False
 
         if kwargs["preload_browser"] is None:
@@ -205,7 +205,7 @@ class WebPlatformTestsRunnerSetup(MozbuildObject):
                 os.makedirs(meta_dir)
         return kwargs
 
-    def setup_fonts_firefox(self):
+    def setup_fonts_datalus(self):
         # Ensure the Ahem font is available
         if not sys.platform.startswith("darwin"):
             font_path = os.path.join(os.path.dirname(self.get_binary_path()), "fonts")
@@ -294,7 +294,7 @@ class WebPlatformTestsUpdater(MozbuildObject):
                 self.topobjdir, "_tests", "web-platform", "wptrunner.local.ini"
             )
         if kwargs["product"] is None:
-            kwargs["product"] = "firefox"
+            kwargs["product"] = "datalus"
 
         kwargs["store_state"] = False
 
@@ -473,7 +473,7 @@ def setup(command_context):
 @Command(
     "web-platform-tests",
     category="testing",
-    conditions=[conditions.is_firefox_or_android],
+    conditions=[conditions.is_datalus_or_android],
     description="Run web-platform-tests.",
     parser=create_parser_wpt,
 )
@@ -481,9 +481,9 @@ def run_web_platform_tests(command_context, **params):
     setup(command_context)
     if params["product"] is None:
         if conditions.is_android(command_context):
-            params["product"] = "firefox_android"
+            params["product"] = "datalus_android"
         else:
-            params["product"] = "firefox"
+            params["product"] = "datalus"
     if "test_objects" in params:
         include = []
         test_types = set()
@@ -508,9 +508,9 @@ def run_web_platform_tests(command_context, **params):
 
     if (
         conditions.is_android(command_context)
-        and params["product"] != "firefox_android"
+        and params["product"] != "datalus_android"
     ):
-        logger.warning("Must specify --product=firefox_android in Android environment.")
+        logger.warning("Must specify --product=datalus_android in Android environment.")
 
     return wpt_runner.run(logger, **params)
 
@@ -518,7 +518,7 @@ def run_web_platform_tests(command_context, **params):
 @Command(
     "wpt",
     category="testing",
-    conditions=[conditions.is_firefox_or_android],
+    conditions=[conditions.is_datalus_or_android],
     description="Run web-platform-tests.",
     parser=create_parser_wpt,
 )

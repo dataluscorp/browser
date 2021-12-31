@@ -43,7 +43,7 @@ async function setUpCookies() {
       // Add private cookie
       await browser.cookies.set({
         url,
-        storeId: "firefox-private",
+        storeId: "datalus-private",
         name: "cookie_private",
         value: "1",
       });
@@ -51,7 +51,7 @@ async function setUpCookies() {
       // Add container cookie
       await browser.cookies.set({
         url,
-        storeId: "firefox-container-1",
+        storeId: "datalus-container-1",
         name: "cookie_container",
         value: "1",
       });
@@ -148,7 +148,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     equal(
       await getCookies(extension, {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-default",
+        cookieStoreId: "datalus-default",
       }),
       "cookie_normal=1",
       "Default container cookies for downloads.download"
@@ -158,7 +158,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
       exceptionRe: /No permission for cookieStoreId/,
       downloadData: {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-default",
+        cookieStoreId: "datalus-default",
       },
     });
   }
@@ -168,7 +168,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     equal(
       await getCookies(extension, {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-private",
+        cookieStoreId: "datalus-private",
         incognito: true,
       }),
       "cookie_private=1",
@@ -179,28 +179,28 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
       exceptionRe: forcedIncognitoException,
       downloadData: {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-private",
+        cookieStoreId: "datalus-private",
         incognito: true,
       },
     });
   }
 
-  // Test firefox-container-1 download
+  // Test datalus-container-1 download
   if (containerDownloadAllowed) {
     equal(
       await getCookies(extension, {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       }),
       "cookie_container=1",
-      "firefox-container-1 cookies for downloads.download"
+      "datalus-container-1 cookies for downloads.download"
     );
   } else {
     await getResult(extension, "checkDownloadError", {
       exceptionRe: /No permission for cookieStoreId/,
       downloadData: {
         url: DOWNLOAD_URL,
-        cookieStoreId: "firefox-container-1",
+        cookieStoreId: "datalus-container-1",
       },
     });
   }
@@ -213,7 +213,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     downloadData: {
       url: DOWNLOAD_URL,
       incognito: true,
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
     },
   });
   await getResult(extension, "checkDownloadError", {
@@ -223,7 +223,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     downloadData: {
       url: DOWNLOAD_URL,
       incognito: false,
-      cookieStoreId: "firefox-private",
+      cookieStoreId: "datalus-private",
     },
   });
 
@@ -241,7 +241,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
   let searchRes, searchResDownload;
   // Test default container search
   searchRes = await getResult(extension, "search", {
-    cookieStoreId: "firefox-default",
+    cookieStoreId: "datalus-default",
   });
   equal(
     searchRes.length,
@@ -257,7 +257,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
   // Test default container search with mismatched container
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_normal=1"),
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
   equal(
     searchRes.length,
@@ -267,7 +267,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
 
   // Test private container search
   searchRes = await getResult(extension, "search", {
-    cookieStoreId: "firefox-private",
+    cookieStoreId: "datalus-private",
   });
   if (privateAllowed) {
     equal(
@@ -284,7 +284,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     // Test private container search with mismatched container
     searchRes = await getResult(extension, "search", {
       mime: cookiesToMime("cookie_private=1"),
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
     });
     equal(
       searchRes.length,
@@ -299,36 +299,36 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     );
   }
 
-  // Test firefox-container-1 search
+  // Test datalus-container-1 search
   searchRes = await getResult(extension, "search", {
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
   equal(
     searchRes.length,
     1,
-    "firefox-container-1 results length for downloads.search"
+    "datalus-container-1 results length for downloads.search"
   );
   [searchResDownload] = searchRes;
   equal(
     mimeToCookies(searchResDownload.mime),
     "cookie_container=1",
-    "firefox-container-1 cookies for downloads.search"
+    "datalus-container-1 cookies for downloads.search"
   );
-  // Test firefox-container-1 search with mismatched container
+  // Test datalus-container-1 search with mismatched container
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_container=1"),
-    cookieStoreId: "firefox-default",
+    cookieStoreId: "datalus-default",
   });
   equal(
     searchRes.length,
     0,
-    "firefox-container-1 container results length for downloads.search when container mismatched"
+    "datalus-container-1 container results length for downloads.search when container mismatched"
   );
 
   // Test default container erase with mismatched container
   await getResult(extension, "erase", {
     mime: cookiesToMime("cookie_normal=1"),
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_normal=1"),
@@ -342,7 +342,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
   // Test private container erase with mismatched container
   await getResult(extension, "erase", {
     mime: cookiesToMime("cookie_private=1"),
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_private=1"),
@@ -353,10 +353,10 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     "Private container results length for downloads.search after erase with mismatched container"
   );
 
-  // Test firefox-container-1 erase with mismatched container
+  // Test datalus-container-1 erase with mismatched container
   await getResult(extension, "erase", {
     mime: cookiesToMime("cookie_container=1"),
-    cookieStoreId: "firefox-default",
+    cookieStoreId: "datalus-default",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_container=1"),
@@ -364,12 +364,12 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
   equal(
     searchRes.length,
     1,
-    "firefox-container-1 results length for downloads.search after erase with mismatched container"
+    "datalus-container-1 results length for downloads.search after erase with mismatched container"
   );
 
   // Test default container erase
   await getResult(extension, "erase", {
-    cookieStoreId: "firefox-default",
+    cookieStoreId: "datalus-default",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_normal=1"),
@@ -382,7 +382,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
 
   // Test private container erase
   await getResult(extension, "erase", {
-    cookieStoreId: "firefox-private",
+    cookieStoreId: "datalus-private",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_private=1"),
@@ -394,9 +394,9 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
     "Private container results length for downloads.search after erase"
   );
 
-  // Test firefox-container-1 erase
+  // Test datalus-container-1 erase
   await getResult(extension, "erase", {
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
   searchRes = await getResult(extension, "search", {
     mime: cookiesToMime("cookie_container=1"),
@@ -404,7 +404,7 @@ async function runTests(extension, containerDownloadAllowed, privateAllowed) {
   equal(
     searchRes.length,
     0,
-    "firefox-container-1 results length for downloads.search after erase"
+    "datalus-container-1 results length for downloads.search after erase"
   );
 }
 
@@ -419,7 +419,7 @@ async function populateDownloads(extension) {
   });
   await getResult(extension, "getDownload", {
     url: DOWNLOAD_URL,
-    cookieStoreId: "firefox-container-1",
+    cookieStoreId: "datalus-container-1",
   });
 }
 

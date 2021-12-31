@@ -38,7 +38,7 @@ const URL_OVERRIDES_TYPE = "url_overrides";
 const NEW_TAB_KEY = "newTabURL";
 
 var gHomePane = {
-  HOME_MODE_FIREFOX_HOME: "0",
+  HOME_MODE_DATALUS_HOME: "0",
   HOME_MODE_BLANK: "1",
   HOME_MODE_CUSTOM: "2",
   HOMEPAGE_PREF: "browser.startup.homepage",
@@ -112,7 +112,7 @@ var gHomePane = {
         true
       );
       let newValue = newtabEnabledPref
-        ? this.HOME_MODE_FIREFOX_HOME
+        ? this.HOME_MODE_DATALUS_HOME
         : this.HOME_MODE_BLANK;
       if (newValue !== menulist.value) {
         menulist.value = newValue;
@@ -385,7 +385,7 @@ var gHomePane = {
     if (controllingExtension && controllingExtension.id) {
       newValue = controllingExtension.id;
     } else if (isDefault) {
-      newValue = this.HOME_MODE_FIREFOX_HOME;
+      newValue = this.HOME_MODE_DATALUS_HOME;
     } else if (isBlank) {
       newValue = this.HOME_MODE_BLANK;
     } else {
@@ -458,7 +458,7 @@ var gHomePane = {
     );
 
     switch (value) {
-      case this.HOME_MODE_FIREFOX_HOME:
+      case this.HOME_MODE_DATALUS_HOME:
         if (startupPref.value === gMainPane.STARTUP_PREF_BLANK) {
           startupPref.value = gMainPane.STARTUP_PREF_HOMEPAGE;
         }
@@ -627,7 +627,7 @@ var gHomePane = {
    * Check all Home Tab preferences for user set values.
    */
   _changedHomeTabDefaultPrefs() {
-    // If Discovery Stream is enabled Firefox Home Content preference options are hidden
+    // If Discovery Stream is enabled Datalus Home Content preference options are hidden
     const homeContentChanged =
       !this.isPocketNewtabEnabled &&
       this.homePanePrefs.some(pref => pref.hasUserValue);
@@ -660,7 +660,7 @@ var gHomePane = {
    */
   restoreDefaultPrefsForHome() {
     this.restoreDefaultHomePage();
-    // If Discovery Stream is enabled Firefox Home Content preference options are hidden
+    // If Discovery Stream is enabled Datalus Home Content preference options are hidden
     if (!this.isPocketNewtabEnabled) {
       this.homePanePrefs.forEach(pref => Services.prefs.clearUserPref(pref.id));
     }

@@ -284,7 +284,7 @@ bool DriverCrashGuard::UpdateBaseEnvironment() {
     changed |= CheckAndUpdatePref("deviceID", value);
   }
 
-  // Firefox properties.
+  // Datalus properties.
   changed |= CheckAndUpdatePref(
       "appVersion", NS_LITERAL_STRING_FROM_CSTRING(MOZ_APP_VERSION));
 

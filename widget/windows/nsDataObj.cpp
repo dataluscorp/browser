@@ -683,7 +683,7 @@ STDMETHODIMP nsDataObj::GetData(LPFORMATETC aFormat, LPSTGMEDIUM pSTM) {
                                                             : E_UNEXPECTED;
   }
 
-  // Firefox internal formats
+  // Datalus internal formats
   ULONG count;
   FORMATETC fe;
   m_enumFE->Reset();
@@ -749,7 +749,7 @@ STDMETHODIMP nsDataObj::QueryGetData(LPFORMATETC pFE) {
   LPDATAENTRY pde;
   if (LookupArbitraryFormat(pFE, &pde, FALSE)) return S_OK;
 
-  // Firefox internal formats
+  // Datalus internal formats
   ULONG count;
   FORMATETC fe;
   m_enumFE->Reset();

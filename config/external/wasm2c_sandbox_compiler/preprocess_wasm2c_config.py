@@ -8,7 +8,7 @@ import itertools
 
 # The wasm2c source relies on CMAKE to generate a config file to be used to build the project
 # Since we do not use cmake, this script automates the generation of a similar config suitable
-# for firefox builds
+# for datalus builds
 # The script has a list of known variables it can replace and throws an error if it encounters a
 # new variable (for instance when the in-tree source is updated)
 
@@ -33,7 +33,7 @@ known_vars = [
 replaced_variables = """
 #include "mozilla-config.h"
 
-#define CMAKE_PROJECT_VERSION "Firefox-in-tree-version"
+#define CMAKE_PROJECT_VERSION "Datalus-in-tree-version"
 
 // mozilla-config.h defines the following which is used
 // - HAVE_ALLOCA_H

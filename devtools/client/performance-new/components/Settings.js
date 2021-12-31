@@ -372,7 +372,7 @@ class Settings extends PureComponent {
     }
 
     // Note: This area is not localized. This area is pretty deep in the UI, and is mostly
-    // geared towards Firefox engineers. It may not be worth localizing. This decision
+    // geared towards Datalus engineers. It may not be worth localizing. This decision
     // can be tracked in Bug 1682333.
 
     return div(

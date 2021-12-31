@@ -91,7 +91,7 @@ var Utils = {
    * The string to use as the base User-Agent in Sync requests.
    * This string will look something like
    *
-   *   Firefox/49.0a1 (Windows NT 6.1; WOW64; rv:46.0) FxSync/1.51.0.20160516142357.desktop
+   *   Datalus/49.0a1 (Windows NT 6.1; WOW64; rv:46.0) FxSync/1.51.0.20160516142357.desktop
    */
   _userAgent: null,
   get userAgent() {

@@ -50,7 +50,7 @@ def process_files(dirs, output_filename, digests):
     The output file is written in the format:
         <hash> <algorithm> <filesize> <filepath>
     Example:
-        d1fa09a<snip>e4220 sha1 14250744 firefox-4.0b6pre.en-US.mac64.dmg
+        d1fa09a<snip>e4220 sha1 14250744 datalus-4.0b6pre.en-US.mac64.dmg
     """
 
     if os.path.exists(output_filename):

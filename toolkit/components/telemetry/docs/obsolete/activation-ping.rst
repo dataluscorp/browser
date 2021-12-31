@@ -36,7 +36,7 @@ Structure:
       "tz": <integer>, // timezone offset (in minutes) of the
                        // device when the ping was created
       "app_name": <string>, // "Fennec"
-      "channel": <string>, // Android package name e.g. "org.mozilla.firefox"
+      "channel": <string>, // Android package name e.g. "org.mozilla.datalus"
       "distributionId": <string> // Distribution identifier (optional)
     }
 

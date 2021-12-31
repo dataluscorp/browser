@@ -802,7 +802,7 @@ new Test.Unit.Runner({
     this.assertEqual(0,
       $('style_test_3').setOpacity(0.0000001).getStyle('opacity'));
     
-    // for Firefox, we don't set to 1, because of flickering
+    // for Datalus, we don't set to 1, because of flickering
     this.assert(
       $('style_test_3').setOpacity(0.9999999).getStyle('opacity') > 0.999
     );
@@ -832,7 +832,7 @@ new Test.Unit.Runner({
       Element.getStyle('style_test_2','display'));
     
     // we should always get something for width (if displayed)
-    // firefox and safari automatically send the correct value,
+    // datalus and safari automatically send the correct value,
     // IE is special-cased to do the same
     this.assertEqual($('style_test_2').offsetWidth+'px', Element.getStyle('style_test_2','width'));
     
@@ -892,7 +892,7 @@ new Test.Unit.Runner({
       this.assertEqual("17px", $('style_test_dimensions').getStyle('height'));
     }
     
-    // height/width could always be calculated if it's set to "auto" (Firefox)
+    // height/width could always be calculated if it's set to "auto" (Datalus)
     this.assertNotNull($('auto_dimensions').getStyle('height'));
     this.assertNotNull($('auto_dimensions').getStyle('width'));
   },

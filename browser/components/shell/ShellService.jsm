@@ -59,12 +59,12 @@ let ShellServiceInternal = {
     if (AppConstants.platform == "win") {
       let optOutValue = WindowsRegistry.readRegKey(
         Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-        "Software\\Mozilla\\Firefox",
+        "Software\\Mozilla\\Datalus",
         "DefaultBrowserOptOut"
       );
       WindowsRegistry.removeRegKey(
         Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-        "Software\\Mozilla\\Firefox",
+        "Software\\Mozilla\\Datalus",
         "DefaultBrowserOptOut"
       );
       if (optOutValue == "True") {
@@ -258,7 +258,7 @@ let ShellServiceInternal = {
   },
 
   /**
-   * Checks if Firefox app can and isn't pinned to OS "taskbar."
+   * Checks if Datalus app can and isn't pinned to OS "taskbar."
    *
    * @throws if not called from main process.
    */
@@ -296,7 +296,7 @@ let ShellServiceInternal = {
   },
 
   /**
-   * Pin Firefox app to the OS "taskbar."
+   * Pin Datalus app to the OS "taskbar."
    */
   async pinToTaskbar() {
     if (await this.doesAppNeedPin()) {

@@ -57,27 +57,27 @@ class Mocks {
     this.runtimeClientFactoryMock = createRuntimeClientFactoryMock();
     this._clients = {
       [RUNTIMES.NETWORK]: {},
-      [RUNTIMES.THIS_FIREFOX]: {},
+      [RUNTIMES.THIS_DATALUS]: {},
       [RUNTIMES.USB]: {},
     };
     this.runtimeClientFactoryMock.createClientForRuntime = runtime => {
       return this._clients[runtime.type][runtime.id];
     };
 
-    // Add a client for THIS_FIREFOX, since about:debugging will start on the This Firefox
+    // Add a client for THIS_DATALUS, since about:debugging will start on the This Datalus
     // page.
-    this._thisFirefoxClient = createThisFirefoxClientMock();
-    this._clients[RUNTIMES.THIS_FIREFOX][
-      RUNTIMES.THIS_FIREFOX
-    ] = this._thisFirefoxClient;
+    this._thisDatalusClient = createThisDatalusClientMock();
+    this._clients[RUNTIMES.THIS_DATALUS][
+      RUNTIMES.THIS_DATALUS
+    ] = this._thisDatalusClient;
 
     // Enable mocks and remove them after the test.
     this.enableMocks();
     registerCleanupFunction(() => this.disableMocks());
   }
 
-  get thisFirefoxClient() {
-    return this._thisFirefoxClient;
+  get thisDatalusClient() {
+    return this._thisDatalusClient;
   }
 
   enableMocks() {
@@ -139,7 +139,7 @@ class Mocks {
    *        - deviceId: {String} Device id
    *        - deviceName: {String} Device name
    *        - isFenix: {Boolean} set by ADB if the package name matches a Fenix package
-   *        - name: {String} Application name, for instance "Firefox"
+   *        - name: {String} Application name, for instance "Datalus"
    *        - shortName: {String} Short name for the device
    *        - socketPath: {String} (should only be used for connecting, so not here)
    *        - version: {String} Version, for instance "63.0a"

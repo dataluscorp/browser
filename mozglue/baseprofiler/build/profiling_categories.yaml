@@ -25,7 +25,7 @@
 # label [required]
 # =====
 # Label of the profiling category. This a more human readable string for the
-# category. Label will be displayed in the Firefox Profiler front-end. But also
+# category. Label will be displayed in the Datalus Profiler front-end. But also
 # this will be used as a Rust enum field (with non-alphanumeric characters
 # removed) because it's more suitable for Rust enums since name field is a snake
 # cased field with all caps. This is not idiomatic to rust enum field. On the
@@ -33,7 +33,7 @@
 #
 # color [required]
 # =====
-# Color that this category will show up as in the Firefox Profiler front-end.
+# Color that this category will show up as in the Datalus Profiler front-end.
 # The list of available color names for categories is:
 # - transparent
 # - blue

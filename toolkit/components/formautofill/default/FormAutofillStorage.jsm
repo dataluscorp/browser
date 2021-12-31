@@ -166,8 +166,8 @@ class CreditCards extends CreditCardsBase {
         if (CreditCard.isValidNumber(ccNumber)) {
           creditCard["cc-number"] = CreditCard.getLongMaskedNumber(ccNumber);
         } else {
-          // Credit card numbers can be entered on versions of Firefox that don't validate
-          // the number and then synced to this version of Firefox. Therefore, mask the
+          // Credit card numbers can be entered on versions of Datalus that don't validate
+          // the number and then synced to this version of Datalus. Therefore, mask the
           // full number if the number is invalid on this version.
           creditCard["cc-number"] = "*".repeat(ccNumber.length);
         }

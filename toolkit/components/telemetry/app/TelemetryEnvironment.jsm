@@ -379,7 +379,7 @@ const BACKGROUND_UPDATE_PREF_CHANGE_TOPIC =
   UpdateUtils.PER_INSTALLATION_PREFS["app.update.background.enabled"]
     .observerTopic;
 const SERVICES_INFO_CHANGE_TOPIC = "sync-ui-state:update";
-const FIREFOX_SUGGEST_UPDATE_TOPIC = "firefox-suggest-update";
+const DATALUS_SUGGEST_UPDATE_TOPIC = "datalus-suggest-update";
 
 /**
  * Enforces the parameter to a boolean value.
@@ -1307,7 +1307,7 @@ EnvironmentCache.prototype = {
     Services.obs.addObserver(this, AUTO_UPDATE_PREF_CHANGE_TOPIC);
     Services.obs.addObserver(this, BACKGROUND_UPDATE_PREF_CHANGE_TOPIC);
     Services.obs.addObserver(this, SERVICES_INFO_CHANGE_TOPIC);
-    Services.obs.addObserver(this, FIREFOX_SUGGEST_UPDATE_TOPIC);
+    Services.obs.addObserver(this, DATALUS_SUGGEST_UPDATE_TOPIC);
   },
 
   _removeObservers() {
@@ -1326,7 +1326,7 @@ EnvironmentCache.prototype = {
     Services.obs.removeObserver(this, AUTO_UPDATE_PREF_CHANGE_TOPIC);
     Services.obs.removeObserver(this, BACKGROUND_UPDATE_PREF_CHANGE_TOPIC);
     Services.obs.removeObserver(this, SERVICES_INFO_CHANGE_TOPIC);
-    Services.obs.removeObserver(this, FIREFOX_SUGGEST_UPDATE_TOPIC);
+    Services.obs.removeObserver(this, DATALUS_SUGGEST_UPDATE_TOPIC);
   },
 
   observe(aSubject, aTopic, aData) {
@@ -1400,8 +1400,8 @@ EnvironmentCache.prototype = {
       case SERVICES_INFO_CHANGE_TOPIC:
         this._updateServicesInfo();
         break;
-      case FIREFOX_SUGGEST_UPDATE_TOPIC:
-        this._updateFirefoxSuggest();
+      case DATALUS_SUGGEST_UPDATE_TOPIC:
+        this._updateDatalusSuggest();
         break;
     }
   },
@@ -1787,9 +1787,9 @@ EnvironmentCache.prototype = {
   },
 
   /**
-   * Updates environment data related to Firefox Suggest.
+   * Updates environment data related to Datalus Suggest.
    */
-  _updateFirefoxSuggest() {
+  _updateDatalusSuggest() {
     let prefs = [
       "browser.urlbar.suggest.quicksuggest.nonsponsored",
       "browser.urlbar.suggest.quicksuggest.sponsored",
@@ -1999,7 +1999,7 @@ EnvironmentCache.prototype = {
       DWriteEnabled: getGfxField("DWriteEnabled", null),
       ContentBackend: getGfxField("ContentBackend", null),
       Headless: getGfxField("isHeadless", null),
-      EmbeddedInFirefoxReality: getGfxField("EmbeddedInFirefoxReality", null),
+      EmbeddedInDatalusReality: getGfxField("EmbeddedInDatalusReality", null),
       // The following line is disabled due to main thread jank and will be enabled
       // again as part of bug 1154500.
       // DWriteVersion: getGfxField("DWriteVersion", null),

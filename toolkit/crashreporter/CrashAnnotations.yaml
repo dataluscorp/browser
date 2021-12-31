@@ -383,7 +383,7 @@ PHCFreeStack:
 
 HasDeviceTouchScreen:
   description: >
-    Set to 1 if the device had a touch-screen, this only applies to Firefox
+    Set to 1 if the device had a touch-screen, this only applies to Datalus
     desktop as on mobile devices we assume a touch-screen is always present.
   type: boolean
 
@@ -395,7 +395,7 @@ IAccessibleConfig:
 
 InstallTime:
   description: >
-    The time when Firefox was installed expressed as seconds since the Epoch
+    The time when Datalus was installed expressed as seconds since the Epoch
   type: integer
 
 InterfaceRegistrationInfoChild:
@@ -503,13 +503,13 @@ IsWebRenderResourcePathOverridden:
 
 JavaException:
   description: >
-    JSON structured Java stack trace, only present on Firefox for Android if we encounter an
+    JSON structured Java stack trace, only present on Datalus for Android if we encounter an
     uncaught Java exception.
   type: string
 
 JavaStackTrace:
   description: >
-    Java stack trace, only present on Firefox for Android if we encounter an
+    Java stack trace, only present on Datalus for Android if we encounter an
     uncaught Java exception.
   type: string
 
@@ -621,7 +621,7 @@ MarshalActCtxManifestPath:
 
 MozCrashReason:
   description: >
-    Plaintext description of why Firefox crashed, this is usually set by
+    Plaintext description of why Datalus crashed, this is usually set by
     assertions and the like.
   type: string
   ping: true
@@ -662,7 +662,7 @@ ProcessType:
 
 ProductName:
   description: >
-    Application name (e.g. Firefox).
+    Application name (e.g. Datalus).
   type: string
   ping: true
 
@@ -789,7 +789,7 @@ StartupCrash:
 
 StartupTime:
   description: >
-    The time when Firefox was launched expressed in seconds since the Epoch.
+    The time when Datalus was launched expressed in seconds since the Epoch.
   type: integer
 
 StatFailure:
@@ -808,7 +808,7 @@ StorageConnectionNotClosed:
 SubmittedFromInfobar:
   description: >
     This annotation is set to 1 when the crash report has been manually
-    submitted from Firefox info-bar or has been automatically submitted after
+    submitted from Datalus info-bar or has been automatically submitted after
     the user opted-in to auto-submission.
   type: boolean
 

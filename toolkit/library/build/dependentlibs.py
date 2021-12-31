@@ -34,7 +34,7 @@ def dependentlibs_win32_objdump(lib):
             # the actual DLLs in dist/bin are all lowercase, whether they are produced
             # by the build system or copied from WIN32_REDIST_DIR. By turning everything
             # to lowercase, we ensure we always find the files.
-            # At runtime, when Firefox reads the dependentlibs.list file on Windows, the
+            # At runtime, when Datalus reads the dependentlibs.list file on Windows, the
             # case doesn't matter.
             deps.append(match.group(1).lower())
     proc.wait()

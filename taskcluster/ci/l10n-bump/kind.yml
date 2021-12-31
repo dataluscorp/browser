@@ -33,7 +33,7 @@ job-defaults:
                 # XXX whenever the `beta` config changes, make sure to make
                 #     the corresponding change in merge-automation/kind.yml
                 beta:
-                    name: Firefox l10n changesets
+                    name: Datalus l10n changesets
                     path: browser/locales/l10n-changesets.json
                     version-path: browser/config/version.txt
                     l10n-repo-url: "https://hg.mozilla.org/l10n-central/%(locale)s/json-pushes?version=2&tipsonly=1"
@@ -70,7 +70,7 @@ job-defaults:
                         "path": "browser/locales/shipped-locales",
                     }]
                 default:
-                    name: Firefox l10n changesets
+                    name: Datalus l10n changesets
                     path: browser/locales/l10n-changesets.json
                     version-path: browser/config/version.txt
                     ignore-config:

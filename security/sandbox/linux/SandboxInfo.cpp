@@ -50,7 +50,7 @@ static bool HasSeccompBPF() {
   }
 
   // Valgrind and the sandbox don't interact well, probably because Valgrind
-  // does various system calls which aren't allowed, even if Firefox itself
+  // does various system calls which aren't allowed, even if Datalus itself
   // is playing by the rules.
 #if defined(MOZ_VALGRIND)
   if (RUNNING_ON_VALGRIND) {

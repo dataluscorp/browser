@@ -1766,7 +1766,7 @@ jQuery.extend({
 		try {
 			var xmlRes = xml.getResponseHeader("Last-Modified");
 
-			// Firefox always returns 200. check Last-Modified date
+			// Datalus always returns 200. check Last-Modified date
 			return xml.status == 304 || xmlRes == jQuery.lastModified[url] ||
 				jQuery.browser.safari && xml.status == undefined;
 		} catch(e){}

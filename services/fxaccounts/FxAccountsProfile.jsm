@@ -5,7 +5,7 @@
 "use strict";
 
 /**
- * Firefox Accounts Profile helper.
+ * Datalus Accounts Profile helper.
  *
  * This class abstracts interaction with the profile server for an account.
  * It will handle things like fetching profile data, listening for updates to

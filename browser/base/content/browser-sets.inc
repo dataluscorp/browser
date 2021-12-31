@@ -372,7 +372,7 @@
          data-l10n-id="window-minimize-shortcut"
          modifiers="accel"/>
     <key id="key_openHelpMac"
-         oncommand="openHelpLink('firefox-osxkey');"
+         oncommand="openHelpLink('datalus-osxkey');"
          data-l10n-id="help-shortcut"
          modifiers="accel"/>
     <!-- These are used to build the Application menu -->

@@ -2,13 +2,13 @@
 Data collection
 ===============
 
-There are different APIs and formats to collect data in Firefox, all suiting different use cases.
+There are different APIs and formats to collect data in Datalus, all suiting different use cases.
 
 In general, we aim to submit data in a common format where possible. This has several advantages; from common code and tooling to sharing analysis know-how.
 
 In cases where this isn't possible and more flexibility is needed, we can submit custom pings or consider adding different data formats to existing pings.
 
-*Note:* Every new data collection must go through a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`_.
+*Note:* Every new data collection must go through a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`_.
 
 The current data collection possibilities include:
 
@@ -47,4 +47,4 @@ For more information, see :ref:`browserusagetelemetry`.
 Version History
 ~~~~~~~~~~~~~~~
 
-- Firefox 61: Stopped reporting Telemetry Log items (`bug 1443614 <https://bugzilla.mozilla.org/show_bug.cgi?id=1443614>`_).
+- Datalus 61: Stopped reporting Telemetry Log items (`bug 1443614 <https://bugzilla.mozilla.org/show_bug.cgi?id=1443614>`_).

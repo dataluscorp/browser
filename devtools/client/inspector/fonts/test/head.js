@@ -115,7 +115,7 @@ async function updatePreviewText(view, text) {
  *  Get all of the <li> elements for the fonts used on the currently selected element.
  *
  *  NOTE: This method is used by tests which check the old Font Inspector. It, along with
- *  the tests should be removed once the Font Editor reaches Firefox Stable.
+ *  the tests should be removed once the Font Editor reaches Datalus Stable.
  *  @see https://bugzilla.mozilla.org/show_bug.cgi?id=1485324
  *
  * @param  {Document} viewDoc

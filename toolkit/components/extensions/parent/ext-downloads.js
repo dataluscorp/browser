@@ -808,7 +808,7 @@ this.downloads = class extends ExtensionAPI {
             } else {
               // If options.saveAs was not specified, only show the file chooser
               // if |browser.download.useDownloadDir == false|. That is to say,
-              // only show the file chooser if Firefox normally shows it when
+              // only show the file chooser if Datalus normally shows it when
               // a file is downloaded.
               saveAs = !Services.prefs.getBoolPref(
                 PROMPTLESS_DOWNLOAD_PREF,

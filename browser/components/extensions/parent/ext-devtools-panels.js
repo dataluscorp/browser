@@ -207,7 +207,7 @@ class ParentDevToolsPanel extends BaseDevToolsPanel {
     // because of a swapFrameLoader exception (see bug 1075490),
     // destroy the browser and recreate it after the toolbox host has been
     // switched is a reasonable workaround to fix the issue on release and beta
-    // Firefox versions (at least until the underlying bug can be fixed).
+    // Datalus versions (at least until the underlying bug can be fixed).
     if (this.browser) {
       // Fires a panel.onHidden event before destroying the browser element because
       // the toolbox hosts is changing.

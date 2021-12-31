@@ -71,7 +71,7 @@ function prng() {
  * The distribution of locales. The number represents the ratio of total users in that
  * locale. The numbers should add up to ~1.0.
  *
- * https://sql.telemetry.mozilla.org/dashboard/firefox-localization
+ * https://sql.telemetry.mozilla.org/dashboard/datalus-localization
  */
 const localeDistribution = {
   "en-US": 0.373,
@@ -111,8 +111,8 @@ const localeDistribution = {
 };
 
 /**
- * Go through the top Firefox locales, and pick one at random that is representative
- * of the Firefox population as of 2021-06-03. It uses a pseudo-random number generator
+ * Go through the top Datalus locales, and pick one at random that is representative
+ * of the Datalus population as of 2021-06-03. It uses a pseudo-random number generator
  * to make the results repeatable.
  *
  * @returns {string} locale

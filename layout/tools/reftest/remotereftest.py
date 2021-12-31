@@ -228,7 +228,7 @@ class RemoteReftest(RefTest):
 
         self.remoteCache = os.path.join(options.remoteTestRoot, "cache/")
 
-        # Check that Firefox is installed
+        # Check that Datalus is installed
         expected = options.app.split("/")[-1]
         if not self.device.is_app_installed(expected):
             raise Exception("%s is not installed on this device" % expected)

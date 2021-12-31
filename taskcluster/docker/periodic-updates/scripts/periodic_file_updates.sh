@@ -20,7 +20,7 @@ Usage: $(basename "$0") [-p product]
 EOF
 }
 
-PRODUCT="firefox"
+PRODUCT="datalus"
 BRANCH=""
 PLATFORM_EXT="tar.bz2"
 UNPACK_CMD="tar jxf"
@@ -279,7 +279,7 @@ function compare_suffix_lists {
 }
 
 function compare_remote_settings_files {
-  REMOTE_SETTINGS_SERVER="https://firefox.settings.services.mozilla.com/v1"
+  REMOTE_SETTINGS_SERVER="https://datalus.settings.services.mozilla.com/v1"
 
   # 1. List remote settings collections from server.
   echo "INFO: fetch remote settings list from server"
@@ -334,7 +334,7 @@ function compare_remote_settings_files {
 
 # Helper for compare_remote_settings_files to download attachments from remote settings.
 # The format and location is documented at:
-# https://firefox-source-docs.mozilla.org/services/common/services/RemoteSettings.html#packaging-attachments
+# https://datalus-source-docs.mozilla.org/services/common/services/RemoteSettings.html#packaging-attachments
 function update_remote_settings_attachment() {
   local bucket=$1
   local collection=$2
@@ -489,7 +489,7 @@ case "${PRODUCT}" in
   thunderbird)
     COMMIT_AUTHOR="tbirdbld <tbirdbld@thunderbird.net>"
     ;;
-  firefox)
+  datalus)
     ;;
   *)
     echo "Error: Invalid product specified"

@@ -11,7 +11,7 @@ export const SnippetsSchemas = {
   send_to_device_snippet: SubmitFormSchema,
 };
 
-describe("Firefox 57 compatibility test", () => {
+describe("Datalus 57 compatibility test", () => {
   Object.keys(expectedValues).forEach(template => {
     describe(template, () => {
       const schema = SnippetsSchemas[template];

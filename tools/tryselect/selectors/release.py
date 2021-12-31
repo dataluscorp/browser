@@ -6,7 +6,7 @@
 import os
 
 import attr
-from mozilla_version.gecko import FirefoxVersion
+from mozilla_version.gecko import DatalusVersion
 
 from ..cli import BaseTryParser
 from ..push import push_to_try, vcs
@@ -31,7 +31,7 @@ class ReleaseParser(BaseTryParser):
                 "metavar": "STR",
                 "required": True,
                 "action": "store",
-                "type": FirefoxVersion.parse,
+                "type": DatalusVersion.parse,
                 "help": "The version number to use for the staging release.",
             },
         ],

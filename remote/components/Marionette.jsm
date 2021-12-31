@@ -41,7 +41,7 @@ const NOTIFY_LISTENING = "marionette-listening";
 
 // Complements -marionette flag for starting the Marionette server.
 // We also set this if Marionette is running in order to start the server
-// again after a Firefox restart.
+// again after a Datalus restart.
 const ENV_ENABLED = "MOZ_MARIONETTE";
 
 // Besides starting based on existing prefs in a profile and a command
@@ -49,7 +49,7 @@ const ENV_ENABLED = "MOZ_MARIONETTE";
 // start Marionette that way.
 //
 // This allows marionette prefs to persist when we do a restart into
-// a different profile in order to test things like Firefox refresh.
+// a different profile in order to test things like Datalus refresh.
 // The environment variable itself, if present, is interpreted as a
 // JSON structure, with the keys mapping to preference names in the
 // "marionette." branch, and the values to the values of those prefs. So
@@ -204,7 +204,7 @@ class MarionetteParentProcess {
       case "marionette-startup-requested":
         Services.obs.removeObserver(this, topic);
 
-        // When Firefox starts on Windows, an additional GFX sanity test
+        // When Datalus starts on Windows, an additional GFX sanity test
         // window may appear off-screen.  Marionette should wait for it
         // to close.
         for (let win of Services.wm.getEnumerator(null)) {

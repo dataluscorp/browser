@@ -6,8 +6,8 @@ s3_bucket_paths:
     by-platform:
         devedition-source:
             - pub/devedition/candidates
-        firefox-source:
-            - pub/firefox/candidates
+        datalus-source:
+            - pub/datalus/candidates
 default_locales:  # if given an empty locale, use these locales
     - en-US
 tasktype_map:  # Map task reference to task type.
@@ -33,20 +33,20 @@ mapping:
         description: "Checksums file for the source zip files"
         pretty_name:
             by-platform:
-                firefox-source: firefox-${version}.checksums.beet
-                devedition-source: firefox-${version}.checksums.beet
+                datalus-source: datalus-${version}.checksums.beet
+                devedition-source: datalus-${version}.checksums.beet
         checksums_path:
             by-platform:
-                firefox-source: firefox-${version}.checksums.beet
-                devedition-source: firefox-${version}.checksums.beet
+                datalus-source: datalus-${version}.checksums.beet
+                devedition-source: datalus-${version}.checksums.beet
     target-source.checksums.asc:
         <<: *default
         description: "Detached signature for the checksums file"
         pretty_name:
             by-platform:
-                firefox-source: firefox-${version}.checksums.asc
-                devedition-source: firefox-${version}.checksums.asc
+                datalus-source: datalus-${version}.checksums.asc
+                devedition-source: datalus-${version}.checksums.asc
         checksums_path:
             by-platform:
-                firefox-source: firefox-${version}.checksums.asc
-                devedition-source: firefox-${version}.checksums.asc
+                datalus-source: datalus-${version}.checksums.asc
+                devedition-source: datalus-${version}.checksums.asc

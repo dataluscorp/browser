@@ -233,8 +233,8 @@ nsWindowsShellService::CheckAllProgIDsExist(bool* aResult) {
     return NS_OK;
   }
   *aResult =
-      CheckProgIDExists(FormatProgID(L"FirefoxURL", aumid.get()).get()) &&
-      CheckProgIDExists(FormatProgID(L"FirefoxHTML", aumid.get()).get());
+      CheckProgIDExists(FormatProgID(L"DatalusURL", aumid.get()).get()) &&
+      CheckProgIDExists(FormatProgID(L"DatalusHTML", aumid.get()).get());
   return NS_OK;
 }
 
@@ -499,7 +499,7 @@ nsWindowsShellService::SetDesktopBackground(dom::Element* aElement,
                               getter_AddRefs(file));
   NS_ENSURE_SUCCESS(rv, rv);
 
-  // eventually, the path is "%APPDATA%\Mozilla\Firefox\Desktop Background.bmp"
+  // eventually, the path is "%APPDATA%\Mozilla\Datalus\Desktop Background.bmp"
   rv = file->Append(fileLeafName);
   NS_ENSURE_SUCCESS(rv, rv);
 
@@ -685,7 +685,7 @@ static nsresult GetShortcutPath(int aCSIDL, /* out */ nsAutoString& aPath) {
   }
   // NOTE: In the installer, shortcuts are named "${BrandShortName}.lnk".
   // This is set from MOZ_APP_DISPLAYNAME in defines.nsi.in. (Except in dev
-  // edition where it's explicitly set to "Firefox Developer Edition" in
+  // edition where it's explicitly set to "Datalus Developer Edition" in
   // branding.nsi, which matches MOZ_APP_DISPLAYNAME in aurora/configure.sh.)
   //
   // If this changes, we could expand this to check shortcuts_log.ini,

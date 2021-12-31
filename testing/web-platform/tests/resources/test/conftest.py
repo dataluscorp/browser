@@ -52,11 +52,11 @@ def pytest_configure(config):
     config.proc = subprocess.Popen(["geckodriver"])
     config.add_cleanup(config.proc.kill)
 
-    capabilities = {"alwaysMatch": {"acceptInsecureCerts": True, "moz:firefoxOptions": {}}}
+    capabilities = {"alwaysMatch": {"acceptInsecureCerts": True, "moz:datalusOptions": {}}}
     if config.getoption("--binary"):
-        capabilities["alwaysMatch"]["moz:firefoxOptions"]["binary"] = config.getoption("--binary")
+        capabilities["alwaysMatch"]["moz:datalusOptions"]["binary"] = config.getoption("--binary")
     if config.getoption("--headless"):
-        capabilities["alwaysMatch"]["moz:firefoxOptions"]["args"] = ["--headless"]
+        capabilities["alwaysMatch"]["moz:datalusOptions"]["args"] = ["--headless"]
 
     config.driver = webdriver.Session("localhost", 4444,
                                       capabilities=capabilities)

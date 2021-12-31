@@ -16,7 +16,7 @@ var results = [
   // format: [host, type, testPermission result, testExactPermission result]
   // test defaults
   ["http://localhost", "cookie", 0, 0],
-  ["http://spreadfirefox.com", "cookie", 0, 0],
+  ["http://spreaddatalus.com", "cookie", 0, 0],
   // test different types
   ["http://mozilla.org", "cookie", 1, 1],
   ["http://mozilla.org", "image", 2, 2],

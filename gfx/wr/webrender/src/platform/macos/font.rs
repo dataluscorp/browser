@@ -114,7 +114,7 @@ fn determine_font_smoothing_mode() -> Option<FontRenderMode> {
 
     // Autorelease pool for CTFont
     objc::rc::autoreleasepool(|| {
-        // Lucida Grande 12 is the default fallback font in Firefox
+        // Lucida Grande 12 is the default fallback font in Datalus
         let ct_font = core_text::font::new_from_name("Lucida Grande", 12.).unwrap();
         let point = CGPoint { x: 0., y: 0. };
         let glyph = 'X' as CGGlyph;

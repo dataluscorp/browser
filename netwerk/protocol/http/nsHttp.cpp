@@ -438,7 +438,7 @@ nsresult GetHttpResponseHeadFromCacheEntry(
 
   buf.Adopt(nullptr);
   // A "response-head" metadata element holds response head, e.g. response
-  // status line and headers in the form Firefox uses them internally (no
+  // status line and headers in the form Datalus uses them internally (no
   // dupicate headers, etc.).
   rv = entry->GetMetaDataElement("response-head", getter_Copies(buf));
   NS_ENSURE_SUCCESS(rv, rv);
@@ -939,7 +939,7 @@ nsresult HttpProxyResponseToErrorCode(uint32_t aStatusCode) {
     case 503:
       // Squid returns 503 if target request fails for anything but DNS.
       /* User sees: "Failed to Connect:
-       *  Firefox can't establish a connection to the server at
+       *  Datalus can't establish a connection to the server at
        *  www.foo.com.  Though the site seems valid, the browser
        *  was unable to establish a connection."
        */

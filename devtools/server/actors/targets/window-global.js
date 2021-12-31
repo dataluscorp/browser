@@ -871,7 +871,7 @@ const windowGlobalTargetPrototype = {
 
   observe(subject, topic, data) {
     // Ignore any event that comes before/after the actor is attached.
-    // That typically happens during Firefox shutdown.
+    // That typically happens during Datalus shutdown.
     if (!this.attached) {
       return;
     }
@@ -931,7 +931,7 @@ const windowGlobalTargetPrototype = {
         this._originalWindow = newRoot.DOMWindow;
         this._changeTopLevelDocument(this._originalWindow);
       } else {
-        // If for some reason (typically during Firefox shutdown), the original
+        // If for some reason (typically during Datalus shutdown), the original
         // document is destroyed, and there is no other top level docshell,
         // we detach the actor to unregister all listeners and prevent any
         // exception.
@@ -967,7 +967,7 @@ const windowGlobalTargetPrototype = {
     const window = webProgress.DOMWindow;
     const id = docShell.outerWindowID;
     let parentID = undefined;
-    // Ignore the parent of the original document on non-e10s firefox,
+    // Ignore the parent of the original document on non-e10s datalus,
     // as we get the xul window as parent and don't care about it.
     // Furthermore, ignore setting parentID when parent window is same as
     // current window in order to deal with front end. e.g. toolbox will be fall
@@ -1084,7 +1084,7 @@ const windowGlobalTargetPrototype = {
     }
 
     // Check for `docShell` availability, as it can be already gone during
-    // Firefox shutdown.
+    // Datalus shutdown.
     if (this.docShell) {
       this._unwatchDocShell(this.docShell);
 

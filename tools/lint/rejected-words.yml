@@ -25,7 +25,7 @@ avoid-blacklist-and-whitelist:
         - ftl
         - yml
     exclude:
-        - browser/app/profile/firefox.js
+        - browser/app/profile/datalus.js
         - browser/app/winlauncher/LauncherProcessWin.cpp
         - browser/base/content/browser.js
         - browser/base/content/contentTheme.js
@@ -315,7 +315,7 @@ avoid-blacklist-and-whitelist:
         - testing/condprofile/condprof/client.py
         - testing/condprofile/condprof/tests/profile/prefs.js
         - testing/condprofile/condprof/tests/test_client.py
-        - testing/firefox-ui/tests/functional/safebrowsing/test_initial_download.py
+        - testing/datalus-ui/tests/functional/safebrowsing/test_initial_download.py
         - testing/marionette/client/marionette_driver/wait.py
         - testing/mochitest/browser-test.js
         - testing/mochitest/mach_test_package_commands.py

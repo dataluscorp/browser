@@ -25,7 +25,7 @@ class TemporarilyInstalledAddonServiceWorkerNotPersisted(
     def setUp(self):
         super(TemporarilyInstalledAddonServiceWorkerNotPersisted, self).setUp()
         self.test_extension_id = EXT_ID
-        # Flip the "mirror: once" pref and restart Firefox to be able
+        # Flip the "mirror: once" pref and restart Datalus to be able
         # to run the extension successfully.
         self.marionette.set_pref(PREF_BG_SW_ENABLED, True)
         self.marionette.restart(in_app=True)

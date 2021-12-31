@@ -5,7 +5,7 @@
 linux64/opt:
     description: "Linux64 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-opt
     attributes:
         enable-build-signing: true
@@ -26,7 +26,7 @@ linux64/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -51,7 +51,7 @@ linux64/opt:
 linux64-x11/opt:
     description: "Linux64 Opt (X11-only)"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-x11-opt
     treeherder:
         platform: linux64/opt
@@ -66,7 +66,7 @@ linux64-x11/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -89,7 +89,7 @@ linux64-x11/opt:
 linux64-plain/opt:
     description: "Linux64 Opt Plain"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-plain-opt
     treeherder:
         platform: linux64/opt
@@ -105,7 +105,7 @@ linux64-plain/opt:
         using: mozharness
         actions: [build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: mozharness/scripts/fx_desktop_build.py
         tooltool-downloads: public
@@ -130,7 +130,7 @@ linux64-plain/opt:
 linux64-hybrid/plain:
     description: "Linux64 Plain Hybrid"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-hybrid-plain
     treeherder:
         platform: linux64/plain
@@ -146,7 +146,7 @@ linux64-hybrid/plain:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
@@ -172,7 +172,7 @@ linux64-hybrid/plain:
 linux64-gcc/opt:
     description: "Linux64 GCC Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-gcc-opt
     treeherder:
         platform: linux64/opt
@@ -189,7 +189,7 @@ linux64-gcc/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -214,7 +214,7 @@ linux64-gcc/opt:
 linux64-plain-clang-trunk/opt:
     description: "Linux64 Opt Plain with clang trunk"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-plain-opt-ct
     treeherder:
         platform: linux64/opt
@@ -231,7 +231,7 @@ linux64-plain-clang-trunk/opt:
         using: mozharness
         actions: [build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: mozharness/scripts/fx_desktop_build.py
         tooltool-downloads: public
@@ -257,7 +257,7 @@ linux64-plain-clang-trunk/opt:
 linux64-fuzzing/debug:
     description: "Linux64 Fuzzing Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-fuzzing-debug
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -275,7 +275,7 @@ linux64-fuzzing/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -304,7 +304,7 @@ linux64-fuzzing/debug:
 linux64-fuzzing-noopt/debug:
     description: "Linux64 Fuzzing No-optimize Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-fuzzing-noopt-debug
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -322,7 +322,7 @@ linux64-fuzzing-noopt/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -351,7 +351,7 @@ linux64-fuzzing-noopt/debug:
 linux64/debug:
     description: "Linux64 Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-debug
     attributes:
         enable-full-crashsymbols: true
@@ -371,7 +371,7 @@ linux64/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -398,14 +398,14 @@ linux64/codeql-cpp:
     description: Builds a C++ codeql database
     index:
         job-name: linux64-codeql-cpp
-        product: firefox
+        product: datalus
     treeherder:
         platform: codeql/all
         symbol: linux64-cpp
         tier: 2
         kind: other
     shipping-phase: ship
-    shipping-product: firefox
+    shipping-product: datalus
     worker-type: b-linux-xlarge
     expires-after: 4 days
     worker:
@@ -420,7 +420,7 @@ linux64/codeql-cpp:
         using: mozharness
         actions: [build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         job-script: taskcluster/scripts/misc/generate-codeql-db-cpp.sh
@@ -458,7 +458,7 @@ linux64/codeql-cpp:
 linux64-plain/debug:
     description: "Linux64 Debug Plain"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-plain-debug
     treeherder:
         platform: linux64/debug
@@ -474,7 +474,7 @@ linux64-plain/debug:
         using: mozharness
         actions: [build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             disable_package_metrics: true
@@ -524,7 +524,7 @@ linux64-devedition/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -551,7 +551,7 @@ linux64-devedition/opt:
 linux/opt:
     description: "Linux32 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-opt
     attributes:
         enable-build-signing: true
@@ -568,7 +568,7 @@ linux/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -594,7 +594,7 @@ linux/opt:
 linux/debug:
     description: "Linux32 Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-debug
     attributes:
         enable-full-crashsymbols: true
@@ -610,7 +610,7 @@ linux/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -638,7 +638,7 @@ linux/debug:
 linux-rusttests/opt:
     description: "Linux32 Rust Tests Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-rusttests-opt
     treeherder:
         platform: linux32/opt
@@ -653,7 +653,7 @@ linux-rusttests/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -682,7 +682,7 @@ linux-rusttests/opt:
 linux-rusttests/debug:
     description: "Linux32 Rust Tests Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-rusttests-debug
     treeherder:
         platform: linux32/debug
@@ -697,7 +697,7 @@ linux-rusttests/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -747,7 +747,7 @@ linux-devedition/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -779,9 +779,9 @@ linux-shippable/opt:
         shippable: true
         enable-full-crashsymbols: true
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     index:
-        product: firefox
+        product: datalus
         job-name: linux-opt
         type: shippable
     treeherder:
@@ -796,7 +796,7 @@ linux-shippable/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
             - taskcluster_nightly.py
         script: "mozharness/scripts/fx_desktop_build.py"
@@ -822,9 +822,9 @@ linux-reproduced/opt:
     description: "Linux32 Reproduced"
     use-pgo: linux-shippable/opt
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     index:
-        product: firefox
+        product: datalus
         job-name: linux-reproduced-opt
     treeherder:
         platform: linux32-shippable/opt
@@ -838,7 +838,7 @@ linux-reproduced/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
             - taskcluster_nightly.py
         script: "mozharness/scripts/fx_desktop_build.py"
@@ -866,9 +866,9 @@ linux64-reproduced/opt:
     description: "Linux64 Reproduced"
     use-pgo: linux64-shippable/opt
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-reproduced-opt
     treeherder:
         platform: linux64-shippable/opt
@@ -882,7 +882,7 @@ linux64-reproduced/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         script: "mozharness/scripts/fx_desktop_build.py"
@@ -908,7 +908,7 @@ linux64-reproduced/opt:
 linux64-asan/opt:
     description: "Linux64 Opt ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-asan-opt
     treeherder:
         platform: linux64/asan
@@ -923,7 +923,7 @@ linux64-asan/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -950,7 +950,7 @@ linux64-asan/opt:
 linux64-tsan/opt:
     description: "Linux64 Opt TSAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-tsan-opt
     treeherder:
         platform: linux64/tsan
@@ -965,7 +965,7 @@ linux64-tsan/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -992,7 +992,7 @@ linux64-tsan/opt:
 linux64-tsan-fuzzing/opt:
     description: "Linux64 Fuzzing Opt TSAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-fuzzing-tsan-opt
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -1010,7 +1010,7 @@ linux64-tsan-fuzzing/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1039,7 +1039,7 @@ linux64-tsan-fuzzing/opt:
 linux64-asan-fuzzing/noopt:
     description: "Linux64 Fuzzing No-optimize ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-fuzzing-asan-noopt
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -1057,7 +1057,7 @@ linux64-asan-fuzzing/noopt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1086,7 +1086,7 @@ linux64-asan-fuzzing/noopt:
 linux64-asan-fuzzing/opt:
     description: "Linux64 Fuzzing Opt ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-fuzzing-asan-opt
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -1104,7 +1104,7 @@ linux64-asan-fuzzing/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1133,7 +1133,7 @@ linux64-asan-fuzzing/opt:
 linux64-asan-fuzzing-ccov/opt:
     description: "Linux64 Fuzzing Opt ASAN w/ Coverage"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-ccov-fuzzing-asan-opt
     attributes:
         # The gtest libxul contains libFuzzer targets
@@ -1152,7 +1152,7 @@ linux64-asan-fuzzing-ccov/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1178,7 +1178,7 @@ linux64-asan-fuzzing-ccov/opt:
 linux64-fuzzing-ccov/opt:
     description: "Linux64 Fuzzing Opt w/ Coverage"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-ccov-fuzzing-opt
     treeherder:
         platform: linux64/opt
@@ -1194,7 +1194,7 @@ linux64-fuzzing-ccov/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1225,10 +1225,10 @@ linux64-asan-reporter-shippable/opt:
         shippable: true
     shipping-product:
         by-release-type:
-            nightly: firefox
+            nightly: datalus
             default: null
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-asan-reporter-opt
         type: shippable
     treeherder:
@@ -1245,7 +1245,7 @@ linux64-asan-reporter-shippable/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         script: "mozharness/scripts/fx_desktop_build.py"
@@ -1255,9 +1255,9 @@ linux64-asan-reporter-shippable/opt:
         tooltool-downloads: public
         need-xvfb: true
         mar-channel-id:
-            firefox-mozilla-central-asan
+            datalus-mozilla-central-asan
         accepted-mar-channel-ids:
-            firefox-mozilla-central-asan
+            datalus-mozilla-central-asan
     fetches:
         toolchain:
             - linux64-binutils
@@ -1275,7 +1275,7 @@ linux64-asan-reporter-shippable/opt:
 linux64-asan/debug:
     description: "Linux64 Debug ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-asan-debug
     treeherder:
         platform: linux64/asan
@@ -1289,7 +1289,7 @@ linux64-asan/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1322,9 +1322,9 @@ linux64-shippable/opt:
         shippable: true
         enable-full-crashsymbols: true
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-opt
         type: shippable
     treeherder:
@@ -1344,7 +1344,7 @@ linux64-shippable/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         script: "mozharness/scripts/fx_desktop_build.py"
@@ -1367,7 +1367,7 @@ linux64-shippable/opt:
 linux64-noopt/debug:
     description: "Linux64 No-optimize Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-noopt-debug
     treeherder:
         platform: linux64-noopt/debug
@@ -1382,7 +1382,7 @@ linux64-noopt/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1410,7 +1410,7 @@ linux64-noopt/debug:
 linux64-rusttests/opt:
     description: "Linux64 Rust Tests Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-rusttests-opt
     treeherder:
         platform: linux64/opt
@@ -1425,7 +1425,7 @@ linux64-rusttests/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1453,7 +1453,7 @@ linux64-rusttests/opt:
 linux64-rusttests/debug:
     description: "Linux64 Rust Tests Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-rusttests-debug
     treeherder:
         platform: linux64/debug
@@ -1468,7 +1468,7 @@ linux64-rusttests/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1496,7 +1496,7 @@ linux64-rusttests/debug:
 linux64-ccov/opt:
     description: "Linux64-CCov Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-ccov-opt
     treeherder:
         platform: linux64-ccov/opt
@@ -1517,7 +1517,7 @@ linux64-ccov/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1543,7 +1543,7 @@ linux64-ccov/opt:
 linux64-ccov/debug:
     description: "Linux64-CCov Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-ccov-debug
     treeherder:
         platform: linux64-ccov/debug
@@ -1559,7 +1559,7 @@ linux64-ccov/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1585,7 +1585,7 @@ linux64-ccov/debug:
 linux64-add-on-devel/opt:
     description: "Linux64 add-on-devel"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-add-on-devel
     treeherder:
         platform: linux64-add-on-devel/opt
@@ -1598,7 +1598,7 @@ linux64-add-on-devel/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1625,7 +1625,7 @@ linux64-add-on-devel/opt:
 linux64-aarch64/opt:
     description: "Linux64 aarch64 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-aarch64-opt
     attributes:
         enable-full-crashsymbols: true
@@ -1640,7 +1640,7 @@ linux64-aarch64/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             mozconfig_platform: linux64-aarch64
@@ -1670,7 +1670,7 @@ linux64-aarch64/opt:
 linux-gcp/debug:
     description: "Linux32 Debug - built on GCP"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-gcp-debug
     attributes:
         enable-full-crashsymbols: true
@@ -1687,7 +1687,7 @@ linux-gcp/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1717,7 +1717,7 @@ linux-gcp/debug:
 linux-gcp/opt:
     description: "Linux32 Opt - built on GCP"
     index:
-        product: firefox
+        product: datalus
         job-name: linux-gcp-opt
     attributes:
         enable-full-crashsymbols: true
@@ -1734,7 +1734,7 @@ linux-gcp/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_32_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1760,7 +1760,7 @@ linux-gcp/opt:
 linux64-gcp/debug:
     description: "Linux64 Debug - built on GCP"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-gcp-debug
     attributes:
         enable-full-crashsymbols: true
@@ -1777,7 +1777,7 @@ linux64-gcp/debug:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
@@ -1805,7 +1805,7 @@ linux64-gcp/debug:
 linux64-gcp/opt:
     description: "Linux64 Opt - built on GCP"
     index:
-        product: firefox
+        product: datalus
         job-name: linux64-gcp-opt
     attributes:
         enable-full-crashsymbols: true
@@ -1822,7 +1822,7 @@ linux64-gcp/opt:
         using: mozharness
         actions: [get-secrets, build]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true

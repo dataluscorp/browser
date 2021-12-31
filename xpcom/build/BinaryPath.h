@@ -111,7 +111,7 @@ class BinaryPath {
     if (CFURLGetFileSystemRepresentation(executableURL, false, (UInt8*)aResult,
                                          MAXPATHLEN)) {
       // Sanitize path in case the app was launched from Terminal via
-      // './firefox' for example.
+      // './datalus' for example.
       size_t readPos = 0;
       size_t writePos = 0;
       while (aResult[readPos] != '\0') {

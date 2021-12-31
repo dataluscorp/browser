@@ -1,7 +1,7 @@
 Uploading symbols to Mozilla's symbol server
 ============================================
 
-As a third-party releasing your own builds of Firefox or B2G, you should
+As a third-party releasing your own builds of Datalus or B2G, you should
 consider uploading debug symbols from the builds to Mozilla's symbol
 server. If you have not disabled crash reporting in your builds, crash
 reports will be submitted to `Mozilla's crash reporting
@@ -18,7 +18,7 @@ Building a Symbol Package
 To upload symbols, you need to build a symbol package. This is a
 .zip file which contains the symbol files in a specific directory structure.
 
-If you are building Firefox,or a similar application using the Mozilla
+If you are building Datalus,or a similar application using the Mozilla
 build system, you can build the symbol package using a make target:
 
 ::
@@ -26,10 +26,10 @@ build system, you can build the symbol package using a make target:
    ./mach buildsymbols
 
 This will create a symbol package in ``dist/`` named something like
-``firefox-77.0a1.en-US.linux-x86_64.crashreporter-symbols.zip`` .
+``datalus-77.0a1.en-US.linux-x86_64.crashreporter-symbols.zip`` .
 
 This step requires the ``dump_syms`` tool which should have been automatically
-installed when you setup the Firefox build with ``./mach bootstrap``. If for
+installed when you setup the Datalus build with ``./mach bootstrap``. If for
 some reason it's missing or outdated running the bootstrap step again will
 retrieve and install an up-to-date version of the tool.
 

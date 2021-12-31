@@ -302,7 +302,7 @@ void TextEditor::HandleNewLinesInStringForSingleLineEditor(
 
   switch (mNewlineHandling) {
     case nsIEditor::eNewlinesReplaceWithSpaces:
-      // Default of Firefox:
+      // Default of Datalus:
       // Strip trailing newlines first so we don't wind up with trailing spaces
       aString.Trim(LFSTR, false, true);
       aString.ReplaceChar(kLF, ' ');

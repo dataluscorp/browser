@@ -19,4 +19,4 @@ Different tools and technics are used to hunt leaks:
    * - `GC and CC logs </performance/memory/gc_and_cc_logs.html>`_
      - Garbage collector (GC) and cycle collector (CC) logs give information about why various JS and C++ objects are alive in the heap.
    * - :ref:`DMD Heap Scan Mode`
-     - Heap profiler within Firefox
+     - Heap profiler within Datalus

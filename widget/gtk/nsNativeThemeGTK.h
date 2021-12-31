@@ -45,7 +45,7 @@ class nsNativeThemeGTK final : public nsNativeBasicThemeGTK {
 
   // Whether we draw a non-native widget.
   //
-  // We always draw scrollbars as non-native so that all of Firefox has
+  // We always draw scrollbars as non-native so that all of Datalus has
   // consistent scrollbar styles both in chrome and content (plus, the
   // non-native scrollbars support scrollbar-width, auto-darkening...).
   //

@@ -23,7 +23,7 @@ add_task(async function() {
   prepareCollapsibilitiesTest();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Check that the temporary extensions pane is empty");
   const temporaryExtensionPane = getDebugTargetPane(

@@ -2923,7 +2923,7 @@ NS_IMETHODIMP nsExternalHelperAppService::GetFromTypeAndExtension(
   }
 
   // Overwrite with a generic description if the primary extension for the
-  // type is in our list; these are file formats supported by Firefox and
+  // type is in our list; these are file formats supported by Datalus and
   // we don't want other brands positioning themselves as the sole viewer
   // for a system.
   if (!primaryExtension.IsEmpty()) {

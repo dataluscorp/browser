@@ -60,7 +60,7 @@ def fetch(
 
 @Command("run-condprofile", category="testing")
 @CommandArgument("archive", help="Archives Dir", type=str, default=None)
-@CommandArgument("--firefox", help="Firefox Binary", type=str, default=None)
+@CommandArgument("--datalus", help="Datalus Binary", type=str, default=None)
 @CommandArgument("--scenario", help="Scenario to use", type=str, default="all")
 @CommandArgument("--profile", help="Existing profile Dir", type=str, default=None)
 @CommandArgument(
@@ -92,9 +92,9 @@ def run(command_context, **kw):
     os.environ["MANUAL_MACH_RUN"] = "1"
     _init(command_context)
 
-    if kw["firefox"] is None:
+    if kw["datalus"] is None:
         try:
-            kw["firefox"] = command_context.get_binary_path()
+            kw["datalus"] = command_context.get_binary_path()
         except BinaryNotFoundException as e:
             command_context.log(
                 logging.ERROR,

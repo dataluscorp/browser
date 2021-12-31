@@ -1431,7 +1431,7 @@ impl Device {
 
         let supports_texture_usage = supports_extension(&extensions, "GL_ANGLE_texture_usage");
 
-        // Our common-case image data in Firefox is BGRA, so we make an effort
+        // Our common-case image data in Datalus is BGRA, so we make an effort
         // to use BGRA as the internal texture storage format to avoid the need
         // to swizzle during upload. Currently we only do this on GLES (and thus
         // for Windows, via ANGLE).
@@ -2491,7 +2491,7 @@ impl Device {
         // Allocate storage.
         let desc = self.gl_describe_format(texture.format);
 
-        // Firefox doesn't use mipmaps, but Servo uses them for standalone image
+        // Datalus doesn't use mipmaps, but Servo uses them for standalone image
         // textures images larger than 512 pixels. This is the only case where
         // we set the filter to trilinear.
         let mipmap_levels =  if texture.filter == TextureFilter::Trilinear {

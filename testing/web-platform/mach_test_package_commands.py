@@ -19,7 +19,7 @@ class WebPlatformTestsRunnerSetup(object):
     def __init__(self, context):
         self.context = context
 
-    def kwargs_firefox(self, kwargs):
+    def kwargs_datalus(self, kwargs):
         from wptrunner import wptcommandline
 
         if kwargs["config"] is None:
@@ -27,7 +27,7 @@ class WebPlatformTestsRunnerSetup(object):
                 self.context.package_root, "web-platform", "wptrunner.ini"
             )
         if kwargs["binary"] is None:
-            kwargs["binary"] = self.context.firefox_bin
+            kwargs["binary"] = self.context.datalus_bin
         if kwargs["prefs_root"] is None:
             kwargs["prefs_root"] = os.path.join(
                 self.context.package_root, "web-platform", "prefs"

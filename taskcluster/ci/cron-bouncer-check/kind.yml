@@ -30,35 +30,35 @@ job-defaults:
         tier: 1
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         index:
-            product: firefox
-            job-name: firefox-bouncer-check
+            product: datalus
+            job-name: datalus-bouncer-check
         run:
             config:
                 by-release-type:
                     nightly:
-                        - releases/bouncer_firefox_nightly.py
+                        - releases/bouncer_datalus_nightly.py
                     beta:
-                        - releases/bouncer_firefox_beta.py
+                        - releases/bouncer_datalus_beta.py
                     release:
-                        - releases/bouncer_firefox_release.py
+                        - releases/bouncer_datalus_release.py
                     esr.*:
-                        - releases/bouncer_firefox_esr.py
+                        - releases/bouncer_datalus_esr.py
                     default:
-                        - releases/bouncer_firefox_beta.py
+                        - releases/bouncer_datalus_beta.py
             product-field:
                 by-project:
-                    mozilla-central: FIREFOX_NIGHTLY
-                    mozilla-beta: LATEST_FIREFOX_RELEASED_DEVEL_VERSION
-                    mozilla-release: LATEST_FIREFOX_VERSION
-                    mozilla-esr78: FIREFOX_ESR
-                    mozilla-esr91: FIREFOX_ESR_NEXT
-                    default: LATEST_FIREFOX_DEVEL_VERSION
-            products-url: https://product-details.mozilla.org/1.0/firefox_versions.json
+                    mozilla-central: DATALUS_NIGHTLY
+                    mozilla-beta: LATEST_DATALUS_RELEASED_DEVEL_VERSION
+                    mozilla-release: LATEST_DATALUS_VERSION
+                    mozilla-esr78: DATALUS_ESR
+                    mozilla-esr91: DATALUS_ESR_NEXT
+                    default: LATEST_DATALUS_DEVEL_VERSION
+            products-url: https://product-details.mozilla.org/1.0/datalus_versions.json
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
 
     devedition:
         shipping-product: devedition
@@ -70,13 +70,13 @@ jobs:
             config:
                 by-project:
                     mozilla-beta:
-                        - releases/bouncer_firefox_devedition.py
+                        - releases/bouncer_datalus_devedition.py
                     default:
-                        - releases/dev_bouncer_firefox_devedition.py
+                        - releases/dev_bouncer_datalus_devedition.py
             product-field:
                 by-project:
-                    mozilla-beta: LATEST_FIREFOX_RELEASED_DEVEL_VERSION
-                    default: LATEST_FIREFOX_DEVEL_VERSION
-            products-url: https://product-details.mozilla.org/1.0/firefox_versions.json
+                    mozilla-beta: LATEST_DATALUS_RELEASED_DEVEL_VERSION
+                    default: LATEST_DATALUS_DEVEL_VERSION
+            products-url: https://product-details.mozilla.org/1.0/datalus_versions.json
         treeherder:
             platform: devedition-release/opt

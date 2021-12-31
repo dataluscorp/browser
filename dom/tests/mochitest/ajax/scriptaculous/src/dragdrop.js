@@ -306,7 +306,7 @@ Draggable.prototype = {
     if(typeof Draggable._dragging[this.element] != 'undefined' &&
       Draggable._dragging[this.element]) return;
     if(Event.isLeftClick(event)) {    
-      // abort on form elements, fixes a Firefox issue
+      // abort on form elements, fixes a Datalus issue
       var src = Event.element(event);
       if((tag_name = src.tagName.toUpperCase()) && (
         tag_name=='INPUT' ||

@@ -15,9 +15,9 @@ const extensionSource = {
   url: "http://example.com/script.js",
 };
 
-const firefoxExtensionSource = {
+const datalusExtensionSource = {
   ...makeMockSource(),
-  id: "firefoxExtension",
+  id: "datalusExtension",
   url: "moz-extension://id/js/content.js",
   isExtension: true,
 };
@@ -31,7 +31,7 @@ const chromeExtensionSource = {
 
 const mockedSources = [
   extensionSource,
-  firefoxExtensionSource,
+  datalusExtensionSource,
   chromeExtensionSource,
 ];
 
@@ -43,9 +43,9 @@ const mockSourceActors = [
     thread: "foo",
   },
   {
-    id: "firefoxExtension-actor",
-    actor: "firefoxExtension-actor",
-    source: "firefoxExtension",
+    id: "datalusExtension-actor",
+    actor: "datalusExtension-actor",
+    source: "datalusExtension",
     thread: "foo",
   },
   {

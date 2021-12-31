@@ -907,7 +907,7 @@ class BrowserParent final : public PBrowserParent,
   // responsible for loading the URL it wants into the new BrowserChild. When
   // the parent receives the CreateWindow message, though, it sends a LoadURL
   // message, usually for about:blank. It's important for the about:blank load
-  // to get processed because the Firefox frontend expects every new window to
+  // to get processed because the Datalus frontend expects every new window to
   // immediately start loading something (see bug 1123090). However, we want
   // the child to process the LoadURL message before it returns from
   // ProvideWindow so that the URL sent from the parent doesn't override the

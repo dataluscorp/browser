@@ -460,7 +460,7 @@ void IMContextWrapper::Init() {
   if (im.EqualsLiteral("ibus")) {
     mIMContextID = IMContextID::IBus;
     mIsIMInAsyncKeyHandlingMode = !IsIBusInSyncMode();
-    // Although ibus has key snooper mode, it's forcibly disabled on Firefox
+    // Although ibus has key snooper mode, it's forcibly disabled on Datalus
     // in default settings by its whitelist since we always send key events
     // to IME before handling shortcut keys.  The whitelist can be
     // customized with env, IBUS_NO_SNOOPER_APPS, but we don't need to
@@ -470,7 +470,7 @@ void IMContextWrapper::Init() {
     mIMContextID = IMContextID::Fcitx;
     mIsIMInAsyncKeyHandlingMode = !IsFcitxInSyncMode();
     // Although Fcitx has key snooper mode similar to ibus, it's also
-    // disabled on Firefox in default settings by its whitelist.  The
+    // disabled on Datalus in default settings by its whitelist.  The
     // whitelist can be customized with env, IBUS_NO_SNOOPER_APPS or
     // FCITX_NO_SNOOPER_APPS, but we don't need to support such rare cases
     // for reducing maintenance cost.

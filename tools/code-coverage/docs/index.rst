@@ -24,7 +24,7 @@ tests, but we cannot use it to confirm that certain areas are well
 tested.
 
 
-Firefox Code Coverage reports
+Datalus Code Coverage reports
 -----------------------------
 
 We automatically run code coverage builds and tests on all
@@ -40,7 +40,7 @@ areas of code that should be tested, or code that is no longer used
 (dead code, which could be removed).
 
 
-C/C++ Code Coverage on Firefox
+C/C++ Code Coverage on Datalus
 ------------------------------
 
 There are several ways to get C/C++ coverage information for
@@ -71,11 +71,11 @@ Generate report using a one-click loaner
 Select the B job on Treeherder and get a one-click loaner.
 
 In the loaner, download and execute the script
-https://github.com/mozilla/code-coverage/blob/master/report/firefox_code_coverage/codecoverage.py:
+https://github.com/mozilla/code-coverage/blob/master/report/datalus_code_coverage/codecoverage.py:
 
 .. code:: shell
 
-   wget https://raw.githubusercontent.com/mozilla/code-coverage/master/report/firefox_code_coverage/codecoverage.py
+   wget https://raw.githubusercontent.com/mozilla/code-coverage/master/report/datalus_code_coverage/codecoverage.py
    python codecoverage.py
 
 This command will automatically generate a HTML report of the code
@@ -92,7 +92,7 @@ Prerequisites:
 
 .. code:: shell
 
-   pip install firefox-code-coverage
+   pip install datalus-code-coverage
 
 Given a treeherder linux64-ccov build (with its branch, e.g.
 \`mozilla-central\` or \`try`, and revision, the tip commit hash of your
@@ -100,7 +100,7 @@ push), run the following command:
 
 .. code:: shell
 
-   firefox-code-coverage PATH/TO/MOZILLA/SRC/DIR/ BRANCH REVISION
+   datalus-code-coverage PATH/TO/MOZILLA/SRC/DIR/ BRANCH REVISION
 
 This command will automatically download code coverage artifacts from
 the treeherder build and generate an HTML report of the code coverage
@@ -171,7 +171,7 @@ there will not be any code coverage artifacts uploaded from the build
 machines or from the test machines.
 
 
-JS Debugger Per Test Code Coverage on Firefox
+JS Debugger Per Test Code Coverage on Datalus
 ---------------------------------------------
 
 There are two ways to get javascript per test code coverage information

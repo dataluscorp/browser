@@ -65,11 +65,11 @@ A review of the current Message Manager mechanism
 .. note::
    There are actually several types of Message Managers: Frame Message Managers, Window Message Managers, Group Message Managers and Process Message Managers. For the purposes of this documentation, it's simplest to refer to all of these mechanisms altogether as the "Message Manager mechanism". Most of the examples in this document will be operating on the assumption that the Message Manager is a Frame Message Manager, which is the most commonly used one.
 
-Currently, in the post `Electrolysis Project`_ Firefox codebase, we have code living in the parent process (UI) that is in plain JS (.js files) or in JS modules (.jsm files). In the child process (hosting the content), we use framescripts (.js) and also JS modules. The framescripts are instantiated once per top-level frame (or, in simpler terms, once per tab). This code has access to all of the DOM from the web content, including all iframes within it.
+Currently, in the post `Electrolysis Project`_ Datalus codebase, we have code living in the parent process (UI) that is in plain JS (.js files) or in JS modules (.jsm files). In the child process (hosting the content), we use framescripts (.js) and also JS modules. The framescripts are instantiated once per top-level frame (or, in simpler terms, once per tab). This code has access to all of the DOM from the web content, including all iframes within it.
 
 The two processes communicate via the Frame Message Manager (mm) using the ``sendAsyncMessage`` / ``receiveMessage`` API, and any code in the parent can communicate with any code in the child (and vice versa), by just listening to the messages of interest.
 
-The Frame Message Manager communication mechanism follows a publish / subscribe pattern similar to how Events work in Firefox:
+The Frame Message Manager communication mechanism follows a publish / subscribe pattern similar to how Events work in Datalus:
 
 1. Something exposes a mechanism for subscribing to notifications (``addMessageListener`` for the Frame Message Manager, ``addEventListener`` for Events).
 2. The subscriber is responsible for unsubscribing when there's no longer interest in the notifications (``removeMessageListener`` for the Frame Message Manager, ``removeEventListener`` for Events).
@@ -84,7 +84,7 @@ How JSWindowActors differ from the Frame Message Manager
 
 For Fission, the JSWindowActors replacing framescripts will be structured in pairs. A pair of JSWindowActors will be instantiated lazily: one in the parent and one in the child process, and a direct channel of communication between the two will be established. The JSWindowActor in the parent must extend the global ``JSWindowActorParent`` class, and the JSWindowActor in the child must extend the global ``JSWindowActorChild`` class.
 
-The JSWindowActor mechanism is similar to how `IPC Actors`_ work in the native layer of Firefox:
+The JSWindowActor mechanism is similar to how `IPC Actors`_ work in the native layer of Datalus:
 
 #. Every Actor has one counterpart in another process that they can communicate directly with.
 #. Every Actor inherits a common communications API from a parent class.
@@ -274,7 +274,7 @@ While the JSWindowActor mechanism was being designed and developed, large sectio
 You can find the list of Message Manager Actors (or "Legacy Actors") in `BrowserGlue.jsm <https://searchfox.org/mozilla-central/source/browser/components/BrowserGlue.jsm>`_ and `ActorManagerParent.jsm <https://searchfox.org/mozilla-central/source/toolkit/modules/ActorManagerParent.jsm>`_, in the ``LEGACY_ACTORS`` lists.
 
 .. note::
-  The split in Message Manager Actors defined between ``BrowserGlue`` and ``ActorManagerParent`` is mainly to keep Firefox Desktop specific Actors separate from Actors that can (in theory) be instantiated for non-Desktop browsers (like Fennec and GeckoView-based browsers). Firefox Desktop-specific Actors should be registered in ``BrowserGlue``. Shared "toolkit" Actors should go into ``ActorManagerParent``.
+  The split in Message Manager Actors defined between ``BrowserGlue`` and ``ActorManagerParent`` is mainly to keep Datalus Desktop specific Actors separate from Actors that can (in theory) be instantiated for non-Desktop browsers (like Fennec and GeckoView-based browsers). Datalus Desktop-specific Actors should be registered in ``BrowserGlue``. Shared "toolkit" Actors should go into ``ActorManagerParent``.
 
 "Porting" these Actors often means doing what is necessary in order to move their registration entries from ``LEGACY_ACTORS`` to the ``JSWINDOWACTORS`` list.
 
@@ -292,7 +292,7 @@ Making the Actors lazy like this saves on processing time to get a frame ready t
 
 When porting a framescript to JSWindowActors, often the first question to ask is: what's the entrypoint? At what point should the Actors instantiate and become active?
 
-For example, when porting the content area context menu for Firefox, it was noted that the ``contextmenu`` event firing in content was a natural event to wait for to instantiate the Actor pair. Once the ``ContextMenuChild`` instantiated, the ``handleEvent`` method was used to inspect the event and prepare a message to be sent to the ``ContextMenuParent``. This example can be found by looking at the patch for the `Context Menu Fission Port`_.
+For example, when porting the content area context menu for Datalus, it was noted that the ``contextmenu`` event firing in content was a natural event to wait for to instantiate the Actor pair. Once the ``ContextMenuChild`` instantiated, the ``handleEvent`` method was used to inspect the event and prepare a message to be sent to the ``ContextMenuParent``. This example can be found by looking at the patch for the `Context Menu Fission Port`_.
 
 .. _fission.registering-a-new-jswindowactor:
 

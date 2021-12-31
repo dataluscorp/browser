@@ -10,7 +10,7 @@ class nsPIDOMWindowOuter;
 class nsWindow;
 
 // FxRWindowManager is a singleton that is responsible for tracking all of
-// the top-level windows created for Firefox Reality on Desktop. Only a
+// the top-level windows created for Datalus Reality on Desktop. Only a
 // single window is initially supported.
 class FxRWindowManager final {
  public:

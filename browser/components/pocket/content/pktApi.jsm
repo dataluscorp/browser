@@ -358,7 +358,7 @@ var pktApi = (function() {
     }
 
     return apiRequest({
-      path: "/firefox/save",
+      path: "/datalus/save",
       data: sendData,
       success(data) {
         // Update premium status, tags and since
@@ -449,7 +449,7 @@ var pktApi = (function() {
    */
   function getMobileDownload(options) {
     return apiRequest({
-      path: "/firefox/get-app",
+      path: "/datalus/get-app",
       data: {
         access_token: getAccessToken(),
       },
@@ -712,7 +712,7 @@ var pktApi = (function() {
       access_token: getAccessToken(),
     });
     return apiRequest({
-      path: "/firefox/get",
+      path: "/datalus/get",
       data: requestData,
       success: options.success,
       error: options.error,

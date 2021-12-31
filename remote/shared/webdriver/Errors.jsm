@@ -70,7 +70,7 @@ this.error = {
    *
    * This function also contains a special check if ``val`` is an XPCOM
    * ``nsIException`` because they are special snowflakes and may indeed
-   * cause Firefox to crash if used with ``instanceof``.
+   * cause Datalus to crash if used with ``instanceof``.
    *
    * @param {*} val
    *     Any value that should be undergo the test for errorness.

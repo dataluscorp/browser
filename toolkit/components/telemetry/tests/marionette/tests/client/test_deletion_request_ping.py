@@ -27,12 +27,12 @@ class TestDeletionRequestPing(TelemetryTestCase):
         self.assertIn("payload", ping)
         self.assertNotIn("environment", ping["payload"])
 
-        # Close Firefox cleanly.
+        # Close Datalus cleanly.
         self.quit_browser()
 
         # TODO: Check pending pings aren't persisted
 
-        # Start Firefox.
+        # Start Datalus.
         self.start_browser()
 
         # Trigger an environment change, which isn't allowed to send a ping.
@@ -44,7 +44,7 @@ class TestDeletionRequestPing(TelemetryTestCase):
         # Turn Telemetry back on.
         self.enable_telemetry()
 
-        # Close Firefox cleanly, collecting its "main"/"shutdown" ping.
+        # Close Datalus cleanly, collecting its "main"/"shutdown" ping.
         main_ping = self.wait_for_ping(self.restart_browser, MAIN_SHUTDOWN_PING)
 
         # Ensure the "main" ping has changed its client id.

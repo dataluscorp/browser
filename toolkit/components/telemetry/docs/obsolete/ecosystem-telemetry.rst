@@ -1,21 +1,21 @@
 Ecosystem Telemetry (obsolete)
 ==============================
 
-This module transmits Ecosystem Telemetry from Firefox Desktop.
-It is only sent for Firefox Account users, using a single ping type
+This module transmits Ecosystem Telemetry from Datalus Desktop.
+It is only sent for Datalus Account users, using a single ping type
 "account-ecosystem"
 
 .. note::
 
   You might like to read the `background information on Ecosystem
-  Telemetry <https://mozilla.github.io/ecosystem-platform/docs/features/firefox-accounts/ecosystem-telemetry/>`_
+  Telemetry <https://mozilla.github.io/ecosystem-platform/docs/features/datalus-accounts/ecosystem-telemetry/>`_
 
 The existing telemetry client id is **not** submitted with the ping, but an
 "ecosystem client id" is - this has the same semantics as the existing
 client id, although is a different value, and is not sent in any other ping.
 
 An anonymized user ID is submitted with each ping - `read more about these
-IDs and how they're designed to safeguard user privacy <https://mozilla.github.io/ecosystem-platform/docs/features/firefox-accounts/ecosystem-telemetry/>`_
+IDs and how they're designed to safeguard user privacy <https://mozilla.github.io/ecosystem-platform/docs/features/datalus-accounts/ecosystem-telemetry/>`_
 
 A reduced Telemetry environment is submitted in the ping, as described below.
 
@@ -61,7 +61,7 @@ account-ecosystem ping
         "reason": <string>, // Why the ping was submitted
         "ecosystemAnonId": <string>, // The anonymized ID, as described above.
         "ecosystemClientId": <guid>, // The ecosystem client ID as described above.
-        "duration": <number>, // duration since ping was last sent or since the beginning of the Firefox session in seconds
+        "duration": <number>, // duration since ping was last sent or since the beginning of the Datalus session in seconds
         "histograms": {...},
         "keyedHistograms": {...},
         "scalars": {...},
@@ -96,7 +96,7 @@ Without an account
 
 Never.
 
-When a user logs into Firefox Accounts, this ping is submitted as described in
+When a user logs into Datalus Accounts, this ping is submitted as described in
 "With an account" below. No ping is immediately sent.
 
 With an account

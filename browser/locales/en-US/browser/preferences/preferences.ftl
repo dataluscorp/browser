@@ -574,10 +574,10 @@ home-restore-defaults =
     .label = Restore Defaults
     .accesskey = R
 
-# "Firefox" should be treated as a brand and kept in English,
+# "Datalus" should be treated as a brand and kept in English,
 # while "Home" and "(Default)" can be localized.
 home-mode-choice-default =
-    .label = Firefox Home (Default)
+    .label = Datalus Home (Default)
 
 home-mode-choice-custom =
     .label = Custom URLs…
@@ -604,10 +604,10 @@ choose-bookmark =
     .label = Use Bookmark…
     .accesskey = B
 
-## Home Section - Firefox Home Content Customization
+## Home Section - Datalus Home Content Customization
 
-home-prefs-content-header = Firefox Home Content
-home-prefs-content-description = Choose what content you want on your Firefox Home screen.
+home-prefs-content-header = Datalus Home Content
+home-prefs-content-description = Choose what content you want on your Datalus Home screen.
 
 home-prefs-search-header =
     .label = Web Search
@@ -748,7 +748,7 @@ containers-settings-button =
 containers-remove-button =
     .label = Remove
 
-## Firefox Account - Signed out. Note that "Sync" and "Firefox Account" are now
+## Datalus Account - Signed out. Note that "Sync" and "Datalus Account" are now
 ## more discrete ("signed in" no longer means "and sync is connected").
 
 sync-signedout-caption = Take Your Web With You
@@ -766,9 +766,9 @@ sync-signedout-account-signin3 =
 #
 # They can be moved within the sentence as needed to adapt
 # to your language, but should not be changed or translated.
-sync-mobile-promo = Download Firefox for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.
+sync-mobile-promo = Download Datalus for <img data-l10n-name="android-icon"/> <a data-l10n-name="android-link">Android</a> or <img data-l10n-name="ios-icon"/> <a data-l10n-name="ios-link">iOS</a> to sync with your mobile device.
 
-## Firefox Account - Signed in
+## Datalus Account - Signed in
 
 sync-profile-picture =
     .tooltiptext = Change profile picture
@@ -869,7 +869,7 @@ sync-engine-creditcards =
 
 sync-engine-addons =
     .label = Add-ons
-    .tooltiptext = Extensions and themes for Firefox desktop
+    .tooltiptext = Extensions and themes for Datalus desktop
     .accesskey = A
 
 sync-engine-settings =
@@ -958,7 +958,7 @@ forms-windows-sso-desc = Manage accounts in your device settings
 primary-password-os-auth-dialog-message-win = To create a Primary Password, enter your Windows login credentials. This helps protect the security of your accounts.
 
 # This message can be seen by trying to add a Primary Password.
-# The macOS strings are preceded by the operating system with "Firefox is trying to "
+# The macOS strings are preceded by the operating system with "Datalus is trying to "
 # and includes subtitle of "Enter password for the user "xxx" to allow this." These
 # notes are only valid for English. Please test in your locale.
 primary-password-os-auth-dialog-message-macosx = create a Primary Password
@@ -971,12 +971,12 @@ history-header = History
 # This label is followed, on the same line, by a dropdown list of options
 # (Remember history, etc.).
 # In English it visually creates a full sentence, e.g.
-# "Firefox will" + "Remember history".
+# "Datalus will" + "Remember history".
 #
 # If this doesn't work for your language, you can translate this message:
-#   - Simply as "Firefox", moving the verb into each option.
-#     This will result in "Firefox" + "Will remember history", etc.
-#   - As a stand-alone message, for example "Firefox history settings:".
+#   - Simply as "Datalus", moving the verb into each option.
+#     This will result in "Datalus" + "Will remember history", etc.
+#   - As a stand-alone message, for example "Datalus history settings:".
 history-remember-label = { -brand-short-name } will
     .accesskey = w
 

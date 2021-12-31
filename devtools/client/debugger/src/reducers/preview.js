@@ -28,7 +28,7 @@ function update(state = initialPreviewState(), action) {
 }
 
 // NOTE: we'd like to have the app state fully typed
-// https://github.com/firefox-devtools/debugger/blob/master/src/reducers/sources.js#L179-L185
+// https://github.com/datalus-devtools/debugger/blob/master/src/reducers/sources.js#L179-L185
 
 export function getPreview(state) {
   return state.preview.preview;

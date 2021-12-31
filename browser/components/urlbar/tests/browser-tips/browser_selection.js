@@ -132,7 +132,7 @@ add_task(async function tipIsOnlyResult() {
         buttonText: "Done",
         type: "test",
         helpUrl:
-          "https://support.mozilla.org/en-US/kb/delete-browsing-search-download-history-firefox",
+          "https://support.mozilla.org/en-US/kb/delete-browsing-search-download-history-datalus",
       }
     ),
   ];

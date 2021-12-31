@@ -12,7 +12,7 @@
   conditions:
       blob-types: [wnp]
       release-types: [release, release-rc]
-      products: [firefox]
+      products: [datalus]
       update-channel: release
       # e.g.: ["<61.0"]. {version.major_number} reflects the current version.
       # This is done by taskgraph.
@@ -23,7 +23,7 @@
   conditions:
       blob-types: [wnp]
       release-types: [beta, release-rc]
-      products: [firefox]
+      products: [datalus]
       update-channel: beta
       # e.g.: ["<61.0"]. {version.major_number} reflects the current version.
       # This is done by taskgraph.
@@ -77,7 +77,7 @@
   conditions:
       blob-types: [wnp]
       release-types: [beta]
-      products: [firefox]
+      products: [datalus]
       update-channel: aurora
       # e.g.: ["<61.0"]. {version.major_number} reflects the current version.
       # This is done by taskgraph.

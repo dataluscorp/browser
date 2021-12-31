@@ -3,7 +3,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-// The purpose of this test is to ensure that Firefox sanitizes site security
+// The purpose of this test is to ensure that Datalus sanitizes site security
 // service data on shutdown if configured to do so.
 
 XPCOMUtils.defineLazyModuleGetters(this, {
@@ -56,7 +56,7 @@ add_task(async function run_test() {
     "should have written out state file"
   );
 
-  // Configure Firefox to clear this data on shutdown.
+  // Configure Datalus to clear this data on shutdown.
   Services.prefs.setBoolPref(
     Sanitizer.PREF_SHUTDOWN_BRANCH + "siteSettings",
     true

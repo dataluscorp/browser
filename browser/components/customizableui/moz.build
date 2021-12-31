@@ -24,4 +24,4 @@ EXTRA_JS_MODULES += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Toolbars and Customization")
+    BUG_COMPONENT = ("Datalus", "Toolbars and Customization")

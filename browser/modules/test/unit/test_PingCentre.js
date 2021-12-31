@@ -58,7 +58,7 @@ add_task(function test_disabled_by_pingCentre() {
   Assert.ok(!pingCentre.enabled, "Telemetry should be off");
 });
 
-add_task(function test_disabled_by_FirefoxHealthReport() {
+add_task(function test_disabled_by_DatalusHealthReport() {
   _setUp();
   Services.prefs.setBoolPref(
     PingCentreConstants.FHR_UPLOAD_ENABLED_PREF,

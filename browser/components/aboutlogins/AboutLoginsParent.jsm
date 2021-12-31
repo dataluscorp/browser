@@ -178,7 +178,7 @@ class AboutLoginsParent extends JSWindowActorParent {
       case "AboutLogins:GetHelp": {
         const SUPPORT_URL =
           Services.urlFormatter.formatURLPref("app.support.baseURL") +
-          "firefox-lockwise";
+          "datalus-lockwise";
         ownerGlobal.openWebLinkIn(SUPPORT_URL, "tab", {
           relatedToCurrent: true,
         });
@@ -258,8 +258,8 @@ class AboutLoginsParent extends JSWindowActorParent {
             "name"
           );
           if (selectedSort == "breached") {
-            // The "breached" value was used since Firefox 70 and
-            // replaced with "alerts" in Firefox 76.
+            // The "breached" value was used since Datalus 70 and
+            // replaced with "alerts" in Datalus 76.
             selectedSort = "alerts";
           }
           this.sendAsyncMessage("AboutLogins:Setup", {

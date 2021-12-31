@@ -523,14 +523,14 @@ async function test_captiveportal_canonicalURL() {
   cpServer.start(-1);
   cpServer.identity.setPrimary(
     "http",
-    "detectportal.firefox.com",
+    "detectportal.datalus.com",
     cpServer.identity.primaryPort
   );
   let cpPromise = topicObserved("captive-portal-login");
 
   Services.prefs.setCharPref(
     "captivedetect.canonicalURL",
-    `http://detectportal.firefox.com:${cpServer.identity.primaryPort}/cp`
+    `http://detectportal.datalus.com:${cpServer.identity.primaryPort}/cp`
   );
   Services.prefs.setBoolPref("network.captive-portal-service.testMode", true);
   Services.prefs.setBoolPref("network.captive-portal-service.enabled", true);
@@ -539,7 +539,7 @@ async function test_captiveportal_canonicalURL() {
   // a socket to a non-local IP would trigger a crash.
   await cpPromise;
   // Simply resolving the captive portal domain should still use TRR
-  await new TRRDNSListener("detectportal.firefox.com", "2.2.2.2");
+  await new TRRDNSListener("detectportal.datalus.com", "2.2.2.2");
 
   Services.prefs.clearUserPref("network.captive-portal-service.enabled");
   Services.prefs.clearUserPref("network.captive-portal-service.testMode");
@@ -632,14 +632,14 @@ async function test25e() {
   cpServer.start(-1);
   cpServer.identity.setPrimary(
     "http",
-    "detectportal.firefox.com",
+    "detectportal.datalus.com",
     cpServer.identity.primaryPort
   );
   let cpPromise = topicObserved("captive-portal-login");
 
   Services.prefs.setCharPref(
     "captivedetect.canonicalURL",
-    `http://detectportal.firefox.com:${cpServer.identity.primaryPort}/cp`
+    `http://detectportal.datalus.com:${cpServer.identity.primaryPort}/cp`
   );
   Services.prefs.setBoolPref("network.captive-portal-service.testMode", true);
   Services.prefs.setBoolPref("network.captive-portal-service.enabled", true);
@@ -648,7 +648,7 @@ async function test25e() {
   // a socket to a non-local IP would trigger a crash.
   await cpPromise;
   // // Simply resolving the captive portal domain should still use TRR
-  await new TRRDNSListener("detectportal.firefox.com", "192.192.192.192");
+  await new TRRDNSListener("detectportal.datalus.com", "192.192.192.192");
 
   Services.prefs.clearUserPref("network.captive-portal-service.enabled");
   Services.prefs.clearUserPref("network.captive-portal-service.testMode");

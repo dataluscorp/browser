@@ -76,7 +76,7 @@ const Curl = {
     const ignoredHeaders = new Set();
     const currentPlatform = platform || Services.appinfo.OS;
 
-    // The cURL command is expected to run on the same platform that Firefox runs
+    // The cURL command is expected to run on the same platform that Datalus runs
     // (it may be different from the inspected page platform).
     const escapeString =
       currentPlatform == "WINNT"

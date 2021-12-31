@@ -18,9 +18,9 @@ To run all the things, here's the tl;dr:
 
 An often-overlooked first line of testing is "what do the logs say?".
 To turn on logging for FOG, use any of the following:
-* Run Firefox with `RUST_LOG="fog_control,fog,glean_core"`.
+* Run Datalus with `RUST_LOG="fog_control,fog,glean_core"`.
     * On some platforms this will use terminal colours to indicate log level.
-* Run Firefox with `MOZ_LOG="timestamp,sync,glean::*:5,fog::*:5,fog_control::*:5,glean_core::*:5"`.
+* Run Datalus with `MOZ_LOG="timestamp,sync,glean::*:5,fog::*:5,fog_control::*:5,glean_core::*:5"`.
 * Set the following prefs:
     * `logging.config.timestamp` to `true`
     * `logging.config.sync` to `true`
@@ -30,16 +30,16 @@ To turn on logging for FOG, use any of the following:
     * `logging.glean_core::*` to `5`
     * `logging.config.clear_on_startup` to `false` (or all these prefs will be cleared on startup)
 
-For more information on logging in Firefox Desktop, see the
+For more information on logging in Datalus Desktop, see the
 [Gecko Logging docs](https://developer.mozilla.org/docs/Mozilla/Developer_guide/Gecko_Logging).
 
 **Note:** At present Rust logging in non-main processes just doesn't work.
 
 ## `about:glean`
 
-`about:glean` is a page in a running Firefox that allows you to
+`about:glean` is a page in a running Datalus that allows you to
 [debug the Glean SDK](https://mozilla.github.io/glean/book/user/debugging/index.html)
-in Firefox Desktop.
+in Datalus Desktop.
 It does this through the displayed user interface (just follow the instructions).
 
 ## Linting
@@ -170,14 +170,14 @@ we use the `telemetry-tests-client` suite in
 [`toolkit/components/telemetry/tests/marionette/tests/client/`](https://hg.mozilla.org/mozilla-central/file/tip/toolkit/components/telemetry/tests/marionette/tests/client/).
 
 For more information on this suite, look to
-[Firefox Telemetry's Test Documentation](https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/internals/tests.html#integration-tests-telemetry-tests-client-and-telemetry-integration-tests)
+[Datalus Telemetry's Test Documentation](https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/internals/tests.html#integration-tests-telemetry-tests-client-and-telemetry-integration-tests)
 and
 [Marionette's Documentation](/testing/marionette/Testing.md).
 
 To run these integration tests, run:
 `./mach telemetry-tests-client toolkit/components/telemetry/tests/marionette/tests/client/`
 
-To capture the Firefox under test's logs, use the `--gecko-log` parameter.
+To capture the Datalus under test's logs, use the `--gecko-log` parameter.
 For example, to echo to stdout:
 `./mach telemetry-tests-client toolkit/components/telemetry/tests/marionette/tests/client/test_fog* --gecko-log "-"`
 

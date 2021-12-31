@@ -61,7 +61,7 @@ struct HttpHandlerInitArgs {
   nsCString mProductSub;
   nsCString mAppName;
   nsCString mAppVersion;
-  nsCString mCompatFirefox;
+  nsCString mCompatDatalus;
   nsCString mCompatDevice;
   nsCString mDeviceModelId;
 };

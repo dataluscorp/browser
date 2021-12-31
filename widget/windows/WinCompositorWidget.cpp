@@ -94,7 +94,7 @@ void WinCompositorWidget::UpdateCompositorWndSizeIfNecessary() {
 }
 
 // Creates a new instance of FxROutputHandler so that this compositor widget
-// can send its output to Firefox Reality for Desktop.
+// can send its output to Datalus Reality for Desktop.
 void WinCompositorWidget::RequestFxrOutput() {
   MOZ_ASSERT(mFxrHandler == nullptr);
 

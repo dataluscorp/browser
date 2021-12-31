@@ -23,8 +23,8 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
-  describeFailsFirefox,
+  itFailsDatalus,
+  describeFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import { Page, Metrics } from '../lib/cjs/puppeteer/common/Page.js';
 import { JSHandle } from '../lib/cjs/puppeteer/common/JSHandle.js';
@@ -117,7 +117,7 @@ describe('Page', function () {
     });
   });
 
-  // This test fails on Firefox on CI consistently but cannot be replicated
+  // This test fails on Datalus on CI consistently but cannot be replicated
   // locally. Skipping for now to unblock the Mitt release and given FF support
   // isn't fully done yet but raising an issue to ask the FF folks to have a
   // look at this.
@@ -1706,7 +1706,7 @@ describe('Page', function () {
   });
 
   describe('Page.Events.Close', function () {
-    itFailsFirefox('should work with window.close', async () => {
+    itFailsDatalus('should work with window.close', async () => {
       const { page, context } = getTestState();
 
       const newPagePromise = new Promise<Page>((fulfill) =>

@@ -2,7 +2,7 @@
 Cross-channel
 =============
 
-Firefox is localized with a process nick-named *cross-channel*. This document
+Datalus is localized with a process nick-named *cross-channel*. This document
 explains both the general idea as well as some technical details of that
 process. The gist of it is this:
 
@@ -17,7 +17,7 @@ There's a number of upsides to that:
   and their impact can be evaluated case by case.
 
 So the problem at hand is to have one localization source
-and use that to build 5 different versions of Firefox. The goal is for that
+and use that to build 5 different versions of Datalus. The goal is for that
 localization to be as complete as possible for each version. While we do
 allow for partial localizations, we don't want to enforce partial translations
 on any version.
@@ -47,7 +47,7 @@ The process to tackle these follows these steps:
     "Pontoon" -> "l10n-central";
     "l10n-central" -> "Nightly";
     "l10n-central" -> "Beta";
-    "l10n-central" -> "Firefox";
+    "l10n-central" -> "Datalus";
     "l10n-central" -> "Daily";
     "l10n-central" -> "Thunderbird";
     {

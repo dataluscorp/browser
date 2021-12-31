@@ -32,7 +32,7 @@ ChromeUtils.defineModuleGetter(
 XPCOMUtils.defineLazyGlobalGetters(this, ["fetch"]);
 
 /**
- * Helper object for Firefox Accounts authentication
+ * Helper object for Datalus Accounts authentication
  */
 var Authentication = {
   /**
@@ -217,7 +217,7 @@ var Authentication = {
   },
 
   /**
-   * Sign out of Firefox Accounts.
+   * Sign out of Datalus Accounts.
    */
   async signOut() {
     if (await Authentication.isLoggedIn()) {

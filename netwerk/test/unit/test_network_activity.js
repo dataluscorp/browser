@@ -28,7 +28,7 @@ function handler(metadata, response) {
 }
 
 async function checkValueAndTrigger(request, data) {
-  // give Firefox 150 ms to send notifications out
+  // give Datalus 150 ms to send notifications out
   do_timeout(150, doTest);
 }
 

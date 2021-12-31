@@ -14,7 +14,7 @@ add_task(async function() {
   const mocks = new Mocks();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Prepare USB client mock");
   const usbClient = mocks.createUSBRuntime(USB_RUNTIME_ID, {
@@ -28,7 +28,7 @@ add_task(async function() {
   await selectRuntime(USB_RUNTIME_DEVICE_NAME, USB_RUNTIME_APP_NAME, document);
   await testAddonsOnMockedRemoteClient(
     usbClient,
-    mocks.thisFirefoxClient,
+    mocks.thisDatalusClient,
     document
   );
 
@@ -42,7 +42,7 @@ add_task(async function() {
   await selectRuntime(NETWORK_RUNTIME_HOST, NETWORK_RUNTIME_APP_NAME, document);
   await testAddonsOnMockedRemoteClient(
     networkClient,
-    mocks.thisFirefoxClient,
+    mocks.thisDatalusClient,
     document
   );
 
@@ -54,7 +54,7 @@ add_task(async function() {
  */
 async function testAddonsOnMockedRemoteClient(
   remoteClient,
-  firefoxClient,
+  datalusClient,
   document
 ) {
   const extensionPane = getDebugTargetPane("Extensions", document);
@@ -110,8 +110,8 @@ async function testAddonsOnMockedRemoteClient(
   info("Remove the extension from the remote client WITHOUT sending an event");
   remoteClient.listAddons = () => [];
 
-  info("Simulate an addon update on the ThisFirefox client");
-  firefoxClient._eventEmitter.emit("addonListChanged");
+  info("Simulate an addon update on the ThisDatalus client");
+  datalusClient._eventEmitter.emit("addonListChanged");
 
   // To avoid wait for a set period of time we trigger another async update, adding a new
   // tab. We assume that if the addon update mechanism had started, it would also be done

@@ -51,8 +51,8 @@ job-template:
             # So we want beetmover to act only when the release is greenlit. That
             # is to say:
             # 1. (to be changed soon to be as part of the nightly graph) right after nightly builds on mozilla-central
-            # 2. as part of Firefox push graphs on both mozilla-beta and mozilla-release
-            # 3. as part of ship-rc graphs on Firefox RC
+            # 2. as part of Datalus push graphs on both mozilla-beta and mozilla-release
+            # 3. as part of ship-rc graphs on Datalus RC
             # 4. at every patch uplifted on the GECKOVIEW_XX_RELBRANCH on mozilla-release
             # Reminder: There is no Android/geckoview build on ESR.
             #

@@ -6,7 +6,7 @@
 
 /**
  * This module provides a workaround for remote debugging when a preference is
- * defined in the firefox preference file (browser/app/profile/firefox.js) but
+ * defined in the datalus preference file (browser/app/profile/datalus.js) but
  * still read from the server, without any default value.
  *
  * This causes the server to crash and can't easily be recovered.

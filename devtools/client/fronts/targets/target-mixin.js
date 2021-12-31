@@ -14,8 +14,8 @@ loader.lazyRequireGetter(
 
 /**
  * A Target represents a debuggable context. It can be a browser tab, a tab on
- * a remote device, like a tab on Firefox for Android. But it can also be an add-on,
- * as well as firefox parent process, or just one of its content process.
+ * a remote device, like a tab on Datalus for Android. But it can also be an add-on,
+ * as well as datalus parent process, or just one of its content process.
  * A Target is related to a given TargetActor, for which we derive this class.
  *
  * Providing a generalized abstraction of a web-page or web-browser (available

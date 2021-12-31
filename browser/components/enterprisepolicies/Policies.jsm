@@ -624,7 +624,7 @@ var Policies = {
     },
   },
 
-  DisableFirefoxAccounts: {
+  DisableDatalusAccounts: {
     onBeforeAddons(manager, param) {
       if (param) {
         setAndLockPref("identity.fxaccounts.enabled", false);
@@ -633,7 +633,7 @@ var Policies = {
     },
   },
 
-  DisableFirefoxScreenshots: {
+  DisableDatalusScreenshots: {
     onBeforeAddons(manager, param) {
       if (param) {
         setAndLockPref("extensions.screenshots.disabled", true);
@@ -641,7 +641,7 @@ var Policies = {
     },
   },
 
-  DisableFirefoxStudies: {
+  DisableDatalusStudies: {
     onBeforeAddons(manager, param) {
       if (param) {
         manager.disallowFeature("Shield");
@@ -1124,7 +1124,7 @@ var Policies = {
     },
   },
 
-  FirefoxHome: {
+  DatalusHome: {
     onBeforeAddons(manager, param) {
       let locked = param.Locked || false;
       if ("Search" in param) {

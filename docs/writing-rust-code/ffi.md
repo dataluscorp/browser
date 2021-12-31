@@ -1,6 +1,6 @@
 # Rust/C++ interop
 
-This document describes how to use FFI in Firefox to get Rust code and C++ code to interoperate.
+This document describes how to use FFI in Datalus to get Rust code and C++ code to interoperate.
 
 ## Transferable types
 
@@ -236,5 +236,5 @@ all from C++ code.
 
 ## Other examples
 
-For a detailed explanation of an interface in Firefox that doesn't use cbindgen
+For a detailed explanation of an interface in Datalus that doesn't use cbindgen
 or rust-bindgen, see [this blog post](https://hsivonen.fi/modern-cpp-in-rust/).

@@ -135,7 +135,7 @@ browser.getTabBrowser = function(window) {
   // GeckoView
   if (AppInfo.isAndroid) {
     return new MobileTabBrowser(window);
-    // Firefox
+    // Datalus
   } else if ("gBrowser" in window) {
     return window.gBrowser;
     // Thunderbird
@@ -163,7 +163,7 @@ browser.Context = class {
     this.window = window;
     this.driver = driver;
 
-    // In Firefox this is <xul:tabbrowser> (not <xul:browser>!)
+    // In Datalus this is <xul:tabbrowser> (not <xul:browser>!)
     // and MobileTabBrowser in GeckoView.
     this.tabBrowser = browser.getTabBrowser(this.window);
 
@@ -306,7 +306,7 @@ browser.Context = class {
     let tabClosed;
 
     switch (AppInfo.name) {
-      case "Firefox":
+      case "Datalus":
         tabClosed = waitForEvent(this.tab, "TabClose");
         this.tabBrowser.removeTab(this.tab);
         break;
@@ -327,7 +327,7 @@ browser.Context = class {
     let tab = null;
 
     switch (AppInfo.name) {
-      case "Firefox":
+      case "Datalus":
         const opened = waitForEvent(this.window, "TabOpen");
         this.window.BrowserOpenTab();
         await opened;
@@ -413,7 +413,7 @@ browser.Context = class {
       return;
     }
 
-    // If we're setting up a new session on Firefox, we only process the
+    // If we're setting up a new session on Datalus, we only process the
     // registration for this frame if it belongs to the current tab.
     if (!this.tab) {
       this.switchToTab();

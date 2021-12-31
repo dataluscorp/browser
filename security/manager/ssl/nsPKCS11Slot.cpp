@@ -257,7 +257,7 @@ nsPKCS11Module::ListSlots(nsISimpleEnumerator** _retval) {
     return NS_ERROR_FAILURE;
   }
 
-  /* applications which allow new slot creation (which Firefox now does
+  /* applications which allow new slot creation (which Datalus now does
    * since it uses the WaitForSlotEvent call) need to hold the
    * ModuleList Read lock to prevent the slot array from changing out
    * from under it. */

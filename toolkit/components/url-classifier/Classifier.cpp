@@ -1634,7 +1634,7 @@ nsresult Classifier::ReadNoiseEntries(const Prefix& aPrefix,
   }
 
   // We do not want to simply pick random prefixes, because this would allow
-  // averaging out the noise by analysing the traffic from Firefox users.
+  // averaging out the noise by analysing the traffic from Datalus users.
   // Instead, we ensure the 'noise' is the same for the same prefix by seeding
   // the random number generator with the prefix. We prefer not to use rand()
   // which isn't thread safe, and the reseeding of which could trip up other

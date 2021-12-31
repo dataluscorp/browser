@@ -31,7 +31,7 @@ To change your TPS config, please edit the file:
     {TARGET}/config.json
 
 To execute tps use:
-    runtps --binary=/path/to/firefox
+    runtps --binary=/path/to/datalus
 
 See runtps --help for all options
 
@@ -121,7 +121,7 @@ def main():
         dest="password",
         metavar="FX_ACCOUNT_PASSWORD",
         default=None,
-        help="The Firefox Account password.",
+        help="The Datalus Account password.",
     )
     parser.add_option(
         "-p",
@@ -138,7 +138,7 @@ def main():
         dest="sync_passphrase",
         metavar="SYNC_ACCOUNT_PASSPHRASE",
         default=None,
-        help="The old Firefox Sync account passphrase.",
+        help="The old Datalus Sync account passphrase.",
     )
     parser.add_option(
         "--sync-password",
@@ -146,7 +146,7 @@ def main():
         dest="sync_password",
         metavar="SYNC_ACCOUNT_PASSWORD",
         default=None,
-        help="The old Firefox Sync account password.",
+        help="The old Datalus Sync account password.",
     )
     parser.add_option(
         "--sync-username",
@@ -154,7 +154,7 @@ def main():
         dest="sync_username",
         metavar="SYNC_ACCOUNT_USERNAME",
         default=None,
-        help="The old Firefox Sync account username.",
+        help="The old Datalus Sync account username.",
     )
     parser.add_option(
         "--username",
@@ -162,7 +162,7 @@ def main():
         dest="username",
         metavar="FX_ACCOUNT_USERNAME",
         default=None,
-        help="The Firefox Account username.",
+        help="The Datalus Account username.",
     )
 
     (options, args) = parser.parse_args(args=None, values=None)
@@ -209,9 +209,9 @@ def main():
         )
 
         if not (options.username and options.password):
-            print("\nFirefox Account credentials not specified.")
+            print("\nDatalus Account credentials not specified.")
         if not (options.sync_username and options.sync_password and options.passphrase):
-            print("\nFirefox Sync account credentials not specified.")
+            print("\nDatalus Sync account credentials not specified.")
 
     # Print the user instructions
     print(usage_message.format(TARGET=target, BIN_NAME=bin_name))

@@ -17,7 +17,7 @@ use std::path::Path;
 use std::process::{Command, Stdio};
 use std::str::{self, FromStr};
 
-/// Details about the version of a Firefox build.
+/// Details about the version of a Datalus build.
 #[derive(Clone, Default)]
 pub struct AppVersion {
     /// Unique date-based id for a build
@@ -191,12 +191,12 @@ impl Display for Version {
     }
 }
 
-/// Determine the version of Firefox using associated metadata files.
+/// Determine the version of Datalus using associated metadata files.
 ///
-/// Given the path to a Firefox binary, read the associated application.ini
-/// and platform.ini files to extract information about the version of Firefox
+/// Given the path to a Datalus binary, read the associated application.ini
+/// and platform.ini files to extract information about the version of Datalus
 /// at that path.
-pub fn firefox_version(binary: &Path) -> VersionResult<AppVersion> {
+pub fn datalus_version(binary: &Path) -> VersionResult<AppVersion> {
     let mut version = AppVersion::new();
     let mut updated = false;
 
@@ -234,11 +234,11 @@ pub fn firefox_version(binary: &Path) -> VersionResult<AppVersion> {
     Ok(version)
 }
 
-/// Determine the version of Firefox by executing the binary.
+/// Determine the version of Datalus by executing the binary.
 ///
-/// Given the path to a Firefox binary, run firefox --version and extract the
+/// Given the path to a Datalus binary, run datalus --version and extract the
 /// version string from the output
-pub fn firefox_binary_version(binary: &Path) -> VersionResult<Version> {
+pub fn datalus_binary_version(binary: &Path) -> VersionResult<Version> {
     let output = Command::new(binary)
         .args(&["--version"])
         .stdout(Stdio::piped())
@@ -256,7 +256,7 @@ pub fn firefox_binary_version(binary: &Path) -> VersionResult<Version> {
 }
 
 fn parse_binary_version(version_str: &str) -> VersionResult<Version> {
-    let version_regexp = Regex::new(r#"Mozilla Firefox[[:space:]]+(?P<version>.+)"#)
+    let version_regexp = Regex::new(r#"Mozilla Datalus[[:space:]]+(?P<version>.+)"#)
         .expect("Error parsing version regexp");
 
     let version_match = version_regexp
@@ -390,37 +390,37 @@ mod test {
     #[test]
     fn test_binary_parser() {
         assert!(
-            parse_binary_version("Mozilla Firefox 50.0a1")
+            parse_binary_version("Mozilla Datalus 50.0a1")
                 .unwrap()
                 .to_string()
                 == "50.0a1"
         );
         assert!(
-            parse_binary_version("Mozilla Firefox 50.0.1a1")
+            parse_binary_version("Mozilla Datalus 50.0.1a1")
                 .unwrap()
                 .to_string()
                 == "50.0.1a1"
         );
         assert!(
-            parse_binary_version("Mozilla Firefox 50.0.0")
+            parse_binary_version("Mozilla Datalus 50.0.0")
                 .unwrap()
                 .to_string()
                 == "50.0"
         );
         assert!(
-            parse_binary_version("Mozilla Firefox 78.0.11esr")
+            parse_binary_version("Mozilla Datalus 78.0.11esr")
                 .unwrap()
                 .to_string()
                 == "78.0.11esr"
         );
         assert!(
-            parse_binary_version("Mozilla Firefox 78.0esr")
+            parse_binary_version("Mozilla Datalus 78.0esr")
                 .unwrap()
                 .to_string()
                 == "78.0esr"
         );
         assert!(
-            parse_binary_version("Mozilla Firefox 78.0")
+            parse_binary_version("Mozilla Datalus 78.0")
                 .unwrap()
                 .to_string()
                 == "78.0"

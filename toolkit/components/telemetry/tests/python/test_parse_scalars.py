@@ -50,7 +50,7 @@ kind: uint
 notification_emails:
   - test01@mozilla.com
   - test02@mozilla.com
-products: ["firefox"]
+products: ["datalus"]
 bug_numbers:
   - 12345
 """
@@ -73,7 +73,7 @@ record_in_processes:
 kind: uint
 notification_emails:
   - test01@mozilla.com, test02@mozilla.com
-products: ["firefox"]
+products: ["datalus"]
 bug_numbers:
   - 12345
 """
@@ -91,7 +91,7 @@ record_in_processes:
 kind: uint
 notification_emails:
   - test01@mozilla.com
-products: ["firefox"]
+products: ["datalus"]
 bug_numbers:
   - 12345
 """
@@ -114,7 +114,7 @@ notification_emails:
   - test01@mozilla.com
 bug_numbers:
   - 12345
-products: ["firefox"]
+products: ["datalus"]
 record_into_store:
     - main
     - sync
@@ -138,7 +138,7 @@ notification_emails:
   - test01@mozilla.com
 bug_numbers:
   - 12345
-products: ["firefox"]
+products: ["datalus"]
 record_into_store: []
 """
         scalar = load_scalar(SAMPLE_SCALAR)
@@ -154,7 +154,7 @@ record_in_processes:
 kind: uint
 notification_emails:
   - test01@mozilla.com
-products: ["firefox"]
+products: ["datalus"]
 bug_numbers:
   - 12345
 """
@@ -177,7 +177,7 @@ notification_emails:
   - test01@mozilla.com
 bug_numbers:
   - 12345
-products: ["firefox"]
+products: ["datalus"]
 operating_systems:
     - windows
 """
@@ -200,7 +200,7 @@ notification_emails:
   - test01@mozilla.com
 bug_numbers:
   - 12345
-products: ["firefox"]
+products: ["datalus"]
 operating_systems: []
 """
         scalar = load_scalar(SAMPLE_SCALAR)

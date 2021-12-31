@@ -2,7 +2,7 @@
 
 A collection of rules that help enforce JavaScript coding standard in the Mozilla project.
 
-These are primarily developed and used within the Firefox build system ([mozilla-central](https://hg.mozilla.org/mozilla-central/)), but are made available for other
+These are primarily developed and used within the Datalus build system ([mozilla-central](https://hg.mozilla.org/mozilla-central/)), but are made available for other
 related projects to use as well.
 
 ## Installation
@@ -29,7 +29,7 @@ $ npm install eslint-plugin-mozilla --save-dev
 
 ## Documentation
 
-For details about the rules, please see the [firefox documentation page](http://firefox-source-docs.mozilla.org/tools/lint/linters/eslint-plugin-mozilla.html).
+For details about the rules, please see the [datalus documentation page](http://datalus-source-docs.mozilla.org/tools/lint/linters/eslint-plugin-mozilla.html).
 
 ## Source Code
 

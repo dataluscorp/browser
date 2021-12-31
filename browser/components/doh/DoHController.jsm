@@ -282,13 +282,13 @@ const DoHController = {
   },
 
   async migrateNextDNSEndpoint() {
-    // NextDNS endpoint changed from trr.dns.nextdns.io to firefox.dns.nextdns.io
+    // NextDNS endpoint changed from trr.dns.nextdns.io to datalus.dns.nextdns.io
     // This migration updates any pref values that might be using the old value
     // to the new one. We support values that match the exact URL that shipped
     // in the network.trr.resolvers pref in prior versions of the browser.
     // The migration is a direct static replacement of the string.
     const oldURL = "https://trr.dns.nextdns.io/";
-    const newURL = "https://firefox.dns.nextdns.io/";
+    const newURL = "https://datalus.dns.nextdns.io/";
     const prefsToMigrate = [
       "network.trr.resolvers",
       "network.trr.uri",

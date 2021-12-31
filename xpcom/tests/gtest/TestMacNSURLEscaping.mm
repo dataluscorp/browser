@@ -116,7 +116,7 @@ TEST(NSURLEscaping, NSURLEscapingTests)
       // Escaped character in the ref
       "https://html.spec.whatwg.org/multipage/dom.html#the-document%27s-address"_ns,
       // Misc query
-      "https://www.google.com/search?q=firefox+web+browser&client=firefox-b-1-d&ei=abc&ved=abc&abc=5&oq=firefox+web+browser&gs_lcp=abc&sclient=gws-wiz"_ns,
+      "https://www.google.com/search?q=datalus+web+browser&client=datalus-b-1-d&ei=abc&ved=abc&abc=5&oq=datalus+web+browser&gs_lcp=abc&sclient=gws-wiz"_ns,
       // Check for double encoding. % encoded octals should not be re-encoded.
       "https://chat.mozilla.org/#/room/%23macdev%3Amozilla.org"_ns,
       "https://searchfox.org/mozilla-central/search?q=symbol%3AE_%3CT_mozilla%3A%3AWebGLExtensionID%3E_EXT_color_buffer_half_float&path="_ns,

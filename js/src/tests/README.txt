@@ -11,7 +11,7 @@ generated automatically by the build phase 'package-tests' using the
 Running tests
 -------------
 See
-https://firefox-source-docs.mozilla.org/js/build.html#testing
+https://datalus-source-docs.mozilla.org/js/build.html#testing
 
 Creating a test
 ---------------

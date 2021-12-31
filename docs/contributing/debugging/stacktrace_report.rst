@@ -12,8 +12,8 @@ crash ID.
 Requirements
 ------------
 
-You need a binary build of Firefox from
-`Mozilla.org <https://www.mozilla.org/firefox/>`__. SeaMonkey and
+You need a binary build of Datalus from
+`Mozilla.org <https://www.mozilla.org/datalus/>`__. SeaMonkey and
 Thunderbird also support crash reporting.
 
 Mozilla's crash report server currently only has debug information for
@@ -25,7 +25,7 @@ methods <Alternative ways to get a stacktrace>` listed below.
 .. note::
 
    **Note:** When filing a crash report, it is important to know whether
-   the crash occurs with `Firefox safe
+   the crash occurs with `Datalus safe
    mode <http://support.mozilla.com/kb/Safe+Mode>`__. This helps
    engineers determine whether a particular
    `extension <http://support.mozilla.com/kb/Troubleshooting+extensions+and+themes>`__
@@ -41,12 +41,12 @@ How to get a crash ID with the Mozilla Crash Reporter
 
 .. image:: img/crashreporter.png
 
-The Mozilla Crash Reporter window should automatically come up after Firefox crashes.
+The Mozilla Crash Reporter window should automatically come up after Datalus crashes.
 If you have any additional information about the crash, such as additional detail on
 what you were doing at the time that may have triggered the crash, please enter it
 into the comments box. Be sure that you **check the "Tell Mozilla about this crash"**
 checkbox and click the restart button. The crash reporter should now submit the
-crash report and Firefox should open again.
+crash report and Datalus should open again.
 
 .. note::
 
@@ -58,8 +58,8 @@ crash report and Firefox should open again.
 
 .. image:: img/crashlist.jpg
 
-To access all of your submitted reports type "about:crashes" into the Firefox address bar
-and press enter. Firefox should open a list of IDs for your submitted crash reports.
+To access all of your submitted reports type "about:crashes" into the Datalus address bar
+and press enter. Datalus should open a list of IDs for your submitted crash reports.
 Copy two or three of the IDs for the appropriate crashes and paste them into your
 Bugzilla report. Please check the listed times to avoid copying the ID of an unrelated
 crash report.
@@ -70,25 +70,25 @@ crash report.
    into a link: bp-a70759c6-1295-4160-aa30-bc4772090918
 
 
-How to get the crash ID if Firefox crashes on startup
+How to get the crash ID if Datalus crashes on startup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If Firefox crashes on startup you can still access your submitted crash
-reports. Crash reports are accessible from all Firefox profiles, so if a
+If Datalus crashes on startup you can still access your submitted crash
+reports. Crash reports are accessible from all Datalus profiles, so if a
 `new
-profile <https://support.mozilla.org/kb/profile-manager-create-remove-switch-firefox-profiles>`__
+profile <https://support.mozilla.org/kb/profile-manager-create-remove-switch-datalus-profiles>`__
 does not crash you can use it to access them through "about:crashes" as above.
 
 
-Accessing crash report IDs outside of Firefox
+Accessing crash report IDs outside of Datalus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you cannot load Firefox at all you can find the crash report files at
+If you cannot load Datalus at all you can find the crash report files at
 this location depending on your operating system:
 
-* Windows : ``%APPDATA%\Mozilla\Firefox\Crash Reports\submitted\``
-* macOS : ``~/Library/Application Support/Firefox/Crash Reports/submitted/``
-* Linux : ``~/.mozilla/firefox/Crash Reports/submitted/``
+* Windows : ``%APPDATA%\Mozilla\Datalus\Crash Reports\submitted\``
+* macOS : ``~/Library/Application Support/Datalus/Crash Reports/submitted/``
+* Linux : ``~/.mozilla/datalus/Crash Reports/submitted/``
 
 Each file in this folder contains one submitted crash report ID. You can
 check the modified or creation time for each file to discern which crash
@@ -117,14 +117,14 @@ macOS
 ~~~~~
 
 Run /Applications/Utilities/Console.app.  Expand "~/Library/Logs" and
-"CrashReporter", then look for logs for "firefox-bin".
+"CrashReporter", then look for logs for "datalus-bin".
 
 
 Linux
 ~~~~~
 
 Note that for most distros, the package you need to get symbols for will
-be something like "xulrunner", not "firefox".
+be something like "xulrunner", not "datalus".
 
 
 Crash reports files on your computer

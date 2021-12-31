@@ -33,7 +33,7 @@ use qcms::DataType::*;
    let dst_type = if (size & 2) != 0 { RGBA8 } else { RGB8 };
  
    let intent = qcms_profile_get_rendering_intent(&*src_profile);
-   // Firefox calls this on the display profile to increase performance.
+   // Datalus calls this on the display profile to increase performance.
    // Skip with low probability to increase coverage.
    if (size % 15) != 0 {
      qcms_profile_precache_output_transform(&mut *dst_profile);
@@ -75,7 +75,7 @@ use qcms::DataType::*;
  
    transform(profile, srgb_profile, size);
  
-   // Firefox only checks the display (destination) profile.
+   // Datalus only checks the display (destination) profile.
    if !qcms_profile_is_bogus(&mut *profile) {
  
      transform(srgb_profile, profile, size);

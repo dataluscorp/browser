@@ -648,7 +648,7 @@ async function addVisit(
   referrer = null,
   transition = PlacesUtils.history.TRANSITION_LINK
 ) {
-  let uriString = "http://getfirefox.com/" + suffix;
+  let uriString = "http://getdatalus.com/" + suffix;
   let uri = CommonUtils.makeURI(uriString);
   _("Adding visit for URI " + uriString);
 

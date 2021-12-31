@@ -5,7 +5,7 @@ Definition
 ----------
 
 We use the ``severity`` field in Bugzilla to indicate the scope of a
-bug's effect on Firefox.
+bug's effect on Datalus.
 
 The field is display alongside the bug's priority.
 
@@ -35,7 +35,7 @@ Examples of S1 bugs
 Examples of S2 bugs
 ^^^^^^^^^^^^^^^^^^^
 
-Bugs that could reasonably be expected to cause a Firefox user to switch browsers,
+Bugs that could reasonably be expected to cause a Datalus user to switch browsers,
 either because the severity is bad enough, or the frequency of occurrence is high enough.
 
 -  `Bug 1640441 <https://bugzilla.mozilla.org/show_bug.cgi?id=1640441>`__ - Slack hangs

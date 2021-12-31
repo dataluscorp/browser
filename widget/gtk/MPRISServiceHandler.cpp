@@ -666,7 +666,7 @@ bool MPRISServiceHandler::InitLocalImageFolder() {
         mLocalImageFolder = nullptr;
       });
 
-  rv = mLocalImageFolder->Append(u"firefox-mpris"_ns);
+  rv = mLocalImageFolder->Append(u"datalus-mpris"_ns);
   if (NS_FAILED(rv)) {
     LOGMPRIS("Failed to name an image folder");
     return false;

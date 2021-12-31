@@ -10,7 +10,7 @@ runtest = re.compile( r"runTest\(\s*(\S.*?)\s*\)", re.DOTALL )
 scripts = '''
     <!-- Polyfill files (NOTE: These are added by auto-generation script) -->
     <script src=/encrypted-media/polyfill/chrome-polyfill.js></script>
-    <script src=/encrypted-media/polyfill/firefox-polyfill.js></script>
+    <script src=/encrypted-media/polyfill/datalus-polyfill.js></script>
     <script src=/encrypted-media/polyfill/edge-persistent-usage-record.js></script>
     <script src=/encrypted-media/polyfill/edge-keystatuses.js></script>
     <script src=/encrypted-media/polyfill/clearkey-polyfill.js></script>'''

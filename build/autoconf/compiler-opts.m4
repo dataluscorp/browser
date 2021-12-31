@@ -155,7 +155,7 @@ fi
 AC_SUBST(MOZ_PROGRAM_LDFLAGS)
 
 dnl ASan assumes no symbols are being interposed, and when that happens,
-dnl it's not happy with it. Unconveniently, since Firefox is exporting
+dnl it's not happy with it. Unconveniently, since Datalus is exporting
 dnl libffi symbols and Gtk+3 pulls system libffi via libwayland-client,
 dnl system libffi interposes libffi symbols that ASan assumes are in
 dnl libxul, so it barfs about buffer overflows.

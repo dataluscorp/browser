@@ -75,7 +75,7 @@ class CLI(MozProfileCLI):
         """add options to the parser"""
         parser.description = (
             "Reliable start/stop/configuration of Mozilla"
-            " Applications (Firefox, Thunderbird, etc.)"
+            " Applications (Datalus, Thunderbird, etc.)"
         )
 
         # add profile options
@@ -93,7 +93,7 @@ class CLI(MozProfileCLI):
         parser.add_option(
             "--app",
             dest="app",
-            default="firefox",
+            default="datalus",
             help="Application to use [DEFAULT: %default]",
         )
         parser.add_option(

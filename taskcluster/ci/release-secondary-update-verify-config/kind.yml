@@ -12,7 +12,7 @@ transforms:
 job-defaults:
     name: secondary-update-verify-config
     run-on-projects: []  # to make sure this never runs as part of CI
-    shipping-product: firefox
+    shipping-product: datalus
     shipping-phase: promote
     worker-type: b-linux
     worker:
@@ -28,7 +28,7 @@ job-defaults:
     extra:
         app-name: browser
         branch-prefix: mozilla
-        product: firefox
+        product: datalus
         archive-prefix:
             by-release-level:
                 staging: "http://ftp.stage.mozaws.net/pub"
@@ -51,7 +51,7 @@ job-defaults:
         channel: "beta-localtest"
 
 jobs:
-    firefox-secondary-linux:
+    datalus-secondary-linux:
         treeherder:
             symbol: UVCS
             platform: linux-shippable/opt
@@ -63,7 +63,7 @@ jobs:
             platform: linux-i686
             updater-platform: linux-x86_64
 
-    firefox-secondary-linux64:
+    datalus-secondary-linux64:
         treeherder:
             symbol: UVCS
             platform: linux64-shippable/opt
@@ -75,7 +75,7 @@ jobs:
             platform: linux-x86_64
             updater-platform: linux-x86_64
 
-    firefox-secondary-macosx64:
+    datalus-secondary-macosx64:
         treeherder:
             symbol: UVCS
             platform: macosx64/opt
@@ -87,7 +87,7 @@ jobs:
             platform: mac
             updater-platform: linux-x86_64
 
-    firefox-secondary-win32:
+    datalus-secondary-win32:
         treeherder:
             symbol: UVCS
             platform: windows2012-32-shippable/opt
@@ -99,7 +99,7 @@ jobs:
             platform: win32
             updater-platform: linux-x86_64
 
-    firefox-secondary-win64:
+    datalus-secondary-win64:
         treeherder:
             symbol: UVCS
             platform: windows2012-64-shippable/opt
@@ -111,7 +111,7 @@ jobs:
             platform: win64
             updater-platform: linux-x86_64
 
-    firefox-secondary-win64-aarch64:
+    datalus-secondary-win64-aarch64:
         treeherder:
             symbol: UVCS
             platform: windows2012-aarch64-shippable/opt

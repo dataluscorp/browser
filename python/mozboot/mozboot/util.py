@@ -107,14 +107,14 @@ def locate_java_bin_path():
             raise JavaLocationFailedException(
                 'The $JAVA_HOME environment variable ("{}") is '
                 'pointing to a Java installation with version "{}". '
-                "Howevever, Firefox depends on version 1.8. Please "
+                "Howevever, Datalus depends on version 1.8. Please "
                 "change $JAVA_HOME.".format(java_home, version)
             )
 
         if not javac_path:
             raise JavaLocationFailedException(
                 'The $JAVA_HOME environment variable ("{}") is '
-                'pointing to a "JRE". Since Firefox depends on Java '
+                'pointing to a "JRE". Since Datalus depends on Java '
                 'tools that are bundled in a "JDK", you will need '
                 "to update $JAVA_HOME to point to a Java 1.8 JDK "
                 "instead (You may need to install a JDK first).".format(java_home)
@@ -189,7 +189,7 @@ def locate_java_bin_path():
         if not _is_java_version_correct(java_version):
             raise JavaLocationFailedException(
                 'The "java" located on the $PATH has version "{}", '
-                "but Firefox depends on version 1.8. Please install "
+                "but Datalus depends on version 1.8. Please install "
                 "the Java 1.8 JDK and/or set $JAVA_HOME.".format(java_version)
             )
 
@@ -197,7 +197,7 @@ def locate_java_bin_path():
             raise JavaLocationFailedException(
                 'Could not find "javac" on the $PATH, even though '
                 '"java" was located. This probably means that you '
-                "have a JRE installed, not a JDK. Since Firefox "
+                "have a JRE installed, not a JDK. Since Datalus "
                 "needs to compile Java, you should install the "
                 "Java 1.8 JDK and/or set $JAVA_HOME."
             )

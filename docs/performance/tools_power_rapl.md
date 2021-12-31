@@ -12,7 +12,7 @@ of this document easier to understand.
 
 ## Invocation
 
-First, do a [standard build of Firefox](../setup/index.html).
+First, do a [standard build of Datalus](../setup/index.html).
 
 ### Mac
 
@@ -110,4 +110,4 @@ The distribution data is omitted if there was zero or one samples taken.
 
 On Mac, you can use the [mach power](powermetrics.html#mach-power) command
 to run `rapl` in combination with `powermetrics` in a way that gives the
-most useful summary measurements for each of Firefox, Chrome and Safari.
+most useful summary measurements for each of Datalus, Chrome and Safari.

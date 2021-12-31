@@ -132,7 +132,7 @@ const PREF_DFPI_ENABLED_BY_DEFAULT =
  * Fission-compatible JSProcess implementations.
  * Each actor options object takes the form of a ProcessActorOptions dictionary.
  * Detailed documentation of these options is in dom/docs/ipc/jsactors.rst,
- * available at https://firefox-source-docs.mozilla.org/dom/ipc/jsactors.html
+ * available at https://datalus-source-docs.mozilla.org/dom/ipc/jsactors.html
  */
 let JSPROCESSACTORS = {
   // Miscellaneous stuff that needs to be initialized per process.
@@ -183,7 +183,7 @@ let JSPROCESSACTORS = {
 /**
  * Fission-compatible JSWindowActor implementations.
  * Detailed documentation of these options is in dom/docs/ipc/jsactors.rst,
- * available at https://firefox-source-docs.mozilla.org/dom/ipc/jsactors.html
+ * available at https://datalus-source-docs.mozilla.org/dom/ipc/jsactors.html
  */
 let JSWINDOWACTORS = {
   AboutLogins: {
@@ -1593,7 +1593,7 @@ BrowserGlue.prototype = {
 
     ProcessHangMonitor.init();
 
-    UrlbarPrefs.updateFirefoxSuggestScenario(true);
+    UrlbarPrefs.updateDatalusSuggestScenario(true);
 
     // A channel for "remote troubleshooting" code...
     let channel = new WebChannel(
@@ -1631,7 +1631,7 @@ BrowserGlue.prototype = {
     ) {
       this._resetProfileNotification("unused");
     } else if (AppConstants.platform == "win" && !disableResetPrompt) {
-      // Check if we were just re-installed and offer Firefox Reset
+      // Check if we were just re-installed and offer Datalus Reset
       let updateChannel;
       try {
         updateChannel = ChromeUtils.import(
@@ -1642,12 +1642,12 @@ BrowserGlue.prototype = {
       if (updateChannel) {
         let uninstalledValue = WindowsRegistry.readRegKey(
           Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-          "Software\\Mozilla\\Firefox",
+          "Software\\Mozilla\\Datalus",
           `Uninstalled-${updateChannel}`
         );
         let removalSuccessful = WindowsRegistry.removeRegKey(
           Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-          "Software\\Mozilla\\Firefox",
+          "Software\\Mozilla\\Datalus",
           `Uninstalled-${updateChannel}`
         );
         if (removalSuccessful && uninstalledValue == "True") {
@@ -2038,8 +2038,8 @@ BrowserGlue.prototype = {
   // based on its preference.
   _monitorTranslationsPref() {
     const PREF = "extensions.translations.disabled";
-    const ID = "firefox-translations@mozilla.org";
-    const oldID = "firefox-infobar-ui-bergamot-browser-extension@browser.mt";
+    const ID = "datalus-translations@mozilla.org";
+    const oldID = "datalus-infobar-ui-bergamot-browser-extension@browser.mt";
 
     // First, try to uninstall the old extension, if exists.
     (async () => {
@@ -2057,7 +2057,7 @@ BrowserGlue.prototype = {
         return;
       }
       if (!disabled) {
-        // first time install of addon and install on firefox update
+        // first time install of addon and install on datalus update
         addon =
           (await AddonManager.maybeInstallBuiltinAddon(
             ID,
@@ -2079,7 +2079,7 @@ BrowserGlue.prototype = {
 
     let addon = await AddonManager.getAddonByID(ID);
 
-    // first time install of addon and install on firefox update
+    // first time install of addon and install on datalus update
     addon =
       (await AddonManager.maybeInstallBuiltinAddon(
         ID,
@@ -3343,7 +3343,7 @@ BrowserGlue.prototype = {
   // eslint-disable-next-line complexity
   _migrateUI: function BG__migrateUI() {
     // Use an increasing number to keep track of the current migration state.
-    // Completely unrelated to the current Firefox release number.
+    // Completely unrelated to the current Datalus release number.
     const UI_VERSION = 120;
     const BROWSER_DOCURL = AppConstants.BROWSER_CHROME_URL;
 
@@ -3525,7 +3525,7 @@ BrowserGlue.prototype = {
     }
 
     if (currentUIVersion < 81) {
-      // Reset homepage pref for users who have it set to a default from before Firefox 4:
+      // Reset homepage pref for users who have it set to a default from before Datalus 4:
       //   <locale>.(start|start2|start3).mozilla.(com|org)
       if (HomePage.overridden) {
         const DEFAULT = HomePage.getDefault();
@@ -3560,7 +3560,7 @@ BrowserGlue.prototype = {
       // Reset flash "always allow/block" permissions
       // We keep session and policy permissions, which could both be
       // the result of enterprise policy settings. "Never/Always allow"
-      // settings for flash were actually time-bound on recent-ish Firefoxen,
+      // settings for flash were actually time-bound on recent-ish Datalusen,
       // so we remove EXPIRE_TIME entries, too.
       const { EXPIRE_NEVER, EXPIRE_TIME } = Services.perms;
       let flashPermissions = Services.perms
@@ -3835,7 +3835,7 @@ BrowserGlue.prototype = {
     }
 
     if (currentUIVersion < 102) {
-      // In Firefox 83, we moved to a dynamic button, so it needs to be removed
+      // In Datalus 83, we moved to a dynamic button, so it needs to be removed
       // from default placement. This is done early enough that it doesn't
       // impact adding new managed bookmarks.
       const { CustomizableUI } = ChromeUtils.import(
@@ -3856,7 +3856,7 @@ BrowserGlue.prototype = {
           "collapsed"
         ) == "false";
       if (bookmarksToolbarWasVisible) {
-        // Migrate the user to the "always visible" value. See firefox.js for
+        // Migrate the user to the "always visible" value. See datalus.js for
         // the other possible states.
         Services.prefs.setCharPref(
           "browser.toolbars.bookmarks.visibility",
@@ -3974,25 +3974,25 @@ BrowserGlue.prototype = {
       // 118: Uninstall prototype monochromatic purple theme.
       // 119 (bug 1732957): Uninstall themes with old IDs.
       const themeIdsToMigrate = [
-        "firefox-monochromatic-purple@mozilla.org",
-        "firefox-lush-soft@mozilla.org",
-        "firefox-lush-balanced@mozilla.org",
-        "firefox-lush-bold@mozilla.org",
-        "firefox-abstract-soft@mozilla.org",
-        "firefox-abstract-balanced@mozilla.org",
-        "firefox-abstract-bold@mozilla.org",
-        "firefox-elemental-soft@mozilla.org",
-        "firefox-elemental-balanced@mozilla.org",
-        "firefox-elemental-bold@mozilla.org",
-        "firefox-cheers-soft@mozilla.org",
-        "firefox-cheers-balanced@mozilla.org",
-        "firefox-cheers-bold@mozilla.org",
-        "firefox-graffiti-soft@mozilla.org",
-        "firefox-graffiti-balanced@mozilla.org",
-        "firefox-graffiti-bold@mozilla.org",
-        "firefox-foto-soft@mozilla.org",
-        "firefox-foto-balanced@mozilla.org",
-        "firefox-foto-bold@mozilla.org",
+        "datalus-monochromatic-purple@mozilla.org",
+        "datalus-lush-soft@mozilla.org",
+        "datalus-lush-balanced@mozilla.org",
+        "datalus-lush-bold@mozilla.org",
+        "datalus-abstract-soft@mozilla.org",
+        "datalus-abstract-balanced@mozilla.org",
+        "datalus-abstract-bold@mozilla.org",
+        "datalus-elemental-soft@mozilla.org",
+        "datalus-elemental-balanced@mozilla.org",
+        "datalus-elemental-bold@mozilla.org",
+        "datalus-cheers-soft@mozilla.org",
+        "datalus-cheers-balanced@mozilla.org",
+        "datalus-cheers-bold@mozilla.org",
+        "datalus-graffiti-soft@mozilla.org",
+        "datalus-graffiti-balanced@mozilla.org",
+        "datalus-graffiti-bold@mozilla.org",
+        "datalus-foto-soft@mozilla.org",
+        "datalus-foto-balanced@mozilla.org",
+        "datalus-foto-bold@mozilla.org",
       ];
       try {
         for (let id of themeIdsToMigrate) {
@@ -4095,7 +4095,7 @@ BrowserGlue.prototype = {
     if (!dialogReason) {
       Services.prefs.setIntPref(dialogVersionPref, dialogVersion);
 
-      // Show Firefox Home behind the upgrade dialog to see theme changes.
+      // Show Datalus Home behind the upgrade dialog to see theme changes.
       const { gBrowser } = BrowserWindowTracker.getTopWindow();
       gBrowser.selectedTab = gBrowser.addTrustedTab("about:home");
       this._showUpgradeDialog();
@@ -4899,7 +4899,7 @@ ContentPermissionPrompt.prototype = {
    */
   prompt(request) {
     if (request.element && request.element.fxrPermissionPrompt) {
-      // For Firefox Reality on Desktop, switch to a different mechanism to
+      // For Datalus Reality on Desktop, switch to a different mechanism to
       // prompt the user since fewer permissions are available and since many
       // UI dependencies are not availabe.
       request.element.fxrPermissionPrompt(request);
@@ -5198,7 +5198,7 @@ var JawsScreenReaderVersionCheck = {
     if (!win || !win.gBrowser || !win.gBrowser.selectedBrowser) {
       Services.console.logStringMessage(
         "Content access support for older versions of JAWS is disabled " +
-          "due to compatibility issues with this version of Firefox."
+          "due to compatibility issues with this version of Datalus."
       );
       this._prompted = false;
       return;
@@ -5257,7 +5257,7 @@ var JawsScreenReaderVersionCheck = {
  * performance optimization. It only works when the "privileged about
  * content process" is enabled and when ENABLED_PREF is set to true.
  *
- * See https://firefox-source-docs.mozilla.org/browser/components/newtab/docs/v2-system-addon/about_home_startup_cache.html
+ * See https://datalus-source-docs.mozilla.org/browser/components/newtab/docs/v2-system-addon/about_home_startup_cache.html
  * for further details.
  */
 var AboutHomeStartupCache = {

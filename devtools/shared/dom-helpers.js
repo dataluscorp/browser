@@ -12,7 +12,7 @@ exports.DOMHelpers = {
    * interactive (DOMContentLoaded).
    *
    * It is based on the chromeEventHandler. This is useful when
-   * chrome iframes are loaded in content docshells (in Firefox
+   * chrome iframes are loaded in content docshells (in Datalus
    * tabs for example).
    *
    * @param nsIDOMWindow win

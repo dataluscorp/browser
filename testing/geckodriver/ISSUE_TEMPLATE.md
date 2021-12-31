@@ -2,7 +2,7 @@
 
 * Version: <!-- geckodriver version -->
 * Platform: <!-- e.g. Linux/macOS/Windows + version -->
-* Firefox: <!-- from the about dialogue -->
+* Datalus: <!-- from the about dialogue -->
 * Selenium: <!-- client + version -->
 
 

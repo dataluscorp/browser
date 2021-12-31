@@ -5,7 +5,7 @@
 # ALL CHANGES TO THIS FILE MUST HAVE REVIEW FROM A MARIONETTE PEER!
 #
 # The Marionette Python client is used out-of-tree with various builds of
-# Firefox. Removing a preference from this file will cause regressions,
+# Datalus. Removing a preference from this file will cause regressions,
 # so please be careful and get review from a Testing :: Marionette peer
 # before you make any changes to this file.
 
@@ -529,19 +529,19 @@ class FennecInstance(GeckoInstance):
 
 class DesktopInstance(GeckoInstance):
     desktop_prefs = {
-        # Disable Firefox old build background check
+        # Disable Datalus old build background check
         "app.update.checkInstallTime": False,
-        # Disable automatically upgrading Firefox
+        # Disable automatically upgrading Datalus
         #
         # Note: Possible update tests could reset or flip the value to allow
         # updates to be downloaded and applied.
         "app.update.disabledForTesting": True,
-        # !!! For backward compatibility up to Firefox 64. Only remove
-        # when this Firefox version is no longer supported by the client !!!
+        # !!! For backward compatibility up to Datalus 64. Only remove
+        # when this Datalus version is no longer supported by the client !!!
         "app.update.auto": False,
         # Don't show the content blocking introduction panel
         # We use a larger number than the default 22 to have some buffer
-        # This can be removed once Firefox 69 and 68 ESR and are no longer supported.
+        # This can be removed once Datalus 69 and 68 ESR and are no longer supported.
         "browser.contentblocking.introCount": 99,
         # Enable output for dump() and chrome console API
         "browser.dom.window.dump.enabled": True,

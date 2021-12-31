@@ -27,7 +27,7 @@ var perfMetadata = {
   This is a longer description of the test perhaps including information
   about how it should be run locally or links to relevant information.
   `,
-  supportedBrowsers: ["Firefox"],
+  supportedBrowsers: ["Datalus"],
   supportedPlatforms: ["Desktop"],
   options: {
       default: {perfherder: true},

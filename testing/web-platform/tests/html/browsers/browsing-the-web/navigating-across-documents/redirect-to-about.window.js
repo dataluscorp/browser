@@ -6,7 +6,7 @@
     iframe.src = `resources/redirect.py?location=${aboutURL}`;
     document.body.append(iframe);
 
-    // Unfortunately Firefox does not fire a load event for network errors yet, but there is no
+    // Unfortunately Datalus does not fire a load event for network errors yet, but there is no
     // other way I can see to test this. (Also applicable below.)
     await new Promise(r => iframe.onload = r);
 

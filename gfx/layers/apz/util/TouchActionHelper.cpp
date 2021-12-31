@@ -82,7 +82,7 @@ TouchBehaviorFlags TouchActionHelper::GetAllowedTouchBehavior(
   // Currently we support only two touch behaviors: panning and zooming.
   // For panning we walk up until we meet the first scrollable element (the
   // element that supports panning) or root element. For zooming we walk up
-  // until the root element since Firefox currently supports only zooming of the
+  // until the root element since Datalus currently supports only zooming of the
   // root frame but not the subframes.
 
   bool considerPanning = true;

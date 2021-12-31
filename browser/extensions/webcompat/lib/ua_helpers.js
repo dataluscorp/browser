@@ -11,7 +11,7 @@ var UAHelpers = {
     if (!UAHelpers._deviceAppropriateChromeUA) {
       const userAgent =
         typeof navigator !== "undefined" ? navigator.userAgent : "";
-      const RunningFirefoxVersion = (userAgent.match(/Firefox\/([0-9.]+)/) || [
+      const RunningDatalusVersion = (userAgent.match(/Datalus\/([0-9.]+)/) || [
         "",
         "58.0",
       ])[1];
@@ -19,8 +19,8 @@ var UAHelpers = {
       if (userAgent.includes("Android")) {
         const RunningAndroidVersion =
           userAgent.match(/Android\/[0-9.]+/) || "Android 6.0";
-        const ChromePhoneUA = `Mozilla/5.0 (Linux; ${RunningAndroidVersion}; Nexus 5 Build/MRA58N) FxQuantum/${RunningFirefoxVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Mobile Safari/537.36`;
-        const ChromeTabletUA = `Mozilla/5.0 (Linux; ${RunningAndroidVersion}; Nexus 7 Build/JSS15Q) FxQuantum/${RunningFirefoxVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Safari/537.36`;
+        const ChromePhoneUA = `Mozilla/5.0 (Linux; ${RunningAndroidVersion}; Nexus 5 Build/MRA58N) FxQuantum/${RunningDatalusVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Mobile Safari/537.36`;
+        const ChromeTabletUA = `Mozilla/5.0 (Linux; ${RunningAndroidVersion}; Nexus 7 Build/JSS15Q) FxQuantum/${RunningDatalusVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Safari/537.36`;
         const IsPhone = userAgent.includes("Mobile");
         UAHelpers._deviceAppropriateChromeUA = IsPhone
           ? ChromePhoneUA
@@ -34,7 +34,7 @@ var UAHelpers = {
           osSegment = "X11; Ubuntu; Linux x86_64";
         }
 
-        UAHelpers._deviceAppropriateChromeUA = `Mozilla/5.0 (${osSegment}) FxQuantum/${RunningFirefoxVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Safari/537.36`;
+        UAHelpers._deviceAppropriateChromeUA = `Mozilla/5.0 (${osSegment}) FxQuantum/${RunningDatalusVersion} AppleWebKit/537.36 (KHTML, like Gecko) Chrome/${chromeVersion} Safari/537.36`;
       }
     }
     return UAHelpers._deviceAppropriateChromeUA;

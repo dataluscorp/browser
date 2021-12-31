@@ -32,7 +32,7 @@
 
 /**
  * This header is intended for self-contained, header-only, utility code for
- * Win32. It may be used outside of xul.dll, in places such as firefox.exe or
+ * Win32. It may be used outside of xul.dll, in places such as datalus.exe or
  * mozglue.dll. If your code creates dependencies on Mozilla libraries, you
  * should put it elsewhere.
  */

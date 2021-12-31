@@ -552,7 +552,7 @@ class MOZ_RAII AutoScalarTimer {
 
 /**
  * Records an event. See the Event documentation for more information:
- * https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/events.html
+ * https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/collection/events.html
  *
  * @param aId The event enum id.
  * @param aValue Optional. The event value.

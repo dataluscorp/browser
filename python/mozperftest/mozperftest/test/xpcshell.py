@@ -112,7 +112,7 @@ class XPCShell(Layer):
         kwargs["mozInfo"] = str(mozinfo)
         kwargs["symbolsPath"] = str(Path(self.distdir, "crashreporter-symbols"))
         kwargs["logfiles"] = True
-        kwargs["profileName"] = "firefox"
+        kwargs["profileName"] = "datalus"
         plugins = binary.parent / "plugins"
         if not plugins.exists():
             plugins = Path(self.distdir, "plugins")

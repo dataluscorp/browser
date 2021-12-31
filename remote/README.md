@@ -1,4 +1,4 @@
-The Firefox remote agent is a low-level debugging interface based
+The Datalus remote agent is a low-level debugging interface based
 on the CDP protocol.
 
 With it, you can inspect the state and control execution of documents
@@ -10,9 +10,9 @@ This component provides an experimental and partial implementation
 of a remote devtools interface using the CDP protocol and transport
 layer.
 
-See https://firefox-source-docs.mozilla.org/remote/ for documentation.
+See https://datalus-source-docs.mozilla.org/remote/ for documentation.
 
-It is available in Firefox and is started this way:
+It is available in Datalus and is started this way:
 
 	% ./mach run --remote-debugging-port
 
@@ -20,11 +20,11 @@ It is available in Firefox and is started this way:
 Puppeteer
 =========
 Puppeteer is a Node library which provides a high-level API to control Chrome,
-Chromium, and Firefox over the Chrome DevTools Protocol. Puppeteer runs headless
+Chromium, and Datalus over the Chrome DevTools Protocol. Puppeteer runs headless
 by default, but can be configured to run full (non-headless) browsers.
 
 To verify that our implementation of the CDP protocol is valid we do not only
-run xpcshell and browser-chrome mochitests in Firefox CI but also the Puppeteer
+run xpcshell and browser-chrome mochitests in Datalus CI but also the Puppeteer
 unit tests.
 
 Expectation Data
@@ -70,5 +70,5 @@ data for the relevant tests. This can of course be done manually, but
 
 By default it writes the output to `test/puppeteer-expected.json`.
 
-Given that the unit tests run in Firefox CI only for Linux it is advised to
+Given that the unit tests run in Datalus CI only for Linux it is advised to
 download the expectation data (available as artifact) from the TaskCluster job.

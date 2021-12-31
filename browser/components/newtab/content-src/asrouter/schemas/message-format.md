@@ -25,7 +25,7 @@ Field name | Type     | Required | Description | Example / Note
     title: "Find it faster",
     body: "Access all of your favorite search engines with a click. Search the whole Web or just one website from the search box."
   },
-  targeting: "usesFirefoxSync && !addonsInfo.addons['activity-stream@mozilla.org']",
+  targeting: "usesDatalusSync && !addonsInfo.addons['activity-stream@mozilla.org']",
   frequency: {
     lifetime: 20,
     custom: [{period: 86400000, cap: 5}, {period: 3600000, cap: 1}]
@@ -73,7 +73,7 @@ Links cannot be rendered using regular anchor tags because [Fluent does not allo
     "text": "Use the CMD (CTRL) + T keyboard shortcut to <cta>open a new tab quickly!</cta>",
     "links": {
       "cta": {
-        "url": "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly"
+        "url": "https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-datalus-tasks-quickly"
       }
     }
   }

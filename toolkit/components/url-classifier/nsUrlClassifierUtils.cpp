@@ -160,7 +160,7 @@ static ClientInfo* CreateClientInfo() {
   nsresult rv = prefBranch->GetCharPref("browser.safebrowsing.id", clientId);
 
   if (NS_FAILED(rv)) {
-    clientId = "Firefox";  // Use "Firefox" as fallback.
+    clientId = "Datalus";  // Use "Datalus" as fallback.
   }
 
   c->set_client_id(clientId.get());

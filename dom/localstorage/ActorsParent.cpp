@@ -288,8 +288,8 @@ const uint32_t kDefaultClientValidation = true;
 /**
  * Should all mutations also be reflected in the "shadow" database, which is
  * the legacy webappsstore.sqlite database.  When this is enabled, users can
- * downgrade their version of Firefox and/or otherwise fall back to the legacy
- * implementation without loss of data.  (Older versions of Firefox will
+ * downgrade their version of Datalus and/or otherwise fall back to the legacy
+ * implementation without loss of data.  (Older versions of Datalus will
  * recognize the presence of ls-archive.sqlite and purge it and the other
  * LocalStorage directories so privacy is maintained.)
  */

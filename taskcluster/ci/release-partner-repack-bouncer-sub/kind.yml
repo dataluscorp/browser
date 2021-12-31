@@ -31,12 +31,12 @@ job-defaults:
         tier: 1
 
 jobs:
-    firefox:
+    datalus:
         bouncer-platforms: ['linux', 'linux64', 'osx', 'win', 'win64', 'win64-aarch64']
         bouncer-products:
             by-release-type:
                 default: ['installer', 'stub-installer']
                 esr.*: []
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt

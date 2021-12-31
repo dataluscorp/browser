@@ -28,8 +28,8 @@ const gIsMac = AppConstants.platform == "macosx";
 const gIsAndroid = AppConstants.platform == "android";
 const gIsLinux = AppConstants.platform == "linux";
 
-// Desktop Firefox, ie. not mobile Firefox or Thunderbird.
-const gIsFirefox = AppConstants.MOZ_APP_NAME == "firefox";
+// Desktop Datalus, ie. not mobile Datalus or Thunderbird.
+const gIsDatalus = AppConstants.MOZ_APP_NAME == "datalus";
 
 const Telemetry = Services.telemetry;
 

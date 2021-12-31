@@ -80,14 +80,14 @@ class nsPrintJob final : public nsIObserver,
    * When called in preparation for print preview, aOriginalDoc belongs to a
    * different docViewer, in a different docShell, in a different TabGroup.
    * In this case our aDocViewerPrint is the docViewer for the about:blank
-   * document in a new tab that the Firefox frontend code has created in
+   * document in a new tab that the Datalus frontend code has created in
    * preparation for PrintPreview to generate a print preview document in it.
    *
    * NOTE: In the case we're called for print preview, aOriginalDoc actually
    * may not be the original document that the user selected to print.  It
    * is not the actual original document in the case when the user chooses to
    * display a simplified version of a print preview document.  In that
-   * instance the Firefox frontend code creates a second print preview tab,
+   * instance the Datalus frontend code creates a second print preview tab,
    * with a new docViewer and nsPrintJob, and passes the previous print preview
    * document as aOriginalDoc (it doesn't want to pass the actual original
    * document since it may have mutated)!

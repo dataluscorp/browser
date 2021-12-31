@@ -51,11 +51,11 @@ log.level = Log.Level.Debug;
 
 // See verbose logging from FxAccounts.jsm and jwcrypto.jsm.
 Services.prefs.setCharPref("identity.fxaccounts.loglevel", "Trace");
-Log.repository.getLogger("FirefoxAccounts").level = Log.Level.Trace;
+Log.repository.getLogger("DatalusAccounts").level = Log.Level.Trace;
 Services.prefs.setCharPref("services.crypto.jwcrypto.log.level", "Debug");
 
 /*
- * The FxAccountsClient communicates with the remote Firefox
+ * The FxAccountsClient communicates with the remote Datalus
  * Accounts auth server.  Mock the server calls, with a little
  * lag time to simulate some latency.
  *
@@ -952,7 +952,7 @@ add_task(async function test_getScopedKeys_misconfigured_fxa_server() {
   await fxa.setSignedInUser(user);
   await Assert.rejects(
     fxa.keys.getKeyForScope(SCOPE_OLD_SYNC),
-    /The FxA server did not grant Firefox the `oldsync` scope/
+    /The FxA server did not grant Datalus the `oldsync` scope/
   );
 });
 
@@ -1414,7 +1414,7 @@ add_task(async function test_listAttachedOAuthClients() {
         clientId: "a2270f727f45f648",
         deviceId: "deadbeef",
         sessionTokenId: null,
-        name: "Firefox Preview (no session token)",
+        name: "Datalus Preview (no session token)",
         scope: ["profile", "https://identity.mozilla.com/apps/oldsync"],
         lastAccessTime: Date.now(),
       },
@@ -1422,7 +1422,7 @@ add_task(async function test_listAttachedOAuthClients() {
         clientId: "802d56ef2a9af9fa",
         deviceId: null,
         sessionTokenId: null,
-        name: "Firefox Monitor",
+        name: "Datalus Monitor",
         scope: ["profile"],
         lastAccessTime: Date.now() - ONE_DAY - ONE_HOUR,
       },
@@ -1430,7 +1430,7 @@ add_task(async function test_listAttachedOAuthClients() {
         clientId: "1f30e32975ae5112",
         deviceId: null,
         sessionTokenId: null,
-        name: "Firefox Send",
+        name: "Datalus Send",
         scope: ["profile", "https://identity.mozilla.com/apps/send"],
         lastAccessTime: Date.now() - ONE_DAY * 2 - ONE_HOUR,
       },

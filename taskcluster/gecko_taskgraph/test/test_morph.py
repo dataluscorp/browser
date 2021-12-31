@@ -30,36 +30,36 @@ def make_taskgraph():
 def test_make_index_tasks(make_taskgraph, graph_config):
     task_def = {
         "routes": [
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.es-MX",
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.fy-NL",
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.sk",
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.sl",
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.uk",
-            "index.gecko.v2.mozilla-central.latest.firefox-l10n.linux64-opt.zh-CN",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.es-MX",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.fy-NL",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.sk",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.sl",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.uk",
+            "index.gecko.v2.mozilla-central.latest.datalus-l10n.linux64-opt.zh-CN",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.es-MX",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.es-MX",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.fy-NL",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.fy-NL",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.sk",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.sk",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.sl",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.sl",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.uk",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.uk",
             "index.gecko.v2.mozilla-central.pushdate."
-            "2017.04.04.20170404100210.firefox-l10n.linux64-opt.zh-CN",
+            "2017.04.04.20170404100210.datalus-l10n.linux64-opt.zh-CN",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.es-MX",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.es-MX",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.fy-NL",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.fy-NL",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.sk",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.sk",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.sl",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.sl",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.uk",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.uk",
             "index.gecko.v2.mozilla-central.revision."
-            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.firefox-l10n.linux64-opt.zh-CN",
+            "b5d8b27a753725c1de41ffae2e338798f3b5cacd.datalus-l10n.linux64-opt.zh-CN",
         ],
         "deadline": "soon",
         "metadata": {

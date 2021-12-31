@@ -362,8 +362,8 @@ var UpdateUtils = {
    *                      differs depending on whether the current platform
    *                      supports per-installation prefs. If they are
    *                      supported, default branch values persist across
-   *                      Firefox sessions. If they aren't supported, default
-   *                      branch values reset when Firefox shuts down.
+   *                      Datalus sessions. If they aren't supported, default
+   *                      branch values reset when Datalus shuts down.
    * @return A Promise that, once the setting has been saved, resolves with the
    *         value that was saved.
    * @throw  If there is an I/O error when attempting to write to the config
@@ -414,7 +414,7 @@ var UpdateUtils = {
       }
       // Rather than call maybeUpdateConfigChanged, a pref observer has
       // been connected to the relevant pref. This allows us to catch direct
-      // changes to prefs (which Firefox shouldn't be doing, but the user
+      // changes to prefs (which Datalus shouldn't be doing, but the user
       // might do in about:config).
       return Promise.resolve(value);
     }

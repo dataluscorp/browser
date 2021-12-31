@@ -7,7 +7,7 @@ DIRS += [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Translation")
+    BUG_COMPONENT = ("Datalus", "Translation")
 
 EXTRA_JS_MODULES.translation = [
     "BingTranslator.jsm",

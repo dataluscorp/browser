@@ -249,7 +249,7 @@ void WaylandBufferSHM::DumpToFile(const char* aHint) {
       filename.Append('/');
     }
     filename.Append(
-        nsPrintfCString("firefox-wl-buffer-%.5d-%s.png", mDumpSerial++, aHint));
+        nsPrintfCString("datalus-wl-buffer-%.5d-%s.png", mDumpSerial++, aHint));
     cairo_surface_write_to_png(surface, filename.get());
     LOGWAYLAND(("Dumped wl_buffer to %s\n", filename.get()));
   }

@@ -68,7 +68,7 @@ rawPackets.set(`asdf()`, {
     "actorID": "server0.conn2.windowGlobal10737418243/obj26"
   },
   "exceptionMessage": "ReferenceError: asdf is not defined",
-  "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Not_defined?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default",
+  "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Not_defined?utm_source=mozilla&utm_medium=datalus-console-errors&utm_campaign=default",
   "exceptionStack": [
     {
       "filename": "debugger eval code",
@@ -118,7 +118,7 @@ rawPackets.set(`1 + @`, {
     "actorID": "server0.conn2.windowGlobal10737418243/obj27"
   },
   "exceptionMessage": "SyntaxError: illegal character U+0040",
-  "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Illegal_character?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default",
+  "exceptionDocURL": "https://developer.mozilla.org/docs/Web/JavaScript/Reference/Errors/Illegal_character?utm_source=mozilla&utm_medium=datalus-console-errors&utm_campaign=default",
   "hasException": true,
   "frame": {
     "source": "debugger eval code",

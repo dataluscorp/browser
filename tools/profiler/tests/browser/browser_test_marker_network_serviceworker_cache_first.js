@@ -101,7 +101,7 @@ add_task(async function test_network_markers_service_worker_register() {
 
     // Now let's check the marker payloads.
     const parentNetworkMarkers = getInflatedNetworkMarkers(parentThread)
-      // When we load a page, Firefox will check the service worker freshness
+      // When we load a page, Datalus will check the service worker freshness
       // after a few seconds. So when the test lasts a long time (with some test
       // environments) we might see spurious markers about that that we're not
       // interesting in in this part of the test. They're only present in the
@@ -165,7 +165,7 @@ add_task(async function test_network_markers_service_worker_register() {
     // for both the parent thread and the service worker thread.
     const expectedFiles = [
       "serviceworker_page.html",
-      "firefox-logo-nightly.svg",
+      "datalus-logo-nightly.svg",
     ].map(filename => `${BASE_URL_HTTPS}serviceworkers/${filename}`);
 
     for (const expectedFile of expectedFiles) {
@@ -237,7 +237,7 @@ add_task(async function test_network_markers_service_worker_use() {
     logInformationForThread("contentThread information", contentThread);
 
     const parentNetworkMarkers = getInflatedNetworkMarkers(parentThread)
-      // When we load a page, Firefox will check the service worker freshness
+      // When we load a page, Datalus will check the service worker freshness
       // after a few seconds. So when the test lasts a long time (with some test
       // environments) we might see spurious markers about that that we're not
       // interesting in in this part of the test. They're only present in the
@@ -261,7 +261,7 @@ add_task(async function test_network_markers_service_worker_use() {
     // for the parent thread and the content thread.
     const expectedFiles = [
       "serviceworker_page.html",
-      "firefox-logo-nightly.svg",
+      "datalus-logo-nightly.svg",
     ].map(filename => `${BASE_URL_HTTPS}serviceworkers/${filename}`);
 
     // First, make sure we properly matched all start with stop markers. This

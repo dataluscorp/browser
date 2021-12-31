@@ -4,7 +4,7 @@
 Region
 ======
 
-Firefox monitors the users region in order to show relevant local
+Datalus monitors the users region in order to show relevant local
 search engines and content. The region is tracked in 2 properties:
 
  * ``Region.current`` - The most recent location we detected for the user.

@@ -10,7 +10,7 @@ def test_bad_binary(new_session):
         response, _ = new_session(
             {
                 "capabilities": {
-                    "alwaysMatch": {"moz:firefoxOptions": {"binary": "/bin/echo"}}
+                    "alwaysMatch": {"moz:datalusOptions": {"binary": "/bin/echo"}}
                 }
             }
         )
@@ -25,15 +25,15 @@ def test_shell_script_binary(new_session, configuration):
             """#!/bin/bash
 
 %s $@"""
-            % capabilities["moz:firefoxOptions"]["binary"]
+            % capabilities["moz:datalusOptions"]["binary"]
         )
-        path = os.path.abspath("firefox.sh")
+        path = os.path.abspath("datalus.sh")
         assert not os.path.exists(path)
         try:
-            with open("firefox.sh", "w") as f:
+            with open("datalus.sh", "w") as f:
                 f.write(script)
             os.chmod(path, 0o744)
-            capabilities["moz:firefoxOptions"]["binary"] = path
+            capabilities["moz:datalusOptions"]["binary"] = path
             response, _ = new_session({"capabilities": capabilities})
             assert_success(response)
         finally:

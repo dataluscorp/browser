@@ -14,7 +14,7 @@ Summary:        %{pr_name}
 Group:          Applications/Internet
 License:        MPL 2
 Vendor:         Mozilla
-URL:            http://www.mozilla.org/projects/firefox/
+URL:            http://www.mozilla.org/projects/datalus/
 Source0:        %{name}.desktop
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 

@@ -64,10 +64,10 @@ add_UITour_task(async function test_checkSyncCounts() {
   is(result.totalDevices, 0, "totalDevices should be 0");
 });
 
-// The showFirefoxAccounts API is sync related, so we test that here too...
-add_UITour_task(async function test_firefoxAccountsNoParams() {
-  info("Load https://accounts.firefox.com");
-  await gContentAPI.showFirefoxAccounts();
+// The showDatalusAccounts API is sync related, so we test that here too...
+add_UITour_task(async function test_datalusAccountsNoParams() {
+  info("Load https://accounts.datalus.com");
+  await gContentAPI.showDatalusAccounts();
   await BrowserTestUtils.browserLoaded(
     gTestTab.linkedBrowser,
     false,
@@ -75,9 +75,9 @@ add_UITour_task(async function test_firefoxAccountsNoParams() {
   );
 });
 
-add_UITour_task(async function test_firefoxAccountsValidParams() {
-  info("Load https://accounts.firefox.com");
-  await gContentAPI.showFirefoxAccounts({ utm_foo: "foo", utm_bar: "bar" });
+add_UITour_task(async function test_datalusAccountsValidParams() {
+  info("Load https://accounts.datalus.com");
+  await gContentAPI.showDatalusAccounts({ utm_foo: "foo", utm_bar: "bar" });
   await BrowserTestUtils.browserLoaded(
     gTestTab.linkedBrowser,
     false,
@@ -85,9 +85,9 @@ add_UITour_task(async function test_firefoxAccountsValidParams() {
   );
 });
 
-add_UITour_task(async function test_firefoxAccountsWithEmail() {
-  info("Load https://accounts.firefox.com");
-  await gContentAPI.showFirefoxAccounts(null, null, "foo@bar.com");
+add_UITour_task(async function test_datalusAccountsWithEmail() {
+  info("Load https://accounts.datalus.com");
+  await gContentAPI.showDatalusAccounts(null, null, "foo@bar.com");
   await BrowserTestUtils.browserLoaded(
     gTestTab.linkedBrowser,
     false,
@@ -95,14 +95,14 @@ add_UITour_task(async function test_firefoxAccountsWithEmail() {
   );
 });
 
-add_UITour_task(async function test_firefoxAccountsWithEmailAndFlowParams() {
-  info("Load https://accounts.firefox.com with flow params");
+add_UITour_task(async function test_datalusAccountsWithEmailAndFlowParams() {
+  info("Load https://accounts.datalus.com with flow params");
   const flowParams = {
     flow_id: MOCK_FLOW_ID,
     flow_begin_time: MOCK_FLOW_BEGIN_TIME,
     device_id: MOCK_DEVICE_ID,
   };
-  await gContentAPI.showFirefoxAccounts(flowParams, null, "foo@bar.com");
+  await gContentAPI.showDatalusAccounts(flowParams, null, "foo@bar.com");
   await BrowserTestUtils.browserLoaded(
     gTestTab.linkedBrowser,
     false,
@@ -112,12 +112,12 @@ add_UITour_task(async function test_firefoxAccountsWithEmailAndFlowParams() {
 });
 
 add_UITour_task(
-  async function test_firefoxAccountsWithEmailAndBadFlowParamValues() {
-    info("Load https://accounts.firefox.com with bad flow params");
+  async function test_datalusAccountsWithEmailAndBadFlowParamValues() {
+    info("Load https://accounts.datalus.com with bad flow params");
     const BAD_MOCK_FLOW_ID = "1";
     const BAD_MOCK_FLOW_BEGIN_TIME = 100;
 
-    await gContentAPI.showFirefoxAccounts(
+    await gContentAPI.showDatalusAccounts(
       {
         flow_id: BAD_MOCK_FLOW_ID,
         flow_begin_time: MOCK_FLOW_BEGIN_TIME,
@@ -128,7 +128,7 @@ add_UITour_task(
     );
     await checkFxANotLoaded();
 
-    await gContentAPI.showFirefoxAccounts(
+    await gContentAPI.showDatalusAccounts(
       {
         flow_id: MOCK_FLOW_ID,
         flow_begin_time: BAD_MOCK_FLOW_BEGIN_TIME,
@@ -142,10 +142,10 @@ add_UITour_task(
 );
 
 add_UITour_task(
-  async function test_firefoxAccountsWithEmailAndMissingFlowParamValues() {
-    info("Load https://accounts.firefox.com with missing flow params");
+  async function test_datalusAccountsWithEmailAndMissingFlowParamValues() {
+    info("Load https://accounts.datalus.com with missing flow params");
 
-    await gContentAPI.showFirefoxAccounts(
+    await gContentAPI.showDatalusAccounts(
       {
         flow_id: MOCK_FLOW_ID,
         flow_begin_time: MOCK_FLOW_BEGIN_TIME,
@@ -162,10 +162,10 @@ add_UITour_task(
   }
 );
 
-add_UITour_task(async function test_firefoxAccountsWithEmailAndEntrypoints() {
-  info("Load https://accounts.firefox.com with entrypoint parameters");
+add_UITour_task(async function test_datalusAccountsWithEmailAndEntrypoints() {
+  info("Load https://accounts.datalus.com with entrypoint parameters");
 
-  await gContentAPI.showFirefoxAccounts(
+  await gContentAPI.showDatalusAccounts(
     {
       entrypoint_experiment: "exp",
       entrypoint_variation: "var",
@@ -181,15 +181,15 @@ add_UITour_task(async function test_firefoxAccountsWithEmailAndEntrypoints() {
   );
 });
 
-add_UITour_task(async function test_firefoxAccountsNonAlphaValue() {
+add_UITour_task(async function test_datalusAccountsNonAlphaValue() {
   // All characters in the value are allowed, but they must be automatically escaped.
   // (we throw a unicode character in there too - it's not auto-utf8 encoded,
   // but that's ok, so long as it is escaped correctly.)
   let value = "foo& /=?:\\\xa9";
   // encodeURIComponent encodes spaces to %20 but we want "+"
   let expected = encodeURIComponent(value).replace(/%20/g, "+");
-  info("Load https://accounts.firefox.com");
-  await gContentAPI.showFirefoxAccounts({ utm_foo: value });
+  info("Load https://accounts.datalus.com");
+  await gContentAPI.showDatalusAccounts({ utm_foo: value });
   await BrowserTestUtils.browserLoaded(
     gTestTab.linkedBrowser,
     false,
@@ -212,20 +212,20 @@ async function checkFxANotLoaded() {
   }
 }
 
-add_UITour_task(async function test_firefoxAccountsNonObject() {
+add_UITour_task(async function test_datalusAccountsNonObject() {
   // non-string should be rejected.
-  await gContentAPI.showFirefoxAccounts(99);
+  await gContentAPI.showDatalusAccounts(99);
   await checkFxANotLoaded();
 });
 
-add_UITour_task(async function test_firefoxAccountsNonUtmPrefix() {
+add_UITour_task(async function test_datalusAccountsNonUtmPrefix() {
   // Any non "utm_" name should should be rejected.
-  await gContentAPI.showFirefoxAccounts({ utm_foo: "foo", bar: "bar" });
+  await gContentAPI.showDatalusAccounts({ utm_foo: "foo", bar: "bar" });
   await checkFxANotLoaded();
 });
 
-add_UITour_task(async function test_firefoxAccountsNonAlphaName() {
+add_UITour_task(async function test_datalusAccountsNonAlphaName() {
   // Any "utm_" name which includes non-alpha chars should be rejected.
-  await gContentAPI.showFirefoxAccounts({ utm_foo: "foo", "utm_bar=": "bar" });
+  await gContentAPI.showDatalusAccounts({ utm_foo: "foo", "utm_bar=": "bar" });
   await checkFxANotLoaded();
 });

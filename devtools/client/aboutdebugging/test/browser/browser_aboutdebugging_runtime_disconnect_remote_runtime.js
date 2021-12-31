@@ -7,7 +7,7 @@ const USB_RUNTIME_ID = "1337id";
 const USB_DEVICE_NAME = "Fancy Phone";
 const USB_APP_NAME = "Lorem ipsum";
 
-const DEFAULT_PAGE = "#/runtime/this-firefox";
+const DEFAULT_PAGE = "#/runtime/this-datalus";
 
 /**
  * Check if the disconnect button disconnects the remote runtime
@@ -27,7 +27,7 @@ add_task(async function() {
   });
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   mocks.emitUSBUpdate();
 
@@ -52,13 +52,13 @@ add_task(async function() {
   is(
     document.location.hash,
     DEFAULT_PAGE,
-    "Redirection to the default page (this-firefox)"
+    "Redirection to the default page (this-datalus)"
   );
 
   info("Wait until the Runtime name is displayed");
   await waitUntil(() => {
     const runtimeInfo = document.querySelector(".qa-runtime-name");
-    return runtimeInfo && runtimeInfo.textContent.includes("Firefox");
+    return runtimeInfo && runtimeInfo.textContent.includes("Datalus");
   });
 
   await removeTab(tab);

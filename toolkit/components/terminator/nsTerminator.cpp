@@ -8,7 +8,7 @@
  * A watchdog designed to terminate shutdown if it lasts too long.
  *
  * This watchdog is designed as a worst-case problem container for the
- * common case in which Firefox just won't shutdown.
+ * common case in which Datalus just won't shutdown.
  *
  * We spawn a thread during quit-application. If any of the shutdown
  * steps takes more than n milliseconds (63000 by default), kill the

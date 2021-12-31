@@ -305,7 +305,7 @@ fn eval_prefers_reduced_motion(device: &Device, query_value: Option<PrefersReduc
 #[repr(u8)]
 pub enum PrefersContrast {
     /// More contrast is preferred. Corresponds to an accessibility theme
-    /// being enabled or Firefox forcing high contrast colors.
+    /// being enabled or Datalus forcing high contrast colors.
     More,
     /// Low contrast is preferred.
     Less,
@@ -356,7 +356,7 @@ enum OverflowBlock {
 fn eval_overflow_block(device: &Device, query_value: Option<OverflowBlock>) -> bool {
     // For the time being, assume that printing (including previews)
     // is the only time when we paginate, and we are otherwise always
-    // scrolling. This is true at the moment in Firefox, but may need
+    // scrolling. This is true at the moment in Datalus, but may need
     // updating in the future (e.g., ebook readers built with Stylo, a
     // billboard mode that doesn't support overflow at all).
     //

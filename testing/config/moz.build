@@ -11,8 +11,8 @@ with Files("marionette*"):
 with Files("mozbase*"):
     BUG_COMPONENT = ("Testing", "Mozbase")
 
-with Files("firefox_ui*"):
-    BUG_COMPONENT = ("Testing", "Firefox UI Tests")
+with Files("datalus_ui*"):
+    BUG_COMPONENT = ("Testing", "Datalus UI Tests")
 
 with Files("telemetry*"):
     BUG_COMPONENT = ("Toolkit", "Telemetry")

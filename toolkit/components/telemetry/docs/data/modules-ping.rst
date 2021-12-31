@@ -2,7 +2,7 @@
 "modules" ping
 ==============
 
-This ping is sent once a week and includes the modules loaded in the Firefox process.
+This ping is sent once a week and includes the modules loaded in the Datalus process.
 
 The client ID and environment are submitted with this ping.
 

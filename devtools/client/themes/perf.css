@@ -66,7 +66,7 @@
   font-size: inherit;
 }
 
-/* See https://design.firefox.com/photon/components/buttons.html for the spec */
+/* See https://design.datalus.com/photon/components/buttons.html for the spec */
 .perf-photon-button {
   padding: 0 8px;
   border: none;
@@ -82,7 +82,7 @@
   font: inherit;
 }
 
-/* This is a Firefox-specific style because Firefox adds a focusring at a bad
+/* This is a Datalus-specific style because Datalus adds a focusring at a bad
  * position. We're adding our own below. */
 .perf-photon-button::-moz-focus-inner {
   border: none;

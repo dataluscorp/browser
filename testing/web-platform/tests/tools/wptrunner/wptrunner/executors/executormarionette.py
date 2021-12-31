@@ -58,7 +58,7 @@ def _switch_to_window(marionette, handle):
 
     This is a workaround for issue 24924[0]; marionettedriver 3.1.0 dropped the
     'name' parameter from its switch_to_window command, but it is still needed
-    for at least Firefox 79.
+    for at least Datalus 79.
 
     [0]: https://github.com/web-platform-tests/wpt/issues/24924
 
@@ -658,7 +658,7 @@ const callback = arguments[arguments.length - 1];
 
 async function loadDevTools() {
     const tab = window.gBrowser.selectedTab;
-    // showToolboxForTab is available for Firefox 87 or newer.
+    // showToolboxForTab is available for Datalus 87 or newer.
     if (typeof DevToolsShim.showToolboxForTab === "function") {
         await showToolboxForTab(tab, {
           toolId: "webconsole",
@@ -666,7 +666,7 @@ async function loadDevTools() {
         });
     } else {
         // This branch can be removed whe wptrunner can only be used with
-        // Firefox 87 or newer.
+        // Datalus 87 or newer.
         const { TargetFactory } = require("devtools/client/framework/target");
         const { gDevTools } = require("devtools/client/framework/devtools");
         const target = await TargetFactory.forTab(tab);
@@ -724,7 +724,7 @@ class MarionetteProtocol(Protocol):
                 self.marionette.raise_for_port()
                 break
             except IOError:
-                # When running in a debugger wait indefinitely for Firefox to start
+                # When running in a debugger wait indefinitely for Datalus to start
                 if self.executor.debug_info is None:
                     raise
 
@@ -800,7 +800,7 @@ class ExecuteAsyncScriptRun(TimedRunner):
             self.result = False, ("EXTERNAL-TIMEOUT", None)
         except IOError:
             # This can happen on a crash
-            # Also, should check after the test if the firefox process is still running
+            # Also, should check after the test if the datalus process is still running
             # and otherwise ignore any other result and set it to crash
             self.logger.info("IOError on command, setting status to CRASH")
             self.result = False, ("CRASH", None)
@@ -1142,7 +1142,7 @@ class MarionetteWdspecExecutor(WdspecExecutor):
                  symbols_path=None, leak_report_file=None, asan=False,
                  group_metadata=None, browser_settings=None, **kwargs):
 
-        from ..browsers.firefox import GeckoDriverServer
+        from ..browsers.datalus import GeckoDriverServer
         super().__init__(logger, browser, server_config, webdriver_binary,
                          webdriver_args, timeout_multiplier=timeout_multiplier,
                          capabilities=capabilities, debug_info=debug_info,

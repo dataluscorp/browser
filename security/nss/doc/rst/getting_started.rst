@@ -15,7 +15,7 @@ Getting Started
 
    | Network Security Services (NSS) is a base library for cryptographic algorithms and secure
      network protocols used by Mozilla software.
-   | Would you like to get involved and help us to improve the core security of Mozilla Firefox and
+   | Would you like to get involved and help us to improve the core security of Mozilla Datalus and
      other applications that make use of NSS? We are looking forward to your contributions!
 
      ..

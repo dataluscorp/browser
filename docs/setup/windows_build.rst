@@ -1,12 +1,12 @@
-﻿Building Firefox On Windows
+﻿Building Datalus On Windows
 ===========================
 
-This document will help you get set up to build Firefox on your own
+This document will help you get set up to build Datalus on your own
 computer. Getting set up can take a while - we need to download a
 lot of bytes! Even on a fast connection, this can take ten to fifteen
 minutes of work, spread out over an hour or two.
 
-If you'd prefer to build Firefox for Windows in a virtual machine,
+If you'd prefer to build Datalus for Windows in a virtual machine,
 you may be interested in the `Windows images provided by Microsoft
 <https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/>`_.
 
@@ -48,7 +48,7 @@ Accept the default installation directory.
 Windows may prompt you to "reinstall with the correct settings", which you
 should click to accept.
 
-When working with Firefox tooling, you'll need to do so from within the MozillaBuild
+When working with Datalus tooling, you'll need to do so from within the MozillaBuild
 shell. You can start it by running ``C:\mozilla-build\start-shell.bat`` (you may want
 to make a shortcut to this file so it's easier to start).
 
@@ -57,12 +57,12 @@ to make a shortcut to this file so it's easier to start).
     The MozillaBuild shell is a lot more like a Linux shell than the Windows ``cmd``. You can
     learn more about it `here <https://wiki.mozilla.org/MozillaBuild>`_.
 
-2. Bootstrap a copy of the Firefox source code
+2. Bootstrap a copy of the Datalus source code
 ----------------------------------------------
 
-Now that your system is ready, we can download the source code and have Firefox
+Now that your system is ready, we can download the source code and have Datalus
 automatically download the other dependencies it needs. The below command
-will download a lot of data (years of Firefox history!) then guide you through
+will download a lot of data (years of Datalus history!) then guide you through
 the interactive setup process.
 
 .. code-block:: shell
@@ -75,7 +75,7 @@ the interactive setup process.
 
 .. note::
 
-    In general, the Firefox workflow works best with Mercurial. However,
+    In general, the Datalus workflow works best with Mercurial. However,
     if you'd prefer to use ``git``, you can grab the source code in
     "git" form by running the bootstrap script with the ``vcs`` parameter:
 
@@ -88,9 +88,9 @@ the interactive setup process.
 Choosing a build type
 ~~~~~~~~~~~~~~~~~~~~~
 
-If you aren't modifying the Firefox backend, then then select one of the
+If you aren't modifying the Datalus backend, then then select one of the
 :ref:`Artifact Mode <Understanding Artifact Builds>` options. If you are
-building Firefox for Android, you should also see the :ref:`GeckoView Contributor Guide`.
+building Datalus for Android, you should also see the :ref:`GeckoView Contributor Guide`.
 
 Set antivirus exclusions
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,7 +104,7 @@ quarantining/corrupting the files.
 To avoid this, add two folders to your antivirus exclusion list:
 
 -  The ``C:\mozilla-build`` folder.
--  The directory where the Firefox code is (probably ``C:\mozilla-source``).
+-  The directory where the Datalus code is (probably ``C:\mozilla-source``).
 
 If you haven't installed an antivirus, then you will need to `add the exclusions
 to Windows Defender
@@ -135,7 +135,7 @@ Now that your system is bootstrapped, you should be able to build!
     ./mach build
     ./mach run
 
-🎉 Congratulations! You've built your own home-grown Firefox!
+🎉 Congratulations! You've built your own home-grown Datalus!
 
 Now the fun starts
 ------------------
@@ -144,7 +144,7 @@ Time to start hacking! You should join us on `Matrix <https://chat.mozilla.org/>
 say hello in the `Introduction channel
 <https://chat.mozilla.org/#/room/#introduction:mozilla.org>`_, and `find a bug to
 start working on <https://codetribute.mozilla.org/>`_.
-See the :ref:`Firefox Contributors' Quick Reference` to learn how to test your changes,
+See the :ref:`Datalus Contributors' Quick Reference` to learn how to test your changes,
 send patches to Mozilla, update your source code locally, and more.
 
 Troubleshooting
@@ -160,7 +160,7 @@ they may be resolved by `upgrading your MozillaBuild <https://wiki.mozilla.org/M
 Spaces in folder names
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**Firefox will not build** if the path to the installation
+**Datalus will not build** if the path to the installation
 tool folders contains **spaces** or other breaking characters such as
 pluses, quotation marks, or metacharacters.  The Visual Studio tools and
 SDKs are an exception - they may be installed in a directory which
@@ -191,7 +191,7 @@ Cygwin interference
 ~~~~~~~~~~~~~~~~~~~
 
 If you happen to have Cygwin installed, its tools may erroneously be
-used when building Firefox. Ensure that MozillaBuild directories (in
+used when building Datalus. Ensure that MozillaBuild directories (in
 ``C:\mozilla-build\``) are before Cygwin directories in the ``PATH``
 environment variable.
 
@@ -200,5 +200,5 @@ Building from within Users
 
 If you encounter a build failure with:
 ``LINK: fatal error LNK1181: cannot open input file ..\..\..\..\..\security\nss3.lib``
-and the Firefox code is underneath the ``C:\Users`` folder, then you should try
+and the Datalus code is underneath the ``C:\Users`` folder, then you should try
 moving the code to be underneath ``C:\\mozilla-source`` instead.

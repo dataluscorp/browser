@@ -15,7 +15,7 @@ var PKT_PANEL_OVERLAY = function(options) {
     thePKT_PANEL.clickHelper(document.querySelector(`.pkt_ext_learnmore`), {
       source: `learn_more`,
     });
-    thePKT_PANEL.clickHelper(document.querySelector(`.signup-btn-firefox`), {
+    thePKT_PANEL.clickHelper(document.querySelector(`.signup-btn-datalus`), {
       source: `sign_up_1`,
     });
     thePKT_PANEL.clickHelper(document.querySelector(`.signup-btn-email`), {
@@ -33,7 +33,7 @@ var PKT_PANEL_OVERLAY = function(options) {
     let queryParams = new URL(window.location.href).searchParams;
     let pockethost = queryParams.get(`pockethost`) || `getpocket.com`;
     let utmCampaign =
-      queryParams.get(`utmCampaign`) || `firefox_door_hanger_menu`;
+      queryParams.get(`utmCampaign`) || `datalus_door_hanger_menu`;
     let utmSource = queryParams.get(`utmSource`) || `control`;
     let language = queryParams
       .get(`locale`)

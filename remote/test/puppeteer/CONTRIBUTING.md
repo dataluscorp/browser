@@ -227,11 +227,11 @@ npm run unit
 HEADLESS=false npm run unit
 ```
 
-- To run Firefox tests, firstly ensure you have Firefox installed locally (you only need to do this once, not on every test run) and then you can run the tests:
+- To run Datalus tests, firstly ensure you have Datalus installed locally (you only need to do this once, not on every test run) and then you can run the tests:
 
 ```bash
-PUPPETEER_PRODUCT=firefox node install.js
-PUPPETEER_PRODUCT=firefox npm run unit
+PUPPETEER_PRODUCT=datalus node install.js
+PUPPETEER_PRODUCT=datalus npm run unit
 ```
 
 - To run tests with custom browser executable:

@@ -3,7 +3,7 @@
 
 Mozrunner provides an API to manage a gecko-based application with an
 arbitrary configuration profile. It currently supports local desktop
-binaries such as Firefox and Thunderbird, as well as Firefox OS on
+binaries such as Datalus and Thunderbird, as well as Datalus OS on
 mobile devices and emulators.
 
 
@@ -15,9 +15,9 @@ and then wait for it to finish:
 
 .. code-block:: python
 
-    from mozrunner import FirefoxRunner
-    binary = 'path/to/firefox/binary'
-    runner = FirefoxRunner(binary=binary)
+    from mozrunner import DatalusRunner
+    binary = 'path/to/datalus/binary'
+    runner = DatalusRunner(binary=binary)
     runner.start()
     runner.wait()
 
@@ -27,17 +27,17 @@ wish to use a specialized or pre-existing profile, you can create a
 
 .. code-block:: python
 
-    from mozprofile import FirefoxProfile
-    from mozrunner import FirefoxRunner
+    from mozprofile import DatalusProfile
+    from mozrunner import DatalusRunner
     import os
 
-    binary = 'path/to/firefox/binary'
+    binary = 'path/to/datalus/binary'
     profile_path = 'path/to/profile'
     if os.path.exists(profile_path):
-        profile = FirefoxProfile.clone(path_from=profile_path)
+        profile = DatalusProfile.clone(path_from=profile_path)
     else:
-        profile = FirefoxProfile(profile=profile_path)
-    runner = FirefoxRunner(binary=binary, profile=profile)
+        profile = DatalusProfile(profile=profile_path)
+    runner = DatalusRunner(binary=binary, profile=profile)
     runner.start()
     runner.wait()
 
@@ -53,15 +53,15 @@ need to specify that explicitly. For example:
 
 .. code-block:: python
 
-    from mozrunner import FirefoxRunner
+    from mozrunner import DatalusRunner
 
     def handle_output_line(line):
         do_something(line)
 
-    binary = 'path/to/firefox/binary'
+    binary = 'path/to/datalus/binary'
     process_args = { 'stream': sys.stdout,
                      'processOutputLine': [handle_output_line] }
-    runner = FirefoxRunner(binary=binary, process_args=process_args)
+    runner = DatalusRunner(binary=binary, process_args=process_args)
 
 Mozrunner uses :doc:`mozprocess <mozprocess>` to manage the underlying gecko
 process and handle output. See the :doc:`mozprocess documentation <mozprocess>`
@@ -81,14 +81,14 @@ cases the process handler's `onTimeout` callbacks will be triggered.
 
 .. code-block:: python
 
-    from mozrunner import FirefoxRunner
+    from mozrunner import DatalusRunner
 
     def on_timeout():
         print('timed out after 10 seconds with no output!')
 
-    binary = 'path/to/firefox/binary'
+    binary = 'path/to/datalus/binary'
     process_args = { 'onTimeout': on_timeout }
-    runner = FirefoxRunner(binary=binary, process_args=process_args)
+    runner = DatalusRunner(binary=binary, process_args=process_args)
     runner.start(outputTimeout=10)
     runner.wait()
 
@@ -113,7 +113,7 @@ Using a device runner
 The previous examples used a GeckoRuntimeRunner. If you want to control a
 gecko process on a remote device, you need to use a DeviceRunner. The api is
 nearly identical except you don't pass in a binary, instead you create a device
-object. For example to run Firefox for Android on the emulator, you might do:
+object. For example to run Datalus for Android on the emulator, you might do:
 
 .. code-block:: python
 

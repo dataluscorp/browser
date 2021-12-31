@@ -24,7 +24,7 @@
 #       bug_numbers: [<list of bug numbers>]           # mandatory
 #
 # Precise documentation for UserInteractions can be found at
-# https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/collection/user-interactions.html
+# https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/collection/user-interactions.html
 
 browser.tabs:
   opening:

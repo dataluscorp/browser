@@ -216,7 +216,7 @@ Documentation for SpiderMonkey is available at:
 
 In particular, it points to build documentation at
 
-  https://firefox-source-docs.mozilla.org/js/build.html
+  https://datalus-source-docs.mozilla.org/js/build.html
 
 Note that the libraries produced by the build system include symbols,
 causing the binaries to be extremely large. It is highly suggested that `strip`

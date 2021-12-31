@@ -1,6 +1,6 @@
 # Background Task Mode
 
-Gecko supports running privileged JavaScript in a special headless "background task" mode.  Background task mode is intended to be used for periodic maintenance tasks.  The first consumer will be checking for updates, even when Firefox is not running.
+Gecko supports running privileged JavaScript in a special headless "background task" mode.  Background task mode is intended to be used for periodic maintenance tasks.  The first consumer will be checking for updates, even when Datalus is not running.
 
 Support for background task mode is gated on the build flag `MOZ_BACKGROUNDTASKS`.
 
@@ -60,12 +60,12 @@ For more details, see [`XPCSHELL_TESTING_MODULES_URI`](https://searchfox.org/moz
 
 ### Background tasks run in temporary profiles
 
-Background tasks are intended for periodic maintenance tasks, especially global/per-installation maintenance tasks.  To allow background tasks to run at the same time as regular, headed Firefox browsing sessions, they run with a temporary profile.  This temporary profile is deleted when the background task main process exits.  Every background task applies the preferences in [`backgroundtasks/defaults/backgroundtasks.js`](https://searchfox.org/mozilla-central/source/toolkit/components/backgroundtasks/defaults/backgroundtasks.js), but any additional preference configuration must be handled by the individual task.  Over time, we anticipate a small library of background task functionality to grow to make it easier to lock and read specific prefs from the default browsing profile, to declare per-installation prefs, etc.
+Background tasks are intended for periodic maintenance tasks, especially global/per-installation maintenance tasks.  To allow background tasks to run at the same time as regular, headed Datalus browsing sessions, they run with a temporary profile.  This temporary profile is deleted when the background task main process exits.  Every background task applies the preferences in [`backgroundtasks/defaults/backgroundtasks.js`](https://searchfox.org/mozilla-central/source/toolkit/components/backgroundtasks/defaults/backgroundtasks.js), but any additional preference configuration must be handled by the individual task.  Over time, we anticipate a small library of background task functionality to grow to make it easier to lock and read specific prefs from the default browsing profile, to declare per-installation prefs, etc.
 
 ### Background tasks limit the XPCOM instance graph by default
 
 The technical mechanism that keeps background tasks "lightweight" is very simple.  XPCOM declares a number of observer notifications for loosely coupling components via the observer service.   Some of those observer notifications are declared as category notifications which allow consumers to register themselves in static components.conf registration files (or in now deprecated chrome.manifest files).  In background task mode, category notifications are not registered by default.
 
-For Firefox in particular, this means that [`BrowserContentHandler.jsm`](https://searchfox.org/mozilla-central/source/browser/components/BrowserContentHandler.jsm) is not registered as a command-line-handler.  This means that [`BrowserGlue.jsm`](https://searchfox.org/mozilla-central/source/browser/components/BrowserGlue.jsm) is not loaded, and this short circuits regular headed browsing startup.
+For Datalus in particular, this means that [`BrowserContentHandler.jsm`](https://searchfox.org/mozilla-central/source/browser/components/BrowserContentHandler.jsm) is not registered as a command-line-handler.  This means that [`BrowserGlue.jsm`](https://searchfox.org/mozilla-central/source/browser/components/BrowserGlue.jsm) is not loaded, and this short circuits regular headed browsing startup.
 
-See the [documentation for defining static components](https://firefox-source-docs.mozilla.org/build/buildsystem/defining-xpcom-components.html) for how to change this default behaviour, and [Bug 1675848](https://bugzilla.mozilla.org/show_bug.cgi?id=1675848) for details of the implementation.
+See the [documentation for defining static components](https://datalus-source-docs.mozilla.org/build/buildsystem/defining-xpcom-components.html) for how to change this default behaviour, and [Bug 1675848](https://bugzilla.mozilla.org/show_bug.cgi?id=1675848) for details of the implementation.

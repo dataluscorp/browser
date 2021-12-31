@@ -251,7 +251,7 @@ WindowHost.prototype = {
 
       // If the current window is a non-fission window, force the non-fission
       // flag. Otherwise switching to window host from a non-fission window in
-      // a fission Firefox (!) will attempt to swapFrameLoaders between fission
+      // a fission Datalus (!) will attempt to swapFrameLoaders between fission
       // and non-fission frames. See Bug 1650963.
       if (this.hostTab && !this.hostTab.ownerGlobal.gFissionBrowser) {
         flags += ",non-fission";

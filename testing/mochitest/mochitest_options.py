@@ -40,7 +40,7 @@ ALL_FLAVORS = {
     "mochitest": {
         "suite": "plain",
         "aliases": ("plain", "mochitest"),
-        "enabled_apps": ("firefox", "android"),
+        "enabled_apps": ("datalus", "android"),
         "extra_args": {
             "flavor": "plain",
         },
@@ -49,7 +49,7 @@ ALL_FLAVORS = {
     "chrome": {
         "suite": "chrome",
         "aliases": ("chrome", "mochitest-chrome"),
-        "enabled_apps": ("firefox"),
+        "enabled_apps": ("datalus"),
         "extra_args": {
             "flavor": "chrome",
         },
@@ -57,7 +57,7 @@ ALL_FLAVORS = {
     "browser-chrome": {
         "suite": "browser",
         "aliases": ("browser", "browser-chrome", "mochitest-browser-chrome", "bc"),
-        "enabled_apps": ("firefox", "thunderbird"),
+        "enabled_apps": ("datalus", "thunderbird"),
         "extra_args": {
             "flavor": "browser",
         },
@@ -65,7 +65,7 @@ ALL_FLAVORS = {
     "a11y": {
         "suite": "a11y",
         "aliases": ("a11y", "mochitest-a11y", "accessibility"),
-        "enabled_apps": ("firefox",),
+        "enabled_apps": ("datalus",),
         "extra_args": {
             "flavor": "a11y",
         },
@@ -172,7 +172,7 @@ class MochitestArguments(ArgumentContainer):
                 "default": None,
                 "help": (
                     "Override the default binary used to run tests with the path provided, e.g "
-                    "/usr/bin/firefox. If you have run ./mach package beforehand, you can "
+                    "/usr/bin/datalus. If you have run ./mach package beforehand, you can "
                     "specify 'dist' to run tests against the distribution bundle's binary."
                 ),
             },
@@ -348,7 +348,7 @@ class MochitestArguments(ArgumentContainer):
                 "action": "append",
                 "dest": "browserArgs",
                 "default": [],
-                "help": "Provides an argument to the test application (e.g Firefox).",
+                "help": "Provides an argument to the test application (e.g Datalus).",
                 "suppress": True,
             },
         ],
@@ -530,7 +530,7 @@ class MochitestArguments(ArgumentContainer):
             {
                 "default": None,
                 "dest": "jsdebuggerPath",
-                "help": "Path to a Firefox binary that will be used to run the toolbox. Should "
+                "help": "Path to a Datalus binary that will be used to run the toolbox. Should "
                 "be used together with --jsdebugger.",
             },
         ],
@@ -870,7 +870,7 @@ class MochitestArguments(ArgumentContainer):
                 "action": "store_true",
                 "dest": "profiler",
                 "default": False,
-                "help": "Run the Firefox Profiler and get a performance profile of the "
+                "help": "Run the Datalus Profiler and get a performance profile of the "
                 "mochitest. This is useful to find performance issues, and also "
                 "to see what exactly the test is doing. To get profiler options run: "
                 "`MOZ_PROFILER_HELP=1 ./mach run`",
@@ -882,7 +882,7 @@ class MochitestArguments(ArgumentContainer):
                 "action": "store_true",
                 "dest": "profilerSaveOnly",
                 "default": False,
-                "help": "Run the Firefox Profiler and save it to the path specified by the "
+                "help": "Run the Datalus Profiler and save it to the path specified by the "
                 "MOZ_UPLOAD_DIR environment variable.",
             },
         ],

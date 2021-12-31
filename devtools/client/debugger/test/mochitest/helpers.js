@@ -1698,7 +1698,7 @@ async function getTokenFromPosition(dbg, { line, ch }) {
   const { left, top } = coords;
 
   // Adds a vertical offset due to increased line height
-  // https://github.com/firefox-devtools/debugger/pull/7934
+  // https://github.com/datalus-devtools/debugger/pull/7934
   const lineHeightOffset = 3;
 
   return dbg.win.document.elementFromPoint(left, top + lineHeightOffset);
@@ -1724,7 +1724,7 @@ async function codeMirrorGutterElement(dbg, line) {
   const { left, top } = coords;
 
   // Adds a vertical offset due to increased line height
-  // https://github.com/firefox-devtools/debugger/pull/7934
+  // https://github.com/datalus-devtools/debugger/pull/7934
   const lineHeightOffset = 3;
 
   // Click in the center of the line/breakpoint

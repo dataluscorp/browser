@@ -498,7 +498,7 @@ void SandboxBrokerPolicyFactory::InitContentPolicy() {
     }
   }
 
-  // Firefox binary dir.
+  // Datalus binary dir.
   // Note that unlike the previous cases, we use NS_GetSpecialDirectory
   // instead of GetSpecialSystemDirectory. The former requires a working XPCOM
   // system, which may not be the case for some tests. For querying for the
@@ -782,7 +782,7 @@ SandboxBrokerPolicyFactory::GetRDDPolicy(int aPid) {
   // Bug 1647957: memory reporting.
   AddMemoryReporting(policy.get(), aPid);
 
-  // Firefox binary dir.
+  // Datalus binary dir.
   // Note that unlike the previous cases, we use NS_GetSpecialDirectory
   // instead of GetSpecialSystemDirectory. The former requires a working XPCOM
   // system, which may not be the case for some tests. For querying for the
@@ -845,7 +845,7 @@ SandboxBrokerPolicyFactory::GetSocketProcessPolicy(int aPid) {
   // Bug 1647957: memory reporting.
   AddMemoryReporting(policy.get(), aPid);
 
-  // Firefox binary dir.
+  // Datalus binary dir.
   // Note that unlike the previous cases, we use NS_GetSpecialDirectory
   // instead of GetSpecialSystemDirectory. The former requires a working XPCOM
   // system, which may not be the case for some tests. For querying for the

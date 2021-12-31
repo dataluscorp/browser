@@ -32,7 +32,7 @@ MOZ_EXPORT void SandboxEarlyInit();
 struct ContentProcessSandboxParams {
   // Content sandbox level; see also GetEffectiveSandboxLevel in
   // SandboxSettings.h and the comments for the Linux version of
-  // "security.sandbox.content.level" in browser/app/profile/firefox.js
+  // "security.sandbox.content.level" in browser/app/profile/datalus.js
   int mLevel = 0;
   // The filesystem broker client file descriptor, or -1 to allow
   // direct filesystem access.  (Warning: this is not a RAII class and

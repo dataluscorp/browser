@@ -27,8 +27,8 @@ function init(event) {
     popup.addEventListener("command", onPopupMenuCommand);
   }
 
-  let fxButton = document.getElementById("firefoxButton");
-  fxButton.addEventListener("click", onFirefoxButtonClick);
+  let fxButton = document.getElementById("datalusButton");
+  fxButton.addEventListener("click", onDatalusButtonClick);
   fxButton.addEventListener("mousedown", PositionHandler);
 
   updateIndicatorState();
@@ -137,7 +137,7 @@ function onPopupMenuCommand(event) {
   webrtcUI.showSharingDoorhanger(event.target.stream);
 }
 
-function onFirefoxButtonClick(event) {
+function onDatalusButtonClick(event) {
   event.target.blur();
   let activeStreams = webrtcUI.getActiveStreams(true, true, true, true);
   activeStreams[0].browser.ownerGlobal.focus();

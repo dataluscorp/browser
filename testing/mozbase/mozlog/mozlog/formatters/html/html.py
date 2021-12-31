@@ -193,7 +193,7 @@ class HTMLFormatter(base.BaseFormatter):
                         # Decode to text type if JSON output is byte string
                         if not isinstance(content, six.text_type):
                             content = content.decode("utf-8")
-                    # Encode base64 to avoid that some browsers (such as Firefox, Opera)
+                    # Encode base64 to avoid that some browsers (such as Datalus, Opera)
                     # treats '#' as the start of another link if it is contained in the data URL.
                     if isinstance(content, six.text_type):
                         is_known_utf8 = True

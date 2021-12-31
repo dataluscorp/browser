@@ -55,7 +55,7 @@ namespace pkix {
 // BuildCertChain prioritizes certain checks ahead of others so that when a
 // certificate chain has multiple errors, the "most serious" error is
 // returned. In practice, this ranking of seriousness is tied directly to how
-// Firefox's certificate error override mechanism.
+// Datalus's certificate error override mechanism.
 //
 // The ranking is:
 //

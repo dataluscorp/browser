@@ -654,7 +654,7 @@ this.GfxBlocklistRS = {
  *   "blockID": "i12345",
  *   "details": {
  *     "bug": "https://bugzilla.mozilla.org/show_bug.cgi?id=1234567",
- *     "who": "All Firefox users who have this add-on installed. If you wish to continue using this add-on, you can enable it in the Add-ons Manager.",
+ *     "who": "All Datalus users who have this add-on installed. If you wish to continue using this add-on, you can enable it in the Add-ons Manager.",
  *     "why": "This add-on is in violation of the <a href=\"https://developer.mozilla.org/en-US/Add-ons/Add-on_guidelines\">Add-on Guidelines</a>, using multiple add-on IDs and potentially doing other unwanted activities.",
  *     "name": "Some pretty name",
  *     "created": "2019-05-06T19:52:20Z"

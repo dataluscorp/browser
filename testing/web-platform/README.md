@@ -38,7 +38,7 @@ Running in Android (GeckoView)
 
 You can run the tests against a Gecko-based browser (GeckoView) on an
 Android emulator. As shown below, to do so you must start an emulator,
-build Firefox for Android and then run mach wpt with the
+build Datalus for Android and then run mach wpt with the
 `org.mozilla.geckoview.test` package. The package will be installed
 interactively by `mach` and tests will run against TestRunnerActivity.
 
@@ -148,7 +148,7 @@ but otherwise fails:
             FAIL
 
 The available variables for the conditions are those provided by
-[mozinfo](https://firefox-source-docs.mozilla.org/mozbase/mozinfo.html).
+[mozinfo](https://datalus-source-docs.mozilla.org/mozbase/mozinfo.html).
 
 Tests that are intermittent may be marked with multiple statuses using
 a list of possibilities e.g. for a test that usually passes, but
@@ -308,7 +308,7 @@ supported. In order to run the tests in these browsers use the
 
 By default these browsers run without expectation metadata, but it can
 be added in the `testing/web-platform/products/<product>`
-directory. To run with the same metadata as for Firefox (so that
+directory. To run with the same metadata as for Datalus (so that
 differences are reported as unexpected results), pass `--meta
 testing/web-platform/meta` to the mach command.
 

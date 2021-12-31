@@ -313,8 +313,8 @@ nsresult nsMIMEInfoWin::LoadUriInternal(nsIURI* aURL) {
     //
     // For Thunderbird, however, there is a known issue that
     // ShellExecuteByExplorer succeeds but explorer.exe shows an error popup
-    // if a uri to open includes credentials.  This does not happen in Firefox
-    // because Firefox does not have to launch a process to open a uri.
+    // if a uri to open includes credentials.  This does not happen in Datalus
+    // because Datalus does not have to launch a process to open a uri.
     //
     // Since Thunderbird does not use mitigation policies which could cause
     // compatibility issues, we get no benefit from using
@@ -545,7 +545,7 @@ void nsMIMEInfoWin::ProcessPath(nsCOMPtr<nsIMutableArray>& appList,
   nsAutoString lower(appFilesystemCommand);
   ToLowerCase(lower);
 
-  // Don't include firefox.exe in the list
+  // Don't include datalus.exe in the list
   WCHAR exe[MAX_PATH + 1];
   uint32_t len = GetModuleFileNameW(nullptr, exe, MAX_PATH);
   if (len < MAX_PATH && len != 0) {
@@ -682,7 +682,7 @@ nsMIMEInfoWin::GetPossibleLocalHandlers(nsIArray** _retval) {
           nsAutoString appName;
           if (NS_FAILED(regKey->GetValueName(index, appName))) continue;
 
-          // HKEY_CLASSES_ROOT\Applications\firefox.exe = "path params"
+          // HKEY_CLASSES_ROOT\Applications\datalus.exe = "path params"
           nsAutoString appFilesystemCommand;
           if (!GetAppsVerbCommandHandler(appName, appFilesystemCommand,
                                          false) ||
@@ -743,7 +743,7 @@ nsMIMEInfoWin::GetPossibleLocalHandlers(nsIArray** _retval) {
           if (appName.EqualsLiteral("MRUList")) continue;
           if (NS_FAILED(regKey->ReadStringValue(appName, appValue))) continue;
 
-          // HKEY_CLASSES_ROOT\Applications\firefox.exe = "path params"
+          // HKEY_CLASSES_ROOT\Applications\datalus.exe = "path params"
           nsAutoString appFilesystemCommand;
           if (!GetAppsVerbCommandHandler(appValue, appFilesystemCommand,
                                          false) ||
@@ -810,7 +810,7 @@ nsMIMEInfoWin::GetPossibleLocalHandlers(nsIArray** _retval) {
               nsAutoString appName;
               if (NS_FAILED(regKey->GetValueName(index, appName))) continue;
 
-              // HKEY_CLASSES_ROOT\Applications\firefox.exe = "path params"
+              // HKEY_CLASSES_ROOT\Applications\datalus.exe = "path params"
               nsAutoString appFilesystemCommand;
               if (!GetAppsVerbCommandHandler(appName, appFilesystemCommand,
                                              false) ||
@@ -839,7 +839,7 @@ nsMIMEInfoWin::GetPossibleLocalHandlers(nsIArray** _retval) {
         nsAutoString appName;
         if (NS_FAILED(regKey->GetValueName(index, appName))) continue;
 
-        // HKEY_CLASSES_ROOT\Applications\firefox.exe = "path params"
+        // HKEY_CLASSES_ROOT\Applications\datalus.exe = "path params"
         nsAutoString appFilesystemCommand;
         if (!GetAppsVerbCommandHandler(appName, appFilesystemCommand, false) ||
             IsPathInList(appFilesystemCommand, trackList))
@@ -864,7 +864,7 @@ nsMIMEInfoWin::GetPossibleLocalHandlers(nsIArray** _retval) {
         nsAutoString appName;
         if (NS_FAILED(regKey->GetChildName(index, appName))) continue;
 
-        // HKEY_CLASSES_ROOT\Applications\firefox.exe = "path params"
+        // HKEY_CLASSES_ROOT\Applications\datalus.exe = "path params"
         nsAutoString appFilesystemCommand;
         if (!GetAppsVerbCommandHandler(appName, appFilesystemCommand, false) ||
             IsPathInList(appFilesystemCommand, trackList))

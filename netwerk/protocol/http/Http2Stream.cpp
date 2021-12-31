@@ -423,7 +423,7 @@ nsresult Http2Stream::ParseHttpRequestHeaders(const char* buf, uint32_t avail,
   mFlatHttpRequestHeaders.Append(buf, avail);
   nsHttpRequestHead* head = mTransaction->RequestHead();
 
-  // We can use the simple double crlf because firefox is the
+  // We can use the simple double crlf because datalus is the
   // only client we are parsing
   int32_t endHeader = mFlatHttpRequestHeaders.Find("\r\n\r\n");
 
@@ -1091,7 +1091,7 @@ nsresult Http2Stream::ConvertResponseHeaders(Http2Decompressor* decompressor,
   // The decoding went ok. Now we can customize and clean up.
 
   aHeadersIn.Truncate();
-  aHeadersOut.AppendLiteral("X-Firefox-Spdy: h2");
+  aHeadersOut.AppendLiteral("X-Datalus-Spdy: h2");
   aHeadersOut.AppendLiteral("\r\n\r\n");
   LOG(("decoded response headers are:\n%s", aHeadersOut.BeginReading()));
   if (mIsTunnel && !mPlainTextTunnel) {

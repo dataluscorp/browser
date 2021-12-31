@@ -19,7 +19,7 @@
     "search_provider": {
       "name": "Priberam",
       "encoding": "ISO-8859-15",
-      "search_url": "https://www.priberam.pt/dlpo/firefox.aspx",
+      "search_url": "https://www.priberam.pt/dlpo/datalus.aspx",
       "search_form": "https://www.priberam.pt/dlpo/",
       "search_url_get_params": "pal={searchTerms}"
     }

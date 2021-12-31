@@ -228,7 +228,7 @@ add_task(async function test_platform_decoder_not_found() {
     isLinux ? "" : gNavigatorBundle.getString("decoder.noCodecs.button"),
     isLinux ? "" : gNavigatorBundle.getString("decoder.noCodecs.accesskey"),
     true,
-    tab_checker_for_sumo("fix-video-audio-problems-firefox-windows")
+    tab_checker_for_sumo("fix-video-audio-problems-datalus-windows")
   );
 });
 

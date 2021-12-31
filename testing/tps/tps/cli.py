@@ -22,7 +22,7 @@ def main():
         type="string",
         dest="binary",
         default=None,
-        help="path to the Firefox binary, specified either as "
+        help="path to the Datalus binary, specified either as "
         "a local file or a url; if omitted, the PATH "
         "will be searched;",
     )

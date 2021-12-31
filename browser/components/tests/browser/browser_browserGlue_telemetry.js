@@ -3,7 +3,7 @@ http://creativecommons.org/publicdomain/zero/1.0/ */
 
 "use strict";
 
-// Check that telemetry reports Firefox is not pinned on any OS at startup.
+// Check that telemetry reports Datalus is not pinned on any OS at startup.
 add_task(function check_startup_pinned_telemetry() {
   const scalars = TelemetryTestUtils.getProcessScalars("parent");
 

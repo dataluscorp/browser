@@ -22,7 +22,7 @@ import Protocol from 'devtools-protocol';
 import {
   getTestState,
   itChromeOnly,
-  itFailsFirefox,
+  itFailsDatalus,
   itOnlyRegularInstall,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import utils from './utils.js';
@@ -35,10 +35,10 @@ const mkdtempAsync = promisify(fs.mkdtemp);
 const readFileAsync = promisify(fs.readFile);
 const statAsync = promisify(fs.stat);
 const TMP_FOLDER = path.join(os.tmpdir(), 'pptr_tmp_folder-');
-const FIREFOX_TIMEOUT = 30 * 1000;
+const DATALUS_TIMEOUT = 30 * 1000;
 
 describe('Launcher specs', function () {
-  if (getTestState().isFirefox) this.timeout(FIREFOX_TIMEOUT);
+  if (getTestState().isDatalus) this.timeout(DATALUS_TIMEOUT);
 
   describe('Puppeteer', function () {
     describe('BrowserFetcher', function () {
@@ -83,7 +83,7 @@ describe('Launcher specs', function () {
         expect(await browserFetcher.localRevisions()).toEqual([]);
         await rmAsync(downloadsFolder);
       });
-      it('should download and extract firefox linux binary', async () => {
+      it('should download and extract datalus linux binary', async () => {
         const { server, puppeteer } = getTestState();
 
         const downloadsFolder = await mkdtempAsync(TMP_FOLDER);
@@ -91,7 +91,7 @@ describe('Launcher specs', function () {
           platform: 'linux',
           path: downloadsFolder,
           host: server.PREFIX,
-          product: 'firefox',
+          product: 'datalus',
         });
         const expectedVersion = '75.0a1';
         let revisionInfo = browserFetcher.revisionInfo(expectedVersion);
@@ -101,21 +101,21 @@ describe('Launcher specs', function () {
             server.serveFile(
               req,
               res,
-              `/firefox-${expectedVersion}.en-US.linux-x86_64.tar.bz2`
+              `/datalus-${expectedVersion}.en-US.linux-x86_64.tar.bz2`
             );
           }
         );
 
         expect(revisionInfo.local).toBe(false);
         expect(browserFetcher.platform()).toBe('linux');
-        expect(browserFetcher.product()).toBe('firefox');
+        expect(browserFetcher.product()).toBe('datalus');
         expect(await browserFetcher.canDownload('100000')).toBe(false);
         expect(await browserFetcher.canDownload(expectedVersion)).toBe(true);
 
         revisionInfo = await browserFetcher.download(expectedVersion);
         expect(revisionInfo.local).toBe(true);
         expect(await readFileAsync(revisionInfo.executablePath, 'utf8')).toBe(
-          'FIREFOX LINUX BINARY\n'
+          'DATALUS LINUX BINARY\n'
         );
         const expectedPermissions = os.platform() === 'win32' ? 0o666 : 0o755;
         expect(
@@ -298,7 +298,7 @@ describe('Launcher specs', function () {
         await rmAsync(userDataDir).catch(() => {});
       });
       it('should return the default arguments', async () => {
-        const { isChrome, isFirefox, puppeteer } = getTestState();
+        const { isChrome, isDatalus, puppeteer } = getTestState();
 
         if (isChrome) {
           expect(puppeteer.defaultArgs()).toContain('--no-first-run');
@@ -309,7 +309,7 @@ describe('Launcher specs', function () {
           expect(puppeteer.defaultArgs({ userDataDir: 'foo' })).toContain(
             `--user-data-dir=${path.resolve('foo')}`
           );
-        } else if (isFirefox) {
+        } else if (isDatalus) {
           expect(puppeteer.defaultArgs()).toContain('--headless');
           expect(puppeteer.defaultArgs()).toContain('--no-remote');
           expect(puppeteer.defaultArgs()).toContain('--foreground');
@@ -336,9 +336,9 @@ describe('Launcher specs', function () {
         }
       });
       it('should report the correct product', async () => {
-        const { isChrome, isFirefox, puppeteer } = getTestState();
+        const { isChrome, isDatalus, puppeteer } = getTestState();
         if (isChrome) expect(puppeteer.product).toBe('chrome');
-        else if (isFirefox) expect(puppeteer.product).toBe('firefox');
+        else if (isDatalus) expect(puppeteer.product).toBe('datalus');
       });
       it('should work with no default arguments', async () => {
         const { defaultBrowserOptions, puppeteer } = getTestState();
@@ -490,14 +490,14 @@ describe('Launcher specs', function () {
       });
 
       itOnlyRegularInstall(
-        'should be able to launch Firefox',
+        'should be able to launch Datalus',
         async function () {
-          this.timeout(FIREFOX_TIMEOUT);
+          this.timeout(DATALUS_TIMEOUT);
           const { puppeteer } = getTestState();
-          const browser = await puppeteer.launch({ product: 'firefox' });
+          const browser = await puppeteer.launch({ product: 'datalus' });
           const userAgent = await browser.userAgent();
           await browser.close();
-          expect(userAgent).toContain('Firefox');
+          expect(userAgent).toContain('Datalus');
         }
       );
     });

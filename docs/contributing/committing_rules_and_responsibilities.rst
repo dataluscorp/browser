@@ -12,7 +12,7 @@ There are things you need to be sure of before you even attempt to check
 in:
 
 -  Your code must
-   :ref:`compile <Building Firefox On Linux>` and `pass all the automated tests <https://developer.mozilla.org/docs/Mozilla/QA/Automated_testing>`__
+   :ref:`compile <Building Datalus On Linux>` and `pass all the automated tests <https://developer.mozilla.org/docs/Mozilla/QA/Automated_testing>`__
    before you consider pushing changes. If you are at all unsure, verify
    your changes with the
    `mozilla-central <https://wiki.mozilla.org/Build:TryServer>`__.

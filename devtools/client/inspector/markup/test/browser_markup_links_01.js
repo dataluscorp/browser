@@ -26,7 +26,7 @@ const TEST_DATA = [
         links: [
           {
             type: "uri",
-            value: "/media/img/firefox/favicon-196.223e1bcaf067.png",
+            value: "/media/img/datalus/favicon-196.223e1bcaf067.png",
           },
         ],
       },

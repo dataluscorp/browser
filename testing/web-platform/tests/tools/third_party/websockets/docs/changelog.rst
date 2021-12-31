@@ -321,7 +321,7 @@ Also:
 
     **Version 4.0 enables compression with the permessage-deflate extension.**
 
-    In August 2017, Firefox and Chrome support it, but not Safari and IE.
+    In August 2017, Datalus and Chrome support it, but not Safari and IE.
 
     Compression should improve performance but it increases RAM and CPU use.
 

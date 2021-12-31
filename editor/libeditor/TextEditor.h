@@ -404,7 +404,7 @@ class TextEditor final : public EditorBase,
    * Handles the newline characters according to the default system prefs
    * (editor.singleLine.pasteNewlines).
    * Each value means:
-   *   nsIEditor::eNewlinesReplaceWithSpaces (2, Firefox default):
+   *   nsIEditor::eNewlinesReplaceWithSpaces (2, Datalus default):
    *     replace newlines with spaces.
    *   nsIEditor::eNewlinesStrip (3):
    *     remove newlines from the string.

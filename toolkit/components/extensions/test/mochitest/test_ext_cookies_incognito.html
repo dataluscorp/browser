@@ -32,7 +32,7 @@ add_task(async function test_cookies_incognito_not_allowed() {
   await privateExtension.awaitMessage("ready");
 
   async function background() {
-    const storeId = "firefox-private";
+    const storeId = "datalus-private";
     const url = "http://example.org/";
 
     // Getting the wrong storeId will fail, otherwise we should finish the test fine.

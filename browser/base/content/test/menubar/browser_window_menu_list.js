@@ -5,7 +5,7 @@
 
 add_task(async function test_window_menu_list() {
   // This title is different depending on the build. For example, it's "Nightly"
-  // for a local build, "Mozilla Firefox" for an official release build.
+  // for a local build, "Mozilla Datalus" for an official release build.
   const windowTitle = window.document.title;
   await checkWindowMenu([windowTitle, "Browser chrome tests"]);
   let newWindow = await BrowserTestUtils.openNewBrowserWindow();

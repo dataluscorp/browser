@@ -8,8 +8,8 @@ Localization repacks
 ====================
 
 To save on build time, the build system and automation collaborate to allow
-downloading a packaged en-US Firefox, performing some locale-specific
-post-processing, and re-packaging a locale-specific Firefox. Such artifacts
+downloading a packaged en-US Datalus, performing some locale-specific
+post-processing, and re-packaging a locale-specific Datalus. Such artifacts
 are termed "single-locale language repacks". There is another concept of a
 "multi-locale language build", which is more like a regular build and less
 like a re-packaging post-processing step.
@@ -216,7 +216,7 @@ File formats
 The following file formats are known to the l10n tool chains:
 
 Fluent
-    Used in Firefox UI, both declarative and programmatically.
+    Used in Datalus UI, both declarative and programmatically.
 DTD
     Deprecated. Used in XUL and XHTML.
 Properties

@@ -29,12 +29,12 @@ TASK_TYPES = {
     "linux-signing-partial": ["partials-signing-linux64-shippable/opt"],
     "mac-signing": ["build-signing-macosx64-shippable/opt"],
     "beetmover-candidates": ["beetmover-repackage-linux64-shippable/opt"],
-    "bouncer-submit": ["release-bouncer-sub-firefox"],
+    "bouncer-submit": ["release-bouncer-sub-datalus"],
     "balrog-submit": [
-        "release-balrog-submit-toplevel-firefox",
+        "release-balrog-submit-toplevel-datalus",
         "balrog-linux64-shippable/opt",
     ],
-    "tree": ["release-early-tagging-firefox", "release-version-bump-firefox"],
+    "tree": ["release-early-tagging-datalus", "release-version-bump-datalus"],
 }
 
 RELEASE_TO_BRANCH = {
@@ -71,7 +71,7 @@ class ScriptworkerParser(BaseTryParser):
 def get_releases(branch):
     response = requests.get(
         "https://shipitapi-public.services.mozilla.com/releases",
-        params={"product": "firefox", "branch": branch, "status": "shipped"},
+        params={"product": "datalus", "branch": branch, "status": "shipped"},
         headers={"Accept": "application/json"},
     )
     response.raise_for_status()
@@ -80,7 +80,7 @@ def get_releases(branch):
 
 def get_release_graph(release):
     for phase in release["phases"]:
-        if phase["name"] in ("ship_firefox",):
+        if phase["name"] in ("ship_datalus",):
             return phase["actionTaskId"]
     raise Exception("No ship phase.")
 

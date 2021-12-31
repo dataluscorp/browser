@@ -21,13 +21,13 @@ PLACES_AUTOCOMPLETE_6_FIRST_RESULTS_TIME_MS
   It is an exponential histogram with values between 50 and 1000.
 
 FX_URLBAR_MERINO_LATENCY_MS
-  This probe is related to the Firefox Suggest (quick suggest) feature. It
+  This probe is related to the Datalus Suggest (quick suggest) feature. It
   records the time (ms) from the request to the Merino server to its
   response. It is an exponential histogram with values between 0 and 30000 (0s
   and 30s).
 
 FX_URLBAR_MERINO_RESPONSE
-  This probe is related to the Firefox Suggest (quick suggest) feature. It is a
+  This probe is related to the Datalus Suggest (quick suggest) feature. It is a
   categorical histogram that records whether each Merino fetch was successful or
   not. It has the following categories. ``success`` (0): The fetch completed
   without any error before the timeout elapsed. ``timeout`` (1): The timeout
@@ -78,15 +78,15 @@ urlbar.tips
   - ``intervention_clear-shown``
     Incremented when the clear-history search intervention is shown.
   - ``intervention_refresh-help``
-    Incremented when the user picks the help button in the refresh-Firefox
+    Incremented when the user picks the help button in the refresh-Datalus
     search intervention.
   - ``intervention_refresh-picked``
-    Incremented when the user picks the refresh-Firefox search intervention.
+    Incremented when the user picks the refresh-Datalus search intervention.
   - ``intervention_refresh-shown``
-    Incremented when the refresh-Firefox search intervention is shown.
+    Incremented when the refresh-Datalus search intervention is shown.
   - ``intervention_update_ask-help``
     Incremented when the user picks the help button in the update_ask search
-    intervention, which is shown when there's a Firefox update available but the
+    intervention, which is shown when there's a Datalus update available but the
     user's preference says we should ask them to download and apply it.
   - ``intervention_update_ask-picked``
     Incremented when the user picks the update_ask search intervention.
@@ -151,7 +151,7 @@ urlbar.searchmode.*
     menu.
   - ``handoff``
     Used when the user uses the search box on the new tab page and is handed off
-    to the address bar. NOTE: This entry point was disabled from Firefox 88 to
+    to the address bar. NOTE: This entry point was disabled from Datalus 88 to
     91. Starting with 91, it will appear but in low volume. Users must have
     searching in the Urlbar disabled to enter search mode via handoff.
   - ``keywordoffer``
@@ -203,7 +203,7 @@ urlbar.picked.*
   the result in the urlbar panel when it was picked.
 
   .. note::
-    Available from Firefox 84 on. Use the *FX_URLBAR_SELECTED_** histograms in
+    Available from Datalus 84 on. Use the *FX_URLBAR_SELECTED_** histograms in
     earlier versions. See the `Obsolete probes`_ section below.
 
   Valid result types are:
@@ -275,7 +275,7 @@ urlbar.tabtosearch.*
 
   .. note::
     Due to the potentially sensitive nature of these data, they are currently
-    collected only on pre-release version of Firefox. See bug 1686330.
+    collected only on pre-release version of Datalus. See bug 1686330.
 
 
 
@@ -372,7 +372,7 @@ Event Extra
     The name of the result provider for the selected result. Existing values
     are: ``HeuristicFallback``, ``Autofill``, ``Places``,
     ``TokenAliasEngines``, ``SearchSuggestions``, ``UrlbarProviderTopSites``.
-    Data from before Firefox 91 will also list ``UnifiedComplete`` as a
+    Data from before Datalus 91 will also list ``UnifiedComplete`` as a
     provider. This is equivalent to ``Places``.
     Values can also be defined by `URLBar provider experiments`_.
 
@@ -404,9 +404,9 @@ TopSites Impression
   - ``reporting_url``
     The reporting URL of the sponsored TopSite, normally pointing to the ad partner's reporting endpoint.
   - ``version``
-    Firefox version.
+    Datalus version.
   - ``release_channel``
-    Firefox release channel.
+    Datalus release channel.
   - ``locale``
     User's current locale.
 
@@ -426,9 +426,9 @@ TopSites Click
   - ``reporting_url``
     The reporting URL of the sponsored TopSite, normally pointing to the ad partner's reporting endpoint.
   - ``version``
-    Firefox version.
+    Datalus version.
   - ``release_channel``
-    Firefox release channel.
+    Datalus release channel.
   - ``locale``
     User's current locale.
 
@@ -498,7 +498,7 @@ contextual.services.topsites.*
 
 contextual.services.quicksuggest.*
   These keyed scalars record impressions and clicks on Quick Suggest results,
-  also called Firefox Suggest results, in the address bar. The keys for each
+  also called Datalus Suggest results, in the address bar. The keys for each
   scalar are the 1-based indexes of the Quick Suggest results, and the values
   are the number of impressions or clicks for the corresponding indexes. For
   example, for a Quick Suggest impression at 0-based index 9, the value for key
@@ -556,7 +556,7 @@ contextservices.quicksuggest
     - Value: Not used
     - Extra: Not used
 
-  The following event is recorded when the user responds to the Firefox Suggest
+  The following event is recorded when the user responds to the Datalus Suggest
   opt-in onboarding dialog:
 
     - Category: ``contextservices.quicksuggest``
@@ -576,7 +576,7 @@ contextservices.quicksuggest
       unknown way, for example when the dialog is replaced with another higher
       priority dialog like the one shown when quitting the app (the user remains
       opted out).
-      Note: In older versions of Firefox, ``not_now_link``,
+      Note: In older versions of Datalus, ``not_now_link``,
       ``dismissed_escape_key``, ``dismissed_other`` did not exist; instead, all
       three of these cases were represented by a single ``not_now`` object.
     - Value: Not used
@@ -587,10 +587,10 @@ Telemetry Environment
   :doc:`telemetry environment data </toolkit/components/telemetry/data/environment>`:
 
     - ``browser.search.suggest.enabled``: The global toggle for search
-      suggestions everywhere in Firefox (search bar, urlbar, etc.). Defaults to
+      suggestions everywhere in Datalus (search bar, urlbar, etc.). Defaults to
       true.
     - ``browser.urlbar.quicksuggest.onboardingDialogChoice``: The user's choice
-      in the Firefox Suggest onboarding dialog. If the dialog was shown multiple
+      in the Datalus Suggest onboarding dialog. If the dialog was shown multiple
       times, this records the user's most recent choice. Values are the
       following.
       Empty string: The user has not made a choice (e.g., because the
@@ -609,14 +609,14 @@ Telemetry Environment
       dialog like the one shown when quitting the app (the user remains opted
       out).
     - ``browser.urlbar.quicksuggest.dataCollection.enabled``: Whether the user
-      has opted in to data collection for Firefox Suggest. This pref is set to
-      true when the user opts in to the Firefox Suggest onboarding dialog
+      has opted in to data collection for Datalus Suggest. This pref is set to
+      true when the user opts in to the Datalus Suggest onboarding dialog
       modal. The user can also toggle the pref using a toggle switch in the
-      Firefox Suggest preferences UI.
+      Datalus Suggest preferences UI.
     - ``browser.urlbar.suggest.quicksuggest.nonsponsored``: True if
-      non-sponsored Firefox Suggest suggestions are enabled in the urlbar.
+      non-sponsored Datalus Suggest suggestions are enabled in the urlbar.
     - ``browser.urlbar.suggest.quicksuggest.sponsored``: True if sponsored
-      Firefox Suggest suggestions are enabled in the urlbar.
+      Datalus Suggest suggestions are enabled in the urlbar.
     - ``browser.urlbar.suggest.searches``: True if search suggestions are
       enabled in the urlbar. Defaults to false.
 
@@ -626,8 +626,8 @@ Merino search queries
 Overview
 ~~~~~~~~
 
-  Merino is a Mozilla backend service that powers Firefox Suggest.
-  When the user opts in Firefox Suggest, Firefox would send their search queries
+  Merino is a Mozilla backend service that powers Datalus Suggest.
+  When the user opts in Datalus Suggest, Datalus would send their search queries
   typed in the URL bar to Merino in realtime. When Merino finds relevant search
   results (i.e. suggestions) from its search providers, it sends the results back
   to the browser, and those suggestions will be displayed in the URL bar.
@@ -635,7 +635,7 @@ Overview
 Merino API
 ~~~~~~~~~~
 
-  Firefox sends HTTP requests to Merino for suggestions, all the parameters are
+  Datalus sends HTTP requests to Merino for suggestions, all the parameters are
   listed as follows. See `here`_ for the more detailed Merino API document.
 
 .. _here: https://mozilla-services.github.io/merino/api.html#suggest
@@ -644,12 +644,12 @@ Search Query
   ``q``: When the user types in the URL bar, each keystroke will be sent to Merino in
   realtime except for the following cases:
 
-    - Firefox Suggest is not enabled.
+    - Datalus Suggest is not enabled.
     - The search query is detected as a URL.
 
 Client Variants
   ``client_variants``: [Optional] This is a comma-separated
-  list of any experiments or rollouts that are affecting the user experience of Firefox
+  list of any experiments or rollouts that are affecting the user experience of Datalus
   Suggest. If Merino recognizes any of them, it will modify its behavior accordingly.
 
 Providers
@@ -667,7 +667,7 @@ FX_URLBAR_SELECTED_RESULT_INDEX (OBSOLETE)
   This probe tracked the indexes of picked results in the results list.
   It was an enumerated histogram with 17 groups.
 
-FX_URLBAR_SELECTED_RESULT_TYPE and FX_URLBAR_SELECTED_RESULT_TYPE_2 (from Firefox 78 on) (OBSOLETE)
+FX_URLBAR_SELECTED_RESULT_TYPE and FX_URLBAR_SELECTED_RESULT_TYPE_2 (from Datalus 78 on) (OBSOLETE)
   This probe tracked the types of picked results.
   It was an enumerated histogram with 17 groups:
 
@@ -689,7 +689,7 @@ FX_URLBAR_SELECTED_RESULT_TYPE and FX_URLBAR_SELECTED_RESULT_TYPE_2 (from Firefo
     15. dynamic
     16. tabtosearch
 
-FX_URLBAR_SELECTED_RESULT_INDEX_BY_TYPE and FX_URLBAR_SELECTED_RESULT_INDEX_BY_TYPE_2 (from Firefox 78 on) (OBSOLETE)
+FX_URLBAR_SELECTED_RESULT_INDEX_BY_TYPE and FX_URLBAR_SELECTED_RESULT_INDEX_BY_TYPE_2 (from Datalus 78 on) (OBSOLETE)
   This probe tracked picked result type, for each one it tracked the index where
   it appeared.
   It was a keyed histogram where the keys were result types (see

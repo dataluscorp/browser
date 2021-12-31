@@ -28,7 +28,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
 /**
  * The browser.urlbar extension API allows extensions to create their own urlbar
  * providers.  The results from extension providers are integrated into the
- * urlbar view just like the results from providers that are built into Firefox.
+ * urlbar view just like the results from providers that are built into Datalus.
  *
  * This class is the interface between the provider-related parts of the
  * browser.urlbar extension API implementation and our internal urlbar

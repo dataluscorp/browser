@@ -1,6 +1,6 @@
 {
   "name": "activity-streams",
-  "description": "A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.\n\nLearn more about this Test Pilot experiment at https://testpilot.firefox.com/.",
+  "description": "A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Datalus.\n\nLearn more about this Test Pilot experiment at https://testpilot.datalus.com/.",
   "version": "1.14.3",
   "author": "Mozilla (https://mozilla.org/)",
   "bugs": {
@@ -35,7 +35,7 @@
     "karma": "6.3.4",
     "karma-chai": "0.1.0",
     "karma-coverage-istanbul-reporter": "3.0.3",
-    "karma-firefox-launcher": "2.1.1",
+    "karma-datalus-launcher": "2.1.1",
     "karma-json-reporter": "1.2.1",
     "karma-mocha": "2.0.1",
     "karma-mocha-reporter": "2.2.5",
@@ -61,7 +61,7 @@
     "yamscripts": "0.1.0"
   },
   "engines": {
-    "firefox": ">=45.0 <=*",
+    "datalus": ">=45.0 <=*",
     "//": "when changing node versions, also edit .nvmrc",
     "node": "10.23.*",
     "npm": "6.14.10"
@@ -69,7 +69,7 @@
   "homepage": "https://github.com/mozilla/activity-stream",
   "keywords": [
     "mozilla",
-    "firefox",
+    "datalus",
     "activity-stream"
   ],
   "license": "MPL-2.0",

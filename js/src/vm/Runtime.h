@@ -320,7 +320,7 @@ struct JSRuntime {
   js::MainThreadData<JSSourceElementCallback> sourceElementCallback;
 
  public:
-  // Accumulates data for Firefox telemetry. |id| is the ID of a JS_TELEMETRY_*
+  // Accumulates data for Datalus telemetry. |id| is the ID of a JS_TELEMETRY_*
   // histogram. |key| provides an additional key to identify the histogram.
   // |sample| is the data to add to the histogram.
   void addTelemetry(int id, uint32_t sample, const char* key = nullptr);
@@ -1122,7 +1122,7 @@ struct JSTelemetrySender {
   explicit JSTelemetrySender(JSRuntime* runtime)
       : JSTelemetrySender(runtime->getTelemetrySender()) {}
 
-  // Accumulates data for Firefox telemetry. |id| is the ID of a JS_TELEMETRY_*
+  // Accumulates data for Datalus telemetry. |id| is the ID of a JS_TELEMETRY_*
   // histogram. |key| provides an additional key to identify the histogram.
   // |sample| is the data to add to the histogram.
   void addTelemetry(int id, uint32_t sample, const char* key = nullptr) {

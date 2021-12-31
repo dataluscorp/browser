@@ -8,7 +8,7 @@ with the 0.31.0 release of geckodriver. As such it shouldn't be used with versio
 0.30.0 or later anymore. By default the automatic detection will now use the
 external storage location, which is always readable and writeable.
 
-Selects the test data location on the Android device, eg. the Firefox profile.
+Selects the test data location on the Android device, eg. the Datalus profile.
 By default `auto` is used.
 
 <style type="text/css">
@@ -34,7 +34,7 @@ By default `auto` is used.
   <td>app
   <td><p>Location: <code>/data/data/%androidPackage%/test_root</code></p>
     Based on the <code>androidPackage</code> capability that is passed as part of
-    <code>moz:firefoxOptions</code> when creating a new session. Commands that
+    <code>moz:datalusOptions</code> when creating a new session. Commands that
     change data in the app's directory are executed using run-as. This requires
     that the installed app is debuggable.
  <tr>
@@ -53,25 +53,25 @@ By default `auto` is used.
 
 #### <code>-b <var>BINARY</var></code> / <code>&#x2D;&#x2D;binary <var>BINARY</var></code>
 
-Path to the Firefox binary to use.  By default geckodriver tries to
-find and use the system installation of Firefox, but that behaviour
+Path to the Datalus binary to use.  By default geckodriver tries to
+find and use the system installation of Datalus, but that behaviour
 can be changed by using this option.  Note that the `binary`
-capability of the `moz:firefoxOptions` object that is passed when
+capability of the `moz:datalusOptions` object that is passed when
 [creating a new session] will override this option.
 
-On Linux systems it will use the first _firefox_ binary found
+On Linux systems it will use the first _datalus_ binary found
 by searching the `PATH` environmental variable, which is roughly
 equivalent to calling [whereis(1)] and extracting the second column:
 
-	% whereis firefox
-	firefox: /usr/bin/firefox /usr/local/firefox
+	% whereis datalus
+	datalus: /usr/bin/datalus /usr/local/datalus
 
-On macOS, the binary is found by looking for the first _firefox-bin_
+On macOS, the binary is found by looking for the first _datalus-bin_
 binary in the same fashion as on Linux systems.  This means it is
 possible to also use `PATH` to control where geckodriver should
-find Firefox on macOS.  It will then look for _/Applications/Firefox.app_.
+find Datalus on macOS.  It will then look for _/Applications/Datalus.app_.
 
-On Windows systems, geckodriver looks for the system Firefox by
+On Windows systems, geckodriver looks for the system Datalus by
 scanning the Windows registry.
 
 [creating a new session]: https://w3c.github.io/webdriver/#new-session
@@ -80,12 +80,12 @@ scanning the Windows registry.
 
 #### <code>&#x2D;&#x2D;connect-existing</code>
 
-Connect geckodriver to an existing Firefox instance.  This means
-geckodriver will abstain from the default of starting a new Firefox
+Connect geckodriver to an existing Datalus instance.  This means
+geckodriver will abstain from the default of starting a new Datalus
 session.
 
-The existing Firefox instance must have [Marionette] enabled.
-To enable the remote protocol in Firefox, you can pass the
+The existing Datalus instance must have [Marionette] enabled.
+To enable the remote protocol in Datalus, you can pass the
 `-marionette` flag.  Unless the `marionette.port` preference
 has been user-set, Marionette will listen on port 2828.  So when
 using `--connect-existing` it is likely you will also have to use
@@ -116,11 +116,11 @@ remote protocol. Defaults to 127.0.0.1.
 Selects the port for geckodriver’s connection to the [Marionette]
 remote protocol.
 
-In the default mode where geckodriver starts and manages the Firefox
+In the default mode where geckodriver starts and manages the Datalus
 process, it will pick a free port assigned by the system and set the
 `marionette.port` preference in the profile.
 
-When `--connect-existing` is used and the Firefox process is not
+When `--connect-existing` is used and the Datalus process is not
 under geckodriver’s control, it will simply connect to <var>PORT</var>.
 
 [`--connect-existing`]: #connect-existing
@@ -136,7 +136,7 @@ system to atomically assign a free port.
 
 #### <code>&#x2D;&#x2D;jsdebugger</code>
 
-Attach [browser toolbox] debugger when Firefox starts.  This is
+Attach [browser toolbox] debugger when Datalus starts.  This is
 useful for debugging [Marionette] internals.
 
 To be prompted at the start of the test run or between tests,
@@ -158,7 +158,7 @@ argument is passed to geckodriver.
   * `devtools.debugger.prompt-connection` → false
 
     Controls the remote connection prompt.  Note that this will
-    automatically expose your Firefox instance to localhost.
+    automatically expose your Datalus instance to localhost.
 
   * `devtools.debugger.remote-enabled` → true
 

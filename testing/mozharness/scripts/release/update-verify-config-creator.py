@@ -71,7 +71,7 @@ class UpdateVerifyConfigCreator(BaseScript):
             ["--product"],
             {
                 "dest": "product",
-                "help": "Product being tested, as used in the update URL and filenames. Eg: firefox",  # NOQA: E501
+                "help": "Product being tested, as used in the update URL and filenames. Eg: datalus",  # NOQA: E501
             },
         ],
         [
@@ -187,9 +187,9 @@ class UpdateVerifyConfigCreator(BaseScript):
                 "default": [],
                 "action": "append",
                 "help": "A version regex and channel id string to override those versions with."
-                "Eg: ^\\d+\\.\\d+(\\.\\d+)?$,firefox-mozilla-beta,firefox-mozilla-release "
-                "will set accepted mar channel ids to 'firefox-mozilla-beta' and "
-                "'firefox-mozilla-release for x.y and x.y.z versions. "
+                "Eg: ^\\d+\\.\\d+(\\.\\d+)?$,datalus-mozilla-beta,datalus-mozilla-release "
+                "will set accepted mar channel ids to 'datalus-mozilla-beta' and "
+                "'datalus-mozilla-release for x.y and x.y.z versions. "
                 "May be passed multiple times",
             },
         ],

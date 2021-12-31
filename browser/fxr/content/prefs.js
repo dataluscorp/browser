@@ -29,7 +29,7 @@ function initAboutInfo() {
   document.getElementById("eFxrVersion").textContent = "version 0.9";
   document.getElementById("eFxrDate").textContent = "(2019-12-17)";
   document.getElementById("eFxVersion").textContent =
-    "Firefox version " + Services.appinfo.version;
+    "Datalus version " + Services.appinfo.version;
 }
 
 function initClearAllData() {

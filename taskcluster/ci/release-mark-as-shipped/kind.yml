@@ -34,9 +34,9 @@ job-defaults:
     shipping-phase: ship
 
 jobs:
-    firefox:
-        name: release-firefox_mark_as_shipped
-        shipping-product: firefox
+    datalus:
+        name: release-datalus_mark_as_shipped
+        shipping-product: datalus
 
     devedition:
         name: release-devedition_mark_as_shipped

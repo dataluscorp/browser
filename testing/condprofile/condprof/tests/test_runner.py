@@ -17,9 +17,9 @@ from condprof import client
 client.RETRIES = 1
 client.RETRY_PAUSE = 0
 GECKODRIVER = os.path.join(os.path.dirname(__file__), "fakegeckodriver.py")
-FIREFOX = os.path.join(os.path.dirname(__file__), "fakefirefox.py")
+DATALUS = os.path.join(os.path.dirname(__file__), "fakedatalus.py")
 CHANGELOG = re.compile(ROOT_URL + "/.*/changelog.json")
-FTP = "https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central/"
+FTP = "https://ftp.mozilla.org/pub/datalus/nightly/latest-mozilla-central/"
 PROFILE = re.compile(ROOT_URL + "/.*/.*tgz")
 
 
@@ -27,7 +27,7 @@ with open(os.path.join(os.path.dirname(__file__), "ftp_mozilla.html")) as f:
     FTP_PAGE = f.read()
 
 FTP_ARCHIVE = re.compile(
-    "https://ftp.mozilla.org/pub/firefox/nightly/" "latest-mozilla-central/firefox.*"
+    "https://ftp.mozilla.org/pub/datalus/nightly/" "latest-mozilla-central/datalus.*"
 )
 
 ADDON = re.compile("https://addons.mozilla.org/.*/.*xpi")
@@ -111,8 +111,8 @@ class TestRunner(unittest.TestCase):
             args = [
                 "--geckodriver",
                 GECKODRIVER,
-                "--firefox",
-                FIREFOX,
+                "--datalus",
+                DATALUS,
                 self.archive_dir,
             ]
             main(args)

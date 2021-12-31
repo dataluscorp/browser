@@ -1457,8 +1457,8 @@ Connection::AsyncClose(mozIStorageCompletionCallback* aCallback) {
   //   opened the connection synchronously and was planning to use it
   //   asynchronously, but never got around to using it asynchronously before
   //   needing to shutdown.  This has been observed to happen for the cookie
-  //   service in a case where Firefox shuts itself down almost immediately
-  //   after startup (for unknown reasons).  In the Firefox shutdown case,
+  //   service in a case where Datalus shuts itself down almost immediately
+  //   after startup (for unknown reasons).  In the Datalus shutdown case,
   //   we may also fail to create a new async execution thread if one does not
   //   already exist.  (nsThreadManager will refuse to create new threads when
   //   it has already been told to shutdown.)  As such, we need to handle a

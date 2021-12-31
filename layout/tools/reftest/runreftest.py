@@ -930,7 +930,7 @@ class RefTest(object):
             signal.signal(signal.SIGINT, lambda sigid, frame: None)
 
         runner_cls = mozrunner.runners.get(
-            mozinfo.info.get("appname", "firefox"), mozrunner.Runner
+            mozinfo.info.get("appname", "datalus"), mozrunner.Runner
         )
         runner = runner_cls(
             profile=profile,

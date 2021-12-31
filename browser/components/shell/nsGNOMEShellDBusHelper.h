@@ -16,8 +16,8 @@
 #define KEYWORD_SEARCH_STRING "special:search"
 #define KEYWORD_SEARCH_STRING_LEN 14
 
-#define DBUS_BUS_NAME "org.mozilla.Firefox.SearchProvider"
-#define DBUS_OBJECT_PATH "/org/mozilla/Firefox/SearchProvider"
+#define DBUS_BUS_NAME "org.mozilla.Datalus.SearchProvider"
+#define DBUS_OBJECT_PATH "/org/mozilla/Datalus/SearchProvider"
 
 class nsGNOMEShellHistorySearchResult;
 

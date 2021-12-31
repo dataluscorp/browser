@@ -23,8 +23,8 @@
  */
 
 if (!window.FB) {
-  const FacebookLogoURL = "https://smartblock.firefox.etp/facebook.svg";
-  const PlayIconURL = "https://smartblock.firefox.etp/play.svg";
+  const FacebookLogoURL = "https://smartblock.datalus.etp/facebook.svg";
+  const PlayIconURL = "https://smartblock.datalus.etp/play.svg";
 
   const originalUrl = document.currentScript.src;
 

@@ -23,7 +23,7 @@ from condprof import patch  # noqa
 def main(args=sys.argv[1:]):
     parser = argparse.ArgumentParser(description="Profile Creator")
     parser.add_argument("archive", help="Archives Dir", type=str, default=None)
-    parser.add_argument("--firefox", help="Firefox Binary", type=str, default=None)
+    parser.add_argument("--datalus", help="Datalus Binary", type=str, default=None)
     parser.add_argument("--scenario", help="Scenario to use", type=str, default="all")
     parser.add_argument(
         "--profile", help="Existing profile Dir", type=str, default=None
@@ -64,7 +64,7 @@ def main(args=sys.argv[1:]):
 
     run(
         args.archive,
-        args.firefox,
+        args.datalus,
         args.scenario,
         args.profile,
         args.customization,

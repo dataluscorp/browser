@@ -2199,7 +2199,7 @@ class WebExtensionTest : BaseSessionTest() {
                 val result = Charset.forName("UTF-8").decode(request.request.body!!).toString()
                 assertEquals("postbody", result)
 
-                assertEquals("Mozilla Firefox", request.request.headers.get("User-Agent"))
+                assertEquals("Mozilla Datalus", request.request.headers.get("User-Agent"))
                 assertEquals("banana.gif", request.filename)
                 assertTrue(request.allowHttpErrors)
                 assertTrue(request.saveAs)

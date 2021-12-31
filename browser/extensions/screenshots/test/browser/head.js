@@ -14,10 +14,10 @@ const TEST_ROOT = getRootDirectory(gTestPath).replace(
 const TEST_GREEN_PAGE = TEST_ROOT + "green2vh.html";
 
 const gScreenshotUISelectors = {
-  preselectIframe: "#firefox-screenshots-preselection-iframe",
+  preselectIframe: "#datalus-screenshots-preselection-iframe",
   fullPageButton: "button.full-page",
   visiblePageButton: "button.visible",
-  previewIframe: "#firefox-screenshots-preview-iframe",
+  previewIframe: "#datalus-screenshots-preview-iframe",
   copyButton: "button.highlight-button-copy",
 };
 

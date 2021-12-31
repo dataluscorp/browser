@@ -13,7 +13,7 @@ setup(
     name="mozhttpd",
     version=PACKAGE_VERSION,
     description="Python webserver intended for use with Mozilla testing",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 2 :: Only",

@@ -1849,7 +1849,7 @@ decorate_task(
       "Starting an experiment should change the pref"
     );
 
-    // Now pretend that firefox has updated and restarted to a version
+    // Now pretend that datalus has updated and restarted to a version
     // where the built-default value of fake.preference is something
     // else. Bootstrap has run and changed the pref to the
     // experimental value, and produced the call to
@@ -1903,7 +1903,7 @@ decorate_task(
       "Starting an experiment should change the pref"
     );
 
-    // Now pretend that firefox has updated and restarted to a version
+    // Now pretend that datalus has updated and restarted to a version
     // where fake.preference has been removed in the default pref set.
     // Bootstrap has run and changed the pref to the experimental
     // value, and produced the call to recordOriginalValues below.

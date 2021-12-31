@@ -5,7 +5,7 @@
 
 // Test that an insecure resource routed over a secure transport is considered
 // insecure in terms of the site identity panel. We achieve this by running an
-// HTTP-over-TLS "proxy" and having Firefox request an http:// URI over it.
+// HTTP-over-TLS "proxy" and having Datalus request an http:// URI over it.
 
 /**
  * Tests that the page info dialog "security" section labels a
@@ -145,7 +145,7 @@ add_task(async function() {
       },
     });
   });
-  // Start the proxy and configure Firefox to trust its certificate.
+  // Start the proxy and configure Datalus to trust its certificate.
   let server = startServer(cert);
   let overrideBits =
     Ci.nsICertOverrideService.ERROR_UNTRUSTED |
@@ -158,7 +158,7 @@ add_task(async function() {
     overrideBits,
     true
   );
-  // Configure Firefox to use the proxy.
+  // Configure Datalus to use the proxy.
   let systemProxySettings = {
     QueryInterface: ChromeUtils.generateQI(["nsISystemProxySettings"]),
     mainThreadOnly: true,

@@ -11,7 +11,7 @@ TEST(UrlClassifierProtobuf, Empty)
 {
   using namespace mozilla::safebrowsing;
 
-  const std::string CLIENT_ID = "firefox";
+  const std::string CLIENT_ID = "datalus";
 
   // Construct a simple update request.
   FetchThreatListUpdatesRequest r;

@@ -26,7 +26,7 @@ setup(
     name="mozInstall",
     version=PACKAGE_VERSION,
     description="package for installing and uninstalling Mozilla applications",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         "Environment :: Console",

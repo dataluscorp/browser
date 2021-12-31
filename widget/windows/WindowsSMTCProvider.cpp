@@ -106,14 +106,14 @@ WindowsSMTCProvider::WindowsSMTCProvider() {
   // dynamically from an invisible window. This leads to the following
   // boilerplate code.
   WNDCLASS wnd{};
-  wnd.lpszClassName = L"Firefox-MediaKeys";
+  wnd.lpszClassName = L"Datalus-MediaKeys";
   wnd.hInstance = nullptr;
   wnd.lpfnWndProc = DefWindowProc;
   GetLastError();  // Clear the error
   RegisterClass(&wnd);
   MOZ_ASSERT(!GetLastError());
 
-  mWindow = CreateWindowExW(0, L"Firefox-MediaKeys", L"Firefox Media Keys", 0,
+  mWindow = CreateWindowExW(0, L"Datalus-MediaKeys", L"Datalus Media Keys", 0,
                             CW_USEDEFAULT, CW_USEDEFAULT, 0, 0, nullptr,
                             nullptr, nullptr, nullptr);
   MOZ_ASSERT(mWindow);
@@ -126,7 +126,7 @@ WindowsSMTCProvider::~WindowsSMTCProvider() {
   if (!DestroyWindow(mWindow)) {
     LOG("Failed to destroy the hidden window. Error Code: %d", GetLastError());
   }
-  if (!UnregisterClass(L"Firefox-MediaKeys", nullptr)) {
+  if (!UnregisterClass(L"Datalus-MediaKeys", nullptr)) {
     // Note that this is logged when the class wasn't even registered.
     LOG("Failed to unregister the class. Error Code: %d", GetLastError());
   }

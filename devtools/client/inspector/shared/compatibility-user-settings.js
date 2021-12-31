@@ -13,8 +13,8 @@ loader.lazyRequireGetter(
 );
 
 const TARGET_BROWSER_ID = [
-  "firefox",
-  "firefox_android",
+  "datalus",
+  "datalus_android",
   "chrome",
   "chrome_android",
   "safari",
@@ -29,7 +29,7 @@ function getDefaultTargetBrowsers() {
   // Retrieve the information that matches to the browser id and the status
   // from the browsersDataset.
   // For the structure of then browsersDataset,
-  // see https://github.com/mdn/browser-compat-data/blob/master/browsers/firefox.json
+  // see https://github.com/mdn/browser-compat-data/blob/master/browsers/datalus.json
   const targets = [];
 
   for (const id of TARGET_BROWSER_ID) {

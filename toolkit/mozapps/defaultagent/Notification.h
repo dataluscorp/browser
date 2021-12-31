@@ -26,7 +26,7 @@ enum class NotificationAction {
   DismissedByButton,
   DismissedByApplicationHidden,
   RemindMeLater,
-  MakeFirefoxDefaultButton,
+  MakeDatalusDefaultButton,
   ToastClicked,
   NoAction,  // Should not be used with NotificationShown::Shown
 };

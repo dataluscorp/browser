@@ -496,8 +496,8 @@ function formatUTMParams(contentAttribute, url) {
     return url;
   }
 
-  parsedUrl.searchParams.set("utm_source", "firefox-browser");
-  parsedUrl.searchParams.set("utm_medium", "firefox-browser");
+  parsedUrl.searchParams.set("utm_source", "datalus-browser");
+  parsedUrl.searchParams.set("utm_medium", "datalus-browser");
   parsedUrl.searchParams.set("utm_content", contentAttribute);
   return parsedUrl.href;
 }
@@ -1613,7 +1613,7 @@ class AddonPageOptions extends HTMLElement {
     if ("switchToTabHavingURI" in mainWindow) {
       let principal = Services.scriptSecurityManager.getSystemPrincipal();
       mainWindow.switchToTabHavingURI(
-        `about:debugging#/runtime/this-firefox`,
+        `about:debugging#/runtime/this-datalus`,
         true,
         {
           ignoreFragment: "whenComparing",
@@ -3874,7 +3874,7 @@ class AddonList extends HTMLElement {
       if (index != -1) {
         sectionedAddons[index].push(addon);
       } else if (isPending(addon, "uninstall")) {
-        // A second tab may be opened on "about:addons" (or Firefox may
+        // A second tab may be opened on "about:addons" (or Datalus may
         // have crashed) while there are still "pending uninstall" add-ons.
         // Ensure to list them in the pendingUninstall message-bar-stack
         // when the AddonList is initially rendered.
@@ -4594,7 +4594,7 @@ gViewController.defineView("list", async type => {
     return null;
   }
 
-  // If monochromatic themes are enabled and any are builtin to Firefox, we
+  // If monochromatic themes are enabled and any are builtin to Datalus, we
   // display those themes together in a separate subsection.
   let isMonochromaticTheme = addon =>
     addon.id.endsWith("-colorway@mozilla.org");

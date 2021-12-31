@@ -153,8 +153,8 @@ def run_tests(config, browser_config):
     else:
         browser_config["extra_args"] = []
 
-    # pass --no-remote to firefox launch, if --develop is specified
-    # we do that to allow locally the user to have another running firefox
+    # pass --no-remote to datalus launch, if --develop is specified
+    # we do that to allow locally the user to have another running datalus
     # instance
     if browser_config["develop"]:
         browser_config["extra_args"].append("--no-remote")
@@ -369,11 +369,11 @@ function FindProxyForURL(url, host) {
             )
 
     # when running talos locally with gecko profiling on, use the view-gecko-profile
-    # tool to automatically load the latest gecko profile in profiler.firefox.com
+    # tool to automatically load the latest gecko profile in profiler.datalus.com
     if config["gecko_profile"] and browser_config["develop"]:
         if os.environ.get("DISABLE_PROFILE_LAUNCH", "0") == "1":
             LOG.info(
-                "Not launching profiler.firefox.com because DISABLE_PROFILE_LAUNCH=1"
+                "Not launching profiler.datalus.com because DISABLE_PROFILE_LAUNCH=1"
             )
         else:
             view_gecko_profile_from_talos()
@@ -387,7 +387,7 @@ def view_gecko_profile_from_talos():
     profile_zip_path = os.environ.get("TALOS_LATEST_GECKO_PROFILE_ARCHIVE", None)
     if profile_zip_path is None or not os.path.exists(profile_zip_path):
         LOG.info(
-            "No local talos gecko profiles were found so not launching profiler.firefox.com"
+            "No local talos gecko profiles were found so not launching profiler.datalus.com"
         )
         return
 

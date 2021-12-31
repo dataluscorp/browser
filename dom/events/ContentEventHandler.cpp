@@ -1763,7 +1763,7 @@ ContentEventHandler::GuessFirstCaretRectIn(nsIFrame* aFrame) {
   nsPresContext* presContext = aFrame->PresContext();
 
   // Computes the font height, but if it's not available, we should use
-  // default font size of Firefox.  The default font size in default settings
+  // default font size of Datalus.  The default font size in default settings
   // is 16px.
   RefPtr<nsFontMetrics> fontMetrics =
       nsLayoutUtils::GetInflatedFontMetricsForFrame(aFrame);

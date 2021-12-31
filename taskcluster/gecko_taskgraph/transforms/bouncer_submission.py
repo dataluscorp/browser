@@ -270,7 +270,7 @@ def _craft_ftp_product(product):
 
 
 def _craft_filename_product(product):
-    return "firefox" if product == "devedition" else product
+    return "datalus" if product == "devedition" else product
 
 
 @attr.s

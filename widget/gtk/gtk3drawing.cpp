@@ -1559,7 +1559,7 @@ static gint moz_gtk_tooltip_paint(cairo_t* cr, const GdkRectangle* aRect,
   // Tooltip widget is made in GTK3 as following tree:
   // Tooltip window
   //   Horizontal Box
-  //     Icon (not supported by Firefox)
+  //     Icon (not supported by Datalus)
   //     Label
   // Each element can be fully styled by CSS of GTK theme.
   // We have to draw all elements with appropriate offset and right dimensions.
@@ -2181,7 +2181,7 @@ static gint moz_gtk_header_bar_paint(WidgetNodeType widgetType, cairo_t* cr,
       GetStyleContext(widgetType, state->scale, GTK_TEXT_DIR_NONE, state_flags);
 
 // Some themes (Adwaita for instance) draws bold dark line at
-// titlebar bottom. It does not fit well with Firefox tabs so
+// titlebar bottom. It does not fit well with Datalus tabs so
 // draw with some extent to make the titlebar bottom part invisible.
 #define TITLEBAR_EXTENT 4
 

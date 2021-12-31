@@ -559,11 +559,11 @@ namespace JS {
   D(NURSERY_MALLOC_BUFFERS, 32)                                        \
                                                                        \
   /*                                                                   \
-   * Reasons from Firefox.                                             \
+   * Reasons from Datalus.                                             \
    *                                                                   \
    * The JS engine attaches special meanings to some of these reasons. \
    */                                                                  \
-  D(DOM_WINDOW_UTILS, FIRST_FIREFOX_REASON)                            \
+  D(DOM_WINDOW_UTILS, FIRST_DATALUS_REASON)                            \
   D(COMPONENT_UTILS, 34)                                               \
   D(MEM_PRESSURE, 35)                                                  \
   D(CC_FINISHED, 36)                                                   \
@@ -599,7 +599,7 @@ namespace JS {
   D(RESERVED9, 98)
 
 enum class GCReason {
-  FIRST_FIREFOX_REASON = 33,
+  FIRST_DATALUS_REASON = 33,
   FIRST_RESERVED_REASON = 90,
 
 #define MAKE_REASON(name, val) name = val,
@@ -1059,7 +1059,7 @@ class JS_PUBLIC_API AutoCheckCannotGC : public AutoRequireNoGC {
 extern JS_PUBLIC_API void SetLowMemoryState(JSContext* cx, bool newState);
 
 /*
- * Internal to Firefox.
+ * Internal to Datalus.
  */
 extern JS_PUBLIC_API void NotifyGCRootsRemoved(JSContext* cx);
 

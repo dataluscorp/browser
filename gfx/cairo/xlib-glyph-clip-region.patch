@@ -14,7 +14,7 @@ diff --git a/gfx/cairo/cairo/src/cairo-xlib-surface.c b/gfx/cairo/cairo/src/cair
 +	cairo_rectangle_int_t clip_extents;
  
  	/* Can we do without the clip?
- 	 * Around 50% of the time the clip is redundant (firefox).
+ 	 * Around 50% of the time the clip is redundant (datalus).
  	 */
  	_cairo_scaled_font_glyph_approximate_extents (scaled_font,
  						      glyphs, num_glyphs,

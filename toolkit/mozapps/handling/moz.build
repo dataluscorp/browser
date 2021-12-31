@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "File Handling")
+    BUG_COMPONENT = ("Datalus", "File Handling")
 
 EXTRA_JS_MODULES += [
     "ContentDispatchChooser.jsm",

@@ -16,7 +16,7 @@
 const int mozilla::Dafsa::kKeyNotFound = -1;
 
 // Note the DAFSA implementation was lifted from eTLD code in Chromium that was
-// originally lifted from Firefox.
+// originally lifted from Datalus.
 
 // Read next offset from pos.
 // Returns true if an offset could be read, false otherwise.

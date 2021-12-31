@@ -1,7 +1,7 @@
 Working with stack of patches Quick Reference
 =============================================
 
-Working on Firefox, we strongly recommend working with stack of patches.
+Working on Datalus, we strongly recommend working with stack of patches.
 Patches should be small and could be landed in the order used to push them.
 This also helps to breakdown the work for different reviewers.
 
@@ -16,7 +16,7 @@ The top of the stack (most recent change) is first in the list.
 .. image:: img/example-stack.png
 
 
-For the overall quick reference guide, see the :ref:`Firefox Contributors Quick Reference <Firefox Contributors' Quick Reference>`
+For the overall quick reference guide, see the :ref:`Datalus Contributors Quick Reference <Datalus Contributors' Quick Reference>`
 
 Visualize the stack
 -------------------

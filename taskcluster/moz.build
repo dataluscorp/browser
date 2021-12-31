@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox Build System", "Task Configuration")
+    BUG_COMPONENT = ("Datalus Build System", "Task Configuration")
 
 PYTHON_UNITTEST_MANIFESTS += [
     "gecko_taskgraph/test/python.ini",

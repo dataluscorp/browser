@@ -82,7 +82,7 @@ function createSubDir(dir, subDirName) {
 
 function promiseMigrator(name, srcDir, targetDir) {
   let migrator = Cc[
-    "@mozilla.org/profile/migrator;1?app=browser&type=firefox"
+    "@mozilla.org/profile/migrator;1?app=browser&type=datalus"
   ].createInstance(Ci.nsISupports).wrappedJSObject;
   let migrators = migrator._getResourcesInternal(srcDir, targetDir);
   for (let m of migrators) {

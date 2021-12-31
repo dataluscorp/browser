@@ -181,14 +181,14 @@ def test_index_search(responses, params, state, expires, expected):
     index_path = "foo.bar.latest"
     responses.add(
         responses.GET,
-        f"https://firefox-ci-tc.services.mozilla.com/api/index/v1/task/{index_path}",
+        f"https://datalus-ci-tc.services.mozilla.com/api/index/v1/task/{index_path}",
         json={"taskId": taskid},
         status=200,
     )
 
     responses.add(
         responses.GET,
-        f"https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/{taskid}/status",
+        f"https://datalus-ci-tc.services.mozilla.com/api/queue/v1/task/{taskid}/status",
         json={
             "status": {
                 "state": state,

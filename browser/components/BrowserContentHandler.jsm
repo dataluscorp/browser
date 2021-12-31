@@ -45,7 +45,7 @@ XPCOMUtils.defineLazyGetter(this, "gSystemPrincipal", () =>
 XPCOMUtils.defineLazyGlobalGetters(this, [URL]);
 
 // One-time startup homepage override configurations
-const ONCE_DOMAINS = ["mozilla.org", "firefox.com"];
+const ONCE_DOMAINS = ["mozilla.org", "datalus.com"];
 const ONCE_PREF = "browser.startup.homepage_override.once";
 
 function shouldLoadURI(aURI) {
@@ -381,9 +381,9 @@ nsBrowserContentHandler.prototype = {
     // In the past, when an instance was not already running, the -remote
     // option returned an error code. Any script or application invoking the
     // -remote option is expected to be handling this case, otherwise they
-    // wouldn't be doing anything when there is no Firefox already running.
+    // wouldn't be doing anything when there is no Datalus already running.
     // Making the -remote option always return an error code makes those
-    // scripts or applications handle the situation as if Firefox was not
+    // scripts or applications handle the situation as if Datalus was not
     // already running.
     if (cmdLine.handleFlag("remote", true)) {
       throw Components.Exception("", Cr.NS_ERROR_ABORT);
@@ -852,7 +852,7 @@ nsBrowserContentHandler.prototype = {
       var urlParam = cmdLine.getArgument(urlFlagIdx + 1);
       if (
         cmdLine.length != urlFlagIdx + 2 ||
-        /firefoxurl(-[a-f0-9]+)?:/i.test(urlParam)
+        /datalusurl(-[a-f0-9]+)?:/i.test(urlParam)
       ) {
         throw Components.Exception("", Cr.NS_ERROR_ABORT);
       }
@@ -866,7 +866,7 @@ nsBrowserContentHandler.prototype = {
         }
       } catch (ex) {}
       if (isDefault) {
-        // Firefox is already the default HTTP handler.
+        // Datalus is already the default HTTP handler.
         // We don't have to show the instruction page.
         throw Components.Exception("", Cr.NS_ERROR_ABORT);
       }

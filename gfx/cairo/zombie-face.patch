@@ -12,7 +12,7 @@ but only the first is destroyed.  This leaks the client's FT_Face
 (and associated font data) as release of the FT_Face depends on release
 of the font_face.
 
-(The reason why Firefox ends up with two different font_faces for one
+(The reason why Datalus ends up with two different font_faces for one
 unscaled_font is that load_flags for faces with artificial oblique have
 FT_LOAD_NO_BITMAP set.
 https://bugzilla.mozilla.org/show_bug.cgi?id=486974)

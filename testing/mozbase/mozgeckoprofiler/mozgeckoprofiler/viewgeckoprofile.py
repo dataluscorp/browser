@@ -33,10 +33,10 @@ else:
 
 class ProfileServingHTTPRequestHandler(SimpleHTTPRequestHandler):
     """Extends the basic SimpleHTTPRequestHandler (which serves a directory
-    of files) to include request headers required by profiler.firefox.com"""
+    of files) to include request headers required by profiler.datalus.com"""
 
     def end_headers(self):
-        self.send_header("Access-Control-Allow-Origin", "https://profiler.firefox.com")
+        self.send_header("Access-Control-Allow-Origin", "https://profiler.datalus.com")
         SimpleHTTPRequestHandler.end_headers(self)
 
 
@@ -46,7 +46,7 @@ class ViewGeckoProfile(object):
     def __init__(self, gecko_profile_data_path):
         self.gecko_profile_data_path = gecko_profile_data_path
         self.gecko_profile_dir = os.path.dirname(gecko_profile_data_path)
-        self.profiler_url = "https://profiler.firefox.com/from-url/"
+        self.profiler_url = "https://profiler.datalus.com/from-url/"
         self.httpd = None
         self.host = "127.0.0.1"
         self.port = None
@@ -69,7 +69,7 @@ class ViewGeckoProfile(object):
         os.chdir(self.oldcwd)
 
     def encode_url(self):
-        # Encode url i.e.: https://profiler.firefox.com/from-url/http...
+        # Encode url i.e.: https://profiler.datalus.com/from-url/http...
         file_url = "http://{}:{}/{}".format(
             self.host, self.port, os.path.basename(self.gecko_profile_data_path)
         )
@@ -92,7 +92,7 @@ def create_parser(mach_interface=False):
         "--profile-zip",
         required=True,
         dest="profile_zip",
-        help="path to the gecko profiles zip file to open in profiler.firefox.com",
+        help="path to the gecko profiles zip file to open in profiler.datalus.com",
     )
 
     add_logging_group(parser)
@@ -116,7 +116,7 @@ def parse_args(argv=None):
 def view_gecko_profile(profile_path):
     """
     Open a gecko profile in the user's default browser. This function opens
-    up a special URL to profiler.firefox.com and serves up the local profile.
+    up a special URL to profiler.datalus.com and serves up the local profile.
     """
     view_gecko_profile = ViewGeckoProfile(profile_path)
 

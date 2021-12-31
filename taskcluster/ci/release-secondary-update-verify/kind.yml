@@ -38,39 +38,39 @@ job-defaults:
         chunks: 16
 
 jobs:
-    firefox-secondary-linux64:
+    datalus-secondary-linux64:
         description: linux64 secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: linux64-shippable
 
-    firefox-secondary-linux:
+    datalus-secondary-linux:
         description: linux secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: linux-shippable
 
-    firefox-secondary-win64:
+    datalus-secondary-win64:
         description: win64 secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: win64-shippable
 
-    firefox-secondary-win64-aarch64:
+    datalus-secondary-win64-aarch64:
         description: win64 secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: win64-aarch64-shippable
 
-    firefox-secondary-win32:
+    datalus-secondary-win32:
         description: win32 secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: win32-shippable
 
-    firefox-secondary-macosx64:
+    datalus-secondary-macosx64:
         description: macosx64 secondary channel update verify
-        shipping-product: firefox
+        shipping-product: datalus
         attributes:
             build_platform: macosx64-shippable
         extra:

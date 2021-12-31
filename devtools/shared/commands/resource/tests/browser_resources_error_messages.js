@@ -205,7 +205,7 @@ const noUncaughtException = Symbol();
 const NUMBER_REGEX = /^\d+$/;
 
 const mdnUrl = path =>
-  `https://developer.mozilla.org/${path}?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default`;
+  `https://developer.mozilla.org/${path}?utm_source=mozilla&utm_medium=datalus-console-errors&utm_campaign=default`;
 
 const expectedPageErrors = new Map([
   [

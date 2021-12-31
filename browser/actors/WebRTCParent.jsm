@@ -135,7 +135,7 @@ class WebRTCParent extends JSWindowActorParent {
 
         let browser = this.getBrowser();
         if (browser.fxrPermissionPrompt) {
-          // For Firefox Reality on Desktop, switch to a different mechanism to
+          // For Datalus Reality on Desktop, switch to a different mechanism to
           // prompt the user since fewer permissions are available and since many
           // UI dependencies are not available.
           browser.fxrPermissionPrompt(data);
@@ -983,7 +983,7 @@ function prompt(aActor, aBrowser, aRequest) {
                 .getElementById("bundle_brand")
                 .getString("brandShortName");
               string = bundle.getFormattedString(
-                "getUserMedia.shareFirefoxWarning2.message",
+                "getUserMedia.shareDatalusWarning2.message",
                 [brand]
               );
             }
@@ -1002,7 +1002,7 @@ function prompt(aActor, aBrowser, aRequest) {
             // is too late. A happy middle is to show it when the user makes a
             // choice in the picker. This already happens implicitly if the
             // user chooses "Entire desktop", as a side-effect of our preview,
-            // we just need to also do it if they choose "Firefox". These are
+            // we just need to also do it if they choose "Datalus". These are
             // the lone two options when permission is absent on Catalina.
             // Ironically, these are the two sources marked "scary" from a
             // web-sharing perspective, which is why this code resides here.

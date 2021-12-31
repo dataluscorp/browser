@@ -48,7 +48,7 @@ EXCLUSIVE_COMPONENTS = [
     "awsy",
     "condprofile",
     "cppunittest",
-    "firefox-ui",
+    "datalus-ui",
     "fuzztest",
     "geckoview-junit",
     "gtest",

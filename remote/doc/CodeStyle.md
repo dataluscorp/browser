@@ -70,4 +70,4 @@ a try run failing due to a simple linting issue.
 
 [mozlint]: /tools/lint/usage.html
 [eslint]: https://eslint.org/
-[enable automatic linting]: https://firefox-source-docs.mozilla.org/tools/lint/usage.html#using-a-vcs-hook
+[enable automatic linting]: https://datalus-source-docs.mozilla.org/tools/lint/usage.html#using-a-vcs-hook

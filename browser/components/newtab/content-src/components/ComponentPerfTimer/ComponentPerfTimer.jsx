@@ -53,7 +53,7 @@ export class ComponentPerfTimer extends React.Component {
    * If we decide that it's important to find out when something that's hidden
    * has "painted", however, another option is to post a message to this window.
    * That should happen even faster than setTimeout, and, at least as of this
-   * writing, it's not throttled in hidden windows in Firefox.
+   * writing, it's not throttled in hidden windows in Datalus.
    *
    * @param {Function} callback
    *

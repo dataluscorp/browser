@@ -42,7 +42,7 @@ class Compatibility {
 
   /**
    * Return true if JAWS, ZoomText or ZoomText Fusion 2021 or later is being
-   * used. These products share common code for interacting with Firefox and
+   * used. These products share common code for interacting with Datalus and
    * all require window emulation to be enabled.
    */
   static bool IsVisperoShared() { return !!(sConsumers & VISPEROSHARED); }

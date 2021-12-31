@@ -4,7 +4,7 @@ ChromeUtils.defineModuleGetter(
   "resource://gre/modules/WindowsRegistry.jsm"
 );
 
-function getFirefoxExecutableFile() {
+function getDatalusExecutableFile() {
   let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsIFile);
   file = Services.dirsvc.get("GreBinD", Ci.nsIFile);
 
@@ -54,19 +54,19 @@ add_task(async function testWritesEnabledOnPrefChange() {
 
   const win = await BrowserTestUtils.openNewBrowserWindow();
 
-  const firefoxPath = getFirefoxExecutableFile().path;
+  const datalusPath = getDatalusExecutableFile().path;
   let enabled = WindowsRegistry.readRegKey(
     Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-    "Software\\Mozilla\\Firefox\\PreXULSkeletonUISettings",
-    `${firefoxPath}|Enabled`
+    "Software\\Mozilla\\Datalus\\PreXULSkeletonUISettings",
+    `${datalusPath}|Enabled`
   );
   is(enabled, 1, "Pre-XUL skeleton UI is enabled in the Windows registry");
 
   Services.prefs.setBoolPref("browser.startup.preXulSkeletonUI", false);
   enabled = WindowsRegistry.readRegKey(
     Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-    "Software\\Mozilla\\Firefox\\PreXULSkeletonUISettings",
-    `${firefoxPath}|Enabled`
+    "Software\\Mozilla\\Datalus\\PreXULSkeletonUISettings",
+    `${datalusPath}|Enabled`
   );
   is(enabled, 0, "Pre-XUL skeleton UI is disabled in the Windows registry");
 
@@ -74,8 +74,8 @@ add_task(async function testWritesEnabledOnPrefChange() {
   Services.prefs.setIntPref("browser.tabs.inTitlebar", 0);
   enabled = WindowsRegistry.readRegKey(
     Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-    "Software\\Mozilla\\Firefox\\PreXULSkeletonUISettings",
-    `${firefoxPath}|Enabled`
+    "Software\\Mozilla\\Datalus\\PreXULSkeletonUISettings",
+    `${datalusPath}|Enabled`
   );
   is(enabled, 0, "Pre-XUL skeleton UI is disabled in the Windows registry");
 
@@ -107,18 +107,18 @@ add_task(async function testPersistsNecessaryValuesOnChange() {
   for (let key of regKeys) {
     WindowsRegistry.removeRegKey(
       Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-      "Software\\Mozilla\\Firefox\\PreXULSkeletonUISettings",
+      "Software\\Mozilla\\Datalus\\PreXULSkeletonUISettings",
       key
     );
   }
 
   const win = await BrowserTestUtils.openNewBrowserWindow();
-  const firefoxPath = getFirefoxExecutableFile().path;
+  const datalusPath = getDatalusExecutableFile().path;
   for (let key of regKeys) {
     let value = readRegKeyExtended(
       Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
-      "Software\\Mozilla\\Firefox\\PreXULSkeletonUISettings",
-      `${firefoxPath}|${key}`
+      "Software\\Mozilla\\Datalus\\PreXULSkeletonUISettings",
+      `${datalusPath}|${key}`
     );
     isnot(
       typeof value,

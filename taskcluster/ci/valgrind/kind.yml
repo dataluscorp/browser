@@ -21,7 +21,7 @@ jobs:
     linux64-valgrind-qr/opt-swr:
         description: "Linux64 Valgrind Opt WebRender"
         index:
-            product: firefox
+            product: datalus
             job-name: linux64-valgrind-qr/opt-swr
         treeherder:
             platform: linux64-qr/opt
@@ -39,7 +39,7 @@ jobs:
             actions: [get-secrets, build, valgrind-test]
             custom-build-variant-cfg: valgrind
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
             extra-config:
                 extra_prefs: [gfx.webrender.software=true]

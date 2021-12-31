@@ -1094,7 +1094,7 @@ let BrowserUsageTelemetry = {
     }
   },
 
-  // Reports the number of Firefox profiles on this machine to telemetry.
+  // Reports the number of Datalus profiles on this machine to telemetry.
   async reportProfileCount() {
     if (AppConstants.platform != "win") {
       // This is currently a windows-only feature.

@@ -3,7 +3,7 @@
 
 "use strict";
 
-// Test that the global Firefox "Select All" functionality (e.g. Edit >
+// Test that the global Datalus "Select All" functionality (e.g. Edit >
 // Select All) works properly in the Web Console.
 
 /* import-globals-from head.js */
@@ -39,7 +39,7 @@ function testBrowserMenuSelectAll(hud) {
   // work.
   outputContainer.ownerDocument.activeElement.blur();
 
-  // Test that the global Firefox "Select All" functionality (e.g. Edit >
+  // Test that the global Datalus "Select All" functionality (e.g. Edit >
   // Select All) works properly in the Web Console.
   goDoCommand("cmd_selectAll");
 

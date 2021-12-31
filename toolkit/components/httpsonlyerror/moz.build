@@ -9,4 +9,4 @@ JAR_MANIFESTS += ["jar.mn"]
 BROWSER_CHROME_MANIFESTS += ["tests/browser/browser.ini"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Security")
+    BUG_COMPONENT = ("Datalus", "Security")

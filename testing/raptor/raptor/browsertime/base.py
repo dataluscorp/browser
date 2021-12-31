@@ -87,9 +87,9 @@ class Browsertime(Perftest):
     def remove_mozprofile_delimiters_from_profile(self):
         # Perftest.build_browser_profile uses mozprofile to create the profile and merge in prefs;
         # while merging, mozprofile adds in special delimiters; these delimiters (along with blank
-        # lines) are not recognized by selenium-webdriver ultimately causing Firefox launch to
+        # lines) are not recognized by selenium-webdriver ultimately causing Datalus launch to
         # fail. So we must remove these delimiters from the browser profile before passing into
-        # btime via firefox.profileTemplate.
+        # btime via datalus.profileTemplate.
 
         LOG.info("Removing mozprofile delimiters from browser profile")
         userjspath = os.path.join(self.profile.profile, "user.js")
@@ -108,7 +108,7 @@ class Browsertime(Perftest):
 
     def set_browser_test_prefs(self, raw_prefs):
         # add test specific preferences
-        LOG.info("setting test-specific Firefox preferences")
+        LOG.info("setting test-specific Datalus preferences")
         self.profile.set_preferences(json.loads(raw_prefs))
         self.remove_mozprofile_delimiters_from_profile()
 
@@ -128,7 +128,7 @@ class Browsertime(Perftest):
         self.driver_paths = []
         if self.browsertime_geckodriver:
             self.driver_paths.extend(
-                ["--firefox.geckodriverPath", self.browsertime_geckodriver]
+                ["--datalus.geckodriverPath", self.browsertime_geckodriver]
             )
         if self.browsertime_chromedriver and self.config["app"] in (
             "chrome",
@@ -230,7 +230,7 @@ class Browsertime(Perftest):
         # All the configurations in the browsertime_options variable initialization
         # and the secondary_url are priority 3, since none overlap they are grouped together
         browsertime_options = [
-            "--firefox.noDefaultPrefs",
+            "--datalus.noDefaultPrefs",
             "--browsertime.page_cycle_delay",
             page_cycle_delay,
             # Raptor's `pageCycleDelay` delay (ms) between pageload cycles
@@ -239,7 +239,7 @@ class Browsertime(Perftest):
             "none",
             "--webdriverPageload",
             "true",
-            "--firefox.disableBrowsertimeExtension",
+            "--datalus.disableBrowsertimeExtension",
             "true",
             "--pageCompleteCheckStartWait",
             "5000",
@@ -292,19 +292,19 @@ class Browsertime(Perftest):
         if self.config["app"] in ("chrome", "chromium", "chrome-m"):
             priority1_options.extend(self.setup_chrome_args(test))
 
-        # must happen before --firefox.profileTemplate and --resultDir
+        # must happen before --datalus.profileTemplate and --resultDir
         self.results_handler.remove_result_dir_for_test(test)
         priority1_options.extend(
-            ["--firefox.profileTemplate", str(self.profile.profile)]
+            ["--datalus.profileTemplate", str(self.profile.profile)]
         )
         priority1_options.extend(
             ["--resultDir", self.results_handler.result_dir_for_test(test)]
         )
 
-        # This argument can have duplicates of the value "--firefox.env" so we do not need
+        # This argument can have duplicates of the value "--datalus.env" so we do not need
         # to check if it conflicts
         for var, val in self.config.get("environment", {}).items():
-            browsertime_options.extend(["--firefox.env", "{}={}".format(var, val)])
+            browsertime_options.extend(["--datalus.env", "{}={}".format(var, val)])
 
         # Parse the test commands (if any) from the test manifest
         cmds = evaluate_list_from_string(test.get("test_cmds", "[]"))
@@ -331,7 +331,7 @@ class Browsertime(Perftest):
             ):
                 priority1_options.extend(
                     [
-                        "--firefox.windowRecorder",
+                        "--datalus.windowRecorder",
                         "false",
                         "--xvfbParams.display",
                         "0",
@@ -343,11 +343,11 @@ class Browsertime(Perftest):
             else:
                 priority1_options.extend(
                     [
-                        "--firefox.windowRecorder",
+                        "--datalus.windowRecorder",
                         "true",
                     ]
                 )
-                LOG.info("Using Firefox Window Recorder for videos")
+                LOG.info("Using Datalus Window Recorder for videos")
         else:
             priority1_options.extend(["--video", "false", "--visualMetrics", "false"])
 
@@ -360,26 +360,26 @@ class Browsertime(Perftest):
                 "browsertime_result_dir"
             ] = self.results_handler.result_dir_for_test(test)
             self._init_gecko_profiling(test)
-            priority1_options.append("--firefox.geckoProfiler")
+            priority1_options.append("--datalus.geckoProfiler")
             for option, browser_time_option, default in (
                 (
                     "gecko_profile_features",
-                    "--firefox.geckoProfilerParams.features",
+                    "--datalus.geckoProfilerParams.features",
                     "js,leaf,stackwalk,cpu,threads",
                 ),
                 (
                     "gecko_profile_threads",
-                    "--firefox.geckoProfilerParams.threads",
+                    "--datalus.geckoProfilerParams.threads",
                     "GeckoMain,Compositor",
                 ),
                 (
                     "gecko_profile_interval",
-                    "--firefox.geckoProfilerParams.interval",
+                    "--datalus.geckoProfilerParams.interval",
                     None,
                 ),
                 (
                     "gecko_profile_entries",
-                    "--firefox.geckoProfilerParams.bufferSize",
+                    "--datalus.geckoProfilerParams.bufferSize",
                     None,
                 ),
             ):
@@ -398,7 +398,7 @@ class Browsertime(Perftest):
         # In this code block we check if any priority 1 arguments are in conflict with a
         # priority 2/3/4 argument
         MULTI_OPTS = [
-            "--firefox.android.intentArgument",
+            "--datalus.android.intentArgument",
         ]
         for index, argument in list(enumerate(priority1_options)):
             if argument in MULTI_OPTS:

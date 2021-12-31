@@ -96,13 +96,13 @@ def taskcluster_url(logger, commits):
     )
 
     tc_url = (
-        "https://firefox-ci-tc.services.mozilla.com/api/index/v1/"
+        "https://datalus-ci-tc.services.mozilla.com/api/index/v1/"
         "task/gecko.v2.{name}."
         "revision.{changeset}.source.manifest-upload"
     )
 
     default = (
-        "https://firefox-ci-tc.services.mozilla.com/api/index/v1/"
+        "https://datalus-ci-tc.services.mozilla.com/api/index/v1/"
         "task/gecko.v2.mozilla-central.latest.source.manifest-upload" + artifact_path
     )
 

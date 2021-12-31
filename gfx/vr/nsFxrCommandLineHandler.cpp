@@ -30,8 +30,8 @@
 
 NS_IMPL_ISUPPORTS(nsFxrCommandLineHandler, nsICommandLineHandler)
 
-// nsFxrCommandLineHandler acts in the middle of bootstrapping Firefox
-// Reality with desktop Firefox. Details of the processes involved are
+// nsFxrCommandLineHandler acts in the middle of bootstrapping Datalus
+// Reality with desktop Datalus. Details of the processes involved are
 // described below:
 //
 //      Host
@@ -40,7 +40,7 @@ NS_IMPL_ISUPPORTS(nsFxrCommandLineHandler, nsICommandLineHandler)
 //  VRShMem creates shared         +                       +
 //  memory in OS                   +                       +
 //       |                         +                       +
-//  Launch firefox.exe             +                       +
+//  Launch datalus.exe             +                       +
 //  with --fxr                     +                       +
 //       |                         |                       +
 //  Wait for Signal...       nsFxrCLH handles param        +
@@ -133,7 +133,7 @@ nsFxrCommandLineHandler::Handle(nsICommandLine* aCmdLine) {
 NS_IMETHODIMP
 nsFxrCommandLineHandler::GetHelpInfo(nsACString& aResult) {
   aResult.AssignLiteral(
-      "  --fxr Creates a new window for Firefox Reality on Desktop when "
+      "  --fxr Creates a new window for Datalus Reality on Desktop when "
       "available\n");
   return NS_OK;
 }

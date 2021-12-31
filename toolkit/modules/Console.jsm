@@ -7,9 +7,9 @@
 /**
  * Define a 'console' API to roughly match the implementation provided by
  * Firebug.
- * This module helps cases where code is shared between the web and Firefox.
+ * This module helps cases where code is shared between the web and Datalus.
  * See also Browser.jsm for an implementation of other web constants to help
- * sharing code between the web and firefox;
+ * sharing code between the web and datalus;
  *
  * The API is only be a rough approximation for 3 reasons:
  * - The Firebug console API is implemented in many places with differences in

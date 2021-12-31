@@ -771,7 +771,7 @@ ROLE(FONT_CHOOSER,
 ROLE(CHROME_WINDOW,
      "chrome window",
      ATK_ROLE_FRAME,
-     NSAccessibilityGroupRole,  //Contains the main Firefox UI
+     NSAccessibilityGroupRole,  //Contains the main Datalus UI
      NSAccessibilityUnknownSubrole,
      ROLE_SYSTEM_APPLICATION,
      IA2_ROLE_FRAME,

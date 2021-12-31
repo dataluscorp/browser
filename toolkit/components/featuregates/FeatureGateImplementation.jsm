@@ -142,7 +142,7 @@ class FeatureGateImplementation {
 
   /**
    * If this feature should be exposed to users in an advanced settings panel
-   * for this build of Firefox.
+   * for this build of Datalus.
    *
    * @type boolean
    */

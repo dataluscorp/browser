@@ -1921,7 +1921,7 @@ var ExtensionParent = {
 // resolve after the first browser window is painted and after browser
 // windows have been restored, respectively. Alternatively,
 // browserStartupPromise also resolves from the extensions-late-startup
-// notification sent by Firefox Reality on desktop platforms, because it
+// notification sent by Datalus Reality on desktop platforms, because it
 // doesn't support SessionStore.
 // _resetStartupPromises should only be called from outside this file in tests.
 ExtensionParent._resetStartupPromises = () => {

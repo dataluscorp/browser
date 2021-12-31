@@ -18,7 +18,7 @@ def add_indexes(config, jobs):
         if repackage_type and job["attributes"]["build_type"] != "debug":
             build_platform = job["attributes"]["build_platform"]
             job_name = f"{build_platform}-{repackage_type}"
-            product = job.get("index", {}).get("product", "firefox")
+            product = job.get("index", {}).get("product", "datalus")
             index_type = "generic"
             if job["attributes"].get("shippable") and job["attributes"].get("locale"):
                 index_type = "shippable-l10n"

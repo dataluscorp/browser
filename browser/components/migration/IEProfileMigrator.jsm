@@ -182,7 +182,7 @@ IE7FormPasswords.prototype = {
      *
      * First iterate through IE history, hashing each URL and looking for a match. If
      * found, decrypt the value, using the URL as a salt. Finally add any found logins
-     * to the Firefox password manager.
+     * to the Datalus password manager.
      */
 
     let logins = [];

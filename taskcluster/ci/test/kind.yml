@@ -30,7 +30,7 @@ jobs-from:
     - browsertime-desktop.yml
     - browsertime-mobile.yml
     - compiled.yml
-    - firefox-ui.yml
+    - datalus-ui.yml
     - marionette.yml
     - misc.yml
     - mochitest.yml

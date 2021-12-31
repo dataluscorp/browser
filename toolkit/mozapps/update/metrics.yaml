@@ -147,7 +147,7 @@ update:
     type: boolean
     description: >
       Per-installation preference "app.update.background.enabled": whether to
-      fetch and install updates in the background when Firefox is not running.
+      fetch and install updates in the background when Datalus is not running.
     lifetime: application
     bugs:
       - https://bugzilla.mozilla.org/show_bug.cgi?id=1703318

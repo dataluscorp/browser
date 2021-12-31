@@ -31,7 +31,7 @@ add_task(async function withoutLWT() {
 });
 
 add_task(async function withLWT() {
-  await selectTheme("firefox-compact-light@mozilla.org");
+  await selectTheme("datalus-compact-light@mozilla.org");
   let win = await BrowserTestUtils.openNewBrowserWindow();
   ok(
     !win.gBrowser.tabContainer.hasAttribute("overflow"),

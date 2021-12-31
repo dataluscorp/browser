@@ -98,7 +98,7 @@ const CFR_MESSAGES = [
         rating: 4.6,
         users: 299019,
         author: "Mozilla",
-        amo_url: "https://addons.mozilla.org/firefox/addon/facebook-container/",
+        amo_url: "https://addons.mozilla.org/datalus/addon/facebook-container/",
       },
       text:
         "Stop Facebook from tracking your activity across the web. Use Facebook the way you normally do without annoying ads following you around.",
@@ -169,7 +169,7 @@ const CFR_MESSAGES = [
         users: 313474,
         author: "Juan Escobar",
         amo_url:
-          "https://addons.mozilla.org/firefox/addon/to-google-translate/",
+          "https://addons.mozilla.org/datalus/addon/to-google-translate/",
       },
       text:
         "Instantly translate any webpage text. Simply highlight the text, right-click to open the context menu, and choose a text or aural translation.",
@@ -240,7 +240,7 @@ const CFR_MESSAGES = [
         users: 357328,
         author: "Maxime RF",
         amo_url:
-          "https://addons.mozilla.org/firefox/addon/enhancer-for-youtube/",
+          "https://addons.mozilla.org/datalus/addon/enhancer-for-youtube/",
       },
       text:
         "Take control of your YouTube experience. Automatically block annoying ads, set playback speed and volume, remove annotations, and more.",
@@ -312,7 +312,7 @@ const CFR_MESSAGES = [
         users: 3095,
         author: "Nick Diedrich",
         amo_url:
-          "https://addons.mozilla.org/firefox/addon/wikipedia-context-menu-search/",
+          "https://addons.mozilla.org/datalus/addon/wikipedia-context-menu-search/",
       },
       text:
         "Get to a Wikipedia page fast, from anywhere on the web. Just highlight any webpage text and right-click to open the context menu to start a Wikipedia search.",
@@ -387,7 +387,7 @@ const CFR_MESSAGES = [
         users: 258129,
         author: "honestbleeps",
         amo_url:
-          "https://addons.mozilla.org/firefox/addon/reddit-enhancement-suite/",
+          "https://addons.mozilla.org/datalus/addon/reddit-enhancement-suite/",
       },
       text:
         "New features include Inline Image Viewer, Never Ending Reddit (never click 'next page' again), Keyboard Navigation, Account Switcher, and User Tagger.",
@@ -475,7 +475,7 @@ const CFR_MESSAGES = [
         },
         sumo_path: "extensionrecommendations",
       },
-      notification_text: "Message from Firefox",
+      notification_text: "Message from Datalus",
       category: "cfrFeatures",
     },
     trigger: {
@@ -489,7 +489,7 @@ const CFR_MESSAGES = [
       lifetime: 3,
     },
     targeting:
-      "(!type || type == 'save') && isFxAEnabled == true && usesFirefoxSync == false",
+      "(!type || type == 'save') && isFxAEnabled == true && usesDatalusSync == false",
     template: "cfr_doorhanger",
     content: {
       layout: "icon_and_message",
@@ -560,7 +560,7 @@ const CFR_MESSAGES = [
       lifetime: 3,
     },
     targeting:
-      "type == 'update' && isFxAEnabled == true && usesFirefoxSync == false",
+      "type == 'update' && isFxAEnabled == true && usesDatalusSync == false",
     template: "cfr_doorhanger",
     content: {
       layout: "icon_and_message",
@@ -668,7 +668,7 @@ const CFR_MESSAGES = [
       layout: "chiclet_open_url",
       category: "cfrHeartbeat",
       bucket_id: "HEARTBEAT_TACTIC_2",
-      notification_text: "Improve Firefox",
+      notification_text: "Improve Datalus",
       active_color: "#595e91",
       action: {
         url: "http://example.com/%VERSION%/",
@@ -695,7 +695,7 @@ const CFR_MESSAGES = [
     content: {
       layout: "icon_and_message",
       text:
-        "Update your homepage to search Google while also being able to search your Firefox history and bookmarks.",
+        "Update your homepage to search Google while also being able to search your Datalus history and bookmarks.",
       icon: "chrome://global/skin/icons/search-glass.svg",
       buttons: {
         secondary: [

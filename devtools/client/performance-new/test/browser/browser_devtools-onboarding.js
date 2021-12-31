@@ -90,6 +90,6 @@ async function closeOnboardingMessage(document) {
 function isOnboardingDisplayed(document) {
   return maybeGetElementFromDocumentByText(
     document,
-    "Firefox Profiler is now integrated into Developer Tools"
+    "Datalus Profiler is now integrated into Developer Tools"
   );
 }

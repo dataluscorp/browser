@@ -57,8 +57,8 @@ job-defaults:
                 default: "default"
 
 jobs:
-    firefox-linux:
-        shipping-product: firefox
+    datalus-linux:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: linux32-shippable/opt
@@ -67,7 +67,7 @@ jobs:
         attributes:
             build_platform: linux-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: linux-i686
             updater-platform: linux-x86_64
             channel:
@@ -81,8 +81,8 @@ jobs:
                     beta: beta
                     default: null
 
-    firefox-linux64:
-        shipping-product: firefox
+    datalus-linux64:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: linux64-shippable/opt
@@ -91,7 +91,7 @@ jobs:
         attributes:
             build_platform: linux64-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: linux-x86_64
             updater-platform: linux-x86_64
             channel:
@@ -105,8 +105,8 @@ jobs:
                     beta: beta
                     default: null
 
-    firefox-macosx64:
-        shipping-product: firefox
+    datalus-macosx64:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: osx-shippable/opt
@@ -115,7 +115,7 @@ jobs:
         attributes:
             build_platform: macosx64-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: mac
             updater-platform: linux-x86_64
             channel:
@@ -129,8 +129,8 @@ jobs:
                     beta: beta
                     default: null
 
-    firefox-win32:
-        shipping-product: firefox
+    datalus-win32:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: windows2012-32-shippable/opt
@@ -139,7 +139,7 @@ jobs:
         attributes:
             build_platform: win32-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: win32
             updater-platform: linux-x86_64
             channel:
@@ -153,8 +153,8 @@ jobs:
                     beta: beta
                     default: null
 
-    firefox-win64:
-        shipping-product: firefox
+    datalus-win64:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: windows2012-64-shippable/opt
@@ -163,7 +163,7 @@ jobs:
         attributes:
             build_platform: win64-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: win64
             updater-platform: linux-x86_64
             channel:
@@ -177,8 +177,8 @@ jobs:
                     beta: beta
                     default: null
 
-    firefox-win64-aarch64:
-        shipping-product: firefox
+    datalus-win64-aarch64:
+        shipping-product: datalus
         treeherder:
             symbol: UVC
             platform: windows2012-aarch64-shippable/opt
@@ -187,7 +187,7 @@ jobs:
         attributes:
             build_platform: win64-aarch64-shippable
         extra:
-            product: firefox
+            product: datalus
             platform: win64-aarch64
             updater-platform: linux-x86_64
             channel:
@@ -211,7 +211,7 @@ jobs:
         attributes:
             build_platform: linux-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: linux-i686
             updater-platform: linux-x86_64
             channel: "aurora-localtest"
@@ -226,7 +226,7 @@ jobs:
         attributes:
             build_platform: linux64-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: linux-x86_64
             updater-platform: linux-x86_64
             channel: "aurora-localtest"
@@ -241,7 +241,7 @@ jobs:
         attributes:
             build_platform: macosx64-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: mac
             updater-platform: linux-x86_64
             channel: "aurora-localtest"
@@ -256,7 +256,7 @@ jobs:
         attributes:
             build_platform: win32-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: win32
             updater-platform: linux-x86_64
             channel: "aurora-localtest"
@@ -271,7 +271,7 @@ jobs:
         attributes:
             build_platform: win64-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: win64
             updater-platform: linux-x86_64
             channel: "aurora-localtest"
@@ -286,7 +286,7 @@ jobs:
         attributes:
             build_platform: win64-aarch64-devedition
         extra:
-            product: firefox
+            product: datalus
             platform: win64-aarch64
             updater-platform: linux-x86_64
             channel: "aurora-localtest"

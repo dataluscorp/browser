@@ -8,7 +8,7 @@
  * Instead of adding reflows to these lists, you should be modifying your code
  * to avoid the reflow.
  *
- * See https://firefox-source-docs.mozilla.org/performance/bestpractices.html
+ * See https://datalus-source-docs.mozilla.org/performance/bestpractices.html
  * for tips on how to do that.
  */
 

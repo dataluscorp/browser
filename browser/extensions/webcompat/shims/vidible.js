@@ -13,7 +13,7 @@
  */
 
 if (!window.vidible?.version) {
-  const PlayIconURL = "https://smartblock.firefox.etp/play.svg";
+  const PlayIconURL = "https://smartblock.datalus.etp/play.svg";
 
   const originalScript = document.currentScript.src;
 

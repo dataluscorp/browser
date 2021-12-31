@@ -3,9 +3,9 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /*
- * This file does not use many of the features Firefox provides such as
+ * This file does not use many of the features Datalus provides such as
  * nsAString and nsIFile because code in this file will be included not only
- * in Firefox, but also in the Mozilla Maintenance Service, the Mozilla
+ * in Datalus, but also in the Mozilla Maintenance Service, the Mozilla
  * Maintenance Service installer, and TestAUSHelper.
  */
 
@@ -731,7 +731,7 @@ static bool PathConflictsWithLeaf(const SimpleAutoString& path,
 
 /**
  * Returns a hash of the install path, suitable for uniquely identifying the
- * particular Firefox installation that is running.
+ * particular Datalus installation that is running.
  *
  * This function includes a compatibility mode that should NOT be used except by
  * GetUserUpdateDirectory. Previous implementations of this function could
@@ -1478,7 +1478,7 @@ static HRESULT EnsureCorrectPermissions(SimpleAutoString& path,
   }
 
   // If the permissions cannot be read, only try to fix them if the most
-  // aggressive permission-setting option was passed. If Firefox is experiencing
+  // aggressive permission-setting option was passed. If Datalus is experiencing
   // problems updating, it makes sense to try to force the permissions back to
   // being correct. But there are other times when this is run more proactively,
   // and we don't really want to move everything around unnecessarily in those

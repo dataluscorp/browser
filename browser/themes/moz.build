@@ -5,7 +5,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Theme")
+    BUG_COMPONENT = ("Datalus", "Theme")
 
 with Files("ThemeVariableMap.jsm"):
     BUG_COMPONENT = ("WebExtensions", "Themes")

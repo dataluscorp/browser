@@ -97,7 +97,7 @@ class XPCShellRunner(MozbuildObject):
             kwargs["logfiles"] = False
 
         if kwargs["profileName"] is None:
-            kwargs["profileName"] = "firefox"
+            kwargs["profileName"] = "datalus"
 
         if kwargs["pluginsPath"] is None:
             kwargs["pluginsPath"] = os.path.join(self.distdir, "plugins")

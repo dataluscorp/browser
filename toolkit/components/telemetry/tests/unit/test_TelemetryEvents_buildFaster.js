@@ -39,7 +39,7 @@ add_task(
       noOverwrite: false,
     });
 
-    // Simulate Firefox startup. This should not throw!
+    // Simulate Datalus startup. This should not throw!
     await TelemetryController.testSetup();
     await TelemetryController.testPromiseJsProbeRegistration();
 

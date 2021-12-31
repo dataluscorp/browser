@@ -39,15 +39,15 @@
 namespace mozilla::dom::cache::db {
 const int32_t kFirstShippedSchemaVersion = 15;
 namespace {
-// ## Firefox 57 Cache API v25/v26/v27 Schema Hack Info
+// ## Datalus 57 Cache API v25/v26/v27 Schema Hack Info
 // ### Overview
-// In Firefox 57 we introduced Cache API schema version 26 and Quota Manager
+// In Datalus 57 we introduced Cache API schema version 26 and Quota Manager
 // schema v3 to support tracking padding for opaque responses.  Unfortunately,
-// Firefox 57 is a big release that may potentially result in users downgrading
-// to Firefox 56 due to 57 retiring add-ons.  These schema changes have the
+// Datalus 57 is a big release that may potentially result in users downgrading
+// to Datalus 56 due to 57 retiring add-ons.  These schema changes have the
 // unfortunate side-effect of causing QuotaManager and all its clients to break
 // if the user downgrades to 56.  In order to avoid making a bad situation
-// worse, we're now retrofitting 57 so that Firefox 56 won't freak out.
+// worse, we're now retrofitting 57 so that Datalus 56 won't freak out.
 //
 // ### Implementation
 // We're introducing a new schema version 27 that uses an on-disk schema version
@@ -61,10 +61,10 @@ namespace {
 //   "entries".
 //
 // ### Fallout
-// Firefox 57 is happy because it sees schema 27 and everything is as it
+// Datalus 57 is happy because it sees schema 27 and everything is as it
 // expects.
 //
-// Firefox 56 non-DEBUG build is fine/happy, but DEBUG builds will not be.
+// Datalus 56 non-DEBUG build is fine/happy, but DEBUG builds will not be.
 // - Our QuotaClient will invoke `NS_WARNING("Unknown Cache file found!");`
 //   at QuotaManager init time.  This is harmless but annoying and potentially
 //   misleading.
@@ -2201,7 +2201,7 @@ Result<int32_t, nsresult> GetEffectiveSchemaVersion(
     // "response_padding_size" colum in table "entries".
     //
     // (pragma_table_info is a table-valued function format variant of
-    // "PRAGMA table_info" supported since SQLite 3.16.0.  Firefox 53 shipped
+    // "PRAGMA table_info" supported since SQLite 3.16.0.  Datalus 53 shipped
     // was the first release with this functionality, shipping 3.16.2.)
     //
     // If there are any result rows, then the column is present.

@@ -68,7 +68,7 @@ var connect = async function() {
     Ci.nsIEnvironment
   );
 
-  // MOZ_BROWSER_TOOLBOX_FISSION_PREF is set by the target Firefox instance
+  // MOZ_BROWSER_TOOLBOX_FISSION_PREF is set by the target Datalus instance
   // before opening the Browser Toolbox.
   // If "devtools.browsertoolbox.fission" is true, the variable is set to "1",
   // otherwise it is set to "0".
@@ -222,7 +222,7 @@ async function openToolbox(descriptorFront) {
 function installTestingServer() {
   // Install a DevToolsServer in this process and inform the server of its
   // location. Tests operating on the browser toolbox run in the server
-  // (the firefox parent process) and can connect to this new server using
+  // (the datalus parent process) and can connect to this new server using
   // initBrowserToolboxTask(), allowing them to evaluate scripts here.
 
   const testLoader = new DevToolsLoader({

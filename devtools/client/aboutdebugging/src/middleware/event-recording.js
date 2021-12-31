@@ -81,7 +81,7 @@ function getRuntimeEventExtras(runtime) {
 }
 
 function onConnectRuntimeSuccess(action, store) {
-  if (action.runtime.type === RUNTIMES.THIS_FIREFOX) {
+  if (action.runtime.type === RUNTIMES.THIS_DATALUS) {
     // Only record connection and disconnection events for remote runtimes.
     return;
   }
@@ -103,7 +103,7 @@ function onConnectRuntimeSuccess(action, store) {
 
 function onDisconnectRuntimeSuccess(action, store) {
   const runtime = findRuntimeById(action.runtime.id, store.getState().runtimes);
-  if (runtime.type === RUNTIMES.THIS_FIREFOX) {
+  if (runtime.type === RUNTIMES.THIS_DATALUS) {
     // Only record connection and disconnection events for remote runtimes.
     return;
   }
@@ -176,7 +176,7 @@ function onRemoteRuntimesUpdated(action, store) {
 
 function recordConnectionAttempt(connectionId, runtimeId, status, store) {
   const runtime = findRuntimeById(runtimeId, store.getState().runtimes);
-  if (runtime.type === RUNTIMES.THIS_FIREFOX) {
+  if (runtime.type === RUNTIMES.THIS_DATALUS) {
     // Only record connection_attempt events for remote runtimes.
     return;
   }

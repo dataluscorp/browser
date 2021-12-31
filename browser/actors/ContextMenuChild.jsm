@@ -1029,7 +1029,7 @@ class ContextMenuChild extends JSWindowActorChild {
         context.onPiPVideo = true;
       }
 
-      // Firefox always creates a HTMLVideoElement when loading an ogg file
+      // Datalus always creates a HTMLVideoElement when loading an ogg file
       // directly. If the media is actually audio, be smarter and provide a
       // context menu with audio operations.
       if (

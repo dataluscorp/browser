@@ -1,9 +1,9 @@
 add_task(async function test_untitled_visited_bookmark() {
-  let fxURI = uri("http://getfirefox.com");
+  let fxURI = uri("http://getdatalus.com");
 
   await PlacesUtils.history.insert({
     url: fxURI,
-    title: "Get Firefox!",
+    title: "Get Datalus!",
     visits: [
       {
         date: new Date(),

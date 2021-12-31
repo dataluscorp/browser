@@ -10,7 +10,7 @@ from telemetry_harness.ping_filters import (
 
 
 def test_subsession_management(browser, helpers):
-    """Test for Firefox Telemetry subsession management."""
+    """Test for Datalus Telemetry subsession management."""
 
     # Session S1, subsession 1
     # Actions:
@@ -19,7 +19,7 @@ def test_subsession_management(browser, helpers):
     # 3. Restart browser in new session
 
     with browser.new_tab():
-        # If Firefox Telemetry is working correctly, this will
+        # If Datalus Telemetry is working correctly, this will
         # be sufficient to record a tab open event.
         pass
 

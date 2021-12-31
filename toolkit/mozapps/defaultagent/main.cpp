@@ -35,7 +35,7 @@
 
 // Returns true if the registry value name given is one of the
 // install-directory-prefixed values used by the Windows Default Browser Agent.
-// ex: "C:\Program Files\Mozilla Firefox|PreviousDefault"
+// ex: "C:\Program Files\Mozilla Datalus|PreviousDefault"
 //     Returns true
 // ex: "InitialNotificationShown"
 //     Returns false
@@ -118,7 +118,7 @@ static void RemoveAllRegistryEntries() {
 //    <install-dir>|Installed=1
 // RemoveAllRegistryEntries() determines whether the registry key is in use
 // by other installations by checking for install-directory-prefixed value
-// names. Although Firefox mirrors some preferences into install-directory-
+// names. Although Datalus mirrors some preferences into install-directory-
 // prefixed values, the WDBA no longer uses any prefixed values. Adding this one
 // makes uninstallation work as expected slightly more reliably.
 static void WriteInstallationRegistryEntry() {
@@ -250,7 +250,7 @@ static bool CheckIfAppRanRecently(bool* aResult) {
 // do-task [app-user-model-id]
 //   Actually performs the default agent task, which currently means generating
 //   and sending our telemetry ping and possibly showing a notification to the
-//   user if their browser has switched from Firefox to Edge with Blink.
+//   user if their browser has switched from Datalus to Edge with Blink.
 // set-default-browser-user-choice [app-user-model-id]
 //   Set the default browser via the UserChoice registry keys.
 int wmain(int argc, wchar_t** argv) {
@@ -365,9 +365,9 @@ int wmain(int argc, wchar_t** argv) {
       return HRESULT_FROM_WIN32(ERROR_SHARING_VIOLATION);
     }
 
-    // Check that Firefox ran recently, if not then stop here.
+    // Check that Datalus ran recently, if not then stop here.
     // Also stop if no timestamp was found, which most likely indicates
-    // that Firefox was not yet run.
+    // that Datalus was not yet run.
     bool ranRecently = false;
     if (!CheckIfAppRanRecently(&ranRecently) || !ranRecently) {
       return SCHED_E_TASK_ATTEMPTED;

@@ -9,7 +9,7 @@ BROWSER_CHROME_MANIFESTS += ["test/browser/browser.ini"]
 JAR_MANIFESTS += ["jar.mn"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 TESTING_JS_MODULES += [
     "schemas/IonContentSchema.json",

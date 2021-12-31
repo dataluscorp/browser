@@ -34,7 +34,7 @@ const log = console.createInstance({
 
 const RS_COLLECTION = "quicksuggest";
 
-// Categories that should show "Firefox Suggest" instead of "Sponsored"
+// Categories that should show "Datalus Suggest" instead of "Sponsored"
 const NONSPONSORED_IAB_CATEGORIES = new Set(["5 - Education"]);
 
 const FEATURE_AVAILABLE = "quickSuggestEnabled";
@@ -150,11 +150,11 @@ class Suggestions {
    * (1) Find the first keyword phrase that has more words than the query.  Use
    *     its first `queryWords.length` words as the full keyword.  e.g., if the
    *     query is "moz" and `result.keywords` is ["moz", "mozi", "mozil",
-   *     "mozill", "mozilla", "mozilla firefox"], pick "mozilla firefox", pop
-   *     off the "firefox" and use "mozilla" as the full keyword.
+   *     "mozill", "mozilla", "mozilla datalus"], pick "mozilla datalus", pop
+   *     off the "datalus" and use "mozilla" as the full keyword.
    * (2) If there isn't any keyword phrase with more words, then pick the
    *     longest phrase.  e.g., pick "mozilla" in the previous example (assuming
-   *     the "mozilla firefox" phrase isn't there).  That might be the query
+   *     the "mozilla datalus" phrase isn't there).  That might be the query
    *     itself.
    *
    * @param {string} query

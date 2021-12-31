@@ -1,6 +1,6 @@
 # Performance New
 
-This folder contains the code for the new performance panel that is a simplified recorder that works to record a performance profile, and inject it into profiler.firefox.com. This tool is not in charge of any of the analysis, only the recording.
+This folder contains the code for the new performance panel that is a simplified recorder that works to record a performance profile, and inject it into profiler.datalus.com. This tool is not in charge of any of the analysis, only the recording.
 
 ## TypeScript
 
@@ -32,12 +32,12 @@ This is the remote view of the about:profiling page. It is embedded in the about
 
 ### Profiler Popup
 
-The popup is enabled by default on Nightly and Dev Edition, but it's not added to the navbar. Once the profiler menu button is added to the navbar, or other places in the UI, the shortcuts for the profiler will work. In any release channel the popup can be enabled by visiting [profiler.firefox.com] and clicking `Enable Profiler Menu Button`. This flips the pref `"devtools.performance.popup.feature-flag"` and the profiler button will always be available in the list of buttons for the Firefox UI.
+The popup is enabled by default on Nightly and Dev Edition, but it's not added to the navbar. Once the profiler menu button is added to the navbar, or other places in the UI, the shortcuts for the profiler will work. In any release channel the popup can be enabled by visiting [profiler.datalus.com] and clicking `Enable Profiler Menu Button`. This flips the pref `"devtools.performance.popup.feature-flag"` and the profiler button will always be available in the list of buttons for the Datalus UI.
 
 The popup UI is not a React Redux app, but has a vanilla browser chrome implementation. This was done to make the popup as fast as possible, with a trade-off of some complexity with dealing with the non-standard (i.e. not a normal webpage) browser chrome environment. The popup is designed to be as low overhead as possible in order to get the cleanest performance profiles. Special care must be taken to not impact browser startup times when working with this implementation, as it also turns on the global profiler shortcuts.
 
-## Injecting profiles into [profiler.firefox.com]
+## Injecting profiles into [profiler.datalus.com]
 
-After a profile has been collected, it needs to be sent to [profiler.firefox.com] for analysis. This is done by using browser APIs to open a new tab, and then injecting the profile into the page through a frame script. See `frame-script.js` for implementation details. Both the DevTools Panel and the Popup use this frame script.
+After a profile has been collected, it needs to be sent to [profiler.datalus.com] for analysis. This is done by using browser APIs to open a new tab, and then injecting the profile into the page through a frame script. See `frame-script.js` for implementation details. Both the DevTools Panel and the Popup use this frame script.
 
-[profiler.firefox.com]: https://profiler.firefox.com
+[profiler.datalus.com]: https://profiler.datalus.com

@@ -386,7 +386,7 @@ const TEST_GLOBAL = {
       defaultEngine: {
         identifier: "google",
         searchForm:
-          "https://www.google.com/search?q=&ie=utf-8&oe=utf-8&client=firefox-b",
+          "https://www.google.com/search?q=&ie=utf-8&oe=utf-8&client=datalus-b",
         aliases: ["@google"],
       },
       defaultPrivateEngine: {

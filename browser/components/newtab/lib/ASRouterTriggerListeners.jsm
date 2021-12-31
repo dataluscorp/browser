@@ -440,7 +440,7 @@ this.ASRouterTriggerListeners = new Map([
       },
 
       observe(aSubject, aTopic, aData) {
-        if (aSubject.currentURI.asciiHost === "accounts.firefox.com") {
+        if (aSubject.currentURI.asciiHost === "accounts.datalus.com") {
           // Don't notify about saved logins on the FxA login origin since this
           // trigger is used to promote login Sync and getting a recommendation
           // to enable Sync during the sign up process is a bad UX.

@@ -35,7 +35,7 @@ builds-debugopt:
 devtools:
     selector: fuzzy
     description: >-
-        Runs the tests relevant to the Firefox Devtools
+        Runs the tests relevant to the Datalus Devtools
     query:
         - "'node-debugger | 'node-devtools"
         - "'mozlint-eslint"
@@ -51,7 +51,7 @@ devtools:
 devtools-linux:
     selector: fuzzy
     description: >-
-        Runs the tests relevant to the Firefox Devtools, on Linux only.
+        Runs the tests relevant to the Datalus Devtools, on Linux only.
     query:
         - "'node-debugger | 'node-devtools"
         - "'mozlint-eslint"
@@ -85,7 +85,7 @@ geckodriver:
     query:
         - "'rusttests"
         - "'platform 'wdspec 'debug !fis"
-        - "'browsertime 'amazon 'vismet 'shippable 'firefox !fis"
+        - "'browsertime 'amazon 'vismet 'shippable 'datalus !fis"
 
 perf:
     selector: fuzzy
@@ -119,7 +119,7 @@ remote-protocol:
         |mach try --preset remote-protocol -xq "'linux 'opt"|
     query:
         - "'awsy-base"
-        - "'firefox-ui"
+        - "'datalus-ui"
         - "'marionette !swr | harness"
         - "'mochitest-browser !spi !swr 'fis -1$"
         - "'mochitest-remote !spi !swr"

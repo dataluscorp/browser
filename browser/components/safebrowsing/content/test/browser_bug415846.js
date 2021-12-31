@@ -5,7 +5,7 @@ Mac makes this astonishingly painful to test since their help menu is special ma
 but we can at least test it on the other platforms.*/
 
 const NORMAL_PAGE = "http://example.com";
-const PHISH_PAGE = "http://www.itisatrap.org/firefox/its-a-trap.html";
+const PHISH_PAGE = "http://www.itisatrap.org/datalus/its-a-trap.html";
 
 /**
  * Opens a new tab and browses to some URL, tests for the existence

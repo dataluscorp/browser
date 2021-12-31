@@ -278,7 +278,7 @@ def configure(
 )
 @CommandArgument(
     "--browser",
-    default="firefox",
+    default="datalus",
     help="Web browser to automatically open. See webbrowser Python module.",
 )
 @CommandArgument("--url", help="URL of JSON document to display")

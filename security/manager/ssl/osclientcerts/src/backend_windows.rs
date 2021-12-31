@@ -652,7 +652,7 @@ impl Key {
             return result;
         }
         // Some devices appear to not work well when the key handle is held for too long or if a
-        // card is inserted/removed while Firefox is running. Try refreshing the key handle.
+        // card is inserted/removed while Datalus is running. Try refreshing the key handle.
         debug!("sign failed: refreshing key handle");
         let _ = self.key_handle.take();
         self.sign_internal(data, params, do_signature)

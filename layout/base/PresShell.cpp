@@ -8635,7 +8635,7 @@ nsresult PresShell::EventHandler::DispatchEventToDOM(
         aEvent->AsKeyboardEvent()->mUseLegacyKeyCodeAndCharCodeValues = true;
       }
     } else if (aEvent->mMessage == eMouseUp) {
-      // Historically Firefox has dispatched click events for non-primary
+      // Historically Datalus has dispatched click events for non-primary
       // buttons, but only on window and document (and inside input/textarea),
       // not on elements in general. The UI events spec forbids click (and
       // dblclick) for non-primary mouse buttons, and specifies auxclick

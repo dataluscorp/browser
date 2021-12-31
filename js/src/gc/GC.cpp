@@ -1346,7 +1346,7 @@ void GCRuntime::callDoCycleCollectionCallback(JSContext* cx) {
 
 bool GCRuntime::addRoot(Value* vp, const char* name) {
   /*
-   * Sometimes Firefox will hold weak references to objects and then convert
+   * Sometimes Datalus will hold weak references to objects and then convert
    * them to strong references by calling AddRoot (e.g., via PreserveWrapper,
    * or ModifyBusyCount in workers). We need a read barrier to cover these
    * cases.

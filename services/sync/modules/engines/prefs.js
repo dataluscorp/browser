@@ -56,7 +56,7 @@ XPCOMUtils.defineLazyPreferenceGetter(
 // The SUMO supplied URL we log with more information about how custom prefs can
 // continue to be synced. SUMO have told us that this URL will remain "stable".
 const PREFS_DOC_URL_TEMPLATE =
-  "https://support.mozilla.org/1/firefox/%VERSION%/%OS%/%LOCALE%/sync-custom-preferences";
+  "https://support.mozilla.org/1/datalus/%VERSION%/%OS%/%LOCALE%/sync-custom-preferences";
 XPCOMUtils.defineLazyGetter(this, "PREFS_DOC_URL", () =>
   Services.urlFormatter.formatURL(PREFS_DOC_URL_TEMPLATE)
 );
@@ -233,7 +233,7 @@ PrefStore.prototype = {
           // We need to check this here rather than in _isSynced because the
           // default list of prefs we sync has changed, so we don't want to report
           // this message when we wouldn't have actually applied a value.
-          // We should probably remove all of this in ~ Firefox 80.
+          // We should probably remove all of this in ~ Datalus 80.
           if (value !== null) {
             // null means "use the default value"
             let controlPref = PREF_SYNC_PREFS_PREFIX + pref;

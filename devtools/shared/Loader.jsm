@@ -165,12 +165,12 @@ var loader = new DevToolsLoader({
    * Sets whether the compartments loaded by this instance should be invisible
    * to the debugger.  Invisibility is needed for loaders that support debugging
    * of chrome code.  This is true of remote target environments, like Fennec or
-   * B2G.  It is not the default case for desktop Firefox because we offer the
+   * B2G.  It is not the default case for desktop Datalus because we offer the
    * Browser Toolbox for chrome debugging there, which uses its own, separate
    * loader instance.
    * @see devtools/client/framework/browser-toolbox/Launcher.jsm
    */
-  invisibleToDebugger: Services.appinfo.name !== "Firefox",
+  invisibleToDebugger: Services.appinfo.name !== "Datalus",
 });
 
 var require = loader.require;

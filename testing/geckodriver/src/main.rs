@@ -268,7 +268,7 @@ fn main() {
 
 fn make_app<'a, 'b>() -> App<'a, 'b> {
     App::new(format!("geckodriver {}", build::build_info()))
-        .about("WebDriver implementation for Firefox")
+        .about("WebDriver implementation for Datalus")
         .arg(
             Arg::with_name("webdriver_host")
                 .long("host")
@@ -292,7 +292,7 @@ fn make_app<'a, 'b>() -> App<'a, 'b> {
                 .long("binary")
                 .takes_value(true)
                 .value_name("BINARY")
-                .help("Path to the Firefox binary"),
+                .help("Path to the Datalus binary"),
         )
         .arg(
             Arg::with_name("marionette_host")
@@ -321,12 +321,12 @@ fn make_app<'a, 'b>() -> App<'a, 'b> {
             Arg::with_name("connect_existing")
                 .long("connect-existing")
                 .requires("marionette_port")
-                .help("Connect to an existing Firefox instance"),
+                .help("Connect to an existing Datalus instance"),
         )
         .arg(
             Arg::with_name("jsdebugger")
                 .long("jsdebugger")
-                .help("Attach browser toolbox debugger for Firefox"),
+                .help("Attach browser toolbox debugger for Datalus"),
         )
         .arg(
             Arg::with_name("verbosity")

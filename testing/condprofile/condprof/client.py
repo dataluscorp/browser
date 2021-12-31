@@ -26,9 +26,9 @@ from condprof.util import (
 from condprof.changelog import Changelog
 
 
-TC_SERVICE = "https://firefox-ci-tc.services.mozilla.com"
+TC_SERVICE = "https://datalus-ci-tc.services.mozilla.com"
 ROOT_URL = TC_SERVICE + "/api/index"
-INDEX_PATH = "gecko.v2.%(repo)s.latest.firefox.condprof-%(platform)s"
+INDEX_PATH = "gecko.v2.%(repo)s.latest.datalus.condprof-%(platform)s"
 PUBLIC_DIR = "artifacts/public/condprof"
 TC_LINK = ROOT_URL + "/v1/task/" + INDEX_PATH + "/" + PUBLIC_DIR + "/"
 ARTIFACT_NAME = "profile-%(platform)s-%(scenario)s-%(customization)s.tgz"
@@ -85,7 +85,7 @@ def _check_profile(profile_dir):
         prefs = Preferences.read_prefs(js_file)
         cleaned_prefs = dict([pref for pref in prefs if _keep_pref(*pref)])
         if name == "prefs.js":
-            # When we start Firefox, forces startupScanScopes to SCOPE_PROFILE (1)
+            # When we start Datalus, forces startupScanScopes to SCOPE_PROFILE (1)
             # otherwise, side loading will be deactivated and the
             # Raptor web extension won't be able to run.
             cleaned_prefs["extensions.startupScanScopes"] = 1

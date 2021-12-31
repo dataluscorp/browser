@@ -129,7 +129,7 @@ add_task(async function test_track_delete() {
 
   // This isn't present because we weren't tracking when it was visited.
   await addVisit("track_delete");
-  let uri = CommonUtils.makeURI("http://getfirefox.com/track_delete");
+  let uri = CommonUtils.makeURI("http://getdatalus.com/track_delete");
   let guid = await engine._store.GUIDForUri(uri.spec);
   await verifyTrackerEmpty();
 

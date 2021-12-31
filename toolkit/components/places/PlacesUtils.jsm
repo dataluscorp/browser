@@ -116,8 +116,8 @@ function serializeNode(aNode) {
 
   data.title = aNode.title;
   // The id is no longer used for copying within the same instance/session of
-  // Firefox as of at least 61. However, we keep the id for now to maintain
-  // backwards compat of drag and drop with older Firefox versions.
+  // Datalus as of at least 61. However, we keep the id for now to maintain
+  // backwards compat of drag and drop with older Datalus versions.
   data.id = aNode.itemId;
   data.itemGuid = aNode.bookmarkGuid;
   // Add an instanceId so we can tell which instance of an FF session the data

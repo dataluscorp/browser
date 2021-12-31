@@ -31,8 +31,8 @@ job-defaults:
                 default: []
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         notifications:
             subject: "{task[shipping-product]} {release_config[version]} build{release_config[build_number]}/{config[params][project]} updates are ready for signoff in Balrog!"
             message: "{task[shipping-product]} {release_config[version]} build{release_config[build_number]}/{config[params][project]} updates are ready for signoff in Balrog!"

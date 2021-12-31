@@ -11,7 +11,7 @@ const { TelemetryTestUtils } = ChromeUtils.import(
 const SCALAR_NAME = "browser.ui.customized_widgets";
 const bookmarksInfo = [
   {
-    title: "firefox",
+    title: "datalus",
     url: "http://example.com",
   },
   {

@@ -183,7 +183,7 @@ class FFSetup(object):
 
     def _run_profile(self):
         runner_cls = mozrunner.runners.get(
-            mozinfo.info.get("appname", "firefox"), mozrunner.Runner
+            mozinfo.info.get("appname", "datalus"), mozrunner.Runner
         )
 
         args = list(self.browser_config["extra_args"])
@@ -345,7 +345,7 @@ class FFSetup(object):
         )
         # remove ccov files before actual tests start
         if self.browser_config.get("code_coverage", False):
-            # if the Firefox build was instrumented for ccov, initializing the browser
+            # if the Datalus build was instrumented for ccov, initializing the browser
             # will have caused ccov to output some gcda files; in order to have valid
             # ccov data for the talos test we want to remove these files before starting
             # the actual talos test(s)

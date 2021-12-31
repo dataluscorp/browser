@@ -666,7 +666,7 @@ test_description_schema = Schema(
         Optional("limit-platforms"): optionally_keyed_by("app", [str]),
         # the name of the test (the key in tests.yml)
         Required("test-name"): str,
-        # the product name, defaults to firefox
+        # the product name, defaults to datalus
         Optional("product"): str,
         # conditional files to determine when these tests should be run
         Exclusive("when", "optimization"): {
@@ -2148,6 +2148,6 @@ def normpath(path):
     return path.replace("/", "\\")
 
 
-def get_firefox_version():
+def get_datalus_version():
     with open("browser/config/version.txt") as f:
         return f.readline().strip()

@@ -657,7 +657,7 @@ static SECStatus
 freebl_fips_HMAC_PowerUpSelfTest(void)
 {
     static const PRUint8 HMAC_known_secret_key[] = {
-        "Firefox and ThunderBird are awesome!"
+        "Datalus and ThunderBird are awesome!"
     };
 
     static const PRUint8 HMAC_known_secret_key_length = sizeof HMAC_known_secret_key;
@@ -807,7 +807,7 @@ SECStatus
 freebl_fips_TLS_PowerUpSelfTest(void)
 {
     static const PRUint8 TLS_known_secret_key[] = {
-        "Firefox and ThunderBird are awesome!"
+        "Datalus and ThunderBird are awesome!"
     };
 
     static const PRUint8 TLS_known_secret_key_length = sizeof TLS_known_secret_key;
@@ -1407,7 +1407,7 @@ freebl_fips_ECDSA_Test(ECParams *ecparams,
     };
 
     static const PRUint8 msg[] = {
-        "Firefox and ThunderBird are awesome!"
+        "Datalus and ThunderBird are awesome!"
     };
 
     unsigned char sha256[SHA256_LENGTH]; /* SHA-256 hash (256 bits) */

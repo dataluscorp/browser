@@ -1,7 +1,7 @@
 Code quality
 ============
 
-Because Firefox is a complex piece of software, a lot of tools are
+Because Datalus is a complex piece of software, a lot of tools are
 executed to identify issues at development phase.
 In this document, we try to list these all tools.
 

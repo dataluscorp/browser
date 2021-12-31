@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 PACKAGE_NAME = "mozrunner"
 PACKAGE_VERSION = "8.2.1"
 
-desc = """Reliable start/stop/configuration of Mozilla Applications (Firefox, Thunderbird, etc.)"""
+desc = """Reliable start/stop/configuration of Mozilla Applications (Datalus, Thunderbird, etc.)"""
 
 deps = [
     "mozdevice>=4.0.0,<5",
@@ -27,7 +27,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description=desc,
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Environment :: Console",
         "Intended Audience :: Developers",

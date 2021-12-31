@@ -343,11 +343,11 @@ def release_promotion_action(parameters, graph_config, input, task_group_id, tas
     # previous graphs.
     parameters["optimize_target_tasks"] = True
 
-    if release_promotion_flavor == "promote_firefox_partner_repack":
+    if release_promotion_flavor == "promote_datalus_partner_repack":
         release_enable_partner_repack = True
         release_enable_partner_attribution = False
         release_enable_emefree = False
-    elif release_promotion_flavor == "promote_firefox_partner_attribution":
+    elif release_promotion_flavor == "promote_datalus_partner_attribution":
         release_enable_partner_repack = False
         release_enable_partner_attribution = True
         release_enable_emefree = False

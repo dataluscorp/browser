@@ -133,7 +133,7 @@ Schema definitions/validations that can be used for tests can be found in `syste
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | ``action``                 | [Required] Either ``activity_stream_event`` or ``activity_stream_session``.                                                                          | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-| ``addon_version``          | [Required] Firefox build ID, i.e. ``Services.appinfo.appBuildID``.                                                                                   | :one:            |
+| ``addon_version``          | [Required] Datalus build ID, i.e. ``Services.appinfo.appBuildID``.                                                                                   | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | ``advertiser``             | [Optional] An identifier for the advertiser used by the sponsored TopSites telemetry pings.                                                          | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
@@ -247,15 +247,15 @@ Schema definitions/validations that can be used for tests can be found in `syste
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | ``icon_type``              | [Optional] ("tippytop", "rich\_icon", "screenshot\_with\_icon", "screenshot", "no\_image", "custom\_screenshot")                                     | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-| ``region``                 | [Optional] A string maps to pref "browser.search.region", which is essentially the two letter ISO 3166-1 country code populated by the Firefox       |                  |
-|                            | search service. Note that: 1). it reports "OTHER" for those regions with smaller Firefox user base (less than 10000) so that users cannot be         |                  |
+| ``region``                 | [Optional] A string maps to pref "browser.search.region", which is essentially the two letter ISO 3166-1 country code populated by the Datalus       |                  |
+|                            | search service. Note that: 1). it reports "OTHER" for those regions with smaller Datalus user base (less than 10000) so that users cannot be         |                  |
 |                            | uniquely identified; 2). it reports "UNSET" if this pref is missing; 3). it reports "EMPTY" if the value of this pref is an empty string.            | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-| ``profile_creation_date``  | [Optional] An integer to record the age of the Firefox profile as the total number of days since the UNIX epoch.                                     | :one:            |
+| ``profile_creation_date``  | [Optional] An integer to record the age of the Datalus profile as the total number of days since the UNIX epoch.                                     | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | ``message_id``             | [required] A string identifier of the message in Activity Stream Router.                                                                             | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
-| ``has_flow_params``        | [required] One of [true, false]. A boolean identifier that indicates if Firefox Accounts flow parameters are set or unset.                           | :one:            |
+| ``has_flow_params``        | [required] One of [true, false]. A boolean identifier that indicates if Datalus Accounts flow parameters are set or unset.                           | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 | ``displayed``              | [required] 1: a SPOC is displayed; 0: non-displayed                                                                                                  | :one:            |
 +----------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
@@ -290,7 +290,7 @@ Schema definitions/validations that can be used for tests can be found in `syste
 
 **Where:**
 
-* :one: Firefox data
+* :one: Datalus data
 * :two: HTTP protocol data
 * :three: server augmented data
 * :four: User preferences encoding table

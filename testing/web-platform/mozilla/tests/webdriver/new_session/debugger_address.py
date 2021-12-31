@@ -43,7 +43,7 @@ def test_debugger_address_true_fission_disabled(session):
 @pytest.mark.capabilities(
     {
         "moz:debuggerAddress": True,
-        "moz:firefoxOptions": {
+        "moz:datalusOptions": {
             "prefs": {
                 "fission.autostart": True,
             }

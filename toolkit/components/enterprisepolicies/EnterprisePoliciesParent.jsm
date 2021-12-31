@@ -29,7 +29,7 @@ const POLICIES_FILENAME = "policies.json";
 // /run/user/$UID/appname
 const PREF_PER_USER_DIR = "toolkit.policies.perUserDir";
 // For easy testing, modify the helpers/sample.json file,
-// and set PREF_ALTERNATE_PATH in firefox.js as:
+// and set PREF_ALTERNATE_PATH in datalus.js as:
 // /your/repo/browser/components/enterprisepolicies/helpers/sample.json
 const PREF_ALTERNATE_PATH = "browser.policies.alternatePath";
 // For testing GPO, you can set an alternate location in testing

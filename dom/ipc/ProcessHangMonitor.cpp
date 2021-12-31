@@ -64,7 +64,7 @@ using namespace mozilla::ipc;
  * When the content process detects a hang, it posts a task to its hang thread,
  * which sends an IPC message to the hang thread in the parent. The parent
  * cancels any ongoing CPOW requests and then posts a runnable to the main
- * thread that notifies Firefox frontend code of the hang. The frontend code is
+ * thread that notifies Datalus frontend code of the hang. The frontend code is
  * passed an nsIHangReport, which can be used to terminate the hang.
  *
  * If the user chooses to terminate a script, a task is posted to the chrome

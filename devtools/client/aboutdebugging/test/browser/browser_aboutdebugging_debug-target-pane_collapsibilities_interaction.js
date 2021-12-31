@@ -17,7 +17,7 @@ add_task(async function() {
   prepareCollapsibilitiesTest();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   for (const { title } of TARGET_PANES) {
     info("Check whether this pane is collapsed after clicking the title");

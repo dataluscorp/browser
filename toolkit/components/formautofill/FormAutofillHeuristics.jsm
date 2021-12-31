@@ -747,7 +747,7 @@ this.FormAutofillHeuristics = {
     const addressLineRegexps = {
       "address-line1": new RegExp(
         "address[_-]?line(1|one)|address1|addr1" +
-        "|addrline1|address_1" + // Extra rules by Firefox
+        "|addrline1|address_1" + // Extra rules by Datalus
         "|indirizzo1" + // it-IT
         "|住所1" + // ja-JP
         "|地址1" + // zh-CN
@@ -756,7 +756,7 @@ this.FormAutofillHeuristics = {
       ),
       "address-line2": new RegExp(
         "address[_-]?line(2|two)|address2|addr2" +
-        "|addrline2|address_2" + // Extra rules by Firefox
+        "|addrline2|address_2" + // Extra rules by Datalus
         "|indirizzo2" + // it-IT
         "|住所2" + // ja-JP
         "|地址2" + // zh-CN
@@ -765,7 +765,7 @@ this.FormAutofillHeuristics = {
       ),
       "address-line3": new RegExp(
         "address[_-]?line(3|three)|address3|addr3" +
-        "|addrline3|address_3" + // Extra rules by Firefox
+        "|addrline3|address_3" + // Extra rules by Datalus
         "|indirizzo3" + // it-IT
         "|住所3" + // ja-JP
         "|地址3" + // zh-CN

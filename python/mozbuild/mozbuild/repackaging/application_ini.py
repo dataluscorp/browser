@@ -43,7 +43,7 @@ def get_application_ini_values(finder_or_application_directory, *args):
     else:
         finder = finder_or_application_directory
 
-    # Packages usually have a top-level `firefox/` directory; search below it.
+    # Packages usually have a top-level `datalus/` directory; search below it.
     for p, f in finder.find("**/application.ini"):
         data = f.open().read().decode("utf-8")
         parser = configparser.ConfigParser()

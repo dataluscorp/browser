@@ -25,7 +25,7 @@ ac_add_options RUSTC_OPT_LEVEL=2
 
 ## GC Poisoning
 
-Many Firefox builds have a diagnostic tool that causes crashes to happen
+Many Datalus builds have a diagnostic tool that causes crashes to happen
 sooner and produce much more actionable information, but also slow down
 regular usage substantially. In particular, \"GC poisoning\" is used in
 all debug builds, and in optimized Nightly builds (but not opt Developer
@@ -40,7 +40,7 @@ before starting the browser.
 
 ## Async Stacks
 
-Async stacks no longer impact performance since **Firefox 78**, as
+Async stacks no longer impact performance since **Datalus 78**, as
 {{bug(1601179)}} limits async stack capturing to when DevTools is
 opened.
 
@@ -61,12 +61,12 @@ General -\> Use hardware acceleration when available).
 ## Flash Plugin
 
 If you are profiling real websites, you should disable the Adobe Flash
-plugin so you are testing Firefox code and not Flash jank problems. In
+plugin so you are testing Datalus code and not Flash jank problems. In
 about:addons \> Plugins, set Shockwave Flash to \"Never Activate\".
 
 ## Timer Precision
 
-Firefox reduces the precision of the Performance APIs and other clock
+Datalus reduces the precision of the Performance APIs and other clock
 and timer APIs accessible to Web Content. They are currently reduce to a
 multiple of 2ms; which is controlled by the privacy.reduceTimerPrecision
 about:config flag.

@@ -432,7 +432,7 @@ def image_digest(command_context, **kwargs):
     "mozilla-central, release, maple",
 )
 @CommandArgument(
-    "--product", default="Firefox", help="The product identifier, such as 'Firefox'"
+    "--product", default="Datalus", help="The product identifier, such as 'Datalus'"
 )
 def generate_partials_builds(command_context, product, branch):
     from gecko_taskgraph.util.partials import populate_release_history

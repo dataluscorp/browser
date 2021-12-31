@@ -237,13 +237,13 @@ Maybe<ModuleTrustFlags> ModuleEvaluator::GetTrust(
 
   rv = mExeDirectory->Contains(dllFile, &contained);
   if (NS_SUCCEEDED(rv) && contained) {
-    result |= ModuleTrustFlags::FirefoxDirectory;
+    result |= ModuleTrustFlags::DatalusDirectory;
 
-    // If the DLL is in the Firefox directory, does it also share the Firefox
+    // If the DLL is in the Datalus directory, does it also share the Datalus
     // version info?
     if (mExeVersion.isSome() && aModuleRecord.mVersion.isSome() &&
         mExeVersion.value() == aModuleRecord.mVersion.value()) {
-      result |= ModuleTrustFlags::FirefoxDirectoryAndVersion;
+      result |= ModuleTrustFlags::DatalusDirectoryAndVersion;
     }
   }
 

@@ -19,15 +19,15 @@ this.deviceInfo = (function() {
   return function deviceInfo() {
     let match = navigator.userAgent.match(/Chrom(?:e|ium)\/([0-9.]{1,1000})/);
     const chromeVersion = match ? match[1] : null;
-    match = navigator.userAgent.match(/Firefox\/([0-9.]{1,1000})/);
-    const firefoxVersion = match ? match[1] : null;
-    const appName = chromeVersion ? "chrome" : "firefox";
+    match = navigator.userAgent.match(/Datalus\/([0-9.]{1,1000})/);
+    const datalusVersion = match ? match[1] : null;
+    const appName = chromeVersion ? "chrome" : "datalus";
 
     return {
       addonVersion: manifest.version,
       platform: platformInfo.os,
       architecture: platformInfo.arch,
-      version: firefoxVersion || chromeVersion,
+      version: datalusVersion || chromeVersion,
       // These don't seem to apply to Chrome:
       // build: system.build,
       // platformVersion: system.platformVersion,

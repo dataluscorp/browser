@@ -45,7 +45,7 @@ namespace mozilla {
 template <typename CHAR>
 constexpr const CHAR* LiteralEmptyStringPointer() {
   static_assert(std::is_same_v<CHAR, char> || std::is_same_v<CHAR, char16_t>,
-                "Only char and char16_t are supported in Firefox");
+                "Only char and char16_t are supported in Datalus");
   if constexpr (std::is_same_v<CHAR, char>) {
     return "";
   }
@@ -58,7 +58,7 @@ constexpr const CHAR* LiteralEmptyStringPointer() {
 template <typename CHAR>
 constexpr std::basic_string_view<CHAR> LiteralEmptyStringView() {
   static_assert(std::is_same_v<CHAR, char> || std::is_same_v<CHAR, char16_t>,
-                "Only char and char16_t are supported in Firefox");
+                "Only char and char16_t are supported in Datalus");
   // Use `operator""sv()` from <string_view>.
   using namespace std::literals::string_view_literals;
   if constexpr (std::is_same_v<CHAR, char>) {

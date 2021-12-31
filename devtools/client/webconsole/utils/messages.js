@@ -451,7 +451,7 @@ function getRepeatId(message) {
 }
 
 /**
- * Maps a Firefox RDP type to its corresponding level.
+ * Maps a Datalus RDP type to its corresponding level.
  */
 function getLevelFromType(type) {
   const levels = {

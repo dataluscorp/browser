@@ -37,7 +37,7 @@ BASE_DIR = CPP_DIR_FULLPATH
 DOCS_NEXT_STEPS = """
 The following documentation page provides more in depth details of the next steps:
 
-https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/wiring_up_new_webidl_bindings.html
+https://datalus-source-docs.mozilla.org/toolkit/components/extensions/webextensions/wiring_up_new_webidl_bindings.html
 """
 
 # Load the configuration file.

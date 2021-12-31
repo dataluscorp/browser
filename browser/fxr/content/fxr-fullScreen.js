@@ -8,13 +8,13 @@
 
 // fxr-fullScreen.js is a provisional, stripped-down clone of
 //   browser\base\content\browser-fullScreenAndPointerLock.js
-// that is adapted for Firefox Reality on Desktop.
+// that is adapted for Datalus Reality on Desktop.
 // The bug to track its removal is
 //   Bug 1587946 - Rationalize the fork of browser-fullScreenAndPointerLock.js
 
 var FullScreen = {
   init() {
-    // Called when the Firefox window go into fullscreen.
+    // Called when the Datalus window go into fullscreen.
     addEventListener("fullscreen", this, true);
 
     if (window.fullScreen) {

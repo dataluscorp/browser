@@ -42,15 +42,15 @@ jobs:
     linux-shippable/opt:
         description: "Linux Instrumented"
         index:
-            product: firefox
+            product: datalus
             job-name: instrumented-linux
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
             platform: linux32-shippable/opt
         worker-type: b-linux
         run:
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_32_builds.py
             mozconfig-variant: profile-generate
             tooltool-downloads: public
@@ -72,15 +72,15 @@ jobs:
     linux64-shippable/opt:
         description: "Linux64 Instrumented"
         index:
-            product: firefox
+            product: datalus
             job-name: instrumented-linux64
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
             platform: linux64-shippable/opt
         worker-type: b-linux
         run:
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
             mozconfig-variant: profile-generate
             tooltool-downloads: public
@@ -100,7 +100,7 @@ jobs:
     macosx64-shippable/opt:
         description: "MacOS X x64 Cross-compile Instrumented"
         shipping-phase: build
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
             platform: osx-shippable/opt
         worker-type: b-linux
@@ -113,7 +113,7 @@ jobs:
             using: mozharness
             actions: [get-secrets, build]
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_mac_64_cross_builds.py
             script: "mozharness/scripts/fx_desktop_build.py"
             secrets: true
@@ -228,9 +228,9 @@ jobs:
     win32-shippable/opt:
         description: "Win32 Shippable PGO Instrumented"
         index:
-            product: firefox
+            product: datalus
             job-name: instrumented-win32
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
             platform: windows2012-32-shippable/opt
         worker-type: b-linux
@@ -242,7 +242,7 @@ jobs:
             options: [append-env-variables-from-configs]
             mozconfig-variant: profile-generate
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
             tooltool-downloads: internal
             extra-config:
@@ -273,9 +273,9 @@ jobs:
     win64-shippable/opt:
         description: "Win64 Shippable PGO Instrumented"
         index:
-            product: firefox
+            product: datalus
             job-name: instrumented-win64
-        shipping-product: firefox
+        shipping-product: datalus
         treeherder:
             platform: windows2012-64-shippable/opt
         worker-type: b-linux
@@ -287,7 +287,7 @@ jobs:
             options: [append-env-variables-from-configs]
             mozconfig-variant: profile-generate
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
             tooltool-downloads: internal
             extra-config:

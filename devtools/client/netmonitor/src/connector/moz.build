@@ -3,6 +3,6 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 DevToolsModules(
-    "firefox-data-provider.js",
+    "datalus-data-provider.js",
     "index.js",
 )

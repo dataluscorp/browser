@@ -11,12 +11,12 @@
 #include "nsTouchBarInput.h"
 #include "nsTouchBarNativeAPIDefines.h"
 
-const NSTouchBarItemIdentifier kTouchBarBaseIdentifier = @"com.mozilla.firefox.touchbar";
+const NSTouchBarItemIdentifier kTouchBarBaseIdentifier = @"com.mozilla.datalus.touchbar";
 
 /**
  * Our TouchBar is its own delegate. This is adequate for our purposes,
  * since the current implementation only defines Touch Bar buttons for the
- * main Firefox window. If modals and other windows were to have custom
+ * main Datalus window. If modals and other windows were to have custom
  * Touch Bar views, each window would have to be a NSTouchBarDelegate so
  * they could define their own custom sets of buttons.
  */

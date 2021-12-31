@@ -19,12 +19,12 @@ def next_site():
 get_site = next_site()
 
 options = [
-    ("firefox.preference", "network.http.speculative-parallel-limit:6"),
+    ("datalus.preference", "network.http.speculative-parallel-limit:6"),
     # XXX potentially move those as first class options in mozperf?
     ("pageCompleteWaitTime", "10000"),
     ("visualMetrics", "true"),
     ("video", "true"),
-    ("firefox.windowRecorder", "false"),
+    ("datalus.windowRecorder", "false"),
     ("videoParams.addTimer", "false"),
     ("videoParams.createFilmstrip", "false"),
     ("videoParams.keepOriginalVideo", "true"),

@@ -15,7 +15,7 @@ var phases = { phase1: "profile1", phase2: "profile2", phase3: "profile1" };
  */
 
 var tabs1 = [
-  { uri: "https://www.mozilla.org/en-US/firefox/", profile: "profile1" },
+  { uri: "https://www.mozilla.org/en-US/datalus/", profile: "profile1" },
   {
     uri:
       "data:text/html,<html><head><title>Hello</title></head><body>Hello</body></html>",

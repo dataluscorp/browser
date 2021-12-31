@@ -20,7 +20,7 @@ namespace js::vtune {
 // VTune internals are not known to be threadsafe.
 static Mutex* VTuneMutex = nullptr;
 
-// Firefox must be launched from within VTune. Then the profiler
+// Datalus must be launched from within VTune. Then the profiler
 // status never changes, and we can avoid shared library checks.
 static bool VTuneLoaded(false);
 

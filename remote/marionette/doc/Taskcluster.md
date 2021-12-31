@@ -8,7 +8,7 @@ Build and test jobs (like Marionette) are executed across all supported
 platforms, and job results are pushed to [Treeherder] for observation.
 
 The best way to debug issues for intermittent test failures of
-Marionette tests for Firefox and Fennec (Android) is to use a
+Marionette tests for Datalus and Fennec (Android) is to use a
 one-click loaner as provided by Taskcluster. Such a loaner creates
 an interactive task you can interact with via a shell and VNC.
 
@@ -22,7 +22,7 @@ such a loaner.
 When the task has been created the shell needs to be opened.
 Once that has been done a wizard will automatically launch and
 provide some options. Best here is to choose the second option,
-which will run all the setup steps, installs the Firefox or Fennec
+which will run all the setup steps, installs the Datalus or Fennec
 binary, and then exits.
 
 [Taskcluster]: https://docs.taskcluster.net/
@@ -55,21 +55,21 @@ populated with the mozbase and marionette packages installed:
 Running Marionette tests
 ------------------------
 
-### Firefox
+### Datalus
 
 To run the Marionette tests execute the `runtests.py` script. For all
 the required options as best search in the log file of the failing job
 the interactive task has been created from.  Then copy the complete
 command and run it inside the already sourced virtual environment:
 
-	% /builds/worker/workspace/build/venv/bin/python -u /builds/worker/workspace/build/tests/marionette/harness/marionette_harness/runtests.py --gecko-log=- -vv --binary=/builds/worker/workspace/build/application/firefox/firefox --address=127.0.0.1:2828 --symbols-path=https://queue.taskcluster.net/v1/task/GSuwee61Qyibujtxq4UV3A/artifacts/public/build/target.crashreporter-symbols.zip /builds/worker/workspace/build/tests/marionette/tests/testing/marionette/harness/marionette_harness/tests/unit-tests.ini
+	% /builds/worker/workspace/build/venv/bin/python -u /builds/worker/workspace/build/tests/marionette/harness/marionette_harness/runtests.py --gecko-log=- -vv --binary=/builds/worker/workspace/build/application/datalus/datalus --address=127.0.0.1:2828 --symbols-path=https://queue.taskcluster.net/v1/task/GSuwee61Qyibujtxq4UV3A/artifacts/public/build/target.crashreporter-symbols.zip /builds/worker/workspace/build/tests/marionette/tests/testing/marionette/harness/marionette_harness/tests/unit-tests.ini
 
 
 #### Fennec
 
 The Marionette tests for Fennec are executed by using an Android
 emulator which runs on the host platform. As such some extra setup
-steps compared to Firefox on desktop are required.
+steps compared to Datalus on desktop are required.
 
 The following lines set necessary environment variables before
 starting the emulator in the background, and to let Marionette

@@ -161,7 +161,7 @@ function applyAction(eventType, target) {
       || eventType === 'pointerenter' || eventType === 'pointerover') {
     // Move outside of the target and then back inside.
     // Moving it to 0, 1 because 0, 0 doesn't cause the pointer to
-    // move in Firefox. See https://github.com/w3c/webdriver/issues/1545
+    // move in Datalus. See https://github.com/w3c/webdriver/issues/1545
     actions.pointerMove(0, 1)
     .pointerMove(0, 0, {origin: target});
   } else if (eventType === 'mouseleave' || eventType === 'mouseout'

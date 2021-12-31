@@ -75,7 +75,7 @@ add_task(async function test_network_markers_service_worker_use() {
     logInformationForThread("contentThread information", contentThread);
 
     const parentNetworkMarkers = getInflatedNetworkMarkers(parentThread)
-      // When we load a page, Firefox will check the service worker freshness
+      // When we load a page, Datalus will check the service worker freshness
       // after a few seconds. So when the test lasts a long time (with some test
       // environments) we might see spurious markers about that that we're not
       // interesting in in this part of the test. They're only present in the
@@ -125,7 +125,7 @@ add_task(async function test_network_markers_service_worker_use() {
       // Please take care that the first element is the top level navigation, as
       // this is special-cased below.
       "serviceworker_page.html",
-      "firefox-logo-nightly.svg",
+      "datalus-logo-nightly.svg",
     ].map(filename => `${BASE_URL_HTTPS}serviceworkers/${filename}`);
 
     Assert.equal(
@@ -198,7 +198,7 @@ add_task(async function test_network_markers_service_worker_use() {
 
         Assert.objectContainsOnly(contentMarker.data, commonDataProperties);
       } else {
-        // This is the other file firefox-logo-nightly.svg.
+        // This is the other file datalus-logo-nightly.svg.
         Assert.objectContainsOnly(parentMarker.data, {
           ...commonDataProperties,
           // Because the request races with the cache, these 2 values are valid:

@@ -109,9 +109,9 @@ class RemoteClientManager {
   _getKeyByRemoteId(remoteId) {
     if (!remoteId) {
       // If no remote id was provided, return the key corresponding to the local
-      // this-firefox runtime.
-      const { THIS_FIREFOX } = CONNECTION_TYPES;
-      return this._getKey(THIS_FIREFOX, THIS_FIREFOX);
+      // this-datalus runtime.
+      const { THIS_DATALUS } = CONNECTION_TYPES;
+      return this._getKey(THIS_DATALUS, THIS_DATALUS);
     }
 
     return decodeURIComponent(remoteId);

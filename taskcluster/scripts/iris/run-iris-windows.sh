@@ -2,7 +2,7 @@
 set -x +e -v
 
 # Set Iris code root, required by moziris
-export IRIS_CODE_ROOT=$MOZ_FETCHES_DIR/iris_firefox
+export IRIS_CODE_ROOT=$MOZ_FETCHES_DIR/iris_datalus
 
 # Store our starting dir so we can get back to it later
 dir=$(pwd)
@@ -36,7 +36,7 @@ fi
 scoop install which
 
 # Install tesseract-ocr
-cd $MOZ_FETCHES_DIR/iris_firefox
+cd $MOZ_FETCHES_DIR/iris_datalus
 scoop install bootstrap\\tesseract.json
 
 # Set up the pipenv
@@ -56,11 +56,11 @@ else
 fi
 
 # Handle the nightly smoketest suite differently
-[ "$CURRENT_TEST_DIR" != "nightly" ] && irisstring="firefox -t $CURRENT_TEST_DIR" || irisstring="$CURRENT_TEST_DIR"
+[ "$CURRENT_TEST_DIR" != "nightly" ] && irisstring="datalus -t $CURRENT_TEST_DIR" || irisstring="$CURRENT_TEST_DIR"
 echo "$irisstring"
 
 # Run the iris test suite
-python3 -m pipenv run iris $irisstring -w ../../iris_runs -n --treeherder -f ../../fetches/firefox/firefox.exe -y
+python3 -m pipenv run iris $irisstring -w ../../iris_runs -n --treeherder -f ../../fetches/datalus/datalus.exe -y
 runstatus=$?
 
 # Return to our starting dir and zip up the output of the test run

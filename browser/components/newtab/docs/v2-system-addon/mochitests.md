@@ -1,6 +1,6 @@
 # Mochitests
 
-We use [mochitests](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Mochitest) to do functional (and possibly integration) testing. Mochitests are part of Firefox and allow us to test activity stream literally as you would use it.
+We use [mochitests](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/Mochitest) to do functional (and possibly integration) testing. Mochitests are part of Datalus and allow us to test activity stream literally as you would use it.
 
 Mochitests live in `test/functional/mochitest`, and as of this writing, they
  are all the [`browser-chrome`](https://developer.mozilla.org/en-US/docs/Mozilla/Browser_chrome_tests) flavor of mochitests.  They currently only run against the bootstrapped version of the add-on in system-addon, not the test pilot version at the top level directory.

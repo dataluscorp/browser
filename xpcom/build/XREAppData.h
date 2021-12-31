@@ -87,7 +87,7 @@ class XREAppData {
 
   /**
    * The name of the application. This must be ASCII, and is normally
-   * mixed-case, e.g. "Firefox". Required (must not be null or an empty
+   * mixed-case, e.g. "Datalus". Required (must not be null or an empty
    * string).
    */
   CharPtr name;
@@ -95,7 +95,7 @@ class XREAppData {
   /**
    * The internal name of the application for remoting purposes. When left
    * unspecified, "name" is used instead. This must be ASCII, and is normally
-   * lowercase, e.g. "firefox". Optional (may be null but not an empty string).
+   * lowercase, e.g. "datalus". Optional (may be null but not an empty string).
    */
   CharPtr remotingName;
 

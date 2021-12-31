@@ -971,7 +971,7 @@ nsresult PermissionManager::TryInitDB(bool aRemoveFile,
           // reflected in the updated database. This migration only occurs
           // once, as if moz_perms exists, it will skip creating it. In
           // addition, permissions added after the migration will not be
-          // visible in previous versions of firefox.
+          // visible in previous versions of datalus.
 
           bool permsTableExists = false;
           data->mDBConn->TableExists("moz_perms"_ns, &permsTableExists);

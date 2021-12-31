@@ -24,20 +24,20 @@ DATA_PATH = Path(__file__).parent.joinpath("data")
         (
             {
                 "release-type": "release",
-                "product": "firefox",
+                "product": "datalus",
                 "version": GeckoVersion.parse("62.0.3"),
             },
             "whatsnew-62.0.3.yml",
-            "Firefox-62.0.3.update.json",
+            "Datalus-62.0.3.update.json",
         ),
         (
             {
                 "release-type": "beta",
-                "product": "firefox",
+                "product": "datalus",
                 "version": GeckoVersion.parse("64.0"),
             },
             "whatsnew-62.0.3.yml",
-            "Firefox-64.0b13.update.json",
+            "Datalus-64.0b13.update.json",
         ),
     ],
 )

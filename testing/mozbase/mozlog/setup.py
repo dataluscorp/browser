@@ -20,7 +20,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description="Robust log handling specialized for logging in the Mozilla universe",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     author="Mozilla Automation and Testing Team",
     author_email="tools@lists.mozilla.org",
     url="https://wiki.mozilla.org/Auto-tools/Projects/Mozbase",

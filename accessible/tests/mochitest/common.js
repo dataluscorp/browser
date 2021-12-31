@@ -73,7 +73,7 @@ const WIN = navigator.platform.includes("Win");
 
 // //////////////////////////////////////////////////////////////////////////////
 // Application detect
-// Firefox is assumed by default.
+// Datalus is assumed by default.
 
 const SEAMONKEY = navigator.userAgent.match(/ SeaMonkey\//);
 

@@ -5,9 +5,9 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
-with Files("firefox.exe.manifest"):
+with Files("datalus.exe.manifest"):
     BUG_COMPONENT = ("Core", "Widget: Win32")
 with Files("module.ver"):
     BUG_COMPONENT = ("Core", "Widget: Win32")
@@ -20,14 +20,14 @@ with Files("macbuild/**"):
     BUG_COMPONENT = ("Core", "Widget: Cocoa")
 
 with Files("moz.build"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 with Files("Makefile.in"):
-    BUG_COMPONENT = ("Firefox Build System", "General")
+    BUG_COMPONENT = ("Datalus Build System", "General")
 
 with Files("profile/channel-prefs.js"):
-    BUG_COMPONENT = ("Firefox", "Installer")
-with Files("profile/firefox.js"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "Installer")
+with Files("profile/datalus.js"):
+    BUG_COMPONENT = ("Datalus", "General")
 
 if CONFIG["MOZ_MACBUNDLE_NAME"]:
     DIRS += ["macbuild/Contents"]
@@ -43,7 +43,7 @@ SOURCES += [
     "nsBrowserApp.cpp",
 ]
 
-# Neither channel-prefs.js nor firefox.exe want to end up in dist/bin/browser.
+# Neither channel-prefs.js nor datalus.exe want to end up in dist/bin/browser.
 DIST_SUBDIR = ""
 
 LOCAL_INCLUDES += [
@@ -94,7 +94,7 @@ if CONFIG["OS_ARCH"] == "WINNT":
         libpath_flag + OBJDIR + "/winlauncher/freestanding",
     ]
 
-    # Don't build firefox.exe with CETCOMPAT, because we need to be able to
+    # Don't build datalus.exe with CETCOMPAT, because we need to be able to
     # only enable it for processes that are not using JIT in xul.dll.
     LINK_FLAGS["CETCOMPAT"] = []
 
@@ -148,7 +148,7 @@ if CONFIG["MOZ_LINUX_32_SSE2_STARTUP_ERROR"]:
         "-mfpmath=387",
     ]
 
-for icon in ("firefox", "document", "newwindow", "newtab", "pbmode"):
+for icon in ("datalus", "document", "newwindow", "newtab", "pbmode"):
     DEFINES[icon.upper() + "_ICO"] = '"%s/%s/%s.ico"' % (
         TOPSRCDIR,
         CONFIG["MOZ_BRANDING_DIRECTORY"],

@@ -345,7 +345,7 @@ __attribute__((constructor)) static void register_zone(void) {
   // There is a problem related to the above with the system nano zone, which
   // is hard to work around from here, and that is instead worked around by
   // disabling the nano zone through an environment variable
-  // (MallocNanoZone=0). In Firefox, we do that through
+  // (MallocNanoZone=0). In Datalus, we do that through
   // browser/app/macbuild/Contents/Info.plist.in.
 
   // Register the custom zone.  At this point it won't be the default.

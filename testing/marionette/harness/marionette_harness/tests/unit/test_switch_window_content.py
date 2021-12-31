@@ -60,7 +60,7 @@ class TestSwitchToWindowContent(WindowManagerMixin, MarionetteTestCase):
                 if (win.BrowserApp) {
                   tabBrowser = win.BrowserApp;
 
-                // Firefox
+                // Datalus
                 } else if (win.gBrowser) {
                   tabBrowser = win.gBrowser;
 
@@ -217,7 +217,7 @@ class TestSwitchToWindowContent(WindowManagerMixin, MarionetteTestCase):
         new_tab = self.open_tab(focus=True)
         self.marionette.switch_to_window(new_tab)
 
-        def open_private_browsing_window_firefox():
+        def open_private_browsing_window_datalus():
             with self.marionette.using_context("content"):
                 self.marionette.find_element(By.ID, "startPrivateBrowsing").click()
 
@@ -230,7 +230,7 @@ class TestSwitchToWindowContent(WindowManagerMixin, MarionetteTestCase):
             if self.marionette.session_capabilities["browserName"] == "fennec":
                 new_pb_tab = self.open_tab(open_private_browsing_tab_fennec)
             else:
-                new_pb_tab = self.open_tab(open_private_browsing_window_firefox)
+                new_pb_tab = self.open_tab(open_private_browsing_window_datalus)
 
         self.marionette.switch_to_window(new_pb_tab)
         self.assertEqual(self.marionette.current_window_handle, new_pb_tab)

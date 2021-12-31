@@ -1,27 +1,27 @@
 Usage
 =====
 
-When using the CDP-based Remote Agent in Firefox, there are
+When using the CDP-based Remote Agent in Datalus, there are
 three different programs/components running simultaneously:
 
   * the __client__, being the out-of-process script or library
     (such as Puppeteer) or web inspector frontend you use to control
-    and retrieve information out of Firefox;
+    and retrieve information out of Datalus;
 
   * the __agent__ that the client connects to which is an HTTPD living
-    inside Firefox, facilitating communication between clients
+    inside Datalus, facilitating communication between clients
     and targets;
 
   * and the __target__, which is the web document being debugging.
 
-Since Firefox 86 the Remote Agent ships in all Firefox releases by default.
+Since Datalus 86 the Remote Agent ships in all Datalus releases by default.
 
-To check if your Firefox binary has the Remote Agent enabled, you
+To check if your Datalus binary has the Remote Agent enabled, you
 can look in its help message for this:
 
-	% ./firefox -h
+	% ./datalus -h
 	…
-	  --remote-debugging-port [<port>] Start the Firefox Remote Agent, which is
+	  --remote-debugging-port [<port>] Start the Datalus Remote Agent, which is
 	                     a low-level debugging interface based on the CDP protocol.
 	                     Defaults to listen on localhost:9222.
 	…
@@ -30,7 +30,7 @@ When used, the Remote Agent will start an HTTP server and print a
 message on stderr with the location of the main target’s WebSocket
 listener:
 
-	% firefox --remote-debugging-port
+	% datalus --remote-debugging-port
 	DevTools listening on ws://localhost:9222/devtools/browser/7b4e84a4-597f-4839-ac6d-c9e86d16fb83
 
 `--remote-debugging-port` takes an optional port as input:
@@ -39,18 +39,18 @@ listener:
 
 You can use this to instruct the Remote Agent to bind to a particular
 port on your system.  port is optional,
-which means `firefox --remote-debugging-port` will bind the HTTPD to
+which means `datalus --remote-debugging-port` will bind the HTTPD to
 the default `localhost:9222`.
 
 If port has been specified the default port will be overridden:
 
-	% firefox --remote-debugging-port 9989
+	% datalus --remote-debugging-port 9989
     DevTools listening on ws://localhost:9989/devtools/browser/b49481af-8ad3-9b4d-b1bf-bb0cdb9a0620
 
 When you ask the Remote Agent to listen on port 0,
 the system will atomically allocate an arbitrary free port:
 
-    % firefox --remote-debugging-port 0
+    % datalus --remote-debugging-port 0
     DevTools listening on ws://localhost:59982/devtools/browser/a12b22a9-1b8b-954a-b81f-bd31552d3f1c
 
 Allocating an atomic port can be useful if you want to avoid race
@@ -59,4 +59,4 @@ ephemeral port range, which varies depending on your system and
 system configuration, but is always guaranteed to be free thus
 eliminating the risk of binding to a port that is already in use.
 
-[Firefox Nightly]: https://www.mozilla.org/en-GB/firefox/channel/desktop/#nightly
+[Datalus Nightly]: https://www.mozilla.org/en-GB/datalus/channel/desktop/#nightly

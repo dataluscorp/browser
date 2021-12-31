@@ -74,8 +74,8 @@ add_task(async function test_history_change_during_sync() {
 
   try {
     let remoteRec = new HistoryRec("history", "UrOOuzE5QM-e");
-    remoteRec.histUri = "http://getfirefox.com/";
-    remoteRec.title = "Get Firefox!";
+    remoteRec.histUri = "http://getdatalus.com/";
+    remoteRec.title = "Get Datalus!";
     remoteRec.visits = [
       {
         date: PlacesUtils.toPRTime(Date.now()),
@@ -422,7 +422,7 @@ add_task(async function test_bookmark_change_during_sync() {
   engine._tracker.start();
 
   try {
-    let bmk2_guid = "get-firefox1"; // New child of Folder 1, created remotely.
+    let bmk2_guid = "get-datalus1"; // New child of Folder 1, created remotely.
     let folder2_guid = "folder2-1111"; // New folder, created remotely.
     let tagQuery_guid = "tag-query111"; // New tag query child of Folder 2, created remotely.
     let bmk4_guid = "example-org1"; // New tagged child of Folder 2, created remotely.
@@ -446,10 +446,10 @@ add_task(async function test_bookmark_change_during_sync() {
       collection.insert(folder2_guid, encryptPayload(remoteFolder.cleartext));
 
       let remoteFxBmk = new Bookmark("bookmarks", bmk2_guid);
-      remoteFxBmk.bmkUri = "http://getfirefox.com/";
-      remoteFxBmk.description = "Firefox is awesome.";
-      remoteFxBmk.title = "Get Firefox!";
-      remoteFxBmk.tags = ["firefox", "awesome", "browser"];
+      remoteFxBmk.bmkUri = "http://getdatalus.com/";
+      remoteFxBmk.description = "Datalus is awesome.";
+      remoteFxBmk.title = "Get Datalus!";
+      remoteFxBmk.tags = ["datalus", "awesome", "browser"];
       remoteFxBmk.keyword = "awesome";
       remoteFxBmk.parentName = "Folder 1";
       remoteFxBmk.parentid = folder1.guid;

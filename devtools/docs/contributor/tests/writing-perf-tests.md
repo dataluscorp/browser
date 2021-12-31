@@ -87,7 +87,7 @@ module.exports = async function() {
   // Once your action is completed, call `runTest` returned object's `done` method.
   // It will automatically record the action duration and appear in PerfHerder as a new subtest.
   // It also creates markers in the profiler so that you can better inspect this action in
-  // profiler.firefox.com.
+  // profiler.datalus.com.
   test.done();
 
   await testTeardown();
@@ -125,8 +125,8 @@ By default, it will run the test 25 times. In order to run it just once, do:
 ```
 ./mach talos-test --activeTests damp --subtest ${your-test-name} --cycles 1 --tppagecycles 1
 ```
-`--cycles` controls the number of times Firefox is restarted
-`--tppagecycles` defines the number of times we repeat the test after each Firefox start
+`--cycles` controls the number of times Datalus is restarted
+`--tppagecycles` defines the number of times we repeat the test after each Datalus start
 
 Also, you can record a profile while running the test. To do that, execute:
 ```
@@ -139,5 +139,5 @@ Once it is done executing, the profile lives in a zip file you have to uncompres
 ```
 unzip testing/mozharness/build/blobber_upload_dir/profile_damp.zip
 ```
-Then you have to open [https://profiler.firefox.com/](https://profiler.firefox.com/) and manually load the profile file that lives here: `profile_damp/page_0_pagecycle_1/cycle_0.profile`
+Then you have to open [https://profiler.datalus.com/](https://profiler.datalus.com/) and manually load the profile file that lives here: `profile_damp/page_0_pagecycle_1/cycle_0.profile`
 

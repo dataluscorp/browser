@@ -14,7 +14,7 @@ add_task(async function setup() {
 add_task(async function test_open_feedback() {
   const menuArray = [
     {
-      urlFinal: "https://example.com/firefox-lockwise",
+      urlFinal: "https://example.com/datalus-lockwise",
       urlBase: "https://example.com/",
       pref: "app.support.baseURL",
       selector: ".menuitem-help",

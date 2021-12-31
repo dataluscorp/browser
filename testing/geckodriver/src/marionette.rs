@@ -4,7 +4,7 @@
 
 use crate::browser::{Browser, LocalBrowser, RemoteBrowser};
 use crate::build;
-use crate::capabilities::{FirefoxCapabilities, FirefoxOptions};
+use crate::capabilities::{DatalusCapabilities, DatalusOptions};
 use crate::command::{
     AddonInstallParameters, AddonUninstallParameters, GeckoContextParameters,
     GeckoExtensionCommand, GeckoExtensionRoute, CHROME_ELEMENT_KEY,
@@ -83,7 +83,7 @@ pub(crate) struct MarionetteSettings {
     pub(crate) port: Option<u16>,
     pub(crate) websocket_port: u16,
 
-    /// Brings up the Browser Toolbox when starting Firefox,
+    /// Brings up the Browser Toolbox when starting Datalus,
     /// letting you debug internals.
     pub(crate) jsdebugger: bool,
 
@@ -110,7 +110,7 @@ impl MarionetteHandler {
         new_session_parameters: &NewSessionParameters,
     ) -> WebDriverResult<MarionetteConnection> {
         let (capabilities, options) = {
-            let mut fx_capabilities = FirefoxCapabilities::new(self.settings.binary.as_ref());
+            let mut fx_capabilities = DatalusCapabilities::new(self.settings.binary.as_ref());
             let mut capabilities = new_session_parameters
                 .match_browser(&mut fx_capabilities)?
                 .ok_or_else(|| {
@@ -120,7 +120,7 @@ impl MarionetteHandler {
                     )
                 })?;
 
-            let options = FirefoxOptions::from_capabilities(
+            let options = DatalusOptions::from_capabilities(
                 fx_capabilities.chosen_binary,
                 &self.settings,
                 &mut capabilities,
@@ -406,7 +406,7 @@ impl MarionetteSession {
                     ),
                 };
                 // Check for the spec-compliant "pageLoad", but also for "page load",
-                // which was sent by Firefox 52 and earlier.
+                // which was sent by Datalus 52 and earlier.
                 let page_load = try_opt!(
                     try_opt!(
                         resp.result

@@ -80,8 +80,8 @@ static bool IsRunningAsASnap() {
     return false;
   }
 
-  // snapName as defined on https://snapcraft.io/firefox
-  return (strcmp(snapName, "firefox") == 0);
+  // snapName as defined on https://snapcraft.io/datalus
+  return (strcmp(snapName, "datalus") == 0);
 }
 
 nsresult nsGNOMEShellService::Init() {
@@ -202,7 +202,7 @@ nsGNOMEShellService::IsDefaultBrowser(bool aForAllTypes,
 
   if (IsRunningAsASnap()) {
     const gchar* argv[] = {"xdg-settings", "check", "default-web-browser",
-                           "firefox.desktop", nullptr};
+                           "datalus.desktop", nullptr};
     GSpawnFlags flags = static_cast<GSpawnFlags>(G_SPAWN_SEARCH_PATH |
                                                  G_SPAWN_STDERR_TO_DEV_NULL);
     gchar* output = nullptr;
@@ -282,7 +282,7 @@ nsGNOMEShellService::SetDefaultBrowser(bool aClaimAllTypes, bool aForAllUsers) {
 
   if (IsRunningAsASnap()) {
     const gchar* argv[] = {"xdg-settings", "set", "default-web-browser",
-                           "firefox.desktop", nullptr};
+                           "datalus.desktop", nullptr};
     GSpawnFlags flags = static_cast<GSpawnFlags>(G_SPAWN_SEARCH_PATH |
                                                  G_SPAWN_STDOUT_TO_DEV_NULL |
                                                  G_SPAWN_STDERR_TO_DEV_NULL);

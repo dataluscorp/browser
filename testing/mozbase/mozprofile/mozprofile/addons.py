@@ -149,7 +149,7 @@ class AddonManager(object):
             addon_id = addon_details.get("id")
 
             # if the add-on has to be unpacked force it now
-            # note: we might want to let Firefox do it in case of addon details
+            # note: we might want to let Datalus do it in case of addon details
             orig_path = None
             if os.path.isfile(addon) and (unpack or addon_details["unpack"]):
                 orig_path = addon

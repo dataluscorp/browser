@@ -8,5 +8,5 @@ This package assumes yarn is installed.
 
 To build and copy:
 
-- ensure your firefox directory is listed in package.json under `firefox`.
+- ensure your datalus directory is listed in package.json under `datalus`.
 - run `yarn copy-assets`

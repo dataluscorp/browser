@@ -76,7 +76,7 @@ class GeckoProfile(object):
         mozfile.remove(self.profile_arcname)
 
         self.symbol_paths = {
-            "FIREFOX": tempfile.mkdtemp(),
+            "DATALUS": tempfile.mkdtemp(),
             "WINDOWS": tempfile.mkdtemp(),
         }
 
@@ -224,7 +224,7 @@ class GeckoProfile(object):
                 # per library
                 "prefetchMaxSymbolsPerLib": 3,
                 # Default symbol lookup directories
-                "defaultApp": "FIREFOX",
+                "defaultApp": "DATALUS",
                 "defaultOs": "WINDOWS",
                 # Paths to .SYM files, expressed internally as a
                 # mapping of app or platform names to directories
@@ -245,7 +245,7 @@ class GeckoProfile(object):
                 )
             elif os.path.isdir(self.raptor_config["symbols_path"]):
                 sym_path = self.raptor_config["symbols_path"]
-                symbolicator.options["symbolPaths"]["FIREFOX"] = sym_path
+                symbolicator.options["symbolPaths"]["DATALUS"] = sym_path
                 self.cleanup = False
 
         missing_symbols_zip = os.path.join(self.upload_dir, "missingsymbols.zip")

@@ -95,7 +95,7 @@ nsFlatpakHandlerApp::LaunchWithURI(
   // TMPDIR=/tmp is accessible only to the sandbox. That can be the reason
   // why the gtk_show_uri fails there.
   // The workaround is to set TMPDIR environment variable in sandbox to
-  // $XDG_CACHE_HOME/tmp before executing Firefox.
+  // $XDG_CACHE_HOME/tmp before executing Datalus.
   gtk_show_uri(nullptr, spec.get(), GDK_CURRENT_TIME, &error);
   if (error) {
     NS_WARNING(

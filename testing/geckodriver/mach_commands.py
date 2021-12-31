@@ -22,7 +22,7 @@ from mozbuild.base import BinaryNotFoundException
     description="Run the WebDriver implementation for Gecko.",
 )
 @CommandArgument(
-    "--binary", type=str, help="Firefox binary (defaults to the local build)."
+    "--binary", type=str, help="Datalus binary (defaults to the local build)."
 )
 @CommandArgument(
     "params", nargs="...", help="Flags to be passed through to geckodriver."

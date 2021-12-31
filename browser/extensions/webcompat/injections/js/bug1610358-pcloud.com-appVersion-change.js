@@ -5,7 +5,7 @@
  * WebCompat issue #40353 - https://webcompat.com/issues/40353
  *
  * the site expecting navigator.appVersion to contain "mobile",
- * otherwise it's serving a tablet version for Firefox mobile
+ * otherwise it's serving a tablet version for Datalus mobile
  */
 
 /* globals exportFunction */

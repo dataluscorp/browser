@@ -25,7 +25,7 @@ const RUNTIME_NAME = "Lorem ipsum";
  * Test opening and closing the profiler dialog.
  */
 add_task(async function test_opening_profiler_dialog() {
-  const { mocks } = await connectToLocalFirefox();
+  const { mocks } = await connectToLocalDatalus();
   const { document, tab, window } = await openAboutDebugging();
 
   mocks.emitUSBUpdate();
@@ -56,8 +56,8 @@ add_task(async function test_opening_profiler_dialog() {
   await openProfilerDialogWithRealClient(document);
   assertDialogVisible(document);
 
-  info("Navigate to this-firefox and wait until the dialog disappears");
-  document.location.hash = "#/runtime/this-firefox";
+  info("Navigate to this-datalus and wait until the dialog disappears");
+  document.location.hash = "#/runtime/this-datalus";
   await waitUntil(() => !document.querySelector(".qa-profiler-dialog"));
   assertDialogHidden(document);
 
@@ -65,12 +65,12 @@ add_task(async function test_opening_profiler_dialog() {
   await selectRuntime(DEVICE_NAME, RUNTIME_NAME, document);
   assertDialogHidden(document);
 
-  await disconnectFromLocalFirefox({ mocks, doc: document });
+  await disconnectFromLocalDatalus({ mocks, doc: document });
   await removeTab(tab);
 });
 
 add_task(async function test_set_profiler_settings() {
-  const { mocks } = await connectToLocalFirefox();
+  const { mocks } = await connectToLocalDatalus();
   const { document, tab } = await openAboutDebugging();
 
   mocks.emitUSBUpdate();
@@ -91,10 +91,10 @@ add_task(async function test_set_profiler_settings() {
     "The radio button for the preset 'custom' is checked."
   );
 
-  info("Change the preset to Firefox Platform.");
+  info("Change the preset to Datalus Platform.");
   const radioButtonForPlatformPreset = await getNearestInputFromText(
     profilerSettingsDocument,
-    "Firefox Platform"
+    "Datalus Platform"
   );
   radioButtonForPlatformPreset.click();
 
@@ -105,16 +105,16 @@ add_task(async function test_set_profiler_settings() {
   );
   is(
     perfPresetsSelect.value,
-    "firefox-platform",
+    "datalus-platform",
     "The preset has been changed in the devtools panel UI as well."
   );
 
-  await disconnectFromLocalFirefox({ mocks, doc: document });
+  await disconnectFromLocalDatalus({ mocks, doc: document });
   await removeTab(tab);
 });
 
-async function connectToLocalFirefox() {
-  // This is a client to the current Firefox.
+async function connectToLocalDatalus() {
+  // This is a client to the current Datalus.
   const clientWrapper = await createLocalClientWrapper();
 
   // enable USB devices mocks
@@ -128,7 +128,7 @@ async function connectToLocalFirefox() {
   return { mocks, usbClient };
 }
 
-async function disconnectFromLocalFirefox({ doc, mocks }) {
+async function disconnectFromLocalDatalus({ doc, mocks }) {
   info("Remove USB runtime");
   mocks.removeUSBRuntime(RUNTIME_ID);
   mocks.emitUSBUpdate();

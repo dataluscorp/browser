@@ -375,7 +375,7 @@ CheckARMSupport()
 }
 #endif /* defined(__arm__) */
 
-// Enable when Firefox can use it for Android API 16 and 17.
+// Enable when Datalus can use it for Android API 16 and 17.
 // #if defined(__ANDROID__) && (defined(__arm__) || defined(__aarch64__))
 // #include <cpu-features.h>
 // void

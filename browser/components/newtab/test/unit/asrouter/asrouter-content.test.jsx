@@ -421,7 +421,7 @@ describe("ASRouterUISurface", () => {
       wrapper = mount(
         <ASRouterUISurface
           dispatch={dispatchStub}
-          fxaEndpoint="https://accounts.firefox.com"
+          fxaEndpoint="https://accounts.datalus.com"
         />
       );
     });
@@ -442,13 +442,13 @@ describe("ASRouterUISurface", () => {
       await wrapper.instance().fetchFlowParams(params);
 
       assertCalledWithURL(
-        "https://accounts.firefox.com/metrics-flow?foo=1&bar=2"
+        "https://accounts.datalus.com/metrics-flow?foo=1&bar=2"
       );
     });
     it("should return flowId, flowBeginTime, deviceId on a 200 response", async () => {
       const flowInfo = { flowId: "foo", flowBeginTime: 123, deviceId: "bar" };
       globals.fetch
-        .withArgs("https://accounts.firefox.com/metrics-flow")
+        .withArgs("https://accounts.datalus.com/metrics-flow")
         .resolves({
           ok: true,
           status: 200,
@@ -460,11 +460,11 @@ describe("ASRouterUISurface", () => {
     });
 
     describe(".onUserAction", () => {
-      it("if the action.type is ENABLE_FIREFOX_MONITOR, it should generate the right monitor URL given some flowParams", async () => {
+      it("if the action.type is ENABLE_DATALUS_MONITOR, it should generate the right monitor URL given some flowParams", async () => {
         const flowInfo = { flowId: "foo", flowBeginTime: 123, deviceId: "bar" };
         globals.fetch
           .withArgs(
-            "https://accounts.firefox.com/metrics-flow?utm_term=avocado"
+            "https://accounts.datalus.com/metrics-flow?utm_term=avocado"
           )
           .resolves({
             ok: true,
@@ -475,10 +475,10 @@ describe("ASRouterUISurface", () => {
         sandbox.spy(ASRouterUtils, "executeAction");
 
         const msg = {
-          type: "ENABLE_FIREFOX_MONITOR",
+          type: "ENABLE_DATALUS_MONITOR",
           data: {
             args: {
-              url: "https://monitor.firefox.com?foo=bar",
+              url: "https://monitor.datalus.com?foo=bar",
               flowRequestParams: {
                 utm_term: "avocado",
               },
@@ -489,18 +489,18 @@ describe("ASRouterUISurface", () => {
         await wrapper.instance().onUserAction(msg);
 
         assertCalledWithURL(
-          "https://accounts.firefox.com/metrics-flow?utm_term=avocado"
+          "https://accounts.datalus.com/metrics-flow?utm_term=avocado"
         );
         assert.calledWith(ASRouterUtils.executeAction, {
           type: "OPEN_URL",
           data: {
             args: new URL(
-              "https://monitor.firefox.com?foo=bar&deviceId=bar&flowId=foo&flowBeginTime=123"
+              "https://monitor.datalus.com?foo=bar&deviceId=bar&flowId=foo&flowBeginTime=123"
             ).toString(),
           },
         });
       });
-      it("if the action.type is not ENABLE_FIREFOX_MONITOR, it should just call ASRouterUtils.executeAction", async () => {
+      it("if the action.type is not ENABLE_DATALUS_MONITOR, it should just call ASRouterUtils.executeAction", async () => {
         const msg = {
           type: "FOO",
           data: {

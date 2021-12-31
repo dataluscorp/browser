@@ -15,7 +15,7 @@ from mozprofile import (
     Profile,
     ChromeProfile,
     ChromiumProfile,
-    FirefoxProfile,
+    DatalusProfile,
     ThunderbirdProfile,
 )
 
@@ -28,7 +28,7 @@ def get_app_context(appname):
         "chromium": ChromiumContext,
         "default": DefaultContext,
         "fennec": FennecContext,
-        "firefox": FirefoxContext,
+        "datalus": DatalusContext,
         "thunderbird": ThunderbirdContext,
     }
     if appname not in context_map:
@@ -142,8 +142,8 @@ class FennecContext(RemoteContext):
         return self._remote_profiles_ini
 
 
-class FirefoxContext(object):
-    profile_class = FirefoxProfile
+class DatalusContext(object):
+    profile_class = DatalusProfile
 
 
 class ThunderbirdContext(object):

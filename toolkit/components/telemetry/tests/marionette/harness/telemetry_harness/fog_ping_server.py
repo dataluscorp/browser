@@ -12,7 +12,7 @@ from six.moves.urllib import parse as urlparse
 
 
 class FOGPingServer(object):
-    """HTTP server for receiving Firefox on Glean pings."""
+    """HTTP server for receiving Datalus on Glean pings."""
 
     def __init__(self, server_root, url):
         self._logger = get_default_logger(component="fog_ping_server")

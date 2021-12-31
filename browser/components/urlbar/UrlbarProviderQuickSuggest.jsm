@@ -80,7 +80,7 @@ class ProviderQuickSuggest extends UrlbarProvider {
   get helpUrl() {
     return (
       Services.urlFormatter.formatURLPref("app.support.baseURL") +
-      "firefox-suggest"
+      "datalus-suggest"
     );
   }
 
@@ -172,7 +172,7 @@ class ProviderQuickSuggest extends UrlbarProvider {
       sponsoredAdvertiser: suggestion.advertiser,
       isSponsored: suggestion.is_sponsored,
       helpUrl: this.helpUrl,
-      helpL10nId: "firefox-suggest-urlbar-learn-more",
+      helpL10nId: "datalus-suggest-urlbar-learn-more",
       source: suggestion.source,
       requestId: suggestion.request_id,
     };
@@ -342,7 +342,7 @@ class ProviderQuickSuggest extends UrlbarProvider {
   onPrefChanged(pref) {
     switch (pref) {
       case "quicksuggest.dataCollection.enabled":
-        if (!UrlbarPrefs.updatingFirefoxSuggestScenario) {
+        if (!UrlbarPrefs.updatingDatalusSuggestScenario) {
           Services.telemetry.recordEvent(
             TELEMETRY_EVENT_CATEGORY,
             "data_collect_toggled",
@@ -351,7 +351,7 @@ class ProviderQuickSuggest extends UrlbarProvider {
         }
         break;
       case "suggest.quicksuggest.nonsponsored":
-        if (!UrlbarPrefs.updatingFirefoxSuggestScenario) {
+        if (!UrlbarPrefs.updatingDatalusSuggestScenario) {
           Services.telemetry.recordEvent(
             TELEMETRY_EVENT_CATEGORY,
             "enable_toggled",
@@ -360,7 +360,7 @@ class ProviderQuickSuggest extends UrlbarProvider {
         }
         break;
       case "suggest.quicksuggest.sponsored":
-        if (!UrlbarPrefs.updatingFirefoxSuggestScenario) {
+        if (!UrlbarPrefs.updatingDatalusSuggestScenario) {
           Services.telemetry.recordEvent(
             TELEMETRY_EVENT_CATEGORY,
             "sponsored_toggled",

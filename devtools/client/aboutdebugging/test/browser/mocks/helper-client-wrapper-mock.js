@@ -103,10 +103,10 @@ function createClientMock() {
   };
 }
 
-// Create a ClientWrapper mock that can be used to replace the this-firefox runtime.
-function createThisFirefoxClientMock() {
-  const mockThisFirefoxDescription = {
-    name: "Firefox",
+// Create a ClientWrapper mock that can be used to replace the this-datalus runtime.
+function createThisDatalusClientMock() {
+  const mockThisDatalusDescription = {
+    name: "Datalus",
     channel: "nightly",
     version: "63.0",
   };
@@ -120,10 +120,10 @@ function createThisFirefoxClientMock() {
     url: "about:debugging",
   };
 
-  const mockThisFirefoxClient = createClientMock();
-  mockThisFirefoxClient.listTabs = () => [mockAboutDebuggingTab];
-  mockThisFirefoxClient.getDeviceDescription = () => mockThisFirefoxDescription;
+  const mockThisDatalusClient = createClientMock();
+  mockThisDatalusClient.listTabs = () => [mockAboutDebuggingTab];
+  mockThisDatalusClient.getDeviceDescription = () => mockThisDatalusDescription;
 
-  return mockThisFirefoxClient;
+  return mockThisDatalusClient;
 }
-/* exported createThisFirefoxClientMock */
+/* exported createThisDatalusClientMock */

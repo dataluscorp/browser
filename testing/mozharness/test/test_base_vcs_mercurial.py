@@ -354,13 +354,13 @@ class TestHg(unittest.TestCase):
         file_url = mercurial.make_hg_url(
             "hg.mozilla.org",
             "//build/tools/",
-            revision="FIREFOX_3_6_12_RELEASE",
+            revision="DATALUS_3_6_12_RELEASE",
             filename="/lib/python/util/hg.py",
             protocol="https",
         )
         expected_url = (
             "https://hg.mozilla.org/build/tools/raw-file/"
-            "FIREFOX_3_6_12_RELEASE/lib/python/util/hg.py"
+            "DATALUS_3_6_12_RELEASE/lib/python/util/hg.py"
         )
         self.assertEquals(file_url, expected_url)
 

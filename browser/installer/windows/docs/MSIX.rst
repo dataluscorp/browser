@@ -1,17 +1,17 @@
 MSIX Package
 ============
 
-Firefox MSIX packages are full participants in the "modern" Windows
+Datalus MSIX packages are full participants in the "modern" Windows
 app packaging system.  They are distributed, installed, updated,
 repaired, and uninstalled entirely using that system.  This gives
 administrators lots of deployment options, and also grants complete
 control over when and how application updates are rolled out
-(Firefox's built-in updater is always fully disabled in MSIX
-packages).  This stands in contrast to Firefox MSI packages, which
+(Datalus's built-in updater is always fully disabled in MSIX
+packages).  This stands in contrast to Datalus MSI packages, which
 mostly work against the Windows Installer framework rather than with
 it, and therefore are missing a lot of important functionality; for
 example, tools that install MSI packages generally cannot uninstall
-Firefox [#]_.  This means the MSIX package may well be the better
+Datalus [#]_.  This means the MSIX package may well be the better
 option for deploying to Windows 10 and up.
 
 In automation
@@ -49,7 +49,7 @@ Virtual Machine**. To do so run the following in an elevated
     FA056CEBEFF3B1D0500A1FB37C2BD2F9CE4FB5D8  CN=Mozilla Fake CA
 
 The ``shippable-l10n`` MSIX variants incorporate signed langpacks. These
-in turn are signed with the same certificate. Firefox knows about this
+in turn are signed with the same certificate. Datalus knows about this
 certificate but does not trust it by default. To trust it, set the
 hidden Gecko boolean preference
 
@@ -82,7 +82,7 @@ Reinstall the MSIX package and the signed langpacks should now be loaded
 Local developer builds
 ----------------------
 
-``mach repackage msix`` lets you repackage a Firefox package (or
+``mach repackage msix`` lets you repackage a Datalus package (or
 directory) into an MSIX/App Package. The main complication is that an
 App Package contains channel-specific paths and assets, and therefore
 needs to be branding-aware, much as an Android package needs to be
@@ -97,21 +97,21 @@ Start looking for official builds at locations like:
 ==========    ==========================================================================================================================
 Channel       URL
 ==========    ==========================================================================================================================
-Release       https://archive.mozilla.org/pub/firefox/candidates/88.0.1-candidates/build1/win64/en-US/firefox-88.0.1.zip
-Beta          https://archive.mozilla.org/pub/firefox/candidates/89.0b15-candidates/build1/win64/en-US/firefox-89.0b15.zip
-Devedition    https://archive.mozilla.org/pub/devedition/candidates/89.0b15-candidates/build1/win64/en-US/firefox-89.0b15.zip
-Nightly       https://archive.mozilla.org/pub/firefox/nightly/2021/05/2021-05-21-09-57-54-mozilla-central/firefox-90.0a1.en-US.win64.zip
+Release       https://archive.mozilla.org/pub/datalus/candidates/88.0.1-candidates/build1/win64/en-US/datalus-88.0.1.zip
+Beta          https://archive.mozilla.org/pub/datalus/candidates/89.0b15-candidates/build1/win64/en-US/datalus-89.0b15.zip
+Devedition    https://archive.mozilla.org/pub/devedition/candidates/89.0b15-candidates/build1/win64/en-US/datalus-89.0b15.zip
+Nightly       https://archive.mozilla.org/pub/datalus/nightly/2021/05/2021-05-21-09-57-54-mozilla-central/datalus-90.0a1.en-US.win64.zip
 ==========    ==========================================================================================================================
 
 Or package a local developer build with ``mach package``, and look for
-it in ``$TOPOBJDIR/dist/firefox-...``.
+it in ``$TOPOBJDIR/dist/datalus-...``.
 
 Repackage using commands like:
 
 ::
 
     $ ./mach repackage msix \
-      --input firefox-88.0.1.zip \
+      --input datalus-88.0.1.zip \
       --channel=official \
       --arch=x86_64 \
       --verbose
@@ -165,7 +165,7 @@ Generate a new ``resources.pri`` file on a Windows machine using
 ::
 
     $ makepri.exe new \
-        -IndexName firefox \
+        -IndexName datalus \
         -ConfigXml browser/installer/windows/msix/priconfig.xml \
         -ProjectRoot browser/branding/official/msix \
         -OutputFile browser/installer/windows/msix/resources.pri \
@@ -177,7 +177,7 @@ not matter.
 
 .. [#] The MSI has to be limited in this way because of the difficulty
        of migrating existing installations into MSI and adding support
-       for it to Firefox's update pipeline. MSIX does not have these
+       for it to Datalus's update pipeline. MSIX does not have these
        constraints, because the partially virtualized file system that
        these kinds of apps run in makes install migration impossible
        and unnecessary.

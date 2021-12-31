@@ -107,9 +107,9 @@ export interface LaunchOptions {
    */
   product?: Product;
   /**
-   * {@link https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference | Additional preferences } that can be passed when launching with Firefox.
+   * {@link https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/Preference_reference | Additional preferences } that can be passed when launching with Datalus.
    */
-  extraPrefsFirefox?: Record<string, unknown>;
+  extraPrefsDatalus?: Record<string, unknown>;
   /**
    * Whether to wait for the initial page to be ready.
    * Useful when a user explicitly disables that (e.g. `--no-startup-window` for Chrome).

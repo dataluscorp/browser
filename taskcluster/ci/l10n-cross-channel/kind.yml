@@ -29,7 +29,7 @@ jobs:
                 TASK_ID: {"task-reference": "<self>"}
                 TASKCLUSTER_PROXY_URL: http://taskcluster
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
             tier: 1
             kind: build
             symbol: Rel(l10n-cross-channel)

@@ -17,7 +17,7 @@ use std::process::{Child, Command, Stdio};
 use std::thread;
 use std::time;
 
-use crate::firefox_args::Arg;
+use crate::datalus_args::Arg;
 
 pub trait Runner {
     type Process;
@@ -69,7 +69,7 @@ pub trait RunnerProcess {
     /// Waits for the process to exit completely, killing it if it does not stop within `timeout`,
     /// and returns the status that it exited with.
     ///
-    /// Firefox' integrated background monitor observes long running threads during shutdown and
+    /// Datalus' integrated background monitor observes long running threads during shutdown and
     /// kills these after 63 seconds.  If the process fails to exit within the duration of
     /// `timeout`, it is forcefully killed.
     ///
@@ -125,12 +125,12 @@ impl From<PrefReaderError> for RunnerError {
 }
 
 #[derive(Debug)]
-pub struct FirefoxProcess {
+pub struct DatalusProcess {
     process: Child,
     profile: Profile,
 }
 
-impl RunnerProcess for FirefoxProcess {
+impl RunnerProcess for DatalusProcess {
     fn try_wait(&mut self) -> io::Result<Option<process::ExitStatus>> {
         self.process.try_wait()
     }
@@ -175,7 +175,7 @@ impl RunnerProcess for FirefoxProcess {
 }
 
 #[derive(Debug)]
-pub struct FirefoxRunner {
+pub struct DatalusRunner {
     path: PathBuf,
     profile: Profile,
     args: Vec<OsString>,
@@ -184,17 +184,17 @@ pub struct FirefoxRunner {
     stderr: Option<Stdio>,
 }
 
-impl FirefoxRunner {
-    /// Initialise Firefox process runner.
+impl DatalusRunner {
+    /// Initialise Datalus process runner.
     ///
     /// On macOS, `path` can optionally point to an application bundle,
-    /// i.e. _/Applications/Firefox.app_, as well as to an executable program
-    /// such as _/Applications/Firefox.app/Content/MacOS/firefox-bin_.
-    pub fn new(path: &Path, profile: Profile) -> FirefoxRunner {
+    /// i.e. _/Applications/Datalus.app_, as well as to an executable program
+    /// such as _/Applications/Datalus.app/Content/MacOS/datalus-bin_.
+    pub fn new(path: &Path, profile: Profile) -> DatalusRunner {
         let mut envs: HashMap<OsString, OsString> = HashMap::new();
         envs.insert("MOZ_NO_REMOTE".into(), "1".into());
 
-        FirefoxRunner {
+        DatalusRunner {
             path: path.to_path_buf(),
             envs,
             profile,
@@ -205,10 +205,10 @@ impl FirefoxRunner {
     }
 }
 
-impl Runner for FirefoxRunner {
-    type Process = FirefoxProcess;
+impl Runner for DatalusRunner {
+    type Process = DatalusProcess;
 
-    fn arg<S>(&mut self, arg: S) -> &mut FirefoxRunner
+    fn arg<S>(&mut self, arg: S) -> &mut DatalusRunner
     where
         S: AsRef<OsStr>,
     {
@@ -216,7 +216,7 @@ impl Runner for FirefoxRunner {
         self
     }
 
-    fn args<I, S>(&mut self, args: I) -> &mut FirefoxRunner
+    fn args<I, S>(&mut self, args: I) -> &mut DatalusRunner
     where
         I: IntoIterator<Item = S>,
         S: AsRef<OsStr>,
@@ -227,7 +227,7 @@ impl Runner for FirefoxRunner {
         self
     }
 
-    fn env<K, V>(&mut self, key: K, value: V) -> &mut FirefoxRunner
+    fn env<K, V>(&mut self, key: K, value: V) -> &mut DatalusRunner
     where
         K: AsRef<OsStr>,
         V: AsRef<OsStr>,
@@ -236,7 +236,7 @@ impl Runner for FirefoxRunner {
         self
     }
 
-    fn envs<I, K, V>(&mut self, envs: I) -> &mut FirefoxRunner
+    fn envs<I, K, V>(&mut self, envs: I) -> &mut DatalusRunner
     where
         I: IntoIterator<Item = (K, V)>,
         K: AsRef<OsStr>,
@@ -264,7 +264,7 @@ impl Runner for FirefoxRunner {
         self
     }
 
-    fn start(mut self) -> Result<FirefoxProcess, RunnerError> {
+    fn start(mut self) -> Result<DatalusProcess, RunnerError> {
         self.profile.user_prefs()?.write()?;
 
         let stdout = self.stdout.unwrap_or_else(Stdio::inherit);
@@ -289,7 +289,7 @@ impl Runner for FirefoxRunner {
             }
         }
         // -foreground is only supported on Mac, and shouldn't be passed
-        // to Firefox on other platforms (bug 1720502).
+        // to Datalus on other platforms (bug 1720502).
         if cfg!(target_os = "macos") && !seen_foreground {
             cmd.arg("-foreground");
         }
@@ -302,7 +302,7 @@ impl Runner for FirefoxRunner {
 
         info!("Running command: {:?}", cmd);
         let process = cmd.spawn()?;
-        Ok(FirefoxProcess {
+        Ok(DatalusProcess {
             process,
             profile: self.profile,
         })
@@ -318,9 +318,9 @@ pub mod platform {
         path
     }
 
-    /// Searches the system path for `firefox`.
-    pub fn firefox_default_path() -> Option<PathBuf> {
-        find_binary("firefox")
+    /// Searches the system path for `datalus`.
+    pub fn datalus_default_path() -> Option<PathBuf> {
+        find_binary("datalus")
     }
 
     pub fn arg_prefix_char(c: char) -> bool {
@@ -358,12 +358,12 @@ pub mod platform {
         path
     }
 
-    /// Searches the system path for `firefox-bin`, then looks for
-    /// `Applications/Firefox.app/Contents/MacOS/firefox-bin` as well
-    /// as `Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin`
+    /// Searches the system path for `datalus-bin`, then looks for
+    /// `Applications/Datalus.app/Contents/MacOS/datalus-bin` as well
+    /// as `Applications/Datalus Nightly.app/Contents/MacOS/datalus-bin`
     /// under both `/` (system root) and the user home directory.
-    pub fn firefox_default_path() -> Option<PathBuf> {
-        if let Some(path) = find_binary("firefox-bin") {
+    pub fn datalus_default_path() -> Option<PathBuf> {
+        if let Some(path) = find_binary("datalus-bin") {
             return Some(path);
         }
 
@@ -371,16 +371,16 @@ pub mod platform {
         for &(prefix_home, trial_path) in [
             (
                 false,
-                "/Applications/Firefox.app/Contents/MacOS/firefox-bin",
+                "/Applications/Datalus.app/Contents/MacOS/datalus-bin",
             ),
-            (true, "Applications/Firefox.app/Contents/MacOS/firefox-bin"),
+            (true, "Applications/Datalus.app/Contents/MacOS/datalus-bin"),
             (
                 false,
-                "/Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin",
+                "/Applications/Datalus Nightly.app/Contents/MacOS/datalus-bin",
             ),
             (
                 true,
-                "Applications/Firefox Nightly.app/Contents/MacOS/firefox-bin",
+                "Applications/Datalus Nightly.app/Contents/MacOS/datalus-bin",
             ),
         ]
         .iter()
@@ -415,19 +415,19 @@ pub mod platform {
         path
     }
 
-    /// Searches the Windows registry, then the system path for `firefox.exe`.
+    /// Searches the Windows registry, then the system path for `datalus.exe`.
     ///
     /// It _does not_ currently check the `HKEY_CURRENT_USER` tree.
-    pub fn firefox_default_path() -> Option<PathBuf> {
-        if let Ok(Some(path)) = firefox_registry_path() {
+    pub fn datalus_default_path() -> Option<PathBuf> {
+        if let Ok(Some(path)) = datalus_registry_path() {
             if is_binary(&path) {
                 return Some(path);
             }
         };
-        find_binary("firefox.exe")
+        find_binary("datalus.exe")
     }
 
-    fn firefox_registry_path() -> Result<Option<PathBuf>, Error> {
+    fn datalus_registry_path() -> Result<Option<PathBuf>, Error> {
         let hklm = RegKey::predef(HKEY_LOCAL_MACHINE);
         for subtree_key in ["SOFTWARE", "SOFTWARE\\WOW6432Node"].iter() {
             let subtree = hklm.open_subkey_with_flags(subtree_key, KEY_READ)?;
@@ -478,7 +478,7 @@ pub mod platform {
 
     /// Returns `None` for all other operating systems than Linux, macOS, and
     /// Windows.
-    pub fn firefox_default_path() -> Option<PathBuf> {
+    pub fn datalus_default_path() -> Option<PathBuf> {
         None
     }
 

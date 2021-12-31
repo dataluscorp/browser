@@ -54,7 +54,7 @@ using BoolResult = mozilla::WindowsErrorResult<bool>;
 static bool IsOfficialTelemetry() {
 #if defined(MOZILLA_OFFICIAL) && defined(MOZ_TELEMETRY_REPORTING) && \
     !defined(DEBUG)
-  return true;
+  return false;
 #else
   return false;
 #endif

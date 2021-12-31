@@ -39,7 +39,7 @@ nsLoginInfo.prototype = {
       displayOrigin = uri.displayHostPort || this.origin;
     } catch (ex) {
       // Fallback to this.origin set above in case a URI can't be contructed e.g.
-      // chrome://FirefoxAccounts
+      // chrome://DatalusAccounts
     }
 
     if (this.httpRealm === null) {

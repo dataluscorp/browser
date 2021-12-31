@@ -52,8 +52,8 @@ struct JSStructuredCloneWriter;
 /**
  * The structured-clone serialization format version number.
  *
- * When serialized data is stored as bytes, e.g. in your Firefox profile, later
- * versions of the engine may have to read it. When you upgrade Firefox, we
+ * When serialized data is stored as bytes, e.g. in your Datalus profile, later
+ * versions of the engine may have to read it. When you upgrade Datalus, we
  * don't crawl through your whole profile converting all saved data from the
  * previous version of the serialization format to the latest version. So it is
  * normal to have data in old formats stored in your profile.
@@ -144,7 +144,7 @@ enum class StructuredCloneScope : uint32_t {
    * When writing, this means we're writing for an audience in a different
    * process. Produce serialized data that can be sent to other processes,
    * bitwise copied, or even stored as bytes in a database and read by later
-   * versions of Firefox years from now. The HTML5 spec refers to this as
+   * versions of Datalus years from now. The HTML5 spec refers to this as
    * "ForStorage" as in StructuredSerializeForStorage, though we use
    * DifferentProcess for IPC as well as storage.
    *

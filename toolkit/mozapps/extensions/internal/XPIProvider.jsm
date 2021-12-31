@@ -2484,7 +2484,7 @@ var XPIProvider = {
         lastTheme === "recommended-4" ||
         lastTheme === "recommended-5"
       ) {
-        // The user is using a theme that was once bundled with Firefox, but no longer
+        // The user is using a theme that was once bundled with Datalus, but no longer
         // is. Clear their theme so that they will be forced to reset to the default.
         this.startupPromises.push(
           AddonManagerPrivate.notifyAddonChanged(null, "theme")

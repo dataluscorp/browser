@@ -261,7 +261,7 @@
     cursor: default;
     opacity: 0.9;
 }
-.pkt_ext_containersignup .signup-btn-firefox,
+.pkt_ext_containersignup .signup-btn-datalus,
 .pkt_ext_containersignup .signup-btn-email,
 .pkt_ext_containersignup .signupinterim-btn-login,
 .pkt_ext_containersignup .signupinterim-btn-signup,
@@ -275,13 +275,13 @@
     position: relative;
     z-index: 10;
 }
-.pkt_ext_containersignup .signup-btn-firefox {
+.pkt_ext_containersignup .signup-btn-datalus {
     min-width: 14.5em;
     position: relative;
     padding: 0;
 }
-.pkt_ext_containersignup .signup-btn-firefox .logo {
-    background: url(../img/signup_firefoxlogo@1x.png) center center no-repeat;
+.pkt_ext_containersignup .signup-btn-datalus .logo {
+    background: url(../img/signup_dataluslogo@1x.png) center center no-repeat;
     height: 2.6em;
     inset-inline-start: 10px;
     margin: 0;
@@ -290,22 +290,22 @@
     position: absolute;
 }
 @media (min-resolution: 1.1dppx) {
-    .pkt_ext_containersignup .signup-btn-firefox .logo {
-        background-image: url(../img/signup_firefoxlogo@2x.png);
+    .pkt_ext_containersignup .signup-btn-datalus .logo {
+        background-image: url(../img/signup_dataluslogo@2x.png);
         background-size: 22px 22px;
     }
 }
 .pkt_ext_containersignup .forgotreset-btn-change {
     margin-bottom: 2em;
 }
-.pkt_ext_containersignup .signup-btn-firefox .text {
+.pkt_ext_containersignup .signup-btn-datalus .text {
     display: inline-block;
     padding: 0.8em 1.625em;
     position: relative;
     text-shadow: none;
     white-space: nowrap;
 }
-.pkt_ext_containersignup .signup-btn-firefox .text {
+.pkt_ext_containersignup .signup-btn-datalus .text {
     color: #fff;
 }
 .pkt_ext_containersignup .btn-disabled .text {
@@ -325,19 +325,19 @@
 .pkt_ext_signup_ru .pkt_ext_introstorytwo .pkt_ext_tagline {
     margin-bottom: 0.5em;
 }
-.pkt_ext_signup_ja .signup-btn-firefox .text,
-.pkt_ext_signup_ru .signup-btn-firefox .text {
+.pkt_ext_signup_ja .signup-btn-datalus .text,
+.pkt_ext_signup_ru .signup-btn-datalus .text {
     inset-inline-start: 15px;
 }
-.pkt_ext_signup_de .signup-btn-firefox .logo,
-.pkt_ext_signup_ja .signup-btn-firefox .logo,
-.pkt_ext_signup_ru .signup-btn-firefox .logo {
+.pkt_ext_signup_de .signup-btn-datalus .logo,
+.pkt_ext_signup_ja .signup-btn-datalus .logo,
+.pkt_ext_signup_ru .signup-btn-datalus .logo {
     height: 2.4em;
 }
 @media (min-resolution: 1.1dppx) {
-    .pkt_ext_signup_de .signup-btn-firefox .logo,
-    .pkt_ext_signup_ja .signup-btn-firefox .logo,
-    .pkt_ext_signup_ru .signup-btn-firefox .logo {
+    .pkt_ext_signup_de .signup-btn-datalus .logo,
+    .pkt_ext_signup_ja .signup-btn-datalus .logo,
+    .pkt_ext_signup_ru .signup-btn-datalus .logo {
         height: 2.5em;
     }
 }
@@ -352,9 +352,9 @@
 .pkt_ext_signup_ru .pkt_ext_logo {
     padding-top: 15px;
 }
-.pkt_ext_signup_overflow.pkt_ext_signup_de .signup-btn-firefox .logo,
-.pkt_ext_signup_overflow.pkt_ext_signup_es .signup-btn-firefox .logo,
-.pkt_ext_signup_overflow.pkt_ext_signup_ja .signup-btn-firefox .logo,
-.pkt_ext_signup_overflow.pkt_ext_signup_ru .signup-btn-firefox .logo {
+.pkt_ext_signup_overflow.pkt_ext_signup_de .signup-btn-datalus .logo,
+.pkt_ext_signup_overflow.pkt_ext_signup_es .signup-btn-datalus .logo,
+.pkt_ext_signup_overflow.pkt_ext_signup_ja .signup-btn-datalus .logo,
+.pkt_ext_signup_overflow.pkt_ext_signup_ru .signup-btn-datalus .logo {
     display: none;
 }

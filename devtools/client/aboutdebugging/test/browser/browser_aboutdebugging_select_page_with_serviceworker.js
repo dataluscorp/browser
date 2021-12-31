@@ -10,7 +10,7 @@ const WORKER_NAME = "testserviceworker";
 // Test that navigating from:
 // - a remote runtime page that contains a service worker
 // to:
-// - this firefox
+// - this datalus
 // does not crash. See Bug 1519088.
 add_task(async function() {
   const mocks = new Mocks();
@@ -18,7 +18,7 @@ add_task(async function() {
   const { document, tab, window } = await openAboutDebugging({
     enableWorkerUpdates: true,
   });
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Prepare Network client mock");
   const networkClient = mocks.createNetworkRuntime(NETWORK_RUNTIME_HOST, {
@@ -46,33 +46,33 @@ add_task(async function() {
   info("Wait until the service worker is displayed");
   await waitUntil(() => findDebugTargetByText(WORKER_NAME, document));
 
-  info("Go to This Firefox again");
-  const thisFirefoxString = getThisFirefoxString(window);
-  const thisFirefoxSidebarItem = findSidebarItemByText(
-    thisFirefoxString,
+  info("Go to This Datalus again");
+  const thisDatalusString = getThisDatalusString(window);
+  const thisDatalusSidebarItem = findSidebarItemByText(
+    thisDatalusString,
     document
   );
-  const thisFirefoxLink = thisFirefoxSidebarItem.querySelector(
+  const thisDatalusLink = thisDatalusSidebarItem.querySelector(
     ".qa-sidebar-link"
   );
-  info("Click on the ThisFirefox item in the sidebar");
+  info("Click on the ThisDatalus item in the sidebar");
   const requestsSuccess = waitForRequestsSuccess(window.AboutDebugging.store);
-  thisFirefoxLink.click();
+  thisDatalusLink.click();
 
   info("Wait for all target requests to complete");
   await requestsSuccess;
 
-  info("Check that the runtime info is rendered for This Firefox");
-  const thisFirefoxRuntimeInfo = document.querySelector(".qa-runtime-name");
+  info("Check that the runtime info is rendered for This Datalus");
+  const thisDatalusRuntimeInfo = document.querySelector(".qa-runtime-name");
   ok(
-    thisFirefoxRuntimeInfo,
-    "Runtime info for this-firefox runtime is displayed"
+    thisDatalusRuntimeInfo,
+    "Runtime info for this-datalus runtime is displayed"
   );
 
-  const text = thisFirefoxRuntimeInfo.textContent;
+  const text = thisDatalusRuntimeInfo.textContent;
   ok(
-    text.includes("Firefox") && text.includes("63.0"),
-    "this-firefox runtime info shows the correct values"
+    text.includes("Datalus") && text.includes("63.0"),
+    "this-datalus runtime info shows the correct values"
   );
 
   await removeTab(tab);

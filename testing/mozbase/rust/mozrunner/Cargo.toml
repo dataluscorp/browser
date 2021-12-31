@@ -2,7 +2,7 @@
 name = "mozrunner"
 version = "0.13.0"
 authors = ["Mozilla"]
-description = "Reliable Firefox process management."
+description = "Reliable Datalus process management."
 repository = "https://hg.mozilla.org/mozilla-central/file/tip/testing/mozbase/rust/mozrunner"
 license = "MPL-2.0"
 edition = "2018"
@@ -19,4 +19,4 @@ winreg = "0.5"
 dirs = "2"
 
 [[bin]]
-name = "firefox-default-path"
+name = "datalus-default-path"

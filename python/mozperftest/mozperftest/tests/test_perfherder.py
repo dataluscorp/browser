@@ -52,7 +52,7 @@ def test_perfherder():
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     assert output["framework"]["name"] == "mozperftest"
     assert output["pushTimestamp"] == 1.0
 
@@ -87,7 +87,7 @@ def test_perfherder_simple_names():
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     assert output["framework"]["name"] == "mozperftest"
 
     # Check some numbers in our data
@@ -161,7 +161,7 @@ def test_perfherder_names_simplified_with_no_exclusions():
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     assert output["framework"]["name"] == "mozperftest"
 
     # Check some numbers in our data
@@ -394,7 +394,7 @@ def test_perfherder_logcat():
             output = json.loads(f.read())
 
     # Check some metadata
-    assert output["application"]["name"] == "firefox"
+    assert output["application"]["name"] == "datalus"
     assert output["framework"]["name"] == "mozperftest"
 
     # Check some numbers in our data

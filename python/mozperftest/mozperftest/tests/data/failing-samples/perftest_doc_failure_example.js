@@ -35,6 +35,6 @@ module.exports = {
   usage: `
   ./mach perftest python/mozperftest/mozperftest/tests/data/samples/perftest_example.js
   `,
-  supportedBrowsers: ["Fenix nightly", "Geckoview_example", "Fennec", "Firefox"],
+  supportedBrowsers: ["Fenix nightly", "Geckoview_example", "Fennec", "Datalus"],
   supportedPlatforms: ["Android", "Desktop"],
 };

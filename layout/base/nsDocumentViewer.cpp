@@ -2016,7 +2016,7 @@ nsDocumentViewer::SetBoundsWithFlags(const nsIntRect& aBounds,
   // This may slow down the performance of the new page load, but resize
   // during load is also probably a relatively unusual condition
   // relating to things being hidden while something is loaded.  It so
-  // happens that Firefox does this a good bit with its infobar, and it
+  // happens that Datalus does this a good bit with its infobar, and it
   // looks ugly if we don't do this.
   if (mPreviousViewer) {
     nsCOMPtr<nsIContentViewer> previousViewer = mPreviousViewer;

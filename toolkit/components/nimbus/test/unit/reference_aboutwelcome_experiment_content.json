@@ -30,7 +30,7 @@
           },
           "position": "top",
           "action": {
-            "type": "SHOW_FIREFOX_ACCOUNTS",
+            "type": "SHOW_DATALUS_ACCOUNTS",
             "addFlowParams": true,
             "data": {
               "entrypoint": "activity-stream-firstrun"
@@ -167,7 +167,7 @@
       "order": 3,
       "content": {
         "zap": true,
-        "title": "Make Firefox your default browser",
+        "title": "Make Datalus your default browser",
         "subtitle": "Speed, safety, and privacy every time you browse.",
         "primary_button": {
           "label": "Make Default",

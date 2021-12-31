@@ -10,7 +10,7 @@ const {
   EVENTS,
   TEST_EVENTS,
 } = require("devtools/client/netmonitor/src/constants");
-const FirefoxDataProvider = require("devtools/client/netmonitor/src/connector/firefox-data-provider");
+const DatalusDataProvider = require("devtools/client/netmonitor/src/connector/datalus-data-provider");
 const {
   getDisplayedTimingMarker,
 } = require("devtools/client/netmonitor/src/selectors/index");
@@ -25,7 +25,7 @@ loader.lazyRequireGetter(
 const DEVTOOLS_ENABLE_PERSISTENT_LOG_PREF = "devtools.netmonitor.persistlog";
 
 /**
- * Connector to Firefox backend.
+ * Connector to Datalus backend.
  */
 class Connector {
   constructor() {
@@ -87,7 +87,7 @@ class Connector {
       this.networkFront = await this.watcherFront.getNetworkParentActor();
     }
 
-    this.dataProvider = new FirefoxDataProvider({
+    this.dataProvider = new DatalusDataProvider({
       commands: this.commands,
       actions: this.actions,
       owner: this.owner,

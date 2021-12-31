@@ -187,7 +187,7 @@ def extract_dmg_contents(dmgfile, destdir):
 
     if is_linux:
         with mozfile.TemporaryDirectory() as tmpdir:
-            hfs_file = os.path.join(tmpdir, "firefox.hfs")
+            hfs_file = os.path.join(tmpdir, "datalus.hfs")
             subprocess.check_call(
                 [buildconfig.substs["DMG_TOOL"], "extract", dmgfile, hfs_file],
                 # dmg is seriously chatty

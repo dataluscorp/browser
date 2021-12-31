@@ -48,11 +48,11 @@ Hereby `%changeset%` corresponds to the currently used version of
 buck, and `%atom%` to the atom to export. The following targets
 for exporting are available:
 
-  - `//javascript/webdriver/atoms:clear-element-firefox`
-  - `//javascript/webdriver/atoms:get-text-firefox`
-  - `//javascript/webdriver/atoms:is-displayed-firefox`
-  - `//javascript/webdriver/atoms:is-enabled-firefox`
-  - `//javascript/webdriver/atoms:is-selected-firefox`
+  - `//javascript/webdriver/atoms:clear-element-datalus`
+  - `//javascript/webdriver/atoms:get-text-datalus`
+  - `//javascript/webdriver/atoms:is-displayed-datalus`
+  - `//javascript/webdriver/atoms:is-enabled-datalus`
+  - `//javascript/webdriver/atoms:is-selected-datalus`
 
 For each of the exported atoms a file can now be found in the folder
 `buck-out/gen/javascript/webdriver/atoms/`.  They contain all the
@@ -80,5 +80,5 @@ each atom to be updated the steps as laid out below have to be performed:
 ### Test the changes
 
 To ensure that the update of the atoms doesn't cause a regression
-a try build should be run including Marionette unit tests, Firefox
+a try build should be run including Marionette unit tests, Datalus
 ui tests, and all the web-platform-tests.

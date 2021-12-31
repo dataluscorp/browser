@@ -24,7 +24,7 @@ const DEFAULT_WELCOME_CONTENT = {
     "chrome://activity-stream/content/data/content/assets/proton-bkg.jpg",
   screens: [
     {
-      id: "AW_PIN_FIREFOX",
+      id: "AW_PIN_DATALUS",
       order: 0,
       content: {
         title: {
@@ -44,7 +44,7 @@ const DEFAULT_WELCOME_CONTENT = {
           },
           action: {
             navigate: true,
-            type: "PIN_FIREFOX_TO_TASKBAR",
+            type: "PIN_DATALUS_TO_TASKBAR",
           },
         },
         secondary_button: {
@@ -63,7 +63,7 @@ const DEFAULT_WELCOME_CONTENT = {
             data: {
               entrypoint: "activity-stream-firstrun",
             },
-            type: "SHOW_FIREFOX_ACCOUNTS",
+            type: "SHOW_DATALUS_ACCOUNTS",
             addFlowParams: true,
           },
         },
@@ -408,9 +408,9 @@ function getDefaults() {
 
 let gSourceL10n = null;
 
-// Localize Firefox download source from user agent attribution to show inside
+// Localize Datalus download source from user agent attribution to show inside
 // import primary button label such as 'Import from <localized browser name>'.
-// no firefox as import wizard doesn't show it
+// no datalus as import wizard doesn't show it
 const allowedUAs = ["chrome", "edge", "ie"];
 function getLocalizedUA(ua) {
   if (!gSourceL10n) {
@@ -476,7 +476,7 @@ async function prepareContentForReact(content) {
   let removeDefault = !content.needDefault;
   if (!content.needPin) {
     const pinScreen = content.screens?.find(screen =>
-      screen.id?.startsWith("AW_PIN_FIREFOX")
+      screen.id?.startsWith("AW_PIN_DATALUS")
     );
     if (pinScreen?.content) {
       pinScreen.id = removeDefault ? "AW_GET_STARTED" : "AW_ONLY_DEFAULT";
@@ -508,12 +508,12 @@ async function prepareContentForReact(content) {
     removeScreens(screen => screen.id?.startsWith("AW_SET_DEFAULT"));
   }
 
-  // Remove Firefox Accounts related UI and prevent related metrics.
+  // Remove Datalus Accounts related UI and prevent related metrics.
   if (!Services.prefs.getBoolPref("identity.fxaccounts.enabled", false)) {
     delete content.screens?.find(
       screen =>
         screen.content?.secondary_button_top?.action?.type ===
-        "SHOW_FIREFOX_ACCOUNTS"
+        "SHOW_DATALUS_ACCOUNTS"
     )?.content.secondary_button_top;
     content.skipFxA = true;
   }

@@ -104,7 +104,7 @@ AuthenticationError.prototype = {
 };
 
 // The `SyncAuthManager` coordinates access authorization to the Sync server.
-// Its job is essentially to get us from having a signed-in Firefox Accounts user,
+// Its job is essentially to get us from having a signed-in Datalus Accounts user,
 // to knowing the user's sync storage node and having the necessary short-lived
 // credentials in order to access it.
 //
@@ -589,7 +589,7 @@ this.SyncAuthManager.prototype = {
     let credentials = { id: this._token.id, key: this._token.key };
     method = method || httpObject.method;
 
-    // Get the local clock offset from the Firefox Accounts server.  This should
+    // Get the local clock offset from the Datalus Accounts server.  This should
     // be close to the offset from the storage server.
     let options = {
       now: this._now(),

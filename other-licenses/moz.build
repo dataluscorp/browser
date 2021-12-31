@@ -8,7 +8,7 @@ with Files('**'):
     BUG_COMPONENT = ('Core', 'General')
 
 with Files('7zstub/**'):
-    BUG_COMPONENT = ('Firefox', 'Installer')
+    BUG_COMPONENT = ('Datalus', 'Installer')
 
 with Files('atk-1.0/**'):
     BUG_COMPONENT = ('Core', 'Disability Access APIs')
@@ -20,7 +20,7 @@ with Files('ia2/**'):
     BUG_COMPONENT = ('Core', 'Disability Access APIs')
 
 with Files('nsis/**'):
-    BUG_COMPONENT = ('Firefox', 'Installer')
+    BUG_COMPONENT = ('Datalus', 'Installer')
 
 with Files('ply/**'):
     BUG_COMPONENT = ('Core', 'JavaScript Engine')

@@ -9,7 +9,7 @@
 
 // The replace-malloc bridge allows bidirectional method calls between
 // a program and the replace-malloc library that has been loaded for it.
-// In Firefox, this is used to allow method calls between code in libxul
+// In Datalus, this is used to allow method calls between code in libxul
 // and code in the replace-malloc library, without libxul needing to link
 // against that library or vice-versa.
 //
@@ -31,8 +31,8 @@
 // an instance of a class with only virtual methods.
 //
 // Binary compatibility is expected to be maintained, such that a newer
-// Firefox can be used with an old replace-malloc library, or an old
-// Firefox can be used with a newer replace-malloc library. As such, only
+// Datalus can be used with an old replace-malloc library, or an old
+// Datalus can be used with a newer replace-malloc library. As such, only
 // new virtual methods should be added to ReplaceMallocBridge, and
 // each change should have a corresponding bump of the mVersion value.
 // At the same time, each virtual method should have a corresponding

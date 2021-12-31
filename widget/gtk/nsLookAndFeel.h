@@ -169,7 +169,7 @@ class nsLookAndFeel final : public nsXPLookAndFeel {
   void EnsureInit();
 
   void RestoreSystemTheme();
-  bool MatchFirefoxThemeIfNeeded();
+  bool MatchDatalusThemeIfNeeded();
 };
 
 #endif

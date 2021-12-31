@@ -551,7 +551,7 @@ uint32_t nsRFPService::GetSpoofedPresentedFrames(double aTime, uint32_t aWidth,
 }
 
 static uint32_t GetSpoofedVersion() {
-  // If we can't get the current Firefox version, use a hard-coded ESR version.
+  // If we can't get the current Datalus version, use a hard-coded ESR version.
   const uint32_t kKnownEsrVersion = 78;
 
   nsresult rv;
@@ -566,39 +566,39 @@ static uint32_t GetSpoofedVersion() {
   // The browser version will be spoofed as the last ESR version.
   // By doing so, the anonymity group will cover more versions instead of one
   // version.
-  uint32_t firefoxVersion = appVersion.ToInteger(&rv);
+  uint32_t datalusVersion = appVersion.ToInteger(&rv);
   NS_ENSURE_SUCCESS(rv, kKnownEsrVersion);
 
-  // Some add-on tests set the Firefox version to low numbers like 1 or 42,
+  // Some add-on tests set the Datalus version to low numbers like 1 or 42,
   // which causes the spoofed version calculation's unsigned int subtraction
-  // below to wrap around zero to Firefox versions like 4294967287. This
+  // below to wrap around zero to Datalus versions like 4294967287. This
   // function should always return an ESR version, so return a good one now.
-  if (firefoxVersion < kKnownEsrVersion) {
+  if (datalusVersion < kKnownEsrVersion) {
     return kKnownEsrVersion;
   }
 
 #ifdef DEBUG
-  // If we are running in Firefox ESR, determine whether the formula of ESR
+  // If we are running in Datalus ESR, determine whether the formula of ESR
   // version has changed.  Once changed, we must update the formula in this
   // function.
   if (!strcmp(MOZ_STRINGIFY(MOZ_UPDATE_CHANNEL), "esr")) {
-    MOZ_ASSERT(((firefoxVersion - kKnownEsrVersion) % 13) == 0,
+    MOZ_ASSERT(((datalusVersion - kKnownEsrVersion) % 13) == 0,
                "Please update ESR version formula in nsRFPService.cpp");
   }
 #endif  // DEBUG
 
-  // Starting with Firefox 78, a new ESR version will be released every June.
+  // Starting with Datalus 78, a new ESR version will be released every June.
   // We can't accurately calculate the next ESR version, but it will be
-  // probably be every ~13 Firefox releases, assuming four-week release
+  // probably be every ~13 Datalus releases, assuming four-week release
   // cycles. If this assumption is wrong, we won't need to worry about it
   // until ESR 104±1 in 2022. :) We have a debug assert above to catch if the
   // spoofed version doesn't match the actual ESR version then.
   // We infer the last and closest ESR version based on this rule.
   uint32_t spoofedVersion =
-      firefoxVersion - ((firefoxVersion - kKnownEsrVersion) % 13);
+      datalusVersion - ((datalusVersion - kKnownEsrVersion) % 13);
 
   MOZ_ASSERT(spoofedVersion >= kKnownEsrVersion &&
-             spoofedVersion <= firefoxVersion &&
+             spoofedVersion <= datalusVersion &&
              (spoofedVersion - kKnownEsrVersion) % 13 == 0);
 
   return spoofedVersion;
@@ -608,14 +608,14 @@ static uint32_t GetSpoofedVersion() {
 void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
                                        bool isForHTTPHeader) {
   // This function generates the spoofed value of User Agent.
-  // We spoof the values of the platform and Firefox version, which could be
+  // We spoof the values of the platform and Datalus version, which could be
   // used as fingerprinting sources to identify individuals.
   // Reference of the format of User Agent:
   // https://developer.mozilla.org/en-US/docs/Web/API/NavigatorID/userAgent
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent
 
   // These magic numbers are the lengths of the UA string literals below.
-  // Assume three-digit Firefox version numbers so we have room to grow.
+  // Assume three-digit Datalus version numbers so we have room to grow.
   size_t preallocatedLength =
       13 +
       (isForHTTPHeader ? mozilla::ArrayLength(SPOOFED_HTTP_UA_OS)
@@ -626,7 +626,7 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
 
   uint32_t spoofedVersion = GetSpoofedVersion();
 
-  // "Mozilla/5.0 (%s; rv:%d.0) Gecko/%d Firefox/%d.0"
+  // "Mozilla/5.0 (%s; rv:%d.0) Gecko/%d Datalus/%d.0"
   userAgent.AssignLiteral("Mozilla/5.0 (");
 
   if (isForHTTPHeader) {
@@ -646,7 +646,7 @@ void nsRFPService::GetSpoofedUserAgent(nsACString& userAgent,
   userAgent.AppendLiteral(LEGACY_UA_GECKO_TRAIL);
 #endif
 
-  userAgent.AppendLiteral(" Firefox/");
+  userAgent.AppendLiteral(" Datalus/");
   userAgent.AppendInt(spoofedVersion);
   userAgent.AppendLiteral(".0");
 

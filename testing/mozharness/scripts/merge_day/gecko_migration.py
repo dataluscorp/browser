@@ -367,8 +367,8 @@ class GeckoMigration(
 
         # tag m-c again since there are csets between tagging during m-c->m-b merge
         # e.g.
-        # m-c tag during m-c->m-b migration: FIREFOX_BETA_60_BASE
-        # m-c tag we are doing in this method now: FIREFOX_NIGHTLY_60_END
+        # m-c tag during m-c->m-b migration: DATALUS_BETA_60_BASE
+        # m-c tag we are doing in this method now: DATALUS_NIGHTLY_60_END
         # context: https://bugzilla.mozilla.org/show_bug.cgi?id=1431363#c14
         self.hg_tag(
             dirs["abs_to_dir"],
@@ -489,7 +489,7 @@ class GeckoMigration(
         next_version = list(version)
         # bump the second digit
         next_version[1] = str(int(next_version[1]) + 1)
-        # Take major+minor and append '0' accordng to Firefox version schema.
+        # Take major+minor and append '0' accordng to Datalus version schema.
         # 52.0 will become 52.1.0, not 52.1
         next_version = ".".join(next_version[:2] + ["0"])
         for f in self.config["version_files"]:

@@ -66,5 +66,5 @@ e.g.""" % path, 80))
 
     print("""
 
-pip install -r %s/requirements_firefox.txt
+pip install -r %s/requirements_datalus.txt
 """ % path)

@@ -14,7 +14,7 @@
 # operations are needed for the build, and applying the necessary rules to
 # have those in place, relying on make dependencies to get them going.
 #
-# As of writing, only building non-compiled parts of Firefox is supported
+# As of writing, only building non-compiled parts of Datalus is supported
 # here (a few other things are also left out). This is a starting point, with
 # the intent to grow this build system to make it more complete.
 #

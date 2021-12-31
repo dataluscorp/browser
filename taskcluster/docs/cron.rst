@@ -17,7 +17,7 @@ for details on the format and meaning of this file.
 How It Works
 ------------
 
-The `TaskCluster Hooks Service <https://firefox-ci-tc.services.mozilla.com/hooks>`_
+The `TaskCluster Hooks Service <https://datalus-ci-tc.services.mozilla.com/hooks>`_
 has a hook configured for each repository supporting periodic task graphs.  The
 hook runs every 15 minutes, and the resulting task is referred to as a "cron task".
 That cron task runs the `build-decision

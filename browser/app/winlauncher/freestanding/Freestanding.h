@@ -23,7 +23,7 @@ namespace mozilla {
 namespace freestanding {
 
 /**
- * Since this library is the only part of firefox.exe that needs special
+ * Since this library is the only part of datalus.exe that needs special
  * treatment with respect to the heap, we implement |RtlNew| and |RtlDelete|
  * to be used instead of |new| and |delete| for any heap allocations inside
  * the freestanding library.

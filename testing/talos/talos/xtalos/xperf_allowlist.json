@@ -239,76 +239,76 @@
     "minbytes": 1692,
     "maxbytes": 1692
   },
-  "{firefox}\\browser\\blocklist.xml": {
+  "{datalus}\\browser\\blocklist.xml": {
     "mincount": 0,
     "maxcount": 66,
     "minbytes": 0,
     "maxbytes": 540672
   },
-  "{firefox}\\browser\\extensions\\{uuid}.xpi": {
+  "{datalus}\\browser\\extensions\\{uuid}.xpi": {
     "mincount": 0,
     "maxcount": 2,
     "minbytes": 0,
     "maxbytes": 8192
   },
-  "{firefox}\\browser\\features\\formautofill@mozilla.org.xpi": {
+  "{datalus}\\browser\\features\\formautofill@mozilla.org.xpi": {
     "mincount": 0,
     "maxcount": 6,
     "minbytes": 0,
     "maxbytes": 393216
   },
-  "{firefox}\\browser\\features\\flyweb@mozilla.org.xpi": {
+  "{datalus}\\browser\\features\\flyweb@mozilla.org.xpi": {
     "mincount": 0,
     "maxcount": 2,
     "minbytes": 0,
     "maxbytes": 32768
   },
-  "{firefox}\\browser\\omni.ja": {
+  "{datalus}\\browser\\omni.ja": {
     "mincount": 0,
     "maxcount": 28,
     "minbytes": 0,
     "maxbytes": 1835008
   },
-  "{firefox}\\crash reports\\lastcrash": {
+  "{datalus}\\crash reports\\lastcrash": {
     "mincount": 0,
     "maxcount": 2,
     "minbytes": 0,
     "maxbytes": 20
   },
-  "{firefox}\\crash reports\\{time}": {
+  "{datalus}\\crash reports\\{time}": {
     "ignore": true
   },
-  "{firefox}\\defaults\\pref\\channel-prefs.js": {
+  "{datalus}\\defaults\\pref\\channel-prefs.js": {
     "mincount": 4,
     "maxcount": 4,
     "minbytes": 1432,
     "maxbytes": 1432
   },
-  "{firefox}\\dependentlibs.list": {
+  "{datalus}\\dependentlibs.list": {
     "mincount": 4,
     "maxcount": 4,
     "minbytes": 16384,
     "maxbytes": 16384
   },
-  "{firefox}\\firefox.exe": {
+  "{datalus}\\datalus.exe": {
     "mincount": 2,
     "maxcount": 2,
     "minbytes": 8192,
     "maxbytes": 8192
   },
-  "{firefox}\\gmp-clearkey\\0.1\\manifest.json": {
+  "{datalus}\\gmp-clearkey\\0.1\\manifest.json": {
     "mincount": 2,
     "maxcount": 2,
     "minbytes": 512,
     "maxbytes": 512
   },
-  "{firefox}\\omni.ja": {
+  "{datalus}\\omni.ja": {
     "mincount": 0,
     "maxcount": 46,
     "minbytes": 0,
     "maxbytes": 3014656
   },
-  "{firefox}\\profiles.ini": {
+  "{datalus}\\profiles.ini": {
     "mincount": 2,
     "maxcount": 2,
     "minbytes": 8192,

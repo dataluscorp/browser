@@ -5,7 +5,7 @@
 
 """
 Parses a JSON file listing the known Certificate Transparency logs
-(log_list.json) and generates a C++ header file to be included in Firefox.
+(log_list.json) and generates a C++ header file to be included in Datalus.
 
 The current log_list.json file available under security/manager/tools
 was originally downloaded from
@@ -304,7 +304,7 @@ def parse_arguments_and_run():
     arg_parser = argparse.ArgumentParser(
         description="Parses a JSON file listing the known "
         "Certificate Transparency logs and generates "
-        "a C++ header file to be included in Firefox.",
+        "a C++ header file to be included in Datalus.",
         epilog="Example: python %s --url" % os.path.basename(sys.argv[0]),
     )
 

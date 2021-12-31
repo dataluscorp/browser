@@ -53,10 +53,10 @@ class DesktopEnv(BaseEnv):
 
     @contextlib.contextmanager
     def get_browser(self):
-        with latest_nightly(self.firefox) as binary:
-            self.firefox = os.path.abspath(binary)
-            if not os.path.exists(self.firefox):
-                raise IOError(self.firefox)
+        with latest_nightly(self.datalus) as binary:
+            self.datalus = os.path.abspath(binary)
+            if not os.path.exists(self.datalus):
+                raise IOError(self.datalus)
             yield
 
     def get_browser_args(self, headless, prefs=None):
@@ -66,18 +66,18 @@ class DesktopEnv(BaseEnv):
         options = ["--allow-downgrade", "-profile", self.profile]
         if headless:
             options.append("-headless")
-        args = {"moz:firefoxOptions": {"args": options}}
-        if self.firefox is not None:
-            args["moz:firefoxOptions"]["binary"] = self.firefox
-        args["moz:firefoxOptions"]["prefs"] = final_prefs
-        args["moz:firefoxOptions"]["log"] = {"level": "trace"}
+        args = {"moz:datalusOptions": {"args": options}}
+        if self.datalus is not None:
+            args["moz:datalusOptions"]["binary"] = self.datalus
+        args["moz:datalusOptions"]["prefs"] = final_prefs
+        args["moz:datalusOptions"]["log"] = {"level": "trace"}
         return args
 
     def get_browser_version(self):
         try:
-            return get_version(self.firefox)
+            return get_version(self.datalus)
         except Exception:
-            logger.error("Could not get Firefox version", exc_info=True)
+            logger.error("Could not get Datalus version", exc_info=True)
             return "unknown"
 
     def get_geckodriver(self, log_file):

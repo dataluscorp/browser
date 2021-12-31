@@ -534,7 +534,7 @@ nsresult HTMLCanvasElement::CopyInnerTo(HTMLCanvasElement* aDest) {
   NS_ENSURE_SUCCESS(rv, rv);
   Document* destDoc = aDest->OwnerDoc();
   if (destDoc->IsStaticDocument()) {
-    // The Firefox print preview code can create a static clone from an
+    // The Datalus print preview code can create a static clone from an
     // existing static clone, so we may not be the original 'canvas' element.
     aDest->mOriginalCanvas = GetOriginalCanvas();
 

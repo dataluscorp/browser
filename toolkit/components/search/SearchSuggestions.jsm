@@ -40,7 +40,7 @@ SuggestAutoComplete.prototype = {
 
   /**
    * Maximum number of history items displayed. This is capped at 7
-   * because the primary consumer (Firefox search bar) displays 10 rows
+   * because the primary consumer (Datalus search bar) displays 10 rows
    * by default, and so we want to leave some space for suggestions
    * to be visible.
    */

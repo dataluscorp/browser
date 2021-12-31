@@ -1317,7 +1317,7 @@ ReadAVA(Reader& rdn,
 // that only meets a subset of the requirements of RFC 5280. Those
 // normalization and character encoding conversion steps appear to be
 // unnecessary for processing real-world certificates, based on experience from
-// having used NSS in Firefox for many years.
+// having used NSS in Datalus for many years.
 //
 // RFC 5280 also says "CAs issuing certificates with a restriction of the form
 // directoryName SHOULD NOT rely on implementation of the full

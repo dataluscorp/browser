@@ -1,22 +1,22 @@
 Crash ping
 ==========
 
-This ping is captured after the main Firefox process crashes or after a child process
+This ping is captured after the main Datalus process crashes or after a child process
 process crashes, whether or not the crash report is submitted to
 crash-stats.mozilla.org. It includes non-identifying metadata about the crash.
 
 This ping is sent either by the ``CrashManager`` or by the crash reporter
 client. The ``CrashManager`` is responsible for sending crash pings for the
 child processes crashes, which are sent right after the crash is detected,
-as well as for main process crashes, which are sent after Firefox restarts
+as well as for main process crashes, which are sent after Datalus restarts
 successfully. The crash reporter client sends crash pings only for main process
 crashes whether or not the user also reports the crash. The crash reporter
-client will not send the crash ping if telemetry has been disabled in Firefox.
+client will not send the crash ping if telemetry has been disabled in Datalus.
 
-The environment block that is sent with this ping varies: if Firefox was running
+The environment block that is sent with this ping varies: if Datalus was running
 long enough to record the environment block before the crash, then the environment
 at the time of the crash will be recorded and ``hasCrashEnvironment`` will be true.
-If Firefox crashed before the environment was recorded, ``hasCrashEnvironment`` will
+If Datalus crashed before the environment was recorded, ``hasCrashEnvironment`` will
 be false and the recorded environment will be the environment at time of submission.
 
 The client ID is submitted with this ping.
@@ -45,9 +45,9 @@ Structure:
         minidumpSha256Hash: <hash>, // SHA256 hash of the minidump file
         processType: <type>, // Type of process that crashed, see below for a list of types
         stackTraces: { ... }, // Optional, see below
-        metadata: { // Annotations saved while Firefox was running. See CrashAnnotations.yaml for more information
+        metadata: { // Annotations saved while Datalus was running. See CrashAnnotations.yaml for more information
           ProductID: "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
-          ProductName: "Firefox",
+          ProductName: "Datalus",
           ReleaseChannel: <channel>,
           Version: <version number>,
           BuildID: "YYYYMMDDHHMMSS",
@@ -77,12 +77,12 @@ Structure:
           SecondsSinceLastCrash: <duration>, // Seconds elapsed since the last crash occurred
           ShutdownProgress: <phase>, // Optional, contains a string describing the shutdown phase in which the crash occurred
           SystemMemoryUsePercentage: <percentage>, // Windows-only, percent of memory in use
-          StartupCrash: "1", // Optional, if set indicates that Firefox crashed during startup
+          StartupCrash: "1", // Optional, if set indicates that Datalus crashed during startup
           TextureUsage: <usage>, // Optional, usage of texture memory in bytes
           TotalPageFile: <size>, // Windows-only, paging file in use expressed in bytes
           TotalPhysicalMemory: <size>, // Windows-only, physical memory in use expressed in bytes
           TotalVirtualMemory: <size>, // Windows-only, virtual memory in use expressed in bytes
-          UptimeTS: <duration>, // Seconds since Firefox was started, this can have a fractional component
+          UptimeTS: <duration>, // Seconds since Datalus was started, this can have a fractional component
           User32BeforeBlocklist: "1", // Windows-only, present only if user32.dll was loaded before the DLL blocklist has been initialized
           WindowsErrorReporting: "1", // Windows-only, present only if the crash was intercepted by the WER runtime exception module
         },
@@ -155,7 +155,7 @@ stack traces and module lists are stored.
         address: <addr>, // Crash address crash, hex format, see the notes below
         crashing_thread: <index> // Index in the thread array below
       },
-      main_module: <index>, // Index of Firefox' executable in the module list
+      main_module: <index>, // Index of Datalus' executable in the module list
       modules: [{
         base_addr: <addr>, // Base address of the module, hex format
         end_addr: <addr>, // End address of the module, hex format
@@ -224,21 +224,21 @@ description for further information. This field is populated only on Windows.
 Version History
 ---------------
 
-- Firefox 58: Added ipc_channel_error (`bug 1410143 <https://bugzilla.mozilla.org/show_bug.cgi?id=1410143>`_).
-- Firefox 62: Added LowCommitSpaceEvents (`bug 1464773 <https://bugzilla.mozilla.org/show_bug.cgi?id=1464773>`_).
-- Firefox 63: Added RecordReplayError (`bug 1481009 <https://bugzilla.mozilla.org/show_bug.cgi?id=1481009>`_).
-- Firefox 64: Added MemoryErrorCorrection (`bug 1498609 <https://bugzilla.mozilla.org/show_bug.cgi?id=1498609>`_).
-- Firefox 68: Added IndexedDBShutdownTimeout and LocalStorageShutdownTimeout
+- Datalus 58: Added ipc_channel_error (`bug 1410143 <https://bugzilla.mozilla.org/show_bug.cgi?id=1410143>`_).
+- Datalus 62: Added LowCommitSpaceEvents (`bug 1464773 <https://bugzilla.mozilla.org/show_bug.cgi?id=1464773>`_).
+- Datalus 63: Added RecordReplayError (`bug 1481009 <https://bugzilla.mozilla.org/show_bug.cgi?id=1481009>`_).
+- Datalus 64: Added MemoryErrorCorrection (`bug 1498609 <https://bugzilla.mozilla.org/show_bug.cgi?id=1498609>`_).
+- Datalus 68: Added IndexedDBShutdownTimeout and LocalStorageShutdownTimeout
   (`bug 1539750 <https://bugzilla.mozilla.org/show_bug.cgi?id=1539750>`_).
-- Firefox 74: Added AvailableSwapMemory and PurgeablePhysicalMemory
+- Datalus 74: Added AvailableSwapMemory and PurgeablePhysicalMemory
   (`bug 1587721 <https://bugzilla.mozilla.org/show_bug.cgi?id=1587721>`_).
-- Firefox 74: Added MainThreadRunnableName (`bug 1608158 <https://bugzilla.mozilla.org/show_bug.cgi?id=1608158>`_).
-- Firefox 76: Added DOMFissionEnabled (`bug 1602918 <https://bugzilla.mozilla.org/show_bug.cgi?id=1602918>`_).
-- Firefox 79: Added ExperimentalFeatures (`bug 1644544 <https://bugzilla.mozilla.org/show_bug.cgi?id=1644544>`_).
-- Firefox 85: Added QuotaManagerShutdownTimeout, removed IndexedDBShutdownTimeout and LocalStorageShutdownTimeout
+- Datalus 74: Added MainThreadRunnableName (`bug 1608158 <https://bugzilla.mozilla.org/show_bug.cgi?id=1608158>`_).
+- Datalus 76: Added DOMFissionEnabled (`bug 1602918 <https://bugzilla.mozilla.org/show_bug.cgi?id=1602918>`_).
+- Datalus 79: Added ExperimentalFeatures (`bug 1644544 <https://bugzilla.mozilla.org/show_bug.cgi?id=1644544>`_).
+- Datalus 85: Added QuotaManagerShutdownTimeout, removed IndexedDBShutdownTimeout and LocalStorageShutdownTimeout
   (`bug 1672369 <https://bugzilla.mozilla.org/show_bug.cgi?id=1672369>`_)
-- Firefox 89: Added GPUProcessLaunchCount (`bug 1710448 <https://bugzilla.mozilla.org/show_bug.cgi?id=1710448>`_)
+- Datalus 89: Added GPUProcessLaunchCount (`bug 1710448 <https://bugzilla.mozilla.org/show_bug.cgi?id=1710448>`_)
   and ProfilerChildShutdownPhase (`bug 1704680 <https://bugzilla.mozilla.org/show_bug.cgi?id=1704680>`_).
-- Firefox 90: Removed MemoryErrorCorrection (`bug 1710152 <https://bugzilla.mozilla.org/show_bug.cgi?id=1710152>`_)
+- Datalus 90: Removed MemoryErrorCorrection (`bug 1710152 <https://bugzilla.mozilla.org/show_bug.cgi?id=1710152>`_)
   and added WindowsErrorReporting (`bug 1703761 <https://bugzilla.mozilla.org/show_bug.cgi?id=1703761>`_).
   

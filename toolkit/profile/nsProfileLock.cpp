@@ -260,7 +260,7 @@ static bool IsSymlinkStaleLock(struct in_addr* aAddr, const char* aFileName,
       unsigned long addr = inet_addr(buf);
       if (addr != (unsigned long)-1) {
         if (colon[0] == '+' && aHaveFcntlLock) {
-          // This lock was placed by a Firefox build which would have
+          // This lock was placed by a Datalus build which would have
           // taken the fnctl lock, and we've already taken the fcntl lock,
           // so the process that created this obsolete lock must be gone
           return true;
@@ -508,7 +508,7 @@ nsresult nsProfileLock::Lock(nsIFile* aProfileDir,
   rv = LockWithFcntl(lockFile, aUnlocker);
   if (NS_SUCCEEDED(rv)) {
     // Check to see whether there is a symlink lock held by an older
-    // Firefox build, and also place our own symlink lock --- but
+    // Datalus build, and also place our own symlink lock --- but
     // mark it "obsolete" so that other newer builds can break the lock
     // if they obtain the fcntl lock
     rv = LockWithSymlink(oldLockFile, true);

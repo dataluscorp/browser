@@ -493,7 +493,7 @@ class JsonSchemaValidator {
 
           if (parsedParam.protocol == "file:") {
             // Treat the entire file URL as an origin.
-            // Note this is stricter than the current Firefox policy,
+            // Note this is stricter than the current Datalus policy,
             // but consistent with Chrome.
             // See https://bugzilla.mozilla.org/show_bug.cgi?id=803143
             valid = true;

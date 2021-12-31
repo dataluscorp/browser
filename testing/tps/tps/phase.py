@@ -22,7 +22,7 @@ class TPSTestPhase(object):
         testpath,
         logfile,
         env,
-        firefoxRunner,
+        datalusRunner,
         logfn,
         ignore_unused_engines=False,
     ):
@@ -32,7 +32,7 @@ class TPSTestPhase(object):
         self.testpath = testpath
         self.logfile = logfile
         self.env = env
-        self.firefoxRunner = firefoxRunner
+        self.datalusRunner = datalusRunner
         self.log = logfn
         self.ignore_unused_engines = ignore_unused_engines
         self._status = None
@@ -43,7 +43,7 @@ class TPSTestPhase(object):
         return self._status if self._status else "unknown"
 
     def run(self):
-        # launch Firefox
+        # launch Datalus
 
         prefs = {
             "testing.tps.testFile": os.path.abspath(self.testpath),
@@ -55,11 +55,11 @@ class TPSTestPhase(object):
         self.profile.set_preferences(prefs)
 
         self.log(
-            "\nLaunching Firefox for phase %s with prefs %s\n"
+            "\nLaunching Datalus for phase %s with prefs %s\n"
             % (self.phase, str(prefs))
         )
 
-        self.firefoxRunner.run(env=self.env, args=[], profile=self.profile)
+        self.datalusRunner.run(env=self.env, args=[], profile=self.profile)
 
         # parse the logfile and look for results from the current test phase
         found_test = False

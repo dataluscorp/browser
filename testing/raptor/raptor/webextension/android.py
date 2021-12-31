@@ -34,7 +34,7 @@ LOG = RaptorLogger(component="raptor-webext-android")
 class WebExtensionAndroid(PerftestAndroid, WebExtension):
     def __init__(self, app, binary, activity=None, intent=None, **kwargs):
         super(WebExtensionAndroid, self).__init__(
-            app, binary, profile_class="firefox", **kwargs
+            app, binary, profile_class="datalus", **kwargs
         )
 
         self.config.update({"activity": activity, "intent": intent})
@@ -128,7 +128,7 @@ class WebExtensionAndroid(PerftestAndroid, WebExtension):
             % (thermal_zone0, zone_type)
         )
 
-    def launch_firefox_android_app(self, test_name):
+    def launch_datalus_android_app(self, test_name):
         LOG.info("starting %s" % self.config["app"])
 
         try:
@@ -306,7 +306,7 @@ class WebExtensionAndroid(PerftestAndroid, WebExtension):
             self.write_android_app_config()
 
             # now start the browser/app under test
-            self.launch_firefox_android_app(test["name"])
+            self.launch_datalus_android_app(test["name"])
 
             # set our control server flag to indicate we are running the browser/app
             self.control_server._finished = False
@@ -351,7 +351,7 @@ class WebExtensionAndroid(PerftestAndroid, WebExtension):
         self.write_android_app_config()
 
         # now start the browser/app under test
-        self.launch_firefox_android_app(test["name"])
+        self.launch_datalus_android_app(test["name"])
 
         # set our control server flag to indicate we are running the browser/app
         self.control_server._finished = False

@@ -5,25 +5,25 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("distribution.js"):
-    BUG_COMPONENT = ("Firefox", "Distributions")
+    BUG_COMPONENT = ("Datalus", "Distributions")
 
 with Files("tests/**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 with Files("tests/browser/browser_contentpermissionprompt.js"):
-    BUG_COMPONENT = ("Firefox", "Site Permissions")
+    BUG_COMPONENT = ("Datalus", "Site Permissions")
 
 with Files("tests/unit/test_distribution.js"):
-    BUG_COMPONENT = ("Firefox", "Distributions")
+    BUG_COMPONENT = ("Datalus", "Distributions")
 
 with Files("safebrowsing/**"):
     BUG_COMPONENT = ("Toolkit", "Safe Browsing")
 
 with Files("controlcenter/**"):
-    BUG_COMPONENT = ("Firefox", "General")
+    BUG_COMPONENT = ("Datalus", "General")
 
 
 DIRS += [

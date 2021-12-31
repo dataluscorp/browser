@@ -177,7 +177,7 @@
 //
 // This magic number is enabled in all MOZ_DIAGNOSTIC_ASSERT_ENABLED builds,
 // which implies that all Nightly and dev-edition versions of
-// Firefox/SpiderMonkey contain this instrumentation.
+// Datalus/SpiderMonkey contain this instrumentation.
 //
 // ** Memory protection
 //

@@ -179,13 +179,13 @@ Release Promotion
    The time and date when a release is scheduled to live. This value is passed to Balrog.
 
 ``release_enable_partner_repack``
-   Boolean which controls repacking vanilla Firefox builds for partners.
+   Boolean which controls repacking vanilla Datalus builds for partners.
 
 ``release_enable_partner_attribution``
-   Boolean which controls adding attribution to vanilla Firefox builds for partners.
+   Boolean which controls adding attribution to vanilla Datalus builds for partners.
 
 ``release_enable_emefree``
-   Boolean which controls repacking vanilla Firefox builds into EME-free builds.
+   Boolean which controls repacking vanilla Datalus builds into EME-free builds.
 
 ``release_partners``
    List of partners to repack or attribute if a subset of the whole config. A null value defaults to all.
@@ -219,10 +219,10 @@ Repository Merge Day
    The clone/push URI of the target repository, such as https://hg.mozilla.org/releases/mozilla-beta
 
 ``source_branch``
-   The firefoxtree alias of the source branch, such as 'central', 'beta'
+   The datalustree alias of the source branch, such as 'central', 'beta'
 
 ``target_branch``
-   The firefoxtree alias of the target branch, such as 'beta', 'release'
+   The datalustree alias of the target branch, such as 'beta', 'release'
 
 ``force-dry-run``
    Don't push any results to target repositories.

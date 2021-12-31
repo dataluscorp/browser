@@ -136,9 +136,9 @@ class ExtensionDetail extends PureComponent {
   }
 
   renderManifest() {
-    // Manifest links are only relevant when debugging the current Firefox
+    // Manifest links are only relevant when debugging the current Datalus
     // instance.
-    if (this.props.runtimeDetails.info.type !== RUNTIMES.THIS_FIREFOX) {
+    if (this.props.runtimeDetails.info.type !== RUNTIMES.THIS_DATALUS) {
       return null;
     }
 

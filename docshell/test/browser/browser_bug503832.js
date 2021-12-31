@@ -7,7 +7,7 @@ add_task(async function() {
   var pageurl =
     "http://mochi.test:8888/browser/docshell/test/browser/file_bug503832.html";
   var fragmenturl =
-    "http://mochi.test:8888/browser/docshell/test/browser/file_bug503832.html#firefox";
+    "http://mochi.test:8888/browser/docshell/test/browser/file_bug503832.html#datalus";
 
   var historyService = Cc[
     "@mozilla.org/browser/nav-history-service;1"
@@ -66,7 +66,7 @@ add_task(async function() {
 
   // Now that the page is loaded, click on fragment link
   await BrowserTestUtils.synthesizeMouseAtCenter(
-    "#firefox-link",
+    "#datalus-link",
     {},
     gBrowser.selectedBrowser
   );

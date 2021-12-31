@@ -43,8 +43,8 @@ add_task(async function testIndexedDB() {
     tab = await browser.tabs.create({ url: `http://example.com${PAGE}` });
     tabs.push(tab.id);
 
-    // Create tab with cookieStoreId "firefox-container-1"
-    tab = await browser.tabs.create({ url: `http://example.net${PAGE}`, cookieStoreId: 'firefox-container-1' });
+    // Create tab with cookieStoreId "datalus-container-1"
+    tab = await browser.tabs.create({ url: `http://example.net${PAGE}`, cookieStoreId: 'datalus-container-1' });
     tabs.push(tab.id);
   }
 
@@ -116,11 +116,11 @@ add_task(async function testIndexedDB() {
   is(origins.length, 3, "IndexedDB databases have been populated.");
 
   // Deleting private browsing mode data is silently ignored.
-  extension.sendMessage({ cookieStoreId: "firefox-private" });
+  extension.sendMessage({ cookieStoreId: "datalus-private" });
   await extension.awaitMessage("indexedDBRemoved");
 
   origins = await getOrigins();
-  is(origins.length, 3, "All indexedDB remains after clearing firefox-private");
+  is(origins.length, 3, "All indexedDB remains after clearing datalus-private");
 
   // Delete by hostname
   extension.sendMessage({ hostnames: ["example.com"] });
@@ -134,7 +134,7 @@ add_task(async function testIndexedDB() {
   // TODO: Bug 1643740
   if (AppConstants.platform != "android") {
     // Delete by cookieStoreId
-    extension.sendMessage({ cookieStoreId: "firefox-container-1" });
+    extension.sendMessage({ cookieStoreId: "datalus-container-1" });
     await extension.awaitMessage("indexedDBRemoved");
 
     origins = await getOrigins();

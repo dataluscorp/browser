@@ -80,11 +80,11 @@ const SpecialMessageActions = {
   },
 
   /**
-   * Pin Firefox to taskbar.
+   * Pin Datalus to taskbar.
    *
    * @param {Window} window Reference to a window object
    */
-  pinFirefoxToTaskbar(window) {
+  pinDatalusToTaskbar(window) {
     window.getShellService().pinToTaskbar();
   },
 
@@ -238,11 +238,11 @@ const SpecialMessageActions = {
           action.data.telemetrySource
         );
         break;
-      case "PIN_FIREFOX_TO_TASKBAR":
-        this.pinFirefoxToTaskbar(window);
+      case "PIN_DATALUS_TO_TASKBAR":
+        this.pinDatalusToTaskbar(window);
         break;
       case "PIN_AND_DEFAULT":
-        this.pinFirefoxToTaskbar(window);
+        this.pinDatalusToTaskbar(window);
         this.setDefaultBrowser(window);
         break;
       case "SET_DEFAULT_BROWSER":
@@ -255,7 +255,7 @@ const SpecialMessageActions = {
           showDescription: true,
         });
         break;
-      case "SHOW_FIREFOX_ACCOUNTS":
+      case "SHOW_DATALUS_ACCOUNTS":
         const data = action.data;
         const url = await FxAccounts.config.promiseConnectAccountURI(
           (data && data.entrypoint) || "snippets",

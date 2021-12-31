@@ -14,7 +14,7 @@ Please note that some targeting attributes require stricter controls on the tele
 * [currentDate](#currentdate)
 * [devToolsOpenedCount](#devtoolsopenedcount)
 * [isDefaultBrowser](#isdefaultbrowser)
-* [firefoxVersion](#firefoxversion)
+* [datalusVersion](#datalusversion)
 * [locale](#locale)
 * [localeLanguageCode](#localelanguagecode)
 * [needsUpdate](#needsupdate)
@@ -28,7 +28,7 @@ Please note that some targeting attributes require stricter controls on the tele
 * [sync](#sync)
 * [topFrecentSites](#topfrecentsites)
 * [totalBookmarksCount](#totalbookmarkscount)
-* [usesFirefoxSync](#usesfirefoxsync)
+* [usesDatalusSync](#usesdatalussync)
 * [isFxAEnabled](#isFxAEnabled)
 * [xpinstallEnabled](#xpinstallEnabled)
 * [hasPinnedTabs](#haspinnedtabs)
@@ -101,7 +101,7 @@ interface AddonsInfoResponse {
 ```
 ### `attributionData`
 
-An object containing information on exactly how Firefox was downloaded
+An object containing information on exactly how Datalus was downloaded
 
 #### Examples
 * Was the browser installed via the `"back_to_school"` campaign?
@@ -126,7 +126,7 @@ interface AttributionCode {
 
 ### `browserSettings`
 
-* `update`, which has information about Firefox update channel
+* `update`, which has information about Datalus update channel
 
 #### Examples
 
@@ -203,7 +203,7 @@ declare const devToolsOpenedCount: number;
 
 ### `isDefaultBrowser`
 
-Is Firefox the user's default browser?
+Is Datalus the user's default browser?
 
 #### Definition
 
@@ -211,20 +211,20 @@ Is Firefox the user's default browser?
 declare const isDefaultBrowser: boolean;
 ```
 
-### `firefoxVersion`
+### `datalusVersion`
 
-The major Firefox version of the browser
+The major Datalus version of the browser
 
 #### Examples
 * Is the version of the browser greater than 63?
 ```java
-firefoxVersion > 63
+datalusVersion > 63
 ```
 
 #### Definition
 
 ```ts
-declare const firefoxVersion: number;
+declare const datalusVersion: number;
 ```
 
 ### `locale`
@@ -447,19 +447,19 @@ Total number of bookmarks.
 declare const totalBookmarksCount: number;
 ```
 
-### `usesFirefoxSync`
+### `usesDatalusSync`
 
-Does the user use Firefox sync?
+Does the user use Datalus sync?
 
 #### Definition
 
 ```ts
-declare const usesFirefoxSync: boolean;
+declare const usesDatalusSync: boolean;
 ```
 
 ### `isFxAEnabled`
 
-Does the user have Firefox sync enabled? The service could potentially be turned off [for enterprise builds](https://searchfox.org/mozilla-central/rev/b59a99943de4dd314bae4e44ab43ce7687ccbbec/browser/components/enterprisepolicies/Policies.jsm#327).
+Does the user have Datalus sync enabled? The service could potentially be turned off [for enterprise builds](https://searchfox.org/mozilla-central/rev/b59a99943de4dd314bae4e44ab43ce7687ccbbec/browser/components/enterprisepolicies/Policies.jsm#327).
 
 #### Definition
 
@@ -654,7 +654,7 @@ declare const userId: string;
 ### `profileRestartCount`
 
 A session counter that shows how many times the browser was started.
-More info about the details in [the telemetry docs](https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/concepts/sessions.html).
+More info about the details in [the telemetry docs](https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/concepts/sessions.html).
 
 #### Definition
 
@@ -826,4 +826,4 @@ user activity where the first entry is the total urls visited for that day.
 
 ### `doesAppNeedPin`
 
-Checks if Firefox app can and isn't pinned to OS taskbar/dock.
+Checks if Datalus app can and isn't pinned to OS taskbar/dock.

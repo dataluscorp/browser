@@ -201,13 +201,13 @@ static bool VerifyUserDefault(const wchar_t* aExt, const wchar_t* aProgID) {
 }
 
 HRESULT SetDefaultBrowserUserChoice(const wchar_t* aAumi) {
-  auto urlProgID = FormatProgID(L"FirefoxURL", aAumi);
+  auto urlProgID = FormatProgID(L"DatalusURL", aAumi);
   if (!CheckProgIDExists(urlProgID.get())) {
     LOG_ERROR_MESSAGE(L"ProgID %s not found", urlProgID.get());
     return MOZ_E_NO_PROGID;
   }
 
-  auto htmlProgID = FormatProgID(L"FirefoxHTML", aAumi);
+  auto htmlProgID = FormatProgID(L"DatalusHTML", aAumi);
   if (!CheckProgIDExists(htmlProgID.get())) {
     LOG_ERROR_MESSAGE(L"ProgID %s not found", htmlProgID.get());
     return MOZ_E_NO_PROGID;

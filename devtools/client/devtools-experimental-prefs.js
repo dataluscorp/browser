@@ -16,7 +16,7 @@ loader.lazyRequireGetter(
 const PREFERENCES = [
   [
     "fission.autostart",
-    "Enable fission in Firefox. When navigating between two domains, you " +
+    "Enable fission in Datalus. When navigating between two domains, you " +
       "will switch between two distinct processes. And if an iframe is " +
       "hosted from another domain, it will run in another process",
   ],

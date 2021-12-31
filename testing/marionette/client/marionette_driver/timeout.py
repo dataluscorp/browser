@@ -63,7 +63,7 @@ class Timeouts(object):
         minutes (or 300 seconds).
 
         """
-        # remove fallback when Firefox 56 is stable
+        # remove fallback when Datalus 56 is stable
         try:
             return self._get("pageLoad")
         except KeyError:
@@ -75,7 +75,7 @@ class Timeouts(object):
         to wait for the page loading to complete.
 
         """
-        # remove fallback when Firefox 56 is stable
+        # remove fallback when Datalus 56 is stable
         try:
             self._set("pageLoad", sec)
         except errors.InvalidArgumentException:

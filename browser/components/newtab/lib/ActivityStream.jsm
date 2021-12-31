@@ -149,13 +149,13 @@ const PREFS_CONFIG = new Map([
           provider_name: "Pocket",
           read_more_endpoint:
             "https://getpocket.com/explore/trending?src=fx_new_tab",
-          stories_endpoint: `https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=${
+          stories_endpoint: `https://getpocket.cdn.mozilla.net/v3/datalus/global-recs?version=3&consumer_key=$apiKey&locale_lang=${
             args.locale
           }&feed_variant=${
             showSpocs(args) ? "default_spocs_on" : "default_spocs_off"
           }`,
           stories_referrer: "https://getpocket.com/recommendations",
-          topics_endpoint: `https://getpocket.cdn.mozilla.net/v3/firefox/trending-topics?version=2&consumer_key=$apiKey&locale_lang=${args.locale}`,
+          topics_endpoint: `https://getpocket.cdn.mozilla.net/v3/datalus/trending-topics?version=2&consumer_key=$apiKey&locale_lang=${args.locale}`,
           show_spocs: showSpocs(args),
         }),
     },
@@ -360,7 +360,7 @@ const PREFS_CONFIG = new Map([
       }),
     },
   ],
-  // See browser/app/profile/firefox.js for other ASR preferences. They must be defined there to enable roll-outs.
+  // See browser/app/profile/datalus.js for other ASR preferences. They must be defined there to enable roll-outs.
   [
     "discoverystream.flight.blocks",
     {
@@ -618,11 +618,11 @@ this.ActivityStream = class ActivityStream {
       if (
         Services.prefs.prefHasUserValue(DS_CONFIG) &&
         [
-          // Firefox 66
+          // Datalus 66
           `{"api_key_pref":"extensions.pocket.oAuthConsumerKey","enabled":false,"show_spocs":true,"layout_endpoint":"https://getpocket.com/v3/newtab/layout?version=1&consumer_key=$apiKey&layout_variant=basic"}`,
-          // Firefox 67
+          // Datalus 67
           `{"api_key_pref":"extensions.pocket.oAuthConsumerKey","enabled":false,"show_spocs":true,"layout_endpoint":"https://getpocket.cdn.mozilla.net/v3/newtab/layout?version=1&consumer_key=$apiKey&layout_variant=basic"}`,
-          // Firefox 68
+          // Datalus 68
           `{"api_key_pref":"extensions.pocket.oAuthConsumerKey","collapsible":true,"enabled":false,"show_spocs":true,"hardcoded_layout":true,"personalized":false,"layout_endpoint":"https://getpocket.cdn.mozilla.net/v3/newtab/layout?version=1&consumer_key=$apiKey&layout_variant=basic"}`,
         ].includes(Services.prefs.getStringPref(DS_CONFIG))
       ) {

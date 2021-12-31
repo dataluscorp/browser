@@ -69,7 +69,7 @@ add_task(async function testContentBlockingMessage() {
 
   await testLearnMoreClickOpenNewTab(
     message,
-    "https://developer.mozilla.org/Firefox/Privacy/Tracking_Protection" +
+    "https://developer.mozilla.org/Datalus/Privacy/Tracking_Protection" +
       DOCS_GA_PARAMS
   );
 });
@@ -238,11 +238,11 @@ add_task(async function testCookieBlockedByPermissionMessage() {
 
 function getStorageErrorUrl(category) {
   const BASE_STORAGE_ERROR_URL =
-    "https://developer.mozilla.org/docs/Mozilla/Firefox/" +
+    "https://developer.mozilla.org/docs/Mozilla/Datalus/" +
     "Privacy/Storage_access_policy/Errors/";
   const STORAGE_ERROR_URL_PARAMS = new URLSearchParams({
     utm_source: "devtools",
-    utm_medium: "firefox-cookie-errors",
+    utm_medium: "datalus-cookie-errors",
     utm_campaign: "default",
   }).toString();
   return `${BASE_STORAGE_ERROR_URL}${category}?${STORAGE_ERROR_URL_PARAMS}`;

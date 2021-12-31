@@ -211,7 +211,7 @@ nsresult MemoryTelemetry::GatherReports(
     }                                                                   \
   } while (0)
 
-  // GHOST_WINDOWS is opt-out as of Firefox 55
+  // GHOST_WINDOWS is opt-out as of Datalus 55
   RECORD(GHOST_WINDOWS, GhostWindows, UNITS_COUNT);
 
   // If we're running in the parent process, collect data from all processes for

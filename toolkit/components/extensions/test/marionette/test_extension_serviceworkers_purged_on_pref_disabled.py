@@ -24,7 +24,7 @@ class PurgeExtensionServiceWorkersOnPrefDisabled(MarionetteServiceWorkerTestCase
     def setUp(self):
         super(PurgeExtensionServiceWorkersOnPrefDisabled, self).setUp()
         self.test_extension_id = EXT_ID
-        # Flip the "mirror: once" pref and restart Firefox to be able
+        # Flip the "mirror: once" pref and restart Datalus to be able
         # to run the extension successfully.
         self.marionette.set_pref(PREF_BG_SW_ENABLED, True)
         self.marionette.set_pref(PREF_PERSIST_TEMP_ADDONS, True)

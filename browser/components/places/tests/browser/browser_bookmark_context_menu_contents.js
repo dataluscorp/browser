@@ -10,7 +10,7 @@
 const SECOND_BOOKMARK_TITLE = "Second Bookmark Title";
 const bookmarksInfo = [
   {
-    title: "firefox",
+    title: "datalus",
     url: "http://example.com",
   },
   {

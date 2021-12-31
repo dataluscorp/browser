@@ -24,7 +24,7 @@ testing = False
 
 # Default rootUrl to use if none is given in the environment; this should point
 # to the production Taskcluster deployment used for CI.
-PRODUCTION_TASKCLUSTER_ROOT_URL = "https://firefox-ci-tc.services.mozilla.com"
+PRODUCTION_TASKCLUSTER_ROOT_URL = "https://datalus-ci-tc.services.mozilla.com"
 
 # the maximum number of parallel Taskcluster API calls to make
 CONCURRENCY = 50
@@ -54,7 +54,7 @@ def get_root_url(use_proxy):
                 "$TASKCLUSTER_ROOT_URL must be set when running in a task"
             )
         else:
-            logger.debug("Using default TASKCLUSTER_ROOT_URL (Firefox CI production)")
+            logger.debug("Using default TASKCLUSTER_ROOT_URL (Datalus CI production)")
             return PRODUCTION_TASKCLUSTER_ROOT_URL
     logger.debug(
         "Running in Taskcluster instance {}{}".format(

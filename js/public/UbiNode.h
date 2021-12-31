@@ -37,7 +37,7 @@
 //
 // - a JS value, like a string, object, or symbol;
 // - an internal SpiderMonkey structure, like a shape or a scope chain object
-// - an instance of some embedding-provided type: in Firefox, an XPCOM
+// - an instance of some embedding-provided type: in Datalus, an XPCOM
 //   object, or an internal DOM node class instance
 //
 // A ubi::Node instance provides metadata about its referent, and can
@@ -502,7 +502,7 @@ class ConcreteStackFrame<void> : public BaseStackFrame {
 //
 // NB: the values associated with a particular enum variant must not change or
 // be reused for new variants. Doing so will cause inspecting ubi::Nodes backed
-// by an offline heap snapshot from an older SpiderMonkey/Firefox version to
+// by an offline heap snapshot from an older SpiderMonkey/Datalus version to
 // break. Consider this enum append only.
 enum class CoarseType : uint32_t {
   Other = 0,

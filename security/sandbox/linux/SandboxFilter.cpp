@@ -1667,7 +1667,7 @@ class GMPSandboxPolicy : public SandboxPolicyCommon {
         return Trap(OpenTrap, mFiles);
 
       case __NR_brk:
-      // Because Firefox on glibc resorts to the fallback implementation
+      // Because Datalus on glibc resorts to the fallback implementation
       // mentioned in bug 1576006, we must explicitly allow the get*id()
       // functions in order to use NSS in the clearkey CDM.
       CASES_FOR_getuid:

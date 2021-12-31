@@ -1301,7 +1301,7 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 
 /**
  * Vendors.js is a file used to bundle and expose all dependencies needed to run
- * the transpiled debugger modules when running in Firefox.
+ * the transpiled debugger modules when running in Datalus.
  *
  * To make transpilation easier, a vendored module should always be imported in
  * same way:

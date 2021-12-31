@@ -96,7 +96,7 @@ var gExperimentalPane = {
     );
     if (shouldHide) {
       // Remove the 'experimental' category if there are no available features
-      document.getElementById("firefoxExperimentalCategory").remove();
+      document.getElementById("datalusExperimentalCategory").remove();
       if (
         document.getElementById("categories").selectedItem?.id ==
         "category-experimental"

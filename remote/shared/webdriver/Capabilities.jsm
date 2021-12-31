@@ -136,7 +136,7 @@ class Proxy {
   }
 
   /**
-   * Sets Firefox proxy settings.
+   * Sets Datalus proxy settings.
    *
    * @return {boolean}
    *     True if proxy settings were updated as a result of calling this
@@ -307,7 +307,7 @@ class Proxy {
       case "manual":
         if (typeof json.ftpProxy != "undefined") {
           throw new error.InvalidArgumentError(
-            "Since Firefox 90 'ftpProxy' is no longer supported"
+            "Since Datalus 90 'ftpProxy' is no longer supported"
           );
         }
         if (typeof json.httpProxy != "undefined") {
@@ -615,9 +615,9 @@ this.UnhandledPromptBehavior = UnhandledPromptBehavior;
 
 function getWebDriverBrowserName() {
   // Similar to chromedriver which reports "chrome" as browser name for all
-  // WebView apps, we will report "firefox" for all GeckoView apps.
+  // WebView apps, we will report "datalus" for all GeckoView apps.
   if (AppInfo.isAndroid) {
-    return "firefox";
+    return "datalus";
   }
 
   return AppInfo.name?.toLowerCase();

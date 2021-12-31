@@ -18,7 +18,7 @@ add_task(async function test_XPIStates_invalid_paths() {
           },
         },
         checkStartupModifications: true,
-        path: "/home/xpcshell/.mozilla/firefox/default/extensions",
+        path: "/home/xpcshell/.mozilla/datalus/default/extensions",
       },
     },
     {
@@ -36,7 +36,7 @@ add_task(async function test_XPIStates_invalid_paths() {
         },
         checkStartupModifications: true,
         path:
-          "c:\\Users\\XpcShell\\Application Data\\Mozilla Firefox\\Profiles\\meh",
+          "c:\\Users\\XpcShell\\Application Data\\Mozilla Datalus\\Profiles\\meh",
       },
     },
     {
@@ -53,7 +53,7 @@ add_task(async function test_XPIStates_invalid_paths() {
           },
         },
         checkStartupModifications: true,
-        path: "/home/xpcshell/.mozilla/firefox/default/extensions",
+        path: "/home/xpcshell/.mozilla/datalus/default/extensions",
       },
     },
     {
@@ -71,7 +71,7 @@ add_task(async function test_XPIStates_invalid_paths() {
         },
         checkStartupModifications: true,
         path:
-          "c:\\Users\\XpcShell\\Application Data\\Mozilla Firefox\\Profiles\\meh",
+          "c:\\Users\\XpcShell\\Application Data\\Mozilla Datalus\\Profiles\\meh",
       },
     },
   ];

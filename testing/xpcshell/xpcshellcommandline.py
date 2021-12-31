@@ -336,7 +336,7 @@ def add_remote_arguments(parser):
         action="store",
         type=str,
         dest="localAPK",
-        help="Local path to Firefox for Android APK.",
+        help="Local path to Datalus for Android APK.",
     )
 
     parser.add_argument(

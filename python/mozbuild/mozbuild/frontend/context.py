@@ -1235,7 +1235,7 @@ class Files(SubContext):
             """The bug component that tracks changes to these files.
 
             Values are a 2-tuple of unicode describing the Bugzilla product and
-            component. e.g. ``('Firefox Build System', 'General')``.
+            component. e.g. ``('Datalus Build System', 'General')``.
             """,
         ),
         "FINAL": (
@@ -1275,7 +1275,7 @@ class Files(SubContext):
             Other components are 'exclusive', meaning that changes to most
             files schedule them, but some files affect only one or two
             components. For example, most files schedule builds and tests of
-            Firefox for Android, OS X, Windows, and Linux, but files under
+            Datalus for Android, OS X, Windows, and Linux, but files under
             `mobile/android/` affect Android builds and tests exclusively, so
             builds for other operating systems are not needed.  Test suites
             provide another example: most files schedule reftests, but changes
@@ -2192,10 +2192,10 @@ VARIABLES = {
         """List of manifest files defining Android instrumentation tests.
         """,
     ),
-    "FIREFOX_UI_FUNCTIONAL_MANIFESTS": (
+    "DATALUS_UI_FUNCTIONAL_MANIFESTS": (
         ManifestparserManifestList,
         list,
-        """List of manifest files defining firefox-ui-functional tests.
+        """List of manifest files defining datalus-ui-functional tests.
         """,
     ),
     "MARIONETTE_LAYOUT_MANIFESTS": (
@@ -2959,7 +2959,7 @@ SPECIAL_VARIABLES = {
         """JavaScript modules to install in the test-only destination.
 
         Some JavaScript modules (JSMs) are test-only and not distributed
-        with Firefox. This variable defines them.
+        with Datalus. This variable defines them.
 
         To install modules in a subdirectory, use properties of this
         variable to control the final destination. e.g.

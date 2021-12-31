@@ -64,15 +64,15 @@ const TEST_TOOLBOX_NO_NAME = {
 
 const USB_DEVICE_DESCRIPTION = {
   deviceName: "usbDeviceName",
-  icon: "chrome://devtools/skin/images/aboutdebugging-firefox-release.svg",
+  icon: "chrome://devtools/skin/images/aboutdebugging-datalus-release.svg",
   name: "usbRuntimeBrandName",
   version: "1.0.0",
 };
 
-const THIS_FIREFOX_DEVICE_DESCRIPTION = {
-  icon: "chrome://devtools/skin/images/aboutdebugging-firefox-release.svg",
+const THIS_DATALUS_DEVICE_DESCRIPTION = {
+  icon: "chrome://devtools/skin/images/aboutdebugging-datalus-release.svg",
   version: "1.0.0",
-  name: "thisFirefoxRuntimeBrandName",
+  name: "thisDatalusRuntimeBrandName",
 };
 
 const USB_TARGET_INFO = {
@@ -85,20 +85,20 @@ const USB_TARGET_INFO = {
   L10N: stubL10N,
 };
 
-const THIS_FIREFOX_TARGET_INFO = {
+const THIS_DATALUS_TARGET_INFO = {
   debugTargetData: {
-    connectionType: CONNECTION_TYPES.THIS_FIREFOX,
-    runtimeInfo: THIS_FIREFOX_DEVICE_DESCRIPTION,
+    connectionType: CONNECTION_TYPES.THIS_DATALUS,
+    runtimeInfo: THIS_DATALUS_DEVICE_DESCRIPTION,
     targetType: DEBUG_TARGET_TYPES.TAB,
   },
   toolbox: TEST_TOOLBOX,
   L10N: stubL10N,
 };
 
-const THIS_FIREFOX_NO_NAME_TARGET_INFO = {
+const THIS_DATALUS_NO_NAME_TARGET_INFO = {
   debugTargetData: {
-    connectionType: CONNECTION_TYPES.THIS_FIREFOX,
-    runtimeInfo: THIS_FIREFOX_DEVICE_DESCRIPTION,
+    connectionType: CONNECTION_TYPES.THIS_DATALUS,
+    runtimeInfo: THIS_DATALUS_DEVICE_DESCRIPTION,
     targetType: DEBUG_TARGET_TYPES.TAB,
   },
   toolbox: TEST_TOOLBOX_NO_NAME,
@@ -119,9 +119,9 @@ describe("DebugTargetInfo component", () => {
       expect(component.toJSON()).toMatchSnapshot();
     });
 
-    it("hides the connection info for This Firefox target", () => {
+    it("hides the connection info for This Datalus target", () => {
       const component = renderer.create(
-        DebugTargetInfo(THIS_FIREFOX_TARGET_INFO)
+        DebugTargetInfo(THIS_DATALUS_TARGET_INFO)
       );
       expect(
         findByClassName(component.root, "qa-connection-info").length
@@ -132,23 +132,23 @@ describe("DebugTargetInfo component", () => {
   describe("Target title", () => {
     it("displays the target title if the target of the Toolbox has a name", () => {
       const component = renderer.create(
-        DebugTargetInfo(THIS_FIREFOX_TARGET_INFO)
+        DebugTargetInfo(THIS_DATALUS_TARGET_INFO)
       );
       expect(findByClassName(component.root, "qa-target-title").length).toEqual(
         1
       );
     });
 
-    it("renders the expected snapshot for This Firefox target", () => {
+    it("renders the expected snapshot for This Datalus target", () => {
       const component = renderer.create(
-        DebugTargetInfo(THIS_FIREFOX_TARGET_INFO)
+        DebugTargetInfo(THIS_DATALUS_TARGET_INFO)
       );
       expect(component.toJSON()).toMatchSnapshot();
     });
 
     it("doesn't display the target title if the target of the Toolbox has no name", () => {
       const component = renderer.create(
-        DebugTargetInfo(THIS_FIREFOX_NO_NAME_TARGET_INFO)
+        DebugTargetInfo(THIS_DATALUS_NO_NAME_TARGET_INFO)
       );
       expect(findByClassName(component.root, "qa-target-title").length).toEqual(
         0
@@ -157,7 +157,7 @@ describe("DebugTargetInfo component", () => {
 
     it("renders the expected snapshot for a Toolbox with an unnamed target", () => {
       const component = renderer.create(
-        DebugTargetInfo(THIS_FIREFOX_NO_NAME_TARGET_INFO)
+        DebugTargetInfo(THIS_DATALUS_NO_NAME_TARGET_INFO)
       );
       expect(component.toJSON()).toMatchSnapshot();
     });

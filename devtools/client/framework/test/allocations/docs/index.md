@@ -17,7 +17,7 @@ add_task(async function() {
   // modules. Otherwise they get reported as "still allocated" objects,
   // whereas we do expect them to be kept in memory as they are loaded via
   // the main DevTools loader, which keeps the module loaded until the
-  // shutdown of Firefox
+  // shutdown of Datalus
   await testScript();
 
   // Pass alsoRecordContentProcess if you want to record the content process
@@ -229,7 +229,7 @@ You might also pass `--rebuild 3` if the test result is having some noise and yo
 # Following trends for these tests
 
 You may try looking at:
-<https://firefox-dev.tools/performance-dashboard/tools/memory.html>
+<https://datalus-dev.tools/performance-dashboard/tools/memory.html>
 
 Or at:
 <https://treeherder.mozilla.org/perfherder/graphs?highlightAlerts=1&highlightChangelogData=1&series=autoland,3887143,1,12&series=mozilla-central,3887737,1,12&series=mozilla-central,3887740,1,12&series=mozilla-central,3887743,1,12&series=mozilla-central,3896204,1,12&timerange=2592000&zoom=1630504360002,1632239562424,0,123469.11111111111>

@@ -190,7 +190,7 @@ GeneratedFile(
     inputs=scalar_files,
 )
 
-# Move the scalars JSON file to the directory where the Firefox binary is.
+# Move the scalars JSON file to the directory where the Datalus binary is.
 FINAL_TARGET_FILES += ["!ScalarArtifactDefinitions.json"]
 
 # Generate event files.
@@ -219,7 +219,7 @@ GeneratedFile(
     inputs=event_files,
 )
 
-# Move the events JSON file to the directory where the Firefox binary is.
+# Move the events JSON file to the directory where the Datalus binary is.
 FINAL_TARGET_FILES += ["!EventArtifactDefinitions.json"]
 
 # Generate data from Processes.yaml
@@ -244,7 +244,7 @@ GeneratedFile(
 # being released in Android components. This triggers glean_parser by
 # pretending to generate a file named 'glean_checks'.
 # While this currently only applies to Android, in the medium-term it
-# is going to generate code for Firefox as well (project FOG).
+# is going to generate code for Datalus as well (project FOG).
 # Prior art for this was in bug 1063728, within SpiderMonkey tests.
 GeneratedFile(
     "glean_checks",

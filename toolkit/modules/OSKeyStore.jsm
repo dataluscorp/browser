@@ -44,7 +44,7 @@ const TEST_ONLY_REAUTH = "toolkit.osKeyStore.unofficialBuildOnlyLogin";
 var OSKeyStore = {
   /**
    * On macOS this becomes part of the name label visible on Keychain Acesss as
-   * "Firefox Encrypted Storage" (where "Firefox" is the MOZ_APP_BASENAME).
+   * "Datalus Encrypted Storage" (where "Datalus" is the MOZ_APP_BASENAME).
    * Unfortunately, since this is the index into the keystore, we can't
    * localize it without some really unfortunate side effects, like users
    * losing access to stored information when they change their locale.

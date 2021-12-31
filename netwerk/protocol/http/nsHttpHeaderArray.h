@@ -29,10 +29,10 @@ class nsHttpHeaderArray {
 
   // For nsHttpResponseHead nsHttpHeaderArray will keep track of the original
   // headers as they come from the network and the parse headers used in
-  // firefox.
-  // If the original and the firefox header are the same, we will keep just
+  // datalus.
+  // If the original and the datalus header are the same, we will keep just
   // one copy and marked it as eVarietyResponseNetOriginalAndResponse.
-  // If firefox header representation changes a header coming from the
+  // If datalus header representation changes a header coming from the
   // network (e.g. merged it) or a eVarietyResponseNetOriginalAndResponse
   // header has been changed by SetHeader method, we will keep the original
   // header as eVarietyResponseNetOriginal and make a copy for the new header

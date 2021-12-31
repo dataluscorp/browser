@@ -4892,7 +4892,7 @@ uint32_t KeyboardLayout::ConvertNativeKeyCodeToDOMKeyCode(
           // more keys since active keyboard layout may have a key to input the
           // punctuation with different key.  However, setting keyCode to 0
           // makes some web applications which are aware of neither
-          // KeyboardEvent.key nor KeyboardEvent.code not work with Firefox
+          // KeyboardEvent.key nor KeyboardEvent.code not work with Datalus
           // when user selects non-ASCII capable keyboard layout such as
           // Russian and Thai layout.  So, let's decide keyCode value with
           // major keyboard layout's key which causes the OEM keycode.

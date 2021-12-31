@@ -171,7 +171,7 @@ if (typeof Mozilla == "undefined") {
    * string unique to the page/tour.
    *
    * @example
-   * Mozilla.UITour.registerPageID('firstrun-page-firefox-29');
+   * Mozilla.UITour.registerPageID('firstrun-page-datalus-29');
    *
    * @param {string} pageID Unique identifier for the page/tour.
    * @memberof Mozilla.UITour
@@ -258,7 +258,7 @@ if (typeof Mozilla == "undefined") {
    *   }
    * ];
    *
-   * var icon = '//mozorg.cdn.mozilla.net/media/img/firefox/australis/logo.png';
+   * var icon = '//mozorg.cdn.mozilla.net/media/img/datalus/australis/logo.png';
    *
    * var options = {
    *   closeButtonCallback: closeBtnCallback
@@ -407,9 +407,9 @@ if (typeof Mozilla == "undefined") {
   /**
    * @typedef {boolean} Mozilla.UITour.Configuration.CanReset
    *
-   * @description Indicate whether a user can refresh their Firefox profile via :js:func:`Mozilla.UITour.resetFirefox`.
+   * @description Indicate whether a user can refresh their Datalus profile via :js:func:`Mozilla.UITour.resetDatalus`.
    *
-   * @see Mozilla.UITour.resetFirefox
+   * @see Mozilla.UITour.resetDatalus
    * @since 48
    */
 
@@ -571,7 +571,7 @@ if (typeof Mozilla == "undefined") {
   };
 
   /**
-   * Request the browser open the Firefox Accounts page.
+   * Request the browser open the Datalus Accounts page.
    *
    * @param {Object} extraURLParams - An object containing additional
    * parameters for the URL opened by the browser for reasons of promotional
@@ -587,38 +587,38 @@ if (typeof Mozilla == "undefined") {
    * @since 79 for "flow_id", "flow_begin_time", "device_id", "entrypoint_experiment",
    * "entrypoint", "entrypoint_variation" fields.
    * @example
-   * // Will open https://accounts.firefox.com/signup?entrypoint=uitour
-   * Mozilla.UITour.showFirefoxAccounts();
+   * // Will open https://accounts.datalus.com/signup?entrypoint=uitour
+   * Mozilla.UITour.showDatalusAccounts();
    * @example
    * // Will open:
-   * // https://accounts.firefox.com/signup?entrypoint=uitour&utm_foo=bar&utm_bar=baz
-   * Mozilla.UITour.showFirefoxAccounts({
+   * // https://accounts.datalus.com/signup?entrypoint=uitour&utm_foo=bar&utm_bar=baz
+   * Mozilla.UITour.showDatalusAccounts({
    *   'utm_foo': 'bar',
    *   'utm_bar': 'baz'
    * });
    * @example
    * // Will open:
-   * // https://accounts.firefox.com/?action=email&email=foo%40bar.com&entrypoint=uitour
-   * Mozilla.UITour.showFirefoxAccounts(null, null, "foo@bar.com");
+   * // https://accounts.datalus.com/?action=email&email=foo%40bar.com&entrypoint=uitour
+   * Mozilla.UITour.showDatalusAccounts(null, null, "foo@bar.com");
    * @example
    * // Will open:
-   * // https://accounts.firefox.com/signup?entrypoint=sample
-   * Mozilla.UITour.showFirefoxAccounts(null, "sample");
+   * // https://accounts.datalus.com/signup?entrypoint=sample
+   * Mozilla.UITour.showDatalusAccounts(null, "sample");
    * @example
    * // Will open:
-   * // https://accounts.firefox.com/?action=email&email=foo%40bar.com&entrypoint=uitour&flow_id=c5b5ad7c4a94462afe4b9a7fbcca263dbd6c8409fb4539449c50c4a52544b2ed&flow_begin_time=1590680755812
-   * Mozilla.UITour.showFirefoxAccounts({
+   * // https://accounts.datalus.com/?action=email&email=foo%40bar.com&entrypoint=uitour&flow_id=c5b5ad7c4a94462afe4b9a7fbcca263dbd6c8409fb4539449c50c4a52544b2ed&flow_begin_time=1590680755812
+   * Mozilla.UITour.showDatalusAccounts({
    *   flow_id: 'c5b5ad7c4a94462afe4b9a7fbcca263dbd6c8409fb4539449c50c4a52544b2ed',
    *   flow_begin_time: 1590680755812,
    *   device_id: '7e450f3337d3479b8582ea1c9bb5ba6c'
    * }, "foo@bar.com");
    */
-  Mozilla.UITour.showFirefoxAccounts = function(
+  Mozilla.UITour.showDatalusAccounts = function(
     extraURLParams,
     entrypoint,
     email
   ) {
-    _sendEvent("showFirefoxAccounts", {
+    _sendEvent("showDatalusAccounts", {
       extraURLParams: JSON.stringify(extraURLParams),
       entrypoint,
       email,
@@ -626,7 +626,7 @@ if (typeof Mozilla == "undefined") {
   };
 
   /**
-   * Request the browser open the "Connect Another Device" Firefox Accounts page.
+   * Request the browser open the "Connect Another Device" Datalus Accounts page.
    *
    * @param {Object} extraURLParams - An object containing additional
    * parameters for the URL opened by the browser for reasons of promotional
@@ -637,11 +637,11 @@ if (typeof Mozilla == "undefined") {
    * For Flow metrics, see details at https://mozilla.github.io/ecosystem-platform/docs/fxa-engineering/fxa-metrics#content-server
    * @since 59
    * @example
-   * // Will open https://accounts.firefox.com/connect_another_device?entrypoint=uitour
+   * // Will open https://accounts.datalus.com/connect_another_device?entrypoint=uitour
    * Mozilla.UITour.showConnectAnotherDevice();
    * @example
    * // Will open:
-   * // https://accounts.firefox.com/connect_another_device?entrypoint=uitour&utm_foo=bar&utm_bar=baz
+   * // https://accounts.datalus.com/connect_another_device?entrypoint=uitour&utm_foo=bar&utm_bar=baz
    * Mozilla.UITour.showConnectAnotherDevice({
    *   'utm_foo': 'bar',
    *   'utm_bar': 'baz'
@@ -661,8 +661,8 @@ if (typeof Mozilla == "undefined") {
    * @since 48
    * @see Mozilla.UITour.Configuration.CanReset
    */
-  Mozilla.UITour.resetFirefox = function() {
-    _sendEvent("resetFirefox");
+  Mozilla.UITour.resetDatalus = function() {
+    _sendEvent("resetDatalus");
   };
 
   /**
@@ -739,7 +739,7 @@ if (typeof Mozilla == "undefined") {
    *
    * This should have been implemented via `setConfiguration("searchTerm", …)`.
    *
-   * @param {String} term - Search string e.g. 'Firefox'
+   * @param {String} term - Search string e.g. 'Datalus'
    * @since 34
    */
   Mozilla.UITour.setSearchTerm = function(term) {

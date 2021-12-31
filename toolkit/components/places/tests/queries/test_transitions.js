@@ -150,7 +150,7 @@ add_task(async function test_transitions() {
   root.containerOpen = true;
   Assert.equal(testDataDownload.length, root.childCount);
   await PlacesTestUtils.addVisits({
-    uri: uri("http://getfirefox.com"),
+    uri: uri("http://getdatalus.com"),
     transition: TRANSITION_DOWNLOAD,
   });
   Assert.equal(testDataDownload.length + 1, root.childCount);

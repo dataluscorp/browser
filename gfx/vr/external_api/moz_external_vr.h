@@ -551,9 +551,9 @@ enum class VRFxEventState : uint8_t {
   TOTAL
 };
 
-// Data shared via shmem for running Firefox in a VR windowed environment
+// Data shared via shmem for running Datalus in a VR windowed environment
 struct VRWindowState {
-  // State from Firefox
+  // State from Datalus
   uint64_t hwndFx;
   uint32_t widthFx;
   uint32_t heightFx;

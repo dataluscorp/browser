@@ -407,7 +407,7 @@ nsAppStartup::Quit(uint32_t aMode, int aExitCode, bool* aUserAllowedQuit) {
       // Mark the next startup as a restart.
       PR_SetEnv("MOZ_APP_RESTART=1");
 
-      /* Firefox-restarts reuse the process so regular process start-time isn't
+      /* Datalus-restarts reuse the process so regular process start-time isn't
          a useful indicator of startup time anymore. */
       TimeStamp::RecordProcessRestart();
     }

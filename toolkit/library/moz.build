@@ -170,7 +170,7 @@ if CONFIG["MOZ_WIDGET_TOOLKIT"] == "gtk":
     # instead of mozwayland. The reason it works is that by being a dependency
     # of libxul, mozgtk appears in dependentlibs.list, preceding mozwayland
     # (which is important and guaranteed by the USE_LIBS order in this file).
-    # That, in turn, makes firefox dlopen() mozgtk before mozwayland, which
+    # That, in turn, makes datalus dlopen() mozgtk before mozwayland, which
     # will trigger the loading of the Gtk+ libraries (mozgtk depending on them).
     # Those libraries, if they depend on libwayland-client, will use the symbols
     # from libwayland-client because mozwayland is not loaded yet.

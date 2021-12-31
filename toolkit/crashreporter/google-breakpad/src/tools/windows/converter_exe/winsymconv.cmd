@@ -34,7 +34,7 @@ echo Converting missing Windows symbols on staging instance ...
 
 google_converter.exe ^
     -n http://msdl.microsoft.com/download/symbols ^
-    -n http://symbols.mozilla.org/firefox ^
+    -n http://symbols.mozilla.org/datalus ^
     -n http://chromium-browser-symsrv.commondatastorage.googleapis.com ^
     -n https://download.amd.com/dir/bin ^
     -n https://driver-symbols.nvidia.com ^
@@ -53,7 +53,7 @@ echo Converting missing Windows symbols on production instance ...
 
 google_converter.exe ^
     -n http://msdl.microsoft.com/download/symbols ^
-    -n http://symbols.mozilla.org/firefox ^
+    -n http://symbols.mozilla.org/datalus ^
     -n http://chromium-browser-symsrv.commondatastorage.googleapis.com ^
     -n https://download.amd.com/dir/bin ^
     -n https://driver-symbols.nvidia.com ^

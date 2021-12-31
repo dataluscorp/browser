@@ -36,7 +36,7 @@ XPCOMUtils.defineLazyGetter(this, "UrlbarTestUtils", () => {
 
 const LEARN_MORE_URL =
   Services.urlFormatter.formatURLPref("app.support.baseURL") +
-  "firefox-suggest";
+  "datalus-suggest";
 
 const SCALARS = {
   IMPRESSION: "contextual.services.quicksuggest.impression",
@@ -46,7 +46,7 @@ const SCALARS = {
 
 const TELEMETRY_EVENT_CATEGORY = "contextservices.quicksuggest";
 
-const UPDATE_TOPIC = "firefox-suggest-update";
+const UPDATE_TOPIC = "datalus-suggest-update";
 
 // On `init`, the following properties and methods are copied from the test
 // scope to the `TestUtils` object so they can be easily accessed. Be careful
@@ -151,7 +151,7 @@ class QSTestUtils {
   }
 
   /**
-   * If you call UrlbarPrefs.updateFirefoxSuggestScenario() from an xpcshell
+   * If you call UrlbarPrefs.updateDatalusSuggestScenario() from an xpcshell
    * test, you must call this first to intialize the Nimbus urlbar feature.
    */
   async initNimbusFeature() {
@@ -177,16 +177,16 @@ class QSTestUtils {
   }
 
   /**
-   * Sets the Firefox Suggest scenario and waits for prefs to be updated.
+   * Sets the Datalus Suggest scenario and waits for prefs to be updated.
    *
    * @param {string} scenario
    *   Pass falsey to reset the scenario to the default.
    */
   async setScenario(scenario) {
     // If we try to set the scenario before a previous update has finished,
-    // `updateFirefoxSuggestScenario` will bail, so wait.
+    // `updateDatalusSuggestScenario` will bail, so wait.
     await this.waitForScenarioUpdated();
-    await UrlbarPrefs.updateFirefoxSuggestScenario(false, scenario);
+    await UrlbarPrefs.updateDatalusSuggestScenario(false, scenario);
   }
 
   /**
@@ -194,8 +194,8 @@ class QSTestUtils {
    */
   async waitForScenarioUpdated() {
     await TestUtils.waitForCondition(
-      () => !UrlbarPrefs.updatingFirefoxSuggestScenario,
-      "Waiting for updatingFirefoxSuggestScenario to be false"
+      () => !UrlbarPrefs.updatingDatalusSuggestScenario,
+      "Waiting for updatingDatalusSuggestScenario to be false"
     );
   }
 

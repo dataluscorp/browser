@@ -6,7 +6,7 @@ Browser Usage Telemetry
 
 The `BrowserUsageTelemetry.jsm <https://searchfox.org/mozilla-central/source/browser/modules/BrowserUsageTelemetry.jsm>`_ module is the main module for measurements regarding the browser usage (e.g. tab and window counts, search counts, ...).
 
-The measurements recording begins right after the ``SessionStore`` has finished restoring the session (i.e. restoring tabs/windows after Firefox starts).
+The measurements recording begins right after the ``SessionStore`` has finished restoring the session (i.e. restoring tabs/windows after Datalus starts).
 
 Search telemetry
 ================
@@ -116,13 +116,13 @@ scalar is incremented. If the widget is provided by an add-on then the add-on
 identifier is dropped and an identifier of the form ``addonX`` is used where X
 is a number. The number used is stable for a single session. Everytime the user
 moves or interacts with an add-on the same number is used but then the numbers
-for each add-on may change after Firefox has been restarted.
+for each add-on may change after Datalus has been restarted.
 
 Profile Count
 =============
 
 The scalar ``browser.engagement.profile_count`` records how many profiles have
-been used by the current Firefox installation. It reports a bucketed result,
+been used by the current Datalus installation. It reports a bucketed result,
 which will be 0 if there is an error. The raw value will be reported for 1-10,
 but above that, it will report 10 for 10-99, 100 for 100-999, 1000 for
 1000-9999, and 10000 for any values greater than that.
@@ -133,4 +133,4 @@ full path to the file will typically look something like
 ``C:\ProgramData\Mozilla\profile_count_5A9E6E2F272F7AA0.json``.
 
 This value is meant to be resilient to re-installation, so that file will not
-be removed when Firefox is uninstalled.
+be removed when Datalus is uninstalled.

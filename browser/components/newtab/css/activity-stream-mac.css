@@ -1184,7 +1184,7 @@ main.has-snippet {
   }
 }
 .search-wrapper .logo-and-wordmark .wordmark {
-  background: url("chrome://branding/content/firefox-wordmark.svg") no-repeat center center;
+  background: url("chrome://branding/content/datalus-wordmark.svg") no-repeat center center;
   background-size: 134px;
   -moz-context-properties: fill;
   display: inline-block;
@@ -2934,14 +2934,14 @@ main.has-snippet {
 .ds-navigation.ds-navigation-new-topics .ds-navigation-family span {
   margin: 0 6px;
 }
-.ds-navigation.ds-navigation-new-topics .ds-navigation-family .firefox-logo,
+.ds-navigation.ds-navigation-new-topics .ds-navigation-family .datalus-logo,
 .ds-navigation.ds-navigation-new-topics .ds-navigation-family .pocket-logo {
   height: 20px;
   width: 20px;
   background-size: cover;
 }
-.ds-navigation.ds-navigation-new-topics .ds-navigation-family .firefox-logo {
-  background-image: url("chrome://activity-stream/content/data/content/assets/firefox.svg");
+.ds-navigation.ds-navigation-new-topics .ds-navigation-family .datalus-logo {
+  background-image: url("chrome://activity-stream/content/data/content/assets/datalus.svg");
 }
 .ds-navigation.ds-navigation-new-topics .ds-navigation-family .pocket-logo {
   background-image: url("chrome://global/skin/icons/pocket.svg");

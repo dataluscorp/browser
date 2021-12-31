@@ -2,7 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-# script to pull and import Firefox Translations's extension source code
+# script to pull and import Datalus Translations's extension source code
 
 import os.path
 from zipfile import ZipFile
@@ -19,15 +19,15 @@ print("Importing version:", extension_version)
 if not extension_version:
     sys.exit("Value can't be empty.")
 
-extension_folder = "firefox-translations-src"
+extension_folder = "datalus-translations-src"
 
 if not os.path.exists("import_xpi.py"):
     sys.exit("This script is intended to be executed from its local folder")
 
 have_xpi = "N"
 local_xpi_file = (
-    "firefox-translations-src/dist/production/firefox/"
-    "firefox-infobar-ui/firefox-translations-" + extension_version + ".xpi"
+    "datalus-translations-src/dist/production/datalus/"
+    "datalus-infobar-ui/datalus-translations-" + extension_version + ".xpi"
 )
 if os.path.isfile(local_xpi_file):
     have_xpi = input(
@@ -41,7 +41,7 @@ if have_xpi.lower() != "y":
     subprocess.call(
         (
             "git clone -b v" + extension_version + " "
-            "https://github.com/mozilla-extensions/firefox-translations/ "
+            "https://github.com/mozilla-extensions/datalus-translations/ "
             + extension_folder
             + " "
         ).split()
@@ -70,7 +70,7 @@ if have_xpi.lower() != "y":
         "MC": str(1),
     }
     subprocess.call(
-        "yarn build:firefox-infobar-ui".split(), cwd=extension_folder, env=env
+        "yarn build:datalus-infobar-ui".split(), cwd=extension_folder, env=env
     )
 
 shutil.rmtree("extension", ignore_errors=True)

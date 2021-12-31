@@ -200,7 +200,7 @@
           "params": [
             {
               "key": "client",
-              "prefix": "firefox"
+              "prefix": "datalus"
             }
           ]
         },

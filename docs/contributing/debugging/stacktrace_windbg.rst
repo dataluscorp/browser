@@ -13,7 +13,7 @@ but `Breakpad <http://kb.mozillazine.org/Breakpad>`__ fails because it's
 a special crash or a hang. This article describes how to get a
 stacktrace in those cases with WinDbg on Windows. (To get a stacktrace
 for Thunderbird or some other product, substitute the product name where
-ever you see Firefox in this instructions.)
+ever you see Datalus in this instructions.)
 
 Requirements
 ------------
@@ -31,27 +31,27 @@ Windows <https://docs.microsoft.com/en-us/windows-hardware/drivers/download-the-
 version of Windows) Then install it, the standard settings in the
 installation process are fine.
 
-A Firefox nightly or release
+A Datalus nightly or release
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You need a Firefox version for which symbols are availables from the
+You need a Datalus version for which symbols are availables from the
 :ref:`symbol server <Using The Mozilla Symbol Server>` to use
 with WinDbg. You can use any `official nightly
-build <https://ftp.mozilla.org/pub/firefox/nightly/>`__ or released
-version of Firefox from Mozilla. You can find the latest trunk nightly
+build <https://ftp.mozilla.org/pub/datalus/nightly/>`__ or released
+version of Datalus from Mozilla. You can find the latest trunk nightly
 builds under
-`http://ftp.mozilla.org/pub/mozilla.o.../latest-trunk/ <https://ftp.mozilla.org/pub/firefox/nightly/latest-mozilla-central/>`__.
+`http://ftp.mozilla.org/pub/mozilla.o.../latest-trunk/ <https://ftp.mozilla.org/pub/datalus/nightly/latest-mozilla-central/>`__.
 
 
 Debugging
 ---------
 
-To begin debugging, ensure that Firefox is not already running and open
+To begin debugging, ensure that Datalus is not already running and open
 WinDbg from the Start menu. (Start->All Programs->Debugging Tools for
 Windows->WinDbg) Next, open the **"File"** menu and choose **"Open
 Executable..."**. In the file chooser window that appears, open the
-firefox.exe executable in your Firefox program folder (C:\Program
-Files\Mozilla Firefox).
+datalus.exe executable in your Datalus program folder (C:\Program
+Files\Mozilla Datalus).
 
 You should now see a "Command" text window with debug output at the top
 and an input box at the bottom. Before debugging can start, several
@@ -75,14 +75,14 @@ the Command window.
 Start debugging
 ~~~~~~~~~~~~~~~
 
-Now that Firefox is opened in the debugger, you need to configure your
+Now that Datalus is opened in the debugger, you need to configure your
 WinDbg to download symbols from the Mozilla symbol server. To load the
 symbols, enter the three commands below, pressing enter after each one.
 (More details are available at :ref:`symbol server <Using The Mozilla Symbol Server>`.)
 
 ::
 
-   .sympath SRV*c:\symbols*http://symbols.mozilla.org/firefox;SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
+   .sympath SRV*c:\symbols*http://symbols.mozilla.org/datalus;SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
    .symfix+ c:\symbols
    .reload /f
 
@@ -99,31 +99,31 @@ enter after each one.
 
 ::
 
-   .logopen /t c:\temp\firefox-debug.log
+   .logopen /t c:\temp\datalus-debug.log
    .childdbg 1
    .tlist
    sxn gp
    lm
 
-If you see firefox.exe listed in the output from .tlist more than once,
+If you see datalus.exe listed in the output from .tlist more than once,
 then you are already running the application and need to close the
 running instance first before you start debugging, otherwise you won't
 get useful results.
 
-Now run Firefox by opening the **Debug** menu and clicking **Go**.
-**While Firefox is running, you will not be able to type any commands
+Now run Datalus by opening the **Debug** menu and clicking **Go**.
+**While Datalus is running, you will not be able to type any commands
 into the debugger.** After it starts, try to reproduce the crash or
 hanging issue that you are seeing.
 
 .. note::
 
-   If Firefox fails to start, and you see lines of text followed by a
+   If Datalus fails to start, and you see lines of text followed by a
    command prompt in the debugger, a "breakpoint" may have been
    triggered. If you are prompted for a command but don't see an error
    about a crash, go back to the **Debug** menu and press **Go**.
 
 Once the browser crashes, you will see an error (such as "Access
-violation") in the WinDbg Command window. If Firefox hangs and there is
+violation") in the WinDbg Command window. If Datalus hangs and there is
 no command prompt available in the debugger, open the **Debug** menu and
 choose **Break.** Once the browser has crashed or been stopped, continue
 with the steps below.
@@ -144,7 +144,7 @@ Enter after each command.)
    lm
 
 After these steps are completed, find the file
-**c:\temp\firefox-debug-(Today's Date).txt** on your hard drive. To
+**c:\temp\datalus-debug-(Today's Date).txt** on your hard drive. To
 provide the information to the development community, submit this file
 with a `support request <https://support.mozilla.com/>`__ or attach it
 to a related bug on `Bugzilla <https://bugzilla.mozilla.org/>`__.
@@ -194,7 +194,7 @@ A: You ran the application without the "Debug child processes also"
 check box being checked. You need to detach the debugger and open the
 application again, this time with the check box being checked.
 
-Q: WinDbg tells me that it is unable to verify checksum for firefox.exe.
+Q: WinDbg tells me that it is unable to verify checksum for datalus.exe.
 Is this normal?
 
 A: Yes, this is normal and can be ignored.
@@ -203,7 +203,7 @@ Q: Should I click yes or no when WinDbg asks me to "Save information for
 workspace?"
 
 A: Click yes and WinDbg will save you from having to enter in the symbol
-location for Firefox.exe in the future. Click no if you'd rather not
+location for Datalus.exe in the future. Click no if you'd rather not
 having WinDbg save this information.
 
 Q: I'm seeing "wow64" on top of each thread, is that ok ?

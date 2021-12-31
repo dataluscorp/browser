@@ -7,7 +7,7 @@
 /* globals localStorage, window */
 
 // XXX: This file is a copy of the Services shim from devtools-services.
-// See https://github.com/firefox-devtools/devtools-core/blob/a9263b4c3f88ea42879a36cdc3ca8217b4a528ea/packages/devtools-services/index.js
+// See https://github.com/datalus-devtools/devtools-core/blob/a9263b4c3f88ea42879a36cdc3ca8217b4a528ea/packages/devtools-services/index.js
 // Many Jest tests in the debugger rely on preferences, but can't use Services.
 // This fixture is probably doing too much and should be reduced to the minimum
 // needed to pass the tests.

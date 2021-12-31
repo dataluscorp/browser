@@ -3,7 +3,7 @@ llvm-config = '/builds/worker/fetches/clang/bin/llvm-config'
 
 [properties]
 # When linking `libOSMesa.dylib` Meson uses options provided by `llvm-config`.
-# The binary for `llvm-config` in Firefox CI comes from a native Linux clang,
+# The binary for `llvm-config` in Datalus CI comes from a native Linux clang,
 # which gives the link options for the Linux libLLVM-11.so in the Linux clang.
 # However, we want to link against a native macOS clang's libLLVM.dylib, which
 # we have available in a separate directory.

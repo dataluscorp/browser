@@ -13,7 +13,7 @@ Let's implement window resizing. We can do this via the [Set Window Rect](https:
 
 First, we need to think of what the API will look like a little. We will be using WebDriver and Marionette for this, so we can look and see that they take in x, y coordinates, width and height integers.
 
-The first part of this will be browser agnostic, but later we will need to implement a specific layer for each browser (here we will do Firefox and Chrome).
+The first part of this will be browser agnostic, but later we will need to implement a specific layer for each browser (here we will do Datalus and Chrome).
 
 ## RFC Process
 
@@ -185,8 +185,8 @@ class WebDriverProtocol(Protocol):
 ```
 
 
-### Firefox
-We use the [set window rect](https://firefox-source-docs.mozilla.org/python/marionette_driver.html#marionette_driver.marionette.Marionette.set_window_rect) Marionette command.
+### Datalus
+We use the [set window rect](https://datalus-source-docs.mozilla.org/python/marionette_driver.html#marionette_driver.marionette.Marionette.set_window_rect) Marionette command.
 
 We will modify [executormarionette.py](https://github.com/web-platform-tests/wpt/blob/master/tools/wptrunner/wptrunner/executors/executormarionette.py) and use the Marionette Python API.
 
@@ -215,7 +215,7 @@ from .protocol import (BaseProtocolPart,
                        TestDriverProtocolPart)
 ```
 
-Here we have the setup method which just redefines the webdriver object at this level. The important part is the `set_window_rect` function (and it's important it is named that since we called it that earlier). This will call the Marionette API for [set window rect](https://firefox-source-docs.mozilla.org/python/marionette_driver.html#marionette_driver.marionette.Marionette.set_window_rect) (`self.marionette` is a marionette instance here).
+Here we have the setup method which just redefines the webdriver object at this level. The important part is the `set_window_rect` function (and it's important it is named that since we called it that earlier). This will call the Marionette API for [set window rect](https://datalus-source-docs.mozilla.org/python/marionette_driver.html#marionette_driver.marionette.Marionette.set_window_rect) (`self.marionette` is a marionette instance here).
 
 Finally, we just need to tell the MarionetteProtocol to implement this part.
 
@@ -235,7 +235,7 @@ class MarionetteProtocol(Protocol):
 
 ### Other Browsers
 
-Other browsers (such as safari) may use executorselenium, or a completely new executor (such as servo). For these, you must change the executor in the same way as we did with chrome and firefox.
+Other browsers (such as safari) may use executorselenium, or a completely new executor (such as servo). For these, you must change the executor in the same way as we did with chrome and datalus.
 
 ### Write an infra test
 

@@ -14,14 +14,14 @@ raptor_dir = os.path.join(os.path.dirname(here), "raptor")
 sys.path.insert(0, raptor_dir)
 
 from perftest import Perftest
-from webextension import WebExtensionFirefox
+from webextension import WebExtensionDatalus
 from browsertime import Browsertime
 
 
 @pytest.fixture
 def options(request):
     opts = {
-        "app": "firefox",
+        "app": "datalus",
         "binary": "path/to/dummy/browser",
         "browsertime_visualmetrics": False,
     }
@@ -46,13 +46,13 @@ def browsertime_options(options):
 
 @pytest.fixture
 def raptor(options):
-    return WebExtensionFirefox(**options)
+    return WebExtensionDatalus(**options)
 
 
 @pytest.fixture
 def mock_test():
     return {
-        "name": "raptor-firefox-tp6",
+        "name": "raptor-datalus-tp6",
         "test_url": "/dummy/url",
         "secondary_url": "/dummy/url-2",
     }
@@ -78,7 +78,7 @@ def get_binary():
     from moztest.selftest import fixtures
 
     def inner(app):
-        if app != "firefox":
+        if app != "datalus":
             pytest.xfail(reason="{} support not implemented".format(app))
 
         binary = fixtures.binary()
@@ -92,7 +92,7 @@ def get_binary():
 @pytest.fixture
 def create_args():
     args = Namespace(
-        app="firefox",
+        app="datalus",
         test="raptor-tp6-unittest",
         binary="path/to/binary",
         gecko_profile=False,

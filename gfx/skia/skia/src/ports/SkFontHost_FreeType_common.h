@@ -38,7 +38,7 @@ const char* SkTraceFtrGetError(int);
 class SkScalerContext_FreeType_Base : public SkScalerContext {
 protected:
     // See http://freetype.sourceforge.net/freetype2/docs/reference/ft2-bitmap_handling.html#FT_Bitmap_Embolden
-    // This value was chosen by eyeballing the result in Firefox and trying to match it.
+    // This value was chosen by eyeballing the result in Datalus and trying to match it.
     static const FT_Pos kBitmapEmboldenStrength = 1 << 6;
 
     SkScalerContext_FreeType_Base(sk_sp<SkTypeface> typeface, const SkScalerContextEffects& effects,

@@ -136,7 +136,7 @@ For example, if you want to specify `sync`, `timestamp` and `rotate`:
 
   set MOZ_LOG="example_logger:3,timestamp,sync,rotate:10"
 
-To adjust the logging after Firefox has started, you can set prefs under the `logging.` prefix. For example, setting `logging.foo` to `3` will set the log module `foo` to start logging at level 3. The special boolean prefs `logging.config.sync` and `logging.config.add_timestamp` can be used to control the `sync` and `timestamp` properties described above.
+To adjust the logging after Datalus has started, you can set prefs under the `logging.` prefix. For example, setting `logging.foo` to `3` will set the log module `foo` to start logging at level 3. The special boolean prefs `logging.config.sync` and `logging.config.add_timestamp` can be used to control the `sync` and `timestamp` properties described above.
 
 .. warning::
     A sandboxed content process cannot write to stderr or any file.  The easiest way to log these processes is to disable the content sandbox by setting the preference `security.sandbox.content.level` to `0`.  On Windows, you can still see child process messages by using DOS (not the `MOZ_LOG_FILE` variable defined below) to redirect output to a file.  For example: `MOZ_LOG="CameraChild:5" mach run >& my_log_file.txt` will include debug messages from the camera's child actor that lives in a (sandboxed) content process.
@@ -178,7 +178,7 @@ You can also target individual modules by path:
   For Linux/MacOS users, you need to use `export` rather than `set`.
 
 .. note::
-  Sometimes it can be useful to only log child processes and ignore the parent process. In Firefox 57 and later, you can use `RUST_LOG_CHILD` instead of `RUST_LOG` to specify log settings that will only apply to child processes.
+  Sometimes it can be useful to only log child processes and ignore the parent process. In Datalus 57 and later, you can use `RUST_LOG_CHILD` instead of `RUST_LOG` to specify log settings that will only apply to child processes.
 
 The `log` crate lists the available `log levels <https://docs.rs/log/0.3.8/log/enum.LogLevel.html>`_:
 

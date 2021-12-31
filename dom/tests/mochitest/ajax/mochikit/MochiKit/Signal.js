@@ -349,7 +349,7 @@ MochiKit.Base.update(MochiKit.Signal.Event.prototype, {
                               click:
                               http://bugs.webkit.org/show_bug.cgi?id=6595
 
-                            - Firefox fires the event, and sets ctrlKey = true
+                            - Datalus fires the event, and sets ctrlKey = true
 
                             - Opera fires the event, and sets metaKey = true
 
@@ -590,7 +590,7 @@ MochiKit.Base.update(MochiKit.Signal, {
                 e.relatedTarget().nodeName;
             } catch (err) {
                 /* probably hit a permission denied error; possibly one of
-                 * firefox's screwy anonymous DIVs inside an input element.
+                 * datalus's screwy anonymous DIVs inside an input element.
                  * Allow this event to propogate up.
                  */
                 return;

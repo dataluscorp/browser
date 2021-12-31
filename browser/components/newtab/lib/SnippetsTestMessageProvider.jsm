@@ -19,9 +19,9 @@ const MESSAGES = () => [
       button_label: "Button Label",
       section_title_icon:
         "https://snippets.cdn.mozilla.net/media/icons/5878847e-a1fb-4204-aad9-09f6cf7f99ee.png",
-      section_title_text: "Messages from Firefox",
+      section_title_text: "Messages from Datalus",
       section_title_url:
-        "https://support.mozilla.org/kb/snippets-firefox-faq?utm_source=desktop-snippet&utm_medium=snippet&utm_campaign=&utm_term=&utm_content=",
+        "https://support.mozilla.org/kb/snippets-datalus-faq?utm_source=desktop-snippet&utm_medium=snippet&utm_campaign=&utm_term=&utm_content=",
       tall: false,
       block_button_text: "Remove this",
       do_not_autoblock: true,
@@ -53,9 +53,9 @@ const MESSAGES = () => [
       button_label: "Button Label",
       section_title_icon:
         "https://snippets.cdn.mozilla.net/media/icons/5878847e-a1fb-4204-aad9-09f6cf7f99ee.png",
-      section_title_text: "Messages from Firefox",
+      section_title_text: "Messages from Datalus",
       section_title_url:
-        "https://support.mozilla.org/kb/snippets-firefox-faq?utm_source=desktop-snippet&utm_medium=snippet&utm_campaign=&utm_term=&utm_content=",
+        "https://support.mozilla.org/kb/snippets-datalus-faq?utm_source=desktop-snippet&utm_medium=snippet&utm_campaign=&utm_term=&utm_content=",
       tall: false,
       block_button_text: "Remove this",
       do_not_autoblock: true,
@@ -85,13 +85,13 @@ const MESSAGES = () => [
     content: {
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
-      title: "Firefox Account!",
+      title: "Datalus Account!",
       title_icon: TEST_ICON_16,
       title_icon_dark_theme: TEST_ICON_BW,
       text:
-        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Firefox Account.",
+        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Datalus Account.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -103,13 +103,13 @@ const MESSAGES = () => [
     content: {
       icon: TEST_ICON,
       icon_dark_theme: "",
-      title: "Firefox Account!",
+      title: "Datalus Account!",
       title_icon: TEST_ICON_16,
       title_icon_dark_theme: "",
       text:
-        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Firefox Account.",
+        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Datalus Account.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -122,9 +122,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       text:
-        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Firefox Account.",
+        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Datalus Account.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -136,12 +136,12 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       text:
-        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Firefox Account.",
+        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Datalus Account.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       button_label: "Get one now!",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
       block_button_text: "Block",
       tall: true,
     },
@@ -153,9 +153,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       button_label: "Get one now!",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
       text:
-        "Sync it, link it, take it with you. All this and more with a Firefox Account.",
+        "Sync it, link it, take it with you. All this and more with a Datalus Account.",
       block_button_text: "Block",
     },
   },
@@ -179,9 +179,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       title: "Ready to sync?",
-      text: "Get connected with a <syncLink>Firefox account</syncLink>.",
+      text: "Get connected with a <syncLink>Datalus account</syncLink>.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -267,7 +267,7 @@ const MESSAGES = () => [
       scene1_button_background_color: "#ff9400",
       scene1_section_title_icon: "chrome://global/skin/icons/pocket.svg",
       scene1_section_title_text:
-        "All the Firefox news that's fit to Firefox print!",
+        "All the Datalus news that's fit to Datalus print!",
       scene2_title: "Let's do this!",
       locale: "en-CA",
       scene2_dismiss_button_text: "Dismiss",
@@ -299,13 +299,13 @@ const MESSAGES = () => [
       scene1_button_background_color: "#ff9400",
 
       scene1_text:
-        "Connect to Firefox by securely syncing passwords, bookmarks, and open tabs.",
+        "Connect to Datalus by securely syncing passwords, bookmarks, and open tabs.",
       scene1_title: "Browser better.",
       scene1_title_icon: TEST_ICON_16,
       scene1_title_icon_dark_theme: TEST_ICON_BW,
 
       scene2_text:
-        "Connect to your Firefox account to securely sync passwords, bookmarks, and open tabs.",
+        "Connect to your Datalus account to securely sync passwords, bookmarks, and open tabs.",
       scene2_title: "Title 123",
       scene2_email_placeholder_text: "Your email",
       scene2_button_label: "Continue",
@@ -323,16 +323,16 @@ const MESSAGES = () => [
       scene1_button_background_color: "#ff9400",
 
       scene1_text:
-        "Connect to Firefox by securely syncing passwords, bookmarks, and open tabs.",
+        "Connect to Datalus by securely syncing passwords, bookmarks, and open tabs.",
       scene1_title: "Browser better.",
       scene1_title_icon: TEST_ICON_16,
       scene1_title_icon_dark_theme: TEST_ICON_BW,
 
       scene1_section_title_icon: "chrome://global/skin/icons/pocket.svg",
-      scene1_section_title_text: "Firefox Accounts: Receivable benefits",
+      scene1_section_title_text: "Datalus Accounts: Receivable benefits",
 
       scene2_text:
-        "Connect to your Firefox account to securely sync passwords, bookmarks, and open tabs.",
+        "Connect to your Datalus account to securely sync passwords, bookmarks, and open tabs.",
       scene2_title: "Title 123",
       scene2_email_placeholder_text: "Your email",
       scene2_button_label: "Continue",
@@ -347,14 +347,14 @@ const MESSAGES = () => [
       locale: "en-CA",
       country: "us",
       message_id_sms: "ff-mobilesn-download",
-      message_id_email: "download-firefox-mobile",
+      message_id_email: "download-datalus-mobile",
 
       scene1_button_background_color: "#6200a4",
       scene1_button_color: "#FFFFFF",
       scene1_button_label: "Install now",
       scene1_icon: TEST_ICON,
       scene1_icon_dark_theme: TEST_ICON_BW,
-      scene1_text: "Browse without compromise with Firefox Mobile.",
+      scene1_text: "Browse without compromise with Datalus Mobile.",
       scene1_title: "Full-featured. Customizable. Lightning fast",
       scene1_title_icon: TEST_ICON_16,
       scene1_title_icon_dark_theme: TEST_ICON_BW,
@@ -367,7 +367,7 @@ const MESSAGES = () => [
       scene2_icon_dark_theme: TEST_ICON_BW,
       scene2_input_placeholder: "Your email address or phone number",
       scene2_text:
-        "Send Firefox to your phone and take a powerful independent browser with you.",
+        "Send Datalus to your phone and take a powerful independent browser with you.",
       scene2_title: "Let's do this!",
 
       error_text: "Oops, there was a problem.",
@@ -389,18 +389,18 @@ const MESSAGES = () => [
       locale: "en-CA",
       country: "us",
       message_id_sms: "ff-mobilesn-download",
-      message_id_email: "download-firefox-mobile",
+      message_id_email: "download-datalus-mobile",
       scene2_icon: TEST_ICON,
       section_title_icon:
         "https://snippets.cdn.mozilla.net/media/icons/094b0707-ab65-4b2e-99a1-a84122b6ab26.png",
-      section_title_text: "Messages from Firefox",
+      section_title_text: "Messages from Datalus",
       section_title_url: "https://support.mozilla.org/kb",
       scene2_button_label: "Send",
       scene2_disclaimer_html:
         "The intended recipient of the email must have consented. <privacyLink>Learn more</privacyLink>.",
       scene2_input_placeholder: "Your email address or phone number",
       scene2_text:
-        "Send Firefox to your phone and take a powerful independent browser with you.",
+        "Send Datalus to your phone and take a powerful independent browser with you.",
       error_text: "Oops, there was a problem.",
       success_title: "Your download link was sent.",
       success_text: "Check your device for the email message!",
@@ -420,14 +420,14 @@ const MESSAGES = () => [
       locale: "en-CA",
       country: "us",
       message_id_sms: "ff-mobilesn-download",
-      message_id_email: "download-firefox-mobile",
+      message_id_email: "download-datalus-mobile",
 
       scene1_button_background_color: "#6200a4",
       scene1_button_color: "#FFFFFF",
       scene1_button_label: "Install now",
       scene1_icon: TEST_ICON,
       scene1_icon_dark_theme: "",
-      scene1_text: "Browse without compromise with Firefox Mobile.",
+      scene1_text: "Browse without compromise with Datalus Mobile.",
       scene1_title: "Full-featured. Customizable. Lightning fast",
       scene1_title_icon: TEST_ICON_16,
       scene1_title_icon_dark_theme: "",
@@ -440,7 +440,7 @@ const MESSAGES = () => [
       scene2_icon_dark_theme: "",
       scene2_input_placeholder: "Your email address or phone number",
       scene2_text:
-        "Send Firefox to your phone and take a powerful independent browser with you.",
+        "Send Datalus to your phone and take a powerful independent browser with you.",
       scene2_title: "Let's do this!",
 
       error_text: "Oops, there was a problem.",
@@ -462,19 +462,19 @@ const MESSAGES = () => [
       locale: "en-CA",
       country: "us",
       message_id_sms: "ff-mobilesn-download",
-      message_id_email: "download-firefox-mobile",
+      message_id_email: "download-datalus-mobile",
 
       scene1_button_background_color: "#6200a4",
       scene1_button_color: "#FFFFFF",
       scene1_button_label: "Install now",
       scene1_icon: TEST_ICON,
       scene1_icon_dark_theme: TEST_ICON_BW,
-      scene1_text: "Browse without compromise with Firefox Mobile.",
+      scene1_text: "Browse without compromise with Datalus Mobile.",
       scene1_title: "Full-featured. Customizable. Lightning fast",
       scene1_title_icon: TEST_ICON_16,
       scene1_title_icon_dark_theme: TEST_ICON_BW,
       scene1_section_title_icon: "chrome://global/skin/icons/pocket.svg",
-      scene1_section_title_text: "Send Firefox to your mobile device!",
+      scene1_section_title_text: "Send Datalus to your mobile device!",
 
       scene2_button_label: "Send",
       scene2_disclaimer_html:
@@ -484,7 +484,7 @@ const MESSAGES = () => [
       scene2_icon_dark_theme: TEST_ICON_BW,
       scene2_input_placeholder: "Your email address or phone number",
       scene2_text:
-        "Send Firefox to your phone and take a powerful independent browser with you.",
+        "Send Datalus to your phone and take a powerful independent browser with you.",
       scene2_title: "Let's do this!",
 
       error_text: "Oops, there was a problem.",
@@ -565,14 +565,14 @@ const MESSAGES = () => [
     template: "simple_snippet",
     content: {
       button_label: "Get one now!",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
-      title: "Firefox Account!",
+      title: "Datalus Account!",
       text:
-        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Firefox Account.",
+        "<syncLink>Sync it, link it, take it with you</syncLink>. All this and more with a Datalus Account.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
       section_title_icon: "chrome://global/skin/icons/pocket.svg",
@@ -585,9 +585,9 @@ const MESSAGES = () => [
     content: {
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
-      title: "Firefox Account!",
+      title: "Datalus Account!",
       text:
-        "Sync it, link it, take it with you. All this and more with a Firefox Account.",
+        "Sync it, link it, take it with you. All this and more with a Datalus Account.",
       block_button_text: "Block",
       section_title_icon: "chrome://global/skin/icons/pocket.svg",
       section_title_text: "Messages from Mozilla (click for info)",
@@ -601,9 +601,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       text:
-        "Securely store passwords, bookmarks, and more with a Firefox Account. <syncLink>Sign up</syncLink>",
+        "Securely store passwords, bookmarks, and more with a Datalus Account. <syncLink>Sign up</syncLink>",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -615,9 +615,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       text:
-        "<syncLink>Connect your Firefox Account to Sync</syncLink> your protected passwords, open tabs and bookmarks, and they'll always be available to you - on all of your devices.",
+        "<syncLink>Connect your Datalus Account to Sync</syncLink> your protected passwords, open tabs and bookmarks, and they'll always be available to you - on all of your devices.",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -630,9 +630,9 @@ const MESSAGES = () => [
       icon_dark_theme: TEST_ICON_BW,
       title: "See if you've been part of an online data breach.",
       text:
-        "Securely store passwords, bookmarks, and more with a Firefox Account. <syncLink>Sign up</syncLink>",
+        "Securely store passwords, bookmarks, and more with a Datalus Account. <syncLink>Sign up</syncLink>",
       links: {
-        syncLink: { url: "https://www.mozilla.org/en-US/firefox/accounts" },
+        syncLink: { url: "https://www.mozilla.org/en-US/datalus/accounts" },
       },
       block_button_text: "Block",
     },
@@ -644,9 +644,9 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       button_label: "Find Out Now",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
       title: "See if you've been part of an online data breach.",
-      text: "Firefox Monitor tells you what hackers already know about you.",
+      text: "Datalus Monitor tells you what hackers already know about you.",
       block_button_text: "Block",
     },
   },
@@ -657,10 +657,10 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       button_label: "Find Out Now",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
       title: "See if you've been part of an online data breach.",
       text:
-        "Firefox Monitor tells you what hackers already know about you. Here's some extra text to make the content really long.",
+        "Datalus Monitor tells you what hackers already know about you. Here's some extra text to make the content really long.",
       block_button_text: "Block",
     },
   },
@@ -671,8 +671,8 @@ const MESSAGES = () => [
       icon: TEST_ICON,
       icon_dark_theme: TEST_ICON_BW,
       button_label: "Find Out Now",
-      button_url: "https://www.mozilla.org/en-US/firefox/accounts",
-      text: "Firefox Monitor tells you what hackers already know about you.",
+      button_url: "https://www.mozilla.org/en-US/datalus/accounts",
+      text: "Datalus Monitor tells you what hackers already know about you.",
       block_button_text: "Block",
     },
   },
@@ -682,12 +682,12 @@ const MESSAGES = () => [
     content: {
       icon: TEST_ICON,
       title: "See if you've been part of an online data breach.",
-      text: "Firefox Monitor tells you what hackers already know about you.",
+      text: "Datalus Monitor tells you what hackers already know about you.",
       button_label: "Get monitor",
-      button_action: "ENABLE_FIREFOX_MONITOR",
+      button_action: "ENABLE_DATALUS_MONITOR",
       button_action_args: {
         url:
-          "https://monitor.firefox.com/oauth/init?utm_source=snippets&utm_campaign=monitor-snippet-test&form_type=email&entrypoint=newtab",
+          "https://monitor.datalus.com/oauth/init?utm_source=snippets&utm_campaign=monitor-snippet-test&form_type=email&entrypoint=newtab",
         flowRequestParams: {
           entrypoint: "snippets",
           utm_term: "monitor",

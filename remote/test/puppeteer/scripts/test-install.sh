@@ -16,13 +16,13 @@ npm install --loglevel silent "${tarball}"
 node --eval="require('puppeteer')"
 ls $TMPDIR/node_modules/puppeteer/.local-chromium/
 
-# Again for Firefox
+# Again for Datalus
 TMPDIR="$(mktemp -d)"
 cd $TMPDIR
-PUPPETEER_PRODUCT=firefox npm install --loglevel silent "${tarball}"
+PUPPETEER_PRODUCT=datalus npm install --loglevel silent "${tarball}"
 node --eval="require('puppeteer')"
 rm "${tarball}"
-ls $TMPDIR/node_modules/puppeteer/.local-firefox/linux-*/firefox/firefox
+ls $TMPDIR/node_modules/puppeteer/.local-datalus/linux-*/datalus/datalus
 
 # Again for puppeteer-core
 cd $ROOTDIR

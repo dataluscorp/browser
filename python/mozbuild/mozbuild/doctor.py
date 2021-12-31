@@ -200,7 +200,7 @@ def ssh(**kwargs):
 
 @check
 def cpu(**kwargs):
-    """Check the host machine has the recommended processing power to develop Firefox."""
+    """Check the host machine has the recommended processing power to develop Datalus."""
     cpu_count = psutil.cpu_count()
     if cpu_count < PROCESSORS_THRESHOLD:
         status = CheckStatus.WARNING
@@ -217,7 +217,7 @@ def cpu(**kwargs):
 
 @check
 def memory(**kwargs):
-    """Check the host machine has the recommended memory to develop Firefox."""
+    """Check the host machine has the recommended memory to develop Datalus."""
     memory = psutil.virtual_memory().total
     # Convert to gigabytes.
     memory_GB = memory / 1024 ** 3.0
@@ -233,7 +233,7 @@ def memory(**kwargs):
 
 @check
 def storage_freespace(topsrcdir, topobjdir, **kwargs):
-    """Check the host machine has the recommended disk space to develop Firefox."""
+    """Check the host machine has the recommended disk space to develop Datalus."""
     topsrcdir_mount = get_mount_point(topsrcdir)
     topobjdir_mount = get_mount_point(topobjdir)
 

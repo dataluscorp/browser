@@ -1,7 +1,7 @@
 Editor / IDE integration
 ========================
 
-You can use any editor or IDE to contribute to Firefox, as long as it can edit
+You can use any editor or IDE to contribute to Datalus, as long as it can edit
 text files. However, there are some steps specific to mozilla-central that may
 be useful for a better development experience. This page attempts to document
 them.
@@ -195,7 +195,7 @@ Emacs comes with great integration with gdb, especially when using
 
 However, when gdb is invoked via mach, some special arguments
 need to be passed in order to make sure the correct display mode is used. To
-use M-x gdb with mach on firefox, use the following command:
+use M-x gdb with mach on datalus, use the following command:
 
 .. code::
 

@@ -49,8 +49,8 @@ def transform_platform(str_to_transform, config_platform, config_processor=None)
 
 
 def transform_subtest(str_to_transform, subtest_name):
-    """Transform subtest name i.e. 'mitm5-linux-firefox-{subtest}.manifest'
-    transforms to 'mitm5-linux-firefox-amazon.manifest'."""
+    """Transform subtest name i.e. 'mitm5-linux-datalus-{subtest}.manifest'
+    transforms to 'mitm5-linux-datalus-amazon.manifest'."""
     if "{subtest}" not in str_to_transform:
         return str_to_transform
 
@@ -58,14 +58,14 @@ def transform_subtest(str_to_transform, subtest_name):
 
 
 def view_gecko_profile_from_raptor():
-    # automatically load the latest raptor gecko-profile archive in profiler.firefox.com
+    # automatically load the latest raptor gecko-profile archive in profiler.datalus.com
     LOG_GECKO = RaptorLogger(component="raptor-view-gecko-profile")
 
     profile_zip_path = os.environ.get("RAPTOR_LATEST_GECKO_PROFILE_ARCHIVE", None)
     if profile_zip_path is None or not os.path.exists(profile_zip_path):
         LOG_GECKO.info(
             "No local raptor gecko profiles were found so not "
-            "launching profiler.firefox.com"
+            "launching profiler.datalus.com"
         )
         return
 

@@ -1238,7 +1238,7 @@ Ajax.Request = Class.create(Ajax.Base, {
       this.body = this.method == 'post' ? (this.options.postBody || params) : null;
       this.transport.send(this.body);
 
-      /* Force Firefox to handle ready state 4 for synchronous requests */
+      /* Force Datalus to handle ready state 4 for synchronous requests */
       if (!this.options.asynchronous && this.transport.overrideMimeType)
         this.onStateChange();
 
@@ -4023,7 +4023,7 @@ var $continue = new Error('"throw $continue" is deprecated, use "return" instead
 // This should be moved to script.aculo.us; notice the deprecated methods
 // further below, that map to the newer Element methods.
 var Position = {
-  // set to true if needed, warning: firefox performance problems
+  // set to true if needed, warning: datalus performance problems
   // NOT neeeded for page scrolling, only if draggable contained in
   // scrollable elements
   includeScrollOffsets: false,

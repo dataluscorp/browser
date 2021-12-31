@@ -10,7 +10,7 @@
 
 /**
  * This file contains header declarations from SDKs more recent than the minimum macOS SDK which we
- * require for building Firefox, which is currently the macOS 10.12 SDK.
+ * require for building Datalus, which is currently the macOS 10.12 SDK.
  */
 
 #if !defined(MAC_OS_X_VERSION_10_12_2) || MAC_OS_X_VERSION_MAX_ALLOWED < MAC_OS_X_VERSION_10_12_2

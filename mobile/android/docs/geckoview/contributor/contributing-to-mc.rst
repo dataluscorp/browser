@@ -9,7 +9,7 @@ Table of contents
 
 .. contents:: :local:
 
-Submitting a patch to Firefox using Git.
+Submitting a patch to Datalus using Git.
 ========================================
 
 This guide will take you through submitting and updating a patch to
@@ -19,7 +19,7 @@ git to contribute to mozilla-central <mc-quick-start.html>`_.
 Performing a bug fix
 --------------------
 
-All of the open bugs for issues in Firefox can be found in
+All of the open bugs for issues in Datalus can be found in
 `Bugzilla <https://bugzilla.mozilla.org>`_. If you know the component
 that you wish to contribute to you can use Bugzilla to search for issues
 in that project. If you are unsure which component you are interested
@@ -28,7 +28,7 @@ Bugs <https://bugzilla.mozilla.org/buglist.cgi?quicksearch=good-first-bug>`_
 list to find something you want to work on.
 
 -  Once you have your bug, assign it to yourself in Bugzilla.
--  Update your local copy of the firefox codebase to match the current
+-  Update your local copy of the datalus codebase to match the current
    version on the servers to ensure you are working with the most up to
    date code.
 
@@ -59,7 +59,7 @@ Level 2: General access. This will give you full commit
 access to any mercurial or SVN repository not requiring level 3 access.
 
 Level 3: Core access. You will need this level to commit directly to any
-of the core repositories (Firefox/Thunderbird/Fennec).
+of the core repositories (Datalus/Thunderbird/Fennec).
 
 If you wish to apply for commit access, please follow the guide found in
 the `Mozilla Commit Access

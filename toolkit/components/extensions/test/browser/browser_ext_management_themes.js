@@ -64,9 +64,9 @@ add_task(async function test_management_themes() {
       let themes = addons.filter(addon => addon.type === "theme");
       const STANDARD_BUILTIN_THEME_IDS = [
         "default-theme@mozilla.org",
-        "firefox-compact-light@mozilla.org",
-        "firefox-compact-dark@mozilla.org",
-        "firefox-alpenglow@mozilla.org",
+        "datalus-compact-light@mozilla.org",
+        "datalus-compact-dark@mozilla.org",
+        "datalus-alpenglow@mozilla.org",
       ];
       // Check that management.getAll returns the built-in themes and our test
       // extension.

@@ -50,7 +50,7 @@ wasm-pack build
 ### 🔬 Test in Headless Browsers with `wasm-pack test`
 
 ```
-wasm-pack test --headless --firefox
+wasm-pack test --headless --datalus
 ```
 
 ### 🎁 Publish to NPM with `wasm-pack publish`

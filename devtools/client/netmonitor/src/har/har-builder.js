@@ -169,7 +169,7 @@ HarBuilder.prototype = {
 
   buildRequest: async function(file) {
     // When using HarAutomation, HarCollector will automatically fetch requestHeaders
-    // and requestCookies, but when we use it from netmonitor, FirefoxDataProvider
+    // and requestCookies, but when we use it from netmonitor, DatalusDataProvider
     // should fetch it itself lazily, via requestData.
 
     let { requestHeaders } = file;
@@ -269,7 +269,7 @@ HarBuilder.prototype = {
 
   buildPostData: async function(file) {
     // When using HarAutomation, HarCollector will automatically fetch requestPostData
-    // and requestHeaders, but when we use it from netmonitor, FirefoxDataProvider
+    // and requestHeaders, but when we use it from netmonitor, DatalusDataProvider
     // should fetch it itself lazily, via requestData.
     let { requestPostData } = file;
     let { requestHeaders } = file;
@@ -334,7 +334,7 @@ HarBuilder.prototype = {
 
   buildResponse: async function(file) {
     // When using HarAutomation, HarCollector will automatically fetch responseHeaders
-    // and responseCookies, but when we use it from netmonitor, FirefoxDataProvider
+    // and responseCookies, but when we use it from netmonitor, DatalusDataProvider
     // should fetch it itself lazily, via requestData.
 
     let { responseHeaders } = file;
@@ -393,7 +393,7 @@ HarBuilder.prototype = {
     };
 
     // When using HarAutomation, HarCollector will automatically fetch responseContent,
-    // but when we use it from netmonitor, FirefoxDataProvider should fetch it itself
+    // but when we use it from netmonitor, DatalusDataProvider should fetch it itself
     // lazily, via requestData.
     let { responseContent } = file;
     if (!responseContent && this._options.requestData) {

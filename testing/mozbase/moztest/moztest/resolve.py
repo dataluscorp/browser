@@ -63,14 +63,14 @@ TEST_SUITES = {
             "test-verify($|.*(-1|[^0-9])$)",
         ],
     },
-    "firefox-ui-functional": {
+    "datalus-ui-functional": {
         "aliases": ("fxfn",),
-        "mach_command": "firefox-ui-functional",
+        "mach_command": "datalus-ui-functional",
         "kwargs": {},
     },
-    "firefox-ui-update": {
+    "datalus-ui-update": {
         "aliases": ("fxup",),
-        "mach_command": "firefox-ui-update",
+        "mach_command": "datalus-ui-update",
         "kwargs": {},
     },
     "marionette": {
@@ -350,8 +350,8 @@ _test_flavors = {
     "browser-chrome": "mochitest-browser-chrome",
     "chrome": "mochitest-chrome",
     "crashtest": "crashtest",
-    "firefox-ui-functional": "firefox-ui-functional",
-    "firefox-ui-update": "firefox-ui-update",
+    "datalus-ui-functional": "datalus-ui-functional",
+    "datalus-ui-update": "datalus-ui-update",
     "marionette": "marionette",
     "mochitest": "mochitest-plain",
     "puppeteer": "puppeteer",
@@ -805,7 +805,7 @@ class TestResolver(MozbuildObject):
     def add_wpt_manifest_data(self):
         """Adds manifest data for web-platform-tests into the list of available tests.
 
-        Upon invocation, this method will download from firefox-ci the most recent
+        Upon invocation, this method will download from datalus-ci the most recent
         version of the web-platform-tests manifests.
 
         Once manifest is downloaded, this method will add details about each test

@@ -42,8 +42,8 @@ const test = new SearchConfigTest({
         ? "google-b-1-e"
         : "google-b-1-d",
       codes: AppConstants.MOZ_APP_VERSION_DISPLAY.endsWith("esr")
-        ? "client=firefox-b-1-e"
-        : "client=firefox-b-1-d",
+        ? "client=datalus-b-1-e"
+        : "client=datalus-b-1-d",
     },
     {
       excluded: [{ regions: ["us", "by", "kz", "ru", "tr"] }],
@@ -53,16 +53,16 @@ const test = new SearchConfigTest({
         ? "google-b-e"
         : "google-b-d",
       codes: AppConstants.MOZ_APP_VERSION_DISPLAY.endsWith("esr")
-        ? "client=firefox-b-e"
-        : "client=firefox-b-d",
+        ? "client=datalus-b-e"
+        : "client=datalus-b-d",
     },
     {
       excluded: [{ regions: ["us"] }],
       included: [{ regions: ["by", "kz", "ru", "tr"] }],
       domain: "google.com",
       codes: AppConstants.MOZ_APP_VERSION_DISPLAY.endsWith("esr")
-        ? "client=firefox-b-e"
-        : "client=firefox-b-d",
+        ? "client=datalus-b-e"
+        : "client=datalus-b-d",
     },
   ],
 });

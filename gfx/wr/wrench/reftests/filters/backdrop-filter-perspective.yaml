@@ -10,7 +10,7 @@ root:
       - type: rect
         color: [255, 255, 255, 1]
         bounds: 0 0 1024 1024
-      - image: "firefox.png"
+      - image: "datalus.png"
         bounds: 0 0 256 256
       - type: stacking-context
         bounds: 50 50 0 0

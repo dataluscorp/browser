@@ -21,7 +21,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
+  itFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 import { KeyInput } from '../lib/cjs/puppeteer/common/USKeyboardLayout.js';
 
@@ -44,7 +44,7 @@ describe('Keyboard', function () {
     ).toBe(text);
   });
   it('should press the metaKey', async () => {
-    const { page, isFirefox } = getTestState();
+    const { page, isDatalus } = getTestState();
 
     await page.evaluate(() => {
       (window as any).keyPromise = new Promise((resolve) =>
@@ -53,7 +53,7 @@ describe('Keyboard', function () {
     });
     await page.keyboard.press('Meta');
     expect(await page.evaluate('keyPromise')).toBe(
-      isFirefox && os.platform() !== 'darwin' ? 'OS' : 'Meta'
+      isDatalus && os.platform() !== 'darwin' ? 'OS' : 'Meta'
     );
   });
   it('should move with the arrow keys', async () => {
@@ -378,7 +378,7 @@ describe('Keyboard', function () {
     ).toBe('👹 Tokyo street Japan 🇯🇵');
   });
   it('should press the meta key', async () => {
-    const { page, isFirefox } = getTestState();
+    const { page, isDatalus } = getTestState();
 
     await page.evaluate(() => {
       globalThis.result = null;
@@ -396,13 +396,13 @@ describe('Keyboard', function () {
       string,
       boolean
     ];
-    if (isFirefox && os.platform() !== 'darwin') expect(key).toBe('OS');
+    if (isDatalus && os.platform() !== 'darwin') expect(key).toBe('OS');
     else expect(key).toBe('Meta');
 
-    if (isFirefox) expect(code).toBe('OSLeft');
+    if (isDatalus) expect(code).toBe('OSLeft');
     else expect(code).toBe('MetaLeft');
 
-    if (isFirefox && os.platform() !== 'darwin') expect(metaKey).toBe(false);
+    if (isDatalus && os.platform() !== 'darwin') expect(metaKey).toBe(false);
     else expect(metaKey).toBe(true);
   });
 });

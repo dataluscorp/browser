@@ -24,10 +24,10 @@ add_task(async function test() {
   await setProfilerFrontendUrl(FRONTEND_BASE_URL);
   await makeSureProfilerPopupIsEnabled();
 
-  // First check for "firefox-platform" preset which will have no "view" query
+  // First check for "datalus-platform" preset which will have no "view" query
   // string because this is where our traditional "full" view opens up.
   await openPopupAndAssertUrlForPreset({
-    preset: "Firefox Platform",
+    preset: "Datalus Platform",
     expectedUrl: FRONTEND_BASE_URL,
   });
 

@@ -60,7 +60,7 @@ add_task(async function() {
     await ContentTaskUtils.waitForCondition(() => {
       return (
         hasLoginsHeaderContent.textContent ==
-        "Firefox Monitor warns you if your info has appeared in a known data breach."
+        "Datalus Monitor warns you if your info has appeared in a known data breach."
       );
     }, "Header content for user with monitor data is correct.");
 

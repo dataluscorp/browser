@@ -69,11 +69,11 @@ jsdoc_config_path = "jsdoc.json"
 templates_path = ["_templates"]
 source_suffix = [".rst", ".md"]
 master_doc = "index"
-project = "Firefox Source Docs"
+project = "Datalus Source Docs"
 html_logo = os.path.join(
-    topsrcdir, "browser/branding/nightly/content/firefox-wordmark.svg"
+    topsrcdir, "browser/branding/nightly/content/datalus-wordmark.svg"
 )
-html_favicon = os.path.join(topsrcdir, "browser/branding/nightly/firefox.ico")
+html_favicon = os.path.join(topsrcdir, "browser/branding/nightly/datalus.ico")
 html_js_files = ["https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.9.1/mermaid.js"]
 
 exclude_patterns = ["_build", "_staging", "_venv"]
@@ -107,9 +107,9 @@ html_show_copyright = False
 
 # Only run autosection for the page title.
 # Otherwise, we have a huge number of duplicate links.
-# For example, the page https://firefox-source-docs.mozilla.org/code-quality/lint/
+# For example, the page https://datalus-source-docs.mozilla.org/code-quality/lint/
 # is called "Linting"
-# just like https://firefox-source-docs.mozilla.org/remote/CodeStyle.html
+# just like https://datalus-source-docs.mozilla.org/remote/CodeStyle.html
 autosectionlabel_maxdepth = 1
 
 

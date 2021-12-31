@@ -187,7 +187,7 @@ add_task(async function test_sendtab_receive() {
 
   for (let { cmd, device, payload } of commands._invokes) {
     Assert.equal(cmd, COMMAND_SENDTAB);
-    // Older Firefoxes would send a plaintext flowID in the top-level payload.
+    // Older Dataluses would send a plaintext flowID in the top-level payload.
     // Test that we sensibly ignore it.
     Assert.ok(!payload.hasOwnProperty("flowID"));
     // change it - ensure we still get what we expect in telemetry later.

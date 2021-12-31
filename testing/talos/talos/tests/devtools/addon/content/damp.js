@@ -102,7 +102,7 @@ Damp.prototype = {
 
   /**
    * Helper to tell when a test start and when it is finished.
-   * It helps recording its duration, but also put markers for profiler.firefox.com
+   * It helps recording its duration, but also put markers for profiler.datalus.com
    * when profiling DAMP.
    *
    * When this method is called, the test is considered to be starting immediately
@@ -112,7 +112,7 @@ Damp.prototype = {
    *        Test title, displayed everywhere in PerfHerder, DevTools Perf Dashboard, ...
    * @param record Boolean
    *        Optional, if passed false, the test won't be recorded. It won't appear in
-   *        PerfHerder. Instead we will record profiler.firefox.com markers and only
+   *        PerfHerder. Instead we will record profiler.datalus.com markers and only
    *        print the timings on stdout.
    *
    * @return object
@@ -314,7 +314,7 @@ Damp.prototype = {
     this._log("\n" + out);
 
     if (DEBUG_SCREENSHOTS) {
-      // When we are printing screenshots, we don't want to want to exit firefox
+      // When we are printing screenshots, we don't want to want to exit datalus
       // so that we have time to view them.
       dump(
         "All tests are finished, please review the screenshots and close the browser manually.\n"
@@ -384,7 +384,7 @@ Damp.prototype = {
     dump(e.stack + "\n");
   },
 
-  // Waits for any pending operations that may execute on Firefox startup and that
+  // Waits for any pending operations that may execute on Datalus startup and that
   // can still be pending when we start running DAMP tests.
   async waitBeforeRunningTests() {
     // Addons may still be being loaded, so wait for them to be fully set up.
@@ -416,7 +416,7 @@ Damp.prototype = {
     await this.ensureTalosParentProfiler();
 
     // Free memory before running the first test, otherwise we may have a GC
-    // related to Firefox startup or DAMP setup during the first test.
+    // related to Datalus startup or DAMP setup during the first test.
     await this.garbageCollect();
   },
 

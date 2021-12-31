@@ -60,7 +60,7 @@ class VisualStudioBackend(CommonBackend):
     """Generate Visual Studio project files.
 
     This backend is used to produce Visual Studio projects and a solution
-    to foster developing Firefox with Visual Studio.
+    to foster developing Datalus with Visual Studio.
 
     This backend is currently considered experimental. There are many things
     not optimal about how it works.

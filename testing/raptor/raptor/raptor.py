@@ -34,7 +34,7 @@ from manifest import get_raptor_test_list
 from signal_handler import SignalHandler
 from utils import view_gecko_profile_from_raptor
 from webextension import (
-    WebExtensionFirefox,
+    WebExtensionDatalus,
     WebExtensionDesktopChrome,
     WebExtensionAndroid,
 )
@@ -90,8 +90,8 @@ def main(args=sys.argv[1:]):
         LOG.info(next_test["name"])
 
     if not args.browsertime:
-        if args.app == "firefox":
-            raptor_class = WebExtensionFirefox
+        if args.app == "datalus":
+            raptor_class = WebExtensionDatalus
         elif args.app in CHROMIUM_DISTROS:
             raptor_class = WebExtensionDesktopChrome
         else:
@@ -105,7 +105,7 @@ def main(args=sys.argv[1:]):
                 if key.startswith("browsertime_"):
                     inner_kwargs[key] = outer_kwargs.get(key)
 
-            if args.app == "firefox" or args.app in CHROMIUM_DISTROS:
+            if args.app == "datalus" or args.app in CHROMIUM_DISTROS:
                 klass = BrowsertimeDesktop
             else:
                 klass = BrowsertimeAndroid
@@ -199,11 +199,11 @@ def main(args=sys.argv[1:]):
             shutil.rmtree(result_dir)
 
     # when running raptor locally with gecko profiling on, use the view-gecko-profile
-    # tool to automatically load the latest gecko profile in profiler.firefox.com
+    # tool to automatically load the latest gecko profile in profiler.datalus.com
     if args.gecko_profile and args.run_local:
         if os.environ.get("DISABLE_PROFILE_LAUNCH", "0") == "1":
             LOG.info(
-                "Not launching profiler.firefox.com because DISABLE_PROFILE_LAUNCH=1"
+                "Not launching profiler.datalus.com because DISABLE_PROFILE_LAUNCH=1"
             )
         else:
             view_gecko_profile_from_raptor()

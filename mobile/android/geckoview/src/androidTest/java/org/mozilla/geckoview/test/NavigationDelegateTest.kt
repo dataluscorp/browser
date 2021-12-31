@@ -869,7 +869,7 @@ class NavigationDelegateTest : BaseSessionTest() {
         // TODO: bug 1710943
         assumeThat(sessionRule.env.isIsolatedProcess, equalTo(false))
 
-        val phishingUri = "https://www.itisatrap.org/firefox/its-a-trap.html"
+        val phishingUri = "https://www.itisatrap.org/datalus/its-a-trap.html"
         val category = ContentBlocking.SafeBrowsing.PHISHING
 
         sessionRule.runtime.settings.contentBlocking.setSafeBrowsing(category)
@@ -896,7 +896,7 @@ class NavigationDelegateTest : BaseSessionTest() {
         // TODO: bug 1710943
         assumeThat(sessionRule.env.isIsolatedProcess, equalTo(false))
 
-        val phishingUri = "https://www.itisatrap.org/firefox/its-a-trap.html"
+        val phishingUri = "https://www.itisatrap.org/datalus/its-a-trap.html"
         val category = ContentBlocking.SafeBrowsing.PHISHING
 
         sessionRule.runtime.settings.contentBlocking.setSafeBrowsing(category)
@@ -928,7 +928,7 @@ class NavigationDelegateTest : BaseSessionTest() {
         // TODO: bug 1710943
         assumeThat(sessionRule.env.isIsolatedProcess, equalTo(false))
 
-        val malwareUri = "https://www.itisatrap.org/firefox/its-an-attack.html"
+        val malwareUri = "https://www.itisatrap.org/datalus/its-an-attack.html"
         val category = ContentBlocking.SafeBrowsing.MALWARE
 
         sessionRule.runtime.settings.contentBlocking.setSafeBrowsing(category)
@@ -955,7 +955,7 @@ class NavigationDelegateTest : BaseSessionTest() {
     @Test fun safebrowsingUnwanted() {
         // TODO: Bug 1673954
         assumeThat(sessionRule.env.isFission, equalTo(false))
-        val unwantedUri = "https://www.itisatrap.org/firefox/unwanted.html"
+        val unwantedUri = "https://www.itisatrap.org/datalus/unwanted.html"
         val category = ContentBlocking.SafeBrowsing.UNWANTED
 
         sessionRule.runtime.settings.contentBlocking.setSafeBrowsing(category)
@@ -986,7 +986,7 @@ class NavigationDelegateTest : BaseSessionTest() {
         // TODO: bug 1710943
         assumeThat(sessionRule.env.isIsolatedProcess, equalTo(false))
 
-        val harmfulUri = "https://www.itisatrap.org/firefox/harmful.html"
+        val harmfulUri = "https://www.itisatrap.org/datalus/harmful.html"
         val category = ContentBlocking.SafeBrowsing.HARMFUL
 
         sessionRule.runtime.settings.contentBlocking.setSafeBrowsing(category)

@@ -139,7 +139,7 @@ async function openPrefsFromMenuPanel(expectedPanelId, entryPoint) {
   is(
     gBrowser.currentURI.spec,
     "about:preferences?entrypoint=" + entryPoint + "#sync",
-    "Firefox Sync preference page opened with `menupanel` entrypoint"
+    "Datalus Sync preference page opened with `menupanel` entrypoint"
   );
   ok(!isOverflowOpen(), "The panel closed");
 

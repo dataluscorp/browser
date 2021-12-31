@@ -25,14 +25,14 @@ def symbolicate_profile_json(profile_path, objdir_path):
     temp_dir = tempfile.mkdtemp()
     missing_symbols_zip = os.path.join(temp_dir, "missingsymbols.zip")
 
-    firefox_symbol_path = os.path.join(objdir_path, "dist", "crashreporter-symbols")
-    if not os.path.isdir(firefox_symbol_path):
-        os.mkdir(firefox_symbol_path)
+    datalus_symbol_path = os.path.join(objdir_path, "dist", "crashreporter-symbols")
+    if not os.path.isdir(datalus_symbol_path):
+        os.mkdir(datalus_symbol_path)
 
     windows_symbol_path = os.path.join(temp_dir, "windows")
     os.mkdir(windows_symbol_path)
 
-    symbol_paths = {"FIREFOX": firefox_symbol_path, "WINDOWS": windows_symbol_path}
+    symbol_paths = {"DATALUS": datalus_symbol_path, "WINDOWS": windows_symbol_path}
 
     symbolicator = ProfileSymbolicator(
         {
@@ -51,7 +51,7 @@ def symbolicate_profile_json(profile_path, objdir_path):
             # per library
             "prefetchMaxSymbolsPerLib": 3,
             # Default symbol lookup directories
-            "defaultApp": "FIREFOX",
+            "defaultApp": "DATALUS",
             "defaultOs": "WINDOWS",
             # Paths to .SYM files, expressed internally as a
             # mapping of app or platform names to directories

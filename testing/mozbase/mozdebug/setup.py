@@ -15,7 +15,7 @@ setup(
     version=PACKAGE_VERSION,
     description="Utilities for running applications under native code debuggers "
     "intended for use in Mozilla testing",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.6",

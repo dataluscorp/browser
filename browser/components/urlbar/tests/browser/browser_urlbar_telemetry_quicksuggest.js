@@ -803,7 +803,7 @@ add_task(async function updateScenario() {
   );
 });
 
-// The "firefox-suggest-update" notification should cause TelemetryEnvironment
+// The "datalus-suggest-update" notification should cause TelemetryEnvironment
 // to re-cache the `suggest.quicksuggest` prefs.
 add_task(async function telemetryEnvironmentUpdateNotification() {
   // Make sure the prefs don't have user values that would mask the default
@@ -846,7 +846,7 @@ add_task(async function telemetryEnvironmentUpdateNotification() {
 
   // Send the notification. TelemetryEnvironment should record the current
   // values.
-  Services.obs.notifyObservers(null, "firefox-suggest-update");
+  Services.obs.notifyObservers(null, "datalus-suggest-update");
   Assert.strictEqual(
     TelemetryEnvironment.currentEnvironment.settings.userPrefs[
       "browser.urlbar.suggest.quicksuggest.nonsponsored"
@@ -882,7 +882,7 @@ add_task(async function telemetryEnvironmentUpdateNotification() {
 
   // Send the notification again. TelemetryEnvironment should record the new
   // values.
-  Services.obs.notifyObservers(null, "firefox-suggest-update");
+  Services.obs.notifyObservers(null, "datalus-suggest-update");
   Assert.strictEqual(
     TelemetryEnvironment.currentEnvironment.settings.userPrefs[
       "browser.urlbar.suggest.quicksuggest.nonsponsored"

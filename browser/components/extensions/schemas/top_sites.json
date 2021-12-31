@@ -78,7 +78,7 @@
                 "maximum": 100,
                 "minimum": 1,
                 "optional": true,
-                "description": "The number of top sites to return, defaults to the value used by Firefox"
+                "description": "The number of top sites to return, defaults to the value used by Datalus"
               },
               "onePerDomain": {
                 "type": "boolean",
@@ -90,7 +90,7 @@
                 "type": "boolean",
                 "default": false,
                 "optional": true,
-                "description": "Include sites that the user has blocked from appearing on the Firefox new tab."
+                "description": "Include sites that the user has blocked from appearing on the Datalus new tab."
               },
               "includeFavicon": {
                 "type": "boolean",
@@ -102,13 +102,13 @@
                 "type": "boolean",
                 "default": false,
                 "optional": true,
-                "description": "Include sites that the user has pinned on the Firefox new tab."
+                "description": "Include sites that the user has pinned on the Datalus new tab."
               },
               "includeSearchShortcuts": {
                 "type": "boolean",
                 "default": false,
                 "optional": true,
-                "description": "Include search shortcuts appearing on the Firefox new tab."
+                "description": "Include search shortcuts appearing on the Datalus new tab."
               },
               "newtab": {
                 "type": "boolean",

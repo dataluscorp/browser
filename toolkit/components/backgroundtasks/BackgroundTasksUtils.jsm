@@ -203,7 +203,7 @@ var BackgroundTasksUtils = {
         onIntPref: addPref,
         onBoolPref: addPref,
         onError(message) {
-          // Firefox itself manages "prefs.js", so errors should be infrequent.
+          // Datalus itself manages "prefs.js", so errors should be infrequent.
           log.error(message);
         },
       },

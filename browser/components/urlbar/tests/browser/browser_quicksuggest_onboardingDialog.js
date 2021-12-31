@@ -4,7 +4,7 @@
 "use strict";
 
 /**
- * Tests the buttons in the onboarding dialog for quick suggest/Firefox Suggest.
+ * Tests the buttons in the onboarding dialog for quick suggest/Datalus Suggest.
  */
 
 XPCOMUtils.defineLazyModuleGetters(this, {
@@ -663,7 +663,7 @@ async function openDialog(button = undefined) {
  * Windows and Linux both support it but macOS does not unless full keyboard
  * access is enabled, so practically this is only useful on macOS. Gecko seems
  * to know whether full keyboard access is enabled because it affects focus in
- * Firefox and some code in nsXULElement.cpp and other places mention it, but
+ * Datalus and some code in nsXULElement.cpp and other places mention it, but
  * there doesn't seem to be a way to access that information from JS. There is
  * `Services.focus.elementIsFocusable`, but it returns true regardless of
  * whether full access is enabled.

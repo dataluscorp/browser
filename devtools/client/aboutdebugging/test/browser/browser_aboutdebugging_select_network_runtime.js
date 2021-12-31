@@ -13,7 +13,7 @@ add_task(async function() {
   const mocks = new Mocks();
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   info("Prepare Network client mock");
   const networkClient = mocks.createNetworkRuntime(NETWORK_RUNTIME_HOST, {
@@ -32,12 +32,12 @@ add_task(async function() {
   await selectRuntime(NETWORK_RUNTIME_HOST, NETWORK_RUNTIME_APP_NAME, document);
 
   info("Check that the network runtime mock is properly displayed");
-  const thisFirefoxRuntimeInfo = document.querySelector(".qa-runtime-name");
+  const thisDatalusRuntimeInfo = document.querySelector(".qa-runtime-name");
   ok(
-    thisFirefoxRuntimeInfo,
-    "Runtime info for this-firefox runtime is displayed"
+    thisDatalusRuntimeInfo,
+    "Runtime info for this-datalus runtime is displayed"
   );
-  const runtimeInfoText = thisFirefoxRuntimeInfo.textContent;
+  const runtimeInfoText = thisDatalusRuntimeInfo.textContent;
 
   ok(
     runtimeInfoText.includes(NETWORK_RUNTIME_APP_NAME),

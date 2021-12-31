@@ -244,7 +244,7 @@ MOZ_NoReturn(int aLine) {
  * MOZ_CRASH_UNSAFE_PRINTF instead.
  *
  * @note This macro causes data collection because crash strings are annotated
- * to crash-stats and are publicly visible. Firefox data stewards must do data
+ * to crash-stats and are publicly visible. Datalus data stewards must do data
  * review on usages of this macro.
  */
 static MOZ_ALWAYS_INLINE_EVEN_DEBUG MOZ_COLD MOZ_NORETURN void MOZ_Crash(
@@ -272,7 +272,7 @@ MFBT_API MOZ_COLD MOZ_NEVER_INLINE MOZ_FORMAT_PRINTF(1, 2) const
  * compromised process is not without risk.
  *
  * @note This macro causes data collection because crash strings are annotated
- * to crash-stats and are publicly visible. Firefox data stewards must do data
+ * to crash-stats and are publicly visible. Datalus data stewards must do data
  * review on usages of this macro.
  */
 #define MOZ_CRASH_UNSAFE_PRINTF(format, ...)                                \

@@ -802,7 +802,7 @@ def wasm_simd(value, jit_enabled, simulator, cranelift_enabled, target):
 set_config("ENABLE_WASM_SIMD", wasm_simd)
 set_define("ENABLE_WASM_SIMD", wasm_simd)
 
-# Wormhole opcodes are Intel-only.  They are private to Firefox, but we need them for some
+# Wormhole opcodes are Intel-only.  They are private to Datalus, but we need them for some
 # experiments on release and so they ride the trains.
 
 

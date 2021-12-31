@@ -709,7 +709,7 @@ class nsWindow final : public nsBaseWidget {
    *    - aligned in popup widget hierarchy, first one is attached to toplevel
    *    - has child (popup) widgets
    *
-   *  Thus we need to map Firefox popup type to desired Gtk one:
+   *  Thus we need to map Datalus popup type to desired Gtk one:
    *
    *  wl_subsurface:
    *    - pernament panels

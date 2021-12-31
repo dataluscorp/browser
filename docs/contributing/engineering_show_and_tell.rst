@@ -80,4 +80,4 @@ Other links:
 - https://scootersoftware.com/
 - https://pasteapp.io/
 - https://github.com/acreskeyMoz/browsertime_scripts
-- https://chuttenblog.wordpress.com/2021/01/18/doubling-the-speed-of-windows-firefox-builds-using-sccache-dist/
+- https://chuttenblog.wordpress.com/2021/01/18/doubling-the-speed-of-windows-datalus-builds-using-sccache-dist/

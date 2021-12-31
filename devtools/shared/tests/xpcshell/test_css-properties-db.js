@@ -9,7 +9,7 @@
  *
  * This test broke uplifts as the database needed to be regenerated every uplift. The
  * combination of compiler flags and preferences means that it's too difficult to
- * statically determine which properties are enabled between Firefox releases.
+ * statically determine which properties are enabled between Datalus releases.
  *
  * Because of these difficulties, the database only needs to be up to date with Nightly.
  * It is a fallback that is only used if the remote debugging protocol doesn't support

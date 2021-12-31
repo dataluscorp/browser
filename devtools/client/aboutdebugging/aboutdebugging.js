@@ -93,7 +93,7 @@ const AboutDebugging = {
       "devtools/client/aboutdebugging.ftl",
     ]);
 
-    this.actions.createThisFirefoxRuntime();
+    this.actions.createThisDatalusRuntime();
 
     // Listen to Network locations updates and retrieve the initial list of locations.
     addNetworkLocationsObserver(this.onNetworkLocationsUpdated);

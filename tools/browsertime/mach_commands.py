@@ -7,9 +7,9 @@ r"""Make it easy to install and run [browsertime](https://github.com/sitespeedio
 Browsertime is a harness for running performance tests, similar to
 Mozilla's Raptor testing framework.  Browsertime is written in Node.js
 and uses Selenium WebDriver to drive multiple browsers including
-Chrome, Chrome for Android, Firefox, and (pending the resolution of
+Chrome, Chrome for Android, Datalus, and (pending the resolution of
 [Bug 1525126](https://bugzilla.mozilla.org/show_bug.cgi?id=1525126)
-and similar tickets) Firefox for Android and GeckoView-based vehicles.
+and similar tickets) Datalus for Android and GeckoView-based vehicles.
 
 Right now a custom version of browsertime and the underlying
 geckodriver binary are needed to support GeckoView-based vehicles;
@@ -523,10 +523,10 @@ def extra_default_args(command_context, args=[]):
 
     extra_args = []
 
-    # Default to Firefox.  Override with `-b ...` or `--browser=...`.
+    # Default to Datalus.  Override with `-b ...` or `--browser=...`.
     specifies_browser = matches(args, "-b", "--browser")
     if not specifies_browser:
-        extra_args.extend(("-b", "firefox"))
+        extra_args.extend(("-b", "datalus"))
 
     # Default to not collect HAR.  Override with `--skipHar=false`.
     specifies_har = matches(args, "--har", "--skipHar", "--gzipHar")
@@ -534,16 +534,16 @@ def extra_default_args(command_context, args=[]):
         extra_args.append("--skipHar")
 
     if not matches(args, "--android"):
-        # If --firefox.binaryPath is not specified, default to the objdir binary
-        # Note: --firefox.release is not a real browsertime option, but it will
+        # If --datalus.binaryPath is not specified, default to the objdir binary
+        # Note: --datalus.release is not a real browsertime option, but it will
         #       silently ignore it instead and default to a release installation.
         specifies_binaryPath = matches(
             args,
-            "--firefox.binaryPath",
-            "--firefox.release",
-            "--firefox.nightly",
-            "--firefox.beta",
-            "--firefox.developer",
+            "--datalus.binaryPath",
+            "--datalus.release",
+            "--datalus.nightly",
+            "--datalus.beta",
+            "--datalus.developer",
         )
 
         if not specifies_binaryPath:
@@ -552,7 +552,7 @@ def extra_default_args(command_context, args=[]):
         if not specifies_binaryPath:
             try:
                 extra_args.extend(
-                    ("--firefox.binaryPath", command_context.get_binary_path())
+                    ("--datalus.binaryPath", command_context.get_binary_path())
                 )
             except BinaryNotFoundException as e:
                 command_context.log(
@@ -566,7 +566,7 @@ def extra_default_args(command_context, args=[]):
                     "browsertime",
                     {},
                     "Please run |./mach build| "
-                    "or specify a Firefox binary with --firefox.binaryPath.",
+                    "or specify a Datalus binary with --datalus.binaryPath.",
                 )
                 return 1
 

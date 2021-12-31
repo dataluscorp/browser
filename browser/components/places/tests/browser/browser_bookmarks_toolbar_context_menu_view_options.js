@@ -7,7 +7,7 @@ add_task(async function testPopup() {
   let bookmark = await PlacesUtils.bookmarks.insert({
     parentGuid: PlacesUtils.bookmarks.toolbarGuid,
     url: "http://example.com",
-    title: "firefox",
+    title: "datalus",
   });
   registerCleanupFunction(async () => {
     await PlacesUtils.bookmarks.remove(bookmark);
@@ -35,7 +35,7 @@ add_task(async function testPopup() {
 
     // 1. Right-click on a bookmark and check that the submenu is visible
     let bookmarkItem = bookmarksToolbar.querySelector(
-      `.bookmark-item[label="firefox"]`
+      `.bookmark-item[label="datalus"]`
     );
     ok(bookmarkItem, "Got bookmark");
     let contextMenu = document.getElementById("placesContext");

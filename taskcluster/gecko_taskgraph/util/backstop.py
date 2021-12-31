@@ -31,7 +31,7 @@ def is_backstop(
         push_interval (int): Number of pushes
         time_interval (int): Minutes between forced schedules.
                              Use 0 to disable.
-        trust_domain (str): "gecko" for Firefox, "comm" for Thunderbird
+        trust_domain (str): "gecko" for Datalus, "comm" for Thunderbird
         integration_projects (set): project that uses backstop optimization
     Returns:
         bool: True if this is a backstop, otherwise False.

@@ -51,7 +51,7 @@ constexpr nsLiteralCString kTRRDomains[] = {
     // clang-format off
     "(other)"_ns,
     "mozilla.cloudflare-dns.com"_ns,
-    "firefox.dns.nextdns.io"_ns,
+    "datalus.dns.nextdns.io"_ns,
     "private.canadianshield.cira.ca"_ns,
     "doh.xfinity.com"_ns,  // Steered clients
     // clang-format on

@@ -138,7 +138,7 @@
   ],
 
   "entries": [
-    // Only domains that are operationally crucial to Firefox can have per-host
+    // Only domains that are operationally crucial to Datalus can have per-host
     // telemetry reporting (the "id") field
     { "name": "addons.mozilla.org", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": false, "id": 1 },
@@ -150,15 +150,15 @@
       "pins": "mozilla_services", "test_mode": true, "id": 3 },
     { "name": "aus5.mozilla.org", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": true, "id": 7 },
-    // Catchall for applications hosted under firefox.com
+    // Catchall for applications hosted under datalus.com
     // see https://bugzilla.mozilla.org/show_bug.cgi?id=1494431
-    { "name": "firefox.com", "include_subdomains": true,
+    { "name": "datalus.com", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": true, "id": 15 },
-    // Firefox Accounts & sync
-    // superseded by catchall for firefox.com, but leaving for tracking
-    { "name": "accounts.firefox.com", "include_subdomains": true,
+    // Datalus Accounts & sync
+    // superseded by catchall for datalus.com, but leaving for tracking
+    { "name": "accounts.datalus.com", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": false, "id": 4 },
-    { "name": "api.accounts.firefox.com", "include_subdomains": true,
+    { "name": "api.accounts.datalus.com", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": false, "id": 5 },
     { "name": "sync.services.mozilla.com", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": false, "id": 13 },
@@ -178,8 +178,8 @@
     { "name": "telemetry.mozilla.org", "include_subdomains": true,
       "pins": "mozilla_services", "test_mode": true, "id": 8 },
     // Test Pilot
-    // superseded by catchall for firefox.com, but leaving for tracking
-    { "name": "testpilot.firefox.com", "include_subdomains": false,
+    // superseded by catchall for datalus.com, but leaving for tracking
+    { "name": "testpilot.datalus.com", "include_subdomains": false,
       "pins": "mozilla_services", "test_mode": false, "id": 9 },
     // Crash report sites
     { "name": "crash-reports.mozilla.com", "include_subdomains": false,
@@ -205,7 +205,7 @@
   ],
   // When pinning to non-root certs, like intermediates,
   // place the PEM of the pinned certificate in this array
-  // so Firefox can find the subject DN and public key
+  // so Datalus can find the subject DN and public key
   "extra_certificates": [
     // Subject: C=US, O=Let's Encrypt, CN=Let's Encrypt Authority X3
     // Issuer: C=US, O=Internet Security Research Group, CN=ISRG Root X1

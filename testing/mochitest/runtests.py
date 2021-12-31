@@ -414,17 +414,17 @@ if mozinfo.isWin:
 
             # We have a live process handle.  But Windows aggressively
             # re-uses pids, so let's attempt to verify that this is
-            # actually Firefox.
+            # actually Datalus.
             namesize = 1024
             pName = ctypes.create_string_buffer(namesize)
             namelen = ctypes.windll.psapi.GetProcessImageFileNameA(
                 pHandle, pName, namesize
             )
             if namelen == 0:
-                # Still an active process, so conservatively assume it's Firefox.
+                # Still an active process, so conservatively assume it's Datalus.
                 return True
 
-            return pName.value.endswith((b"firefox.exe", b"plugin-container.exe"))
+            return pName.value.endswith((b"datalus.exe", b"plugin-container.exe"))
         finally:
             ctypes.windll.kernel32.CloseHandle(pHandle)
 
@@ -911,7 +911,7 @@ def update_mozinfo():
 
 class MochitestDesktop(object):
     """
-    Mochitest class for desktop firefox.
+    Mochitest class for desktop datalus.
     """
 
     oldcwd = os.getcwd()
@@ -1818,7 +1818,7 @@ toolbar#nav-bar {
         if options.profiler:
             # The user wants to capture a profile, and automatically view it. The
             # profile will be saved to a temporary folder, then deleted after
-            # opening in profiler.firefox.com.
+            # opening in profiler.datalus.com.
             self.profiler_tempdir = tempfile.mkdtemp()
             browserEnv["MOZ_PROFILER_SHUTDOWN"] = os.path.join(
                 self.profiler_tempdir, "mochitest-profile.json"
@@ -2306,22 +2306,22 @@ toolbar#nav-bar {
         return foundZombie
 
     def checkForRunningBrowsers(self):
-        firefoxes = ""
+        dataluses = ""
         if HAVE_PSUTIL:
             attrs = ["pid", "ppid", "name", "cmdline", "username"]
             for proc in psutil.process_iter():
                 try:
-                    if "firefox" in proc.name():
-                        firefoxes = "%s%s\n" % (firefoxes, proc.as_dict(attrs=attrs))
+                    if "datalus" in proc.name():
+                        dataluses = "%s%s\n" % (dataluses, proc.as_dict(attrs=attrs))
                 except Exception:
                     # may not be able to access process info for all processes
                     continue
-        if len(firefoxes) > 0:
+        if len(dataluses) > 0:
             # In automation, this warning is unexpected and should be investigated.
             # In local testing, this is probably okay, as long as the browser is not
             # running a marionette server.
-            self.log.warning("Found 'firefox' running before starting test browser!")
-            self.log.warning(firefoxes)
+            self.log.warning("Found 'datalus' running before starting test browser!")
+            self.log.warning(dataluses)
 
     def runApp(
         self,
@@ -2473,7 +2473,7 @@ toolbar#nav-bar {
             startTime = datetime.now()
 
             runner_cls = mozrunner.runners.get(
-                mozinfo.info.get("appname", "firefox"), mozrunner.Runner
+                mozinfo.info.get("appname", "datalus"), mozrunner.Runner
             )
             runner = runner_cls(
                 profile=self.profile,
@@ -3547,13 +3547,13 @@ toolbar#nav-bar {
 def view_gecko_profile_from_mochitest(profile_path, options, profiler_logger):
     """Getting shutdown performance profiles from just the command line arguments is
     difficult. This function makes the developer ergonomics a bit easier by taking the
-    generated Gecko profile, and automatically serving it to profiler.firefox.com. The
+    generated Gecko profile, and automatically serving it to profiler.datalus.com. The
     Gecko profile during shutdown is dumped to disk at:
 
     {objdir}/_tests/testing/mochitest/{profilename}
 
     This function takes that file, and launches a local webserver, and then points
-    a browser to profiler.firefox.com to view it. From there it's easy to publish
+    a browser to profiler.datalus.com to view it. From there it's easy to publish
     or save the profile.
     """
 
@@ -3564,11 +3564,11 @@ def view_gecko_profile_from_mochitest(profile_path, options, profiler_logger):
     if not os.path.exists(profile_path):
         profiler_logger.error(
             "No profile was found at the profile path, cannot "
-            "launch profiler.firefox.com."
+            "launch profiler.datalus.com."
         )
         return
 
-    profiler_logger.info("Loading this profile in the Firefox Profiler")
+    profiler_logger.info("Loading this profile in the Datalus Profiler")
 
     view_gecko_profile(profile_path)
 

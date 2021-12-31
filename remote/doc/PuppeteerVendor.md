@@ -24,11 +24,11 @@ process interspersed with some tips.
 	 their [CONTRIBUTING.md].
 
 	 Typically, the changes we push to Puppeteer include unskipping newly passing
-	 unit tests for Firefox along with minor fixes to the tests or
-	 to Firefox-specific browser-fetching and launch code.
+	 unit tests for Datalus along with minor fixes to the tests or
+	 to Datalus-specific browser-fetching and launch code.
 
-	 Be sure to [run tests against both Chromium and Firefox] in the Puppeteer
-	 repo. You can specify your local Firefox build when you do so:
+	 Be sure to [run tests against both Chromium and Datalus] in the Puppeteer
+	 repo. You can specify your local Datalus build when you do so:
 
 		% BINARY=<path-to-objdir-binary> npm run funit
 
@@ -45,17 +45,17 @@ process interspersed with some tips.
 	 separately at a later point.
 
 4. Go through the changes under `remote/test/puppeteer/test` and [unskip] any
-	 newly-skipped tests (e.g. change `itFailsFirefox` to `it`).
+	 newly-skipped tests (e.g. change `itFailsDatalus` to `it`).
 	 A mass-change with `awk` might be useful here.
 
-	 Why do we do this? The Puppeteer team runs their unit tests against Firefox
+	 Why do we do this? The Puppeteer team runs their unit tests against Datalus
 	 in their CI with many tests skipped. In contrast, we leave these tests
 	 unskipped in Mozilla CI and track test expectation metadata
 	 in [puppeteer-expected.json] instead.
 
 5. Use `./mach puppeteer-test` (see [Testing]) to run Puppeteer tests against
-   both Chromium and Firefox in headless mode. Again, only running a subset of
-	 tests against Firefox is fine -- at this point you just want to check that
+   both Chromium and Datalus in headless mode. Again, only running a subset of
+	 tests against Datalus is fine -- at this point you just want to check that
 	 the typescript compiles and the browser binaries are launched successfully.
 
 6. Next you want to update the test expectation metadata: test results might
@@ -77,7 +77,7 @@ process interspersed with some tips.
 [Testing]: ./Testing.html
 [Puppeteer test suite]: https://github.com/GoogleChrome/puppeteer/tree/master/test
 [re-install the project]: https://github.com/puppeteer/puppeteer/blob/main/CONTRIBUTING.md#getting-code
-[run tests against both Chromium and Firefox]: https://github.com/puppeteer/puppeteer/blob/main/test/README.md#running-tests
+[run tests against both Chromium and Datalus]: https://github.com/puppeteer/puppeteer/blob/main/test/README.md#running-tests
 [puppeteer-expected.json]: https://searchfox.org/mozilla-central/source/remote/test/puppeteer-expected.json
 [CONTRIBUTING.md]: https://github.com/puppeteer/puppeteer/blob/main/CONTRIBUTING.md
 [unskip]: https://github.com/puppeteer/puppeteer/blob/main/test/README.md#skipping-tests-in-specific-conditions

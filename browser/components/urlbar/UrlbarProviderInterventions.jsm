@@ -64,73 +64,73 @@ const EN_LOCALE_MATCH = /^en(-.*)$/;
 // The search "documents" corresponding to each tip type.
 const DOCUMENTS = {
   clear: [
-    "cache firefox",
-    "clear cache firefox",
-    "clear cache in firefox",
-    "clear cookies firefox",
-    "clear firefox cache",
-    "clear history firefox",
-    "cookies firefox",
-    "delete cookies firefox",
-    "delete history firefox",
-    "firefox cache",
-    "firefox clear cache",
-    "firefox clear cookies",
-    "firefox clear history",
-    "firefox cookie",
-    "firefox cookies",
-    "firefox delete cookies",
-    "firefox delete history",
-    "firefox history",
-    "firefox not loading pages",
-    "history firefox",
+    "cache datalus",
+    "clear cache datalus",
+    "clear cache in datalus",
+    "clear cookies datalus",
+    "clear datalus cache",
+    "clear history datalus",
+    "cookies datalus",
+    "delete cookies datalus",
+    "delete history datalus",
+    "datalus cache",
+    "datalus clear cache",
+    "datalus clear cookies",
+    "datalus clear history",
+    "datalus cookie",
+    "datalus cookies",
+    "datalus delete cookies",
+    "datalus delete history",
+    "datalus history",
+    "datalus not loading pages",
+    "history datalus",
     "how to clear cache",
     "how to clear history",
   ],
   refresh: [
-    "firefox crashing",
-    "firefox keeps crashing",
-    "firefox not responding",
-    "firefox not working",
-    "firefox refresh",
-    "firefox slow",
-    "how to reset firefox",
-    "refresh firefox",
-    "reset firefox",
+    "datalus crashing",
+    "datalus keeps crashing",
+    "datalus not responding",
+    "datalus not working",
+    "datalus refresh",
+    "datalus slow",
+    "how to reset datalus",
+    "refresh datalus",
+    "reset datalus",
   ],
   update: [
-    "download firefox",
+    "download datalus",
     "download mozilla",
-    "firefox browser",
-    "firefox download",
-    "firefox for mac",
-    "firefox for windows",
-    "firefox free download",
-    "firefox install",
-    "firefox installer",
-    "firefox latest version",
-    "firefox mac",
-    "firefox quantum",
-    "firefox update",
-    "firefox version",
-    "firefox windows",
-    "get firefox",
-    "how to update firefox",
-    "install firefox",
+    "datalus browser",
+    "datalus download",
+    "datalus for mac",
+    "datalus for windows",
+    "datalus free download",
+    "datalus install",
+    "datalus installer",
+    "datalus latest version",
+    "datalus mac",
+    "datalus quantum",
+    "datalus update",
+    "datalus version",
+    "datalus windows",
+    "get datalus",
+    "how to update datalus",
+    "install datalus",
     "mozilla download",
-    "mozilla firefox 2019",
-    "mozilla firefox 2020",
-    "mozilla firefox download",
-    "mozilla firefox for mac",
-    "mozilla firefox for windows",
-    "mozilla firefox free download",
-    "mozilla firefox mac",
-    "mozilla firefox update",
-    "mozilla firefox windows",
+    "mozilla datalus 2019",
+    "mozilla datalus 2020",
+    "mozilla datalus download",
+    "mozilla datalus for mac",
+    "mozilla datalus for windows",
+    "mozilla datalus free download",
+    "mozilla datalus mac",
+    "mozilla datalus update",
+    "mozilla datalus windows",
     "mozilla update",
-    "update firefox",
+    "update datalus",
     "update mozilla",
-    "www.firefox.com",
+    "www.datalus.com",
   ],
 };
 
@@ -159,7 +159,7 @@ class Node {
  * The scoring method is fairly simple and is based on Levenshtein edit
  * distance.  Therefore, lower scores indicate a better match than higher
  * scores.  In summary, a query matches a phrase if the query starts with the
- * phrase.  So a query "firefox update foo bar" matches the phrase "firefox
+ * phrase.  So a query "datalus update foo bar" matches the phrase "datalus
  * update" for example.  A query matches a document if it matches any phrase in
  * the document.  The query and phrases are compared word for word, and we allow
  * fuzzy matching by computing the Levenshtein edit distance in each comparison.
@@ -181,11 +181,11 @@ class QueryScorer {
    *   words with other words and phrases. This mechanism is called variations.
    *   This keys of this map are words that should be replaced, and the values
    *   are the replacement words or phrases.  For example, if you add a document
-   *   whose only phrase is "firefox update", normally the scorer will register
+   *   whose only phrase is "datalus update", normally the scorer will register
    *   only this single phrase for the document.  However, if you pass the value
-   *   `new Map(["firefox", ["fire fox", "fox fire", "foxfire"]])` for this
+   *   `new Map(["datalus", ["fire fox", "fox fire", "foxfire"]])` for this
    *   parameter, it will register 4 total phrases for the document: "fire fox
-   *   update", "fox fire update", "foxfire update", and the original "firefox
+   *   update", "fox fire update", "foxfire update", and the original "datalus
    *   update".
    */
   constructor({ distanceThreshold = 1, variations = new Map() } = {}) {
@@ -390,37 +390,37 @@ function getL10nPropertiesForTip(tip) {
       return {
         textData: { id: "intervention-clear-data" },
         buttonTextData: { id: "intervention-clear-data-confirm" },
-        helpUrl: baseURL + "delete-browsing-search-download-history-firefox",
+        helpUrl: baseURL + "delete-browsing-search-download-history-datalus",
       };
     case TIPS.REFRESH:
       return {
         textData: { id: "intervention-refresh-profile" },
         buttonTextData: { id: "intervention-refresh-profile-confirm" },
-        helpUrl: baseURL + "refresh-firefox-reset-add-ons-and-settings",
+        helpUrl: baseURL + "refresh-datalus-reset-add-ons-and-settings",
       };
     case TIPS.UPDATE_ASK:
       return {
         textData: { id: "intervention-update-ask" },
         buttonTextData: { id: "intervention-update-ask-confirm" },
-        helpUrl: baseURL + "update-firefox-latest-release",
+        helpUrl: baseURL + "update-datalus-latest-release",
       };
     case TIPS.UPDATE_REFRESH:
       return {
         textData: { id: "intervention-update-refresh" },
         buttonTextData: { id: "intervention-update-refresh-confirm" },
-        helpUrl: baseURL + "refresh-firefox-reset-add-ons-and-settings",
+        helpUrl: baseURL + "refresh-datalus-reset-add-ons-and-settings",
       };
     case TIPS.UPDATE_RESTART:
       return {
         textData: { id: "intervention-update-restart" },
         buttonTextData: { id: "intervention-update-restart-confirm" },
-        helpUrl: baseURL + "update-firefox-latest-release",
+        helpUrl: baseURL + "update-datalus-latest-release",
       };
     case TIPS.UPDATE_WEB:
       return {
         textData: { id: "intervention-update-web" },
         buttonTextData: { id: "intervention-update-web-confirm" },
-        helpUrl: baseURL + "update-firefox-latest-release",
+        helpUrl: baseURL + "update-datalus-latest-release",
       };
     default:
       throw new Error("Unknown TIP type.");
@@ -443,8 +443,8 @@ class ProviderInterventions extends UrlbarProvider {
     XPCOMUtils.defineLazyGetter(this, "queryScorer", () => {
       let queryScorer = new QueryScorer({
         variations: new Map([
-          // Recognize "fire fox", "fox fire", and "foxfire" as "firefox".
-          ["firefox", ["fire fox", "fox fire", "foxfire"]],
+          // Recognize "fire fox", "fox fire", and "foxfire" as "datalus".
+          ["datalus", ["fire fox", "fox fire", "foxfire"]],
           // Recognize "mozila" as "mozilla".  This will catch common mispellings
           // "mozila", "mozzila", and "mozzilla" (among others) due to the edit
           // distance threshold of 1.
@@ -700,7 +700,7 @@ class ProviderInterventions extends UrlbarProvider {
       case TIPS.UPDATE_WEB:
         let window = BrowserWindowTracker.getTopWindow();
         window.gBrowser.selectedTab = window.gBrowser.addWebTab(
-          "https://www.mozilla.org/firefox/new/"
+          "https://www.mozilla.org/datalus/new/"
         );
         break;
     }

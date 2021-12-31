@@ -46,7 +46,7 @@ these changes permanent.
 The standard symbol path that includes both Mozilla's and Microsoft's
 symbol server configuration is as follows:
 
-`_NT_SYMCACHE_PATH: C:\symbols  _NT_SYMBOL_PATH: srv*c:\symbols*http://msdl.microsoft.com/download/symbols;srv*c:\symbols*http://symbols.mozilla.org/firefox/`
+`_NT_SYMCACHE_PATH: C:\symbols  _NT_SYMBOL_PATH: srv*c:\symbols*http://msdl.microsoft.com/download/symbols;srv*c:\symbols*http://symbols.mozilla.org/datalus/`
 
 To add symbols **from your own builds**, add
 `C:\path\to\objdir\dist\bin` to `_NT_SYMBOL_PATH`. As with all Windows
@@ -111,7 +111,7 @@ it's a useful way to track allocations/deallocations.
 
 #### Capturing Heap Data
 
-The \"-heap\" option is used to set up heap tracing. Firefox generates
+The \"-heap\" option is used to set up heap tracing. Datalus generates
 lots of events, so you may want to play with the
 BufferSize/MinBuffers/MaxBuffers options as well to ensure that you
 don't get dropped events. Also, when recording the stack, I've found
@@ -119,9 +119,9 @@ that a heap trace is often missing module information (I believe this is
 a bug in xperf). It's possible to get around that by doing a
 simultaneous capture of non-heap data.
 
-To start a trace session, launching a new Firefox instance:
+To start a trace session, launching a new Datalus instance:
 
-`xperf -on base  xperf -start heapsession -heap -PidNewProcess "./firefox.exe -P test -no-remote" -stackwalk HeapAlloc+HeapRealloc -BufferSize 512 -MinBuffers 128 -MaxBuffers 512`
+`xperf -on base  xperf -start heapsession -heap -PidNewProcess "./datalus.exe -P test -no-remote" -stackwalk HeapAlloc+HeapRealloc -BufferSize 512 -MinBuffers 128 -MaxBuffers 512`
 
 To stop a session and merge the resulting files:
 
@@ -157,9 +157,9 @@ selected time range, but the free event happened inside.
     This can be done by running 'msconfig' and going to Advance
     Options from the \"Boot\" tab.
 
-### Building Firefox
+### Building Datalus
 
-To get good data from a Firefox build, it is important to build with the
+To get good data from a Datalus build, it is important to build with the
 following options in your mozconfig:
 
 `export CFLAGS="-Oy-"  export CXXFLAGS="-Oy-"`

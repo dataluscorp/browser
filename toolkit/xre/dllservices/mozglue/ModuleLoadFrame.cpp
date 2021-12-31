@@ -34,7 +34,7 @@ void ModuleLoadFrame::StaticInit(
   const auto pGetNtLoaderAPI = reinterpret_cast<GetNtLoaderAPIFn>(
       ::GetProcAddress(::GetModuleHandleW(nullptr), "GetNtLoaderAPI"));
   if (!pGetNtLoaderAPI) {
-    // This case occurs in processes other than firefox.exe that do not contain
+    // This case occurs in processes other than datalus.exe that do not contain
     // the launcher process blocklist.
     gFallbackLoaderAPI.SetObserver(aNewObserver);
     sLoaderAPI = &gFallbackLoaderAPI;
@@ -43,7 +43,7 @@ void ModuleLoadFrame::StaticInit(
       aOutWinLauncherFunctions->mHandleLauncherError =
           [](const mozilla::LauncherError&, const char*) {};
       // We intentionally leave mInitDllBlocklistOOP null to make sure calling
-      // mInitDllBlocklistOOP in non-Firefox hits MOZ_RELEASE_ASSERT.
+      // mInitDllBlocklistOOP in non-Datalus hits MOZ_RELEASE_ASSERT.
     }
     return;
   }

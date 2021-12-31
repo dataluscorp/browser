@@ -110,7 +110,7 @@
         },
         "utm_content": {
           "type": "number",
-          "description": "Firefox version number"
+          "description": "Datalus version number"
         },
         "utm_source": {
           "type": "string",

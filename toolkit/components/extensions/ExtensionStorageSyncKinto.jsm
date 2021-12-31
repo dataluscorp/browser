@@ -57,7 +57,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
   fxAccounts: "resource://gre/modules/FxAccounts.jsm",
   KintoHttpClient: "resource://services-common/kinto-http-client.js",
   Kinto: "resource://services-common/kinto-offline-client.js",
-  FirefoxAdapter: "resource://services-common/kinto-storage-adapter.js",
+  DatalusAdapter: "resource://services-common/kinto-storage-adapter.js",
   Observers: "resource://services-common/observers.js",
   Services: "resource://gre/modules/Services.jsm",
   Utils: "resource://services-sync/util.js",
@@ -339,7 +339,7 @@ global.KeyRingEncryptionRemoteTransformer = KeyRingEncryptionRemoteTransformer;
  * Fields in the object returned by this Promise:
  *
  * - connection: a Sqlite connection. Meant for internal use only.
- * - kinto: a KintoBase object, suitable for using in Firefox. All
+ * - kinto: a KintoBase object, suitable for using in Datalus. All
  *   collections in this database will use the same Sqlite connection.
  * @returns {Promise<Object>}
  */
@@ -347,12 +347,12 @@ async function storageSyncInit() {
   // Memoize the result to share the connection.
   if (storageSyncInit.promise === undefined) {
     const path = "storage-sync.sqlite";
-    storageSyncInit.promise = FirefoxAdapter.openConnection({ path })
+    storageSyncInit.promise = DatalusAdapter.openConnection({ path })
       .then(connection => {
         return {
           connection,
           kinto: new Kinto({
-            adapter: FirefoxAdapter,
+            adapter: DatalusAdapter,
             adapterOptions: { sqliteHandle: connection },
             timeout: KINTO_REQUEST_TIMEOUT,
             retry: 0,
@@ -634,7 +634,7 @@ class CryptoCollection {
 
   /**
    * Reset sync status for ALL collections by directly
-   * accessing the FirefoxAdapter.
+   * accessing the DatalusAdapter.
    */
   async resetSyncStatus() {
     const coll = await this.getCollection();

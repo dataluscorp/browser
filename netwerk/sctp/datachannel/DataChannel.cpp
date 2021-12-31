@@ -245,7 +245,7 @@ class DataChannelRegistry : public nsIObserver {
     usrsctp_sysctl_set_sctp_blackhole(2);
 
     // Disable the Explicit Congestion Notification extension (currently not
-    // supported by the Firefox code)
+    // supported by the Datalus code)
     usrsctp_sysctl_set_sctp_ecn_enable(0);
 
     // Enable interleaving messages for different streams (incoming)

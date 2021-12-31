@@ -8,7 +8,7 @@ add_task(async function test_policy_disable_fxaccounts() {
 
   await setupPolicyEngineWithJson({
     policies: {
-      DisableFirefoxAccounts: true,
+      DisableDatalusAccounts: true,
     },
   });
 

@@ -34,15 +34,15 @@ add_task(async function() {
 
   info("Check initial state");
   ok(
-    panel.querySelector(`.compatibility-browser-icon__image[src*="firefox"]`),
-    "Firefox browsers are the target"
+    panel.querySelector(`.compatibility-browser-icon__image[src*="datalus"]`),
+    "Datalus browsers are the target"
   );
 
-  info("Make Firefox browsers out of target");
-  await updateTargetBrowsers(panel, store, id => !id.includes("firefox"));
+  info("Make Datalus browsers out of target");
+  await updateTargetBrowsers(panel, store, id => !id.includes("datalus"));
   ok(
-    !panel.querySelector(`.compatibility-browser-icon__image[src*="firefox"]`),
-    "Firefox browsers are not the target"
+    !panel.querySelector(`.compatibility-browser-icon__image[src*="datalus"]`),
+    "Datalus browsers are not the target"
   );
 
   info("Make all browsers out of target");
@@ -52,11 +52,11 @@ add_task(async function() {
     "No browsers are the target"
   );
 
-  info("Make Firefox browsers target");
-  await updateTargetBrowsers(panel, store, id => id.includes("firefox"));
+  info("Make Datalus browsers target");
+  await updateTargetBrowsers(panel, store, id => id.includes("datalus"));
   ok(
-    panel.querySelector(`.compatibility-browser-icon__image[src*="firefox"]`),
-    "Firefox browsers are the target now"
+    panel.querySelector(`.compatibility-browser-icon__image[src*="datalus"]`),
+    "Datalus browsers are the target now"
   );
 });
 

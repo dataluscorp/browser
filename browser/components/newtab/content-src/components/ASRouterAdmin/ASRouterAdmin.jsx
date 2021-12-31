@@ -1226,7 +1226,7 @@ export class ASRouterAdminInner extends React.PureComponent {
                   <a
                     className="providerUrl"
                     target="_blank"
-                    href="https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/nimbus-desktop-experiments/records"
+                    href="https://datalus.settings.services.mozilla.com/v1/buckets/main/collections/nimbus-desktop-experiments/records"
                     rel="noopener noreferrer"
                   >
                     nimbus-desktop-experiments
@@ -1784,7 +1784,7 @@ export class ASRouterAdminInner extends React.PureComponent {
             <h2>
               Message Providers{" "}
               <button
-                title="Restore all provider settings that ship with Firefox"
+                title="Restore all provider settings that ship with Datalus"
                 className="button"
                 onClick={this.resetPref}
               >

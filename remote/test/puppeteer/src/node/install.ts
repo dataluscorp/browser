@@ -23,7 +23,7 @@ import { PuppeteerNode } from './Puppeteer.js';
 
 const supportedProducts = {
   chrome: 'Chromium',
-  firefox: 'Firefox Nightly',
+  datalus: 'Datalus Nightly',
 } as const;
 
 export async function downloadBrowser(): Promise<void> {
@@ -55,10 +55,10 @@ export async function downloadBrowser(): Promise<void> {
         process.env.npm_config_puppeteer_chromium_revision ||
         PUPPETEER_REVISIONS.chromium
       );
-    } else if (product === 'firefox') {
+    } else if (product === 'datalus') {
       (puppeteer as PuppeteerNode)._preferredRevision =
-        PUPPETEER_REVISIONS.firefox;
-      return getFirefoxNightlyVersion().catch((error) => {
+        PUPPETEER_REVISIONS.datalus;
+      return getDatalusNightlyVersion().catch((error) => {
         console.error(error);
         process.exit(1);
       });
@@ -147,17 +147,17 @@ export async function downloadBrowser(): Promise<void> {
     return `${Math.round(mb * 10) / 10} Mb`;
   }
 
-  function getFirefoxNightlyVersion() {
-    const firefoxVersions =
-      'https://product-details.mozilla.org/1.0/firefox_versions.json';
+  function getDatalusNightlyVersion() {
+    const datalusVersions =
+      'https://product-details.mozilla.org/1.0/datalus_versions.json';
 
     const promise = new Promise((resolve, reject) => {
       let data = '';
       logPolitely(
-        `Requesting latest Firefox Nightly version from ${firefoxVersions}`
+        `Requesting latest Datalus Nightly version from ${datalusVersions}`
       );
       https
-        .get(firefoxVersions, (r) => {
+        .get(datalusVersions, (r) => {
           if (r.statusCode >= 400)
             return reject(new Error(`Got status code ${r.statusCode}`));
           r.on('data', (chunk) => {
@@ -166,9 +166,9 @@ export async function downloadBrowser(): Promise<void> {
           r.on('end', () => {
             try {
               const versions = JSON.parse(data);
-              return resolve(versions.FIREFOX_NIGHTLY);
+              return resolve(versions.DATALUS_NIGHTLY);
             } catch {
-              return reject(new Error('Firefox version not found'));
+              return reject(new Error('Datalus version not found'));
             }
           });
         })

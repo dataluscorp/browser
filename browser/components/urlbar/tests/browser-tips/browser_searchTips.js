@@ -143,7 +143,7 @@ add_task(async function googleResults() {
     await withDNSRedirect(domain, "/search", async url => {
       await checkTab(
         window,
-        `${url}?q=firefox`,
+        `${url}?q=datalus`,
         UrlbarProviderSearchTips.TIP_TYPE.NONE
       );
     });
@@ -200,7 +200,7 @@ add_task(async function bingResults() {
   await withDNSRedirect("www.bing.com", "/search", async url => {
     await checkTab(
       window,
-      `${url}?q=firefox`,
+      `${url}?q=datalus`,
       UrlbarProviderSearchTips.TIP_TYPE.NONE
     );
   });

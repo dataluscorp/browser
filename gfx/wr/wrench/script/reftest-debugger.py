@@ -12,4 +12,4 @@ with open('reftest.log', "w") as out:
         subprocess.check_call(['script/headless.py', 'reftest'], stdout=out)
         print("All tests passed.")
     except subprocess.CalledProcessError as ex:
-        subprocess.check_call(['firefox', 'reftest-analyzer.xhtml#logurl=reftest.log'])
+        subprocess.check_call(['datalus', 'reftest-analyzer.xhtml#logurl=reftest.log'])

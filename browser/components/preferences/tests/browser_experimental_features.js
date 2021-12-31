@@ -31,7 +31,7 @@ add_task(async function testCanOpenWithPref() {
   ok(!experimentalCategory.hidden, "The category is not hidden");
 
   let categoryHeader = await TestUtils.waitForCondition(
-    () => doc.getElementById("firefoxExperimentalCategory"),
+    () => doc.getElementById("datalusExperimentalCategory"),
     "Waiting for experimental features category to get initialized"
   );
   ok(
@@ -61,7 +61,7 @@ add_task(async function testSearchFindsExperiments() {
   ok(!experimentalCategory.hidden, "The category is not hidden");
 
   await TestUtils.waitForCondition(
-    () => doc.getElementById("firefoxExperimentalCategory"),
+    () => doc.getElementById("datalusExperimentalCategory"),
     "Waiting for experimental features category to get initialized"
   );
   await evaluateSearchResults(

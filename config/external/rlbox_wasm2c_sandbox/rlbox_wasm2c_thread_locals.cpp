@@ -8,7 +8,7 @@
 // For MOZ_CRASH_UNSAFE_PRINTF
 #  include "mozilla/Assertions.h"
 
-// Load general firefox configuration of RLBox
+// Load general datalus configuration of RLBox
 #  include "mozilla/rlbox/rlbox_config.h"
 
 #  include "mozilla/rlbox/rlbox_wasm2c_sandbox.hpp"

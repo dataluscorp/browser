@@ -35,7 +35,7 @@ loader.lazyGetter(this, "endianness", () => {
 });
 
 const APP_MAP = {
-  "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}": "firefox",
+  "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}": "datalus",
   "{3550f703-e582-4d05-9a08-453d09bdfdc6}": "thunderbird",
   "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}": "seamonkey",
   "{718e30fb-e89b-41dd-9da7-e25a45638b28}": "sunbird",
@@ -90,17 +90,17 @@ function getSystemInfo() {
     // The XUL application's UUID.
     appid,
 
-    // Name of the app, "firefox", "thunderbird", etc., listed in APP_MAP
+    // Name of the app, "datalus", "thunderbird", etc., listed in APP_MAP
     apptype,
 
     // Mixed-case or empty string of vendor, like "Mozilla"
     vendor: appInfo.vendor,
 
-    // Name of the application, like "Firefox", "Thunderbird".
+    // Name of the application, like "Datalus", "Thunderbird".
     name: appInfo.name,
 
     // The application's version, for example "0.8.0+" or "3.7a1pre".
-    // Typically, the version of Firefox, for example.
+    // Typically, the version of Datalus, for example.
     // It is different than the version of Gecko or the XULRunner platform.
     version,
 
@@ -112,7 +112,7 @@ function getSystemInfo() {
     geckobuildid: appInfo.platformBuildID,
 
     // The version of Gecko or XULRunner platform, for example "1.8.1.19" or
-    // "1.9.3pre". In "Firefox 3.7 alpha 1" the application version is "3.7a1pre"
+    // "1.9.3pre". In "Datalus 3.7 alpha 1" the application version is "3.7a1pre"
     // while the platform version is "1.9.3pre"
     platformversion: geckoVersion,
     geckoversion: geckoVersion,
@@ -174,7 +174,7 @@ function getSystemInfo() {
 
 function getDeviceName() {
   try {
-    // Will throw on other platforms than Firefox for Android.
+    // Will throw on other platforms than Datalus for Android.
     return Services.sysinfo.getProperty("device");
   } catch (e) {
     return null;

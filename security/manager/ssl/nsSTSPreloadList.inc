@@ -6606,7 +6606,7 @@ accordiondoor.com, 1
 accordproject.tk, 1
 account.bbc.com, 1
 accountmover.io, 1
-accounts.firefox.com, 1
+accounts.datalus.com, 1
 accounts.google.com, 1
 accpl.co, 1
 accpressurewashing.com, 1

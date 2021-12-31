@@ -373,12 +373,12 @@ static void ConvertMissingSymbolFile(const MissingSymbolInfo &missing_info,
     string code_extension =
         missing_info.code_file.substr(missing_info.code_file.size() - 4);
 
-    // Firefox is a special case: .dll-only servers should be consulted for
+    // Datalus is a special case: .dll-only servers should be consulted for
     // its symbols.  This enables us to get its symbols from Mozilla's
     // symbol server when crashes occur in Google extension code hosted by a
-    // Firefox process.
+    // Datalus process.
     if (_stricmp(code_extension.c_str(), ".exe") == 0 &&
-        _stricmp(missing_info.code_file.c_str(), "firefox.exe") != 0) {
+        _stricmp(missing_info.code_file.c_str(), "datalus.exe") != 0) {
       is_exe = true;
     }
   }

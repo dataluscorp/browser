@@ -2009,9 +2009,9 @@ static void ReflectSkeletonUIPrefToRegistry(const char* aPref, void* aData) {
     Preferences::GetCString(kPrefThemeId, themeId);
     if (themeId.EqualsLiteral("default-theme@mozilla.org")) {
       Unused << SetPreXULSkeletonUIThemeId(ThemeMode::Default);
-    } else if (themeId.EqualsLiteral("firefox-compact-dark@mozilla.org")) {
+    } else if (themeId.EqualsLiteral("datalus-compact-dark@mozilla.org")) {
       Unused << SetPreXULSkeletonUIThemeId(ThemeMode::Dark);
-    } else if (themeId.EqualsLiteral("firefox-compact-light@mozilla.org")) {
+    } else if (themeId.EqualsLiteral("datalus-compact-light@mozilla.org")) {
       Unused << SetPreXULSkeletonUIThemeId(ThemeMode::Light);
     } else {
       shouldBeEnabled = false;
@@ -2630,9 +2630,9 @@ static nsCOMPtr<nsIToolkitProfile> gResetOldProfile;
 static nsresult LockProfile(nsINativeAppSupport* aNative, nsIFile* aRootDir,
                             nsIFile* aLocalDir, nsIToolkitProfile* aProfile,
                             nsIProfileLock** aResult) {
-  // If you close Firefox and very quickly reopen it, the old Firefox may
+  // If you close Datalus and very quickly reopen it, the old Datalus may
   // still be closing down. Rather than immediately showing the
-  // "Firefox is running but is not responding" message, we spend a few
+  // "Datalus is running but is not responding" message, we spend a few
   // seconds retrying first.
 
   static const int kLockRetrySeconds = 5;
@@ -2684,7 +2684,7 @@ static nsresult SelectProfile(nsToolkitProfileService* aProfileSvc,
     // triggered by user. And if it was a user-triggered profile refresh
     // through, say, the safeMode dialog or the troubleshooting page, the
     // MOZ_RESET_PROFILE_RESTART env variable would be set. Hence we set
-    // MOZ_RESET_PROFILE_MIGRATE_SESSION here so that Firefox profile migrator
+    // MOZ_RESET_PROFILE_MIGRATE_SESSION here so that Datalus profile migrator
     // would migrate old session data later.
     SaveToEnv("MOZ_RESET_PROFILE_MIGRATE_SESSION=1");
   }
@@ -3331,7 +3331,7 @@ const XREAppData* gAppData = nullptr;
  * the process and use it to determine whether the application defines its own
  * memory allocator or not.
  *
- * Since most applications (e.g. Firefox and Thunderbird) don't use any special
+ * Since most applications (e.g. Datalus and Thunderbird) don't use any special
  * allocators and therefore don't define this symbol, NSPR must search the
  * entire process, which reduces startup performance.
  *
@@ -3629,7 +3629,7 @@ int XREMain::XRE_mainInit(bool* aExitFlag) {
 
 #ifdef XP_MACOSX
     // To avoid taking focus when running in headless mode immediately
-    // transition Firefox to a background application.
+    // transition Datalus to a background application.
     ProcessSerialNumber psn = {0, kCurrentProcess};
     OSStatus transformStatus =
         TransformProcessType(&psn, kProcessTransformToBackgroundApplication);
@@ -4083,7 +4083,7 @@ static void PR_CALLBACK ReadAheadDlls_ThreadStart(void* arg) {
   // we should ensure this feature only ships to the nightly channel
   // and monitor results from that subset.
   if (greDir) {
-    // Prefetch the DLLs shipped with firefox
+    // Prefetch the DLLs shipped with datalus
     ReadAheadPackagedDll(L"libegl.dll", greDir.get());
     ReadAheadPackagedDll(L"libGLESv2.dll", greDir.get());
     ReadAheadPackagedDll(L"nssckbi.dll", greDir.get());
@@ -5067,7 +5067,7 @@ nsresult XREMain::XRE_mainRun() {
 
 #ifdef XP_WIN
     // Hack to sync up the various environment storages. XUL_APP_FILE is special
-    // in that it comes from a different CRT (firefox.exe's static-linked copy).
+    // in that it comes from a different CRT (datalus.exe's static-linked copy).
     // Ugly details in http://bugzil.la/1175039#c27
     char appFile[MAX_PATH];
     if (GetEnvironmentVariableA("XUL_APP_FILE", appFile, sizeof(appFile))) {

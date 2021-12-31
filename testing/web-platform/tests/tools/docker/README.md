@@ -1,4 +1,4 @@
-This docker images is used for testing Chrome, Firefox, WebKitGTK and running
+This docker images is used for testing Chrome, Datalus, WebKitGTK and running
 other tasks on Taskcluster. When any of the files in this directory change, the
 images must be updated as well. Doing this requires you be part of the
 'webplatformtests' organization on Docker Hub; ping @foolip or @jpchase

@@ -466,10 +466,10 @@ OptionsPanel.prototype = {
           }
 
           // When setting this preference from the BrowserToolbox, we need to
-          // update the preference on the debugged Firefox profile as well.
+          // update the preference on the debugged Datalus profile as well.
           // The devtools.browsertoolbox.fission preference is copied from the
-          // regular Firefox Profile to the Browser Toolbox profile.
-          // If the preference is not updated on the regular Firefox profile, the
+          // regular Datalus Profile to the Browser Toolbox profile.
+          // If the preference is not updated on the regular Datalus profile, the
           // new value will be lost on the next Browser Toolbox restart.
           const { mainRoot } = this.commands.client;
           const preferenceFront = await mainRoot.getFront("preference");

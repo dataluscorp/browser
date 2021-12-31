@@ -870,14 +870,14 @@ var Impl = {
           // The init sequence is forced to run on shutdown for short sessions and
           // we don't want to start TelemetryModules as the timer registration will fail.
           if (!this._shuttingDown) {
-            // Report the modules loaded in the Firefox process.
+            // Report the modules loaded in the Datalus process.
             TelemetryModules.start();
 
             // Send coverage ping.
             await CoveragePing.startup();
 
             // Start the untrusted modules ping, which reports events where
-            // untrusted modules were loaded into the Firefox process.
+            // untrusted modules were loaded into the Datalus process.
             if (AppConstants.platform == "win") {
               TelemetryUntrustedModulesPing.start();
             }

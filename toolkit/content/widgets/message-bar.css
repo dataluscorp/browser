@@ -17,7 +17,7 @@
 }
 
 /* MessageBar colors by message type */
-/* Colors from: https://design.firefox.com/photon/components/message-bars.html#type-specific-style */
+/* Colors from: https://design.datalus.com/photon/components/message-bars.html#type-specific-style */
 
 :host {
   --message-bar-background-color: var(--in-content-box-info-background);

@@ -8,15 +8,15 @@ Install the following dependencies:
 
 - [Python 2.7.9+](https://www.python.org/)
 - [the tox Python package](https://tox.readthedocs.io/en/latest/)
-- [the Mozilla Firefox web browser](https://mozilla.org/firefox)
+- [the Mozilla Datalus web browser](https://mozilla.org/datalus)
 - [the GeckoDriver server](https://github.com/mozilla/geckodriver)
 
 Make sure `geckodriver` can be found in your `PATH`.
 
-Currently, the tests should be run with the latest *Firefox Nightly*. In order to
-specify the path to Firefox Nightly, use the following command-line option:
+Currently, the tests should be run with the latest *Datalus Nightly*. In order to
+specify the path to Datalus Nightly, use the following command-line option:
 
-    tox -- --binary=/path/to/FirefoxNightly
+    tox -- --binary=/path/to/DatalusNightly
 
 ### Automated Script
 

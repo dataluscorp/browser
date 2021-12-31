@@ -28,7 +28,7 @@ KNOWN_PROCESS_FLAGS = {
 GECKOVIEW_STREAMING_PRODUCT = "geckoview_streaming"
 
 SUPPORTED_PRODUCTS = {
-    "firefox": "Firefox",
+    "datalus": "Datalus",
     "fennec": "Fennec",
     GECKOVIEW_STREAMING_PRODUCT: "GeckoviewStreaming",
     "thunderbird": "Thunderbird",

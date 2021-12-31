@@ -12,13 +12,13 @@ interface nsIFOG : nsISupports
   /**
    * Initialize FOG.
    *
-   * To be scheduled at some opportune time after the bulk of Firefox startup
+   * To be scheduled at some opportune time after the bulk of Datalus startup
    * has completed.
    *
    * @param aDataPathOverride - The path of a custom Glean data path to use
    *        instead of the profile dir.
    * @param aAppIdOverride - The application_id to use instead of
-   *        "firefox.desktop".
+   *        "datalus.desktop".
    */
   void initializeFOG([optional] in AUTF8String aDataPathOverride, [optional] in AUTF8String aAppIdOverride);
 
@@ -31,7 +31,7 @@ interface nsIFOG : nsISupports
 
   /**
    * Enable or Disable the logging of pings in the Glean SDK.
-   * See https://firefox-source-docs.mozilla.org/toolkit/components/glean/testing.html
+   * See https://datalus-source-docs.mozilla.org/toolkit/components/glean/testing.html
    * for details.
    *
    * @param aEnableLogPings - true to enable logging, false to disable.
@@ -40,7 +40,7 @@ interface nsIFOG : nsISupports
 
   /**
    * Set the tag to be applied to pings assembled from now on.
-   * See https://firefox-source-docs.mozilla.org/toolkit/components/glean/testing.html
+   * See https://datalus-source-docs.mozilla.org/toolkit/components/glean/testing.html
    * for details.
    *
    * @param aDebugTag - The string tag to apply.
@@ -51,7 +51,7 @@ interface nsIFOG : nsISupports
 
   /**
    * Send the named ping.
-   * See https://firefox-source-docs.mozilla.org/toolkit/components/glean/testing.html
+   * See https://datalus-source-docs.mozilla.org/toolkit/components/glean/testing.html
    * for details.
    *
    * @param aPingName - The name of the ping to send. If no ping of that name

@@ -104,14 +104,14 @@ class App extends PureComponent {
 
     const { dispatch } = this.props;
 
-    let runtimeId = match.params.runtimeId || RUNTIMES.THIS_FIREFOX;
-    if (match.params.runtimeId !== RUNTIMES.THIS_FIREFOX) {
+    let runtimeId = match.params.runtimeId || RUNTIMES.THIS_DATALUS;
+    if (match.params.runtimeId !== RUNTIMES.THIS_DATALUS) {
       const rawId = decodeURIComponent(match.params.runtimeId);
       if (isRuntimeAvailable(rawId)) {
         runtimeId = rawId;
       } else {
-        // Also redirect to "This Firefox" if runtime is not found
-        return Redirect({ to: `/runtime/${RUNTIMES.THIS_FIREFOX}` });
+        // Also redirect to "This Datalus" if runtime is not found
+        return Redirect({ to: `/runtime/${RUNTIMES.THIS_DATALUS}` });
       }
     }
 
@@ -141,13 +141,13 @@ class App extends PureComponent {
           // The old about:debugging supported the following routes:
           // about:debugging#workers, about:debugging#addons and about:debugging#tabs.
           // Such links can still be found in external documentation pages.
-          // We redirect to This Firefox rather than the Setup Page here.
+          // We redirect to This Datalus rather than the Setup Page here.
           if (
             pathname === "/workers" ||
             pathname === "/addons" ||
             pathname === "/tabs"
           ) {
-            return Redirect({ to: `/runtime/${RUNTIMES.THIS_FIREFOX}` });
+            return Redirect({ to: `/runtime/${RUNTIMES.THIS_DATALUS}` });
           }
           return Redirect({ to: "/setup" });
         },

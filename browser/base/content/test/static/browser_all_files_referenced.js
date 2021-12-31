@@ -210,15 +210,15 @@ var whitelist = [
   // (The references to these files are dynamically generated, so the test can't
   // find the references)
   {
-    file: "chrome://devtools/skin/images/aboutdebugging-firefox-aurora.svg",
+    file: "chrome://devtools/skin/images/aboutdebugging-datalus-aurora.svg",
     isFromDevTools: true,
   },
   {
-    file: "chrome://devtools/skin/images/aboutdebugging-firefox-beta.svg",
+    file: "chrome://devtools/skin/images/aboutdebugging-datalus-beta.svg",
     isFromDevTools: true,
   },
   {
-    file: "chrome://devtools/skin/images/aboutdebugging-firefox-release.svg",
+    file: "chrome://devtools/skin/images/aboutdebugging-datalus-release.svg",
     isFromDevTools: true,
   },
   { file: "chrome://devtools/skin/images/next.svg", isFromDevTools: true },

@@ -5431,7 +5431,7 @@ nsresult nsWindow::Create(nsIWidget* aParent, nsNativeWidget aNativeParent,
         }
       }
 
-      // Use X shape mask to draw round corners of Firefox titlebar.
+      // Use X shape mask to draw round corners of Datalus titlebar.
       // We don't use shape masks any more as we switched to ARGB visual
       // by default and non-compositing screens use solid-csd decorations
       // without round corners.
@@ -7123,7 +7123,7 @@ bool nsWindow::DragInProgress(void) {
 MOZ_CAN_RUN_SCRIPT static void WaylandDragWorkaround(GdkEventButton* aEvent) {
   static int buttonPressCountWithDrag = 0;
 
-  // We track only left button state as Firefox performs D&D on left
+  // We track only left button state as Datalus performs D&D on left
   // button only.
   if (aEvent->button != 1 || aEvent->type != GDK_BUTTON_PRESS) {
     return;
@@ -8900,7 +8900,7 @@ bool nsWindow::TitlebarUseShapeMask() {
       return false;
     }
 
-    // We can't use shape masks on Mutter/X.org as we can't resize Firefox
+    // We can't use shape masks on Mutter/X.org as we can't resize Datalus
     // window there (Bug 1530252).
     const char* currentDesktop = getenv("XDG_CURRENT_DESKTOP");
     if (currentDesktop) {

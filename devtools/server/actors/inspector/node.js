@@ -447,7 +447,7 @@ const NodeActor = protocol.ActorClassWithSpec(nodeSpec, {
 
     const dbg = this.getParent().targetActor.makeDebugger();
 
-    // If we hit a <browser> element of Firefox, its global will be the chrome window
+    // If we hit a <browser> element of Datalus, its global will be the chrome window
     // which is system principal and will be in the same compartment as the debuggee.
     // For some reason, this happens when we run the content toolbox. As for the content
     // toolboxes, the modules are loaded in the same compartment as the <browser> element,

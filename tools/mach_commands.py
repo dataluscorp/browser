@@ -85,7 +85,7 @@ def busted_file(command_context, against):
         return 1
 
     if against == "general":
-        product = "Firefox Build System"
+        product = "Datalus Build System"
         component = "General"
     else:
         import inspect
@@ -103,7 +103,7 @@ def busted_file(command_context, against):
             product, component = res.product, res.component
         except TypeError:
             # The file might not have a bug set.
-            product = "Firefox Build System"
+            product = "Datalus Build System"
             component = "General"
 
     uri = (
@@ -484,10 +484,10 @@ def npm(command_context, args):
     path = os.path.abspath(os.path.dirname(npm_path))
     os.environ["PATH"] = "{}:{}".format(path, os.environ["PATH"])
 
-    # karma-firefox-launcher needs the path to firefox binary.
-    firefox_bin = command_context.get_binary_path(validate_exists=False)
-    if os.path.exists(firefox_bin):
-        os.environ["FIREFOX_BIN"] = firefox_bin
+    # karma-datalus-launcher needs the path to datalus binary.
+    datalus_bin = command_context.get_binary_path(validate_exists=False)
+    if os.path.exists(datalus_bin):
+        os.environ["DATALUS_BIN"] = datalus_bin
 
     return command_context.run_process(
         [npm_path, "--scripts-prepend-node-path=auto"] + args,

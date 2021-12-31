@@ -24,7 +24,7 @@ def test_NAME_SUBSTITUTIONS():
         r"c:\program files\nvidia corporation\3d vision\npnv3dv.dll": r"c:\program files\{nvidia_3d_vision}",  # NOQA: E501
         r"c:\program files\nvidia corporation\3d vision\npnv3dvstreaming.dll": r"c:\program files\{nvidia_3d_vision}",  # NOQA: E501
         r"c:\program files\nvidia corporation\3d vision\nvstereoapii.dll": r"c:\program files\{nvidia_3d_vision}",  # NOQA: E501
-        r"{firefox}\browser\extensions\{45b6d270-f6ec-4930-a6ad-14bac5ea2204}.xpi": r"{firefox}\browser\extensions\{uuid}.xpi",  # NOQA: E501
+        r"{datalus}\browser\extensions\{45b6d270-f6ec-4930-a6ad-14bac5ea2204}.xpi": r"{datalus}\browser\extensions\{uuid}.xpi",  # NOQA: E501
         r"c:\slave\test\build\venv\lib\site-packages\pip\_vendor\html5lib\treebuilders": r"c:\slave\test\build\venv\lib\site-packages\{pip_vendor}",  # NOQA: E501
         r"c:\slave\test\build\venv\lib\site-packages\pip\_vendor\colorama": r"c:\slave\test\build\venv\lib\site-packages\{pip_vendor}",  # NOQA: E501
         r"c:\slave\test\build\venv\lib\site-packages\pip\_vendor\cachecontrol\caches": r"c:\slave\test\build\venv\lib\site-packages\{pip_vendor}",  # NOQA: E501

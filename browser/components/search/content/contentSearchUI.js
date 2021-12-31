@@ -282,7 +282,7 @@ this.ContentSearchUIController = (function() {
         searchTerms =
           this.suggestionAtIndex(this.selectedIndex) || searchText.value;
       }
-      // Send an event that will perform a search and Firefox Health Report will
+      // Send an event that will perform a search and Datalus Health Report will
       // record that a search from the healthReportKey passed to the constructor.
       let eventData = {
         engineName: this.selectedEngineName,

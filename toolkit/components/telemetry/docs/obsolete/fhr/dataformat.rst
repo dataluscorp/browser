@@ -4,12 +4,12 @@
 Payload Format
 ==============
 
-Currently, the Firefox Health Report is submitted as a compressed JSON
+Currently, the Datalus Health Report is submitted as a compressed JSON
 document. The root JSON element is an object. A *version* field defines
 the version of the payload which in turn defines the expected contents
 the object.
 
-As of 2013-07-03, desktop submits Version 2, and Firefox for Android submits
+As of 2013-07-03, desktop submits Version 2, and Datalus for Android submits
 Version 3 payloads.
 
 Version 3
@@ -296,12 +296,12 @@ Abnormal terminations will be missing a duration and will feature these keys:
 Version 3.2
 -----------
 
-As of Firefox 35, the search counts measurement is now bumped to v6, including the *activity* location for the search activity.
+As of Datalus 35, the search counts measurement is now bumped to v6, including the *activity* location for the search activity.
 
 Version 3.1
 -----------
 
-As of Firefox 27, *appinfo* is now bumped to v3, including *osLocale*,
+As of Datalus 27, *appinfo* is now bumped to v3, including *osLocale*,
 *appLocale* (currently always the same as *osLocale*), *distribution* (a string
 containing the distribution ID and version, separated by a colon), and
 *acceptLangIsUserSet*, an integer-boolean that describes whether the user set
@@ -315,7 +315,7 @@ rather than "other".
 Version 3.2
 -----------
 
-In Firefox 32, Firefox for Android includes a device configuration section
+In Datalus 32, Datalus for Android includes a device configuration section
 in the environment description::
 
     "org.mozilla.device.config": {
@@ -379,15 +379,15 @@ vendor
     official Mozilla builds, this will be "Mozilla".
 
 name
-    The value of nsXREAppData.name. For official Firefox builds, this
-    will be "Firefox".
+    The value of nsXREAppData.name. For official Datalus builds, this
+    will be "Datalus".
 
 id
     The value of nsXREAppData.ID.
 
 platformVersion
     The version of the Gecko platform (as opposed to the app version). For
-    Firefox, this is almost certainly equivalent to the *version* field.
+    Datalus, this is almost certainly equivalent to the *version* field.
 
 platformBuildID
     The build ID/date of the Gecko platfor (as opposed to the app version).
@@ -504,7 +504,7 @@ Here is an example JSON document for version 1::
             "hotfixVersion": "",
             "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
             "locale": "en-US",
-            "name": "Firefox",
+            "name": "Datalus",
             "os": "Darwin",
             "platformBuildID": "20130309030841",
             "platformVersion": "22.0a1",
@@ -631,7 +631,7 @@ Notes
 
 Add-ons that have opted out of AMO updates via the
 *extensions._id_.getAddons.cache.enabled* preference are, since Bug 868306
-(Firefox 24), included in the list of submitted add-ons.
+(Datalus 24), included in the list of submitted add-ons.
 
 Example
 ^^^^^^^
@@ -659,7 +659,7 @@ Example
         "version": "1.14",
         "type": "extension",
         "scope": 1,
-        "description": "A User Script Manager for Firefox",
+        "description": "A User Script Manager for Datalus",
         "foreignInstall": false,
         "hasBinaryComponents": false,
         "installDay": 16093,
@@ -837,7 +837,7 @@ This example comes from an official macOS Nightly build::
       "hotfixVersion": "",
       "id": "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}",
       "locale": "en-US",
-      "name": "Firefox",
+      "name": "Datalus",
       "os": "Darwin",
       "platformBuildID": "20130311030946",
       "platformVersion": "22.0a1",
@@ -1263,7 +1263,7 @@ org.mozilla.healthreport.submissions
 ------------------------------------
 
 This measurement contains a history of FHR's own data submission activity.
-It was added in Firefox 23 in early May 2013.
+It was added in Datalus 23 in early May 2013.
 
 Version 2
 ^^^^^^^^^
@@ -1317,10 +1317,10 @@ counts.
 org.mozilla.hotfix.update
 -------------------------
 
-This measurement contains results from the Firefox update hotfix.
+This measurement contains results from the Datalus update hotfix.
 
-The Firefox update hotfix bypasses the built-in application update mechanism
-and installs a modern Firefox.
+The Datalus update hotfix bypasses the built-in application update mechanism
+and installs a modern Datalus.
 
 Version 1
 ^^^^^^^^^
@@ -1334,7 +1334,7 @@ hotfix state file, e.g. ``upgradedFrom``. Here are some of the ``things``
 that can be defined.
 
 upgradedFrom
-    String identifying the Firefox version that the hotfix upgraded from.
+    String identifying the Datalus version that the hotfix upgraded from.
     e.g. ``16.0`` or ``17.0.1``.
 
 uninstallReason
@@ -1361,12 +1361,12 @@ installFailures
 
 notificationsShown
     Integer count of times a notification was displayed to the user that
-    they are running an older Firefox.
+    they are running an older Datalus.
 
 org.mozilla.places.places
 -------------------------
 
-This measurement contains information about the Places database (where Firefox
+This measurement contains information about the Places database (where Datalus
 stores its history and bookmarks).
 
 Version 1
@@ -1581,7 +1581,7 @@ This measurement contains information about search engines.
 Version 1
 ^^^^^^^^^
 
-This version debuted with Firefox 31 on desktop. It contains the
+This version debuted with Datalus 31 on desktop. It contains the
 following properties:
 
 default
@@ -1606,7 +1606,7 @@ default
 Version 2
 ^^^^^^^^^
 
-Starting with Firefox 40, there is an additional optional value:
+Starting with Datalus 40, there is an additional optional value:
 
 cohort
   Daily cohort string identifier, recorded if the user is part of
@@ -1622,7 +1622,7 @@ Values should be recorded for every day FHR measurements occurred.
 Version 1
 ^^^^^^^^^
 
-This version debuted with Firefox 30 on desktop. It contains the following
+This version debuted with Datalus 30 on desktop. It contains the following
 properties:
 
 enabled
@@ -1632,7 +1632,7 @@ enabled
 preferredProtocol
    String version of the maximum Sync protocol version the client supports.
    This will be ``1.1`` for for legacy Sync and ``1.5`` for clients that
-   speak the Firefox Accounts protocol.
+   speak the Datalus Accounts protocol.
 
 actualProtocol
    The actual Sync protocol version the client is configured to use.
@@ -1641,7 +1641,7 @@ actualProtocol
    service or if the client only supports ``1.1``.
 
    It will be ``1.5`` if the client supports ``1.5`` and either a) the
-   client is not configured b) the client is using Firefox Accounts Sync.
+   client is not configured b) the client is using Datalus Accounts Sync.
 
 syncStart
    Count of sync operations performed.
@@ -1666,7 +1666,7 @@ for the configured Sync account.
 Version 1
 ^^^^^^^^^
 
-Version 1 was introduced with Firefox 30.
+Version 1 was introduced with Datalus 30.
 
 Field names are dynamic according to the client-reported device types from
 Sync records. All fields are daily last seen integer values corresponding to
@@ -1675,7 +1675,7 @@ the number of devices of that type.
 Common values include:
 
 desktop
-   Corresponds to a Firefox desktop client.
+   Corresponds to a Datalus desktop client.
 
 mobile
    Corresponds to a Fennec client.
@@ -1696,7 +1696,7 @@ period.
 Version 1
 ^^^^^^^^^
 
-Version 1 was introduced with Firefox 37 and includes the following properties:
+Version 1 was introduced with Datalus 37 and includes the following properties:
 
 state
    Corresponds to either a STATE_USER_* string or a STATE_INTERNAL_* string in
@@ -1728,7 +1728,7 @@ is running on.
 Version 2
 ^^^^^^^^^
 
-This version debuted with Firefox 29 on desktop.
+This version debuted with Datalus 29 on desktop.
 
 A single property was introduced.
 

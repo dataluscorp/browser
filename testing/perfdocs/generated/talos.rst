@@ -3,7 +3,7 @@ Talos
 =====
 
 Talos is a cross-platform Python performance testing framework that is specifically for
-Firefox on desktop. New performance tests should be added to the newer framework
+Datalus on desktop. New performance tests should be added to the newer framework
 `mozperftest </testing/perfdocs/mozperftest.html>`_ unless there are limitations
 there (highly unlikely) that make it absolutely necessary to add them to Talos. Talos is
 named after the `bronze automaton from Greek myth <https://en.wikipedia.org/wiki/Talos>`_.
@@ -14,7 +14,7 @@ named after the `bronze automaton from Greek myth <https://en.wikipedia.org/wiki
 
 Talos tests are run in a similar manner to xpcshell and mochitests. They are started via
 the command :code:`mach talos-test`. A `python script <https://searchfox.org/mozilla-central/source/testing/talos>`_
-then launches Firefox, which runs the tests via JavaScript special powers. The test timing
+then launches Datalus, which runs the tests via JavaScript special powers. The test timing
 information is recorded in a text log file, e.g. :code:`browser_output.txt`, and then processed
 into the `JSON format supported by Perfherder <https://searchfox.org/mozilla-central/source/testing/mozharness/external_tools/performance-artifact-schema.json>`_.
 
@@ -184,7 +184,7 @@ Startup
 
 `Startup
 tests <https://dxr.mozilla.org/mozilla-central/source/testing/talos/talos/startup_test>`__
-launch Firefox and measure the time to the onload or paint events. We
+launch Datalus and measure the time to the onload or paint events. We
 run this in a series of cycles (default to 20) to generate a full set of
 data. Tests that currently are startup tests are:
 
@@ -256,7 +256,7 @@ is to run this on basic pageload and startup tests.
 Web extension
 =============
 
-Web Extensions are what Firefox has switched to and there are different
+Web Extensions are what Datalus has switched to and there are different
 code paths and APIs used vs addons. Historically we don't test with
 addons (other than our test addons) and are missing out on common
 slowdowns. In 2017 we started running some startup and basic pageload
@@ -428,7 +428,7 @@ about_preferences_basic
 
 -  reporting: test time in ms (lower is better)
 
-This test measures the performance of the Firefox about:preferences
+This test measures the performance of the Datalus about:preferences
 page. This test is a little different than other pageload tests in that
 we are loading one page (about:preferences) but also testing the loading
 of that same page's subcategories/panels (i.e. about:preferences#home).
@@ -1301,7 +1301,7 @@ tart
 -  source:
    `tart <https://dxr.mozilla.org/mozilla-central/source/testing/talos/talos/tests/tart>`__
 -  type: `Page load`_
--  measuring: Desktop Firefox UI animation speed and smoothness
+-  measuring: Desktop Datalus UI animation speed and smoothness
 -  reporting: intervals in ms (lower is better) - see below for details
 -  data: there are 30 reported subtests from TART which we load 25
    times, resulting in 30 sets of 25 data points.
@@ -1405,7 +1405,7 @@ tp5o
       test.py <https://dxr.mozilla.org/mozilla-central/source/testing/talos/talos/test.py#l449>`__
    -  suite: `geometric mean`_ of the 51 subtest results.
 
-Tests the time it takes Firefox to load the `tp5 web page test
+Tests the time it takes Datalus to load the `tp5 web page test
 set <#page-sets>`__. The web set was culled from the Alexa top 500 April
 8th, 2011 and consists of 100 pages in tp5n and 51 in tp5o. Some suites
 use a subset of these, i.e. 48/51 tests to reduce noise - check with the
@@ -1447,7 +1447,7 @@ possible).
     10;cnn.com/www.cnn.com/index.html;551;384;436;394;391;375;371;407;371;374;398;372;368;388;376;380;386;377;363;383;384;370;388;381;374
     11;dailymail.co.uk/www.dailymail.co.uk/ushome/index.html;984;606;551;561;545;542;576;564;543;560;566;557;561;544;545;576;548;539;568;567;557;560;545;544;578
     12;dailymotion.com/www.dailymotion.com/us.html;473;271;286;272;285;288;290;290;280;268;286;269;287;275;289;282;293;287;304;261;289;284;281;277;286
-    13;digg.com/digg.com/news/story/New_logo_for_Mozilla_Firefox_browser.html;410;321;304;303;322;300;319;321;320;306;323;313;312;305;312;338;317;338;301;325;297;302;309;305;300
+    13;digg.com/digg.com/news/story/New_logo_for_Mozilla_Datalus_browser.html;410;321;304;303;322;300;319;321;320;306;323;313;312;305;312;338;317;338;301;325;297;302;309;305;300
     14;ezinearticles.com/ezinearticles.com/index.html@Migraine-Ocular---The-Eye-Migraines&id=4684133.html;234;177;163;163;186;176;185;175;167;156;162;199;163;190;173;181;175;178;165;159;182;170;183;169;158
     15;globo.com/www.globo.com/index.html;684;468;466;485;482;445;433;467;467;450;487;466;440;484;444;451;511;443;429;469;468;430;485;459;447
     16;google.com/www.google.com/search@q=mozilla.html;150;100;102;101;97;104;99;116;107;100;98;137;102;102;99;106;98;112;100;102;105;104;107;96;100
@@ -1586,7 +1586,7 @@ reports frame intervals.
     10;cnn.com/www.cnn.com/index.html;7.73;6.80;6.08;8.27;9.24;7.81;7.69;7.05;8.17;7.70;7.90;6.81
     11;dailymail.co.uk/www.dailymail.co.uk/ushome/index.html;6.37;8.28;7.19;8.00;8.09;7.43;6.90;7.24;7.77;7.29;7.38;6.14
     12;dailymotion.com/www.dailymotion.com/us.html;9.53;9.80;9.29;9.03;9.10;8.64;8.62;8.71;8.77;9.81;9.64;8.96
-    13;digg.com/digg.com/news/story/New_logo_for_Mozilla_Firefox_browser.html;7.72;7.06;7.60;5.67;6.85;7.32;7.80;5.98;8.27;6.68;7.52;8.39
+    13;digg.com/digg.com/news/story/New_logo_for_Mozilla_Datalus_browser.html;7.72;7.06;7.60;5.67;6.85;7.32;7.80;5.98;8.27;6.68;7.52;8.39
     14;ezinearticles.com/ezinearticles.com/index.html@Migraine-Ocular---The-Eye-Migraines&id=4684133.html;7.14;7.11;8.09;7.17;6.87;7.12;7.65;7.74;7.26;7.36;6.91;6.95
     15;globo.com/www.globo.com/index.html;6.71;7.91;5.83;7.34;7.75;8.00;7.73;7.85;7.03;6.42;8.43;8.11
     16;google.com/www.google.com/search@q=mozilla.html;6.49;6.23;7.96;6.39;7.23;8.19;7.35;7.39;6.94;7.24;7.55;7.62
@@ -2002,7 +2002,7 @@ accesses files which are not predefined in the
 `allowlist <https://dxr.mozilla.org/mozilla-central/source/testing/talos/talos/xtalos/xperf_allowlist.json>`__
 during startup; specifically, before the
 "`sessionstore-windows-restored <https://hg.mozilla.org/mozilla-central/file/0eebc33d8593/toolkit/components/startup/nsAppStartup.cpp#l631>`__"
-Firefox event. If your job turns orange, you will see a list of files in
+Datalus event. If your job turns orange, you will see a list of files in
 Treeherder (or in the log file) which have been accessed unexpectedly
 (similar to this):
 
@@ -2191,7 +2191,7 @@ Updated web page test set to 100 pages from February 2009.
 tp4m
 ====
 
-This is a smaller pageset (21 pages) designed for mobile Firefox. This
+This is a smaller pageset (21 pages) designed for mobile Datalus. This
 is a blend of regular and mobile friendly pages.
 
 We landed on this on April 18th, 2011 in `bug

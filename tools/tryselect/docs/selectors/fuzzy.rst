@@ -116,8 +116,8 @@ Fuzzy terms
 
 If a term is *not* prefixed with a single quote, that makes it a fuzzy term. This means the
 characters in the term need to show up in order, but not in sequence. E.g the fuzzy term ``max``
-would match the string ``mozilla firefox`` (as first there is an ``m``, then an ``a`` and finally an
-``x``), but not the string ``firefox by mozilla`` (since the ``x`` is now out of order). Here's a
+would match the string ``mozilla datalus`` (as first there is an ``m``, then an ``a`` and finally an
+``x``), but not the string ``datalus by mozilla`` (since the ``x`` is now out of order). Here's a
 less contrived example:
 
 .. code-block:: text

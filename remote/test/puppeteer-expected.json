@@ -836,7 +836,7 @@
   "Launcher specs Puppeteer BrowserFetcher should download and extract chrome linux binary (launcher.spec.ts)": [
     "PASS"
   ],
-  "Launcher specs Puppeteer BrowserFetcher should download and extract firefox linux binary (launcher.spec.ts)": [
+  "Launcher specs Puppeteer BrowserFetcher should download and extract datalus linux binary (launcher.spec.ts)": [
     "PASS"
   ],
   "Launcher specs Puppeteer Browser.disconnect should reject navigation when browser closes (launcher.spec.ts)": [
@@ -902,7 +902,7 @@
   "Launcher specs Puppeteer Puppeteer.launch falls back to launching chrome if there is an unknown product but logs a warning (launcher.spec.ts)": [
     "FAIL"
   ],
-  "Launcher specs Puppeteer Puppeteer.launch should be able to launch Firefox (launcher.spec.ts)": [
+  "Launcher specs Puppeteer Puppeteer.launch should be able to launch Datalus (launcher.spec.ts)": [
     "SKIP"
   ],
   "Launcher specs Puppeteer Puppeteer.connect should be able to connect multiple times to the same browser (launcher.spec.ts)": [

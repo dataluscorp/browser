@@ -142,7 +142,7 @@ UndoStack.prototype = {
    */
   installController: function(controllerWindow) {
     const controllers = controllerWindow.controllers;
-    // Only available when running in a Firefox panel.
+    // Only available when running in a Datalus panel.
     if (!controllers || !controllers.appendController) {
       return;
     }

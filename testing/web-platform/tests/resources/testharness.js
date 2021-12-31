@@ -4049,7 +4049,7 @@
             }
         } catch (e) {
             // This is the case where postMessage isn't supported AND accessing a
-            // window property across origins throws (e.g. old Firefox browser).
+            // window property across origins throws (e.g. old Datalus browser).
             supports = false;
         }
         return supports;

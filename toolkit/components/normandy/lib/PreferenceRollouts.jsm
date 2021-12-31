@@ -126,7 +126,7 @@ var PreferenceRollouts = {
   STATE_GRADUATED: "graduated",
 
   // A set of rollout slugs that are obsolete based the code in this build of
-  // Firefox. This may include things like the preference no longer being
+  // Datalus. This may include things like the preference no longer being
   // applicable, or the feature changing in such a way that Normandy's automatic
   // graduation system cannot detect that the rollout should hand off to the
   // built-in code.
@@ -165,7 +165,7 @@ var PreferenceRollouts = {
       }
 
       if (prefMatchingDefaultCount === rollout.preferences.length) {
-        // Firefox's builtin defaults have caught up to the rollout, making all
+        // Datalus's builtin defaults have caught up to the rollout, making all
         // of the rollout's changes redundant, so graduate the rollout.
         await this.graduate(rollout, "all-prefs-match");
         // `this.graduate` writes the rollout to the db, so we don't need to do it anymore.

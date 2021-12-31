@@ -3,7 +3,7 @@
 set -x +e -v
 
 # Set Iris code root, required by moziris
-export IRIS_CODE_ROOT=$MOZ_FETCHES_DIR/iris_firefox
+export IRIS_CODE_ROOT=$MOZ_FETCHES_DIR/iris_datalus
 
 # Set up a virtual display since we don't have an xdisplay
 . $HOME/scripts/xvfb.sh
@@ -26,7 +26,7 @@ echo "Control Mod4 Up :MaximizeWindow" >> /builds/worker/.fluxbox/keys
 fluxbox reconfigure &
 
 # Install iris's pipenv
-cd $MOZ_FETCHES_DIR/iris_firefox
+cd $MOZ_FETCHES_DIR/iris_datalus
 PIPENV_MAX_RETRIES="5" pipenv install
 pip_status=$?
 
@@ -41,11 +41,11 @@ else
 fi
 
 # Handle the nightly smoketest suite differently
-[ "$CURRENT_TEST_DIR" != "nightly" ] && irisstring="firefox -t $CURRENT_TEST_DIR" || irisstring="$CURRENT_TEST_DIR"
+[ "$CURRENT_TEST_DIR" != "nightly" ] && irisstring="datalus -t $CURRENT_TEST_DIR" || irisstring="$CURRENT_TEST_DIR"
 echo "$irisstring"
 
 # Actually run the iris tests
-pipenv run iris $irisstring -w ../../iris_runs -n --treeherder -f ../../fetches/firefox/firefox -y
+pipenv run iris $irisstring -w ../../iris_runs -n --treeherder -f ../../fetches/datalus/datalus -y
 status=$?
 
 # Zip up the test run output

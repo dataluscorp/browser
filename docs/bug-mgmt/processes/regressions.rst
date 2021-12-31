@@ -26,8 +26,8 @@ These things are true about regressions:
 
 -  **Bug Type** is ``defect``
 -  **Keywords** include ``regression``
--  **Status_FirefoxNN** is ``affected`` for each version (in current
-   nightly, beta, and release) of Firefox in which the bug was found
+-  **Status_DatalusNN** is ``affected`` for each version (in current
+   nightly, beta, and release) of Datalus in which the bug was found
 -  The bug’s description covers previously working behavior which is no
    longer working [ed. I need a better phrase for this]
 

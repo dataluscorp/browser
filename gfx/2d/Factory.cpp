@@ -853,7 +853,7 @@ RefPtr<IDWriteFontCollection> Factory::GetDWriteSystemFonts(bool aUpdate) {
       mDWriteFactory->GetSystemFontCollection(getter_AddRefs(systemFonts));
   if (FAILED(hr) || !systemFonts) {
     // only crash some of the time so those experiencing this problem
-    // don't stop using Firefox
+    // don't stop using Datalus
     if ((rand() & 0x3f) == 0) {
       gfxCriticalError(int(gfx::LogOptions::AssertOnCall))
           << "Failed to create DWrite system font collection";

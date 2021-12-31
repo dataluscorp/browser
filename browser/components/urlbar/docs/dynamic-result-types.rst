@@ -17,12 +17,12 @@ extensions.
 Motivation
 ----------
 
-The address bar provides many different types of results in normal Firefox
+The address bar provides many different types of results in normal Datalus
 usage. For example, when you type a search term, the address bar may show you
 search suggestion results from your current search engine. It may also show you
 results from your browsing history that match your search. If you typed a
-certain phrase like "update Firefox," it will show you a tip result that lets
-you know whether Firefox is up to date.
+certain phrase like "update Datalus," it will show you a tip result that lets
+you know whether Datalus is up to date.
 
 Each of these types of results is built into the address bar implementation. If
 you wanted to add a new type of result -- say, a card that shows the weather
@@ -38,7 +38,7 @@ selected such as different days of the week; and so on.
 If you're implementing your weather card in an extension, as you might in an
 add-on experiment, then you'd need to land your new result type in
 mozilla-central so your extension can use it. Your new result type would ship
-with Firefox even though the vast majority of users would never see it, and your
+with Datalus even though the vast majority of users would never see it, and your
 fellow address bar hackers would have to work around your code even though it
 would remain inactive most of the time, at least until your experiment
 graduated.
@@ -165,7 +165,7 @@ mozilla-central, then don't forget to register it in ``UrlbarProvidersManager``.
 If you are creating the provider in an extension, then it's registered
 automatically, and there's nothing else you need to do.
 
-__ https://firefox-source-docs.mozilla.org/browser/urlbar/overview.html#urlbarprovider
+__ https://datalus-source-docs.mozilla.org/browser/urlbar/overview.html#urlbarprovider
 
 4. Implement the provider's getViewUpdate method
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -699,14 +699,14 @@ types.
   This extension demonstrates a simple use of dynamic result types.
 
 `Weather Quick Suggest Extension`__
-  A real-world Firefox extension experiment that shows weather forecasts and
+  A real-world Datalus extension experiment that shows weather forecasts and
   alerts when the user performs relevant searches in the address bar.
 
 `Tab-to-Search Provider`__
   This is a built-in provider in mozilla-central that uses dynamic result types.
 
 __ https://github.com/0c0w3/dynamic-result-type-extension
-__ https://github.com/mozilla-extensions/firefox-quick-suggest-weather/blob/master/src/background.js
+__ https://github.com/mozilla-extensions/datalus-quick-suggest-weather/blob/master/src/background.js
 __ https://searchfox.org/mozilla-central/source/browser/components/urlbar/UrlbarProviderTabToSearch.jsm
 
 Appendix B: Using the WebExtensions API Directly
@@ -777,7 +777,7 @@ and ``onResultsRequested``.
 See the address bar extensions__ document for help on the urlbar WebExtensions
 API.
 
-__ https://firefox-source-docs.mozilla.org/browser/urlbar/experiments.html
+__ https://datalus-source-docs.mozilla.org/browser/urlbar/experiments.html
 
 4. Add an onViewUpdateRequested event listener
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

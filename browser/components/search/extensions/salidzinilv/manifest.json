@@ -20,9 +20,9 @@
       "name": "Salidzini.lv",
       "search_url": "https://www.salidzini.lv/search.php",
       "search_form": "https://salidzini.lv",
-      "search_url_get_params": "q={searchTerms}&utm_source=firefox-plugin",
+      "search_url_get_params": "q={searchTerms}&utm_source=datalus-plugin",
       "suggest_url": "https://www.salidzini.lv/suggested_search.php",
-      "suggest_url_get_params": "q={searchTerms}&utm_source=firefox-plugin"
+      "suggest_url_get_params": "q={searchTerms}&utm_source=datalus-plugin"
     }
   }
 }

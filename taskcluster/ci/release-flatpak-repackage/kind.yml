@@ -29,7 +29,7 @@ job-defaults:
         implementation: docker-worker
         os: linux
         max-run-time: 7200
-        docker-image: {in-tree: firefox-flatpak}
+        docker-image: {in-tree: datalus-flatpak}
         artifacts:
             - name: public/build
               type: directory
@@ -44,9 +44,9 @@ job-defaults:
             CANDIDATES_DIR:
                 by-release-level:
                     staging:
-                        https://net-mozaws-stage-delivery-firefox.s3.amazonaws.com/pub/{task[shipping-product]}/candidates
+                        https://net-mozaws-stage-delivery-datalus.s3.amazonaws.com/pub/{task[shipping-product]}/candidates
                     production:
-                        https://net-mozaws-prod-delivery-firefox.s3.amazonaws.com/pub/{task[shipping-product]}/candidates
+                        https://net-mozaws-prod-delivery-datalus.s3.amazonaws.com/pub/{task[shipping-product]}/candidates
             LC_ALL: C.UTF-8
             LANG: C.UTF-8
             L10N_CHANGESETS: "{config_params[head_repository]}/raw-file/{config_params[head_rev]}/browser/locales/l10n-changesets.json"
@@ -57,8 +57,8 @@ job-defaults:
         chain-of-trust: true
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         attributes:
             build_platform: linux64-shippable
             build_type: opt

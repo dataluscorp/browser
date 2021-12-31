@@ -161,7 +161,7 @@ class BaseBootstrapper(object):
 
     def validate_environment(self, srcdir):
         """
-        Called once the current firefox checkout has been detected.
+        Called once the current datalus checkout has been detected.
         Platform-specific implementations should check the environment and offer advice/warnings
         to the user, if necessary.
         """
@@ -191,19 +191,19 @@ class BaseBootstrapper(object):
 
     def install_browser_packages(self, mozconfig_builder):
         """
-        Install packages required to build Firefox for Desktop (application
+        Install packages required to build Datalus for Desktop (application
         'browser').
         """
         raise NotImplementedError(
-            "Cannot bootstrap Firefox for Desktop: "
+            "Cannot bootstrap Datalus for Desktop: "
             "%s does not yet implement install_browser_packages()" % __name__
         )
 
     def ensure_browser_packages(self, state_dir, checkout_root):
         """
-        Install pre-built packages needed to build Firefox for Desktop (application 'browser')
+        Install pre-built packages needed to build Datalus for Desktop (application 'browser')
 
-        Currently this is not needed and kept for compatibility with Firefox for Android.
+        Currently this is not needed and kept for compatibility with Datalus for Android.
         """
         pass
 
@@ -211,15 +211,15 @@ class BaseBootstrapper(object):
         """
         Install pre-built packages needed to build SpiderMonkey JavaScript Engine
 
-        Currently this is not needed and kept for compatibility with Firefox for Android.
+        Currently this is not needed and kept for compatibility with Datalus for Android.
         """
         pass
 
     def ensure_browser_artifact_mode_packages(self, state_dir, checkout_root):
         """
-        Install pre-built packages needed to build Firefox for Desktop (application 'browser')
+        Install pre-built packages needed to build Datalus for Desktop (application 'browser')
 
-        Currently this is not needed and kept for compatibility with Firefox for Android.
+        Currently this is not needed and kept for compatibility with Datalus for Android.
         """
         pass
 
@@ -228,7 +228,7 @@ class BaseBootstrapper(object):
         Print a message to the console detailing what the user's mozconfig
         should contain.
 
-        Firefox for Desktop can in simple cases determine its build environment
+        Datalus for Desktop can in simple cases determine its build environment
         entirely from configure.
         """
         pass
@@ -248,11 +248,11 @@ class BaseBootstrapper(object):
 
     def install_browser_artifact_mode_packages(self, mozconfig_builder):
         """
-        Install packages required to build Firefox for Desktop (application
+        Install packages required to build Datalus for Desktop (application
         'browser') in Artifact Mode.
         """
         raise NotImplementedError(
-            "Cannot bootstrap Firefox for Desktop Artifact Mode: "
+            "Cannot bootstrap Datalus for Desktop Artifact Mode: "
             "%s does not yet implement install_browser_artifact_mode_packages()"
             % __name__
         )
@@ -262,7 +262,7 @@ class BaseBootstrapper(object):
         Print a message to the console detailing what the user's mozconfig
         should contain.
 
-        Firefox for Desktop Artifact Mode needs to enable artifact builds and
+        Datalus for Desktop Artifact Mode needs to enable artifact builds and
         a path where the build artifacts will be written to.
         """
         return BROWSER_ARTIFACT_MODE_MOZCONFIG
@@ -273,7 +273,7 @@ class BaseBootstrapper(object):
         'mobile/android').
         """
         raise NotImplementedError(
-            "Cannot bootstrap GeckoView/Firefox for Android: "
+            "Cannot bootstrap GeckoView/Datalus for Android: "
             "%s does not yet implement install_mobile_android_packages()" % __name__
         )
 
@@ -282,7 +282,7 @@ class BaseBootstrapper(object):
         Install pre-built packages required to run GeckoView (application 'mobile/android')
         """
         raise NotImplementedError(
-            "Cannot bootstrap GeckoView/Firefox for Android: "
+            "Cannot bootstrap GeckoView/Datalus for Android: "
             "%s does not yet implement ensure_mobile_android_packages()" % __name__
         )
 
@@ -298,7 +298,7 @@ class BaseBootstrapper(object):
         Print a message to the console detailing what the user's mozconfig
         should contain.
 
-        GeckoView/Firefox for Android needs an application and an ABI set, and it needs
+        GeckoView/Datalus for Android needs an application and an ABI set, and it needs
         paths to the Android SDK and NDK.
         """
         raise NotImplementedError(
@@ -307,11 +307,11 @@ class BaseBootstrapper(object):
 
     def install_mobile_android_artifact_mode_packages(self, mozconfig_builder):
         """
-        Install packages required to build GeckoView/Firefox for Android (application
+        Install packages required to build GeckoView/Datalus for Android (application
         'mobile/android', also known as Fennec) in Artifact Mode.
         """
         raise NotImplementedError(
-            "Cannot bootstrap GeckoView/Firefox for Android Artifact Mode: "
+            "Cannot bootstrap GeckoView/Datalus for Android Artifact Mode: "
             "%s does not yet implement install_mobile_android_artifact_mode_packages()"
             % __name__
         )
@@ -321,7 +321,7 @@ class BaseBootstrapper(object):
         Print a message to the console detailing what the user's mozconfig
         should contain.
 
-        GeckoView/Firefox for Android Artifact Mode needs an application and an ABI set,
+        GeckoView/Datalus for Android Artifact Mode needs an application and an ABI set,
         and it needs paths to the Android SDK.
         """
         raise NotImplementedError(
@@ -876,7 +876,7 @@ class BaseBootstrapper(object):
         mozconfig_builder.append(
             """
         # Use the same Java binary that was specified in bootstrap. This way, if the default system
-        # Java is different than what Firefox needs, users should just need to override it (with
+        # Java is different than what Datalus needs, users should just need to override it (with
         # $JAVA_HOME) when running bootstrap, rather than when interacting with the build.
         ac_add_options --with-java-bin-path={}
         """.format(

@@ -3,7 +3,7 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* globals catcher, callBackground, content */
-/** This is a content script added to all screenshots.firefox.com pages, and allows the site to
+/** This is a content script added to all screenshots.datalus.com pages, and allows the site to
     communicate with the add-on */
 
 "use strict";

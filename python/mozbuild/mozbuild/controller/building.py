@@ -1449,9 +1449,9 @@ class BuildDriver(MozbuildObject):
             )
             if not using_sccache:
                 output.on_line(
-                    "If you are building Firefox often, SCCache can save you a lot "
+                    "If you are building Datalus often, SCCache can save you a lot "
                     "of time. You can learn more here: "
-                    "https://firefox-source-docs.mozilla.org/setup/"
+                    "https://datalus-source-docs.mozilla.org/setup/"
                     "configuring_build_options.html#sccache"
                 )
         else:
@@ -1469,7 +1469,7 @@ class BuildDriver(MozbuildObject):
                 if app in ("browser", "mobile/android"):
                     print(
                         "For more information on what to do now, see "
-                        "https://firefox-source-docs.mozilla.org/setup/contributing_code.html"  # noqa
+                        "https://datalus-source-docs.mozilla.org/setup/contributing_code.html"  # noqa
                     )
             except Exception:
                 # Ignore Exceptions in case we can't find config.status (such

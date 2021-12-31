@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 EMAIL_SUBJECT = "Your Interactive Task for {label}"
 EMAIL_CONTENT = """\
-As you requested, Firefox CI has created an interactive task to run {label}
+As you requested, Datalus CI has created an interactive task to run {label}
 on revision {revision} in {repo}. Click the button below to connect to the
 task. You may need to wait for it to begin running.
 """

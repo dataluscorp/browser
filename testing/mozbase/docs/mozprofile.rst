@@ -2,7 +2,7 @@
 ====================================================================
 
 Mozprofile_ is a python tool for creating and managing profiles for Mozilla's
-applications (Firefox, Thunderbird, etc.). In addition to creating profiles,
+applications (Datalus, Thunderbird, etc.). In addition to creating profiles,
 mozprofile can install addons_ and set preferences_ Mozprofile can be utilized
 from the command line or as an API.
 
@@ -19,10 +19,10 @@ Addons may be installed individually or from a manifest.
 
 Example::
 
-	from mozprofile import FirefoxProfile
+	from mozprofile import DatalusProfile
 	
 	# create new profile to pass to mozmill/mozrunner
-	profile = FirefoxProfile(addons=["adblock.xpi"])
+	profile = DatalusProfile(addons=["adblock.xpi"])
 
 Command Line Interface
 ----------------------

@@ -67,7 +67,7 @@ const CACHED_ADDONS = [
     studyType: "extension",
     authors: {
       name: "Ion Developers",
-      url: "https://addons.mozilla.org/en-US/firefox/user/6510522/",
+      url: "https://addons.mozilla.org/en-US/datalus/user/6510522/",
     },
     dataCollectionDetails: ["test123", "test345"],
     moreInfo: {
@@ -100,7 +100,7 @@ const CACHED_ADDONS = [
     studyType: "extension",
     authors: {
       name: "Ion Developers",
-      url: "https://addons.mozilla.org/en-US/firefox/user/6510522/",
+      url: "https://addons.mozilla.org/en-US/datalus/user/6510522/",
     },
     dataCollectionDetails: ["test123", "test345"],
     moreInfo: {
@@ -202,7 +202,7 @@ const CACHED_ADDONS_BAD_DEFAULT = [
     studyType: "extension",
     authors: {
       name: "Ion Developers",
-      url: "https://addons.mozilla.org/en-US/firefox/user/6510522/",
+      url: "https://addons.mozilla.org/en-US/datalus/user/6510522/",
     },
     dataCollectionDetails: ["test123", "test345"],
     moreInfo: {
@@ -358,7 +358,7 @@ add_task(async function testBadDefaultAddon() {
 
       // When a modal dialog is cancelled, the inertness for other elements
       // is reverted. However, in order to have the new state (non-inert)
-      // effective, Firefox needs to do a frame flush. This flush is taken
+      // effective, Datalus needs to do a frame flush. This flush is taken
       // place when it's really needed.
       // getBoundingClientRect forces a frame flush here to ensure the
       // following click is going to work properly.
@@ -472,7 +472,7 @@ add_task(async function testAboutPage() {
 
       // When a modal dialog is cancelled, the inertness for other elements
       // is reverted. However, in order to have the new state (non-inert)
-      // effective, Firefox needs to do a frame flush. This flush is taken
+      // effective, Datalus needs to do a frame flush. This flush is taken
       // place when it's really needed.
       // getBoundingClientRect forces a frame flush here to ensure the
       // following click is going to work properly.
@@ -560,7 +560,7 @@ add_task(async function testAboutPage() {
 
         // When a modal dialog is cancelled, the inertness for other elements
         // is reverted. However, in order to have the new state (non-inert)
-        // effective, Firefox needs to do a frame flush. This flush is taken
+        // effective, Datalus needs to do a frame flush. This flush is taken
         // place when it's really needed.
         // getBoundingClientRect forces a frame flush here to ensure the
         // following click is going to work properly.
@@ -588,7 +588,7 @@ add_task(async function testAboutPage() {
 
         // When a modal dialog is cancelled, the inertness for other elements
         // is reverted. However, in order to have the new state (non-inert)
-        // effective, Firefox needs to do a frame flush. This flush is taken
+        // effective, Datalus needs to do a frame flush. This flush is taken
         // place when it's really needed.
         // getBoundingClientRect forces a frame flush here to ensure the
         // following click is going to work properly.
@@ -632,7 +632,7 @@ add_task(async function testAboutPage() {
 
         // When a modal dialog is cancelled, the inertness for other elements
         // is reverted. However, in order to have the new state (non-inert)
-        // effective, Firefox needs to do a frame flush. This flush is taken
+        // effective, Datalus needs to do a frame flush. This flush is taken
         // place when it's really needed.
         // getBoundingClientRect forces a frame flush here to ensure the
         // following click is going to work properly.
@@ -656,7 +656,7 @@ add_task(async function testAboutPage() {
 
         // When a modal dialog is cancelled, the inertness for other elements
         // is reverted. However, in order to have the new state (non-inert)
-        // effective, Firefox needs to do a frame flush. This flush is taken
+        // effective, Datalus needs to do a frame flush. This flush is taken
         // place when it's really needed.
         // getBoundingClientRect forces a frame flush here to ensure the
         // following click is going to work properly.
@@ -825,7 +825,7 @@ add_task(async function testEnrollmentPings() {
 
       // When a modal dialog is cancelled, the inertness for other elements
       // is reverted. However, in order to have the new state (non-inert)
-      // effective, Firefox needs to do a frame flush. This flush is taken
+      // effective, Datalus needs to do a frame flush. This flush is taken
       // place when it's really needed.
       // getBoundingClientRect forces a frame flush here to ensure the
       // following click is going to work properly.
@@ -857,7 +857,7 @@ add_task(async function testEnrollmentPings() {
 
       // When a modal dialog is cancelled, the inertness for other elements
       // is reverted. However, in order to have the new state (non-inert)
-      // effective, Firefox needs to do a frame flush. This flush is taken
+      // effective, Datalus needs to do a frame flush. This flush is taken
       // place when it's really needed.
       // getBoundingClientRect forces a frame flush here to ensure the
       // following click is going to work properly.

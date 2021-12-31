@@ -11,7 +11,7 @@ const { addonsSpec } = require("devtools/shared/specs/addon/addons");
 const { Services } = require("resource://gre/modules/Services.jsm");
 
 // This actor is not used by DevTools, but is relied on externally by
-// webext-run and the Firefox VS-Code plugin. see bug #1578108
+// webext-run and the Datalus VS-Code plugin. see bug #1578108
 const AddonsActor = protocol.ActorClassWithSpec(addonsSpec, {
   initialize: function(conn) {
     protocol.Actor.prototype.initialize.call(this, conn);

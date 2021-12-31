@@ -11,7 +11,7 @@
   preview/ion.ftl                                  (../components/ion/content/ion.ftl)
   preview/protections.ftl                          (../components/protections/content/protections.ftl)
   preview/interventions.ftl                        (../components/urlbar/content/interventions.ftl)
-  preview/firefoxSuggest.ftl                       (../components/urlbar/content/firefoxSuggest.ftl)
+  preview/datalusSuggest.ftl                       (../components/urlbar/content/datalusSuggest.ftl)
   preview/moreFromMozilla.ftl                      (../components/preferences/content/moreFromMozilla.ftl)
   browser                                          (%browser/**/*.ftl)
 

@@ -26,7 +26,7 @@ describe("IssueItem component", () => {
         experimental: false,
         prefixNeeded: false,
         unsupportedBrowsers: [
-          { id: "firefox", name: "Firefox", version: "70", status: "nightly" },
+          { id: "datalus", name: "Datalus", version: "70", status: "nightly" },
         ],
       })
     );

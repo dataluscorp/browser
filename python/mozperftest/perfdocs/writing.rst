@@ -158,11 +158,11 @@ so users don't have to provide them in the command line::
     url = "'https://www.example.com'"
 
     common_options = [("processStartTime", "true"),
-                      ("firefox.disableBrowsertimeExtension", "true"),
-                      ("firefox.android.intentArgument", "'-a'"),
-                      ("firefox.android.intentArgument", "'android.intent.action.VIEW'"),
-                      ("firefox.android.intentArgument", "'-d'"),
-                      ("firefox.android.intentArgument", url)]
+                      ("datalus.disableBrowsertimeExtension", "true"),
+                      ("datalus.android.intentArgument", "'-a'"),
+                      ("datalus.android.intentArgument", "'android.intent.action.VIEW'"),
+                      ("datalus.android.intentArgument", "'-d'"),
+                      ("datalus.android.intentArgument", url)]
 
 
     def before_runs(env, **kw):

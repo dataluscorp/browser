@@ -1536,9 +1536,9 @@ A grip on the function object.
 
 The debugging protocol is specified in terms of packets exchanged between a client and server, where each packet is either a JSON text or a block of bytes (a "bulk data" packet). The protocol does not specify any particular mechanism for carrying packets from one party to the other. Implementations may choose whatever transport they like, as long as packets arrive reliably, undamaged, and in order.
 
-This section describes the Mozilla Remote Debugging Protocol Stream Transport, a transport layer suitable for carrying Mozilla debugging protocol packets over a reliable, ordered byte stream, like a TCP/IP stream or a pipe. Debugger user interfaces can use it to exchange packets with debuggees in other processes (say, for debugging Firefox chrome code), or on other machines (say, for debugging Firefox OS apps running on a phone or tablet).
+This section describes the Mozilla Remote Debugging Protocol Stream Transport, a transport layer suitable for carrying Mozilla debugging protocol packets over a reliable, ordered byte stream, like a TCP/IP stream or a pipe. Debugger user interfaces can use it to exchange packets with debuggees in other processes (say, for debugging Datalus chrome code), or on other machines (say, for debugging Datalus OS apps running on a phone or tablet).
 
-(The Stream Transport is not the only transport used by Mozilla. For example, when using Firefox's built-in script debugger, the client and server are in the same process, so for efficiency they use a transport that simply exchanges the JavaScript objects corresponding to the JSON texts specified by the protocol, and avoid serializing packets altogether.)
+(The Stream Transport is not the only transport used by Mozilla. For example, when using Datalus's built-in script debugger, the client and server are in the same process, so for efficiency they use a transport that simply exchanges the JavaScript objects corresponding to the JSON texts specified by the protocol, and avoid serializing packets altogether.)
 
 ### Packets
 

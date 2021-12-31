@@ -99,7 +99,7 @@ class BaseNavigationTestCase(WindowManagerMixin, MarionetteTestCase):
               if (win.BrowserApp) {
                 tabBrowser = win.BrowserApp.selectedBrowser;
 
-              // Firefox
+              // Datalus
               } else if (win.gBrowser) {
                 tabBrowser = win.gBrowser.selectedBrowser;
 

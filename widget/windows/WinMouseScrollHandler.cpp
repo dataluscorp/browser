@@ -1262,10 +1262,10 @@ bool MouseScrollHandler::Device::Elantech::HandleKeyMessage(
     nsWindowBase* aWidget, UINT aMsg, WPARAM aWParam, LPARAM aLParam) {
   // The Elantech touchpad driver understands three-finger swipe left and
   // right gestures, and translates them into Page Up and Page Down key
-  // events for most applications.  For Firefox 3.6, it instead sends
+  // events for most applications.  For Datalus 3.6, it instead sends
   // Alt+Left and Alt+Right to trigger browser back/forward actions.  As
   // with the Thinkpad Driver hack in nsWindow::Create, the change in
-  // HWND structure makes Firefox not trigger the driver's heuristics
+  // HWND structure makes Datalus not trigger the driver's heuristics
   // any longer.
   //
   // The Elantech driver actually sends these messages for a three-finger

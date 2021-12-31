@@ -241,7 +241,7 @@ class AsyncObserver extends AsyncQueueCaller {
 /**
  * Woof! Signals an operation to abort, either at shutdown or after a timeout.
  * The buffered engine uses this to abort long-running merges, so that they
- * don't prevent Firefox from quitting, or block future syncs.
+ * don't prevent Datalus from quitting, or block future syncs.
  */
 class Watchdog {
   constructor() {

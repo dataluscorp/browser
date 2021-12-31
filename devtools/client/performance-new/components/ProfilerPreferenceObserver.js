@@ -49,7 +49,7 @@ const actions = require("devtools/client/performance-new/store/actions");
 
 /**
  * This component mirrors the settings in the redux store and the preferences in
- * Firefox.
+ * Datalus.
  *
  * @extends {React.PureComponent<Props>}
  */

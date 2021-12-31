@@ -11,9 +11,9 @@ const { ExperimentAPI, NimbusFeatures } = ChromeUtils.import(
 );
 
 const SINGLE_FEATURE_RECIPE = {
-  appId: "firefox-desktop",
-  appName: "firefox_desktop",
-  application: "firefox-desktop",
+  appId: "datalus-desktop",
+  appName: "datalus_desktop",
+  application: "datalus-desktop",
   arguments: {},
   branches: [
     {
@@ -59,7 +59,7 @@ const SINGLE_FEATURE_RECIPE = {
   channel: "release",
   endDate: null,
   featureIds: ["urlbar"],
-  id: "firefox-suggest-history-vs-offline",
+  id: "datalus-suggest-history-vs-offline",
   isEnrollmentPaused: false,
   outcomes: [],
   probeSets: [],
@@ -67,11 +67,11 @@ const SINGLE_FEATURE_RECIPE = {
   proposedEnrollment: 7,
   referenceBranch: "control",
   schemaVersion: "1.5.0",
-  slug: "firefox-suggest-history-vs-offline",
+  slug: "datalus-suggest-history-vs-offline",
   startDate: "2021-07-21",
   targeting: "true",
   userFacingDescription: "Smarter suggestions in the AwesomeBar",
-  userFacingName: "Firefox Suggest - History vs Offline",
+  userFacingName: "Datalus Suggest - History vs Offline",
 };
 
 const SYNC_DATA_PREF_BRANCH = "nimbus.syncdatastore.";
@@ -116,7 +116,7 @@ add_task(async function test_TODO() {
   Assert.ok(stub.calledOnce, "Should be called once by urlbar");
   Assert.equal(
     stub.firstCall.args[0].experimentSlug,
-    "firefox-suggest-history-vs-offline",
+    "datalus-suggest-history-vs-offline",
     "Should have expected slug"
   );
   Assert.equal(

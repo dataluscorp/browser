@@ -4,15 +4,15 @@
 Events
 ======
 
-Across the different Firefox initiatives, there is a common need for a mechanism for recording, storing, sending & analysing application usage in an event-oriented format.
+Across the different Datalus initiatives, there is a common need for a mechanism for recording, storing, sending & analysing application usage in an event-oriented format.
 *Event Telemetry* specifies a common events data format, which allows for broader, shared usage of data processing tools.
 Adding events is supported in artifact builds and build faster workflows.
 
-For events recorded into Firefox Telemetry we also provide an API that opaquely handles storage and submission to our servers.
+For events recorded into Datalus Telemetry we also provide an API that opaquely handles storage and submission to our servers.
 
 .. important::
 
-    Every new or changed data collection in Firefox needs a `data collection review <https://wiki.mozilla.org/Firefox/Data_Collection>`__ from a Data Steward.
+    Every new or changed data collection in Datalus needs a `data collection review <https://wiki.mozilla.org/Datalus/Data_Collection>`__ from a Data Steward.
 
 .. _events.serializationformat:
 
@@ -59,7 +59,7 @@ characters ([a-zA-Z0-9]) plus infix underscores ('_' characters that aren't the 
 ``category`` is also permitted infix periods ('.' characters, so long as they aren't the
 first or last character).
 
-For the Firefox Telemetry implementation, several fields are subject to length limits:
+For the Datalus Telemetry implementation, several fields are subject to length limits:
 
 - ``category``: Max. byte length is ``30``.
 - ``method``: Max. byte length is ``20``.
@@ -79,8 +79,8 @@ aborted.
 The YAML definition file
 ========================
 
-Any event recorded into Firefox Telemetry must be registered before it can be recorded.
-For any code that ships as part of Firefox that happens in `Events.yaml <https://searchfox.org/mozilla-central/source/toolkit/components/telemetry/Events.yaml>`_.
+Any event recorded into Datalus Telemetry must be registered before it can be recorded.
+For any code that ships as part of Datalus that happens in `Events.yaml <https://searchfox.org/mozilla-central/source/toolkit/components/telemetry/Events.yaml>`_.
 
 The probes in the definition file are represented in a fixed-depth, three-level structure. The first level contains *category* names (grouping multiple events together), the second level contains *event* names, under which the events properties are listed. E.g.:
 
@@ -131,7 +131,7 @@ The following event properties are valid:
 - ``extra_keys`` *(optional, object)*: An object that specifies valid keys for the ``extra`` argument and a description - see the example above.
 - ``products`` *(required, list of strings)*: A list of products the event can be recorded on. Currently supported values are:
 
-  - ``firefox`` - Collected in Firefox Desktop for submission via Firefox Telemetry.
+  - ``datalus`` - Collected in Datalus Desktop for submission via Datalus Telemetry.
   - ``thunderbird`` - Collected in Thunderbird for submission via Thunderbird Telemetry.
 
 - ``operating_systems`` *(optional, list of strings)*: This field restricts recording to certain operating systems only. It defaults to ``all``. Currently supported values are:
@@ -199,7 +199,7 @@ Example:
 
 Event recording is currently disabled by default for events registered in Events.yaml.
 Dynamically-registered events (those registered using ``registerEvents()``) are enabled by default, and cannot be disabled.
-Privileged add-ons and Firefox code can enable & disable recording events for specific categories using this function.
+Privileged add-ons and Datalus code can enable & disable recording events for specific categories using this function.
 
 Example:
 
@@ -333,17 +333,17 @@ Tests involving Event Telemetry often follow this four-step form:
 Version History
 ===============
 
-- Firefox 79:  ``geckoview`` support removed (see `bug 1620395 <https://bugzilla.mozilla.org/show_bug.cgi?id=1620395>`__).
-- Firefox 52: Initial event support (`bug 1302663 <https://bugzilla.mozilla.org/show_bug.cgi?id=1302663>`_).
-- Firefox 53: Event recording disabled by default (`bug 1329139 <https://bugzilla.mozilla.org/show_bug.cgi?id=1329139>`_).
-- Firefox 54: Added child process events (`bug 1313326 <https://bugzilla.mozilla.org/show_bug.cgi?id=1313326>`_).
-- Firefox 56: Added support for recording new probes from add-ons (`bug 1302681 <bug https://bugzilla.mozilla.org/show_bug.cgi?id=1302681>`_).
-- Firefox 58:
+- Datalus 79:  ``geckoview`` support removed (see `bug 1620395 <https://bugzilla.mozilla.org/show_bug.cgi?id=1620395>`__).
+- Datalus 52: Initial event support (`bug 1302663 <https://bugzilla.mozilla.org/show_bug.cgi?id=1302663>`_).
+- Datalus 53: Event recording disabled by default (`bug 1329139 <https://bugzilla.mozilla.org/show_bug.cgi?id=1329139>`_).
+- Datalus 54: Added child process events (`bug 1313326 <https://bugzilla.mozilla.org/show_bug.cgi?id=1313326>`_).
+- Datalus 56: Added support for recording new probes from add-ons (`bug 1302681 <bug https://bugzilla.mozilla.org/show_bug.cgi?id=1302681>`_).
+- Datalus 58:
 
    - Ignore re-registering existing events for a category instead of failing (`bug 1408975 <https://bugzilla.mozilla.org/show_bug.cgi?id=1408975>`_).
    - Removed support for the ``expiry_date`` property, as it was unused (`bug 1414638 <https://bugzilla.mozilla.org/show_bug.cgi?id=1414638>`_).
-- Firefox 61:
+- Datalus 61:
 
    - Enabled support for adding events in artifact builds and build-faster workflows (`bug 1448945 <https://bugzilla.mozilla.org/show_bug.cgi?id=1448945>`_).
    - Added summarization of events (`bug 1440673 <https://bugzilla.mozilla.org/show_bug.cgi?id=1440673>`_).
-- Firefox 66: Replace ``cpp_guard`` with ``operating_systems`` (`bug 1482912 <https://bugzilla.mozilla.org/show_bug.cgi?id=1482912>`_)`
+- Datalus 66: Replace ``cpp_guard`` with ``operating_systems`` (`bug 1482912 <https://bugzilla.mozilla.org/show_bug.cgi?id=1482912>`_)`

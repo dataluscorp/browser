@@ -200,9 +200,9 @@ jobs:
     periodic-updates:
         symbol: I(file)
         parent: ubuntu1804-base
-    firefox-snap:
+    datalus-snap:
         symbol: I(snap)
-    firefox-flatpak:
+    datalus-flatpak:
         symbol: I(flatpak)
     webrender:
         symbol: I(webrender)

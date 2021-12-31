@@ -38,7 +38,7 @@ var EXPORTED_SYMBOLS = ["PreferenceExperimentAction"];
 /**
  * Enrolls a user in a preference experiment, in which we assign the
  * user to an experiment branch and modify a preference temporarily to
- * measure how it affects Firefox via Telemetry.
+ * measure how it affects Datalus via Telemetry.
  */
 class PreferenceExperimentAction extends BaseStudyAction {
   get schema() {

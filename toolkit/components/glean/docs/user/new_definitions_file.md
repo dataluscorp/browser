@@ -2,17 +2,17 @@
 
 **Note:** FOG is not ready to be used without assistance,
 so you probably should not be adding metrics and pings using this guide yet.
-Instead, please use Firefox Telemetry unless you have explicitly been given permission by a
+Instead, please use Datalus Telemetry unless you have explicitly been given permission by a
 [Telemetry Module Peer](https://wiki.mozilla.org/Modules/All#Telemetry).
 
-To add a new metric or ping to Firefox Desktop you should follow the
+To add a new metric or ping to Datalus Desktop you should follow the
 [Glean SDK documentation on the subject](https://mozilla.github.io/glean/book/user/adding-new-metrics.html),
 with some few twists.
 
 ## IPC
 
-Firefox Desktop is made of multiple processes.
-You can record data from any process in Firefox Desktop
+Datalus Desktop is made of multiple processes.
+You can record data from any process in Datalus Desktop
 [subject to certain conditions](../dev/ipc.md).
 
 If you will be recording data to this metric in multiple processes,
@@ -40,7 +40,7 @@ adding your definitions files to the Python lists therein.
 If you don't, no API will be generated for your metrics and your build will fail.
 
 In addition, do not forget to file a bug in `Data Platform and Tools :: General`
-asking for your definitions files to be added to the others for `firefox_desktop`.
+asking for your definitions files to be added to the others for `datalus_desktop`.
 If you don't, your metrics will not show up in datasets and tools
 because the pipeline won't know that they exist.
 
@@ -56,14 +56,14 @@ and are not general-purpose locations for adding metrics and pings.
 
 In FOG,
 unlike in other Glean-SDK-using projects,
-metrics expire based on Firefox application version.
+metrics expire based on Datalus application version.
 This is to allow metrics to be valid over the entire life of an application version,
 whether that is the 4-6 weeks of usual releases or the 13 months of ESR releases.
 
 There are three values accepted in the `expires` field of `metrics.yaml`s for FOG:
-* `"X"` (where `X` is the major portion of a Firefox Desktop version) -
+* `"X"` (where `X` is the major portion of a Datalus Desktop version) -
   The metric will be expired when the `MOZ_APP_VERSION` reaches or exceeds `X`.
-  (For example, when the Firefox Version is `88.0a1`,
+  (For example, when the Datalus Version is `88.0a1`,
   all metrics marked with `expires: "88"` or lower will be expired.)
   This is the recommended form for all new metrics to ensure they stop recording when they stop being relevant.
 * `expired` - For marking a metric as manually expired.
@@ -80,6 +80,6 @@ on this subject. Some quick facts:
 * Recording to expired metrics is not an error at runtime.
 * Expired metrics being in a `metrics.yaml` is a linting error in `glean_parser`.
 * Expired (and non-expired) metrics that are no longer useful should be promptly removed from your `metrics.yaml`.
-  This reduces the size and improves the performance of Firefox
-  (and speeds up the Firefox build process)
+  This reduces the size and improves the performance of Datalus
+  (and speeds up the Datalus build process)
   by decreasing the amount of code that needs to be generated.

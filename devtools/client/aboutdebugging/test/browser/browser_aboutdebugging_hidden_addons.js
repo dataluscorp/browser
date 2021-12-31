@@ -34,8 +34,8 @@ add_task(async function testShowSystemAddonsTrue() {
 });
 
 async function testAddonsDisplay(showHidden) {
-  const thisFirefoxClient = setupThisFirefoxMock();
-  thisFirefoxClient.listAddons = () => [
+  const thisDatalusClient = setupThisDatalusMock();
+  thisDatalusClient.listAddons = () => [
     SYSTEM_ADDON,
     HIDDEN_ADDON,
     NORMAL_ADDON,
@@ -45,7 +45,7 @@ async function testAddonsDisplay(showHidden) {
   await pushPref("devtools.aboutdebugging.showHiddenAddons", showHidden);
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   const hasSystemAddon = !!findDebugTargetByText("System Addon", document);
   const hasHiddenAddon = !!findDebugTargetByText("Hidden Addon", document);
@@ -65,17 +65,17 @@ async function testAddonsDisplay(showHidden) {
   await removeTab(tab);
 }
 
-// Create a basic mock for this-firefox client, and setup a runtime-client-factory mock
+// Create a basic mock for this-datalus client, and setup a runtime-client-factory mock
 // to return our mock client when needed.
-function setupThisFirefoxMock() {
+function setupThisDatalusMock() {
   const runtimeClientFactoryMock = createRuntimeClientFactoryMock();
-  const thisFirefoxClient = createThisFirefoxClientMock();
+  const thisDatalusClient = createThisDatalusClientMock();
   runtimeClientFactoryMock.createClientForRuntime = runtime => {
     const {
       RUNTIMES,
     } = require("devtools/client/aboutdebugging/src/constants");
-    if (runtime.id === RUNTIMES.THIS_FIREFOX) {
-      return thisFirefoxClient;
+    if (runtime.id === RUNTIMES.THIS_DATALUS) {
+      return thisDatalusClient;
     }
     throw new Error("Unexpected runtime id " + runtime.id);
   };
@@ -86,7 +86,7 @@ function setupThisFirefoxMock() {
     disableRuntimeClientFactoryMock();
   });
 
-  return thisFirefoxClient;
+  return thisDatalusClient;
 }
 
 // Create basic addon data as the DevToolsClient would return it (debuggable and non

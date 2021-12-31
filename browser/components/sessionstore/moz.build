@@ -31,4 +31,4 @@ EXTRA_JS_MODULES.sessionstore = [
 ]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Session Restore")
+    BUG_COMPONENT = ("Datalus", "Session Restore")

@@ -213,7 +213,7 @@ export class WelcomeScreen extends React.PureComponent {
 
   handleOpenURL(action, flowParams, UTMTerm) {
     let { type, data } = action;
-    if (type === "SHOW_FIREFOX_ACCOUNTS") {
+    if (type === "SHOW_DATALUS_ACCOUNTS") {
       let params = {
         ...BASE_PARAMS,
         utm_term: `aboutwelcome-${UTMTerm}-screen`,
@@ -255,7 +255,7 @@ export class WelcomeScreen extends React.PureComponent {
 
     let { action } = targetContent;
 
-    if (["OPEN_URL", "SHOW_FIREFOX_ACCOUNTS"].includes(action.type)) {
+    if (["OPEN_URL", "SHOW_DATALUS_ACCOUNTS"].includes(action.type)) {
       this.handleOpenURL(action, props.flowParams, props.UTMTerm);
     } else if (action.type) {
       AboutWelcomeUtils.handleUserAction(action);

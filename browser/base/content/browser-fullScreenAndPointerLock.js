@@ -266,7 +266,7 @@ var FullScreen = {
       "permissions.fullscreen.allowed"
     );
 
-    // Called when the Firefox window go into fullscreen.
+    // Called when the Datalus window go into fullscreen.
     addEventListener("fullscreen", this, true);
 
     // Called only when fullscreen is requested

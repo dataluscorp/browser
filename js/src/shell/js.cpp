@@ -10883,8 +10883,8 @@ static bool InstanceClassHasProtoAtDepth(const JSClass* clasp, uint32_t protoID,
 
 static bool ShellBuildId(JS::BuildIdCharVector* buildId) {
   // The browser embeds the date into the buildid and the buildid is embedded
-  // in the binary, so every 'make' necessarily builds a new firefox binary.
-  // Fortunately, the actual firefox executable is tiny -- all the code is in
+  // in the binary, so every 'make' necessarily builds a new datalus binary.
+  // Fortunately, the actual datalus executable is tiny -- all the code is in
   // libxul.so and other shared modules -- so this isn't a big deal. Not so
   // for the statically-linked JS shell. To avoid recompiling js.cpp and
   // re-linking 'js' on every 'make', we use a constant buildid and rely on

@@ -4,7 +4,7 @@
  */
 
 /**
- * This tests the multiple update downloads per Firefox session feature.
+ * This tests the multiple update downloads per Datalus session feature.
  *
  * This test does some unusual things, compared to the other files in this
  * directory. We want to start the updates with aus.checkForBackgroundUpdates()

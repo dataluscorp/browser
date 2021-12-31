@@ -240,7 +240,7 @@ Task group: [{task_group_id}]({root_url}/tasks/groups/{task_group_id})
     subject_prefix = ""
     if product in {"fennec"}:
         subject_prefix = "[mobile] "
-    if product in {"firefox", "devedition"}:
+    if product in {"datalus", "devedition"}:
         subject_prefix = "[desktop] "
 
     subject = "{} Build of {} {} build {}".format(

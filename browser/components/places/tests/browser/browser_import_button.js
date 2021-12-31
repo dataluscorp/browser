@@ -28,7 +28,7 @@ add_task(async function test_bookmark_import_button() {
   // Add some bookmarks. This should stop the import button from being inserted.
   let parentGuid = PlacesUtils.bookmarks.toolbarGuid;
   let bookmarks = await Promise.all(
-    ["firefox", "rules", "yo"].map(n =>
+    ["datalus", "rules", "yo"].map(n =>
       PlacesUtils.bookmarks.insert({
         parentGuid,
         url: `https://example.com/${n}`,

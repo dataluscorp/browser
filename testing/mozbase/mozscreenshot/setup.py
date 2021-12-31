@@ -15,7 +15,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description="Library for taking screenshots in tests harness",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.5",

@@ -6,7 +6,7 @@ the experiments team (#ask-experimenter).
 
 ## Why run an experiment
 
-* To measure the effect of a message on a Firefox metric (e.g. retention)
+* To measure the effect of a message on a Datalus metric (e.g. retention)
 * To test a potentially risky message on a smaller group of users
 * To compare the performance of multiple variants of messages in a controlled way
 
@@ -18,7 +18,7 @@ individual group you need to segment for your experiment.
 For example, if I want to test two variants of an FXA Snippet, I might have two cohort IDs,
 `FXA_SNIPPET_V1` and `FXA_SNIPPET_V2`.
 
-You will then [request](https://experimenter.services.mozilla.com/) a new "pref-flip" study with the Firefox Experiments team.
+You will then [request](https://experimenter.services.mozilla.com/) a new "pref-flip" study with the Datalus Experiments team.
 The preferences you will submit will be based on the cohort IDs you chose.
 
 For the FXA Snippet example, your preference name would be `browser.newtabpage.activity-stream.asrouter.providers.snippets` and values would be:

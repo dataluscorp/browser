@@ -540,7 +540,7 @@ class AbuseReport extends HTMLElement {
 
     // If the focus is exiting the panel while navigating
     // backward, focus the previous element sibling on the
-    // Firefox UI.
+    // Datalus UI.
     if (backward && isFirstFocusableElement(evt.target)) {
       evt.preventDefault();
       evt.stopImmediatePropagation();

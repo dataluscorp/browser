@@ -13,7 +13,7 @@ job-defaults:
 win32/debug:
     description: "Win32 Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-debug
     attributes:
         enable-build-signing: true
@@ -35,7 +35,7 @@ win32/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win32/debug.py
         mozconfig-variant: debug
@@ -68,7 +68,7 @@ win32/debug:
 win32/opt:
     description: "Win32 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-opt
     attributes:
         enable-build-signing: true
@@ -90,7 +90,7 @@ win32/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win32
@@ -123,7 +123,7 @@ win32/opt:
 win64/debug:
     description: "Win64 Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-debug
     attributes:
         enable-build-signing: true
@@ -145,7 +145,7 @@ win64/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/debug.py
         mozconfig-variant: debug
@@ -178,7 +178,7 @@ win64/debug:
 win64-hybrid/plain:
     description: "Win64 Hybrid Plain"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-hybrid-plain
     treeherder:
         platform: windows2012-64/debug
@@ -197,7 +197,7 @@ win64-hybrid/plain:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         mozconfig-variant: hybrid
         extra-config:
@@ -230,7 +230,7 @@ win64-hybrid/plain:
 win64-fuzzing/debug:
     description: "Win64 Fuzzing Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-fuzzing-debug
     attributes:
         enable-full-crashsymbols: true
@@ -251,7 +251,7 @@ win64-fuzzing/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/debug.py
         extra-config:
@@ -287,7 +287,7 @@ win64-fuzzing/debug:
 win64-plain/debug:
     description: "Win64 Debug Plain"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-plain-debug
     treeherder:
         platform: windows2012-64/debug
@@ -304,7 +304,7 @@ win64-plain/debug:
         options: [append-env-variables-from-configs]
         script: mozharness/scripts/fx_desktop_build.py
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win64.py
         extra-config:
@@ -330,7 +330,7 @@ win64-plain/debug:
 win64/opt:
     description: "Win64 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-opt
     attributes:
         enable-build-signing: true
@@ -352,7 +352,7 @@ win64/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64
@@ -389,7 +389,7 @@ win64/opt:
 win64-plain/opt:
     description: "Win64 Opt Plain"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-plain-opt
     treeherder:
         platform: windows2012-64/opt
@@ -406,7 +406,7 @@ win64-plain/opt:
         options: [append-env-variables-from-configs]
         script: mozharness/scripts/fx_desktop_build.py
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win64.py
         extra-config:
@@ -433,7 +433,7 @@ win32-shippable/opt:
     description: "Win32 Opt Shippable"
     use-pgo: true
     index:
-        product: firefox
+        product: datalus
         job-name: win32-opt
         type: shippable
     attributes:
@@ -451,7 +451,7 @@ win32-shippable/opt:
                     try: true
                     default: false
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     treeherder:
         platform: windows2012-32-shippable/opt
         symbol: Bpgo(B)
@@ -470,7 +470,7 @@ win32-shippable/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
               builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -502,14 +502,14 @@ win64-shippable/opt:
     description: "Win64 Shippable"
     use-pgo: true
     index:
-        product: firefox
+        product: datalus
         job-name: win64-opt
         type: shippable
     attributes:
         shippable: true
         enable-full-crashsymbols: true
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     treeherder:
         platform: windows2012-64-shippable/opt
         symbol: Bpgo(B)
@@ -528,7 +528,7 @@ win64-shippable/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -559,7 +559,7 @@ win64-shippable/opt:
 win32-add-on-devel/opt:
     description: "Windows32 add-on-devel"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-add-on-devel
     treeherder:
         platform: windows2012-32-add-on-devel/opt
@@ -577,7 +577,7 @@ win32-add-on-devel/opt:
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win32-add-on-devel
@@ -611,7 +611,7 @@ win32-add-on-devel/opt:
 win64-add-on-devel/opt:
     description: "Windows64 add-on-devel"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-add-on-devel
     treeherder:
         platform: windows2012-64-add-on-devel/opt
@@ -629,7 +629,7 @@ win64-add-on-devel/opt:
         script: "mozharness/scripts/fx_desktop_build.py"
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64-on-devel
@@ -663,7 +663,7 @@ win64-add-on-devel/opt:
 win64-noopt/debug:
     description: "Win64 No-optimize Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-noopt-debug
     treeherder:
         platform: windows2012-64-noopt/debug
@@ -681,7 +681,7 @@ win64-noopt/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/noopt_debug.py
         mozconfig-variant: noopt-debug
@@ -715,7 +715,7 @@ win64-noopt/debug:
 win32-noopt/debug:
     description: "Win32 No-optimize Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-noopt-debug
     treeherder:
         platform: windows2012-32-noopt/debug
@@ -733,7 +733,7 @@ win32-noopt/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win32/noopt_debug.py
         mozconfig-variant: noopt-debug
@@ -767,7 +767,7 @@ win32-noopt/debug:
 win32-rusttests/opt:
     description: "Win32 Rust Tests Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-rusttests-opt
     treeherder:
         platform: windows2012-32/opt
@@ -785,7 +785,7 @@ win32-rusttests/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win32.py
         extra-config:
@@ -813,7 +813,7 @@ win32-rusttests/opt:
 win32-rusttests/debug:
     description: "Win32 Rust Tests Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win32-rusttests-debug
     treeherder:
         platform: windows2012-32/debug
@@ -831,7 +831,7 @@ win32-rusttests/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win32.py
         extra-config:
@@ -859,7 +859,7 @@ win32-rusttests/debug:
 win64-rusttests/opt:
     description: "Win64 Rust Tests Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-rusttests-opt
     treeherder:
         platform: windows2012-64/opt
@@ -877,7 +877,7 @@ win64-rusttests/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win64.py
             - builds/taskcluster_sub_win64/rusttests_opt.py
@@ -902,7 +902,7 @@ win64-rusttests/opt:
 win64-rusttests/debug:
     description: "Win64 Rust Tests Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-rusttests-debug
     treeherder:
         platform: windows2012-64/debug
@@ -920,7 +920,7 @@ win64-rusttests/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win64.py
             - builds/taskcluster_sub_win64/rusttests_opt.py
@@ -945,7 +945,7 @@ win64-rusttests/debug:
 win64-ccov/opt:
     description: "Win64 Opt Code Coverage"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-ccov-opt
     attributes:
         enable-build-signing: true
@@ -969,7 +969,7 @@ win64-ccov/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/taskcluster_base_windows.py
             - builds/taskcluster_base_win64.py
             - builds/taskcluster_sub_win64/ccov_opt.py
@@ -995,7 +995,7 @@ win64-ccov/opt:
 win64-asan/debug:
     description: "Win64 Debug ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-asan-debug
     treeherder:
         platform: windows2012-64/asan
@@ -1014,7 +1014,7 @@ win64-asan/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/asan_debug.py
         extra-config:
@@ -1050,7 +1050,7 @@ win64-asan/debug:
 win64-asan/opt:
     description: "Win64 Opt ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-asan-opt
     treeherder:
         platform: windows2012-64/asan
@@ -1070,7 +1070,7 @@ win64-asan/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64-asan
@@ -1107,10 +1107,10 @@ win64-asan-reporter-shippable/opt:
         shippable: true
     shipping-product:
         by-release-type:
-            nightly: firefox
+            nightly: datalus
             default: null
     index:
-        product: firefox
+        product: datalus
         job-name: win64-asan-reporter-opt
         type: shippable
     treeherder:
@@ -1130,7 +1130,7 @@ win64-asan-reporter-shippable/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/asan_reporter_opt.py
             - taskcluster_nightly.py
@@ -1142,9 +1142,9 @@ win64-asan-reporter-shippable/opt:
                 LOWERCASE_DIRS: "/builds/worker/checkouts/gecko/vs2017_15.9.6"
         mozconfig-variant: nightly-asan-reporter
         mar-channel-id:
-            firefox-mozilla-central-asan
+            datalus-mozilla-central-asan
         accepted-mar-channel-ids:
-            firefox-mozilla-central-asan
+            datalus-mozilla-central-asan
     run-on-projects: ['mozilla-central']
     fetches:
         toolchain:
@@ -1169,7 +1169,7 @@ win64-asan-reporter-shippable/opt:
 win64-asan-fuzzing/opt:
     description: "Win64 Fuzzing Opt ASAN"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-fuzzing-asan-opt
     treeherder:
         platform: windows2012-64/asan
@@ -1187,7 +1187,7 @@ win64-asan-fuzzing/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64-fuzzing-asan
@@ -1259,7 +1259,7 @@ win32-devedition/opt:
         secrets: true
         options: [append-env-variables-from-configs]
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -1318,7 +1318,7 @@ win64-devedition/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -1351,7 +1351,7 @@ win64-devedition/opt:
 win64-aarch64/debug:
     description: "AArch64 Win64 Debug"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-aarch64-debug
     attributes:
         enable-full-crashsymbols: true
@@ -1372,7 +1372,7 @@ win64-aarch64/debug:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - builds/taskcluster_sub_win64/debug.py
         extra-config:
@@ -1407,7 +1407,7 @@ win64-aarch64/debug:
 win64-aarch64/opt:
     description: "AArch64 Win64 Opt"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-aarch64-opt
     attributes:
         enable-build-signing: true
@@ -1434,7 +1434,7 @@ win64-aarch64/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64-aarch64
@@ -1469,7 +1469,7 @@ win64-aarch64/opt:
 win64-aarch64-eme/opt:
     description: "AArch64 Win64 Opt w/ EME"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-aarch64-eme-opt
     treeherder:
         platform: windows2012-aarch64/opt
@@ -1491,7 +1491,7 @@ win64-aarch64-eme/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
         extra-config:
             stage_platform: win64-aarch64
@@ -1512,7 +1512,7 @@ win64-aarch64-eme/opt:
 win64-aarch64-shippable/opt:
     description: "AArch64 Win64 Shippable"
     index:
-        product: firefox
+        product: datalus
         job-name: win64-aarch64-opt
         type: shippable
     attributes:
@@ -1522,7 +1522,7 @@ win64-aarch64-shippable/opt:
         # another build task rather than generating them in this task.
         skip-verify-test-packaging: true
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     treeherder:
         platform: windows2012-aarch64-shippable/opt
         symbol: B
@@ -1543,7 +1543,7 @@ win64-aarch64-shippable/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -1612,7 +1612,7 @@ win64-aarch64-shippable-no-eme/opt:
     description: "AArch64 Win64 Shippable w/o EME"
     use-pgo: win64-shippable/opt
     index:
-        product: firefox
+        product: datalus
         job-name: win64-aarch64-no-eme-opt
         type: shippable
     attributes:
@@ -1622,7 +1622,7 @@ win64-aarch64-shippable-no-eme/opt:
         # though no tests run against this task directly.
         skip-verify-test-packaging: true
     shipping-phase: build
-    shipping-product: firefox
+    shipping-product: datalus
     treeherder:
         platform: windows2012-aarch64/opt
         symbol: Nn
@@ -1641,7 +1641,7 @@ win64-aarch64-shippable-no-eme/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -1705,7 +1705,7 @@ win64-aarch64-devedition/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:
@@ -1803,7 +1803,7 @@ win64-aarch64-devedition-no-eme/opt:
         script: mozharness/scripts/fx_desktop_build.py
         secrets: true
         config:
-            - builds/releng_base_firefox.py
+            - builds/releng_base_datalus.py
             - builds/releng_base_linux_64_builds.py
             - taskcluster_nightly.py
         extra-config:

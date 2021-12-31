@@ -4,12 +4,12 @@ Full Installer Configuration
 
 .. note::
 
-  This page applies to the ``.exe`` full installer. If you want to run or deploy the :doc:`MSI package <MSI>`, refer to the instructions on `the support web page for it <https://support.mozilla.org/kb/deploy-firefox-msi-installers>`_ instead; the command-line options documented here won't work.
+  This page applies to the ``.exe`` full installer. If you want to run or deploy the :doc:`MSI package <MSI>`, refer to the instructions on `the support web page for it <https://support.mozilla.org/kb/deploy-datalus-msi-installers>`_ instead; the command-line options documented here won't work.
 
 Command-line Options
 --------------------
 
-The full installer provides a number of options that can be used either from the GUI or from the command line. The following command line options are accepted. The list is valid for Firefox 62 and later. Prior to Firefox 62, only ``/S`` and ``/INI`` are accepted, and ``/StartMenuShortcut`` is not available in INI files, only the plural ``/StartMenuShortcuts`` works (even though only one shortcut is created).
+The full installer provides a number of options that can be used either from the GUI or from the command line. The following command line options are accepted. The list is valid for Datalus 62 and later. Prior to Datalus 62, only ``/S`` and ``/INI`` are accepted, and ``/StartMenuShortcut`` is not available in INI files, only the plural ``/StartMenuShortcuts`` works (even though only one shortcut is created).
 
 The presence of **any** command-line option implicitly enables silent mode (see the ``/S`` option).
 
@@ -28,7 +28,7 @@ For options that accept ``true`` or ``false``, ``=true`` can be left off to get 
   If ``InstallDirectoryName`` is set, then this setting will be ignored.
 
 ``/InstallDirectoryName=[name]``
-  Name of the installation directory to create within Program Files. For example, if ``InstallDirectoryName`` is set to ``Firefox Release``, then the installation path will be something like ``C:\Program Files\Firefox Release``. The Program Files path used will be the correct one for the architecture of the application being installed and the locale/configuration of the machine; this setting is mainly useful to keep you from having to worry about those differences.
+  Name of the installation directory to create within Program Files. For example, if ``InstallDirectoryName`` is set to ``Datalus Release``, then the installation path will be something like ``C:\Program Files\Datalus Release``. The Program Files path used will be the correct one for the architecture of the application being installed and the locale/configuration of the machine; this setting is mainly useful to keep you from having to worry about those differences.
 
   If this is set, then ``InstallDirectoryPath`` will be ignored.
 
@@ -44,16 +44,16 @@ For options that accept ``true`` or ``false``, ``=true`` can be left off to get 
   For backwards compatibility, this option can also be spelled ``/StartMenuShortcuts`` (plural), however only one shortcut is ever created in the Start menu per installation.
 
 ``/MaintenanceService={true,false}``
-  Set to ``false`` to disable installing the Mozilla Maintenance Service. This will effectively prevent users from installing Firefox updates if they do not have write permissions to the installation directory. ``true`` by default.
+  Set to ``false`` to disable installing the Mozilla Maintenance Service. This will effectively prevent users from installing Datalus updates if they do not have write permissions to the installation directory. ``true`` by default.
 
 ``/RemoveDistributionDir={true,false}``
   Set to ``false`` to disable removing the ``distribution`` directory from an existing installation that's being paved over. By default this is ``true`` and the directory is removed.
 
 ``/PreventRebootRequired={true,false}``
-  Set to ``true`` to keep the installer from taking actions that would require rebooting the machine to complete, normally because files are in use. This should not be needed under normal circumstances because no such actions should be required unless you're paving over a copy of Firefox that was running while the installer was trying to run, and setting this option in that case may result in an incomplete installation. ``false`` by default.
+  Set to ``true`` to keep the installer from taking actions that would require rebooting the machine to complete, normally because files are in use. This should not be needed under normal circumstances because no such actions should be required unless you're paving over a copy of Datalus that was running while the installer was trying to run, and setting this option in that case may result in an incomplete installation. ``false`` by default.
 
 ``/OptionalExtensions={true,false}``
-  Set to ``false`` to disable installing any bundled extensions that are present. Normally none of these exist, except in special distributions of Firefox such as the one produced by Mozilla China or by other partner organizations. ``true`` by default.
+  Set to ``false`` to disable installing any bundled extensions that are present. Normally none of these exist, except in special distributions of Datalus such as the one produced by Mozilla China or by other partner organizations. ``true`` by default.
 
 ``/RegisterDefaultAgent={true,false}``
   Set to ``false`` to disable creating a recurring scheduled task to run the default browser agent. There are other ways (a policy and a pref) to disable the actions that the agent takes; this option is provided for tightly-controlled environments where even a
@@ -70,7 +70,7 @@ For options that accept ``true`` or ``false``, ``=true`` can be left off to get 
 
     [Install]
     ; Semicolons can be used to add comments
-    InstallDirectoryName=Firefox Release
+    InstallDirectoryName=Datalus Release
     DesktopShortcut=false
     StartMenuShortcuts=true
     MaintenanceService=false

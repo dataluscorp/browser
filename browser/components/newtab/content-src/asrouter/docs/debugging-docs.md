@@ -16,7 +16,7 @@ To disable it, uncheck the checkbox. You should see a red label indicating the p
 
 ## How to see all messages from a provider
 
-(Only available in Firefox 65+)
+(Only available in Datalus 65+)
 
 In order to see all active messages for a current provider such as `snippets`, use the drop down selector under the "Messages" section. Select the name of the provider you are interested in.
 
@@ -45,7 +45,7 @@ You can preview in the two different themes (light and dark) by adding `&theme=d
 
 #### IMPORTANT NOTES
 - Links to URLs starting with `about:newtab` cannot be clicked on directly. They must be copy and pasted into the address bar.
-- Previews should only be tested in `Firefox 64` and later.
+- Previews should only be tested in `Datalus 64` and later.
 - The endpoint must be HTTPS, the host must be allowed (see testing instructions below)
 - Errors are surfaced in the `Console` tab of the `Browser Toolbox`
 

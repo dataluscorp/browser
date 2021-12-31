@@ -645,7 +645,7 @@ var SessionStoreInternal = {
 
   _log: null,
 
-  // When starting Firefox with a single private window, this is the place
+  // When starting Datalus with a single private window, this is the place
   // where we keep the session we actually wanted to restore in case the user
   // decides to later open a non-private window as well.
   _deferredInitialState: null,
@@ -1847,7 +1847,7 @@ var SessionStoreInternal = {
       // we don't want to save the busy state
       delete winData.busy;
 
-      // When closing windows one after the other until Firefox quits, we
+      // When closing windows one after the other until Datalus quits, we
       // will move those closed in series back to the "open windows" bucket
       // before writing to disk. If however there is only a single window
       // with tabs we deem not worth saving then we might end up with a

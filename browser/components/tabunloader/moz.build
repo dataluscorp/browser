@@ -7,6 +7,6 @@
 JAR_MANIFESTS += ["jar.mn"]
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Tabbed Browser")
+    BUG_COMPONENT = ("Datalus", "Tabbed Browser")
 
 SPHINX_TREES["/browser/tabunloader"] = "docs"

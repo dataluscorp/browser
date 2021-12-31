@@ -2,7 +2,7 @@
 name = "geckodriver"
 version = "0.30.0"
 description = "Proxy for using WebDriver clients to interact with Gecko-based browsers."
-keywords = ["webdriver", "w3c", "httpd", "mozilla", "firefox"]
+keywords = ["webdriver", "w3c", "httpd", "mozilla", "datalus"]
 repository = "https://hg.mozilla.org/mozilla-central/file/tip/testing/geckodriver"
 readme = "README.md"
 license = "MPL-2.0"

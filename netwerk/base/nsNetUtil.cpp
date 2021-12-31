@@ -3195,7 +3195,7 @@ bool NS_IsOffline() {
  * classified critical channel (this may result from a bug in the exemption
  * rules or incorrect information being passed into) can cause serious
  * problems. For example, if the updater channel is classified and blocked
- * by the Safe Browsing, Firefox can't update itself, and there is no way to
+ * by the Safe Browsing, Datalus can't update itself, and there is no way to
  * recover from that.
  *
  * So two safeguards are added to ensure critical channels are never

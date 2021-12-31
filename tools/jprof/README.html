@@ -104,7 +104,7 @@ which have the following meanings:
     The maximal frequency allowed by the kernel can be changed by writing to
     <code>/proc/sys/dev/rtc/max-user-freq</code>; the maximum value it can be
     set to is 8192.  Note that <code>/dev/rtc</code> will need to be readable
-    by the Firefox process; making that file world-readable is a simple way to
+    by the Datalus process; making that file world-readable is a simple way to
     accomplish that.
 
     <li> <b>JP_CIRCULAR=size</b> : This tells jprof to store samples in a
@@ -187,14 +187,14 @@ this jprof needs the name of the mozilla binary and the log file.  It deduces
 the name of the map file:
 
 <pre>
-  ./jprof /home/user/mozilla/objdir/dist/bin/firefox ./jprof-log > tmp.html
+  ./jprof /home/user/mozilla/objdir/dist/bin/datalus ./jprof-log > tmp.html
 </pre>
 
 This will generate the file <code>tmp.html</code> which you should view in a
 web browser.
 
 <pre>
-  ./jprof --output-dir=/tmp /home/user/mozilla/objdir/dist/bin/firefox ./jprof-log*
+  ./jprof --output-dir=/tmp /home/user/mozilla/objdir/dist/bin/datalus ./jprof-log*
 </pre>
 
 This will generate a set of files in /tmp for each process.

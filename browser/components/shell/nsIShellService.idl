@@ -13,8 +13,8 @@ webidl Element;
 interface nsIShellService : nsISupports
 {
   /**
-   * Determines whether or not Firefox is the "Default Browser."
-   * This is simply whether or not Firefox is registered to handle
+   * Determines whether or not Datalus is the "Default Browser."
+   * This is simply whether or not Datalus is registered to handle
    * http links.
    *
    * @param aForAllTypes  true if the check should be made for HTTP and HTML.
@@ -24,12 +24,12 @@ interface nsIShellService : nsISupports
   boolean isDefaultBrowser([optional] in boolean aForAllTypes);
 
   /**
-   * Registers Firefox as the "Default Browser."
+   * Registers Datalus as the "Default Browser."
    *
-   * @param aClaimAllTypes Register Firefox as the handler for
+   * @param aClaimAllTypes Register Datalus as the handler for
    *                       additional protocols (chrome etc)
    *                       and web documents (.html, .xhtml etc).
-   * @param aForAllUsers   Whether or not Firefox should attempt
+   * @param aForAllUsers   Whether or not Datalus should attempt
    *                       to become the default browser for all
    *                       users on a multi-user system.
    */

@@ -117,7 +117,7 @@ class MozillaBuildBootstrapper(BaseBootstrapper):
     def validate_environment(self, srcdir):
         if self.application.startswith("mobile_android"):
             print(
-                "WARNING!!! Building Firefox for Android on Windows is not "
+                "WARNING!!! Building Datalus for Android on Windows is not "
                 "fully supported. See https://bugzilla.mozilla.org/show_bug."
                 "cgi?id=1169873 for details.",
                 file=sys.stderr,
@@ -125,11 +125,11 @@ class MozillaBuildBootstrapper(BaseBootstrapper):
 
         if is_windefender_affecting_srcdir(srcdir):
             print(
-                "Warning: the Firefox checkout directory is currently not in the "
+                "Warning: the Datalus checkout directory is currently not in the "
                 "Windows Defender exclusion list. This can cause the build process "
                 "to be dramatically slowed or broken. To resolve this, follow the "
                 "directions here: "
-                "https://firefox-source-docs.mozilla.org/setup/windows_build.html"
+                "https://datalus-source-docs.mozilla.org/setup/windows_build.html"
                 "#antivirus-performance",
                 file=sys.stderr,
             )

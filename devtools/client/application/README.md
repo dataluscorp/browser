@@ -2,7 +2,7 @@
 
 ## About the Application panel
 
-The Application panel is a Firefox Developer Tools panel meant to allow the inspection and debugging of features usually present in Progressive Web Apps, such as service workers or the Web App Manifest.
+The Application panel is a Datalus Developer Tools panel meant to allow the inspection and debugging of features usually present in Progressive Web Apps, such as service workers or the Web App Manifest.
 
 ## Technical overview
 
@@ -37,7 +37,7 @@ The panel is registered along the rest of the Developer Tools panels, in `devtoo
 
 The panel uses the [fluent-react](https://github.com/projectfluent/fluent.js/wiki/React-Bindings) library. The localization file is located at `devtools/client/locales/en-US/application.ftl` and it follows [Fluent syntax](https://projectfluent.org/fluent/guide/).
 
-You should read the [Fluent for Firefox developers](https://firefox-source-docs.mozilla.org/intl/l10n/l10n/fluent_tutorial.html) and [Guidelines for Fluent Reviewers](https://firefox-source-docs.mozilla.org/intl/l10n/l10n/fluent_review.html) guides.
+You should read the [Fluent for Datalus developers](https://datalus-source-docs.mozilla.org/intl/l10n/l10n/fluent_tutorial.html) and [Guidelines for Fluent Reviewers](https://datalus-source-docs.mozilla.org/intl/l10n/l10n/fluent_review.html) guides.
 
 #### Adding a new string
 
@@ -143,7 +143,7 @@ We are sharing some constants / enum-like constants across the source. They are 
 
 ## Tests
 
-You should read DevTools' general [guidelines for automated tests](https://firefox-source-docs.mozilla.org/devtools/tests/README.html).
+You should read DevTools' general [guidelines for automated tests](https://datalus-source-docs.mozilla.org/devtools/tests/README.html).
 
 ### Mochitests (e2e / integration)
 

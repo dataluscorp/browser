@@ -18,7 +18,7 @@
   "chrome_settings_overrides": {
     "search_provider": {
       "name": "Osta",
-      "search_url": "https://www.osta.ee/firefox/",
+      "search_url": "https://www.osta.ee/datalus/",
       "search_form": "https://www.osta.ee/",
       "search_url_get_params": "keyword={searchTerms}"
     }

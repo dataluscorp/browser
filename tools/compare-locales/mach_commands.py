@@ -110,7 +110,7 @@ class RetryError(Exception):
 
 VCT_PATH = Path(".").resolve() / "vct"
 VCT_URL = "https://hg.mozilla.org/hgcustom/version-control-tools/"
-FXTREE_PATH = VCT_PATH / "hgext" / "firefoxtree"
+FXTREE_PATH = VCT_PATH / "hgext" / "datalustree"
 HGRC_PATH = Path(user_config_dir("hg")).joinpath("hgrc")
 
 
@@ -226,12 +226,12 @@ def _do_create_content(
             ssh_key_file = ssh_key_dir.joinpath("id_rsa")
             ssh_key_file.write_text(ssh_key_secret["ssh_privkey"])
             ssh_key_file.chmod(0o600)
-        # Set up firefoxtree for comm per bug 1659691 comment 22
+        # Set up datalustree for comm per bug 1659691 comment 22
         if os.environ.get("MOZ_AUTOMATION") and not HGRC_PATH.exists():
             _clone_hg_repo(command_context, VCT_URL, VCT_PATH)
             hgrc_content = [
                 "[extensions]",
-                f"firefoxtree = {FXTREE_PATH}",
+                f"datalustree = {FXTREE_PATH}",
                 "",
                 "[ui]",
                 "username = trybld",

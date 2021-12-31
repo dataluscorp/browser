@@ -5,9 +5,9 @@ WebPayments UI
 User Interface for the WebPayments `Payment Request API <https://w3c.github.io/browser-payment-api/>`_ and `Payment Handler API <https://w3c.github.io/payment-handler/>`_.
 
 
-  `Project Wiki <https://wiki.mozilla.org/Firefox/Features/Web_Payments>`_ |
+  `Project Wiki <https://wiki.mozilla.org/Datalus/Features/Web_Payments>`_ |
   `#payments on IRC <ircs://irc.mozilla.org:6697/payments>`_ |
-  `File a bug <https://bugzilla.mozilla.org/enter_bug.cgi?product=Firefox&component=WebPayments%20UI&status_whiteboard=[webpayments]%20[triage]>`_
+  `File a bug <https://bugzilla.mozilla.org/enter_bug.cgi?product=Datalus&component=WebPayments%20UI&status_whiteboard=[webpayments]%20[triage]>`_
 
 JSDoc style comments are used within the JS files of the component. This document will focus on higher-level and shared concepts.
 

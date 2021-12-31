@@ -99,14 +99,14 @@ describe("MultiStageAboutWelcomeProton module", () => {
         "string_id",
         "mr1-onboarding-pin-primary-button-label"
       );
-      assert.propertyVal(data.screens[0], "id", "AW_PIN_FIREFOX");
+      assert.propertyVal(data.screens[0], "id", "AW_PIN_DATALUS");
       assert.propertyVal(data.screens[1], "id", "AW_SET_DEFAULT");
       assert.lengthOf(data.screens, 5);
     });
     it("should keep 'pin' and remove 'default' if already default", async () => {
       const data = await prepConfig({ needPin: true });
 
-      assert.propertyVal(data.screens[0], "id", "AW_PIN_FIREFOX");
+      assert.propertyVal(data.screens[0], "id", "AW_PIN_DATALUS");
       assert.propertyVal(data.screens[1], "id", "AW_IMPORT_SETTINGS");
       assert.lengthOf(data.screens, 4);
     });
@@ -153,7 +153,7 @@ describe("MultiStageAboutWelcomeProton module", () => {
         background_url: `chrome://activity-stream/content/data/content/assets/proton-bkg.jpg`,
         screens: [
           {
-            id: "AW_PIN_FIREFOX",
+            id: "AW_PIN_DATALUS",
             order: 0,
             content: {
               help_text: {
@@ -214,7 +214,7 @@ describe("MultiStageAboutWelcomeProton module", () => {
             content: {
               primary_button: {
                 action: {
-                  type: "SHOW_FIREFOX_ACCOUNTS",
+                  type: "SHOW_DATALUS_ACCOUNTS",
                   data: {},
                 },
               },

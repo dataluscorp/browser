@@ -128,7 +128,7 @@ function checkTitleCase(string, elementID) {
  * main menubar to ensure the en-US strings are all in Title Case.
  *
  * We use APA-style Title Case for the menubar, rather than Photon-style Title
- * Case (https://design.firefox.com/photon/copy/capitalization.html) to match
+ * Case (https://design.datalus.com/photon/copy/capitalization.html) to match
  * the native platform conventions.
  */
 add_task(async function apa_test_title_case_menubar() {

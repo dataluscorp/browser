@@ -1,5 +1,5 @@
 =================================
-Firefox Source Tree Documentation
+Datalus Source Tree Documentation
 =================================
 
 .. toctree::
@@ -9,7 +9,7 @@ Firefox Source Tree Documentation
    {setup_doc}
 
 .. toctree::
-   :caption: Working On Firefox
+   :caption: Working On Datalus
    :maxdepth: 2
 
    {contributing_doc}
@@ -21,7 +21,7 @@ Firefox Source Tree Documentation
    {source_doc}
 
 .. toctree::
-   :caption: The Firefox Build System
+   :caption: The Datalus Build System
    :maxdepth: 1
 
    {build_doc}
@@ -39,13 +39,13 @@ Firefox Source Tree Documentation
    {l10n_doc}
 
 .. toctree::
-   :caption: Firefox and Python 
+   :caption: Datalus and Python 
    :maxdepth: 1
 
    {python_doc}
 
 .. toctree::
-   :caption: Metrics Collected in Firefox
+   :caption: Metrics Collected in Datalus
    :maxdepth: 1
 
    {metrics_doc}

@@ -2,21 +2,21 @@ Partner repacks
 ===============
 .. _partner repacks:
 
-We create slightly-modified Firefox releases for some extra audiences
+We create slightly-modified Datalus releases for some extra audiences
 
 * EME-free builds, which disable DRM plugins by default
 * Funnelcake builds, which are used for Mozilla experiments
-* partner builds, which customize Firefox for external partners
+* partner builds, which customize Datalus for external partners
 
 We use the phrase "partner repacks" to refer to all these builds because they
-use the same process of repacking regular Firefox releases with additional files.
+use the same process of repacking regular Datalus releases with additional files.
 The specific differences depend on the type of build.
 
 We produce partner repacks for some beta builds, and for release builds, as part of the release
 automation. We don't produce any files to update these builds as they are handled automatically
 (see updates_).
 
-We also produce :ref:`partner attribution` builds, which are Firefox Windows installers with a cohort identifier
+We also produce :ref:`partner attribution` builds, which are Datalus Windows installers with a cohort identifier
 added.
 
 Parameters & Scheduling
@@ -34,7 +34,7 @@ We split the repacks into two 'paths', EME-free and everything else, to retain s
 flexibility over enabling/disabling them separately. This costs us some duplication of the kinds
 in the repacking stack. The two enable parameters are booleans to turn these two paths
 on/off. We set them in shipit's `is_partner_enabled() <https://github.com/mozilla-releng/shipit/blob/main/api/src/shipit_api/admin/release.py#L93>`_ when starting a
-release. They're both true for Firefox betas >= b8 and releases, but otherwise disabled.
+release. They're both true for Datalus betas >= b8 and releases, but otherwise disabled.
 
 ``release_partner_config`` is a dictionary of configuration data which drives the task generation
 logic. It's usually looked up during the release promotion action task, using the Github
@@ -43,15 +43,15 @@ GraphQL API in the `get_partner_config_by_url()
 url defined in `taskcluster/ci/config.yml <https://searchfox
 .org/mozilla-release/search?q=regexp%3A^partner+path%3Aconfig.yml&redirect=true>`_.
 
-``release_partner_build_number`` is an integer used to create unique upload paths in the firefox
+``release_partner_build_number`` is an integer used to create unique upload paths in the datalus
 candidates directory, while ``release_partners`` is a list of partners that should be
 repacked (i.e. a subset of the whole config). Both are intended for use when respinning a few partners after
-the regular Firefox has shipped. More information on that can be found in the
+the regular Datalus has shipped. More information on that can be found in the
 `RelEng Docs <https://moz-releng-docs.readthedocs.io/en/latest/procedures/misc-operations/off-cycle-partner-repacks-and-funnelcake.html>`_.
 
 Most of the machine time for generating partner repacks takes place in the `promote` phase of the
 automation, or `promote_rc` in the case of X.0 release candidates. The EME-free builds are copied into the
-Firefox releases directory in the `push` phase, along with the regular bits.
+Datalus releases directory in the `push` phase, along with the regular bits.
 
 
 Configuration
@@ -96,10 +96,10 @@ containing the customizations needed. Here's `EME-free's repack.cfg <https://git
 
 Note the list of locales and boolean toggles for enabling platforms. The ``output_dir`` and
 ``upload_to_candidates`` parameters are only present for repacks which are uploaded into the
-`candidates directory <https://archive.mozilla.org/pub/firefox/candidates/>`_.
+`candidates directory <https://archive.mozilla.org/pub/datalus/candidates/>`_.
 
-All customizations will be placed in the ``distribution`` directory at the root of the Firefox
-install directory, or in the case of OS X in ``Firefox.app/Contents/Resources/distribution/``. A
+All customizations will be placed in the ``distribution`` directory at the root of the Datalus
+install directory, or in the case of OS X in ``Datalus.app/Contents/Resources/distribution/``. A
 ``distribution.ini`` file is the minimal requirement, here's an example from `EME-free
 <https://github.com/mozilla-partners/mozilla-EME-free/blob/master/desktop/mozilla-EME-free/distribution
 /distribution.ini>`_::
@@ -111,7 +111,7 @@ install directory, or in the case of OS X in ``Firefox.app/Contents/Resources/di
     [Global]
     id=mozilla-EMEfree
     version=1.0
-    about=Mozilla Firefox EME-free
+    about=Mozilla Datalus EME-free
 
     [Preferences]
     media.eme.enabled=false
@@ -222,7 +222,7 @@ Beetmover
 * upstreams: ``release-partner-repack-repackage-signing`` ``release-eme-free-repack-repackage-signing``
 
 Moves and renames the artifacts to their public location in the `candidates directory
-<https://archive.mozilla.org/pub/firefox/candidates/>`_, or a private S3 bucket. Each task will
+<https://archive.mozilla.org/pub/datalus/candidates/>`_, or a private S3 bucket. Each task will
 have the ``project:releng:beetmover:action:push-to-partner`` scope, with public uploads having
 ``project:releng:beetmover:bucket:release`` and private uploads using
 ``project:releng:beetmover:bucket:partner``. The ``upload_to_candidates`` key in the partner config
@@ -236,7 +236,7 @@ Beetmover checksums
 * upstreams: ``release-eme-free-repack-repackage-beetmover``
 
 The EME-free builds should be present in our SHA256SUMS file and friends (`e.g. <https://archive
-.mozilla.org/pub/firefox/releases/61.0/SHA256SUMS>`_) so we beetmove the target.checksums from
+.mozilla.org/pub/datalus/releases/61.0/SHA256SUMS>`_) so we beetmove the target.checksums from
 the beetmover tasks into the candidates directory. They get picked up by the
 ``release-generate-checksums`` kind.
 
@@ -247,7 +247,7 @@ Updates
 
 It's very rare to need to update a partner repack differently from the original
 release build but we retain that capability. A partner build with distribution name ``foo``,
-based on a release Firefox build, will query for an update on the ``release-cck-foo`` channel. If
+based on a release Datalus build, will query for an update on the ``release-cck-foo`` channel. If
 the update server `Balrog <http://mozilla-balrog.readthedocs.io/en/latest/>`_ finds no rule for
 that channel it will fallback to the ``release`` channel. The update files for the regular releases do not
 modify the ``distribution/`` directory, so the customizations are not modified.

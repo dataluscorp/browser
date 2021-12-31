@@ -18,7 +18,7 @@ exports[`DebugTargetInfo component Connection info renders the expected snapshot
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -114,7 +114,7 @@ exports[`DebugTargetInfo component Target icon renders the expected snapshot for
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -170,7 +170,7 @@ exports[`DebugTargetInfo component Target icon renders the expected snapshot for
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -266,7 +266,7 @@ exports[`DebugTargetInfo component Target icon renders the expected snapshot for
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -322,7 +322,7 @@ exports[`DebugTargetInfo component Target icon renders the expected snapshot for
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -360,7 +360,7 @@ exports[`DebugTargetInfo component Target icon renders the expected snapshot for
 </header>
 `;
 
-exports[`DebugTargetInfo component Target title renders the expected snapshot for This Firefox target 1`] = `
+exports[`DebugTargetInfo component Target title renders the expected snapshot for This Datalus target 1`] = `
 <header
   className="debug-target-info qa-debug-target-info"
 >
@@ -369,7 +369,7 @@ exports[`DebugTargetInfo component Target title renders the expected snapshot fo
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"
@@ -454,7 +454,7 @@ exports[`DebugTargetInfo component Target title renders the expected snapshot fo
   >
     <img
       className="channel-icon qa-runtime-icon"
-      src="chrome://devtools/skin/images/aboutdebugging-firefox-release.svg"
+      src="chrome://devtools/skin/images/aboutdebugging-datalus-release.svg"
     />
     <b
       className="devtools-ellipsis-text"

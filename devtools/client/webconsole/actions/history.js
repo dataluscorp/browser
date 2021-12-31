@@ -38,7 +38,7 @@ function clearHistory() {
 }
 
 /**
- * Fired when the console history from previous Firefox sessions is loaded.
+ * Fired when the console history from previous Datalus sessions is loaded.
  */
 function historyLoaded(entries) {
   return {

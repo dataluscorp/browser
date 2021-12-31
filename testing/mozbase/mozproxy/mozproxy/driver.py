@@ -52,12 +52,12 @@ def main():
         help="The playback tool version to use (default: %(default)s)",
     )
     parser.add_argument(
-        "--app", default="firefox", help="The app being tested (default: %(default)s)."
+        "--app", default="datalus", help="The app being tested (default: %(default)s)."
     )
     parser.add_argument(
         "--binary",
         required=True,
-        help=("The path to the binary being tested (typically firefox)."),
+        help=("The path to the binary being tested (typically datalus)."),
     )
     parser.add_argument(
         "--topsrcdir",

@@ -56,7 +56,7 @@
 //
 // - On MacOSX, the system libc has a zone allocator, which allows us to
 //   hook custom malloc implementation functions without exporting them.
-//   However, since we want things in Firefox to skip the system zone
+//   However, since we want things in Datalus to skip the system zone
 //   allocator, the malloc implementation functions are all exported
 //   unprefixed, as well as duplication functions.
 //   Jemalloc-specific functions are also left unprefixed.

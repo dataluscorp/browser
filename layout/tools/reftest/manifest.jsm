@@ -472,11 +472,11 @@ function BuildConditionSandbox(aURL) {
     try {
       sandbox.d2d = readGfxInfo(gfxInfo, "D2DEnabled");
       sandbox.dwrite = readGfxInfo(gfxInfo, "DWriteEnabled");
-      sandbox.embeddedInFirefoxReality = readGfxInfo(gfxInfo, "EmbeddedInFirefoxReality");
+      sandbox.embeddedInDatalusReality = readGfxInfo(gfxInfo, "EmbeddedInDatalusReality");
     } catch (e) {
       sandbox.d2d = false;
       sandbox.dwrite = false;
-      sandbox.embeddedInFirefoxReality = false;
+      sandbox.embeddedInDatalusReality = false;
     }
 
     var canvasBackend = readGfxInfo(gfxInfo, "AzureCanvasBackend");

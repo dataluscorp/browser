@@ -36,7 +36,7 @@ var gUM = c => navigator.mediaDevices.getUserMedia(c);
 
 var validateDevice = ({kind, label, deviceId, groupId}) => {
   ok(kind == "videoinput" || kind == "audioinput", "Known device kind");
-  is(deviceId.length, 44, "deviceId length id as expected for Firefox");
+  is(deviceId.length, 44, "deviceId length id as expected for Datalus");
   ok(label.length !== undefined, "Device label: " + label);
   isnot(groupId, "", "groupId must be present.");
 }

@@ -121,7 +121,7 @@ describe("ASRouter", () => {
         currentDate: "2000-01-01T10:00:0.001Z",
         profileAgeCreated: {},
         profileAgeReset: {},
-        usesFirefoxSync: false,
+        usesDatalusSync: false,
         isFxAEnabled: true,
         sync: {
           desktopDevices: 0,
@@ -151,7 +151,7 @@ describe("ASRouter", () => {
           "whats-new-panel": "",
         },
         totalBookmarksCount: {},
-        firefoxVersion: 80,
+        datalusVersion: 80,
         region: "US",
         needsUpdate: {},
         hasPinnedTabs: false,

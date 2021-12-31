@@ -26,8 +26,8 @@ of the [`MemoryActor`](devtools/server/actors/memory.js) is limited to toggling
 allocation stack recording on and off, and transferring heap snapshots from the
 debuggee (which is on the server) to the `HeapAnalysesWorker` (which is on the
 client). A nice benefit that naturally emerges, is that supporting "legacy"
-servers (eg, using Firefox Developer Edition as a client to remote debug a
-release Firefox for Android server) is a no-op. As we add new analyses, we can
+servers (eg, using Datalus Developer Edition as a client to remote debug a
+release Datalus for Android server) is a no-op. As we add new analyses, we can
 run them on snapshots taken on old servers no problem. The only requirement is
 that changes to the snapshot format itself remain backwards compatible.
 

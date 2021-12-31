@@ -5,7 +5,7 @@
 "use strict";
 
 // Register the about:debugging URL, that allows to debug tabs, extensions, workers on
-// the current instance of Firefox or on a remote Firefox.
+// the current instance of Datalus or on a remote Datalus.
 const { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 const { nsIAboutModule } = Ci;

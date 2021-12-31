@@ -5,7 +5,7 @@
 job-defaults:
     max-run-time:
         by-app:
-            firefox:
+            datalus:
                 by-test-platform:
                     .*-ref-hw-2017-qr/.*: 3600
                     .*-qr/.*: 2400
@@ -58,9 +58,9 @@ job-defaults:
     python-3: true
     variants: [fission]
 
-raptor-youtube-playback-v9-power-firefox:
-    description: Raptor V9 YouTube Playback on Firefox with Power Testing
-    try-name: raptor-youtube-playback-v9-power-firefox
+raptor-youtube-playback-v9-power-datalus:
+    description: Raptor V9 YouTube Playback on Datalus with Power Testing
+    try-name: raptor-youtube-playback-v9-power-datalus
     treeherder-symbol: Rap(ytp-v9-p)
     run-on-projects:
         by-test-platform:
@@ -77,9 +77,9 @@ raptor-youtube-playback-v9-power-firefox:
             - --test=raptor-youtube-playback-v9
             - --power-test
 
-raptor-youtube-playback-h264-power-firefox:
-    description: Raptor H264 YouTube Playback on Firefox with Power Testing
-    try-name: raptor-youtube-playback-h264-power-firefox
+raptor-youtube-playback-h264-power-datalus:
+    description: Raptor H264 YouTube Playback on Datalus with Power Testing
+    try-name: raptor-youtube-playback-h264-power-datalus
     treeherder-symbol: Rap(ytp-h264-p)
     run-on-projects:
         by-test-platform:

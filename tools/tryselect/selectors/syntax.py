@@ -327,7 +327,7 @@ class AutoTry:
     common_suites = [
         "cppunit",
         "crashtest",
-        "firefox-ui-functional",
+        "datalus-ui-functional",
         "geckoview",
         "geckoview-junit",
         "gtest",

@@ -59,7 +59,7 @@ Get comfortable. Grab a coffee (or your favorite tasty beverage). Maybe a nap. T
 
                hg update
 
-You now have a clone of ``mozilla-unified`` that is identical to one made via ``hg clone``. You can adjust your build settings, or you can go straight ahead and build Firefox!
+You now have a clone of ``mozilla-unified`` that is identical to one made via ``hg clone``. You can adjust your build settings, or you can go straight ahead and build Datalus!
 
 If at any point you are stuck, feel free to ask on Riot/Matrix at `https://chat.mozilla.org <https://chat.mozilla.org>`__
 in `#introduction <https://chat.mozilla.org/#/room/#introduction:mozilla.org>`__ channel.

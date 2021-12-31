@@ -20,7 +20,7 @@ import {
   getTestState,
   setupTestBrowserHooks,
   setupTestPageAndContextHooks,
-  itFailsFirefox,
+  itFailsDatalus,
 } from './mocha-utils'; // eslint-disable-line import/extensions
 
 describe('Frame specs', function () {

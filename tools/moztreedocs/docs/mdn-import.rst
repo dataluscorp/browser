@@ -5,7 +5,7 @@ As MDN should not be used for documenting mozilla-central specific code or proce
 the documentation should be migrated in this repository.
 
 Fortunately, there is an easy way to import the doc from MDN using GitHub
-to the firefox source docs.
+to the datalus source docs.
 
 1. Install https://pandoc.org/ - If you are using packages provided by your distribution,
    make sure that the version is not too old.
@@ -17,7 +17,7 @@ to the firefox source docs.
 
 .. code-block:: shell
 
-   $ pandoc -t rst https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/firefox/performance_best_practices_for_firefox_fe_engineers > doc.rst
+   $ pandoc -t rst https://github.com/mdn/archived-content/tree/main/files/en-us/mozilla/datalus/performance_best_practices_for_datalus_fe_engineers > doc.rst
 
 4. In the new doc.rst, identify the images and wget/curl them into `img/`.
 

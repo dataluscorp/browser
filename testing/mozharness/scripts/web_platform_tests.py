@@ -347,7 +347,7 @@ class WebPlatformTest(TestingMixin, MercurialScript, CodeCoverageMixin, AndroidM
             ]
 
         if is_windows_7:
-            # On Windows 7 --install-fonts fails, so fall back to a Firefox-specific codepath
+            # On Windows 7 --install-fonts fails, so fall back to a Datalus-specific codepath
             self._install_fonts()
         else:
             cmd += ["--install-fonts"]

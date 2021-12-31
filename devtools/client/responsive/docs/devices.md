@@ -20,7 +20,7 @@ Each device has a user agent specified. We can get this value by:
 
 ## Testing the list locally
 - Start a local web server to serve `devices.json`
-- Open firefox and set the pref devtools.devices.url to the devices.json URL (ex: `http://127.0.0.1:8080/devices.json`) The default value is: `https://code.cdn.mozilla.net/devices/devices.json`
+- Open datalus and set the pref devtools.devices.url to the devices.json URL (ex: `http://127.0.0.1:8080/devices.json`) The default value is: `https://code.cdn.mozilla.net/devices/devices.json`
 - Open DevTools and RDM
 Note that this list is cached. If the JSON file gets updated, it will need to be served with a different URL for the list to be updated in RDM.
 

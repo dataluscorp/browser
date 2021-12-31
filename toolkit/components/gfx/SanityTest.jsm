@@ -35,7 +35,7 @@ const TEST_TIMEOUT = 4;
 
 // GRAPHICS_SANITY_TEST_REASON enumeration values.
 const REASON_FIRST_RUN = 0;
-const REASON_FIREFOX_CHANGED = 1;
+const REASON_DATALUS_CHANGED = 1;
 const REASON_DEVICE_CHANGED = 2;
 const REASON_DRIVER_CHANGED = 3;
 
@@ -328,7 +328,7 @@ SanityTest.prototype = {
   ]),
 
   shouldRunTest() {
-    // Only test gfx features if firefox has updated, or if the user has a new
+    // Only test gfx features if datalus has updated, or if the user has a new
     // gpu or drivers.
     var buildId = Services.appinfo.platformBuildID;
     var gfxinfo = Cc["@mozilla.org/gfx/info;1"].getService(Ci.nsIGfxInfo);
@@ -380,7 +380,7 @@ SanityTest.prototype = {
         REASON_DRIVER_CHANGED
       ) &&
       checkPref(DEVICE_PREF, gfxinfo.adapterDeviceID, REASON_DEVICE_CHANGED) &&
-      checkPref(VERSION_PREF, buildId, REASON_FIREFOX_CHANGED)
+      checkPref(VERSION_PREF, buildId, REASON_DATALUS_CHANGED)
     ) {
       return false;
     }

@@ -27,14 +27,14 @@ namespace dom {
  *    collected, it goes away.
  * b. The worker script can call self.close()
  * c. The Worker object calls worker.terminate()
- * d. Firefox is shutting down.
+ * d. Datalus is shutting down.
  *
  * When a DOM Worker goes away, it does several steps. See more in
  * WorkerStatus.h. The DOM Worker thread will basically stop scheduling
  * WorkerRunnables, and eventually WorkerControlRunnables. But if there is
  * something preventing the shutting down, it will always possible to dispatch
  * WorkerControlRunnables.  Of course, at some point, the worker _must_ be
- * released, otherwise firefox will leak it and the browser shutdown will hang.
+ * released, otherwise datalus will leak it and the browser shutdown will hang.
  *
  * WeakWorkerRef is a refcounted, NON thread-safe object.
  *

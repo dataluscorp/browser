@@ -71,7 +71,7 @@ void* js::GetNativeStackBaseImpl() {
   // threads spawned with pthreads can read this information directly from their
   // pthread struct, but the main thread must go parse /proc/self/maps to figure
   // the mapped stack address space ranges.  We want to avoid reading from
-  // /proc/ so that firefox can run in sandboxed environments where /proc may
+  // /proc/ so that datalus can run in sandboxed environments where /proc may
   // not be mounted.
   if (gettid() == getpid()) {
     void** pLibcStackEnd = (void**)dlsym(RTLD_DEFAULT, "__libc_stack_end");

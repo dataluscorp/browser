@@ -13,5 +13,5 @@ root:
         color: [255, 0, 0, 1]
         color-space: srgb
       items:
-      - image: "firefox.png"
+      - image: "datalus.png"
         bounds: 0 0 256 256

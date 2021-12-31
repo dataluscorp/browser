@@ -50,7 +50,7 @@
     "root": "toolbarFolder",
     "children": [{
       "guid": "APzP8MupzA8l",
-      "title": "Firefox",
+      "title": "Datalus",
       "index": 0,
       "dateAdded": 1471365681801000,
       "lastModified": 1471365687887000,
@@ -61,10 +61,10 @@
         "name": "bookmarkProperties/description",
         "flags": 0,
         "expires": 4,
-        "value": "Firefox home"
+        "value": "Datalus home"
       }],
       "type": "text/x-moz-place",
-      "uri": "https://www.mozilla.org/en-US/firefox/",
+      "uri": "https://www.mozilla.org/en-US/datalus/",
       "keyword": "fx"
     }]
   }, {

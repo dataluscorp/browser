@@ -36,7 +36,7 @@ By default remote protocols attempts to set a range of preferences deemed
 suitable in automation when it starts.  These include the likes of
 disabling auto-updates, Telemetry, and first-run UX. Set this preference to
 `false` to skip setting those preferences, which is mostly useful for internal
-Firefox CI suites.
+Datalus CI suites.
 
 The user preference file takes precedence over the recommended
 preferences, meaning any user-defined preference value will not be

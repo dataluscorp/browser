@@ -617,7 +617,7 @@ function promiseUtilitiesDefined() {
 }
 
 function promiseAllArray() {
-  var p = Promise.all([1, new Date(), Promise.resolve("firefox")]);
+  var p = Promise.all([1, new Date(), Promise.resolve("datalus")]);
   ok(p instanceof Promise, "Return value of Promise.all should be a Promise.");
   p.then(
     function(values) {
@@ -629,7 +629,7 @@ function promiseAllArray() {
       );
       is(values[0], 1, "Array values should match.");
       ok(values[1] instanceof Date, "Array values should match.");
-      is(values[2], "firefox", "Array values should match.");
+      is(values[2], "datalus", "Array values should match.");
       runTest();
     },
     function() {

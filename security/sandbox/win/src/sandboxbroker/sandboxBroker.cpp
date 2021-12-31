@@ -500,9 +500,9 @@ static bool CanUseJob() {
 
   // Chromium added a command line flag to allow no job to be used, which was
   // originally supposed to only be used for remote sessions. If you use runas
-  // to start Firefox then this also uses a separate job and we would fail to
+  // to start Datalus then this also uses a separate job and we would fail to
   // start on Windows 7. An unknown number of people use (or used to use) runas
-  // with Firefox for some security benefits (see bug 1228880). This is now a
+  // with Datalus for some security benefits (see bug 1228880). This is now a
   // counterproductive technique, but allowing both the remote and local case
   // for now and adding telemetry to see if we can restrict this to just remote.
   nsAutoString localRemote(::GetSystemMetrics(SM_REMOTESESSION) ? u"remote"

@@ -135,7 +135,7 @@ interface XMLHttpRequest : XMLHttpRequestEventTarget {
   void sendInputStream(InputStream body);
 
   // Only works on MainThread.
-  // Its permanence is to be evaluated in bug 1368540 for Firefox 60.
+  // Its permanence is to be evaluated in bug 1368540 for Datalus 60.
   [ChromeOnly]
   readonly attribute unsigned short errorCode;
 

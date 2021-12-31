@@ -11,7 +11,7 @@ var EXPORTED_SYMBOLS = ["SyncTelemetry"];
 //
 //  ../../../toolkit/components/telemetry/docs/data/sync-ping.rst
 //
-// The sync ping contains identifiers that are linked to the user's Firefox Account
+// The sync ping contains identifiers that are linked to the user's Datalus Account
 // and are separate from the main telemetry client_id, so this file is also responsible
 // for ensuring that we can delete those pings upon user request, by plumbing its
 // identifiers into the "deletion-request" ping.

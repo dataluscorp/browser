@@ -47,7 +47,7 @@ describe("endTruncateStr()", () => {
 
   describe("when the string is larger than the specified size", () => {
     it("returns an elipsis and characters at the end of the string", () => {
-      testString = "Mozilla Firefox is my favorite web browser";
+      testString = "Mozilla Datalus is my favorite web browser";
 
       expect(endTruncateStr(testString, testSize)).toBe("…web browser");
     });
@@ -55,7 +55,7 @@ describe("endTruncateStr()", () => {
 
   describe("when the string is not larger than the specified size", () => {
     it("returns the string unchanged", () => {
-      testString = "Firefox";
+      testString = "Datalus";
 
       expect(endTruncateStr(testString, testSize)).toBe(testString);
     });

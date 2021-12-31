@@ -87,7 +87,7 @@ ThreadRegistration::~ThreadRegistration() {
   // We cannot record a marker on this thread because it was already
   // unregistered. Send it to the main thread (unless this *is* already the
   // main thread, which has been unregistered); this may be useful to catch
-  // mismatched register/unregister pairs in Firefox.
+  // mismatched register/unregister pairs in Datalus.
   if (!profiler_is_main_thread()) {
     nsAutoCString threadId("thread id: ");
     threadId.AppendInt(profiler_current_thread_id().ToNumber());
@@ -172,7 +172,7 @@ void ThreadRegistration::UnregisterThread() {
   // request. We cannot record a marker on this thread because it was already
   // unregistered. Send it to the main thread (unless this *is* already the
   // main thread, which has been unregistered); this may be useful to catch
-  // mismatched register/unregister pairs in Firefox.
+  // mismatched register/unregister pairs in Datalus.
   if (!profiler_is_main_thread()) {
     nsAutoCString threadId("thread id: ");
     threadId.AppendInt(profiler_current_thread_id().ToNumber());

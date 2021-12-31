@@ -5,12 +5,12 @@ How to submit a patch
 | This page is an import from MDN and the contents might be outdated |
 +--------------------------------------------------------------------+
 
-Submitting a patch, getting it reviewed, and committed to the Firefox
+Submitting a patch, getting it reviewed, and committed to the Datalus
 source tree involves several steps. This article explains how.
 
 .. note::
 
-   We are also providing a :ref:`Firefox Contributors Quick Reference <Firefox Contributors' Quick Reference>` for contributors.
+   We are also providing a :ref:`Datalus Contributors Quick Reference <Datalus Contributors' Quick Reference>` for contributors.
 
 The process of submission is illustrated by the following diagram, and
 each step is detailed below:
@@ -82,8 +82,8 @@ active code submissions, and potential code reviewers.
 Working on a patch
 ------------------
 
-Changes to the Firefox source code are presented in the form of a patch.
-A patch is a commit to version control. Firefox and related code is
+Changes to the Datalus source code are presented in the form of a patch.
+A patch is a commit to version control. Datalus and related code is
 stored in our `Mercurial
 server <https://hg.mozilla.org/mozilla-central>`__. We have extensive
 documentation on using Mercurial in our guide, :ref:`Mercurial Overview`.

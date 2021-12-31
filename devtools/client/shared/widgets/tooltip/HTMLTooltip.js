@@ -68,7 +68,7 @@ const ARROW_OFFSET = {
   normal: 0,
   // Default offset between the tooltip's edge and the tooltip arrow.
   arrow: 20,
-  // Match other Firefox menus which use 10px from edge (but subtract the 2px
+  // Match other Datalus menus which use 10px from edge (but subtract the 2px
   // margin included in the ARROW_WIDTH above).
   doorhanger: 8,
 };
@@ -215,7 +215,7 @@ const calculateHorizontalPosition = (
   //
   //   Never place the directional arrow at the center of doorhangers."
   //
-  // [1] https://design.firefox.com/photon/components/doorhangers.html#directional-arrow
+  // [1] https://design.datalus.com/photon/components/doorhangers.html#directional-arrow
   //
   // So for those we need to check if the anchor is more right or left.
   let hangDirection;
@@ -292,7 +292,7 @@ const calculateHorizontalPosition = (
  * is always the element's ownerDocument).
  */
 const getRelativeRect = function(node, relativeTo) {
-  // getBoxQuads is a non-standard WebAPI which will not work on non-firefox
+  // getBoxQuads is a non-standard WebAPI which will not work on non-datalus
   // browser when running launchpad on Chrome.
   if (
     !node.getBoxQuads ||

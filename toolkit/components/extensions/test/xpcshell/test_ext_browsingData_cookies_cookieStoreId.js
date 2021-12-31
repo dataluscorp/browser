@@ -19,7 +19,7 @@ const COOKIE_PRIVATE = {
     privateBrowsingId: 1,
   },
 };
-// "firefox-container-1" cookie
+// "datalus-container-1" cookie
 const COOKIE_CONTAINER = {
   host: "example.org",
   name: "test_cookie",
@@ -91,7 +91,7 @@ add_task(async function testCookies() {
     // Clear only "normal"/default cookies.
     await setUpCookies();
 
-    extension.sendMessage(method, { cookieStoreId: "firefox-default" });
+    extension.sendMessage(method, { cookieStoreId: "datalus-default" });
     await extension.awaitMessage("cookiesRemoved");
 
     ok(!cookieExists(COOKIE_NORMAL), "Normal cookie was removed");
@@ -101,7 +101,7 @@ add_task(async function testCookies() {
     // Clear container cookie
     await setUpCookies();
 
-    extension.sendMessage(method, { cookieStoreId: "firefox-container-1" });
+    extension.sendMessage(method, { cookieStoreId: "datalus-container-1" });
     await extension.awaitMessage("cookiesRemoved");
 
     ok(cookieExists(COOKIE_NORMAL), "Normal cookie was not removed");
@@ -111,7 +111,7 @@ add_task(async function testCookies() {
     // Clear private cookie
     await setUpCookies();
 
-    extension.sendMessage(method, { cookieStoreId: "firefox-private" });
+    extension.sendMessage(method, { cookieStoreId: "datalus-private" });
     await extension.awaitMessage("cookiesRemoved");
 
     ok(cookieExists(COOKIE_NORMAL), "Normal cookie was not removed");
@@ -122,7 +122,7 @@ add_task(async function testCookies() {
     await setUpCookies();
 
     extension.sendMessage(method, {
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
       hostnames: ["example.org"],
     });
     await extension.awaitMessage("cookiesRemoved");
@@ -135,7 +135,7 @@ add_task(async function testCookies() {
     await setUpCookies();
 
     extension.sendMessage(method, {
-      cookieStoreId: "firefox-container-1",
+      cookieStoreId: "datalus-container-1",
       hostnames: ["example.com"],
     });
     await extension.awaitMessage("cookiesRemoved");
@@ -148,7 +148,7 @@ add_task(async function testCookies() {
     await setUpCookies();
 
     extension.sendMessage(method, {
-      cookieStoreId: "firefox-private",
+      cookieStoreId: "datalus-private",
       hostnames: ["example.net"],
     });
     await extension.awaitMessage("cookiesRemoved");
@@ -161,7 +161,7 @@ add_task(async function testCookies() {
     await setUpCookies();
 
     extension.sendMessage(method, {
-      cookieStoreId: "firefox-private",
+      cookieStoreId: "datalus-private",
       hostnames: ["example.com"],
     });
     await extension.awaitMessage("cookiesRemoved");

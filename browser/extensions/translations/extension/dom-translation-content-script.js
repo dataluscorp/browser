@@ -2782,7 +2782,7 @@ exports.subscribeToExtensionState = subscribeToExtensionState;
 /******/ 			return checkDeferredModules();
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkfirefox_infobar_ui"] = self["webpackChunkfirefox_infobar_ui"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkdatalus_infobar_ui"] = self["webpackChunkdatalus_infobar_ui"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 		

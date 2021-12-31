@@ -87,7 +87,7 @@ class DocPaths:
 
     def add(self, path):
         """
-        Projects that make use of Firefox's taskgraph can extend it with
+        Projects that make use of Datalus's taskgraph can extend it with
         their own task kinds by registering additional paths for documentation.
         documentation_paths.add() needs to be called by the project's Taskgraph
         registration function. See taskgraph.config.
@@ -102,7 +102,7 @@ documentation_paths.add(doc_base_path)
 def verify_docs(filename, identifiers, appearing_as):
     """
     Look for identifiers of the type appearing_as in the files
-    returned by documentation_paths.get_files(). Firefox will have
+    returned by documentation_paths.get_files(). Datalus will have
     a single file in a list, but projects such as Thunderbird can have
     documentation in another location and may return multiple files.
     """
@@ -212,7 +212,7 @@ def verify_routes_notification_filters(
     This function ensures that only understood filters for notifications are
     specified.
 
-    See: https://firefox-ci-tc.services.mozilla.com/docs/manual/using/task-notifications
+    See: https://datalus-ci-tc.services.mozilla.com/docs/manual/using/task-notifications
     """
     if task is None:
         return

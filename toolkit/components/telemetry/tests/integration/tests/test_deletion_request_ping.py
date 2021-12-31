@@ -25,10 +25,10 @@ def test_deletion_request_ping(browser, helpers):
     assert "payload" in ping
     assert "environment" not in ping["payload"]
 
-    # Close Firefox cleanly.
+    # Close Datalus cleanly.
     browser.quit(in_app=True)
 
-    # Start Firefox.
+    # Start Datalus.
     browser.start_session()
 
     # Trigger an environment change, which isn't allowed to send a ping.
@@ -40,7 +40,7 @@ def test_deletion_request_ping(browser, helpers):
     # Turn Telemetry back on.
     browser.enable_telemetry()
 
-    # Close Firefox cleanly, collecting its "main"/"shutdown" ping.
+    # Close Datalus cleanly, collecting its "main"/"shutdown" ping.
     main_ping = helpers.wait_for_ping(browser.restart, MAIN_SHUTDOWN_PING)
 
     # Ensure the "main" ping has changed its client id.

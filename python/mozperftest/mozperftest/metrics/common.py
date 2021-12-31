@@ -142,7 +142,7 @@ class MetricsStorage(object):
             self.return_code = 1
             raise MetricsMissingResultsError("Could not find any results to process.")
 
-    def get_standardized_data(self, group_name="firefox", transformer=None):
+    def get_standardized_data(self, group_name="datalus", transformer=None):
         """Returns a parsed, standardized results data set.
 
         The dataset is computed once then cached unless overwrite is used.
@@ -187,7 +187,7 @@ class MetricsStorage(object):
 
     def filtered_metrics(
         self,
-        group_name="firefox",
+        group_name="datalus",
         transformer=None,
         metrics=None,
         exclude=None,
@@ -305,7 +305,7 @@ def filtered_metrics(
     metadata,
     path,
     prefix,
-    group_name="firefox",
+    group_name="datalus",
     transformer=None,
     metrics=None,
     settings=False,

@@ -10,11 +10,11 @@ import sys
 
 
 def get_browser_args(product, channel):
-    if product == "firefox":
-        local_binary = os.path.expanduser(os.path.join("~", "build", "firefox", "firefox"))
+    if product == "datalus":
+        local_binary = os.path.expanduser(os.path.join("~", "build", "datalus", "datalus"))
         if os.path.exists(local_binary):
             return ["--binary=%s" % local_binary]
-        print("WARNING: Local firefox binary not found")
+        print("WARNING: Local datalus binary not found")
         return ["--install-browser", "--install-webdriver"]
     if product == "servo":
         return ["--install-browser", "--processes=12"]

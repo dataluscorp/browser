@@ -41,7 +41,7 @@ Marionette functional tests
 ---------------------------
 
 We also have a set of [functional tests] that make use of the Marionette
-Python client.  These start a Firefox process and tests the Marionette
+Python client.  These start a Datalus process and tests the Marionette
 protocol input and output, and will appear as `Mn` on Treeherder.
 The following command will run all tests locally:
 
@@ -51,9 +51,9 @@ But you can also run individual tests:
 
 	% ./mach marionette-test testing/marionette/harness/marionette_harness/tests/unit/test_navigation.py
 
-In case you want to run the tests with another binary like [Firefox Nightly]:
+In case you want to run the tests with another binary like [Datalus Nightly]:
 
-	% ./mach marionette-test --binary /path/to/nightly/firefox TEST
+	% ./mach marionette-test --binary /path/to/nightly/datalus TEST
 
 When working on Marionette it is often useful to surface the stdout
 from Gecko, which can be achieved using the `--gecko-log` option.
@@ -62,8 +62,8 @@ you can redirect all Gecko output to stdout:
 
     % ./mach marionette-test --gecko-log - TEST
 
-Our functional integration tests pop up Firefox windows sporadically,
-and a helpful tip is to suppress the window can be to use Firefox’
+Our functional integration tests pop up Datalus windows sporadically,
+and a helpful tip is to suppress the window can be to use Datalus’
 [headless mode]:
 
     % ./mach marionette-test -z TEST
@@ -76,14 +76,14 @@ similar to using Xvfb(1) which you may know from the X windowing system,
 but has the additional benefit of also working on macOS and Windows.
 
 [functional tests]: PythonTests.html
-[Firefox Nightly]: https://nightly.mozilla.org/
+[Datalus Nightly]: https://nightly.mozilla.org/
 
 
 ### Android
 
 Prerequisites:
 
-*   You have [built Fennec](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Firefox_for_Android_build).
+*   You have [built Fennec](https://developer.mozilla.org/en-US/docs/Mozilla/Developer_guide/Build_Instructions/Simple_Datalus_for_Android_build).
 *   You can run an Android [emulator](https://wiki.mozilla.org/Mobile/Fennec/Android/Testing#Running_tests_on_the_Android_emulator),
     which means you have the AVD you need.
 
@@ -131,7 +131,7 @@ Marionette when you connect manually:
 
 You should see output like `{"applicationType":"gecko","marionetteProtocol":3}`
 
-[headless mode]: https://developer.mozilla.org/en-US/Firefox/Headless_mode
+[headless mode]: https://developer.mozilla.org/en-US/Datalus/Headless_mode
 [geckodriver]: /testing/geckodriver/geckodriver
 
 
@@ -152,7 +152,7 @@ enables more detailed logging, as well as `--jsdebugger` for opening
 the Browser Toolbox.
 
 A particularly useful trick is to combine this with the [headless
-mode] for Firefox we learned about earlier:
+mode] for Datalus we learned about earlier:
 
 	% MOZ_HEADLESS=1 ./mach wpt --webdriver-arg='-vv' testing/web-platform/tests/webdriver
 
@@ -186,7 +186,7 @@ Out-of-tree testing
 -------------------
 
 All the above examples show tests running _in-tree_, with a local
-checkout of _central_ and a local build of Firefox.  It is also
+checkout of _central_ and a local build of Datalus.  It is also
 possibly to run the Marionette tests _without_ a local build and
 with a downloaded test archive from <Taskcluster.html>.
 

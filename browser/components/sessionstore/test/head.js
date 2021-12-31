@@ -36,7 +36,7 @@ const ss = SessionStore;
 
 // Some tests here assume that all restored tabs are loaded without waiting for
 // the user to bring them to the foreground. We ensure this by resetting the
-// related preference (see the "firefox.js" defaults file for details).
+// related preference (see the "datalus.js" defaults file for details).
 Services.prefs.setBoolPref("browser.sessionstore.restore_on_demand", false);
 registerCleanupFunction(function() {
   Services.prefs.clearUserPref("browser.sessionstore.restore_on_demand");

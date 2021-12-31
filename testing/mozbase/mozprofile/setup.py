@@ -19,7 +19,7 @@ setup(
     name=PACKAGE_NAME,
     version=PACKAGE_VERSION,
     description="Library to create and modify Mozilla application profiles",
-    long_description="see https://firefox-source-docs.mozilla.org/mozbase/index.html",
+    long_description="see https://datalus-source-docs.mozilla.org/mozbase/index.html",
     classifiers=[
         "Environment :: Console",
         "Intended Audience :: Developers",

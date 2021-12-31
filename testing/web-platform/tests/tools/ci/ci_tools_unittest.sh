@@ -8,7 +8,7 @@ cd $WPT_ROOT
 run_applicable_tox () {
     # instead of just running TOXENV (e.g., py38)
     # run all environments that start with TOXENV
-    # (e.g., py38-firefox as well as py38)
+    # (e.g., py38-datalus as well as py38)
     local OLD_TOXENV="$TOXENV"
     unset TOXENV
     local RUN_ENVS=$(tox -l | grep "^${OLD_TOXENV}\(\-\|\$\)" | tr "\n" ",")

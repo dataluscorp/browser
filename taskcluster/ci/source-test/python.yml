@@ -34,7 +34,7 @@ job-defaults:
             - 'config/mozunit/**'
             - 'python/mach_commands.py'
 
-firefox-ci:
+datalus-ci:
     description: taskcluster/gecko_taskgraph unit tests
     python-version: [3]
     treeherder:
@@ -49,7 +49,7 @@ firefox-ci:
             - 'tools/tryselect/selectors/auto.py'
 
 fog:
-    description: Python unit tests for Firefox on Glean
+    description: Python unit tests for Datalus on Glean
     platform:
         - linux1804-64/opt
         - macosx1015-64/opt
@@ -127,7 +127,7 @@ mochitest-harness:
         command: >
             source /builds/worker/scripts/xvfb.sh &&
             start_xvfb '1600x1200x24' 0 &&
-            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/firefox/firefox &&
+            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/datalus/datalus &&
             export TEST_HARNESS_ROOT=$MOZ_FETCHES_DIR/tests &&
             ./mach python-test --subsuite mochitest
     fetches:
@@ -304,7 +304,7 @@ reftest-harness:
         command: >
             source /builds/worker/scripts/xvfb.sh &&
             start_xvfb '1600x1200x24' 0 &&
-            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/firefox/firefox &&
+            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/datalus/datalus &&
             export TEST_HARNESS_ROOT=$MOZ_FETCHES_DIR/tests &&
             ./mach python-test --subsuite reftest
     fetches:
@@ -494,7 +494,7 @@ telemetry-integration-tests:
         command: >
             source /builds/worker/scripts/xvfb.sh &&
             start_xvfb '1600x1200x24' 0 &&
-            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/firefox/firefox &&
+            export GECKO_BINARY_PATH=$MOZ_FETCHES_DIR/datalus/datalus &&
             ./mach python-test --subsuite telemetry-integration-tests
     fetches:
         build:

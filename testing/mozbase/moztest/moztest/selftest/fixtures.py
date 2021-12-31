@@ -1,7 +1,7 @@
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
-"""Pytest fixtures to help set up Firefox and a tests archive
+"""Pytest fixtures to help set up Datalus and a tests archive
 in test harness selftests.
 """
 
@@ -91,13 +91,13 @@ def setup_test_harness(request, flavor="plain"):
 
 @pytest.fixture(scope="session")
 def binary():
-    """Return a Firefox binary"""
+    """Return a Datalus binary"""
     try:
         return build.get_binary_path()
     except Exception:
         pass
 
-    app = "firefox"
+    app = "datalus"
     bindir = os.path.join(os.environ["PYTHON_TEST_TMP"], app)
     if os.path.isdir(bindir):
         try:

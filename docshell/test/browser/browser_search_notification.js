@@ -41,7 +41,7 @@ add_task(async function() {
   let tab = await BrowserTestUtils.openNewForegroundTab(gBrowser);
   gBrowser.selectedTab = tab;
 
-  gURLBar.value = "firefox";
+  gURLBar.value = "datalus";
   gURLBar.handleCommand();
 
   let [subject, data] = await TestUtils.topicObserved("keyword-search");
@@ -49,7 +49,7 @@ add_task(async function() {
   let engine = Services.search.defaultEngine;
   Assert.ok(engine, "Have default search engine.");
   Assert.equal(engine, subject, "Notification subject is engine.");
-  Assert.equal(data, "firefox", "Notification data is search term.");
+  Assert.equal(data, "datalus", "Notification data is search term.");
 
   gBrowser.removeTab(tab);
 });

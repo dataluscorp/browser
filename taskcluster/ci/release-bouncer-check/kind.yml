@@ -45,24 +45,24 @@ job-defaults:
         tier: 1
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         index:
-            product: firefox
-            job-name: firefox-release-bouncer-check
+            product: datalus
+            job-name: datalus-release-bouncer-check
         run:
             config:
                 by-release-type:
                     beta:
-                        - releases/bouncer_firefox_beta.py
+                        - releases/bouncer_datalus_beta.py
                     release:
-                        - releases/bouncer_firefox_release.py
+                        - releases/bouncer_datalus_release.py
                     esr.*:
-                        - releases/bouncer_firefox_esr.py
+                        - releases/bouncer_datalus_esr.py
                     default:
-                        - releases/bouncer_firefox_beta.py
+                        - releases/bouncer_datalus_beta.py
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
 
     devedition:
         shipping-product: devedition
@@ -71,6 +71,6 @@ jobs:
             job-name: devedition-release-bouncer-check
         run:
             config:
-                - releases/bouncer_firefox_devedition.py
+                - releases/bouncer_datalus_devedition.py
         treeherder:
             platform: devedition-release/opt

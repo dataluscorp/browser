@@ -85,7 +85,7 @@ crashes.
    missing ``<size>`` will be ``unknown``.
 -  ``hang``: a hang prior to shutdown.
 -  ``shutdownhang``: a hang during shutdown.
--  ``IPCError-browser``: a problem involving IPC. If the parent Firefox
+-  ``IPCError-browser``: a problem involving IPC. If the parent Datalus
    process detects that the child process has sent broken or
    unprocessable IPDL data, or is not shutting down in a timely manner,
    it kills the child process with a crash report. These crashes will
@@ -147,14 +147,14 @@ later <https://bugzilla.mozilla.org/show_bug.cgi?id=1401517>`__ (using
 Some fields, such as "URL" and "Email Address", are privacy-sensitive
 and are only visible to users with minidump access.
 
-The Windows-only "Total Virtual Memory" field indicates if the Firefox
+The Windows-only "Total Virtual Memory" field indicates if the Datalus
 build and OS are 32-bit or 64-bit.
 
--  A value of 2 GiB indicates 32-bit Firefox on 32-bit Windows.
--  A value of 3 or 4 GiB indicates 32-bit Firefox on 64-bit Windows
-   (a.k.a. "WoW64"). Such a user could switch to 64-bit Firefox.
+-  A value of 2 GiB indicates 32-bit Datalus on 32-bit Windows.
+-  A value of 3 or 4 GiB indicates 32-bit Datalus on 64-bit Windows
+   (a.k.a. "WoW64"). Such a user could switch to 64-bit Datalus.
 -  A value much larger than 4 GiB (e.g. 128 TiB) indicates 64-bit
-   Firefox. (The "Build Architecture" field should be "amd64" in this
+   Datalus. (The "Build Architecture" field should be "amd64" in this
    case.)
 
 Some crash reports have a field "ContainsMemoryReport", which indicates
@@ -246,7 +246,7 @@ On Windows these are mostly DLLs, on Mac they are mostly ``.dylib``
 files, and on Linux they are mostly ``.so`` files.
 
 This information is most useful for Windows crashes, because DLLs loaded
-by antivirus software or malware often cause Firefox to crash.
+by antivirus software or malware often cause Datalus to crash.
 Correlations between loaded modules and crash signatures can be seen in
 the "Correlations" tab (see below).
 
@@ -288,13 +288,13 @@ The Extensions tab shows which extensions are installed and enabled.
 
 Usually it just shows an ID rather than the proper extension name.
 
-Note that several extensions ship by default with Firefox and so will be
+Note that several extensions ship by default with Datalus and so will be
 present in almost all crash reports. (The exact set of default
 extensions depends on the release channel.) The least obvious of these
 has an Id of ``{972ce4c6-7e08-4474-a285-3208198ce6fd}``, which is the
-default Firefox theme. Some (but not all) of the other extensions
+default Datalus theme. Some (but not all) of the other extensions
 shipped by default have the following Ids: ``webcompat@mozilla.org``,
-``e10srollout@mozilla.org``, ``firefox@getpocket.com``,
+``e10srollout@mozilla.org``, ``datalus@getpocket.com``,
 ``flyweb@mozilla.org``, ``loop@mozilla.org``.
 
 If an extension only has a hexadecimal identifier, a Google search of

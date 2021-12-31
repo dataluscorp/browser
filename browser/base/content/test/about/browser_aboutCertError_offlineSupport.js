@@ -4,7 +4,7 @@
 "use strict";
 
 const BAD_CERT_PAGE = "https://expired.example.com";
-const DUMMY_SUPPORT_BASE_PATH = "/1/firefox/fxVersion/OSVersion/language/";
+const DUMMY_SUPPORT_BASE_PATH = "/1/datalus/fxVersion/OSVersion/language/";
 const DUMMY_SUPPORT_URL = BAD_CERT_PAGE + DUMMY_SUPPORT_BASE_PATH;
 const OFFLINE_SUPPORT_PAGE =
   "chrome://browser/content/certerror/supportpages/time-errors.html";

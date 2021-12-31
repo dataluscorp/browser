@@ -37,7 +37,7 @@ with.optout:
     release_channel_collection: opt-out
     expiry_version: never
     products:
-      - firefox
+      - datalus
     extra_keys:
       message: a message 1
 with.optin:
@@ -49,7 +49,7 @@ with.optin:
     description: opt-in event
     release_channel_collection: opt-in
     expiry_version: never
-    products: ['firefox', 'fennec']
+    products: ['datalus', 'fennec']
     extra_keys:
       message: a message 2
         """
@@ -63,7 +63,7 @@ with.optin:
                     "methods": ["testme1"],
                     "extra_keys": ["message"],
                     "record_on_release": True,
-                    "products": ["firefox"],
+                    "products": ["datalus"],
                 }
             },
             "with.optin": {
@@ -74,7 +74,7 @@ with.optin:
                     "methods": ["testme2"],
                     "extra_keys": ["message"],
                     "record_on_release": False,
-                    "products": ["firefox", "fennec"],
+                    "products": ["datalus", "fennec"],
                 }
             },
         }

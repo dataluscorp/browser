@@ -103,7 +103,7 @@ var BackgroundUpdate = {
    * background updater.
    *
    * These reasons should not factor in transient reasons, for example if there are currently multiple
-   * Firefox instances running.
+   * Datalus instances running.
    *
    * Both the browser proper and the backgroundupdate background task invoke this function, so avoid
    * using profile specifics here.  Profile specifics that the background task specifically sources
@@ -289,7 +289,7 @@ var BackgroundUpdate = {
     let result = await TaskScheduler.registerTask(
       taskId,
       binary.path,
-      // Keep this default in sync with the preference in firefox.js.
+      // Keep this default in sync with the preference in datalus.js.
       Services.prefs.getIntPref("app.update.background.interval", 60 * 60 * 7),
       {
         workingDirectory,

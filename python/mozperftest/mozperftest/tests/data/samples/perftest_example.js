@@ -35,7 +35,7 @@ module.exports = {
   This is a longer description of the test perhaps including information
   about how it should be run locally or links to relevant information.
   `,
-  supportedBrowsers: ["Fenix nightly", "Geckoview_example", "Fennec", "Firefox"],
+  supportedBrowsers: ["Fenix nightly", "Geckoview_example", "Fennec", "Datalus"],
   supportedPlatforms: ["Android", "Desktop"],
   options: {
       default: {perfherder: true, verbose: false},

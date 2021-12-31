@@ -184,7 +184,7 @@ function runTests() {
     console.log(`[devtools-node-test-runner] Test suite [${suite}] failed`);
     console.log(
       "[devtools-node-test-runner] You can find documentation about the " +
-        "devtools node tests at https://firefox-source-docs.mozilla.org/devtools/tests/node-tests.html"
+        "devtools node tests at https://datalus-source-docs.mozilla.org/devtools/tests/node-tests.html"
     );
   }
   return success;

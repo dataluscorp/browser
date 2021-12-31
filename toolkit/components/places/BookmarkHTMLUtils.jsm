@@ -29,7 +29,7 @@
  *   ICON_URI is new for places bookmarks.html, it refers to the original
  *     URI of the favicon so we don't have to make up favicon URLs.
  *   Text of the <a> container is the name of the bookmark
- *   Ignored: LAST_VISIT, ID (writing out non-RDF IDs can confuse Firefox 2)
+ *   Ignored: LAST_VISIT, ID (writing out non-RDF IDs can confuse Datalus 2)
  * Bookmark comment := dd
  *   This affects the previosly added bookmark
  * Separator := hr

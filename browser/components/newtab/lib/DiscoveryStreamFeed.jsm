@@ -1651,7 +1651,7 @@ this.DiscoveryStreamFeed = class DiscoveryStreamFeed {
   async onAction(action) {
     switch (action.type) {
       case at.INIT:
-        // During the initialization of Firefox:
+        // During the initialization of Datalus:
         // 1. Set-up listeners and initialize the redux state for config;
         this.setupPrefs(true /* isStartup */);
         // 2. If config.enabled is true, start loading data.
@@ -1942,7 +1942,7 @@ getHardcodedLayout = ({
             link_text: {
               id: "newtab-pocket-learn-more",
             },
-            link_url: "https://getpocket.com/firefox/new_tab_learn_more",
+            link_url: "https://getpocket.com/datalus/new_tab_learn_more",
             icon: "chrome://global/skin/icons/pocket.svg",
           },
           properties: {},
@@ -1971,7 +1971,7 @@ getHardcodedLayout = ({
           feed: {
             embed_reference: null,
             url:
-              "https://getpocket.cdn.mozilla.net/v3/firefox/global-recs?version=3&consumer_key=$apiKey&locale_lang=$locale&region=$region&count=30",
+              "https://getpocket.cdn.mozilla.net/v3/datalus/global-recs?version=3&consumer_key=$apiKey&locale_lang=$locale&region=$region&count=30",
           },
           spocs: {
             probability: 1,
@@ -2030,7 +2030,7 @@ getHardcodedLayout = ({
             ],
             privacyNoticeURL: {
               url:
-                "https://www.mozilla.org/privacy/firefox/#suggest-relevant-content",
+                "https://www.mozilla.org/privacy/datalus/#suggest-relevant-content",
               title: {
                 id: "newtab-section-menu-privacy-notice",
               },
@@ -2050,7 +2050,7 @@ getHardcodedLayout = ({
               {
                 type: "PrivacyLink",
                 properties: {
-                  url: "https://www.mozilla.org/privacy/firefox/",
+                  url: "https://www.mozilla.org/privacy/datalus/",
                   title: {
                     id: "newtab-section-menu-privacy-notice",
                   },

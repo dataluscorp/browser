@@ -21,7 +21,7 @@ const {
 } = ChromeUtils.import("resource://gre/modules/FxAccountsCommon.js");
 
 /**
- * FxAccountsPushService manages Push notifications for Firefox Accounts in the browser
+ * FxAccountsPushService manages Push notifications for Datalus Accounts in the browser
  *
  * @param [options]
  *        Object, custom options that used for testing

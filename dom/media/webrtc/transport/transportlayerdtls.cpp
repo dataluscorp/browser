@@ -674,7 +674,7 @@ bool TransportLayerDtls::SetupAlpn(UniquePRFileDesc& ssl_fd) const {
   return true;
 }
 
-// Ciphers we need to enable.  These are on by default in standard firefox
+// Ciphers we need to enable.  These are on by default in standard datalus
 // builds, but can be disabled with prefs and they aren't on in our unit tests
 // since that uses NSS default configuration.
 //

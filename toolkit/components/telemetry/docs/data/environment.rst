@@ -7,7 +7,7 @@ The environment consists of data that is expected to be characteristic for perfo
 Changes to most of these data points are detected (where possible and sensible) and will lead to a session split in the :doc:`main-ping`.
 The environment data may also be submitted by other ping types.
 
-*Note:* This is not submitted with all ping types due to privacy concerns. This and other data is inspected under the `data collection policy <https://wiki.mozilla.org/Firefox/Data_Collection>`_.
+*Note:* This is not submitted with all ping types due to privacy concerns. This and other data is inspected under the `data collection policy <https://wiki.mozilla.org/Datalus/Data_Collection>`_.
 
 Some parts of the environment must be fetched asynchronously at startup. We don't want other Telemetry components to block on waiting for the environment, so some items may be missing from it until the async fetching finished.
 This currently affects the following sections:
@@ -24,7 +24,7 @@ Structure:
     {
       build: {
         applicationId: <string>, // nsIXULAppInfo.ID
-        applicationName: <string>, // "Firefox"
+        applicationName: <string>, // "Datalus"
         architecture: <string>, // e.g. "x86", build architecture for the active build
         buildId: <string>, // e.g. "20141126041045"
         version: <string>, // e.g. "35.0"
@@ -37,7 +37,7 @@ Structure:
       settings: {
         addonCompatibilityCheckEnabled: <bool>, // Whether application compatibility is respected for add-ons
         blocklistEnabled: <bool>, // true on failure
-        isDefaultBrowser: <bool>, // whether Firefox is the default browser. On Windows, this is operationalized as whether Firefox is the default HTTP protocol handler and the default HTML file handler.
+        isDefaultBrowser: <bool>, // whether Datalus is the default browser. On Windows, this is operationalized as whether Datalus is the default HTTP protocol handler and the default HTML file handler.
         defaultSearchEngine: <string>, // e.g. "yahoo"
         defaultSearchEngineData: {, // data about the current default engine
           name: <string>, // engine name, e.g. "Yahoo"; or "NONE" if no default
@@ -67,7 +67,7 @@ Structure:
           channel: <string>, // e.g. "release", null on failure
           enabled: <bool>, // true on failure
           autoDownload: <bool>, // true on failure
-          background: <bool>, // Indicates whether updates may be installed when Firefox is not running.
+          background: <bool>, // Indicates whether updates may be installed when Datalus is not running.
         },
         userPrefs: {
           // Only prefs which are changed are listed in this block
@@ -84,7 +84,7 @@ Structure:
           variation: <string>, // name/id of the variation cohort used in the enrolled funnel experiment
           experiment: <string>, // name/id of the enrolled funnel experiment
           ua: <string>, // identifier derived from the user agent downloading the installer, e.g., chrome, Google Chrome 123
-          dltoken: <string>, // Unique token created at Firefox download time. ex: c18f86a3-f228-4d98-91bb-f90135c0aa9c
+          dltoken: <string>, // Unique token created at Datalus download time. ex: c18f86a3-f228-4d98-91bb-f90135c0aa9c
         },
         sandbox: {
           effectiveContentProcessLevel: <integer>,
@@ -93,7 +93,7 @@ Structure:
       },
       // Optional, missing if fetching the information failed or had not yet completed.
       services: {
-        // True if the user has a firefox account
+        // True if the user has a datalus account
         accountEnabled: <bool>,
         // True if the user has sync enabled.
         syncEnabled: <bool>
@@ -318,7 +318,7 @@ build
 
 buildId
 ~~~~~~~
-Firefox builds downloaded from mozilla.org use a 14-digit buildId. Builds included in other distributions may have a different format (e.g. only 10 digits).
+Datalus builds downloaded from mozilla.org use a 14-digit buildId. Builds included in other distributions may have a different format (e.g. only 10 digits).
 
 Settings
 --------
@@ -381,19 +381,19 @@ Each key in the object is the name of a preference. A key's value depends on the
 
 The following is a partial list of `collected preferences <https://searchfox.org/mozilla-central/search?q=const+DEFAULT_ENVIRONMENT_PREFS&path=>`_.
 
-- ``browser.search.suggest.enabled``: The "master switch" for search suggestions everywhere in Firefox (search bar, urlbar, etc.). Defaults to true.
+- ``browser.search.suggest.enabled``: The "master switch" for search suggestions everywhere in Datalus (search bar, urlbar, etc.). Defaults to true.
 
-- ``browser.urlbar.quicksuggest.onboardingDialogChoice``: The user's choice in the Firefox Suggest onboarding dialog. If the dialog was shown multiple times, this records the user's most recent choice. Values are the following. Empty string: The user has not made a choice (e.g., because the dialog hasn't been shown). ``accept``: The user accepted the dialog and opted in. ``settings``: The user clicked in the "Customize" button (the user remains opted out in this case). ``learn_more``: The user clicked "Learn more" (the user remains opted out). ``not_now_link``: The user clicked "Not now" (the user remains opted out). ``dismissed_escape_key``: The user dismissed the dialog by pressing the Escape key (the user remains opted out). ``dismissed_other``: The dialog was dismissed in some other unknown way, for example when the dialog is replaced with another higher priority dialog like the one shown when quitting the app (the user remains opted out).
+- ``browser.urlbar.quicksuggest.onboardingDialogChoice``: The user's choice in the Datalus Suggest onboarding dialog. If the dialog was shown multiple times, this records the user's most recent choice. Values are the following. Empty string: The user has not made a choice (e.g., because the dialog hasn't been shown). ``accept``: The user accepted the dialog and opted in. ``settings``: The user clicked in the "Customize" button (the user remains opted out in this case). ``learn_more``: The user clicked "Learn more" (the user remains opted out). ``not_now_link``: The user clicked "Not now" (the user remains opted out). ``dismissed_escape_key``: The user dismissed the dialog by pressing the Escape key (the user remains opted out). ``dismissed_other``: The dialog was dismissed in some other unknown way, for example when the dialog is replaced with another higher priority dialog like the one shown when quitting the app (the user remains opted out).
 
-- ``browser.urlbar.quicksuggest.dataCollection.enabled``: Whether the user has opted in to data collection for Firefox Suggest. This pref is set to true when the user opts in to the Firefox Suggest onboarding dialog modal. The user can also toggle the pref using a toggle switch in the Firefox Suggest preferences UI.
+- ``browser.urlbar.quicksuggest.dataCollection.enabled``: Whether the user has opted in to data collection for Datalus Suggest. This pref is set to true when the user opts in to the Datalus Suggest onboarding dialog modal. The user can also toggle the pref using a toggle switch in the Datalus Suggest preferences UI.
 
-- ``browser.urlbar.suggest.quicksuggest.nonsponsored``: True if non-sponsored Firefox Suggest suggestions are enabled in the urlbar.
+- ``browser.urlbar.suggest.quicksuggest.nonsponsored``: True if non-sponsored Datalus Suggest suggestions are enabled in the urlbar.
 
-- ``browser.urlbar.suggest.quicksuggest.sponsored``: True if sponsored Firefox Suggest suggestions are enabled in the urlbar.
+- ``browser.urlbar.suggest.quicksuggest.sponsored``: True if sponsored Datalus Suggest suggestions are enabled in the urlbar.
 
 - ``browser.urlbar.suggest.searches``: True if search suggestions are enabled in the urlbar. Defaults to false.
 
-- ``browser.zoom.full`` (deprecated): True if zoom is enabled for both text and images, that is if "Zoom Text Only" is not enabled. Defaults to true. This preference was collected in Firefox 50 to 52 (`Bug 979323 <https://bugzilla.mozilla.org/show_bug.cgi?id=979323>`_).
+- ``browser.zoom.full`` (deprecated): True if zoom is enabled for both text and images, that is if "Zoom Text Only" is not enabled. Defaults to true. This preference was collected in Datalus 50 to 52 (`Bug 979323 <https://bugzilla.mozilla.org/show_bug.cgi?id=979323>`_).
 
 - ``security.tls.version.enable-deprecated``: True if deprecated versions of TLS (1.0 and 1.1) have been enabled by the user. Defaults to false.
 
@@ -414,18 +414,18 @@ attribution
 
 This object contains the attribution data for the product installation.
 
-Attribution data is used to link installations of Firefox with the source that the user arrived at the Firefox download page from. It would indicate, for instance, when a user executed a web search for Firefox and arrived at the download page from there, directly navigated to the site, clicked on a link from a particular social media campaign, etc.
+Attribution data is used to link installations of Datalus with the source that the user arrived at the Datalus download page from. It would indicate, for instance, when a user executed a web search for Datalus and arrived at the download page from there, directly navigated to the site, clicked on a link from a particular social media campaign, etc.
 
-The attribution data is included in some versions of the default Firefox installer for Windows (the "stub" installer) and stored as part of the installation. All platforms other than Windows and also Windows installations that did not use the stub installer do not have this data and will not include the ``attribution`` object.
+The attribution data is included in some versions of the default Datalus installer for Windows (the "stub" installer) and stored as part of the installation. All platforms other than Windows and also Windows installations that did not use the stub installer do not have this data and will not include the ``attribution`` object.
 
 sandbox
 ~~~~~~~
 
-This object contains data about the state of Firefox's sandbox.
+This object contains data about the state of Datalus's sandbox.
 
 Specific keys are:
 
-- ``effectiveContentProcessLevel``: The meanings of the values are OS dependent. Details of the meanings can be found in the `Firefox prefs file <https://hg.mozilla.org/mozilla-central/file/tip/browser/app/profile/firefox.js>`_. The value here is the effective value, not the raw value, some platforms enforce a minimum sandbox level. If there is an error calculating this, it will be ``null``.
+- ``effectiveContentProcessLevel``: The meanings of the values are OS dependent. Details of the meanings can be found in the `Datalus prefs file <https://hg.mozilla.org/mozilla-central/file/tip/browser/app/profile/datalus.js>`_. The value here is the effective value, not the raw value, some platforms enforce a minimum sandbox level. If there is an error calculating this, it will be ``null``.
 - ``contentWin32kLockdownState``: The status of Win32k Lockdown for Content process. 1 = "Lockdown enabled", 2 = "Lockdown disabled -- Missing WebRender", 3 = "Lockdown disabled -- Unsupported OS", 4 = "Lockdown disabled -- User pref not set". If there is an error calculating this, it will be ``null``.
 
 profile
@@ -460,14 +460,14 @@ It's read from a file-stored timestamp from the client's profile directory.
 partner
 -------
 
-If the user is using a partner repack, this contains information identifying the repack being used, otherwise "partnerNames" will be an empty array and other entries will be null. The information may be missing when the profile just becomes available. In Firefox for desktop, the information along with other customizations defined in distribution.ini are processed later in the startup phase, and will be fully applied when "distribution-customization-complete" notification is sent.
+If the user is using a partner repack, this contains information identifying the repack being used, otherwise "partnerNames" will be an empty array and other entries will be null. The information may be missing when the profile just becomes available. In Datalus for desktop, the information along with other customizations defined in distribution.ini are processed later in the startup phase, and will be fully applied when "distribution-customization-complete" notification is sent.
 
 Distributions are most reliably identified by the ``distributionId`` field. Partner information can be found in the `partner repacks <https://github.com/mozilla-partners>`_ (`the old one <https://hg.mozilla.org/build/partner-repacks/>`_ is deprecated): it contains one private repository per partner.
 Important values for ``distributionId`` include:
 
 - "MozillaOnline" for the Mozilla China repack.
-- "canonical", for the `Ubuntu Firefox repack <http://bazaar.launchpad.net/~mozillateam/firefox/firefox.trusty/view/head:/debian/distribution.ini>`_.
-- "yandex", for the Firefox Build by Yandex.
+- "canonical", for the `Ubuntu Datalus repack <http://bazaar.launchpad.net/~mozillateam/datalus/datalus.trusty/view/head:/debian/distribution.ini>`_.
+- "yandex", for the Datalus Build by Yandex.
 
 system
 ------
@@ -495,7 +495,7 @@ addons
 activeAddons
 ~~~~~~~~~~~~
 
-Starting from Firefox 44, the length of the following string fields: ``name``, ``description`` and ``version`` is limited to 100 characters. The same limitation applies to the same fields in ``theme``.
+Starting from Datalus 44, the length of the following string fields: ``name``, ``description`` and ``version`` is limited to 100 characters. The same limitation applies to the same fields in ``theme``.
 
 Some of the fields in the record for each add-on are not available during startup.  The fields that will always be present are ``id``, ``version``, ``type``, ``updateDate``, ``scope``, ``isSystem``, ``isWebExtension``, and ``multiprocessCompatible``.  All the other fields documented above become present shortly after the ``sessionstore-windows-restored`` observer topic is notified.
 
@@ -520,18 +520,18 @@ Note that this list includes other types of deliveries, including Normandy rollo
 Version History
 ---------------
 
-- Firefox 88:
+- Datalus 88:
 
   - Removed ``addons.activePlugins`` as part of removing NPAPI plugin support. (`bug 1682030 <https://bugzilla.mozilla.org/show_bug.cgi?id=1682030>`_)
 
-- Firefox 70:
+- Datalus 70:
 
   - Added ``experiments.<experiment id>.enrollmentId``. (`bug 1555172 <https://bugzilla.mozilla.org/show_bug.cgi?id=1555172>`_)
 
-- Firefox 67:
+- Datalus 67:
 
   - Removed ``persona``. The ``addons.activeAddons`` list should be used instead. (`bug 1525511 <https://bugzilla.mozilla.org/show_bug.cgi?id=1525511>`_)
 
-- Firefox 61:
+- Datalus 61:
 
   - Removed empty ``addons.activeExperiment`` (`bug 1452935 <https://bugzilla.mozilla.org/show_bug.cgi?id=1452935>`_).

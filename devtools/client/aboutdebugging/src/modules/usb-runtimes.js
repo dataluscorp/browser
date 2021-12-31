@@ -71,7 +71,7 @@ class UnpluggedUsbRuntime {
 const devices = new Map();
 
 /**
- * This module provides a collection of helper methods to detect USB runtimes whom Firefox
+ * This module provides a collection of helper methods to detect USB runtimes whom Datalus
  * is running on.
  */
 function addUSBRuntimesObserver(listener) {

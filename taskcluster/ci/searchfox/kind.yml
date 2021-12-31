@@ -17,7 +17,7 @@ transforms:
 
 job-defaults:
     index:
-        product: firefox
+        product: datalus
     treeherder:
         symbol: Searchfox(idx)
         kind: build
@@ -43,7 +43,7 @@ jobs:
             using: mozharness
             actions: [build]
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_sub_linux_configs/64_searchfox_and_debug.py
             script: "mozharness/scripts/fx_desktop_build.py"
             tooltool-downloads: public
@@ -78,7 +78,7 @@ jobs:
             using: mozharness
             actions: [get-secrets, build]
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_mac_64_cross_builds.py
             script: "mozharness/scripts/fx_desktop_build.py"
             custom-build-variant-cfg: cross-debug-searchfox
@@ -122,7 +122,7 @@ jobs:
             script: mozharness/scripts/fx_desktop_build.py
             secrets: true
             config:
-                - builds/releng_base_firefox.py
+                - builds/releng_base_datalus.py
                 - builds/releng_base_linux_64_builds.py
                 - builds/taskcluster_sub_win64/searchfox_debug.py
             tooltool-downloads: internal

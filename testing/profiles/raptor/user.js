@@ -33,7 +33,7 @@ user_pref("toolkit.content-background-hang-monitor.disabled", true);
 // https://developer.mozilla.org/en-US/docs/Mozilla/Benchmarking#Async_Stacks
 user_pref('javascript.options.asyncstack', false);
 
-// disable Firefox Telemetry (and some other things too)
+// disable Datalus Telemetry (and some other things too)
 // https://bugzilla.mozilla.org/show_bug.cgi?id=1533879
 user_pref('datareporting.healthreport.uploadEnabled', false);
 

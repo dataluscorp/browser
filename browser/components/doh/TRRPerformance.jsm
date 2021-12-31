@@ -56,7 +56,7 @@ XPCOMUtils.defineLazyPreferenceGetter(
   this,
   "kCanonicalDomain",
   "doh-rollout.trrRace.canonicalDomain",
-  "firefox-dns-perf-test.net."
+  "datalus-dns-perf-test.net."
 );
 
 // The number of random subdomains to resolve per TRR.

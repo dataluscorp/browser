@@ -108,14 +108,14 @@ jobs:
   - template: tools/ci/azure/install_fonts.yml
   - template: tools/ci/azure/install_certs.yml
   - template: tools/ci/azure/install_chrome.yml
-  - template: tools/ci/azure/install_firefox.yml
+  - template: tools/ci/azure/install_datalus.yml
   - template: tools/ci/azure/install_safari.yml
   - template: tools/ci/azure/update_hosts.yml
   - template: tools/ci/azure/update_manifest.yml
   - script: ./wpt run --yes --no-manifest-update --manifest MANIFEST.json --metadata infrastructure/metadata/ --log-mach - --log-mach-level info --channel dev chrome infrastructure/
     displayName: 'Run tests (Chrome Dev)'
-  - script: ./wpt run --yes --no-manifest-update --manifest MANIFEST.json --metadata infrastructure/metadata/ --log-mach - --log-mach-level info --channel nightly firefox infrastructure/
-    displayName: 'Run tests (Firefox Nightly)'
+  - script: ./wpt run --yes --no-manifest-update --manifest MANIFEST.json --metadata infrastructure/metadata/ --log-mach - --log-mach-level info --channel nightly datalus infrastructure/
+    displayName: 'Run tests (Datalus Nightly)'
   - script: ./wpt run --yes --no-manifest-update --manifest MANIFEST.json --metadata infrastructure/metadata/ --log-mach - --log-mach-level info --channel preview safari infrastructure/
     displayName: 'Run tests (Safari Technology Preview)'
   - template: tools/ci/azure/publish_logs.yml
@@ -196,7 +196,7 @@ jobs:
     inputs:
       versionSpec: '3.6'
   - template: tools/ci/azure/install_chrome.yml
-  - template: tools/ci/azure/install_firefox.yml
+  - template: tools/ci/azure/install_datalus.yml
   - template: tools/ci/azure/update_hosts.yml
   - template: tools/ci/azure/update_manifest.yml
   - template: tools/ci/azure/tox_pytest.yml
@@ -216,7 +216,7 @@ jobs:
     inputs:
       versionSpec: '3.9'
   - template: tools/ci/azure/install_chrome.yml
-  - template: tools/ci/azure/install_firefox.yml
+  - template: tools/ci/azure/install_datalus.yml
   - template: tools/ci/azure/update_hosts.yml
   - template: tools/ci/azure/update_manifest.yml
   - template: tools/ci/azure/tox_pytest.yml
@@ -305,10 +305,10 @@ jobs:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.6'
-  # currently just using the outdated Chrome/Firefox on the VM rather than
+  # currently just using the outdated Chrome/Datalus on the VM rather than
   # figuring out how to install Chrome Dev channel on Windows
   # - template: tools/ci/azure/install_chrome.yml
-  # - template: tools/ci/azure/install_firefox.yml
+  # - template: tools/ci/azure/install_datalus.yml
   - template: tools/ci/azure/update_hosts.yml
   - template: tools/ci/azure/update_manifest.yml
   - template: tools/ci/azure/tox_pytest.yml
@@ -327,10 +327,10 @@ jobs:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.9'
-  # currently just using the outdated Chrome/Firefox on the VM rather than
+  # currently just using the outdated Chrome/Datalus on the VM rather than
   # figuring out how to install Chrome Dev channel on Windows
   # - template: tools/ci/azure/install_chrome.yml
-  # - template: tools/ci/azure/install_firefox.yml
+  # - template: tools/ci/azure/install_datalus.yml
   - template: tools/ci/azure/update_hosts.yml
   - template: tools/ci/azure/update_manifest.yml
   - template: tools/ci/azure/tox_pytest.yml

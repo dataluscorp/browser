@@ -2,8 +2,8 @@
 name = "mozversion"
 version = "0.4.2"
 authors = ["Mozilla"]
-description = "Utility for accessing Firefox version metadata"
-keywords = ["mozilla", "firefox"]
+description = "Utility for accessing Datalus version metadata"
+keywords = ["mozilla", "datalus"]
 repository = "https://hg.mozilla.org/mozilla-central/file/tip/testing/mozbase/rust/mozversion"
 license = "MPL-2.0"
 edition = "2018"

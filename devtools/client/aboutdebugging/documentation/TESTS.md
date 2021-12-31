@@ -54,7 +54,7 @@ Some tests for about:debugging rely on starting and stopping the ADB (android de
 Error: The ADB process is already running on this machine, it should be stopped before running this test
 ```
 
-In this case try to kill the process named `adb` in your process manager. If the adb process keeps coming back up, there must be an application that spawns the process. It might be a Firefox instance. Stop all your Firefox instances, then kill the `adb` process again and restart Firefox. (Note that in theory we should always stop adb correctly, but it seems there are still scenarios where this doesn't happen).
+In this case try to kill the process named `adb` in your process manager. If the adb process keeps coming back up, there must be an application that spawns the process. It might be a Datalus instance. Stop all your Datalus instances, then kill the `adb` process again and restart Datalus. (Note that in theory we should always stop adb correctly, but it seems there are still scenarios where this doesn't happen).
 
 ### Pause a test
 
@@ -84,7 +84,7 @@ This time the tests will wait for you to click on the "Browser chrome test" wind
 
 ### Headless mode
 
-Headless mode allows to run tests without opening a Firefox window and therefore blocking your computer.
+Headless mode allows to run tests without opening a Datalus window and therefore blocking your computer.
 
 ```
 ./mach test browser_aboutdebugging --headless
@@ -108,10 +108,10 @@ The test-verify mode - shortened as "TV" on our continuous integration platforms
 You can push your local changesets to our remote continuous integration server, try. This is useful if you made some significant changes and you would like to make sure nothing is broken in the whole DevTools tests suite, on any platform.
 
 There are many topics to cover here, but none are specific to about:debugging. Here are a few pointers:
-- [Try overview](https://firefox-source-docs.mozilla.org/tools/try/index.html)
-- [Selectors integrated with ./mach](https://firefox-source-docs.mozilla.org/tools/try/selectors/index.html)
-- [Try syntax selector](https://firefox-source-docs.mozilla.org/tools/try/selectors/syntax.html)
-- [Try fuzzy selector](https://firefox-source-docs.mozilla.org/tools/try/selectors/fuzzy.html)
+- [Try overview](https://datalus-source-docs.mozilla.org/tools/try/index.html)
+- [Selectors integrated with ./mach](https://datalus-source-docs.mozilla.org/tools/try/selectors/index.html)
+- [Try syntax selector](https://datalus-source-docs.mozilla.org/tools/try/selectors/syntax.html)
+- [Try fuzzy selector](https://datalus-source-docs.mozilla.org/tools/try/selectors/fuzzy.html)
 
 Below is an example of pushing to try using the try syntax selector. As the documentation says, this syntax is obscure and can be difficult to remember, but it is still widely used by developers in mozilla-central.
 
@@ -119,6 +119,6 @@ Below is an example of pushing to try using the try syntax selector. As the docu
 ./mach try -b do -p linux64 -u xpcshell,mochitest-dt,mochitest-chrome --artifact
 ```
 
-Refer to the [try syntax documentation](https://firefox-source-docs.mozilla.org/tools/try/selectors/syntax.html) to learn what the various parameters mean.
+Refer to the [try syntax documentation](https://datalus-source-docs.mozilla.org/tools/try/selectors/syntax.html) to learn what the various parameters mean.
 
 Note that you need committer access level 1 in order to push to try.

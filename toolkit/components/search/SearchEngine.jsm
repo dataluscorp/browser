@@ -637,7 +637,7 @@ class SearchEngine {
    * @param {object} options
    *   The options for this search engine.
    * @param {boolean} options.isAppProvided
-   *   Indicates whether the engine is provided by Firefox, either
+   *   Indicates whether the engine is provided by Datalus, either
    *   shipped in omni.ja or via Normandy. If it is, it will
    *   be treated as read-only.
    * @param {string} options.loadPath
@@ -1175,7 +1175,7 @@ class SearchEngine {
     this._metaData = json._metaData || {};
     this._orderHint = json._orderHint || null;
     this._definedAliases = json._definedAliases || [];
-    // These changed keys in Firefox 80, maintain the old keys
+    // These changed keys in Datalus 80, maintain the old keys
     // for backwards compatibility.
     if (json._definedAlias) {
       this._definedAliases.push(json._definedAlias);

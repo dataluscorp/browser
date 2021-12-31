@@ -21,9 +21,9 @@
       "encoding": "WINDOWS-1251",
       "search_url": "https://www.ozon.ru/?",
       "search_form": "https://www.ozon.ru/",
-      "search_url_get_params": "context=search&text={searchTerms}&from=firefox",
+      "search_url_get_params": "context=search&text={searchTerms}&from=datalus",
       "suggest_url": "https://www.ozon.ru/JSONSuggestionHandler.ashx",
-      "suggest_url_get_params": "text={searchTerms}&from=firefox"
+      "suggest_url_get_params": "text={searchTerms}&from=datalus"
     }
   }
 }

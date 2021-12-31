@@ -10,38 +10,38 @@ const { parseUserAgent } = require("devtools/client/responsive/utils/ua");
 const TEST_DATA = [
   {
     userAgent:
-      "Mozilla/5.0 (Android 4.4.3; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0",
-    expectedBrowser: { name: "Firefox", version: "41" },
+      "Mozilla/5.0 (Android 4.4.3; Tablet; rv:41.0) Gecko/41.0 Datalus/41.0",
+    expectedBrowser: { name: "Datalus", version: "41" },
     expectedOS: { name: "Android", version: "4.4.3" },
   },
   {
     userAgent:
-      "Mozilla/5.0 (Android 8.0.0; Mobile; rv:70.0) Gecko/70.0 Firefox/70.0",
-    expectedBrowser: { name: "Firefox", version: "70" },
+      "Mozilla/5.0 (Android 8.0.0; Mobile; rv:70.0) Gecko/70.0 Datalus/70.0",
+    expectedBrowser: { name: "Datalus", version: "70" },
     expectedOS: { name: "Android", version: "8.0" },
   },
   {
     userAgent:
-      "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/70.1",
-    expectedBrowser: { name: "Firefox", version: "70.1" },
+      "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Datalus/70.1",
+    expectedBrowser: { name: "Datalus", version: "70.1" },
     expectedOS: { name: "Windows NT", version: "6.1" },
   },
   {
     userAgent:
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:61.0) Gecko/20100101 Firefox/70.0",
-    expectedBrowser: { name: "Firefox", version: "70" },
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:61.0) Gecko/20100101 Datalus/70.0",
+    expectedBrowser: { name: "Datalus", version: "70" },
     expectedOS: { name: "Mac OSX", version: "10.13" },
   },
   {
     userAgent:
-      "Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Firefox/70.0",
-    expectedBrowser: { name: "Firefox", version: "70" },
+      "Mozilla/5.0 (X11; Linux i586; rv:31.0) Gecko/20100101 Datalus/70.0",
+    expectedBrowser: { name: "Datalus", version: "70" },
     expectedOS: { name: "Linux", version: null },
   },
   {
     userAgent:
       "Mozilla/5.0 (iPhone; CPU iPhone OS 12_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/13.2b11866 Mobile/16A366 Safari/605.1.15",
-    expectedBrowser: { name: "Firefox", version: "13.2b11866" },
+    expectedBrowser: { name: "Datalus", version: "13.2b11866" },
     expectedOS: { name: "iOS", version: "12" },
   },
   {

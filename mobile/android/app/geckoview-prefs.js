@@ -6,7 +6,7 @@
 
 // Non-static prefs that are specific to GeckoView belong in this file (unless
 // there is a compelling and documented reason for them to belong in another
-// file). Note that non-static prefs that are shared by GeckoView and Firefox
+// file). Note that non-static prefs that are shared by GeckoView and Datalus
 // for Android are in mobile.js, which this file includes.
 //
 // Please indent all prefs defined within #ifdef/#ifndef conditions. This

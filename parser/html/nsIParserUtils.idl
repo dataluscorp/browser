@@ -10,7 +10,7 @@ webidl DocumentFragment;
 webidl Element;
 
 /**
- * Non-Web HTML parser functionality to Firefox extensions and XULRunner apps.
+ * Non-Web HTML parser functionality to Datalus extensions and XULRunner apps.
  * Don't use this from within Gecko--use nsContentUtils, nsTreeSanitizer, etc.
  * directly instead.
  */

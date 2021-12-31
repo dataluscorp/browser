@@ -54,7 +54,7 @@ class ReftestRunner(MozbuildObject):
             os.symlink(self.topsrcdir, tests)
 
     def run_desktop_test(self, **kwargs):
-        """Runs a reftest, in desktop Firefox."""
+        """Runs a reftest, in desktop Datalus."""
         import runreftest
 
         args = Namespace(**kwargs)

@@ -29,7 +29,7 @@
       "description": "A bucket identifier for the addon. This is used in order to anonymize telemetry for history-sensitive targeting."
     },
     "notification_text": {
-      "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Firefox or just a plain string.",
+      "description": "The text in the small blue chicklet that appears in the URL bar. This can be a reference to a localized string in Datalus or just a plain string.",
       "oneOf": [
         {
           "type": "string",

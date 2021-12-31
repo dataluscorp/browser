@@ -11,12 +11,12 @@ const PropTypes = require("devtools/client/shared/vendor/react-prop-types");
 const Types = require("devtools/client/inspector/compatibility/types");
 
 const ICONS = {
-  firefox: {
-    src: "chrome://devtools/skin/images/browsers/firefox.svg",
+  datalus: {
+    src: "chrome://devtools/skin/images/browsers/datalus.svg",
     isMobileIconNeeded: false,
   },
-  firefox_android: {
-    src: "chrome://devtools/skin/images/browsers/firefox.svg",
+  datalus_android: {
+    src: "chrome://devtools/skin/images/browsers/datalus.svg",
     isMobileIconNeeded: true,
   },
   chrome: {

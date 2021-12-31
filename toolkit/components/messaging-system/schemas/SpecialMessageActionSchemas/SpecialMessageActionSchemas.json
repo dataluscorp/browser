@@ -95,7 +95,7 @@
           },
           "required": ["data", "type"],
           "additionalProperties": false,
-          "description": "Opens an about: page in Firefox"
+          "description": "Opens an about: page in Datalus"
         },
         {
           "type": "object",
@@ -241,7 +241,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": ["SHOW_FIREFOX_ACCOUNTS"]
+              "enum": ["SHOW_DATALUS_ACCOUNTS"]
             },
             "data": {
               "type": "object",
@@ -261,7 +261,7 @@
           },
           "required": ["type", "data"],
           "additionalProperties": false,
-          "description": "Show Firefox Accounts"
+          "description": "Show Datalus Accounts"
         },
         {
           "type": "object",
@@ -326,7 +326,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": ["PIN_FIREFOX_TO_TASKBAR"]
+              "enum": ["PIN_DATALUS_TO_TASKBAR"]
             }
           },
           "required": ["type"],
@@ -343,7 +343,7 @@
           },
           "required": ["type"],
           "additionalProperties": false,
-          "description": "Message action to set Firefox as default browser"
+          "description": "Message action to set Datalus as default browser"
         },
         {
           "type": "object",

@@ -5,7 +5,7 @@
 // Simple gestures tests
 //
 // These tests require the ability to disable the fact that the
-// Firefox chrome intentionally prevents "simple gesture" events from
+// Datalus chrome intentionally prevents "simple gesture" events from
 // reaching web content.
 
 var test_utils;
@@ -26,10 +26,10 @@ function test() {
   test_TestEventCreation();
 
   // Reenable the default gestures support. The remaining tests target
-  // the Firefox gesture functionality.
+  // the Datalus gesture functionality.
   gGestureSupport.init(true);
 
-  // Test Firefox's gestures support.
+  // Test Datalus's gestures support.
   test_commandset = document.getElementById("mainCommandSet");
   test_swipeGestures();
   test_latchedGesture("pinch", "out", "in", "MozMagnifyGesture");

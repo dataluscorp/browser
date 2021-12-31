@@ -1,4 +1,4 @@
-# Firefox on macOS
+# Datalus on macOS
 
 ```eval_rst
 .. toctree::

@@ -42,7 +42,7 @@ const {
   STORAGE_VERSION,
   VERSION_OUT_OF_DATE,
   WEAVE_VERSION,
-  kFirefoxShuttingDown,
+  kDatalusShuttingDown,
   kFirstSyncChoiceNotMade,
   kSyncBackoffNotMet,
   kSyncMasterPasswordLocked,
@@ -388,7 +388,7 @@ Sync11Service.prototype = {
     Services.prefs.addObserver(PREFS_BRANCH + "engine.", this);
 
     if (!this.enabled) {
-      this._log.info("Firefox Sync disabled.");
+      this._log.info("Datalus Sync disabled.");
     }
 
     this._updateCachedURLs();
@@ -1303,7 +1303,7 @@ Sync11Service.prototype = {
     } else if (Svc.Prefs.get("firstSync") == "notReady") {
       reason = kFirstSyncChoiceNotMade;
     } else if (!Async.isAppReady()) {
-      reason = kFirefoxShuttingDown;
+      reason = kDatalusShuttingDown;
     }
 
     if (ignore && ignore.includes(reason)) {

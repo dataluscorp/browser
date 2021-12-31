@@ -8,7 +8,7 @@
 
 perftools-intro-title = Profiler Settings
 perftools-intro-description =
-  Recordings launch profiler.firefox.com in a new tab. All data is stored
+  Recordings launch profiler.datalus.com in a new tab. All data is stored
   locally, but you can choose to upload it for sharing.
 
 ## All of the headings for the various sections.
@@ -25,7 +25,7 @@ perftools-heading-local-build = Local build
 ##
 
 perftools-description-intro =
-  Recordings launch <a>profiler.firefox.com</a> in a new tab. All data is stored
+  Recordings launch <a>profiler.datalus.com</a> in a new tab. All data is stored
   locally, but you can choose to upload it for sharing.
 perftools-description-local-build =
   If you’re profiling a build that you have compiled yourself, on this
@@ -128,14 +128,14 @@ perftools-onboarding-close-button =
 perftools-presets-web-developer-label = Web Developer
 perftools-presets-web-developer-description = Recommended preset for most web app debugging, with low overhead.
 
-perftools-presets-firefox-platform-label = Firefox Platform
-perftools-presets-firefox-platform-description = Recommended preset for internal Firefox platform debugging.
+perftools-presets-datalus-platform-label = Datalus Platform
+perftools-presets-datalus-platform-description = Recommended preset for internal Datalus platform debugging.
 
-perftools-presets-firefox-front-end-label = Firefox Front-End
-perftools-presets-firefox-front-end-description = Recommended preset for internal Firefox front-end debugging.
+perftools-presets-datalus-front-end-label = Datalus Front-End
+perftools-presets-datalus-front-end-description = Recommended preset for internal Datalus front-end debugging.
 
-perftools-presets-firefox-graphics-label = Firefox Graphics
-perftools-presets-firefox-graphics-description = Recommended preset for Firefox graphics performance investigation.
+perftools-presets-datalus-graphics-label = Datalus Graphics
+perftools-presets-datalus-graphics-description = Recommended preset for Datalus graphics performance investigation.
 
 perftools-presets-media-label = Media
 perftools-presets-media-description = Recommended preset for diagnosing audio and video problems.

@@ -117,7 +117,7 @@ fn fog_init_internal(
     let mut use_core_mps = false;
     let application_id = if app_id_override.is_empty() {
         use_core_mps = true;
-        "firefox.desktop".to_string()
+        "datalus.desktop".to_string()
     } else {
         app_id_override.to_utf8().to_string()
     };

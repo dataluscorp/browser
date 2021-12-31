@@ -420,7 +420,7 @@ class TestBuildReader(unittest.TestCase):
         v = reader.files_info(["bug_component/simple/moz.build"])
         self.assertEqual(len(v), 1)
         flags = v["bug_component/simple/moz.build"]
-        self.assertEqual(flags["BUG_COMPONENT"].product, "Firefox Build System")
+        self.assertEqual(flags["BUG_COMPONENT"].product, "Datalus Build System")
         self.assertEqual(flags["BUG_COMPONENT"].component, "General")
 
     def test_files_bug_component_different_matchers(self):
@@ -439,9 +439,9 @@ class TestBuildReader(unittest.TestCase):
         cpp_flags = v["bug_component/different-matchers/bar.cpp"]
         misc_flags = v["bug_component/different-matchers/baz.misc"]
 
-        self.assertEqual(js_flags["BUG_COMPONENT"], BugzillaComponent("Firefox", "JS"))
+        self.assertEqual(js_flags["BUG_COMPONENT"], BugzillaComponent("Datalus", "JS"))
         self.assertEqual(
-            cpp_flags["BUG_COMPONENT"], BugzillaComponent("Firefox", "C++")
+            cpp_flags["BUG_COMPONENT"], BugzillaComponent("Datalus", "C++")
         )
         self.assertEqual(
             misc_flags["BUG_COMPONENT"],
@@ -466,11 +466,11 @@ class TestBuildReader(unittest.TestCase):
         )
         self.assertEqual(
             v["bug_component/final/Makefile.in"]["BUG_COMPONENT"],
-            BugzillaComponent("Firefox Build System", "General"),
+            BugzillaComponent("Datalus Build System", "General"),
         )
         self.assertEqual(
             v["bug_component/final/subcomponent/Makefile.in"]["BUG_COMPONENT"],
-            BugzillaComponent("Firefox Build System", "General"),
+            BugzillaComponent("Datalus Build System", "General"),
         )
         self.assertEqual(
             v["bug_component/final/subcomponent/bar"]["BUG_COMPONENT"],

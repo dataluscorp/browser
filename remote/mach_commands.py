@@ -402,7 +402,7 @@ class PuppeteerRunner(MozbuildObject):
           Path for the browser binary to use.  Defaults to the local
           build.
         `headless`:
-          Boolean to indicate whether to activate Firefox' headless mode.
+          Boolean to indicate whether to activate Datalus' headless mode.
         `extra_prefs`:
           Dictionary of extra preferences to write to the profile,
           before invoking npm.  Overrides default preferences.
@@ -417,7 +417,7 @@ class PuppeteerRunner(MozbuildObject):
         setup()
 
         binary = params.get("binary") or self.get_binary_path()
-        product = params.get("product", "firefox")
+        product = params.get("product", "datalus")
 
         env = {
             # Print browser process ouptut
@@ -442,9 +442,9 @@ class PuppeteerRunner(MozbuildObject):
             "20000",
             "--no-parallel",
         ]
-        if product == "firefox":
+        if product == "datalus":
             env["BINARY"] = binary
-            env["PUPPETEER_PRODUCT"] = "firefox"
+            env["PUPPETEER_PRODUCT"] = "datalus"
 
             env["MOZ_WEBRENDER"] = "%d" % params.get("enable_webrender", False)
 
@@ -458,7 +458,7 @@ class PuppeteerRunner(MozbuildObject):
             prefs[k] = mozprofile.Preferences.cast(v)
 
         if prefs:
-            extra_options["extraPrefsFirefox"] = prefs
+            extra_options["extraPrefsDatalus"] = prefs
 
         if extra_options:
             env["EXTRA_LAUNCH_OPTIONS"] = json.dumps(extra_options)
@@ -466,7 +466,7 @@ class PuppeteerRunner(MozbuildObject):
         expected_path = os.path.join(
             os.path.dirname(__file__), "test", "puppeteer-expected.json"
         )
-        if product == "firefox" and os.path.exists(expected_path):
+        if product == "datalus" and os.path.exists(expected_path):
             with open(expected_path) as f:
                 expected_data = json.load(f)
         else:
@@ -507,12 +507,12 @@ class PuppeteerRunner(MozbuildObject):
 def create_parser_puppeteer():
     p = argparse.ArgumentParser()
     p.add_argument(
-        "--product", type=str, default="firefox", choices=["chrome", "firefox"]
+        "--product", type=str, default="datalus", choices=["chrome", "datalus"]
     )
     p.add_argument(
         "--binary",
         type=str,
-        help="Path to browser binary.  Defaults to local Firefox build.",
+        help="Path to browser binary.  Defaults to local Datalus build.",
     )
     p.add_argument(
         "--ci",
@@ -596,7 +596,7 @@ def puppeteer_test(
     extra_options=None,
     verbosity=0,
     tests=None,
-    product="firefox",
+    product="datalus",
     write_results=None,
     subset=False,
     **kwargs
@@ -611,7 +611,7 @@ def puppeteer_test(
         logger.error("Expected either 'test_objects' or 'tests'")
         exit(1)
 
-    if product != "firefox" and extra_prefs is not None:
+    if product != "datalus" and extra_prefs is not None:
         logger.error("User preferences are not recognized by %s" % product)
         exit(1)
 

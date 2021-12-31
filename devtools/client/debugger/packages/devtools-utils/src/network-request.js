@@ -5,7 +5,7 @@
 const InlineBase64JSON = "data:application/json;";
 
 // opts is ignored because this is only used in local development and
-// replaces a more powerful network request from Firefox that can be
+// replaces a more powerful network request from Datalus that can be
 // configured.
 function networkRequest(url, opts) {
   if (url.startsWith(InlineBase64JSON)) {

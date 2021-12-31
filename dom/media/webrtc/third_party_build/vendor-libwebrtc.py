@@ -11,7 +11,7 @@ import sys
 import tarfile
 
 
-LIBWEBRTC_USED_IN_FIREFOX = [
+LIBWEBRTC_USED_IN_DATALUS = [
     "AUTHORS",
     "LICENSE",
     "OWNERS",
@@ -100,7 +100,7 @@ def unpack(target):
     tarfile.open(target_archive).extractall(path=target_path)
 
     if target == "libwebrtc":
-        for path in LIBWEBRTC_USED_IN_FIREFOX:
+        for path in LIBWEBRTC_USED_IN_DATALUS:
             try:
                 shutil.rmtree(os.path.join(LIBWEBRTC_DIR, path))
             except FileNotFoundError:
@@ -108,15 +108,15 @@ def unpack(target):
             except NotADirectoryError:
                 pass
 
-        if os.path.exists(os.path.join(target_path, LIBWEBRTC_USED_IN_FIREFOX[0])):
-            for path in LIBWEBRTC_USED_IN_FIREFOX:
+        if os.path.exists(os.path.join(target_path, LIBWEBRTC_USED_IN_DATALUS[0])):
+            for path in LIBWEBRTC_USED_IN_DATALUS:
                 shutil.move(
                     os.path.join(target_path, path), os.path.join(LIBWEBRTC_DIR, path)
                 )
         else:
             # GitHub packs everything inside a separate directory
             target_path = os.path.join(target_path, os.listdir(target_path)[0])
-            for path in LIBWEBRTC_USED_IN_FIREFOX:
+            for path in LIBWEBRTC_USED_IN_DATALUS:
                 shutil.move(
                     os.path.join(target_path, path), os.path.join(LIBWEBRTC_DIR, path)
                 )

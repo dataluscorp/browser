@@ -32,5 +32,5 @@ job-template:
     attributes:
         artifact_map:
             by-release-type:
-                beta|release.*|esr.*: taskcluster/gecko_taskgraph/manifests/firefox_candidates.yml
-                default: taskcluster/gecko_taskgraph/manifests/firefox_nightly.yml
+                beta|release.*|esr.*: taskcluster/gecko_taskgraph/manifests/datalus_candidates.yml
+                default: taskcluster/gecko_taskgraph/manifests/datalus_nightly.yml

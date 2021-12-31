@@ -88,11 +88,11 @@ Example:
 }
 ```
 
-### `SHOW_FIREFOX_ACCOUNTS`
+### `SHOW_DATALUS_ACCOUNTS`
 
 * args: (none)
 
-Opens Firefox accounts sign-up page. Encodes some information that the origin was from snippets by default.
+Opens Datalus accounts sign-up page. Encodes some information that the origin was from snippets by default.
 
 ### `SHOW_MIGRATION_WIZARD`
 
@@ -106,7 +106,7 @@ Opens import wizard to bring in settings and data from another browser.
 
 Pins the currently focused tab.
 
-### `ENABLE_FIREFOX_MONITOR`
+### `ENABLE_DATALUS_MONITOR`
 
 * args:
 ```ts
@@ -120,11 +120,11 @@ Pins the currently focused tab.
 }
 ```
 
-Opens an oauth flow to enable Firefox Monitor at a given `url` and adds Firefox metrics that user given a set of `flowRequestParams`.
+Opens an oauth flow to enable Datalus Monitor at a given `url` and adds Datalus metrics that user given a set of `flowRequestParams`.
 
 #### `url`
 
-The URL should start with `https://monitor.firefox.com/oauth/init` and add various metrics tags as search params, including:
+The URL should start with `https://monitor.datalus.com/oauth/init` and add various metrics tags as search params, including:
 
 * `utm_source`
 * `utm_campaign`
@@ -135,7 +135,7 @@ You should verify the values of these search params with whoever is doing the da
 
 #### `flowRequestParams`
 
-These params are used by Firefox to add information specific to that individual user to the final oauth URL. You should include:
+These params are used by Datalus to add information specific to that individual user to the final oauth URL. You should include:
 
 * `entrypoint`
 * `utm_term`
@@ -149,9 +149,9 @@ You should verify the values with whoever is doing the data analysis (e.g. Leif 
 
 ```json
 {
-  "button_action": "ENABLE_FIREFOX_MONITOR",
+  "button_action": "ENABLE_DATALUS_MONITOR",
   "button_action_args": {
-     "url": "https://monitor.firefox.com/oauth/init?utm_source=snippets&utm_campaign=monitor-snippet-test&form_type=email&entrypoint=newtab",
+     "url": "https://monitor.datalus.com/oauth/init?utm_source=snippets&utm_campaign=monitor-snippet-test&form_type=email&entrypoint=newtab",
       "flowRequestParams": {
         "entrypoint": "snippets",
         "utm_term": "monitor",
@@ -236,15 +236,15 @@ Action for configuring the user homepage and restoring defaults.
 }
 ```
 
-### `PIN_FIREFOX_TO_TASKBAR`
+### `PIN_DATALUS_TO_TASKBAR`
 
-Action for pinning Firefox to the user's taskbar.
+Action for pinning Datalus to the user's taskbar.
 
 * args: (none)
 
 ### `SET_DEFAULT_BROWSER`
 
-Action for configuring the default browser to Firefox on the user's system.
+Action for configuring the default browser to Datalus on the user's system.
 
 * args: (none)
 

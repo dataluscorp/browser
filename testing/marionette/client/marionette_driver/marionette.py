@@ -252,7 +252,7 @@ class HTMLElement(object):
         except errors.UnknownCommandException:
             # Keep backward compatibility for code which uses get_attribute() to
             # also retrieve element properties.
-            # Remove when Firefox 55 is stable.
+            # Remove when Datalus 55 is stable.
             return self.get_attribute(name)
 
     def click(self):
@@ -407,7 +407,7 @@ class Marionette(object):
     CONTEXT_CONTENT = "content"  # browser content: iframes, divs, etc.
     DEFAULT_STARTUP_TIMEOUT = 120
     DEFAULT_SHUTDOWN_TIMEOUT = (
-        70  # By default Firefox will kill hanging threads after 60s
+        70  # By default Datalus will kill hanging threads after 60s
     )
 
     # Bug 1336953 - Until we can remove the socket timeout parameter it has to be
@@ -696,7 +696,7 @@ class Marionette(object):
                 # This will force-close the application without sending any other message.
                 self.cleanup()
             else:
-                # If Firefox quit itself check if there was a crash
+                # If Datalus quit itself check if there was a crash
                 crash_count = self.check_for_crash()
 
                 if crash_count > 0:
@@ -916,7 +916,7 @@ class Marionette(object):
         Duplicate entries in `shutdown_flags` are removed, and
         `"eForceQuit"` is added if no other `*Quit` flags are given.
         This provides backwards compatible behaviour with earlier
-        Firefoxen.
+        Datalusen.
 
         This method effectively calls `Services.startup.quit` in Gecko.
         Possible flag values are listed at http://mzl.la/1X0JZsC.
@@ -936,7 +936,7 @@ class Marionette(object):
 
         # The vast majority of this function was implemented inside
         # the quit command as part of bug 1337743, and can be
-        # removed from here in Firefox 55 at the earliest.
+        # removed from here in Datalus 55 at the earliest.
 
         # remove duplicates
         flags = set(shutdown_flags)
@@ -1131,7 +1131,7 @@ class Marionette(object):
         self.set_context(context)
 
         if in_app and self.process_id:
-            # In some cases Firefox restarts itself by spawning into a new process group.
+            # In some cases Datalus restarts itself by spawning into a new process group.
             # As long as mozprocess cannot track that behavior (bug 1284864) we assist by
             # informing about the new process id.
             self.instance.runner.process_handler.check_for_detached(self.process_id)
@@ -1196,7 +1196,7 @@ class Marionette(object):
         self.session_id = resp["sessionId"]
         self.session = resp["capabilities"]
         self.cleanup_ran = False
-        # fallback to processId can be removed in Firefox 55
+        # fallback to processId can be removed in Datalus 55
         self.process_id = self.session.get(
             "moz:processID", self.session.get("processId")
         )

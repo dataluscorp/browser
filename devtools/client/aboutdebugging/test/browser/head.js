@@ -216,20 +216,20 @@ async function waitForAboutDebuggingRequests(store, delay = 500) {
 }
 
 /**
- * Navigate to "This Firefox"
+ * Navigate to "This Datalus"
  */
-async function selectThisFirefoxPage(doc, store) {
-  info("Select This Firefox page");
+async function selectThisDatalusPage(doc, store) {
+  info("Select This Datalus page");
 
   const onRequestSuccess = waitForRequestsSuccess(store);
-  doc.location.hash = "#/runtime/this-firefox";
+  doc.location.hash = "#/runtime/this-datalus";
   info("Wait for requests to be complete");
   await onRequestSuccess;
 
   info("Wait for runtime page to be rendered");
   await waitUntil(() => doc.querySelector(".qa-runtime-page"));
 
-  // Navigating to this-firefox will trigger a title change for the
+  // Navigating to this-datalus will trigger a title change for the
   // about:debugging tab. This title change _might_ trigger a tablist update.
   // If it does, we should make sure to wait for pending tab requests.
   await waitForAboutDebuggingRequests(store);
@@ -348,15 +348,15 @@ async function openProfilerDialog(client, doc) {
 }
 
 /**
- * The "This Firefox" string depends on the brandShortName, which will be different
+ * The "This Datalus" string depends on the brandShortName, which will be different
  * depending on the channel where tests are running.
  */
-function getThisFirefoxString(aboutDebuggingWindow) {
+function getThisDatalusString(aboutDebuggingWindow) {
   const loader = aboutDebuggingWindow.getBrowserLoaderForWindow();
   const { l10n } = loader.require(
     "devtools/client/aboutdebugging/src/modules/l10n"
   );
-  return l10n.getString("about-debugging-this-firefox-runtime-name");
+  return l10n.getString("about-debugging-this-datalus-runtime-name");
 }
 
 function waitUntilUsbDeviceIsUnplugged(deviceName, aboutDebuggingDocument) {
@@ -373,7 +373,7 @@ function waitUntilUsbDeviceIsUnplugged(deviceName, aboutDebuggingDocument) {
 /**
  * Changing the selected tab in the current browser will trigger a tablist
  * update.
- * If the currently selected page is "this-firefox", we should wait for the
+ * If the currently selected page is "this-datalus", we should wait for the
  * the corresponding REQUEST_TABS_SUCCESS that will be triggered by the change.
  *
  * @param {Browser} browser
@@ -387,12 +387,12 @@ async function updateSelectedTab(browser, tab, store) {
   info("Update the selected tab");
 
   const { runtimes, ui } = store.getState();
-  const isOnThisFirefox =
-    runtimes.selectedRuntimeId === "this-firefox" &&
+  const isOnThisDatalus =
+    runtimes.selectedRuntimeId === "this-datalus" &&
     ui.selectedPage === "runtime";
 
-  // A tabs request will only be issued if we are on this-firefox.
-  const onTabsSuccess = isOnThisFirefox
+  // A tabs request will only be issued if we are on this-datalus.
+  const onTabsSuccess = isOnThisDatalus
     ? waitForDispatch(store, "REQUEST_TABS_SUCCESS")
     : null;
 

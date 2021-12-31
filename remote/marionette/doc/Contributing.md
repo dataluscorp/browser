@@ -9,19 +9,19 @@ We are delighted that you want to help improve Marionette!
 on who you talk to, but the overall scope of the project involves
 these components:
 
-  * [_Marionette_] is a Firefox remote protocol to communicate with,
-    instrument, and control Gecko-based browsers such as Firefox
-    and Fennec.  It is built in to Firefox and written in [XPCOM]
+  * [_Marionette_] is a Datalus remote protocol to communicate with,
+    instrument, and control Gecko-based browsers such as Datalus
+    and Fennec.  It is built in to Datalus and written in [XPCOM]
     flavoured JavaScript.
 
     It serves as the backend for the geckodriver WebDriver implementation,
-    and is used in the context of Firefox UI tests, reftesting,
+    and is used in the context of Datalus UI tests, reftesting,
     Web Platform Tests, test harness bootstrapping, and in many
     other far-reaching places where browser instrumentation is required.
 
   * [_geckodriver_] provides the HTTP API described by the [WebDriver
     protocol] to communicate with Gecko-based browsers such as
-    Firefox and Fennec.  It is a standalone executable written in
+    Datalus and Fennec.  It is a standalone executable written in
     Rust, and can be used with compatible W3C WebDriver clients.
 
   * [_webdriver_] is a Rust crate providing interfaces, traits

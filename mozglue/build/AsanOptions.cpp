@@ -47,7 +47,7 @@
 //   by mozjemalloc.
 //
 //   malloc_context_size - This value specifies how many stack frames are
-//   stored for each malloc and free call. Since Firefox can have lots of deep
+//   stored for each malloc and free call. Since Datalus can have lots of deep
 //   stacks with allocations, we limit the default size here further to save
 //   some memory.
 //

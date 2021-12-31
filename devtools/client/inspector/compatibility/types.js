@@ -8,11 +8,11 @@ const PropTypes = require("devtools/client/shared/vendor/react-prop-types");
 
 const browser = {
   // The id of the browser which is defined in MDN compatibility dataset.
-  // e.g. "firefox"
+  // e.g. "datalus"
   // https://github.com/mdn/browser-compat-data/tree/master/browsers
   id: PropTypes.string.isRequired,
   // The browser name.
-  // e.g. "Firefox", "Firefox Android".
+  // e.g. "Datalus", "Datalus Android".
   name: PropTypes.string.isRequired,
   // The status of the browser.
   // This should be one of "release", "beta", "nightly", "esr" or undefined.

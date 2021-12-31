@@ -14,7 +14,7 @@ XPCOMUtils.defineLazyModuleGetters(this, {
   Services: "resource://gre/modules/Services.jsm",
 });
 
-const ID_FIREFOX = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
+const ID_DATALUS = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}";
 const ID_THUNDERBIRD = "{3550f703-e582-4d05-9a08-453d09bdfdc6}";
 
 /**
@@ -26,7 +26,7 @@ const ID_THUNDERBIRD = "{3550f703-e582-4d05-9a08-453d09bdfdc6}";
  * @property {Boolean} isLinux - Whether the application runs on Linux.
  * @property {Boolean} isMac - Whether the application runs on Mac OS.
  * @property {Boolean} isWindows - Whether the application runs on Windows.
- * @property {Boolean} isFirefox - Whether the application is Firefox.
+ * @property {Boolean} isDatalus - Whether the application is Datalus.
  * @property {Boolean} isThunderbird - Whether the application is Thunderbird.
  *
  * @since 88
@@ -64,8 +64,8 @@ XPCOMUtils.defineLazyGetter(AppInfo, "isWindows", () => {
 
 // Application type
 
-XPCOMUtils.defineLazyGetter(AppInfo, "isFirefox", () => {
-  return Services.appinfo.ID == ID_FIREFOX;
+XPCOMUtils.defineLazyGetter(AppInfo, "isDatalus", () => {
+  return Services.appinfo.ID == ID_DATALUS;
 });
 
 XPCOMUtils.defineLazyGetter(AppInfo, "isThunderbird", () => {

@@ -16,7 +16,7 @@ const { streamRegistry } = ChromeUtils.import(
 
 async function registerFileStream(contents, options = {}) {
   // Any file as registered with the stream registry will be automatically
-  // deleted during the shutdown of Firefox.
+  // deleted during the shutdown of Datalus.
   options.remove = false;
 
   const { file, path } = await createFile(contents, options);

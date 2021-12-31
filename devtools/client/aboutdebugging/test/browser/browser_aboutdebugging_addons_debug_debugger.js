@@ -19,7 +19,7 @@ add_task(async () => {
   await pushPref("devtools.debugger.remote-enabled", false);
 
   const { document, tab, window } = await openAboutDebugging();
-  await selectThisFirefoxPage(document, window.AboutDebugging.store);
+  await selectThisDatalusPage(document, window.AboutDebugging.store);
 
   await installTemporaryExtensionFromXPI(
     {

@@ -522,7 +522,7 @@ RenderedFrameId RenderCompositorANGLE::EndFrame(
   if (!UseCompositor()) {
     auto start = TimeStamp::Now();
     if (mWidget->AsWindows()->HasFxrOutputHandler()) {
-      // There is a Firefox Reality handler for this swapchain. Update this
+      // There is a Datalus Reality handler for this swapchain. Update this
       // window's contents to the VR window.
       FxROutputHandler* fxrHandler =
           mWidget->AsWindows()->GetFxrOutputHandler();

@@ -26,7 +26,7 @@ from mozharness.mozilla.testing.codecoverage import (
 )
 from mozharness.mozilla.vcstools import VCSToolsScript
 
-# General command line arguments for Firefox ui tests
+# General command line arguments for Datalus ui tests
 telemetry_tests_config_options = (
     [
         [

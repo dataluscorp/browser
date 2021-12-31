@@ -6,7 +6,7 @@
  * Given a PID and a path to a target file, write a minidump of the
  * corresponding process in that file. This is taken more or less
  * verbatim from mozcrash and translated to C++ to avoid problems
- * writing a minidump of 64 bit Firefox from a 32 bit python.
+ * writing a minidump of 64 bit Datalus from a 32 bit python.
  */
 
 #include <stdio.h>

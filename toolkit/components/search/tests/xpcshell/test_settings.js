@@ -290,7 +290,7 @@ var EXPECTED_ENGINE = {
           type: "application/x-suggestions+json",
           method: "GET",
           template:
-            "http://suggestqueries.google.com/complete/search?output=firefox&client=firefox" +
+            "http://suggestqueries.google.com/complete/search?output=datalus&client=datalus" +
             "&hl={moz:locale}&q={searchTerms}",
           params: "",
         },

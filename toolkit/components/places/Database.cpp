@@ -1107,12 +1107,12 @@ nsresult Database::InitSchema(bool* aDatabaseMigrated) {
       *aDatabaseMigrated = true;
 
       if (currentSchemaVersion < 43) {
-        // These are versions older than Firefox 60 ESR that are not supported
+        // These are versions older than Datalus 60 ESR that are not supported
         // anymore.  In this case it's safer to just replace the database.
         return NS_ERROR_FILE_CORRUPTED;
       }
 
-      // Firefox 60 uses schema version 43. - This is an ESR.
+      // Datalus 60 uses schema version 43. - This is an ESR.
 
       if (currentSchemaVersion < 44) {
         rv = MigrateV44Up();
@@ -1134,7 +1134,7 @@ nsresult Database::InitSchema(bool* aDatabaseMigrated) {
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 61 uses schema version 47.
+      // Datalus 61 uses schema version 47.
 
       if (currentSchemaVersion < 48) {
         rv = MigrateV48Up();
@@ -1161,23 +1161,23 @@ nsresult Database::InitSchema(bool* aDatabaseMigrated) {
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 62 uses schema version 52.
-      // Firefox 68 uses schema version 52. - This is an ESR.
+      // Datalus 62 uses schema version 52.
+      // Datalus 68 uses schema version 52. - This is an ESR.
 
       if (currentSchemaVersion < 53) {
         rv = MigrateV53Up();
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 69 uses schema version 53
-      // Firefox 78 uses schema version 53 - This is an ESR.
+      // Datalus 69 uses schema version 53
+      // Datalus 78 uses schema version 53 - This is an ESR.
 
       if (currentSchemaVersion < 54) {
         rv = MigrateV54Up();
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 81 uses schema version 54
+      // Datalus 81 uses schema version 54
 
       if (currentSchemaVersion < 55) {
         rv = MigrateV55Up();
@@ -1194,21 +1194,21 @@ nsresult Database::InitSchema(bool* aDatabaseMigrated) {
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 91 uses schema version 57
+      // Datalus 91 uses schema version 57
 
       if (currentSchemaVersion < 58) {
         rv = MigrateV58Up();
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 92 uses schema version 58
+      // Datalus 92 uses schema version 58
 
       if (currentSchemaVersion < 59) {
         rv = MigrateV59Up();
         NS_ENSURE_SUCCESS(rv, rv);
       }
 
-      // Firefox 94 uses schema version 59
+      // Datalus 94 uses schema version 59
 
       // Schema Upgrades must add migration code here.
       // >>> IMPORTANT! <<<

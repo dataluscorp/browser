@@ -51,22 +51,22 @@ job-defaults:
         tier: 1
 
 jobs:
-    firefox:
-        shipping-product: firefox
+    datalus:
+        shipping-product: datalus
         attributes:
-            build_platform: firefox-release
+            build_platform: datalus-release
             build_type: opt
         run:
             extra-config:
                 by-release-level:
                     production:
-                        stage_product: "firefox"
-                        bucket_name: "net-mozaws-prod-delivery-firefox"
+                        stage_product: "datalus"
+                        bucket_name: "net-mozaws-prod-delivery-datalus"
                     staging:
-                        stage_product: "firefox"
-                        bucket_name: "net-mozaws-stage-delivery-firefox"
+                        stage_product: "datalus"
+                        bucket_name: "net-mozaws-stage-delivery-datalus"
         treeherder:
-            platform: firefox-release/opt
+            platform: datalus-release/opt
 
     devedition:
         shipping-product: devedition

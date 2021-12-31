@@ -37,7 +37,7 @@
 //   2. Provide a simple powerful mechanism for getting information out of the
 //      compiler and into tools. I'm inspired by tools like CacheIR analyzer,
 //      IR Hydra, and the upcoming tracelogger integration into
-//      profiler.firefox.com.
+//      profiler.datalus.com.
 //
 // The spewer has four main control knobs, all currently set as
 // environment variables. All but the first are optional. When the spewer is

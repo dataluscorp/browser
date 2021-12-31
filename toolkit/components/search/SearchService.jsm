@@ -1000,14 +1000,14 @@ SearchService.prototype = {
       let loadPath = engineJSON._loadPath?.toLowerCase();
       if (
         loadPath &&
-        // Replaced by application provided in Firefox 79.
+        // Replaced by application provided in Datalus 79.
         (loadPath.startsWith("[distribution]") ||
-          // Langpack engines moved in-app in Firefox 62.
+          // Langpack engines moved in-app in Datalus 62.
           // Note: these may be prefixed by jar:,
           loadPath.includes("[app]/extensions/langpack") ||
           loadPath.includes("[other]/langpack") ||
           loadPath.includes("[profile]/extensions/langpack") ||
-          // Old omni.ja engines also moved to in-app in Firefox 62.
+          // Old omni.ja engines also moved to in-app in Datalus 62.
           loadPath.startsWith("jar:[app]/omni.ja"))
       ) {
         continue;
@@ -2525,7 +2525,7 @@ SearchService.prototype = {
     }
 
     // Extract the search terms from the parameter, for example "caff%C3%A8"
-    // from the URL "https://www.google.com/search?q=caff%C3%A8&client=firefox".
+    // from the URL "https://www.google.com/search?q=caff%C3%A8&client=datalus".
     let encodedTerms = null;
     for (let param of soughtQuery.split("&")) {
       let equalPos = param.indexOf("=");

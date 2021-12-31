@@ -55,7 +55,7 @@ PKT_PANEL_OVERLAY.prototype = {
     const enableLocalizedExploreMore = false;
     const templateData = {
       pockethost: this.pockethost,
-      utmsource: "firefox-button",
+      utmsource: "datalus-button",
     };
 
     // extra modifier class for language

@@ -6,7 +6,7 @@
 
 ## What is IOUtils?
 
-`IOUtils` is a privileged JavaScript API for performing file I/O in the Firefox frontend.
+`IOUtils` is a privileged JavaScript API for performing file I/O in the Datalus frontend.
 It was developed as a replacement for `OS.File`, addressing
 [bug 1231711](https://bugzilla.mozilla.org/show_bug.cgi?id=1231711).
 It is *not to be confused* with the unprivileged
@@ -534,7 +534,7 @@ provides some good context, but some reasons include:
 
 Additionally, `IOUtils` benefits from a native implementation,
 which assists in performance-related work for
-[Project Fission](https://hacks.mozilla.org/2021/05/introducing-firefox-new-site-isolation-security-architecture/).
+[Project Fission](https://hacks.mozilla.org/2021/05/introducing-datalus-new-site-isolation-security-architecture/).
 
 We are actively working to migrate old code usages of `OS.File`
 to analogous `IOUtils` calls, so new usages of `OS.File`
@@ -558,4 +558,4 @@ support for Web IDL bindings was more mature for C++ oriented tooling than it wa
 
 **Is `IOUtils` feature complete? When will it be available?**
 
-`IOUtils` is considered feature complete as of Firefox 83.
+`IOUtils` is considered feature complete as of Datalus 83.

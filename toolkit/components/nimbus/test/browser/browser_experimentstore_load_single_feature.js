@@ -35,7 +35,7 @@ const SINGLE_FEATURE_RECIPE = {
   featureIds: ["urlbar"],
   slug: "browser_experimentstore_load_single_feature",
   userFacingDescription: "Smarter suggestions in the AwesomeBar",
-  userFacingName: "Firefox Suggest - History vs Offline",
+  userFacingName: "Datalus Suggest - History vs Offline",
 };
 
 function getPath() {

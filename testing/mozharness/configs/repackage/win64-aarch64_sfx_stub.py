@@ -3,5 +3,5 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 config = {
-    "sfx-stub": "other-licenses/7zstub/firefox/7zSD.ARM64.sfx",
+    "sfx-stub": "other-licenses/7zstub/datalus/7zSD.ARM64.sfx",
 }

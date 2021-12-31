@@ -1,4 +1,4 @@
-# Using Firefox on Glean
+# Using Datalus on Glean
 
 ```eval_rst
 .. toctree::

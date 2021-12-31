@@ -9,7 +9,7 @@ Preferences allows you to save and read strings, numbers, booleans to the prefer
 store, which is tied to a profile. A preference can also have a default value.
 
 The technical solution for handling preferences differs depending whether you are
-testing DevTools as Firefox panel, or a standalone tool running with Launchpad.
+testing DevTools as Datalus panel, or a standalone tool running with Launchpad.
 
 ## Preference types
 
@@ -40,7 +40,7 @@ this service at:
 
 If you are using Launchpad, note that only a subset of nsIPrefService methods are
 implemented (addObserver and removeObserver). Launchpad relies on a Services shim file
-provided by devtools-module ([code on GitHub](https://github.com/firefox-devtools/devtools-core/blob/master/packages/devtools-modules/src/Services.js)).
+provided by devtools-module ([code on GitHub](https://github.com/datalus-devtools/devtools-core/blob/master/packages/devtools-modules/src/Services.js)).
 
 ### Requiring Services.pref
 
@@ -70,7 +70,7 @@ These APIs are very similar for each preference type.
 
 Debugger-specific preferences should go in
 devtools/client/preferences/debugger.js. Beyond that, most new preferences
-should go in browser/app/profile/firefox.js, which is for desktop Firefox only.
+should go in browser/app/profile/datalus.js, which is for desktop Datalus only.
 If a preference should be available even when the client for DevTools is not
 shipped (for instance on Fennec) it should go in modules/libpref/init/all.js,
 which is for preferences that go in all products.
@@ -79,7 +79,7 @@ which is for preferences that go in all products.
 
 At the time of writing this doc, projects using Launchpad have to duplicate the default
 definition of a preference.
-* debugger.html: update [src/utils/prefs.js](https://github.com/firefox-devtools/debugger.html/blob/master/src/utils/prefs.js)
+* debugger.html: update [src/utils/prefs.js](https://github.com/datalus-devtools/debugger.html/blob/master/src/utils/prefs.js)
 * netmonitor: update [index.js](http://searchfox.org/mozilla-central/source/devtools/client/netmonitor/index.js)
 * webconsole: update [local-dev/index.js](http://searchfox.org/mozilla-central/source/devtools/client/webconsole/local-dev/index.js)
 
@@ -88,7 +88,7 @@ definition of a preference.
 Depending on the project you are working on, preferences are stored differently but can
 always be inspected.
 
-In Firefox, you can open a tab to about:config and search by preference name.
+In Datalus, you can open a tab to about:config and search by preference name.
 
 In Launchpad, preferences are actually saved to localStorage. Open DevTools on your
 Launchpad application and inspect the local storage content. You should see entries

@@ -9,7 +9,7 @@ Increasing the logging verbosity
 To increase the internal logging verbosity you can use the
 `remote.log.level` [preference].
 
-If you use mach to start Firefox:
+If you use mach to start Datalus:
 
 	./mach run --setpref "remote.log.level=Trace" --remote-debugging-port
 

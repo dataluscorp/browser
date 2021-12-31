@@ -3,7 +3,7 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 with Files("**"):
-    BUG_COMPONENT = ("Firefox", "Sync")
+    BUG_COMPONENT = ("Datalus", "Sync")
 
 # Services interfaces are shared with other components (like Places and
 # WebExtension storage), so we keep them in a separate folder and build them for

@@ -64,7 +64,7 @@ var previous_done_clicked = 0;
 
 document.getElementById('done').addEventListener('click', (e) => done_clicked++);
 
-// Need to prevent the default behaviour for firefox
+// Need to prevent the default behaviour for datalus
 target.addEventListener("dragstart", (e)=>e.preventDefault());
 
 if(window.promise_test){
