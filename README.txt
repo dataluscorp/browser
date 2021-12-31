@@ -1,5 +1,5 @@
 # Datalus Browser source
-Datalus was forked from the Datalus repository and is being released in accordince with Mozilla Public License 2.0. We are currently using Mozilla's existing build tools so we left the instructions below as we work to recreate them.
+Datalus was forked from the Mozilla repository and is being released in accordince with Mozilla Public License 2.0. We are currently using Mozilla's existing build tools so we left the instructions below as we work to recreate them.
 
 An explanation of the Datalus Source Code Directory Structure and links to
 project pages with documentation can be found at:
