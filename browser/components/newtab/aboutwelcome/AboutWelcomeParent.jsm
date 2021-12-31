@@ -254,9 +254,6 @@ class AboutWelcomeParent extends JSWindowActorParent {
         return FxAccounts.config.promiseMetricsFlowURI("aboutwelcome");
       case "AWPage:IMPORTABLE_SITES":
         return getImportableSites();
-      case "AWPage:TELEMETRY_EVENT":
-        Telemetry.sendTelemetry(data);
-        break;
       case "AWPage:GET_ATTRIBUTION_DATA":
         let attributionData = await AboutWelcomeDefaults.getAttributionContent();
         return attributionData;

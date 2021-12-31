@@ -777,27 +777,24 @@ const Base = Object(react_redux__WEBPACK_IMPORTED_MODULE_4__["connect"])(state =
 /* 3 */
 /***/ (function(module, exports) {
 
-var g;
+var g; // This works in non-strict mode
 
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
+g = function () {
+  return this;
+}();
 
 try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
+  // This works if eval is allowed (see CSP)
+  g = g || new Function("return this")();
 } catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
+  // This works if the window reference is available
+  if (typeof window === "object") g = window;
+} // g can still be undefined, but nothing to do about it...
 // We return undefined, instead of nothing here, so it's
 // easier to handle this case. if(!global) { ...}
 
-module.exports = g;
 
+module.exports = g;
 
 /***/ }),
 /* 4 */
@@ -3200,36 +3197,6 @@ class _DiscoveryStreamBase extends react__WEBPACK_IMPORTED_MODULE_12___default.a
     const ENGAGEMENT_LABEL_ENABLED = this.props.Prefs.values[`discoverystream.engagementLabelEnabled`];
 
     switch (component.type) {
-      case "Highlights":
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_Highlights_Highlights__WEBPACK_IMPORTED_MODULE_8__["Highlights"], null);
-
-      case "TopSites":
-        let promoAlignment;
-
-        if (component.spocs && component.spocs.positions && component.spocs.positions.length) {
-          promoAlignment = component.spocs.positions[0].index === 0 ? "left" : "right";
-        }
-
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_TopSites_TopSites__WEBPACK_IMPORTED_MODULE_15__["TopSites"], {
-          header: component.header,
-          data: component.data,
-          promoAlignment: promoAlignment
-        });
-
-      case "TextPromo":
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_DSTextPromo_DSTextPromo__WEBPACK_IMPORTED_MODULE_7__["DSTextPromo"], {
-          dispatch: this.props.dispatch,
-          type: component.type,
-          data: component.data
-        });
-
-      case "Signup":
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_DSSignup_DSSignup__WEBPACK_IMPORTED_MODULE_6__["DSSignup"], {
-          dispatch: this.props.dispatch,
-          type: component.type,
-          data: component.data
-        });
-
       case "Message":
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_DSMessage_DSMessage__WEBPACK_IMPORTED_MODULE_4__["DSMessage"], {
           title: component.header && component.header.title,
@@ -3256,44 +3223,6 @@ class _DiscoveryStreamBase extends react__WEBPACK_IMPORTED_MODULE_12___default.a
           locale: this.props.App.locale,
           newFooterSection: component.newFooterSection,
           privacyNoticeURL: component.properties.privacyNoticeURL
-        });
-
-      case "CollectionCardGrid":
-        const {
-          DiscoveryStream
-        } = this.props;
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_CollectionCardGrid_CollectionCardGrid__WEBPACK_IMPORTED_MODULE_1__["CollectionCardGrid"], {
-          data: component.data,
-          feed: component.feed,
-          spocs: DiscoveryStream.spocs,
-          placement: component.placement,
-          border: component.properties.border,
-          type: component.type,
-          items: component.properties.items,
-          cta_variant: component.cta_variant,
-          display_engagement_labels: ENGAGEMENT_LABEL_ENABLED,
-          dismissible: this.props.DiscoveryStream.isCollectionDismissible,
-          dispatch: this.props.dispatch
-        });
-
-      case "CardGrid":
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_CardGrid_CardGrid__WEBPACK_IMPORTED_MODULE_0__["CardGrid"], {
-          enable_video_playheads: !!component.properties.enable_video_playheads,
-          title: component.header && component.header.title,
-          display_variant: component.properties.display_variant,
-          data: component.data,
-          feed: component.feed,
-          border: component.properties.border,
-          type: component.type,
-          dispatch: this.props.dispatch,
-          items: component.properties.items,
-          compact: component.properties.compact,
-          include_descriptions: !component.properties.compact,
-          loadMoreEnabled: component.loadMoreEnabled,
-          lastCardMessageEnabled: component.lastCardMessageEnabled,
-          saveToPocketCard: component.saveToPocketCard,
-          cta_variant: component.cta_variant,
-          display_engagement_labels: ENGAGEMENT_LABEL_ENABLED
         });
 
       case "HorizontalRule":
@@ -3355,25 +3284,9 @@ class _DiscoveryStreamBase extends react__WEBPACK_IMPORTED_MODULE_12___default.a
       }
 
       return null;
-    }; // Get "topstories" Section state for default values
+    }; // Extract TopSites to render before the rest and Message to use for header
 
 
-    const topStories = this.props.Sections.find(s => s.id === "topstories");
-
-    if (!topStories) {
-      return null;
-    } // Extract TopSites to render before the rest and Message to use for header
-
-
-    const topSites = extractComponent("TopSites");
-    const sponsoredCollection = extractComponent("CollectionCardGrid");
-    const message = extractComponent("Message") || {
-      header: {
-        link_text: topStories.learnMore.link.message,
-        link_url: topStories.learnMore.link.href,
-        title: topStories.title
-      }
-    };
     const privacyLinkComponent = extractComponent("PrivacyLink"); // Render a DS-style TopSites then the rest if any in a collapsible section
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_12___default.a.Fragment, null, this.props.DiscoveryStream.isPrivacyInfoModalVisible && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_12___default.a.createElement(content_src_components_DiscoveryStreamComponents_DSPrivacyModal_DSPrivacyModal__WEBPACK_IMPORTED_MODULE_5__["DSPrivacyModal"], {
@@ -9350,14 +9263,12 @@ function mapBundleSync(iterable, ids) {
     return getBundleForId(iterable, ids);
   }
 
-  return ids.map(
-    id => getBundleForId(iterable, id)
-  );
+  return ids.map(id => getBundleForId(iterable, id));
 }
-
 /*
  * Find the best `FluentBundle` with the translation for `id`.
  */
+
 function getBundleForId(iterable, id) {
   for (const bundle of iterable) {
     if (bundle.hasMessage(id)) {
@@ -9367,7 +9278,6 @@ function getBundleForId(iterable, id) {
 
   return null;
 }
-
 // CONCATENATED MODULE: ./node_modules/fluent-sequence/src/map_async.js
 /*
  * Asynchronously map an identifier or an array of identifiers to the best
@@ -9394,9 +9304,9 @@ async function mapBundleAsync(iterable, ids) {
       if (!foundBundles[index] && bundle.hasMessage(id)) {
         foundBundles[index] = bundle;
         remainingCount--;
-      }
+      } // Return early when all ids have been mapped to contexts.
 
-      // Return early when all ids have been mapped to contexts.
+
       if (remainingCount === 0) {
         return foundBundles;
       }
@@ -9405,14 +9315,11 @@ async function mapBundleAsync(iterable, ids) {
 
   return foundBundles;
 }
-
 // CONCATENATED MODULE: ./node_modules/fluent-sequence/src/index.js
 /*
  * @module fluent-sequence
  * @overview Manage ordered sequences of FluentBundles.
  */
-
-
 
 
 // CONCATENATED MODULE: ./node_modules/cached-iterable/src/cached_iterable.mjs

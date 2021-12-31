@@ -798,7 +798,7 @@ var MigrationUtils = Object.seal({
         key = gPreviousDefaultBrowserKey;
       } else {
         // We didn't have a saved value, so check the registry.
-        const kRegPath = "Software\\Mozilla\\Datalus";
+        const kRegPath = "Software\\Datalus\\Browser";
         let oldDefault = WindowsRegistry.readRegKey(
           Ci.nsIWindowsRegKey.ROOT_KEY_CURRENT_USER,
           kRegPath,

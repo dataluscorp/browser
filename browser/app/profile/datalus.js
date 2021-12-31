@@ -549,7 +549,7 @@ pref("browser.helperApps.showOpenOptionForPdfJS", true);
 pref("browser.helperApps.showOpenOptionForViewableInternally", true);
 
 // search engines URL
-pref("browser.search.searchEnginesURL",      "https://addons.mozilla.org/%LOCALE%/datalus/search-engines/");
+pref("browser.search.searchEnginesURL",      "https://www.google.com");
 
 // search bar results always open in a new tab
 pref("browser.search.openintab", false);
@@ -1165,7 +1165,7 @@ pref("breakpad.reportURL", "https://crash-stats.mozilla.org/report/index/");
 
 // URL for "Learn More" for DataCollection
 pref("toolkit.datacollection.infoURL",
-     "https://www.mozilla.org/legal/privacy/datalus.html");
+     "https://datalus.us/privacy-policy");
 
 // URL for "Learn More" for Crash Reporter
 pref("toolkit.crashreporter.infoURL",
@@ -1502,7 +1502,7 @@ pref("browser.newtabpage.activity-stream.newNewtabExperience.colors", "#0090ED,#
 #endif
 
 // The remote FxA root content URL for the Activity Stream firstrun page.
-pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "https://accounts.datalus.com/");
+pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "https://accounts.datalus.us/");
 
 // The pref that controls if the search shortcuts experiment is on
 pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", true);

@@ -1,5 +1,5 @@
-WIN32_MODULE_COMPANYNAME=Mozilla Corporation
-WIN32_MODULE_COPYRIGHT=�Datalus and Mozilla Developers; available under the MPL 2 license.
+WIN32_MODULE_COMPANYNAME=Datalus Corporation
+WIN32_MODULE_COPYRIGHT=�Datalus Corporation; available under the MPL 2 license.
 WIN32_MODULE_PRODUCTVERSION=@MOZ_APP_WINVERSION@
 WIN32_MODULE_PRODUCTVERSION_STRING=@MOZ_APP_VERSION@
 WIN32_MODULE_TRADEMARKS=Datalus is a Trademark of The Mozilla Foundation.

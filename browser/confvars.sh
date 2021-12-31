@@ -36,7 +36,7 @@ BROWSER_CHROME_URL=chrome://browser/content/browser.xhtml
 # For the mozilla-aurora repository, use "aurora".
 MOZ_BRANDING_DIRECTORY=browser/branding/unofficial
 MOZ_OFFICIAL_BRANDING_DIRECTORY=browser/branding/official
-MOZ_APP_ID={0.0.1}
+MOZ_APP_ID={1}
 
 MOZ_PROFILE_MIGRATOR=1
 

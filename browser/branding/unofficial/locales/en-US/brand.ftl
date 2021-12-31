@@ -18,9 +18,9 @@
 
 -brand-shorter-name = Datalus
 -brand-short-name = Datalus
--brand-full-name = Mozilla Datalus
+-brand-full-name = Datalus Browser
 # This brand name can be used in messages where the product name needs to
 # remain unchanged across different versions (Nightly, Beta, etc.).
 -brand-product-name = Datalus
--vendor-short-name = Mozilla
+-vendor-short-name = Datalus
 trademarkInfo = Datalus and the Datalus logos are trademarks of the Mozilla Foundation.

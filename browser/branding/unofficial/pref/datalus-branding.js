@@ -5,7 +5,7 @@
 // This file contains branding-specific prefs.
 
 pref("startup.homepage_override_url", "");
-pref("startup.homepage_welcome_url", "about:welcome");
+pref("startup.homepage_welcome_url", "https://datalus.us");
 pref("startup.homepage_welcome_url.additional", "");
 // Interval: Time between checks for a new version (in seconds)
 pref("app.update.interval", 43200); // 12 hours
@@ -17,15 +17,15 @@ pref("app.update.promptWaitTime", 691200);
 // update" link supplied in the "An update is available" page of the update
 // wizard.
 #if MOZ_UPDATE_CHANNEL == beta
-  pref("app.update.url.manual", "https://www.mozilla.org/%LOCALE%/datalus/beta");
-  pref("app.update.url.details", "https://www.mozilla.org/%LOCALE%/datalus/beta/notes");
-  pref("app.releaseNotesURL", "https://www.mozilla.org/%LOCALE%/datalus/%VERSION%beta/releasenotes/?utm_source=datalus-browser&utm_medium=datalus-browser&utm_campaign=whatsnew");
-  pref("app.releaseNotesURL.aboutDialog", "https://www.mozilla.org/%LOCALE%/datalus/%VERSION%beta/releasenotes/?utm_source=datalus-browser&utm_medium=datalus-desktop&utm_campaign=about-dialog");
+  pref("app.update.url.manual", "https://datalus.us");
+  pref("app.update.url.details", "https://datalus.us");
+  pref("app.releaseNotesURL", "https://datalus.us");
+  pref("app.releaseNotesURL.aboutDialog", "https://datalus.us");
 #else
-  pref("app.update.url.manual", "https://www.mozilla.org/%LOCALE%/datalus/");
-  pref("app.update.url.details", "https://www.mozilla.org/%LOCALE%/datalus/notes");
-  pref("app.releaseNotesURL", "https://www.mozilla.org/%LOCALE%/datalus/%VERSION%/releasenotes/?utm_source=datalus-browser&utm_medium=datalus-browser&utm_campaign=whatsnew");
-  pref("app.releaseNotesURL.aboutDialog", "https://www.mozilla.org/%LOCALE%/datalus/%VERSION%/releasenotes/?utm_source=datalus-browser&utm_medium=datalus-desktop&utm_campaign=about-dialog");
+  pref("app.update.url.manual", "https://datalus.us");
+  pref("app.update.url.details", "https://datalus.us");
+  pref("app.releaseNotesURL", "https://datalus.us");
+  pref("app.releaseNotesURL.aboutDialog", "https://datalus.us");
 #endif
 
 // The number of days a binary is permitted to be old

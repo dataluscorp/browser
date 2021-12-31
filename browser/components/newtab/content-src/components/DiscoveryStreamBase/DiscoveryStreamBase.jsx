@@ -115,41 +115,6 @@ export class _DiscoveryStreamBase extends React.PureComponent {
     ];
 
     switch (component.type) {
-      case "Highlights":
-        return <Highlights />;
-      case "TopSites":
-        let promoAlignment;
-        if (
-          component.spocs &&
-          component.spocs.positions &&
-          component.spocs.positions.length
-        ) {
-          promoAlignment =
-            component.spocs.positions[0].index === 0 ? "left" : "right";
-        }
-        return (
-          <TopSites
-            header={component.header}
-            data={component.data}
-            promoAlignment={promoAlignment}
-          />
-        );
-      case "TextPromo":
-        return (
-          <DSTextPromo
-            dispatch={this.props.dispatch}
-            type={component.type}
-            data={component.data}
-          />
-        );
-      case "Signup":
-        return (
-          <DSSignup
-            dispatch={this.props.dispatch}
-            type={component.type}
-            data={component.data}
-          />
-        );
       case "Message":
         return (
           <DSMessage
@@ -175,46 +140,6 @@ export class _DiscoveryStreamBase extends React.PureComponent {
             locale={this.props.App.locale}
             newFooterSection={component.newFooterSection}
             privacyNoticeURL={component.properties.privacyNoticeURL}
-          />
-        );
-      case "CollectionCardGrid":
-        const { DiscoveryStream } = this.props;
-        return (
-          <CollectionCardGrid
-            data={component.data}
-            feed={component.feed}
-            spocs={DiscoveryStream.spocs}
-            placement={component.placement}
-            border={component.properties.border}
-            type={component.type}
-            items={component.properties.items}
-            cta_variant={component.cta_variant}
-            display_engagement_labels={ENGAGEMENT_LABEL_ENABLED}
-            dismissible={this.props.DiscoveryStream.isCollectionDismissible}
-            dispatch={this.props.dispatch}
-          />
-        );
-      case "CardGrid":
-        return (
-          <CardGrid
-            enable_video_playheads={
-              !!component.properties.enable_video_playheads
-            }
-            title={component.header && component.header.title}
-            display_variant={component.properties.display_variant}
-            data={component.data}
-            feed={component.feed}
-            border={component.properties.border}
-            type={component.type}
-            dispatch={this.props.dispatch}
-            items={component.properties.items}
-            compact={component.properties.compact}
-            include_descriptions={!component.properties.compact}
-            loadMoreEnabled={component.loadMoreEnabled}
-            lastCardMessageEnabled={component.lastCardMessageEnabled}
-            saveToPocketCard={component.saveToPocketCard}
-            cta_variant={component.cta_variant}
-            display_engagement_labels={ENGAGEMENT_LABEL_ENABLED}
           />
         );
       case "HorizontalRule":
@@ -265,23 +190,9 @@ export class _DiscoveryStreamBase extends React.PureComponent {
       return null;
     };
 
-    // Get "topstories" Section state for default values
-    const topStories = this.props.Sections.find(s => s.id === "topstories");
-
-    if (!topStories) {
-      return null;
-    }
-
+  
     // Extract TopSites to render before the rest and Message to use for header
-    const topSites = extractComponent("TopSites");
-    const sponsoredCollection = extractComponent("CollectionCardGrid");
-    const message = extractComponent("Message") || {
-      header: {
-        link_text: topStories.learnMore.link.message,
-        link_url: topStories.learnMore.link.href,
-        title: topStories.title,
-      },
-    };
+
     const privacyLinkComponent = extractComponent("PrivacyLink");
 
     // Render a DS-style TopSites then the rest if any in a collapsible section
