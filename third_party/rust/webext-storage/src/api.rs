@@ -582,7 +582,7 @@ mod tests {
 
     #[test]
     fn test_bug_1621162() -> Result<()> {
-        // apparently Datalus, unlike Chrome, will not optimize the changes.
+        // apparently Firefox, unlike Chrome, will not optimize the changes.
         // See bug 1621162 for more!
         let mut db = new_mem_db();
         let tx = db.transaction()?;

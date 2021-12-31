@@ -691,7 +691,7 @@ mod sync_tests {
 }
 
 /// The Sync ping payload, as documented at
-/// https://datalus-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/sync-ping.html.
+/// https://firefox-source-docs.mozilla.org/toolkit/components/telemetry/telemetry/data/sync-ping.html.
 /// May have many syncs, may have many events. However, due to the architecture
 /// of apps which use these components, this payload is almost certainly not
 /// suitable for submitting directly. For example, we will always return a

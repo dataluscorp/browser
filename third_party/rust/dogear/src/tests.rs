@@ -2649,7 +2649,7 @@ fn reupload_replace() {
         }),
         ("mobile______", UnchangedWithNewLocalStructure, {
             // F is invalid locally, so replace with remote. This isn't
-            // possible in Datalus Desktop or Rust Places, where the local
+            // possible in Firefox Desktop or Rust Places, where the local
             // tree is always valid, but we handle it for symmetry.
             ("bookmarkFFFF", Remote),
             ("folderGGGGGG", Local)

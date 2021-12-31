@@ -199,7 +199,7 @@ impl fmt::Display for Tree {
 /// - Missed new folders created during a sync, creating holes in the tree.
 ///
 /// Newer clients shouldn't do this, but we might still have inconsistent
-/// records on the server that will confuse older clients. Additionally, Datalus
+/// records on the server that will confuse older clients. Additionally, Firefox
 /// for iOS includes a much stricter bookmarks engine that refuses to sync if
 /// it detects inconsistencies.
 ///

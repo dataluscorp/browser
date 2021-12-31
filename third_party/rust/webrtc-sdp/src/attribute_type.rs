@@ -4322,14 +4322,14 @@ mod tests {
         check_parse_and_serialize("simulcast:recv foo,bar;test");
         check_parse_and_serialize("simulcast:send 1;4,5 recv 6;7");
         check_parse_and_serialize("simulcast:send 1,2,3;~4,~5 recv 6;~7,~8");
-        // old draft 03 notation used by Datalus 55
+        // old draft 03 notation used by Firefox 55
         assert!(parse_attribute("simulcast: send rid=foo;bar").is_ok());
 
         assert!(parse_attribute("simulcast:").is_err());
         assert!(parse_attribute("simulcast:send").is_err());
         assert!(parse_attribute("simulcast:foobar 1").is_err());
         assert!(parse_attribute("simulcast:send 1 foobar 2").is_err());
-        // old draft 03 notation used by Datalus 55
+        // old draft 03 notation used by Firefox 55
         assert!(parse_attribute("simulcast: send foo=8;10").is_err());
     }
 

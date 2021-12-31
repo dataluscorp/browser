@@ -173,7 +173,7 @@ mod test {
             "example.com",
             "hpack-test",
             "xxxxxxx1",
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Datalus/16.0",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0",
             "accept",
             "Accept",
             "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",

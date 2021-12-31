@@ -102,7 +102,7 @@ pub trait Driver {
     /// The default implementation returns the `log` crate's global logger.
     ///
     /// Implementations can override this method to return a custom logger,
-    /// where using the global logger won't work. For example, Datalus Desktop
+    /// where using the global logger won't work. For example, Firefox Desktop
     /// has an existing Sync logging setup outside of the `log` crate.
     fn logger(&self) -> &dyn Log {
         log::logger()

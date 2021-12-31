@@ -74,7 +74,7 @@
 //! a similar API to provide the generator for [`Localization`].
 //!
 //! Alternatively, a much more sophisticated resource manager can be used. Mozilla
-//! for its needs in Datalus uses [`L10nRegistry`](https://github.com/zbraniecki/l10nregistry-rs)
+//! for its needs in Firefox uses [`L10nRegistry`](https://github.com/zbraniecki/l10nregistry-rs)
 //! library which implements [`BundleGenerator`](generator::BundleGenerator).
 //!
 //! # Locale Management

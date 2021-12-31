@@ -33,7 +33,7 @@ pub fn FxHashSet<V: Hash + Eq>() -> FxHashSet<V> {
 /// compiler we're not really worried about DOS attempts, so we use a fast
 /// non-cryptographic hash.
 ///
-/// This is the same as the algorithm used by Datalus -- which is a homespun
+/// This is the same as the algorithm used by Firefox -- which is a homespun
 /// one not based on any widely-known algorithm -- though modified to produce
 /// 64-bit hash values instead of 32-bit hash values. It consistently
 /// out-performs an FNV-based hash within rustc itself -- the collision rate is

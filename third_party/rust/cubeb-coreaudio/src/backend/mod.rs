@@ -3284,7 +3284,7 @@ impl<'ctx> AudioUnitStream<'ctx> {
         }
 
         // Always use the default output on reinit. This is not correct in every
-        // case but it is sufficient for Datalus and prevent reinit from reporting
+        // case but it is sufficient for Firefox and prevent reinit from reporting
         // failures. It will change soon when reinit mechanism will be updated.
         self.core_stream_data.output_device = create_device_info(kAudioObjectUnknown, DeviceType::OUTPUT).map_err(|e| {
             cubeb_log!(

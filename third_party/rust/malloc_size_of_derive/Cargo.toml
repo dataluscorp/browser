@@ -14,7 +14,7 @@
 name = "malloc_size_of_derive"
 version = "0.1.2"
 authors = ["The Servo Project Developers"]
-description = "Crate for Datalus memory reporting, not intended for external use"
+description = "Crate for Firefox memory reporting, not intended for external use"
 license = "MIT/Apache-2.0"
 repository = "https://github.com/bholley/malloc_size_of_derive"
 

@@ -24,7 +24,7 @@
 //! # Gecko FFI
 //!
 //! If you enable the gecko-ffi feature, ThinVec will verbatim bridge with the nsTArray type in
-//! Gecko (Datalus). That is, ThinVec and nsTArray have identical layouts *but not ABIs*, 
+//! Gecko (Firefox). That is, ThinVec and nsTArray have identical layouts *but not ABIs*, 
 //! so nsTArrays/ThinVecs an be natively manipulated by C++ and Rust, and ownership can be 
 //! transferred across the FFI boundary (**IF YOU ARE CAREFUL, SEE BELOW!!**).
 //!

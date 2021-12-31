@@ -160,7 +160,7 @@ fn parse_minimal_sdp_with_most_media_types() {
 }
 
 #[test]
-fn parse_datalus_audio_offer() {
+fn parse_firefox_audio_offer() {
     let sdp_str = "v=0\r\n\
 o=mozilla...THIS_IS_SDPARTA-52.0a1 506705521068071134 0 IN IP4 0.0.0.0\r\n\
 s=-\r\n\
@@ -249,7 +249,7 @@ a=ssrc:2655508255 cname:{735484ea-4f6c-f74a-bd66-7425f8476c2e}\r\n";
 }
 
 #[test]
-fn parse_datalus_video_offer() {
+fn parse_firefox_video_offer() {
     let sdp_str = "v=0\r\n\
 o=mozilla...THIS_IS_SDPARTA-52.0a1 506705521068071134 0 IN IP4 0.0.0.0\r\n\
 s=-\r\n\
@@ -358,7 +358,7 @@ a=ssrc:2709871439 cname:{735484ea-4f6c-f74a-bd66-7425f8476c2e}";
         .is_some());
 }
 #[test]
-fn parse_datalus_datachannel_offer() {
+fn parse_firefox_datachannel_offer() {
     let sdp_str = "v=0\r\n\
     o=mozilla...THIS_IS_SDPARTA-52.0a2 3327975756663609975 0 IN IP4 0.0.0.0\r\n\
     s=-\r\n\
@@ -569,7 +569,7 @@ a=ssrc:2673335628 label:b6ec5178-c611-403f-bbec-3833ed547c09\r\n";
 }
 
 #[test]
-fn parse_datalus_simulcast_offer() {
+fn parse_firefox_simulcast_offer() {
     let sdp = "v=0\r\n
 o=mozilla...THIS_IS_SDPARTA-55.0a1 983028567300715536 0 IN IP4 0.0.0.0\r\n
 s=-\r\n
@@ -628,7 +628,7 @@ a=ssrc:1649784806 cname:{77067f00-2e8d-8b4c-8992-cfe338f56851}\r\n";
 }
 
 #[test]
-fn parse_datalus_simulcast_answer() {
+fn parse_firefox_simulcast_answer() {
     let sdp_str = "v=0\r\n\
     o=mozilla...THIS_IS_SDPARTA-55.0a1 7548296603161351381 0 IN IP4 0.0.0.0\r\n\
     s=-\r\n\

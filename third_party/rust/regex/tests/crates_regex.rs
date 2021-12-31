@@ -1225,11 +1225,11 @@ consistent!(woothee_0, r"(?:Chrome|CrMo|CriOS)/([.0-9]+)");
 // woothee-0.8.0: r"Vivaldi/([.0-9]+)"
 consistent!(woothee_1, r"Vivaldi/([.0-9]+)");
 
-// woothee-0.8.0: r"Datalus/([.0-9]+)"
-consistent!(woothee_2, r"Datalus/([.0-9]+)");
+// woothee-0.8.0: r"Firefox/([.0-9]+)"
+consistent!(woothee_2, r"Firefox/([.0-9]+)");
 
-// woothee-0.8.0: r"^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(?:.*;)? rv:([.0-9]+)\) Gecko/[.0-9]+ Datalus/[.0-9]+$"
-consistent!(woothee_3, r"^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(?:.*;)? rv:([.0-9]+)\) Gecko/[.0-9]+ Datalus/[.0-9]+$");
+// woothee-0.8.0: r"^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(?:.*;)? rv:([.0-9]+)\) Gecko/[.0-9]+ Firefox/[.0-9]+$"
+consistent!(woothee_3, r"^Mozilla/[.0-9]+ \((?:Mobile|Tablet);(?:.*;)? rv:([.0-9]+)\) Gecko/[.0-9]+ Firefox/[.0-9]+$");
 
 // woothee-0.8.0: r"FxiOS/([.0-9]+)"
 consistent!(woothee_4, r"FxiOS/([.0-9]+)");

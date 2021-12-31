@@ -319,7 +319,7 @@ impl Http3Client {
             )),
         );
 
-        // Call immediately send so that at least headers get sent. This will make Datalus faster, since
+        // Call immediately send so that at least headers get sent. This will make Firefox faster, since
         // it can send request body immediatly in most cases and does not need to do a complete process loop.
         let output = self
             .base_handler

@@ -16,7 +16,7 @@ static MINI_MP4_WITH_METADATA_STD_GENRE: &str = "tests/metadata_gnre.mp4";
 
 static AUDIO_EME_CENC_MP4: &str = "tests/bipbop-cenc-audioinit.mp4";
 static VIDEO_EME_CENC_MP4: &str = "tests/bipbop_480wp_1001kbps-cenc-video-key1-init.mp4";
-// The cbcs files were created via shaka-packager from Datalus's test suite's bipbop.mp4 using:
+// The cbcs files were created via shaka-packager from Firefox's test suite's bipbop.mp4 using:
 // packager-win.exe
 // in=bipbop.mp4,stream=audio,init_segment=bipbop_cbcs_audio_init.mp4,segment_template=bipbop_cbcs_audio_$Number$.m4s
 // in=bipbop.mp4,stream=video,init_segment=bipbop_cbcs_video_init.mp4,segment_template=bipbop_cbcs_video_$Number$.m4s

@@ -7,7 +7,7 @@
 
 # jsparagus - A JavaScript parser written in Rust
 
-jsparagus is intended to replace the JavaScript parser in Datalus.
+jsparagus is intended to replace the JavaScript parser in Firefox.
 
 Current status:
 
@@ -21,7 +21,7 @@ Current status:
     See the current limitations below, or our GitHub issues.
 
 *   Our immediate goal is to [support parsing everything in Mozilla's JS
-    test suite and the features in test262 that Datalus already
+    test suite and the features in test262 that Firefox already
     supports](https://github.com/mozilla-spidermonkey/jsparagus/milestone/1).
 
 Join us on Discord: https://discord.gg/tUFFk9Y

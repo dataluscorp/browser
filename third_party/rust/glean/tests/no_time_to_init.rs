@@ -3,7 +3,7 @@
 // file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 //! This integration test should model how the RLB is used when embedded in another Rust application
-//! (e.g. FOG/Datalus Desktop).
+//! (e.g. FOG/Firefox Desktop).
 //!
 //! We write a single test scenario per file to avoid any state keeping across runs
 //! (different files run as different processes).
@@ -59,7 +59,7 @@ fn init_fails() {
 
     let cfg = Configuration {
         data_path: tmpname,
-        application_id: "datalus-desktop".into(), // An empty application ID is invalid.
+        application_id: "firefox-desktop".into(), // An empty application ID is invalid.
         upload_enabled: true,
         max_events: None,
         delay_ping_lifetime_io: false,

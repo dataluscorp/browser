@@ -7,7 +7,7 @@
 
 encoding_rs an implementation of the (non-JavaScript parts of) the
 [Encoding Standard](https://encoding.spec.whatwg.org/) written in Rust and
-used in Gecko (starting with Datalus 56).
+used in Gecko (starting with Firefox 56).
 
 Additionally, the `mem` module provides various operations for dealing with
 in-RAM text (as opposed to data that's coming from or going to an IO boundary).
@@ -173,7 +173,7 @@ the advice from the previous paragraph, you probably shouldn't use
 the `simd-accel` option on the less mainstream architectures at this
 time.
 
-Used by Datalus.
+Used by Firefox.
 
 ### `serde`
 
@@ -182,7 +182,7 @@ struct fields using [Serde][1].
 
 [1]: https://serde.rs/
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-legacy-encode`
 
@@ -198,7 +198,7 @@ At present, this option is equivalent to enabling the following options:
 
 Adds 176 KB to the binary size.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-hangul-encode`
 
@@ -210,7 +210,7 @@ Adds 20 KB to the binary size.
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-hanja-encode`
 
@@ -225,7 +225,7 @@ Adds 40 KB to the binary size.
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-kanji-encode`
 
@@ -240,7 +240,7 @@ Adds 36 KB to the binary size (24 KB compared to `less-slow-kanji-encode`).
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `less-slow-kanji-encode`
 
@@ -253,7 +253,7 @@ Adds 12 KB to the binary size.
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-gb-hanzi-encode`
 
@@ -270,7 +270,7 @@ Adds 36 KB to the binary size (24 KB compared to `less-slow-gb-hanzi-encode`).
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `less-slow-gb-hanzi-encode`
 
@@ -283,7 +283,7 @@ Adds 12 KB to the binary size.
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `fast-big5-hanzi-encode`
 
@@ -299,7 +299,7 @@ Adds 40 KB to the binary size (20 KB compared to `less-slow-big5-hanzi-encode`).
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ### `less-slow-big5-hanzi-encode`
 
@@ -311,7 +311,7 @@ Adds 20 KB to the binary size.
 
 Does _not_ affect decode speed.
 
-Not used by Datalus.
+Not used by Firefox.
 
 ## Performance goals
 
@@ -345,14 +345,14 @@ A framework for measuring performance is [available separately][2].
 ## Rust Version Compatibility
 
 It is a goal to support the latest stable Rust, the latest nightly Rust and
-the version of Rust that's used for Datalus Nightly (currently 1.29.0).
+the version of Rust that's used for Firefox Nightly (currently 1.29.0).
 These are tested on Travis.
 
 Additionally, beta and the oldest known to work Rust version (currently
 1.29.0) are tested on Travis. The oldest Rust known to work is tested as
 a canary so that when the oldest known to work no longer works, the change
 can be documented here. At this time, there is no firm commitment to support
-a version older than what's required by Datalus. The oldest supported Rust
+a version older than what's required by Firefox. The oldest supported Rust
 is expected to move forward rapidly when `packed_simd` can replace the `simd`
 crate without performance regression.
 
@@ -362,8 +362,8 @@ A compatibility layer that implements the rust-encoding API on top of
 encoding_rs is
 [provided as a separate crate](https://github.com/hsivonen/encoding_rs_compat)
 (cannot be uploaded to crates.io). The compatibility layer was originally
-written with the assuption that Datalus would need it, but it is not currently
-used in Datalus.
+written with the assuption that Firefox would need it, but it is not currently
+used in Firefox.
 
 ## Regenerating Generated Code
 
@@ -503,7 +503,7 @@ To regenerate the generated code:
 ### 0.8.9
 
 * Made `--features simd-accel` work with stable-channel compiler to
-  simplify the Datalus build system.
+  simplify the Firefox build system.
 
 ### 0.8.8
 
